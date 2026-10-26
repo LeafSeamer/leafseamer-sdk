@@ -1,0 +1,5803 @@
+{
+  "format": "sdk-integration-check/1",
+  "all_passed": true,
+  "approved": false,
+  "runtime_ready": false,
+  "checks": [
+    {
+      "name": "生成字节一致:models.schema.json",
+      "passed": true
+    },
+    {
+      "name": "生成字节一致:model-identities.json",
+      "passed": true
+    },
+    {
+      "name": "生成字节一致:controller.preview.openapi.json",
+      "passed": true
+    },
+    {
+      "name": "生成字节一致:seamer.preview.openapi.json",
+      "passed": true
+    },
+    {
+      "name": "生成字节一致:inventory.json",
+      "passed": true
+    },
+    {
+      "name": "生成字节一致:worker-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "生成字节一致:worker-messages.json",
+      "passed": true
+    },
+    {
+      "name": "Schema元校验:models",
+      "passed": true
+    },
+    {
+      "name": "Schema元校验:worker-ipc",
+      "passed": true
+    },
+    {
+      "name": "模型数和入口数",
+      "passed": true
+    },
+    {
+      "name": "模型图不是消息入口",
+      "passed": true
+    },
+    {
+      "name": "OpenAPI结构:controller",
+      "passed": true
+    },
+    {
+      "name": "HTTP模型闭包保留:controller",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getRevocation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getCapacity",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getClock",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getCommand",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getCommandCancellation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getCommandEvidence",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getCommandEvidenceRevision",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getCommandRevision",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getControlOperation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:listDevices",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getCapabilities",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getControl",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getTransfer",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getSceneCatalog",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getDeviceState",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:openEvents",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getExtensionOperation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getExtensionInstallation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getMeta",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getPanelSessionOperation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getPanelSession",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getPanelRequest",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getPanelProjectionFrames",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getSession",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getSubject",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getSnapshot",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getClockDomainDescriptor",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getReferenceTimeAnchor",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getReferenceTimeAssessment",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getReferenceTimeBundle",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:getReferenceTimeProfile",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:revokeAuthorization",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:submitCommand",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:lookupCommandAdmission",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:rejectCommandAdmission",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:cancelCommand",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:lookupCommandCancellation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:lookupControlRequest",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:acquireControl",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:releaseControl",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:offerTransfer",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:acceptTransfer",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:cancelTransfer",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:lookupExtensionRequest",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:createExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:activateExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:disableExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:enableExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:planExtensionChange",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:uninstallExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:upgradeExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:stageExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:approveExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:resolveExtensionRoles",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:reviewExtensionPermissions",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:cancelPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:commitPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:createPanelSession",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:activatePanelSession",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:closePanelSession",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:offerPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:beginPanelHandshake",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:preparePanelActivation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:renewPanelSession",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:invokePanelMethod",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:createPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:acknowledgePanelProjection",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:closePanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:createRequestContext",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:revokeRunGrant",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:createSubscription",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:issueWsTicket",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:bootstrap",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:issueToken",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:login",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:refreshSession",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:introspect",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:issueContinuation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:lookupControllerContinuation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:prepareAutomation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:closePreparation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:lookupPreparation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:protectRunGeneration",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:lookupRunProtection",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:setCapacity",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:controller:updateRunGrant",
+      "passed": true
+    },
+    {
+      "name": "OpenAPI结构:seamer",
+      "passed": true
+    },
+    {
+      "name": "HTTP模型闭包保留:seamer",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getRevocation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getCapacity",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getClock",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getActivationSlot",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getDraft",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:updateDraft",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getIndependenceProof",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getDefinitionVersion",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getPublishedArtifact",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getCompiledProgram",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:openEvents",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getExtensionOperation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getExtensionInstallation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getMeta",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getPanelSessionOperation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getPanelSession",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getPanelRequest",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getPanelProjectionFrames",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getRecoveryOperation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getRunOperation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getRun",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getTriggerDecision",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getExecution",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getSession",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getSubject",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getSnapshot",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getClockDomainDescriptor",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:readIngressCommit",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getReferenceTimeAnchor",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getReferenceTimeAssessment",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getReferenceTimeBundle",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:getReferenceTimeProfile",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:revokeAuthorization",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:lookupAutomationRequest",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:createDefinition",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:publishDefinition",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:lookupExtensionRequest",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:createExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:activateExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:disableExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:enableExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:planExtensionChange",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:uninstallExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:upgradeExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:stageExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:approveExtension",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:resolveExtensionRoles",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:reviewExtensionPermissions",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:cancelPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:commitPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:createPanelSession",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:activatePanelSession",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:closePanelSession",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:offerPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:beginPanelHandshake",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:preparePanelActivation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:renewPanelSession",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:invokePanelMethod",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:createPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:acknowledgePanelProjection",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:closePanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:submitProviderEvent",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:lookupProviderEvent",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:createRequestContext",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:createRun",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:armRun",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:disarmRun",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:pauseRun",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:preflightRun",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:previewRecovery",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:resumeRun",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:retireRun",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:createSubscription",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:issueWsTicket",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:registerContinuation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:adoptContinuation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:finishContinuation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:lookupSeamerContinuation",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:observeContinuationReceipt",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:observeContinuationWithdrawal",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:setCapacity",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:updateDefinitionMetadata",
+      "passed": true
+    },
+    {
+      "name": "操作完整保留:seamer:updateCatalog",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__HELLO",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:J__Positive",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:J__Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__HELLOBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__ClockDomainDescriptor",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__OsBootIdentity",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__Revision",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__HELLO_ACK",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__HELLO_ACKBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__OPEN_GATE",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__OPEN_GATEBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S2__RunDenySnapshot",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S2__Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S2__Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S2__RunDenyEntry",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S2__RunGenerationSelector",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S1__Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S1__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S1__Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S2__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__DenySnapshot",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S5__Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S5__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__DenyEntry",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__Ref",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S5__Ref",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S5__PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S5__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S12__GateSnapshot",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S12__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S12__Domain",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Domain",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Ref",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Positive",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S12__Positive",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S12__Ref",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S12__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:SG__GateAccess",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:SG__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:SG__Binding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:SG__Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:SG__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:SG__Ref",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:SG__Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:SG__ProtectionScope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:SG__ExecutionIdentity",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:SG__Principal",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:SG__ProtectionAssessment",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:SG__Risk",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__OPEN_GATE_ACK",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__OPEN_GATE_ACKBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__DISPATCH",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__DISPATCHBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__TransmissionPermit",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__Dispatch",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__Duration",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__Timestamp",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S2__AutomationOriginBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CN__Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S1__PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CN__ExecutionRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CN__Selection",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CN__Ref",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__TransmissionRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__PacketRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__IntentRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__ContentRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__SendWindow",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S2__CommandRequest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__Version",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__Payload",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__JsonValue",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__ControlVersion",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S2__RunBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S2__PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__CompletionLevel",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__Predicate",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__ObsSceneParameters",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__SceneRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__TransportPacket",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__SEND_REPORT",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__SEND_REPORTBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__EVIDENCE_CANDIDATE",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__EVIDENCE_CANDIDATEBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__ObsCompletionCandidate",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__ObsEvidenceFrame",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__PacketAckObservation",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__REPORT_STORED",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__REPORT_STOREDBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__FENCE",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__FENCEBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__BarrierAttemptBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__Transmission",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__PacketRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S4__PacketRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S4__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S4__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__Exit",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__Requester",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__SendWindow",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S4__SendWindow",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__FENCE_ACKBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__BarrierAck",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__Coverage",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__TransmissionCoverage",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CancelCoverage",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__QUERY_BARRIER",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__QUERY_BARRIERBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CLOSE_GATE",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CLOSE_GATEBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CLOSE_GATE_ACK",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CLOSE_GATE_ACKBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__GUARD_INSTALL",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__GUARD_INSTALLBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S2__ExecutionGuard",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__AuthorizationBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S3__PanelExecutionBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S10__Guard",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S10__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S10__PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S10__DelegationRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S10__Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S10__ObjectRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S10__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S10__RequestIdentity",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S10__ActivationRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S10__RevisionRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S10__BundleRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S10__Lifetime",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S10__DomainRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S12__ExecutionTime",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__UtcGuard",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Binding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Window",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Signed",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S12__ScheduleGuard",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S12__EvidenceBundle",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Source",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Profile",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__UInt",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Policy",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Approval",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Request",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__AuthEvidence",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__ErrorEvidence",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__EraEvidence",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Interval",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Exchange",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Word",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Stamp",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Anchor",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Assessment",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__GUARD_ACK",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__GUARD_ACKBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__AUTH_FENCE",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__AUTH_FENCEBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S3__RevocationSelector",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S0__RevocationSelector",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S3__PanelSessionSelector",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S3__PanelDelegationSelector",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__AUTH_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__AUTH_FENCE_ACKBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__TIME_FENCE",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__TIME_FENCEBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S11__Invalidation",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__TIME_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__TIME_FENCE_ACKBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__RUN_FENCE",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__RUN_FENCEBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S1__RunGenerationSelector",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S1__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__RUN_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__RUN_FENCE_ACKBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__ENCODE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__ENCODE_PACKETBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EA__EncodingAuthorization",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EA__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EA__Binding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EA__Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EA__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EA__Target",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EA__Ref",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EA__Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EA__Principal",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__PACKET_ENCODING_FAILED",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__PACKET_ENCODING_FAILEDBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__PREPARE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__PREPARE_PACKETBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__PREPARE_PACKET_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__PREPARE_PACKET_REJECTEDBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__RESEND_REQUEST",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__RESEND_REQUESTBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__RESEND_DISPATCH",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__RESEND_DISPATCHBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__RESEND_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__RESEND_REJECTEDBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__BARRIER_UNAVAILABLE",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__BARRIER_UNAVAILABLEBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__BARRIER_STORED",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__BARRIER_STOREDBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CANCEL_FENCE",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CANCEL_FENCEBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CancellationBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CancelIdentity",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S6__CancelIdentity",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S6__CancelKey",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S6__Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S6__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S6__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CutTarget",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__TransmissionRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S4__TransmissionRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S4__IntentRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S4__Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S4__ContentRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S4__PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__BarrierAttemptBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S4__BarrierAttemptBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CANCEL_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CANCEL_FENCE_ACKBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__TransmissionCoverage",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S4__TransmissionCoverage",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CANCEL_GUARD",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CANCEL_GUARDBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__ExecutionPlan",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__Primitive",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__Guard",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CANCEL_GUARD_ACK",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CANCEL_GUARD_ACKBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__ENCODE_CANCEL_PACKET",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__ENCODE_CANCEL_PACKETBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__PREPARE_CANCEL_PACKET",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__PREPARE_CANCEL_PACKETBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__Packet",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__ContentRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CANCEL_ENCODING_FAILED",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CANCEL_ENCODING_FAILEDBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CANCEL_PREPARE_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CANCEL_PREPARE_REJECTEDBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__DISPATCH_CANCEL",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__DISPATCH_CANCELBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CANCEL_RESEND_REQUEST",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CANCEL_RESEND_REQUESTBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CANCEL_RESEND_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CANCEL_RESEND_REJECTEDBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CANCEL_SEND_REPORT",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CANCEL_SEND_REPORTBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CANCEL_REPORT_STORED",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CANCEL_REPORT_STOREDBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CANCEL_EVIDENCE_CANDIDATE",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CANCEL_EVIDENCE_CANDIDATEBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__QUERY_CANCEL_EXECUTION",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__QUERY_CANCEL_EXECUTIONBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S9__CANCEL_EXECUTION_STATUS",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:S8__CANCEL_EXECUTION_STATUSBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:GF__GATE_FENCE",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:GF__Request",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:GF__GATE_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:GF__Ack",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ER__RELEASE_ENCODING",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ER__ReleaseRequest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ER__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ER__Binding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ER__Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ER__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ER__Ref",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ER__Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ER__RELEASE_ENCODING_ACK",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ER__ReleaseAck",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:J__DENY_ENCODING",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:J__DenyRequest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:J__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:J__Binding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:J__Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:J__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:J__Ref",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:J__DENY_ENCODING_ACK",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:J__DenyAck",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ExecutionBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EB__ExecutionBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EB__Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EB__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:PG__Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EB__ArtifactRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EB__Revision",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:PG__Revision",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EB__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:PG__Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EB__ExecutionOrigin",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EB__BusinessState",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EB__InputSnapshotRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EB__ResolvedParametersRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EB__GrantRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EB__ClockRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CN__Target",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ContinuationSelection",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ContinuationTarget",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CommandRequest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CommandContent",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CN__CommandContent",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:AutomationOriginBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:ExecutionGuard",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:TransmissionPermit",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:GuardAck",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:DispatchBody",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:DispatchIntent",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:RunBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_RequestAdjudication",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S1_Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_RequestIdentity",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_RequestKey",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S1_Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S1_Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_CommandRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S1_Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_CommitRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_Error",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_CommandRequest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S1_CommandRequest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S3_Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S3_Version",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S3_Payload",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S3_JsonValue",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S3_ControlVersion",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S3_Revision",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S1_RunBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S1_PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S3_CompletionLevel",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S3_Predicate",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S3_Duration",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S3_Dispatch",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S3_Timestamp",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S1_AutomationOriginBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S2_Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S2_Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S2_PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S2_Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S2_Ref",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S3_ObsSceneParameters",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S3_SceneRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_LookupResult",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_RejectRequest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:A__S0_CommandContent",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_CommandRead",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_CommandRecord",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_InitialCommandRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S2_CommandRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S2_Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S3_Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S2_Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S3_Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S2_Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S3_Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S2_Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S3_Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_RequestIdentity",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S2_RequestIdentity",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S2_RequestKey",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Version",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S5_Version",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Actor",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S5_Actor",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S5_Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S5_Revision",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_RunBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S3_RunBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S3_PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_AutomationOriginBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S3_AutomationOriginBinding",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S4_Scope",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S4_Id",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S4_PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S4_Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S4_Ref",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Timestamp",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S5_Timestamp",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Dispatch",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S5_Dispatch",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S5_Duration",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_ControlVersion",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S5_ControlVersion",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Policy",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_Policy",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_Ref",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_CompletionLevel",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Ref",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_State",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_State",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_Effect",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_CompletionView",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_CompletionLevel",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_AttemptView",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_PacketRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_PacketRef",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_AttemptExit",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_CancellationView",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_CancellationState",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_EvidenceIndex",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_Counter",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Error",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_CancelReceipt",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_CancelIdentity",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_CancelKey",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_CancelRequest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_CancelLookup",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_CancelOperation",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_EvidencePage",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_EvidenceRecord",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_EvidenceKind",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Observation",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S5_CompletionEvidence",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S5_ClockStatus",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S5_ObsCompletionBundle",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S5_ObsEvidenceFrame",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S5_Digest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_DecisionEvidence",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_DecisionEvidence",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_ReleaseEvidence",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_ReleaseEvidence",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Resolution",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S1_Resolution",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Invalidation",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:V__S0_Cursor",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:RequestKey",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:RequestIdentity",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:RequestAdjudication",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:LookupResult",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:RejectRequest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CommandRead",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CommandRecord",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CancelRequest",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CancelReceipt",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CancelLookup",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:CancelOperation",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EvidencePage",
+      "passed": true
+    },
+    {
+      "name": "命令模型可逆:EvidenceRecord",
+      "passed": true
+    },
+    {
+      "name": "合成样例摘要",
+      "passed": true
+    },
+    {
+      "name": "合成样例覆盖完整入口",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:HELLO",
+      "passed": true
+    },
+    {
+      "name": "反方向:HELLO",
+      "passed": true
+    },
+    {
+      "name": "旧版本:HELLO",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:HELLO",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:HELLO_ACK",
+      "passed": true
+    },
+    {
+      "name": "反方向:HELLO_ACK",
+      "passed": true
+    },
+    {
+      "name": "旧版本:HELLO_ACK",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:HELLO_ACK",
+      "passed": true
+    },
+    {
+      "name": "回复映射:HELLO_ACK:HELLO",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:OPEN_GATE",
+      "passed": true
+    },
+    {
+      "name": "反方向:OPEN_GATE",
+      "passed": true
+    },
+    {
+      "name": "旧版本:OPEN_GATE",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:OPEN_GATE",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:OPEN_GATE_ACK",
+      "passed": true
+    },
+    {
+      "name": "反方向:OPEN_GATE_ACK",
+      "passed": true
+    },
+    {
+      "name": "旧版本:OPEN_GATE_ACK",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:OPEN_GATE_ACK",
+      "passed": true
+    },
+    {
+      "name": "回复映射:OPEN_GATE_ACK:OPEN_GATE",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:DISPATCH",
+      "passed": true
+    },
+    {
+      "name": "反方向:DISPATCH",
+      "passed": true
+    },
+    {
+      "name": "旧版本:DISPATCH",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:DISPATCH",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:SEND_REPORT",
+      "passed": true
+    },
+    {
+      "name": "反方向:SEND_REPORT",
+      "passed": true
+    },
+    {
+      "name": "旧版本:SEND_REPORT",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:SEND_REPORT",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:EVIDENCE_CANDIDATE",
+      "passed": true
+    },
+    {
+      "name": "反方向:EVIDENCE_CANDIDATE",
+      "passed": true
+    },
+    {
+      "name": "旧版本:EVIDENCE_CANDIDATE",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:EVIDENCE_CANDIDATE",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:REPORT_STORED",
+      "passed": true
+    },
+    {
+      "name": "反方向:REPORT_STORED",
+      "passed": true
+    },
+    {
+      "name": "旧版本:REPORT_STORED",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:REPORT_STORED",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:FENCE",
+      "passed": true
+    },
+    {
+      "name": "反方向:FENCE",
+      "passed": true
+    },
+    {
+      "name": "旧版本:FENCE",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:FENCE",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "反方向:FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "旧版本:FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "回复映射:FENCE_ACK:FENCE",
+      "passed": true
+    },
+    {
+      "name": "回复映射:FENCE_ACK:QUERY_BARRIER",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:QUERY_BARRIER",
+      "passed": true
+    },
+    {
+      "name": "反方向:QUERY_BARRIER",
+      "passed": true
+    },
+    {
+      "name": "旧版本:QUERY_BARRIER",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:QUERY_BARRIER",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CLOSE_GATE",
+      "passed": true
+    },
+    {
+      "name": "反方向:CLOSE_GATE",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CLOSE_GATE",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CLOSE_GATE",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CLOSE_GATE_ACK",
+      "passed": true
+    },
+    {
+      "name": "反方向:CLOSE_GATE_ACK",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CLOSE_GATE_ACK",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CLOSE_GATE_ACK",
+      "passed": true
+    },
+    {
+      "name": "回复映射:CLOSE_GATE_ACK:CLOSE_GATE",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:GUARD_INSTALL",
+      "passed": true
+    },
+    {
+      "name": "反方向:GUARD_INSTALL",
+      "passed": true
+    },
+    {
+      "name": "旧版本:GUARD_INSTALL",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:GUARD_INSTALL",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:GUARD_ACK",
+      "passed": true
+    },
+    {
+      "name": "反方向:GUARD_ACK",
+      "passed": true
+    },
+    {
+      "name": "旧版本:GUARD_ACK",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:GUARD_ACK",
+      "passed": true
+    },
+    {
+      "name": "回复映射:GUARD_ACK:GUARD_INSTALL",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:AUTH_FENCE",
+      "passed": true
+    },
+    {
+      "name": "反方向:AUTH_FENCE",
+      "passed": true
+    },
+    {
+      "name": "旧版本:AUTH_FENCE",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:AUTH_FENCE",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:AUTH_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "反方向:AUTH_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "旧版本:AUTH_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:AUTH_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "回复映射:AUTH_FENCE_ACK:AUTH_FENCE",
+      "passed": true
+    },
+    {
+      "name": "回复映射:AUTH_FENCE_ACK:QUERY_BARRIER",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:TIME_FENCE",
+      "passed": true
+    },
+    {
+      "name": "反方向:TIME_FENCE",
+      "passed": true
+    },
+    {
+      "name": "旧版本:TIME_FENCE",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:TIME_FENCE",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:TIME_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "反方向:TIME_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "旧版本:TIME_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:TIME_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "回复映射:TIME_FENCE_ACK:TIME_FENCE",
+      "passed": true
+    },
+    {
+      "name": "回复映射:TIME_FENCE_ACK:QUERY_BARRIER",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:RUN_FENCE",
+      "passed": true
+    },
+    {
+      "name": "反方向:RUN_FENCE",
+      "passed": true
+    },
+    {
+      "name": "旧版本:RUN_FENCE",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:RUN_FENCE",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:RUN_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "反方向:RUN_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "旧版本:RUN_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:RUN_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "回复映射:RUN_FENCE_ACK:RUN_FENCE",
+      "passed": true
+    },
+    {
+      "name": "回复映射:RUN_FENCE_ACK:QUERY_BARRIER",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:ENCODE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "反方向:ENCODE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "旧版本:ENCODE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:ENCODE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:PACKET_ENCODING_FAILED",
+      "passed": true
+    },
+    {
+      "name": "反方向:PACKET_ENCODING_FAILED",
+      "passed": true
+    },
+    {
+      "name": "旧版本:PACKET_ENCODING_FAILED",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:PACKET_ENCODING_FAILED",
+      "passed": true
+    },
+    {
+      "name": "回复映射:PACKET_ENCODING_FAILED:ENCODE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:PREPARE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "反方向:PREPARE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "旧版本:PREPARE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:PREPARE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "回复映射:PREPARE_PACKET:ENCODE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:PREPARE_PACKET_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "反方向:PREPARE_PACKET_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "旧版本:PREPARE_PACKET_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:PREPARE_PACKET_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "回复映射:PREPARE_PACKET_REJECTED:PREPARE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:RESEND_REQUEST",
+      "passed": true
+    },
+    {
+      "name": "反方向:RESEND_REQUEST",
+      "passed": true
+    },
+    {
+      "name": "旧版本:RESEND_REQUEST",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:RESEND_REQUEST",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:RESEND_DISPATCH",
+      "passed": true
+    },
+    {
+      "name": "反方向:RESEND_DISPATCH",
+      "passed": true
+    },
+    {
+      "name": "旧版本:RESEND_DISPATCH",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:RESEND_DISPATCH",
+      "passed": true
+    },
+    {
+      "name": "回复映射:RESEND_DISPATCH:RESEND_REQUEST",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:RESEND_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "反方向:RESEND_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "旧版本:RESEND_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:RESEND_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "回复映射:RESEND_REJECTED:RESEND_REQUEST",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:BARRIER_UNAVAILABLE",
+      "passed": true
+    },
+    {
+      "name": "反方向:BARRIER_UNAVAILABLE",
+      "passed": true
+    },
+    {
+      "name": "旧版本:BARRIER_UNAVAILABLE",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:BARRIER_UNAVAILABLE",
+      "passed": true
+    },
+    {
+      "name": "回复映射:BARRIER_UNAVAILABLE:QUERY_BARRIER",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:BARRIER_STORED",
+      "passed": true
+    },
+    {
+      "name": "反方向:BARRIER_STORED",
+      "passed": true
+    },
+    {
+      "name": "旧版本:BARRIER_STORED",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:BARRIER_STORED",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CANCEL_FENCE",
+      "passed": true
+    },
+    {
+      "name": "反方向:CANCEL_FENCE",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CANCEL_FENCE",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CANCEL_FENCE",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CANCEL_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "反方向:CANCEL_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CANCEL_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CANCEL_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "回复映射:CANCEL_FENCE_ACK:CANCEL_FENCE",
+      "passed": true
+    },
+    {
+      "name": "回复映射:CANCEL_FENCE_ACK:QUERY_BARRIER",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CANCEL_GUARD",
+      "passed": true
+    },
+    {
+      "name": "反方向:CANCEL_GUARD",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CANCEL_GUARD",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CANCEL_GUARD",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CANCEL_GUARD_ACK",
+      "passed": true
+    },
+    {
+      "name": "反方向:CANCEL_GUARD_ACK",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CANCEL_GUARD_ACK",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CANCEL_GUARD_ACK",
+      "passed": true
+    },
+    {
+      "name": "回复映射:CANCEL_GUARD_ACK:CANCEL_GUARD",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:ENCODE_CANCEL_PACKET",
+      "passed": true
+    },
+    {
+      "name": "反方向:ENCODE_CANCEL_PACKET",
+      "passed": true
+    },
+    {
+      "name": "旧版本:ENCODE_CANCEL_PACKET",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:ENCODE_CANCEL_PACKET",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:PREPARE_CANCEL_PACKET",
+      "passed": true
+    },
+    {
+      "name": "反方向:PREPARE_CANCEL_PACKET",
+      "passed": true
+    },
+    {
+      "name": "旧版本:PREPARE_CANCEL_PACKET",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:PREPARE_CANCEL_PACKET",
+      "passed": true
+    },
+    {
+      "name": "回复映射:PREPARE_CANCEL_PACKET:ENCODE_CANCEL_PACKET",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CANCEL_ENCODING_FAILED",
+      "passed": true
+    },
+    {
+      "name": "反方向:CANCEL_ENCODING_FAILED",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CANCEL_ENCODING_FAILED",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CANCEL_ENCODING_FAILED",
+      "passed": true
+    },
+    {
+      "name": "回复映射:CANCEL_ENCODING_FAILED:ENCODE_CANCEL_PACKET",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CANCEL_PREPARE_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "反方向:CANCEL_PREPARE_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CANCEL_PREPARE_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CANCEL_PREPARE_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "回复映射:CANCEL_PREPARE_REJECTED:PREPARE_CANCEL_PACKET",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:DISPATCH_CANCEL",
+      "passed": true
+    },
+    {
+      "name": "反方向:DISPATCH_CANCEL",
+      "passed": true
+    },
+    {
+      "name": "旧版本:DISPATCH_CANCEL",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:DISPATCH_CANCEL",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CANCEL_RESEND_REQUEST",
+      "passed": true
+    },
+    {
+      "name": "反方向:CANCEL_RESEND_REQUEST",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CANCEL_RESEND_REQUEST",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CANCEL_RESEND_REQUEST",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CANCEL_RESEND_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "反方向:CANCEL_RESEND_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CANCEL_RESEND_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CANCEL_RESEND_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "回复映射:CANCEL_RESEND_REJECTED:CANCEL_RESEND_REQUEST",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CANCEL_SEND_REPORT",
+      "passed": true
+    },
+    {
+      "name": "反方向:CANCEL_SEND_REPORT",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CANCEL_SEND_REPORT",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CANCEL_SEND_REPORT",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CANCEL_REPORT_STORED",
+      "passed": true
+    },
+    {
+      "name": "反方向:CANCEL_REPORT_STORED",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CANCEL_REPORT_STORED",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CANCEL_REPORT_STORED",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CANCEL_EVIDENCE_CANDIDATE",
+      "passed": true
+    },
+    {
+      "name": "反方向:CANCEL_EVIDENCE_CANDIDATE",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CANCEL_EVIDENCE_CANDIDATE",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CANCEL_EVIDENCE_CANDIDATE",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:QUERY_CANCEL_EXECUTION",
+      "passed": true
+    },
+    {
+      "name": "反方向:QUERY_CANCEL_EXECUTION",
+      "passed": true
+    },
+    {
+      "name": "旧版本:QUERY_CANCEL_EXECUTION",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:QUERY_CANCEL_EXECUTION",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:CANCEL_EXECUTION_STATUS",
+      "passed": true
+    },
+    {
+      "name": "反方向:CANCEL_EXECUTION_STATUS",
+      "passed": true
+    },
+    {
+      "name": "旧版本:CANCEL_EXECUTION_STATUS",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:CANCEL_EXECUTION_STATUS",
+      "passed": true
+    },
+    {
+      "name": "回复映射:CANCEL_EXECUTION_STATUS:QUERY_CANCEL_EXECUTION",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:GATE_FENCE",
+      "passed": true
+    },
+    {
+      "name": "反方向:GATE_FENCE",
+      "passed": true
+    },
+    {
+      "name": "旧版本:GATE_FENCE",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:GATE_FENCE",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:GATE_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "反方向:GATE_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "旧版本:GATE_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:GATE_FENCE_ACK",
+      "passed": true
+    },
+    {
+      "name": "回复映射:GATE_FENCE_ACK:GATE_FENCE",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:RELEASE_ENCODING",
+      "passed": true
+    },
+    {
+      "name": "反方向:RELEASE_ENCODING",
+      "passed": true
+    },
+    {
+      "name": "旧版本:RELEASE_ENCODING",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:RELEASE_ENCODING",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:RELEASE_ENCODING_ACK",
+      "passed": true
+    },
+    {
+      "name": "反方向:RELEASE_ENCODING_ACK",
+      "passed": true
+    },
+    {
+      "name": "旧版本:RELEASE_ENCODING_ACK",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:RELEASE_ENCODING_ACK",
+      "passed": true
+    },
+    {
+      "name": "回复映射:RELEASE_ENCODING_ACK:RELEASE_ENCODING",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:DENY_ENCODING",
+      "passed": true
+    },
+    {
+      "name": "反方向:DENY_ENCODING",
+      "passed": true
+    },
+    {
+      "name": "旧版本:DENY_ENCODING",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:DENY_ENCODING",
+      "passed": true
+    },
+    {
+      "name": "52帧结构及方向:DENY_ENCODING_ACK",
+      "passed": true
+    },
+    {
+      "name": "反方向:DENY_ENCODING_ACK",
+      "passed": true
+    },
+    {
+      "name": "旧版本:DENY_ENCODING_ACK",
+      "passed": true
+    },
+    {
+      "name": "序号前导零:DENY_ENCODING_ACK",
+      "passed": true
+    },
+    {
+      "name": "回复映射:DENY_ENCODING_ACK:DENY_ENCODING",
+      "passed": true
+    },
+    {
+      "name": "独立方向预期:HELLO",
+      "passed": true
+    },
+    {
+      "name": "独立方向预期:HELLO_ACK",
+      "passed": true
+    },
+    {
+      "name": "独立方向预期:PREPARE_PACKET",
+      "passed": true
+    },
+    {
+      "name": "独立方向预期:PREPARE_PACKET_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "独立方向预期:CANCEL_PREPARE_REJECTED",
+      "passed": true
+    },
+    {
+      "name": "独立方向预期:DISPATCH_CANCEL",
+      "passed": true
+    },
+    {
+      "name": "原结构样例不能冒充关联握手",
+      "passed": true
+    },
+    {
+      "name": "匹配握手仍然关闭",
+      "passed": true
+    },
+    {
+      "name": "反向序号独立不能要求ACK大于HELLO",
+      "passed": true
+    },
+    {
+      "name": "ACK通道错配:ipc_session_id",
+      "passed": true
+    },
+    {
+      "name": "可信通道不符:ipc_session_id",
+      "passed": true
+    },
+    {
+      "name": "ACK通道错配:controller_boot_id",
+      "passed": true
+    },
+    {
+      "name": "可信通道不符:controller_boot_id",
+      "passed": true
+    },
+    {
+      "name": "ACK通道错配:worker_boot_id",
+      "passed": true
+    },
+    {
+      "name": "可信通道不符:worker_boot_id",
+      "passed": true
+    },
+    {
+      "name": "ACK通道错配:clock_domain_id",
+      "passed": true
+    },
+    {
+      "name": "可信通道不符:clock_domain_id",
+      "passed": true
+    },
+    {
+      "name": "ACK通道错配:descriptor_digest",
+      "passed": true
+    },
+    {
+      "name": "可信通道不符:descriptor_digest",
+      "passed": true
+    },
+    {
+      "name": "双方同改运行域仍拒绝:runtime_generation",
+      "passed": true
+    },
+    {
+      "name": "双方同改运行域仍拒绝:supervisor_instance_id",
+      "passed": true
+    },
+    {
+      "name": "双方同改运行域仍拒绝:authority_service_id",
+      "passed": true
+    },
+    {
+      "name": "双方同改运行域仍拒绝:clock_backend_revision",
+      "passed": true
+    },
+    {
+      "name": "内外投影不一致:clock_domain_id",
+      "passed": true
+    },
+    {
+      "name": "内外投影不一致:descriptor_digest",
+      "passed": true
+    },
+    {
+      "name": "握手拒非法选择:gate_state",
+      "passed": true
+    },
+    {
+      "name": "握手拒非法选择:selected_ipc_version",
+      "passed": true
+    },
+    {
+      "name": "关联ID错误:reply_to",
+      "passed": true
+    },
+    {
+      "name": "关联ID错误:message_id",
+      "passed": true
+    },
+    {
+      "name": "回复类型错误",
+      "passed": true
+    },
+    {
+      "name": "非对象",
+      "passed": true
+    },
+    {
+      "name": "23项HELLO结构有效但不足以接受30项ACK",
+      "passed": true
+    },
+    {
+      "name": "ACK不能选择未提供的七项能力",
+      "passed": true
+    },
+    {
+      "name": "ACK不能单方增加扩展能力",
+      "passed": true
+    },
+    {
+      "name": "允许共同声明额外能力但仍不授发送",
+      "passed": true
+    },
+    {
+      "name": "不允许只协商共同子集而遗漏强制能力",
+      "passed": true
+    },
+    {
+      "name": "共用HTTP模型漂移必须拒绝",
+      "passed": true
+    },
+    {
+      "name": "模型缺失必须拒绝",
+      "passed": true
+    },
+    {
+      "name": "外部引用必须拒绝",
+      "passed": true
+    },
+    {
+      "name": "未知方向必须拒绝",
+      "passed": true
+    },
+    {
+      "name": "同方向回复必须拒绝",
+      "passed": true
+    },
+    {
+      "name": "未知回复类型必须拒绝",
+      "passed": true
+    },
+    {
+      "name": "重复IPC入口必须拒绝",
+      "passed": true
+    },
+    {
+      "name": "隔离确定性生成:0",
+      "passed": true
+    },
+    {
+      "name": "隔离确定性生成:1",
+      "passed": true
+    },
+    {
+      "name": "拒覆盖既有输出目录",
+      "passed": true
+    },
+    {
+      "name": "样例与契约来自同一提交",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-admission/admission.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-admission/admission.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-admission/admission.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-admission/admission.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-admission/check_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-admission/check_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-cancellation/build_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-cancellation/build_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-cancellation/cancellation.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-cancellation/cancellation.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-cancellation/check_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-cancellation/check_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-cancellation/ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-cancellation/ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-cancellation/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-cancellation/README.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-cancellation/reference_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-cancellation/reference_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-command-view/check_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-command-view/check_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-command-view/command.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-command-view/command.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-command-view/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-command-view/README.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-command-view/STORAGE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-command-view/STORAGE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c02-command-view/storage.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c02-command-view/storage.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/arm_budget_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/arm_budget_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/arm_exit_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/arm_exit_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/arm_storage_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/arm_storage_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_arm_budget.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_arm_budget.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_arm_exit.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_arm_exit.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_arm_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_arm_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_continuation.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_continuation.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_continuation_binding.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_continuation_binding.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_continuation_protocol.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_continuation_protocol.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_continuation_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_continuation_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_continuation_trigger.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_continuation_trigger.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_failure_protection.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_failure_protection.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_instance_budget.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_instance_budget.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_protection_charge.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_protection_charge.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_protection_retry.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_protection_retry.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_recovery_budget.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_recovery_budget.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_source_budget.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_source_budget.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_source_resync.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_source_resync.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_trigger_flow.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_trigger_flow.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/build_workload_budget.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/build_workload_budget.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_arm_budget.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_arm_budget.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_arm_exit.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_arm_exit.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_arm_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_arm_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_continuation.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_continuation.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_continuation_binding.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_continuation_binding.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_continuation_protocol.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_continuation_protocol.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_continuation_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_continuation_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_continuation_trigger.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_continuation_trigger.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_failure_protection.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_failure_protection.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_instance_budget.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_instance_budget.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_protection_charge.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_protection_charge.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_protection_retry.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_protection_retry.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_recovery_budget.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_recovery_budget.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_source_budget.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_source_budget.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_source_resync.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_source_resync.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_trigger_flow.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_trigger_flow.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/check_workload_budget.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/check_workload_budget.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/continuation_binding_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/continuation_binding_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/continuation_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/continuation_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/continuation_protocol_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/continuation_protocol_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/continuation_storage_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/continuation_storage_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/continuation_trigger_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/continuation_trigger_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/failure_protection_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/failure_protection_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/instance_budget_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/instance_budget_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/protection_charge_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/protection_charge_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/protection_retry_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/protection_retry_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/recovery_budget_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/recovery_budget_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/reference_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/reference_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/source_budget_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/source_budget_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/source_resync_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/source_resync_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/trigger_flow_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/trigger_flow_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-preparation/check_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-preparation/check_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-preparation/preparation.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-preparation/preparation.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-storage/check_dispatch.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-storage/check_dispatch.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-storage/check_recovery.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-storage/check_recovery.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/build_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/build_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/build_protocol.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/build_protocol.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/build_qualification.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/build_qualification.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/build_registration.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/build_registration.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/build_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/build_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/check_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/check_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/check_protocol.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/check_protocol.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/check_qualification.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/check_qualification.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/check_registration.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/check_registration.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/check_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/check_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/ipc-v05.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/ipc-v05.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/protection.openapi.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/protection.openapi.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/protection.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/protection.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/PROTOCOL.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/PROTOCOL.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/protocol.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/protocol.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/qualification_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/qualification_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/registration_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/registration_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c05-protection/storage_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c05-protection/storage_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/barrier-attempt.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/barrier-attempt.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/BARRIER_ATTEMPTS.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/BARRIER_ATTEMPTS.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_cancel_closure.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_cancel_closure.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_cancel_fence.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_cancel_fence.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_cancel_plan.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_cancel_plan.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_cancel_resource.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_cancel_resource.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_control_fence.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_control_fence.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_control_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_control_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_encoding_authority.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_encoding_authority.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_encoding_release.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_encoding_release.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_encoding_release_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_encoding_release_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_encoding_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_encoding_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_execution_ipc.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_execution_ipc.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_gate_renewal.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_gate_renewal.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_hold_ownership.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_hold_ownership.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_ipc_journal.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_ipc_journal.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_ipc_journal_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_ipc_journal_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_issue_ledger.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_issue_ledger.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_layout.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_layout.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_open_lifecycle.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_open_lifecycle.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_open_plan.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_open_plan.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_open_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_open_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_ownership_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_ownership_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_preparation_delivery.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_preparation_delivery.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_prepare_deny_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_prepare_deny_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_protected_hold.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_protected_hold.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_protection_delivery.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_protection_delivery.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_protection_outbox.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_protection_outbox.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_result_dependency.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_result_dependency.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_scope_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_scope_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/build_scoped_gate.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/build_scoped_gate.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/cancel-closure.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/cancel-closure.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/cancel-fence.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/cancel-fence.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/cancel-plan.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/cancel-plan.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/cancel-resource.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/cancel-resource.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/CANCEL_CLOSURE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/CANCEL_CLOSURE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/CANCEL_FENCE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/CANCEL_FENCE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/CANCEL_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/CANCEL_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/CANCEL_RESOURCE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/CANCEL_RESOURCE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_barrier_attempt.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_barrier_attempt.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_cancel_closure.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_cancel_closure.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_cancel_fence.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_cancel_fence.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_cancel_plan.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_cancel_plan.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_cancel_resource.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_cancel_resource.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_command.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_command.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_control_fence.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_control_fence.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_control_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_control_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_encoding_authority.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_encoding_authority.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_encoding_release.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_encoding_release.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_encoding_release_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_encoding_release_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_encoding_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_encoding_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_execution_ipc.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_execution_ipc.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_fence.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_fence.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_gate_renewal.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_gate_renewal.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_hold_ownership.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_hold_ownership.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_ipc_journal.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_ipc_journal.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_ipc_journal_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_ipc_journal_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_issue_ledger.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_issue_ledger.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_layout.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_layout.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_open_lifecycle.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_open_lifecycle.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_open_plan.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_open_plan.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_open_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_open_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_ownership_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_ownership_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_prepare_deny_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_prepare_deny_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_protected_hold.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_protected_hold.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_resource.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_resource.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_result_dependency.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_result_dependency.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_scope_storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_scope_storage.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/check_scoped_gate.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/check_scoped_gate.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/command.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/command.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/COMMAND_STORAGE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/COMMAND_STORAGE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/common.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/common.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/control-fence.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/control-fence.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/CONTROL_FENCE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/CONTROL_FENCE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/controller-cancel-closure.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/controller-cancel-closure.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/controller-cancel-fence.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/controller-cancel-fence.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/controller-cancel-plan.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/controller-cancel-plan.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/controller-cancel-resource.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/controller-cancel-resource.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/controller-control-fence.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/controller-control-fence.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/controller-issue.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/controller-issue.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/controller-open.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/controller-open.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/controller-protected-hold.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/controller-protected-hold.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/controller-result-dependency.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/controller-result-dependency.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/controller.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/controller.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/encoding-authority-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/encoding-authority-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/encoding-authority.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/encoding-authority.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/encoding-release-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/encoding-release-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/encoding-release-storage.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/encoding-release-storage.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/encoding-release.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/encoding-release.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/encoding-storage.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/encoding-storage.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/ENCODING_AUTHORITY.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/ENCODING_AUTHORITY.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/encoding_authority_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/encoding_authority_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/ENCODING_RELEASE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/ENCODING_RELEASE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/encoding_release_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/encoding_release_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/ENCODING_RELEASE_STORAGE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/ENCODING_RELEASE_STORAGE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/ENCODING_STORAGE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/ENCODING_STORAGE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/execution-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/execution-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/FENCE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/FENCE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/fence.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/fence.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/FINAL_ADMISSION.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/FINAL_ADMISSION.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/gate-renewal-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/gate-renewal-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/GATE_ORDER.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/GATE_ORDER.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/hold-ownership.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/hold-ownership.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/hold_ownership_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/hold_ownership_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/ipc-journal-messages.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/ipc-journal-messages.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/ipc-journal.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/ipc-journal.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/IPC_JOURNAL.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/IPC_JOURNAL.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/ipc_journal_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/ipc_journal_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/issue-ledger.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/issue-ledger.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/ISSUE_LEDGER.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/ISSUE_LEDGER.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/journal-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/journal-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/LIFECYCLE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/LIFECYCLE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/lifecycle.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/lifecycle.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/open-lifecycle.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/open-lifecycle.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/open-plan.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/open-plan.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/open-storage.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/open-storage.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/OPEN_LIFECYCLE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/OPEN_LIFECYCLE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/open_lifecycle_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/open_lifecycle_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/OPEN_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/OPEN_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/open_plan_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/open_plan_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/OPEN_STORAGE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/OPEN_STORAGE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/preparation_delivery_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/preparation_delivery_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/protected-hold.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/protected-hold.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/PROTECTED_HOLD.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/PROTECTED_HOLD.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/protection-outbox.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/protection-outbox.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/protection_delivery_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/protection_delivery_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/PROTECTION_OUTBOX.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/PROTECTION_OUTBOX.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/README.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/resource.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/resource.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/RESOURCE_STORAGE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/RESOURCE_STORAGE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/result-dependency.sql",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/result-dependency.sql",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/RESULT_DEPENDENCY.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/RESULT_DEPENDENCY.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/scoped-gate-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/scoped-gate-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/scoped-gate.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/scoped-gate.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/SCOPED_GATE.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/SCOPED_GATE.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c08-controller/scoped_gate_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c08-controller/scoped_gate_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c09-panel/channel-v02.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c09-panel/channel-v02.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c09-panel-ipc/binding.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c09-panel-ipc/binding.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c09-panel-ipc/cases.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c09-panel-ipc/cases.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c09-panel-ipc/ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c09-panel-ipc/ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df01-source/source/public.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df01-source/source/public.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-reference/build_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-reference/build_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-reference/check_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-reference/check_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-reference/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-reference/README.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-reference/reference.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-reference/reference.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-reference/reference_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-reference/reference_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-service/build_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-service/build_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-service/check_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-service/check_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-service/internal.openapi.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-service/internal.openapi.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-service/ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-service/ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-service/public.openapi.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-service/public.openapi.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-service/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-service/README.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-service/reference_model.py",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-service/reference_model.py",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-service/source-bindings.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-service/source-bindings.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/df03-service/time.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/df03-service/time.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/draft4/first-loop.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/draft4/first-loop.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/rebirth-c11-obs-atem-design.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/rebirth-c11-obs-atem-design.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/rebirth-df03-time-profile-design.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/rebirth-df03-time-profile-design.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/rebirth-f02-f03-design.md",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/rebirth-f02-f03-design.md",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/command-contract.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/command-contract.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/command-contract-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/command-contract-ipc.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Git来源为blob:docs/contracts/c04-lifecycle/command-contract-manifest.json",
+      "passed": true
+    },
+    {
+      "name": "固定Git来源摘要:docs/contracts/c04-lifecycle/command-contract-manifest.json",
+      "passed": true
+    },
+    {
+      "name": "Git batch无尾随输出",
+      "passed": true
+    }
+  ],
+  "cases_passed": 1441,
+  "model_count": 1263,
+  "http_operations": 177,
+  "ipc_message_types": 52,
+  "fixed_source_files_verified": 249,
+  "runtime_tests_executed": 0,
+  "device_tests_executed": 0,
+  "python_version": "3.14.0",
+  "inputs": {
+    "contracts/integration/build.py": "9015ee63fe6331cd8a45ffc4a53aa180e3357a2fafbd558b3ae4972c8bc791ea",
+    "contracts/integration/handshake.py": "acafa1f34125c8d82a0d8a738b347b75cd0cce9774d125a6bee2e6d119e8a22e",
+    "contracts/integration/check.py": "1dfde1c76e6f522a5b23d9c6f968d5d8407565f64734208cd6e9ff4392b79376",
+    "contracts/integration/README.md": "b0df1e1aea41d601260d984819ad1fc5389410b9a58e377393fccd429825202c",
+    "contracts/integration/sources.json": "52f08256cacf13002157cbc9d6a29a33906ff4ac9618659dfac04c7997561655",
+    "contracts/integration/source/command-contract-ipc.schema.json": "c758a2a1b06011901282e2780c8e92d62d050c2ab02d65a3254da5a9a266e082",
+    "contracts/integration/source/command-contract-manifest.json": "70f0a8c2aa2192da4e91a48c5896d62132ec632025e72c1df9e683a27ce54842",
+    "contracts/integration/source/command-contract.schema.json": "049a66b80bea06247aef806447b2c9ef3de347106c8dfd964664386adb9270f6",
+    "contracts/integration/source/frames-provenance.json": "b82bca87e3b81d093f84db10fd8b2e47a1872367544c5477d60b4ff932afea0c",
+    "contracts/integration/source/frames.json": "0c2a71f978b0dbfd6a756fc3f870c1f3b9c92b3be5df25051ff942419ca28979",
+    "contracts/integration/preview/controller.preview.openapi.json": "d8617342ab37802c0d417c290bb8e4bf5c60c6bd42f3740f709e068292736dee",
+    "contracts/integration/preview/inventory.json": "c07adf138d616077a588d7a89c09da7e31acb14e8f7edd2705a90343180848d4",
+    "contracts/integration/preview/model-identities.json": "c1d95641eb95a984af6df4dcf84d6f64ad07626ef96e3a92118c0485dfdc4eed",
+    "contracts/integration/preview/models.schema.json": "6e1de1ced01234aaa666586256c99e99ae943893045d02326aca43a80c6f6f23",
+    "contracts/integration/preview/seamer.preview.openapi.json": "4cbc8844834bd93b93119bebbf84954368bf8c9c812561dca6ee9a2fa57d7b79",
+    "contracts/integration/preview/worker-ipc.schema.json": "9a79cc00f376930de25c5e36992e358747e42bb1a34023a132e7d56b4b611625",
+    "contracts/integration/preview/worker-messages.json": "2c572fa222aae50a48e56a302190d6bbb88dfea5b825aaa3fbeba5e9317f954e",
+    "contracts/composition/compose.py": "a23b0ecf89824956a8194e8ecead8208ef7507bebb7e5d8d2bdd3f99b0c9eeb7",
+    "contracts/composition/source.json": "c34828282e8b3ab5c2d1d90b1dbfc01bf1c9daebf4066249a6836ddedf875ed7",
+    "contracts/composition/policy.json": "90899f9f2c2c8923cd1450506e15d3a9f35f5d6197ccc67d003e8c34301a705a",
+    "contracts/composition/requirements-validation.txt": "a336de65ce30f3e834980f7ba382b336a92ff98c2189272409b88d55058b7e1b"
+  }
+}

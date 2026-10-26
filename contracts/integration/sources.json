@@ -1,0 +1,29 @@
+{
+  "format": "sdk-integration-source/1",
+  "approved": false,
+  "source_repository": "https://github.com/LeafSeamer/leafseamer-suite",
+  "source_commit": "77433a07e99e310efd0fdf55f2cf28e4e28df3d2",
+  "source_files": {
+    "source/command-contract.schema.json": {
+      "source_path": "docs/contracts/c04-lifecycle/command-contract.schema.json",
+      "sha256": "049a66b80bea06247aef806447b2c9ef3de347106c8dfd964664386adb9270f6"
+    },
+    "source/command-contract-ipc.schema.json": {
+      "source_path": "docs/contracts/c04-lifecycle/command-contract-ipc.schema.json",
+      "sha256": "c758a2a1b06011901282e2780c8e92d62d050c2ab02d65a3254da5a9a266e082"
+    },
+    "source/command-contract-manifest.json": {
+      "source_path": "docs/contracts/c04-lifecycle/command-contract-manifest.json",
+      "sha256": "70f0a8c2aa2192da4e91a48c5896d62132ec632025e72c1df9e683a27ce54842"
+    }
+  },
+  "base_sdk_commit": "027f1fc75d9113da9dd5dae93e075ca3082e5e4e",
+  "base_inputs": {
+    "contracts/composition/compose.py": "a23b0ecf89824956a8194e8ecead8208ef7507bebb7e5d8d2bdd3f99b0c9eeb7",
+    "contracts/composition/source.json": "c34828282e8b3ab5c2d1d90b1dbfc01bf1c9daebf4066249a6836ddedf875ed7",
+    "contracts/composition/policy.json": "90899f9f2c2c8923cd1450506e15d3a9f35f5d6197ccc67d003e8c34301a705a"
+  },
+  "canonical_namespace": "command",
+  "ipc_protocol": "ipc/0.14.0-continuation-draft.1",
+  "wire_format_changed": false
+}
