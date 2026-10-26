@@ -1,0 +1,3 @@
+# 离线资料检查所用直接依赖版本，不是生产依赖锁。
+jsonschema==4.25.1
+openapi-spec-validator==0.7.2

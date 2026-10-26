@@ -1,0 +1,489 @@
+{
+  "format": "sdk-composition-policy/1",
+  "approved": false,
+  "provenance": {
+    "repository": "https://github.com/LeafSeamer/leafseamer-suite",
+    "commit": "5a2847524316a80cf5d6e2e663d91854d4d15675",
+    "license": "Apache-2.0",
+    "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "imports": [
+    {
+      "id": "baseline_controller",
+      "path": "docs/contracts/draft4/controller.openapi.json",
+      "authorities": [
+        "controller"
+      ],
+      "namespace": "baseline",
+      "sha256": "a417617c7a88e4c8d7ac1af1b8abae1656db16f72590a8c4b5a46edfe2abe868",
+      "path_mount": "",
+      "source_servers": [
+        {
+          "url": "https://controller.example.invalid"
+        }
+      ]
+    },
+    {
+      "id": "baseline_seamer",
+      "path": "docs/contracts/draft4/seamer.openapi.json",
+      "authorities": [
+        "seamer"
+      ],
+      "namespace": "baseline",
+      "sha256": "9aa33dfe3245c4eb8ec66f6d8418d421c90fbe0136e0d98d2c5c996b7f83afbe",
+      "path_mount": "",
+      "source_servers": [
+        {
+          "url": "https://seamer.example.invalid"
+        }
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "path": "docs/contracts/c04-lifecycle/lifecycle.openapi.json",
+      "authorities": [
+        "seamer"
+      ],
+      "namespace": "lifecycle",
+      "sha256": "9f82eaf77e7500b28d138867f0ef68dd8c9e347deb49c4cf8d715f57236052cd",
+      "path_mount": "",
+      "source_servers": []
+    },
+    {
+      "id": "preparation",
+      "path": "docs/contracts/c04-preparation/preparation.openapi.json",
+      "authorities": [
+        "controller"
+      ],
+      "namespace": "preparation",
+      "sha256": "1ca9b3780be99b881004237520f013df1060512c8030a4c0bfc367c057af9d87",
+      "path_mount": "",
+      "source_servers": []
+    },
+    {
+      "id": "command",
+      "path": "docs/contracts/c04-lifecycle/command-contract.openapi.json",
+      "authorities": [
+        "controller"
+      ],
+      "namespace": "command",
+      "sha256": "b477777049f1f2d6c0f5140e4c7b2b9937097e0505f3bc937d554af6dfbbf986",
+      "path_mount": "",
+      "source_servers": []
+    },
+    {
+      "id": "control",
+      "path": "docs/contracts/c08-controller/control-authority.openapi.json",
+      "authorities": [
+        "controller"
+      ],
+      "namespace": "control",
+      "sha256": "d103313913a9cdf916c391d9ac4861dab367089d1e4610e19c673d4c0557f8ba",
+      "path_mount": "/api/v1",
+      "source_servers": [
+        {
+          "url": "/api/v1"
+        }
+      ]
+    },
+    {
+      "id": "ingress",
+      "path": "docs/contracts/c05-ingress/ingress.openapi.json",
+      "authorities": [
+        "seamer"
+      ],
+      "namespace": "ingress",
+      "sha256": "c2155c044c1602e16a3086d0fbcf42181a6729079d9531412dfa0bdc00f32cab",
+      "path_mount": "",
+      "source_servers": []
+    },
+    {
+      "id": "protection",
+      "path": "docs/contracts/c05-protection/protection.openapi.json",
+      "authorities": [
+        "controller"
+      ],
+      "namespace": "protection",
+      "sha256": "a1e9d53cd9dd4a2ac8ef5b291d23f76a5932e542651408ffe1c6c0911860f089",
+      "path_mount": "",
+      "source_servers": []
+    },
+    {
+      "id": "panel",
+      "path": "docs/contracts/c09-panel-service/service.openapi.json",
+      "authorities": [
+        "controller",
+        "seamer"
+      ],
+      "namespace": "panel",
+      "sha256": "e23df6c0901b29418ddef92923b78cd969d225b737f4be45a458bc241cdd9253",
+      "path_mount": "",
+      "source_servers": []
+    },
+    {
+      "id": "subscription",
+      "path": "docs/contracts/c09-panel-subscriptions/subscriptions.openapi.json",
+      "authorities": [
+        "controller",
+        "seamer"
+      ],
+      "namespace": "subscription",
+      "sha256": "089dfc267713cc48c50f9210d8fe5f79fdda4cb86ebf2e1b143a5607479d45a7",
+      "path_mount": "",
+      "source_servers": []
+    },
+    {
+      "id": "installation",
+      "path": "docs/contracts/c09-installation/installation-v02.openapi.json",
+      "authorities": [
+        "controller",
+        "seamer"
+      ],
+      "namespace": "installation",
+      "sha256": "ae2ac4c1049f5bd102535e2b507b250a9a638634914ff67dad6fa10d5ab9fc5d",
+      "path_mount": "",
+      "source_servers": []
+    },
+    {
+      "id": "time_public",
+      "path": "docs/contracts/df03-service/public.openapi.json",
+      "authorities": [
+        "controller",
+        "seamer"
+      ],
+      "namespace": "time_public",
+      "sha256": "e08fad77fdffacc5afd7ea8d68d0a8c5c6d04259480d4d8f8e46a0db9cd92438",
+      "path_mount": "",
+      "source_servers": []
+    },
+    {
+      "id": "time_internal",
+      "path": "docs/contracts/df03-service/internal.openapi.json",
+      "authorities": [
+        "controller",
+        "seamer"
+      ],
+      "namespace": "time_internal",
+      "sha256": "060d8fab1d9760af0d1e15fd56280276219d7d4a7e5ca50197ad824cd291bebb",
+      "path_mount": "",
+      "source_servers": []
+    },
+    {
+      "id": "continuation_controller",
+      "path": "docs/contracts/c04-lifecycle/continuation-controller.openapi.json",
+      "authorities": [
+        "controller"
+      ],
+      "namespace": "continuation_controller",
+      "sha256": "8e7cc64a39e6009d56a8606fe17fdf80c83ce7091332db0a8fe7261caf9f03af",
+      "path_mount": "",
+      "source_servers": []
+    },
+    {
+      "id": "continuation_seamer",
+      "path": "docs/contracts/c04-lifecycle/continuation-seamer.openapi.json",
+      "authorities": [
+        "seamer"
+      ],
+      "namespace": "continuation_seamer",
+      "sha256": "045a4e874d248edd4ee3ef6011e5a50885ca95d0370150a3d001d8f1e701f638",
+      "path_mount": "",
+      "source_servers": []
+    }
+  ],
+  "replacements": [
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/commands",
+      "old_source": "baseline_controller",
+      "new_source": "command",
+      "old_operation_id": "submitCommand",
+      "new_operation_id": "submitCommand"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/commands/{command_id}",
+      "old_source": "baseline_controller",
+      "new_source": "command",
+      "old_operation_id": "getCommand",
+      "new_operation_id": "getCommand"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/commands/{command_id}/cancel",
+      "old_source": "baseline_controller",
+      "new_source": "command",
+      "old_operation_id": "cancelCommand",
+      "new_operation_id": "cancelCommand"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/commands/{command_id}/evidence",
+      "old_source": "baseline_controller",
+      "new_source": "command",
+      "old_operation_id": "getCommandEvidence",
+      "new_operation_id": "getCommandEvidence"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/devices/{device_id}/control",
+      "old_source": "baseline_controller",
+      "new_source": "control",
+      "old_operation_id": "getControl",
+      "new_operation_id": "getControl"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/control-operations/{operation_id}",
+      "old_source": "baseline_controller",
+      "new_source": "control",
+      "old_operation_id": "getControlOperation",
+      "new_operation_id": "getControlOperation"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/acquire",
+      "old_source": "baseline_controller",
+      "new_source": "control",
+      "old_operation_id": "acquireControl",
+      "new_operation_id": "acquireControl"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/release",
+      "old_source": "baseline_controller",
+      "new_source": "control",
+      "old_operation_id": "releaseControl",
+      "new_operation_id": "releaseControl"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/transfers",
+      "old_source": "baseline_controller",
+      "new_source": "control",
+      "old_operation_id": "offerTransfer",
+      "new_operation_id": "offerTransfer"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}/accept",
+      "old_source": "baseline_controller",
+      "new_source": "control",
+      "old_operation_id": "acceptTransfer",
+      "new_operation_id": "acceptTransfer"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/definitions",
+      "old_source": "baseline_seamer",
+      "new_source": "lifecycle",
+      "old_operation_id": "createDefinition",
+      "new_operation_id": "createDefinition"
+    },
+    {
+      "authority": "seamer",
+      "method": "put",
+      "path": "/api/v1/definitions/{definition_id}/draft",
+      "old_source": "baseline_seamer",
+      "new_source": "lifecycle",
+      "old_operation_id": "updateDraft",
+      "new_operation_id": "updateDraft"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/definitions/{definition_id}/publish",
+      "old_source": "baseline_seamer",
+      "new_source": "lifecycle",
+      "old_operation_id": "publishDefinition",
+      "new_operation_id": "publishDefinition"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/definitions/{definition_id}/proofs/{proof_id}",
+      "old_source": "baseline_seamer",
+      "new_source": "lifecycle",
+      "old_operation_id": "getIndependenceProof",
+      "new_operation_id": "getIndependenceProof"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs",
+      "old_source": "baseline_seamer",
+      "new_source": "lifecycle",
+      "old_operation_id": "createRun",
+      "new_operation_id": "createRun"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/runs/{run_id}",
+      "old_source": "baseline_seamer",
+      "new_source": "lifecycle",
+      "old_operation_id": "getRun",
+      "new_operation_id": "getRun"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/preflight",
+      "old_source": "baseline_seamer",
+      "new_source": "lifecycle",
+      "old_operation_id": "preflightRun",
+      "new_operation_id": "preflightRun"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/arm",
+      "old_source": "baseline_seamer",
+      "new_source": "lifecycle",
+      "old_operation_id": "armRun",
+      "new_operation_id": "armRun"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/pause",
+      "old_source": "baseline_seamer",
+      "new_source": "lifecycle",
+      "old_operation_id": "pauseRun",
+      "new_operation_id": "pauseRun"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/recovery-preview",
+      "old_source": "baseline_seamer",
+      "new_source": "lifecycle",
+      "old_operation_id": "previewRecovery",
+      "new_operation_id": "previewRecovery"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/resume",
+      "old_source": "baseline_seamer",
+      "new_source": "lifecycle",
+      "old_operation_id": "resumeRun",
+      "new_operation_id": "resumeRun"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/recovery-operations/{operation_id}",
+      "old_source": "baseline_seamer",
+      "new_source": "lifecycle",
+      "old_operation_id": "getRecoveryOperation",
+      "new_operation_id": "getRecoveryOperation"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/providers/{provider_id}/events",
+      "old_source": "baseline_seamer",
+      "new_source": "ingress",
+      "old_operation_id": "ingestEvent",
+      "new_operation_id": "submitProviderEvent"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/clock",
+      "old_source": "baseline_controller",
+      "new_source": "time_public",
+      "old_operation_id": "getClock",
+      "new_operation_id": "getClock"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/clock-assessment",
+      "old_source": "baseline_controller",
+      "new_source": "time_public",
+      "old_operation_id": "getClockAssessment",
+      "new_operation_id": "getClockAssessment"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/clock",
+      "old_source": "baseline_seamer",
+      "new_source": "time_public",
+      "old_operation_id": "getClock",
+      "new_operation_id": "getClock"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/clock-assessment",
+      "old_source": "baseline_seamer",
+      "new_source": "time_public",
+      "old_operation_id": "getClockAssessment",
+      "new_operation_id": "getClockAssessment"
+    }
+  ],
+  "retirements": [
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/time-evidence/{evidence_id}",
+      "source": "baseline_controller",
+      "operation_id": "getTimeBoundEvidence",
+      "reason": "改用四项精确reference-time历史查询，禁止旧格式回退"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/time-profiles/{profile_id}/{revision}",
+      "source": "baseline_controller",
+      "operation_id": "getTimeBoundProfile",
+      "reason": "改用四项精确reference-time历史查询，禁止旧格式回退"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/clock-samples/{sample_id}",
+      "source": "baseline_controller",
+      "operation_id": "getClockSample",
+      "reason": "改用四项精确reference-time历史查询，禁止旧格式回退"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/time-evidence/{evidence_id}",
+      "source": "baseline_seamer",
+      "operation_id": "getTimeBoundEvidence",
+      "reason": "改用四项精确reference-time历史查询，禁止旧格式回退"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/time-profiles/{profile_id}/{revision}",
+      "source": "baseline_seamer",
+      "operation_id": "getTimeBoundProfile",
+      "reason": "改用四项精确reference-time历史查询，禁止旧格式回退"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/clock-samples/{sample_id}",
+      "source": "baseline_seamer",
+      "operation_id": "getClockSample",
+      "reason": "改用四项精确reference-time历史查询，禁止旧格式回退"
+    }
+  ]
+}

@@ -1,0 +1,1894 @@
+{
+  "format": "sdk-composition-inventory/1",
+  "approved": false,
+  "runtime_ready": false,
+  "source_documents": 15,
+  "source_operation_declarations": 170,
+  "authority_operation_declarations": 210,
+  "selected_operations": 177,
+  "replacements": 27,
+  "retirements": 6,
+  "operations": [
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/auth/revocations/{operation_id}",
+      "operation_id": "getRevocation",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/capacity",
+      "operation_id": "getCapacity",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/clock",
+      "operation_id": "getClock",
+      "selected_source": "time_public",
+      "source_version": "reference-time-service/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_controller"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/clock-assessment",
+      "operation_id": "getClockAssessment",
+      "selected_source": "time_public",
+      "source_version": "reference-time-service/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_controller"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/commands/{command_id}",
+      "operation_id": "getCommand",
+      "selected_source": "command",
+      "source_version": "command-contract/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_controller"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/commands/{command_id}/cancellations/{cancellation_id}",
+      "operation_id": "getCommandCancellation",
+      "selected_source": "command",
+      "source_version": "command-contract/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/commands/{command_id}/evidence",
+      "operation_id": "getCommandEvidence",
+      "selected_source": "command",
+      "source_version": "command-contract/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_controller"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/commands/{command_id}/evidence/{evidence_id}/revisions/{revision}",
+      "operation_id": "getCommandEvidenceRevision",
+      "selected_source": "command",
+      "source_version": "command-contract/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/commands/{command_id}/revisions/{revision}",
+      "operation_id": "getCommandRevision",
+      "selected_source": "command",
+      "source_version": "command-contract/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/control-operations/{operation_id}",
+      "operation_id": "getControlOperation",
+      "selected_source": "control",
+      "source_version": "control-authority/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_controller"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/devices",
+      "operation_id": "listDevices",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/devices/{device_id}/capabilities",
+      "operation_id": "getCapabilities",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/devices/{device_id}/control",
+      "operation_id": "getControl",
+      "selected_source": "control",
+      "source_version": "control-authority/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_controller"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}",
+      "operation_id": "getTransfer",
+      "selected_source": "control",
+      "source_version": "control-authority/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/devices/{device_id}/scene-catalog",
+      "operation_id": "getSceneCatalog",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/devices/{device_id}/state",
+      "operation_id": "getDeviceState",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/events",
+      "operation_id": "openEvents",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "websocket-upgrade"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/extension-operations/{operation_id}",
+      "operation_id": "getExtensionOperation",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/extension-slots/{slot_id}",
+      "operation_id": "getExtensionSlot",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/extensions/{installation_id}",
+      "operation_id": "getExtensionInstallation",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/meta",
+      "operation_id": "getMeta",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/panel-confirmations/{preview_id}",
+      "operation_id": "getPanelConfirmation",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/panel-session-operations/{host_operation_id}",
+      "operation_id": "getPanelSessionOperation",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}",
+      "operation_id": "getPanelSession",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}/requests/{request_id}",
+      "operation_id": "getPanelRequest",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}",
+      "operation_id": "getPanelSubscription",
+      "selected_source": "subscription",
+      "source_version": "panel-subscriptions/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/frames",
+      "operation_id": "getPanelProjectionFrames",
+      "selected_source": "subscription",
+      "source_version": "panel-subscriptions/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/session",
+      "operation_id": "getSession",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/subjects/{subject_id}",
+      "operation_id": "getSubject",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshot",
+      "operation_id": "getSnapshot",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/clock-domain",
+      "operation_id": "getClockDomainDescriptor",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/reference-time/anchors/{id}/{revision}",
+      "operation_id": "getReferenceTimeAnchor",
+      "selected_source": "time_internal",
+      "source_version": "reference-time-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/reference-time/assessments/{id}/{revision}",
+      "operation_id": "getReferenceTimeAssessment",
+      "selected_source": "time_internal",
+      "source_version": "reference-time-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/reference-time/bundles/{id}/{revision}",
+      "operation_id": "getReferenceTimeBundle",
+      "selected_source": "time_internal",
+      "source_version": "reference-time-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/reference-time/profiles/{id}/{revision}",
+      "operation_id": "getReferenceTimeProfile",
+      "selected_source": "time_internal",
+      "source_version": "reference-time-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/auth/revocations",
+      "operation_id": "revokeAuthorization",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/commands",
+      "operation_id": "submitCommand",
+      "selected_source": "command",
+      "source_version": "command-contract/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_controller"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/commands/lookup",
+      "operation_id": "lookupCommandAdmission",
+      "selected_source": "command",
+      "source_version": "command-contract/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/commands/reject",
+      "operation_id": "rejectCommandAdmission",
+      "selected_source": "command",
+      "source_version": "command-contract/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/commands/{command_id}/cancel",
+      "operation_id": "cancelCommand",
+      "selected_source": "command",
+      "source_version": "command-contract/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_controller"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/commands/{command_id}/cancellations/lookup",
+      "operation_id": "lookupCommandCancellation",
+      "selected_source": "command",
+      "source_version": "command-contract/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/control-requests/lookup",
+      "operation_id": "lookupControlRequest",
+      "selected_source": "control",
+      "source_version": "control-authority/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/acquire",
+      "operation_id": "acquireControl",
+      "selected_source": "control",
+      "source_version": "control-authority/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_controller"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/release",
+      "operation_id": "releaseControl",
+      "selected_source": "control",
+      "source_version": "control-authority/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_controller"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/transfers",
+      "operation_id": "offerTransfer",
+      "selected_source": "control",
+      "source_version": "control-authority/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_controller"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}/accept",
+      "operation_id": "acceptTransfer",
+      "selected_source": "control",
+      "source_version": "control-authority/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_controller"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}/cancel",
+      "operation_id": "cancelTransfer",
+      "selected_source": "control",
+      "source_version": "control-authority/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-operations/lookup",
+      "operation_id": "lookupExtensionRequest",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots",
+      "operation_id": "createExtensionSlot",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/activate",
+      "operation_id": "activateExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/disable",
+      "operation_id": "disableExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/enable",
+      "operation_id": "enableExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/plan",
+      "operation_id": "planExtensionChange",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/uninstall",
+      "operation_id": "uninstallExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/upgrade",
+      "operation_id": "upgradeExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extensions/stage",
+      "operation_id": "stageExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extensions/{installation_id}/approve",
+      "operation_id": "approveExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extensions/{installation_id}/resolve",
+      "operation_id": "resolveExtensionRoles",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extensions/{installation_id}/review",
+      "operation_id": "reviewExtensionPermissions",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-confirmations/{preview_id}/cancel",
+      "operation_id": "cancelPanelConfirmation",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-confirmations/{preview_id}/commit",
+      "operation_id": "commitPanelConfirmation",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions",
+      "operation_id": "createPanelSession",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/activate",
+      "operation_id": "activatePanelSession",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/close",
+      "operation_id": "closePanelSession",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/confirmations",
+      "operation_id": "offerPanelConfirmation",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/handshake",
+      "operation_id": "beginPanelHandshake",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/prepare-activation",
+      "operation_id": "preparePanelActivation",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/renew",
+      "operation_id": "renewPanelSession",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/requests",
+      "operation_id": "invokePanelMethod",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions",
+      "operation_id": "createPanelSubscription",
+      "selected_source": "subscription",
+      "source_version": "panel-subscriptions/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/ack",
+      "operation_id": "acknowledgePanelProjection",
+      "selected_source": "subscription",
+      "source_version": "panel-subscriptions/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/close",
+      "operation_id": "closePanelSubscription",
+      "selected_source": "subscription",
+      "source_version": "panel-subscriptions/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/request-contexts",
+      "operation_id": "createRequestContext",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/run-grants/{grant_id}/revoke",
+      "operation_id": "revokeRunGrant",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/subscriptions",
+      "operation_id": "createSubscription",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/ws-tickets",
+      "operation_id": "issueWsTicket",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/auth/bootstrap",
+      "operation_id": "bootstrap",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/auth/service-tokens",
+      "operation_id": "issueToken",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/auth/sessions",
+      "operation_id": "login",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/auth/sessions/refresh",
+      "operation_id": "refreshSession",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/auth/introspect",
+      "operation_id": "introspect",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/continuations",
+      "operation_id": "issueContinuation",
+      "selected_source": "continuation_controller",
+      "source_version": "run-continuation-http/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/continuations/lookup",
+      "operation_id": "lookupControllerContinuation",
+      "selected_source": "continuation_controller",
+      "source_version": "run-continuation-http/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/preparations",
+      "operation_id": "prepareAutomation",
+      "selected_source": "preparation",
+      "source_version": "automation-preparation/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/preparations/close",
+      "operation_id": "closePreparation",
+      "selected_source": "preparation",
+      "source_version": "automation-preparation/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/preparations/lookup",
+      "operation_id": "lookupPreparation",
+      "selected_source": "preparation",
+      "source_version": "automation-preparation/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/protections",
+      "operation_id": "protectRunGeneration",
+      "selected_source": "protection",
+      "source_version": "protection-service/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/protections/lookup",
+      "operation_id": "lookupRunProtection",
+      "selected_source": "protection",
+      "source_version": "protection-service/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "put",
+      "path": "/api/v1/capacity/profile",
+      "operation_id": "setCapacity",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "controller",
+      "method": "put",
+      "path": "/api/v1/run-grants/{grant_id}",
+      "operation_id": "updateRunGrant",
+      "selected_source": "baseline_controller",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/auth/revocations/{operation_id}",
+      "operation_id": "getRevocation",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/capacity",
+      "operation_id": "getCapacity",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/clock",
+      "operation_id": "getClock",
+      "selected_source": "time_public",
+      "source_version": "reference-time-service/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/clock-assessment",
+      "operation_id": "getClockAssessment",
+      "selected_source": "time_public",
+      "source_version": "reference-time-service/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/definitions/{definition_id}/activation-slot",
+      "operation_id": "getActivationSlot",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/definitions/{definition_id}/draft",
+      "operation_id": "getDraft",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/definitions/{definition_id}/proofs/{proof_id}",
+      "operation_id": "getIndependenceProof",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/definitions/{definition_id}/versions/{definition_version}",
+      "operation_id": "getDefinitionVersion",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/definitions/{definition_id}/versions/{definition_version}/artifact",
+      "operation_id": "getPublishedArtifact",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/definitions/{definition_id}/versions/{definition_version}/program",
+      "operation_id": "getCompiledProgram",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/events",
+      "operation_id": "openEvents",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "websocket-upgrade"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/extension-operations/{operation_id}",
+      "operation_id": "getExtensionOperation",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/extension-slots/{slot_id}",
+      "operation_id": "getExtensionSlot",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/extensions/{installation_id}",
+      "operation_id": "getExtensionInstallation",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/meta",
+      "operation_id": "getMeta",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/panel-confirmations/{preview_id}",
+      "operation_id": "getPanelConfirmation",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/panel-session-operations/{host_operation_id}",
+      "operation_id": "getPanelSessionOperation",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}",
+      "operation_id": "getPanelSession",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}/requests/{request_id}",
+      "operation_id": "getPanelRequest",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}",
+      "operation_id": "getPanelSubscription",
+      "selected_source": "subscription",
+      "source_version": "panel-subscriptions/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/frames",
+      "operation_id": "getPanelProjectionFrames",
+      "selected_source": "subscription",
+      "source_version": "panel-subscriptions/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/recovery-operations/{operation_id}",
+      "operation_id": "getRecoveryOperation",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/run-operations/{operation_id}",
+      "operation_id": "getRunOperation",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/runs/{run_id}",
+      "operation_id": "getRun",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/runs/{run_id}/decisions/{decision_id}",
+      "operation_id": "getTriggerDecision",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/runs/{run_id}/executions/{execution_id}",
+      "operation_id": "getExecution",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/session",
+      "operation_id": "getSession",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/subjects/{subject_id}",
+      "operation_id": "getSubject",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshot",
+      "operation_id": "getSnapshot",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/clock-domain",
+      "operation_id": "getClockDomainDescriptor",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/ingress/commits/{commit_id}",
+      "operation_id": "readIngressCommit",
+      "selected_source": "ingress",
+      "source_version": "event-ingress/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/reference-time/anchors/{id}/{revision}",
+      "operation_id": "getReferenceTimeAnchor",
+      "selected_source": "time_internal",
+      "source_version": "reference-time-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/reference-time/assessments/{id}/{revision}",
+      "operation_id": "getReferenceTimeAssessment",
+      "selected_source": "time_internal",
+      "source_version": "reference-time-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/reference-time/bundles/{id}/{revision}",
+      "operation_id": "getReferenceTimeBundle",
+      "selected_source": "time_internal",
+      "source_version": "reference-time-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/reference-time/profiles/{id}/{revision}",
+      "operation_id": "getReferenceTimeProfile",
+      "selected_source": "time_internal",
+      "source_version": "reference-time-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/auth/revocations",
+      "operation_id": "revokeAuthorization",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/automation-requests/lookup",
+      "operation_id": "lookupAutomationRequest",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/definitions",
+      "operation_id": "createDefinition",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/definitions/{definition_id}/publish",
+      "operation_id": "publishDefinition",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-operations/lookup",
+      "operation_id": "lookupExtensionRequest",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots",
+      "operation_id": "createExtensionSlot",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/activate",
+      "operation_id": "activateExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/disable",
+      "operation_id": "disableExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/enable",
+      "operation_id": "enableExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/plan",
+      "operation_id": "planExtensionChange",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/uninstall",
+      "operation_id": "uninstallExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/upgrade",
+      "operation_id": "upgradeExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extensions/stage",
+      "operation_id": "stageExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extensions/{installation_id}/approve",
+      "operation_id": "approveExtension",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extensions/{installation_id}/resolve",
+      "operation_id": "resolveExtensionRoles",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extensions/{installation_id}/review",
+      "operation_id": "reviewExtensionPermissions",
+      "selected_source": "installation",
+      "source_version": "extension-installation/0.2.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-confirmations/{preview_id}/cancel",
+      "operation_id": "cancelPanelConfirmation",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-confirmations/{preview_id}/commit",
+      "operation_id": "commitPanelConfirmation",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions",
+      "operation_id": "createPanelSession",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/activate",
+      "operation_id": "activatePanelSession",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/close",
+      "operation_id": "closePanelSession",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/confirmations",
+      "operation_id": "offerPanelConfirmation",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/handshake",
+      "operation_id": "beginPanelHandshake",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/prepare-activation",
+      "operation_id": "preparePanelActivation",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/renew",
+      "operation_id": "renewPanelSession",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/requests",
+      "operation_id": "invokePanelMethod",
+      "selected_source": "panel",
+      "source_version": "panel-service/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions",
+      "operation_id": "createPanelSubscription",
+      "selected_source": "subscription",
+      "source_version": "panel-subscriptions/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/ack",
+      "operation_id": "acknowledgePanelProjection",
+      "selected_source": "subscription",
+      "source_version": "panel-subscriptions/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/close",
+      "operation_id": "closePanelSubscription",
+      "selected_source": "subscription",
+      "source_version": "panel-subscriptions/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/providers/{provider_id}/events",
+      "operation_id": "submitProviderEvent",
+      "selected_source": "ingress",
+      "source_version": "event-ingress/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/providers/{provider_id}/events/lookup",
+      "operation_id": "lookupProviderEvent",
+      "selected_source": "ingress",
+      "source_version": "event-ingress/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/request-contexts",
+      "operation_id": "createRequestContext",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs",
+      "operation_id": "createRun",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/arm",
+      "operation_id": "armRun",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/disarm",
+      "operation_id": "disarmRun",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/pause",
+      "operation_id": "pauseRun",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/preflight",
+      "operation_id": "preflightRun",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/recovery-preview",
+      "operation_id": "previewRecovery",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/resume",
+      "operation_id": "resumeRun",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/retire",
+      "operation_id": "retireRun",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/subscriptions",
+      "operation_id": "createSubscription",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/ws-tickets",
+      "operation_id": "issueWsTicket",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/internal/automation/continuations",
+      "operation_id": "registerContinuation",
+      "selected_source": "continuation_seamer",
+      "source_version": "run-continuation-http/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/internal/automation/continuations/adoptions",
+      "operation_id": "adoptContinuation",
+      "selected_source": "continuation_seamer",
+      "source_version": "run-continuation-http/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/internal/automation/continuations/finish",
+      "operation_id": "finishContinuation",
+      "selected_source": "continuation_seamer",
+      "source_version": "run-continuation-http/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/internal/automation/continuations/lookup",
+      "operation_id": "lookupSeamerContinuation",
+      "selected_source": "continuation_seamer",
+      "source_version": "run-continuation-http/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/internal/automation/continuations/receipts",
+      "operation_id": "observeContinuationReceipt",
+      "selected_source": "continuation_seamer",
+      "source_version": "run-continuation-http/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/internal/automation/continuations/withdrawals",
+      "operation_id": "observeContinuationWithdrawal",
+      "selected_source": "continuation_seamer",
+      "source_version": "run-continuation-http/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "put",
+      "path": "/api/v1/capacity/profile",
+      "operation_id": "setCapacity",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "put",
+      "path": "/api/v1/definitions/{definition_id}/draft",
+      "operation_id": "updateDraft",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [
+        "baseline_seamer"
+      ],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "put",
+      "path": "/api/v1/definitions/{definition_id}/metadata",
+      "operation_id": "updateDefinitionMetadata",
+      "selected_source": "lifecycle",
+      "source_version": "automation-lifecycle/0.1.0-draft.1",
+      "replaced_sources": [],
+      "transport": "http"
+    },
+    {
+      "authority": "seamer",
+      "method": "put",
+      "path": "/api/v1/providers/{provider_id}/catalog",
+      "operation_id": "updateCatalog",
+      "selected_source": "baseline_seamer",
+      "source_version": "1.0.0-draft.4",
+      "replaced_sources": [],
+      "transport": "http"
+    }
+  ],
+  "retired": [
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/clock-samples/{sample_id}",
+      "source": "baseline_controller",
+      "operation_id": "getClockSample",
+      "reason": "改用四项精确reference-time历史查询，禁止旧格式回退"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/time-evidence/{evidence_id}",
+      "source": "baseline_controller",
+      "operation_id": "getTimeBoundEvidence",
+      "reason": "改用四项精确reference-time历史查询，禁止旧格式回退"
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/time-profiles/{profile_id}/{revision}",
+      "source": "baseline_controller",
+      "operation_id": "getTimeBoundProfile",
+      "reason": "改用四项精确reference-time历史查询，禁止旧格式回退"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/clock-samples/{sample_id}",
+      "source": "baseline_seamer",
+      "operation_id": "getClockSample",
+      "reason": "改用四项精确reference-time历史查询，禁止旧格式回退"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/time-evidence/{evidence_id}",
+      "source": "baseline_seamer",
+      "operation_id": "getTimeBoundEvidence",
+      "reason": "改用四项精确reference-time历史查询，禁止旧格式回退"
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/time-profiles/{profile_id}/{revision}",
+      "source": "baseline_seamer",
+      "operation_id": "getTimeBoundProfile",
+      "reason": "改用四项精确reference-time历史查询，禁止旧格式回退"
+    }
+  ],
+  "blockers": [
+    "所选操作仍保留各来源协商头；全系统版本协商尚未统一，不能部署此预览",
+    "同名异源模型保持独立；跨域Ref和数字接受集须逐项显式绑定",
+    "worker应归并当前IPC0.14及其他独立通道；本包没有生成IPC",
+    "授权矩阵、面板方法、快照投影和摘要/DDL映射须同步归并",
+    "来源候选批准、阶段0交接及真实服务设备验收仍未完成"
+  ]
+}
