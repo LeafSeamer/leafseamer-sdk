@@ -1,0 +1,2392 @@
+{
+  "format": "sdk-selection-routing/1",
+  "approved": false,
+  "ordinary_http_operations": 175,
+  "websocket_operations": 2,
+  "discovery_operations": 2,
+  "changed_definitions": [
+    "baseline__Meta",
+    "baseline__ErrorResponse",
+    "baseline__MetaResponse",
+    "baseline__ClockStatusResponse",
+    "baseline__SessionResponse",
+    "baseline__RequestContextResponse",
+    "baseline__DevicePageResponse",
+    "baseline__CapabilityCatalogResponse",
+    "baseline__ObservationResponse",
+    "baseline__CommandRecordResponse",
+    "baseline__CancelOperationResponse",
+    "baseline__ControlRecordResponse",
+    "baseline__ControlOperationResponse",
+    "baseline__TransferOfferResponse",
+    "baseline__MutationReceiptResponse",
+    "baseline__SubscriptionResponse",
+    "baseline__SnapshotResponse",
+    "baseline__EventReceiptResponse",
+    "baseline__DefinitionRecordResponse",
+    "baseline__RunRecordResponse",
+    "baseline__PreflightResponse",
+    "baseline__RecoveryPreviewResponse",
+    "baseline__SubjectRecordResponse",
+    "baseline__AuthorizationSnapshotResponse",
+    "baseline__ClockAssessmentResponse",
+    "baseline__RevocationRecordResponse",
+    "baseline__WsTicketResultResponse",
+    "baseline__WsTicketBindingResponse",
+    "baseline__CapacityStatusResponse",
+    "baseline__RecoveryOperationResponse",
+    "baseline__CatalogBindingResponse",
+    "baseline__EvidencePageResponse",
+    "baseline__IndependenceProofResponse",
+    "baseline__TokenResultResponse",
+    "baseline__IntrospectResultResponse",
+    "baseline__ClockDomainDescriptorResponse",
+    "baseline__TimeBoundEvidenceResponse",
+    "baseline__TimeBoundProfileResponse",
+    "baseline__ClockSampleResponse",
+    "baseline__RequestContextRequest",
+    "baseline__RequestContext",
+    "baseline__WsTicketRequest",
+    "baseline__WsTicketBinding",
+    "baseline__WsFrame"
+  ],
+  "operations": [
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/auth/revocations/{operation_id}",
+      "operation_id": "getRevocation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/capacity",
+      "operation_id": "getCapacity",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/clock",
+      "operation_id": "getClock",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "reference-time-service/0.1.0-draft.1",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/clock-assessment",
+      "operation_id": "getClockAssessment",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "reference-time-service/0.1.0-draft.1",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/commands/{command_id}",
+      "operation_id": "getCommand",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "command-contract/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/commands/{command_id}/cancellations/{cancellation_id}",
+      "operation_id": "getCommandCancellation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "command-contract/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/commands/{command_id}/evidence",
+      "operation_id": "getCommandEvidence",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "command-contract/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/commands/{command_id}/evidence/{evidence_id}/revisions/{revision}",
+      "operation_id": "getCommandEvidenceRevision",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "command-contract/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/commands/{command_id}/revisions/{revision}",
+      "operation_id": "getCommandRevision",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "command-contract/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/control-operations/{operation_id}",
+      "operation_id": "getControlOperation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "control-authority/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/devices",
+      "operation_id": "listDevices",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/devices/{device_id}/capabilities",
+      "operation_id": "getCapabilities",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/devices/{device_id}/control",
+      "operation_id": "getControl",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "control-authority/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}",
+      "operation_id": "getTransfer",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "control-authority/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/devices/{device_id}/scene-catalog",
+      "operation_id": "getSceneCatalog",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/devices/{device_id}/state",
+      "operation_id": "getDeviceState",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/events",
+      "operation_id": "openEvents",
+      "transport": "websocket",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/extension-operations/{operation_id}",
+      "operation_id": "getExtensionOperation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/extension-slots/{slot_id}",
+      "operation_id": "getExtensionSlot",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/extensions/{installation_id}",
+      "operation_id": "getExtensionInstallation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/meta",
+      "operation_id": "getMeta",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/panel-confirmations/{preview_id}",
+      "operation_id": "getPanelConfirmation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/panel-session-operations/{host_operation_id}",
+      "operation_id": "getPanelSessionOperation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}",
+      "operation_id": "getPanelSession",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}/requests/{request_id}",
+      "operation_id": "getPanelRequest",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}",
+      "operation_id": "getPanelSubscription",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/frames",
+      "operation_id": "getPanelProjectionFrames",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/session",
+      "operation_id": "getSession",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/subjects/{subject_id}",
+      "operation_id": "getSubject",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshot",
+      "operation_id": "getSnapshot",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/clock-domain",
+      "operation_id": "getClockDomainDescriptor",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/reference-time/anchors/{id}/{revision}",
+      "operation_id": "getReferenceTimeAnchor",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "reference-time-service/0.1.0-draft.1",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/reference-time/assessments/{id}/{revision}",
+      "operation_id": "getReferenceTimeAssessment",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "reference-time-service/0.1.0-draft.1",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/reference-time/bundles/{id}/{revision}",
+      "operation_id": "getReferenceTimeBundle",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "reference-time-service/0.1.0-draft.1",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "get",
+      "path": "/internal/reference-time/profiles/{id}/{revision}",
+      "operation_id": "getReferenceTimeProfile",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "reference-time-service/0.1.0-draft.1",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/auth/revocations",
+      "operation_id": "revokeAuthorization",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/commands",
+      "operation_id": "submitCommand",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "command-contract/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/commands/lookup",
+      "operation_id": "lookupCommandAdmission",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "command-contract/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/commands/reject",
+      "operation_id": "rejectCommandAdmission",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "command-contract/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/commands/{command_id}/cancel",
+      "operation_id": "cancelCommand",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "command-contract/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/commands/{command_id}/cancellations/lookup",
+      "operation_id": "lookupCommandCancellation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "command-contract/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/control-requests/lookup",
+      "operation_id": "lookupControlRequest",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "control-authority/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/acquire",
+      "operation_id": "acquireControl",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "control-authority/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/release",
+      "operation_id": "releaseControl",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "control-authority/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/transfers",
+      "operation_id": "offerTransfer",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "control-authority/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}/accept",
+      "operation_id": "acceptTransfer",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "control-authority/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}/cancel",
+      "operation_id": "cancelTransfer",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "control-authority/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-operations/lookup",
+      "operation_id": "lookupExtensionRequest",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots",
+      "operation_id": "createExtensionSlot",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/activate",
+      "operation_id": "activateExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/disable",
+      "operation_id": "disableExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/enable",
+      "operation_id": "enableExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/plan",
+      "operation_id": "planExtensionChange",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/uninstall",
+      "operation_id": "uninstallExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/upgrade",
+      "operation_id": "upgradeExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extensions/stage",
+      "operation_id": "stageExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extensions/{installation_id}/approve",
+      "operation_id": "approveExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extensions/{installation_id}/resolve",
+      "operation_id": "resolveExtensionRoles",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/extensions/{installation_id}/review",
+      "operation_id": "reviewExtensionPermissions",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-confirmations/{preview_id}/cancel",
+      "operation_id": "cancelPanelConfirmation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-confirmations/{preview_id}/commit",
+      "operation_id": "commitPanelConfirmation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions",
+      "operation_id": "createPanelSession",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/activate",
+      "operation_id": "activatePanelSession",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/close",
+      "operation_id": "closePanelSession",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/confirmations",
+      "operation_id": "offerPanelConfirmation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/handshake",
+      "operation_id": "beginPanelHandshake",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/prepare-activation",
+      "operation_id": "preparePanelActivation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/renew",
+      "operation_id": "renewPanelSession",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/requests",
+      "operation_id": "invokePanelMethod",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions",
+      "operation_id": "createPanelSubscription",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/ack",
+      "operation_id": "acknowledgePanelProjection",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/close",
+      "operation_id": "closePanelSubscription",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/request-contexts",
+      "operation_id": "createRequestContext",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/run-grants/{grant_id}/revoke",
+      "operation_id": "revokeRunGrant",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/subscriptions",
+      "operation_id": "createSubscription",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/api/v1/ws-tickets",
+      "operation_id": "issueWsTicket",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/auth/bootstrap",
+      "operation_id": "bootstrap",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/auth/service-tokens",
+      "operation_id": "issueToken",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/auth/sessions",
+      "operation_id": "login",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/auth/sessions/refresh",
+      "operation_id": "refreshSession",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/auth/introspect",
+      "operation_id": "introspect",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/continuations",
+      "operation_id": "issueContinuation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "run-continuation-http/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/continuations/lookup",
+      "operation_id": "lookupControllerContinuation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "run-continuation-http/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/preparations",
+      "operation_id": "prepareAutomation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-preparation/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/preparations/close",
+      "operation_id": "closePreparation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-preparation/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/preparations/lookup",
+      "operation_id": "lookupPreparation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-preparation/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/protections",
+      "operation_id": "protectRunGeneration",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "protection-service/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "post",
+      "path": "/internal/automation/protections/lookup",
+      "operation_id": "lookupRunProtection",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "protection-service/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "controller",
+      "method": "put",
+      "path": "/api/v1/capacity/profile",
+      "operation_id": "setCapacity",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "controller",
+      "method": "put",
+      "path": "/api/v1/run-grants/{grant_id}",
+      "operation_id": "updateRunGrant",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/auth/revocations/{operation_id}",
+      "operation_id": "getRevocation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/capacity",
+      "operation_id": "getCapacity",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/clock",
+      "operation_id": "getClock",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "reference-time-service/0.1.0-draft.1",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/clock-assessment",
+      "operation_id": "getClockAssessment",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "reference-time-service/0.1.0-draft.1",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/definitions/{definition_id}/activation-slot",
+      "operation_id": "getActivationSlot",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/definitions/{definition_id}/draft",
+      "operation_id": "getDraft",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "put",
+      "path": "/api/v1/definitions/{definition_id}/draft",
+      "operation_id": "updateDraft",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/definitions/{definition_id}/proofs/{proof_id}",
+      "operation_id": "getIndependenceProof",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/definitions/{definition_id}/versions/{definition_version}",
+      "operation_id": "getDefinitionVersion",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/definitions/{definition_id}/versions/{definition_version}/artifact",
+      "operation_id": "getPublishedArtifact",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/definitions/{definition_id}/versions/{definition_version}/program",
+      "operation_id": "getCompiledProgram",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/events",
+      "operation_id": "openEvents",
+      "transport": "websocket",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/extension-operations/{operation_id}",
+      "operation_id": "getExtensionOperation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/extension-slots/{slot_id}",
+      "operation_id": "getExtensionSlot",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/extensions/{installation_id}",
+      "operation_id": "getExtensionInstallation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/meta",
+      "operation_id": "getMeta",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/panel-confirmations/{preview_id}",
+      "operation_id": "getPanelConfirmation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/panel-session-operations/{host_operation_id}",
+      "operation_id": "getPanelSessionOperation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}",
+      "operation_id": "getPanelSession",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}/requests/{request_id}",
+      "operation_id": "getPanelRequest",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}",
+      "operation_id": "getPanelSubscription",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/frames",
+      "operation_id": "getPanelProjectionFrames",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/recovery-operations/{operation_id}",
+      "operation_id": "getRecoveryOperation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/run-operations/{operation_id}",
+      "operation_id": "getRunOperation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/runs/{run_id}",
+      "operation_id": "getRun",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/runs/{run_id}/decisions/{decision_id}",
+      "operation_id": "getTriggerDecision",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/runs/{run_id}/executions/{execution_id}",
+      "operation_id": "getExecution",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/session",
+      "operation_id": "getSession",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/subjects/{subject_id}",
+      "operation_id": "getSubject",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshot",
+      "operation_id": "getSnapshot",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/clock-domain",
+      "operation_id": "getClockDomainDescriptor",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/ingress/commits/{commit_id}",
+      "operation_id": "readIngressCommit",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "event-ingress/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/reference-time/anchors/{id}/{revision}",
+      "operation_id": "getReferenceTimeAnchor",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "reference-time-service/0.1.0-draft.1",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/reference-time/assessments/{id}/{revision}",
+      "operation_id": "getReferenceTimeAssessment",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "reference-time-service/0.1.0-draft.1",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/reference-time/bundles/{id}/{revision}",
+      "operation_id": "getReferenceTimeBundle",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "reference-time-service/0.1.0-draft.1",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "get",
+      "path": "/internal/reference-time/profiles/{id}/{revision}",
+      "operation_id": "getReferenceTimeProfile",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "reference-time-service/0.1.0-draft.1",
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/auth/revocations",
+      "operation_id": "revokeAuthorization",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/automation-requests/lookup",
+      "operation_id": "lookupAutomationRequest",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/definitions",
+      "operation_id": "createDefinition",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/definitions/{definition_id}/publish",
+      "operation_id": "publishDefinition",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-operations/lookup",
+      "operation_id": "lookupExtensionRequest",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots",
+      "operation_id": "createExtensionSlot",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/activate",
+      "operation_id": "activateExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/disable",
+      "operation_id": "disableExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/enable",
+      "operation_id": "enableExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/plan",
+      "operation_id": "planExtensionChange",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/uninstall",
+      "operation_id": "uninstallExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extension-slots/{slot_id}/upgrade",
+      "operation_id": "upgradeExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extensions/stage",
+      "operation_id": "stageExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extensions/{installation_id}/approve",
+      "operation_id": "approveExtension",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extensions/{installation_id}/resolve",
+      "operation_id": "resolveExtensionRoles",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/extensions/{installation_id}/review",
+      "operation_id": "reviewExtensionPermissions",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "extension-installation/0.2.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-confirmations/{preview_id}/cancel",
+      "operation_id": "cancelPanelConfirmation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-confirmations/{preview_id}/commit",
+      "operation_id": "commitPanelConfirmation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions",
+      "operation_id": "createPanelSession",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/activate",
+      "operation_id": "activatePanelSession",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/close",
+      "operation_id": "closePanelSession",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/confirmations",
+      "operation_id": "offerPanelConfirmation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/handshake",
+      "operation_id": "beginPanelHandshake",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/prepare-activation",
+      "operation_id": "preparePanelActivation",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/renew",
+      "operation_id": "renewPanelSession",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/requests",
+      "operation_id": "invokePanelMethod",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions",
+      "operation_id": "createPanelSubscription",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/ack",
+      "operation_id": "acknowledgePanelProjection",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/close",
+      "operation_id": "closePanelSubscription",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/providers/{provider_id}/events",
+      "operation_id": "submitProviderEvent",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "event-ingress/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/providers/{provider_id}/events/lookup",
+      "operation_id": "lookupProviderEvent",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "event-ingress/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/request-contexts",
+      "operation_id": "createRequestContext",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs",
+      "operation_id": "createRun",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/arm",
+      "operation_id": "armRun",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/disarm",
+      "operation_id": "disarmRun",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/pause",
+      "operation_id": "pauseRun",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/preflight",
+      "operation_id": "preflightRun",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/recovery-preview",
+      "operation_id": "previewRecovery",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/resume",
+      "operation_id": "resumeRun",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/runs/{run_id}/retire",
+      "operation_id": "retireRun",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/subscriptions",
+      "operation_id": "createSubscription",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/api/v1/ws-tickets",
+      "operation_id": "issueWsTicket",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/internal/automation/continuations",
+      "operation_id": "registerContinuation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "run-continuation-http/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/internal/automation/continuations/adoptions",
+      "operation_id": "adoptContinuation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "run-continuation-http/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/internal/automation/continuations/finish",
+      "operation_id": "finishContinuation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "run-continuation-http/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/internal/automation/continuations/lookup",
+      "operation_id": "lookupSeamerContinuation",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "run-continuation-http/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/internal/automation/continuations/receipts",
+      "operation_id": "observeContinuationReceipt",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "run-continuation-http/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "post",
+      "path": "/internal/automation/continuations/withdrawals",
+      "operation_id": "observeContinuationWithdrawal",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "run-continuation-http/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "put",
+      "path": "/api/v1/capacity/profile",
+      "operation_id": "setCapacity",
+      "transport": "http",
+      "old_contract_headers": []
+    },
+    {
+      "authority": "seamer",
+      "method": "put",
+      "path": "/api/v1/definitions/{definition_id}/metadata",
+      "operation_id": "updateDefinitionMetadata",
+      "transport": "http",
+      "old_contract_headers": [
+        {
+          "name": "X-LeafSeamer-Contract",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "const": "automation-lifecycle/0.1.0-draft.1"
+          }
+        }
+      ]
+    },
+    {
+      "authority": "seamer",
+      "method": "put",
+      "path": "/api/v1/providers/{provider_id}/catalog",
+      "operation_id": "updateCatalog",
+      "transport": "http",
+      "old_contract_headers": []
+    }
+  ]
+}

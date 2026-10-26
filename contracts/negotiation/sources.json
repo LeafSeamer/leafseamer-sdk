@@ -1,0 +1,14 @@
+{
+  "format": "sdk-negotiation-source/1",
+  "approved": false,
+  "source_commit": "9eb9cf5ec9715ce9290279d973c69a5c03a271a5",
+  "source_repository": "https://github.com/LeafSeamer/leafseamer-sdk",
+  "inputs": {
+    "contracts/integration/preview/models.schema.json": "6e1de1ced01234aaa666586256c99e99ae943893045d02326aca43a80c6f6f23",
+    "contracts/integration/preview/controller.preview.openapi.json": "d8617342ab37802c0d417c290bb8e4bf5c60c6bd42f3740f709e068292736dee",
+    "contracts/integration/preview/seamer.preview.openapi.json": "4cbc8844834bd93b93119bebbf84954368bf8c9c812561dca6ee9a2fa57d7b79",
+    "contracts/integration/preview/worker-ipc.schema.json": "9a79cc00f376930de25c5e36992e358747e42bb1a34023a132e7d56b4b611625",
+    "contracts/integration/preview/worker-messages.json": "2c572fa222aae50a48e56a302190d6bbb88dfea5b825aaa3fbeba5e9317f954e",
+    "contracts/composition/compose.py": "a23b0ecf89824956a8194e8ecead8208ef7507bebb7e5d8d2bdd3f99b0c9eeb7"
+  }
+}

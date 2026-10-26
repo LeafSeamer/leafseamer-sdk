@@ -1,0 +1,17 @@
+{
+  "format": "sdk-transport-policy/1",
+  "approved": false,
+  "negotiation_protocol": "contract-selection/1",
+  "contract_id": "leafseamer.api.v1.integration1",
+  "discovery_path": "/.well-known/leafseamer-contracts",
+  "contract_header": "X-LeafSeamer-Contract",
+  "digest_header": "X-LeafSeamer-Contract-Digest",
+  "ws_contract_prefix": "leafseamer.contract.",
+  "ws_ticket_prefix": "leafseamer.ticket.",
+  "max_advertised_contracts": 8,
+  "selection_errors": ["CONTRACT_SELECTION_INVALID", "CONTRACT_NOT_SUPPORTED", "CONTRACT_BINDING_MISMATCH"],
+  "implicit_fallback": false,
+  "automatic_write_retry": false,
+  "selection_is_authorization": false,
+  "worker_wire_changed": false
+}

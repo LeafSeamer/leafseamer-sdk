@@ -1,0 +1,17 @@
+{
+  "format": "sdk-contract-artifacts/1",
+  "contract_id": "leafseamer.api.v1.integration1",
+  "approved": false,
+  "artifact_digest_algorithm": "sha256-bytes",
+  "selection_digest_algorithm": "sha256-jcs-manifest",
+  "artifacts": {
+    "controller.openapi.json": "33ed998efcb705534d987c47b3b83e31de1eb876e250ead86305372991c8caef",
+    "models.schema.json": "35563cf6eeb9f914aa73b6edc97ec61fb557e039b784b28b6824d8bfb75403ed",
+    "routing.json": "432d2f090c7a0e795143723b69f3d756b4b18563f032e059532089bc40ec8a43",
+    "seamer.openapi.json": "14e9fcf5f299cd629cef315cd0786bb1c71fc3c31c9190b05a6fddd3b64b1caa",
+    "worker-ipc.schema.json": "c54511ac075f5f410b01d043548240ad46511ab509bf9bcc35049f0957116bc1",
+    "worker-messages.json": "81bf5fc57f9ecbadf6965372a291897845f845b1dfa62d27e48f97c7f8c77ce2",
+    "policy.json": "f3a4c05a4c905bca5d245283d0ab14284930457bd2d5d4854839238622ebde69",
+    "PROTOCOL.md": "8b2380cf54c214007fdbd981d3654f672a03cdc9b64d690f68a822a07835e8e1"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "context": {
+    "context_id": "ctx.synthetic",
+    "service_id": "controller.synthetic",
+    "principal_id": "human.synthetic",
+    "audience": "controller.synthetic",
+    "operations": [
+      "issueWsTicket"
+    ],
+    "issued_at": "2026-10-27T00:00:00.000Z",
+    "expires_at": "2026-10-27T00:00:30.000Z",
+    "ttl_ms": 30000,
+    "max_unique_requests": 1,
+    "context_epoch": "context.1",
+    "issuer_id": "issuer.synthetic",
+    "issuer_epoch": "issuer.1",
+    "selection": {
+      "contract_id": "leafseamer.api.v1.integration1",
+      "contract_digest": "sha256:a772ff45189b8e276bb04a84a234eadee92e541ad26fa0a91f4a267b5ab75d05"
+    }
+  },
+  "binding": {
+    "binding_id": "binding.synthetic",
+    "session_id": "session.synthetic",
+    "audience": "controller.synthetic",
+    "origin": "https://console.example.invalid",
+    "client_instance_id": "browser.synthetic",
+    "issuer_epoch": "issuer.1",
+    "scope_digest": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+    "expires_at": "2026-10-27T00:00:20.000Z",
+    "consumed": false,
+    "selection": {
+      "contract_id": "leafseamer.api.v1.integration1",
+      "contract_digest": "sha256:a772ff45189b8e276bb04a84a234eadee92e541ad26fa0a91f4a267b5ab75d05"
+    },
+    "service_boot_id": "boot.synthetic"
+  },
+  "request": {
+    "context_id": "ctx.synthetic",
+    "idempotency_key": "key.synthetic",
+    "origin": "https://console.example.invalid",
+    "subscription_scope": [
+      "subscription.synthetic"
+    ],
+    "client_instance_id": "browser.synthetic",
+    "selection": {
+      "contract_id": "leafseamer.api.v1.integration1",
+      "contract_digest": "sha256:a772ff45189b8e276bb04a84a234eadee92e541ad26fa0a91f4a267b5ab75d05"
+    }
+  },
+  "context_request": {
+    "audience": "controller.synthetic",
+    "operations": [
+      "issueWsTicket"
+    ],
+    "ttl_ms": 30000,
+    "max_unique_requests": 1,
+    "selection": {
+      "contract_id": "leafseamer.api.v1.integration1",
+      "contract_digest": "sha256:a772ff45189b8e276bb04a84a234eadee92e541ad26fa0a91f4a267b5ab75d05"
+    }
+  },
+  "ready": {
+    "type": "contract.ready",
+    "selection": {
+      "contract_id": "leafseamer.api.v1.integration1",
+      "contract_digest": "sha256:a772ff45189b8e276bb04a84a234eadee92e541ad26fa0a91f4a267b5ab75d05"
+    },
+    "binding_id": "binding.synthetic",
+    "service_id": "controller.synthetic",
+    "service_boot_id": "boot.synthetic"
+  },
+  "discovery": {
+    "negotiation_protocol": "contract-selection/1",
+    "authority_role": "controller",
+    "supported_contracts": [
+      {
+        "contract_id": "leafseamer.api.v1.integration1",
+        "contract_digest": "sha256:a772ff45189b8e276bb04a84a234eadee92e541ad26fa0a91f4a267b5ab75d05"
+      }
+    ]
+  },
+  "selection_error": {
+    "negotiation_protocol": "contract-selection/1",
+    "code": "CONTRACT_NOT_SUPPORTED",
+    "request_id": "request.synthetic",
+    "domain_evaluated": false,
+    "retry_advice": "do_not_retry"
+  },
+  "data": {
+    "subscription_id": "subscription.synthetic",
+    "stream_id": "stream.synthetic",
+    "event_type": "resync.required",
+    "code": "RESYNC_REQUIRED",
+    "reason": "synthetic"
+  }
+}
