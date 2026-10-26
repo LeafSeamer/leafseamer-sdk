@@ -1,0 +1,446 @@
+{
+  "human_create": {
+    "scope": {
+      "scope_id": "scope",
+      "scope_revision": "1",
+      "projection_profile_ref": {
+        "authority_service_id": "controller",
+        "database_instance_id": "database",
+        "entity_kind": "projection_profile",
+        "entity_id": "profile",
+        "entity_epoch": "epoch",
+        "revision": "1",
+        "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "collections": [
+        {
+          "entity_kind": "commands",
+          "selector_ref": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database",
+            "entity_kind": "selector",
+            "entity_id": "selector",
+            "entity_epoch": "epoch",
+            "revision": "1",
+            "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "relation_policy": "authorized_reference",
+          "history_policy": "current_and_unresolved"
+        }
+      ]
+    },
+    "purpose": "status_projection",
+    "context_id": "context",
+    "idempotency_key": "request",
+    "client_instance_id": "gui"
+  },
+  "service_create": {
+    "scope": {
+      "scope_id": "scope",
+      "scope_revision": "1",
+      "projection_profile_ref": {
+        "authority_service_id": "controller",
+        "database_instance_id": "database",
+        "entity_kind": "projection_profile",
+        "entity_id": "profile",
+        "entity_epoch": "epoch",
+        "revision": "1",
+        "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "collections": [
+        {
+          "entity_kind": "sources",
+          "selector_ref": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database",
+            "entity_kind": "selector",
+            "entity_id": "selector",
+            "entity_epoch": "epoch",
+            "revision": "1",
+            "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "relation_policy": "authorized_reference",
+          "history_policy": "current_and_unresolved"
+        }
+      ]
+    },
+    "purpose": "canonical_trigger",
+    "request_id": "request",
+    "consumer_id": "consumer"
+  },
+  "human_view": {
+    "schema_version": "event-channel/0.1.0-draft.1",
+    "type": "event.subscription",
+    "binding": {
+      "subscription_id": "subscription",
+      "publisher_service_id": "controller",
+      "publisher_database_instance_id": "database",
+      "stream_id": "stream",
+      "stream_epoch": "stream-epoch",
+      "scope_digest": "65b5c9185c8d9ad5fa654f79b71ea30c9fd034667cdc9944f9ad8e2fefb3f938",
+      "authorization_revision": "1",
+      "connection_generation": "0"
+    },
+    "revision": "1",
+    "owner": {
+      "kind": "human",
+      "issuer_id": "issuer",
+      "issuer_epoch": "issuer-epoch",
+      "principal_id": "principal",
+      "session_id": "session",
+      "client_instance_id": "gui"
+    },
+    "purpose": "status_projection",
+    "state": "building",
+    "ack_cursor": "0",
+    "ack_payload_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+    "snapshot_ref": null,
+    "selection": {
+      "contract_id": "synthetic.events.candidate",
+      "contract_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "scope": {
+      "scope_id": "scope",
+      "scope_revision": "1",
+      "projection_profile_ref": {
+        "authority_service_id": "controller",
+        "database_instance_id": "database",
+        "entity_kind": "projection_profile",
+        "entity_id": "profile",
+        "entity_epoch": "epoch",
+        "revision": "1",
+        "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "collections": [
+        {
+          "entity_kind": "commands",
+          "selector_ref": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database",
+            "entity_kind": "selector",
+            "entity_id": "selector",
+            "entity_epoch": "epoch",
+            "revision": "1",
+            "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "relation_policy": "authorized_reference",
+          "history_policy": "current_and_unresolved"
+        }
+      ]
+    }
+  },
+  "service_view": {
+    "schema_version": "event-channel/0.1.0-draft.1",
+    "type": "event.subscription",
+    "binding": {
+      "subscription_id": "subscription",
+      "publisher_service_id": "controller",
+      "publisher_database_instance_id": "database",
+      "stream_id": "stream",
+      "stream_epoch": "stream-epoch",
+      "scope_digest": "a26e4faf1510d4e32bfc78c40e009b1c447ada006ca96e142f4aa31995ed0949",
+      "authorization_revision": "1",
+      "connection_generation": "0"
+    },
+    "revision": "1",
+    "owner": {
+      "kind": "service",
+      "issuer_id": "issuer",
+      "issuer_epoch": "issuer-epoch",
+      "principal_id": "principal",
+      "consumer_service_id": "seamer",
+      "consumer_database_instance_id": "seamer-db",
+      "consumer_id": "consumer",
+      "pairing_id": "pairing"
+    },
+    "purpose": "canonical_trigger",
+    "state": "building",
+    "ack_cursor": "0",
+    "ack_payload_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+    "snapshot_ref": null,
+    "selection": {
+      "contract_id": "synthetic.events.candidate",
+      "contract_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "scope": {
+      "scope_id": "scope",
+      "scope_revision": "1",
+      "projection_profile_ref": {
+        "authority_service_id": "controller",
+        "database_instance_id": "database",
+        "entity_kind": "projection_profile",
+        "entity_id": "profile",
+        "entity_epoch": "epoch",
+        "revision": "1",
+        "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "collections": [
+        {
+          "entity_kind": "sources",
+          "selector_ref": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database",
+            "entity_kind": "selector",
+            "entity_id": "selector",
+            "entity_epoch": "epoch",
+            "revision": "1",
+            "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "relation_policy": "authorized_reference",
+          "history_policy": "current_and_unresolved"
+        }
+      ]
+    }
+  },
+  "client_frames": [
+    {
+      "schema_version": "event-channel/0.1.0-draft.1",
+      "type": "client.attach",
+      "owner": {
+        "kind": "human",
+        "issuer_id": "issuer",
+        "issuer_epoch": "issuer-epoch",
+        "principal_id": "principal",
+        "session_id": "session",
+        "client_instance_id": "gui"
+      },
+      "subscription_id": "subscription",
+      "stream_id": "stream",
+      "stream_epoch": "stream-epoch",
+      "scope_digest": "65b5c9185c8d9ad5fa654f79b71ea30c9fd034667cdc9944f9ad8e2fefb3f938",
+      "authorization_revision": "1",
+      "expected_connection_generation": "0",
+      "replace_existing": true,
+      "resume": null,
+      "connection_attempt_id": "attempt"
+    },
+    {
+      "schema_version": "event-channel/0.1.0-draft.1",
+      "type": "client.snapshot.applied",
+      "binding": {
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream-epoch",
+        "scope_digest": "65b5c9185c8d9ad5fa654f79b71ea30c9fd034667cdc9944f9ad8e2fefb3f938",
+        "authorization_revision": "1",
+        "connection_generation": "1"
+      },
+      "snapshot": {
+        "snapshot_id": "snapshot",
+        "manifest_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "snapshot_cursor": "9007199254740993"
+      }
+    },
+    {
+      "schema_version": "event-channel/0.1.0-draft.1",
+      "type": "client.ack",
+      "binding": {
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream-epoch",
+        "scope_digest": "65b5c9185c8d9ad5fa654f79b71ea30c9fd034667cdc9944f9ad8e2fefb3f938",
+        "authorization_revision": "1",
+        "connection_generation": "1"
+      },
+      "cursor": "9007199254740994",
+      "payload_digest": "dffb0950ae1aa18ecbfc052bca742663ee4b71892c6fd8a05cfc3876271c69cc",
+      "ack_kind": "projection_applied"
+    }
+  ],
+  "server_frames": [
+    {
+      "type": "contract.ready",
+      "channel": {
+        "binding_id": "channel",
+        "selection": {
+          "contract_id": "synthetic.events.candidate",
+          "contract_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "service_boot_id": "boot-1",
+        "owner": {
+          "kind": "human",
+          "issuer_id": "issuer",
+          "issuer_epoch": "issuer-epoch",
+          "principal_id": "principal",
+          "session_id": "session",
+          "client_instance_id": "gui"
+        },
+        "subscription_id": "subscription",
+        "transport": "human_ticket"
+      }
+    },
+    {
+      "schema_version": "event-channel/0.1.0-draft.1",
+      "type": "server.attached",
+      "binding": {
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream-epoch",
+        "scope_digest": "65b5c9185c8d9ad5fa654f79b71ea30c9fd034667cdc9944f9ad8e2fefb3f938",
+        "authorization_revision": "1",
+        "connection_generation": "1"
+      },
+      "state": "snapshot_ready",
+      "snapshot_ref": {
+        "snapshot_id": "snapshot",
+        "manifest_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "snapshot_cursor": "9007199254740993"
+      },
+      "ack_cursor": "0",
+      "ack_payload_digest": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "format_version": "snapshot-projection/0.2.0-draft.1",
+      "type": "server.data",
+      "binding": {
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream-epoch",
+        "scope_digest": "65b5c9185c8d9ad5fa654f79b71ea30c9fd034667cdc9944f9ad8e2fefb3f938",
+        "authorization_revision": "1",
+        "connection_generation": "1"
+      },
+      "cursor": "9007199254740994",
+      "previous_cursor": "9007199254740993",
+      "delivery_mode": "reconcile",
+      "entry": {
+        "entry_kind": "entity.upsert",
+        "payload": {
+          "entity_kind": "commands",
+          "entity_id": "command",
+          "entity_epoch": "command-epoch",
+          "entity_revision": "1",
+          "view": {
+            "initial_command_ref": {
+              "kind": "command",
+              "scope": {
+                "authority_service_id": "controller",
+                "database_instance_id": "database"
+              },
+              "object_id": "command",
+              "revision": "1",
+              "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "request_identity": {
+              "key": {
+                "target_scope": {
+                  "authority_service_id": "controller",
+                  "database_instance_id": "database"
+                },
+                "issuer_id": "issuer",
+                "issuer_epoch": "issuer-epoch",
+                "principal_id": "operator",
+                "request_epoch": "request-epoch",
+                "operation_id": "createCommand",
+                "idempotency_key": "request-key"
+              },
+              "request_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "target": {
+              "device_id": "device",
+              "action_id": "obs.program_scene.set",
+              "capability_version": "1.0.0"
+            },
+            "origin": "manual",
+            "accepted_at": "2026-10-27T00:00:00.000Z",
+            "control_binding": {
+              "epoch": "control",
+              "version": "1"
+            },
+            "state_ref": {
+              "id": "command",
+              "revision": "1",
+              "digest": "sha256:4e9bcbaf320fca4df7ff8fe4bd41cd9c597047525300952d34a8baf1018038e4"
+            },
+            "cancellation": null,
+            "source_record_ref": {
+              "kind": "command",
+              "scope": {
+                "authority_service_id": "controller",
+                "database_instance_id": "database"
+              },
+              "object_id": "command",
+              "revision": "1",
+              "digest": "sha256:ffc616c936260029f21fbd65f236d03e0841cea37e5b89f7aaa7f039abf82746"
+            },
+            "state": {
+              "command_id": "command",
+              "scope": {
+                "authority_service_id": "controller",
+                "database_instance_id": "database"
+              },
+              "revision": "1",
+              "phase": "queued",
+              "outcome": "pending",
+              "effect_status": "not_sent",
+              "resource_status": "clear",
+              "automation_continuation": "eligible",
+              "reason_code": null,
+              "terminal_revision": null,
+              "resolution_ref": null,
+              "completion_evidence_count": 0,
+              "resource_evidence_count": 0,
+              "attempt_count": 0
+            },
+            "completion": {
+              "required": "effect_verified",
+              "achieved": null,
+              "policy_ref": {
+                "id": "completion-policy",
+                "revision": "1",
+                "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              },
+              "evidence_count": 0
+            }
+          }
+        }
+      },
+      "payload_digest": "dffb0950ae1aa18ecbfc052bca742663ee4b71892c6fd8a05cfc3876271c69cc"
+    },
+    {
+      "schema_version": "event-channel/0.1.0-draft.1",
+      "type": "server.sync.ready",
+      "binding": {
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream-epoch",
+        "scope_digest": "65b5c9185c8d9ad5fa654f79b71ea30c9fd034667cdc9944f9ad8e2fefb3f938",
+        "authorization_revision": "1",
+        "connection_generation": "1"
+      },
+      "baseline_snapshot_id": "snapshot",
+      "cursor": "9007199254740995",
+      "previous_cursor": "9007199254740994",
+      "payload_digest": "4a40ca80029b5edac7a2098d84c536403b861ce56d5c3eb064be8048a51873fb",
+      "delivery_mode": "reconcile"
+    },
+    {
+      "schema_version": "event-channel/0.1.0-draft.1",
+      "type": "server.resync.required",
+      "binding": {
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream-epoch",
+        "scope_digest": "65b5c9185c8d9ad5fa654f79b71ea30c9fd034667cdc9944f9ad8e2fefb3f938",
+        "authorization_revision": "1",
+        "connection_generation": "1"
+      },
+      "reason_code": "authorization_changed",
+      "last_confirmed_cursor": "9007199254740993"
+    }
+  ]
+}

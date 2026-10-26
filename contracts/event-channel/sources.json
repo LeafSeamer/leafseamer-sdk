@@ -1,0 +1,16 @@
+{
+  "format": "event-channel-source/1",
+  "approved": false,
+  "suite_repository": "https://github.com/LeafSeamer/leafseamer-suite",
+  "suite_commit": "21dd0175abaf503f2ff8c348e3c7a5d0c40722c7",
+  "source_path": "docs/contracts/c05-subscription/service-subscription.schema.json",
+  "source_sha256": "e6c6f1eb8d87e51a2cc9a526565fe1ce85b96b8392596509b8cbe0cffab393ca",
+  "sdk_commit": "cf36c1bf53b1de4e015684f20ea4010a82518082",
+  "inputs": {
+    "contracts/event-projection/preview/models.schema.json": "24c8707849102ab59a9460499f5b4e5800a4af19d51782e3edea7b611d0aa068",
+    "contracts/event-projection/preview/snapshot.schema.json": "21ce875e721a003fe7a44f110742a53f98c9d061bb5c42c8e914f7367de74a7f",
+    "contracts/composition/compose.py": "a23b0ecf89824956a8194e8ecead8208ef7507bebb7e5d8d2bdd3f99b0c9eeb7",
+    "contracts/event-projection/examples.json": "51fb40b6c1dea8120b43ff097934d0106b054d55f370c02a44d3189c53565e0a",
+    "contracts/event-projection/source/snapshot-cases.json": "9f8df61ca7c7b6b069b5cecda694099961cb53d57fa61a808f0d1a0e983d2f46"
+  }
+}

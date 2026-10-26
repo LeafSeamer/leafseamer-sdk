@@ -1,0 +1,175 @@
+{
+  "format": "event-channel-policy/1",
+  "approved": false,
+  "operations": [
+    {
+      "profile": "human",
+      "method": "post",
+      "path": "/api/v1/subscriptions",
+      "operation_id": "createSubscription"
+    },
+    {
+      "profile": "human",
+      "method": "get",
+      "path": "/api/v1/subscriptions/{subscription_id}",
+      "operation_id": "getSubscription"
+    },
+    {
+      "profile": "human",
+      "method": "delete",
+      "path": "/api/v1/subscriptions/{subscription_id}",
+      "operation_id": "closeSubscription"
+    },
+    {
+      "profile": "human",
+      "method": "get",
+      "path": "/api/v1/subscriptions/{subscription_id}/connections/{attempt_id}",
+      "operation_id": "getSubscriptionConnection"
+    },
+    {
+      "profile": "human",
+      "method": "get",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshot",
+      "operation_id": "getSnapshot"
+    },
+    {
+      "profile": "human",
+      "method": "get",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshots/{snapshot_id}/pages/{page_index}",
+      "operation_id": "getSnapshotPage"
+    },
+    {
+      "profile": "human",
+      "method": "get",
+      "path": "/api/v1/events",
+      "operation_id": "openEvents"
+    },
+    {
+      "profile": "human",
+      "method": "post",
+      "path": "/api/v1/ws-tickets",
+      "operation_id": "issueWsTicket"
+    },
+    {
+      "profile": "service",
+      "method": "post",
+      "path": "/internal/subscriptions",
+      "operation_id": "internalCreateSubscription"
+    },
+    {
+      "profile": "service",
+      "method": "get",
+      "path": "/internal/subscriptions/{subscription_id}",
+      "operation_id": "internalGetSubscription"
+    },
+    {
+      "profile": "service",
+      "method": "delete",
+      "path": "/internal/subscriptions/{subscription_id}",
+      "operation_id": "internalCloseSubscription"
+    },
+    {
+      "profile": "service",
+      "method": "get",
+      "path": "/internal/subscriptions/{subscription_id}/connections/{attempt_id}",
+      "operation_id": "internalGetSubscriptionConnection"
+    },
+    {
+      "profile": "service",
+      "method": "get",
+      "path": "/internal/subscriptions/{subscription_id}/snapshot",
+      "operation_id": "internalGetSnapshot"
+    },
+    {
+      "profile": "service",
+      "method": "get",
+      "path": "/internal/subscriptions/{subscription_id}/snapshots/{snapshot_id}/pages/{page_index}",
+      "operation_id": "internalGetSnapshotPage"
+    },
+    {
+      "profile": "service",
+      "method": "get",
+      "path": "/internal/events",
+      "operation_id": "internalOpenEvents"
+    }
+  ],
+  "collection_permissions": {
+    "devices": {
+      "authorities": [
+        "controller"
+      ],
+      "permission": "device.read"
+    },
+    "catalogs": {
+      "authorities": [
+        "controller"
+      ],
+      "permission": "device.read"
+    },
+    "commands": {
+      "authorities": [
+        "controller"
+      ],
+      "permission": "command.read"
+    },
+    "controls": {
+      "authorities": [
+        "controller"
+      ],
+      "permission": "control.read"
+    },
+    "observations": {
+      "authorities": [
+        "controller"
+      ],
+      "permission": "device.read"
+    },
+    "sources": {
+      "authorities": [
+        "controller",
+        "seamer"
+      ],
+      "permission": "status.read"
+    },
+    "definitions": {
+      "authorities": [
+        "seamer"
+      ],
+      "permission": "definition.read"
+    },
+    "runs": {
+      "authorities": [
+        "seamer"
+      ],
+      "permission": "run.read"
+    },
+    "business_states": {
+      "authorities": [
+        "seamer"
+      ],
+      "permission": "run.read"
+    },
+    "executions": {
+      "authorities": [
+        "seamer"
+      ],
+      "permission": "run.read"
+    },
+    "schedule_activations": {
+      "authorities": [
+        "seamer"
+      ],
+      "permission": "run.read"
+    },
+    "occurrences": {
+      "authorities": [
+        "seamer"
+      ],
+      "permission": "run.read"
+    }
+  },
+  "subscription_frame_version": "event-channel/0.1.0-draft.1",
+  "snapshot_frame_version": "snapshot-projection/0.2.0-draft.1",
+  "requires_new_full_contract_selection": true,
+  "runtime_ready": false
+}

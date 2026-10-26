@@ -1,0 +1,1210 @@
+{
+  "format": "event-channel-check/1",
+  "all_passed": true,
+  "approved": false,
+  "runtime_ready": false,
+  "models": 122,
+  "operations": 15,
+  "cases_passed": 294,
+  "checks": [
+    {
+      "name": "生成字节:models.schema.json",
+      "passed": true
+    },
+    {
+      "name": "生成字节:subscriptions.openapi.json",
+      "passed": true
+    },
+    {
+      "name": "生成字节:frames.schema.json",
+      "passed": true
+    },
+    {
+      "name": "生成字节:policy.json",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__A__S0_Digest",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__A__S0_Id",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__A__S0_RequestIdentity",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__A__S0_RequestKey",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__A__S0_Scope",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__A__S1_Digest",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__A__S1_Id",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__CN__Scope",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__RequestIdentity",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__Scope",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S0_CancellationState",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S0_CancellationView",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S0_CompletionLevel",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S0_ControlVersion",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S0_Digest",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S0_Id",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S0_InitialCommandRef",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S0_PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S0_Ref",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S0_RequestIdentity",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S0_Scope",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S0_Timestamp",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S0_Version",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S1_CompletionLevel",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S1_Digest",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S1_Effect",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S1_Id",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S1_PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S1_Ref",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S1_Scope",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S2_CommandRef",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S2_Counter",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S2_Digest",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S2_Id",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S2_RequestIdentity",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S2_Scope",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S3_Counter",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S3_Digest",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S3_Id",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S5_ControlVersion",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S5_Id",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S5_Revision",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S5_Timestamp",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:command__V__S5_Version",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__BusinessStateSnapshotView",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__CatalogSnapshotView",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__Collection",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__CommandSnapshotView",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__CommandState",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__ContentBinding",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__ControlSnapshotView",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__Counter",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__Data",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__DefinitionSnapshotView",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__DeliveryBinding",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__DeltaPayload",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__DeviceSnapshotView",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__Digest",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__DomainRef",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__EntityKind",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__ExecutionSnapshotView",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__Gap",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__Id",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__Manifest",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__ObjectRef",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__ObservationSnapshotView",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__OccurrenceSnapshotView",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__PageContent",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__PageDescriptor",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__PageResponse",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__PendingControl",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__QualifiedValue",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__Record",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__Recovery",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__RequestLink",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__RunSnapshotView",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__ScheduleActivationSnapshotView",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__SchemaRef",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__SourceEvent",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__SourceKey",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__SourceSnapshotView",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__Step",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__Timestamp",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__Transfer",
+      "passed": true
+    },
+    {
+      "name": "快照定义不漂移:snapshot__Watermark",
+      "passed": true
+    },
+    {
+      "name": "正例字节固定",
+      "passed": true
+    },
+    {
+      "name": "帧方向:client.attach",
+      "passed": true
+    },
+    {
+      "name": "帧方向:client.snapshot.applied",
+      "passed": true
+    },
+    {
+      "name": "帧方向:client.ack",
+      "passed": true
+    },
+    {
+      "name": "帧方向:contract.ready",
+      "passed": true
+    },
+    {
+      "name": "帧方向:server.attached",
+      "passed": true
+    },
+    {
+      "name": "帧方向:server.data",
+      "passed": true
+    },
+    {
+      "name": "帧方向:server.sync.ready",
+      "passed": true
+    },
+    {
+      "name": "帧方向:server.resync.required",
+      "passed": true
+    },
+    {
+      "name": "具名正例:human_create",
+      "passed": true
+    },
+    {
+      "name": "具名正例:service_create",
+      "passed": true
+    },
+    {
+      "name": "具名正例:human_view",
+      "passed": true
+    },
+    {
+      "name": "具名正例:service_view",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:createSubscription",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:createSubscription",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:getSubscription",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:getSubscription",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:closeSubscription",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:closeSubscription",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:getSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:getSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:getSnapshot",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:getSnapshot",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:getSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:getSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:openEvents",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:openEvents",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:issueWsTicket",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:issueWsTicket",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:internalCreateSubscription",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:internalCreateSubscription",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:internalGetSubscription",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:internalGetSubscription",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:internalCloseSubscription",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:internalCloseSubscription",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:internalGetSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:internalGetSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:internalGetSnapshot",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:internalGetSnapshot",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:internalGetSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:internalGetSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "认证AND关系:internalOpenEvents",
+      "passed": true
+    },
+    {
+      "name": "逐释放复核:internalOpenEvents",
+      "passed": true
+    },
+    {
+      "name": "human创建查原",
+      "passed": true
+    },
+    {
+      "name": "human禁止自报owner",
+      "passed": true
+    },
+    {
+      "name": "human基线ACK非manifest",
+      "passed": true
+    },
+    {
+      "name": "human同连接attach重复",
+      "passed": true
+    },
+    {
+      "name": "humanattempt换socket拒绝",
+      "passed": true
+    },
+    {
+      "name": "humanapplied重复",
+      "passed": true
+    },
+    {
+      "name": "human数据仍reconcile",
+      "passed": true
+    },
+    {
+      "name": "humanACK未发送拒绝",
+      "passed": true
+    },
+    {
+      "name": "human拒绝不变更ACK",
+      "passed": true
+    },
+    {
+      "name": "human推进ACK",
+      "passed": true
+    },
+    {
+      "name": "humanACK丢失重发",
+      "passed": true
+    },
+    {
+      "name": "humancheckpoint未确认仍catching_up",
+      "passed": true
+    },
+    {
+      "name": "humancheckpoint已确认才live",
+      "passed": true
+    },
+    {
+      "name": "human旧ACK不撤live",
+      "passed": true
+    },
+    {
+      "name": "human重连不自动live",
+      "passed": true
+    },
+    {
+      "name": "human旧连接ACK拒绝",
+      "passed": true
+    },
+    {
+      "name": "human旧代际页拒绝",
+      "passed": true
+    },
+    {
+      "name": "human历史attempt只查询",
+      "passed": true
+    },
+    {
+      "name": "human旧attempt不得复活",
+      "passed": true
+    },
+    {
+      "name": "human释放前失效:authorization_current",
+      "passed": true
+    },
+    {
+      "name": "human释放前失效:credential_current",
+      "passed": true
+    },
+    {
+      "name": "human释放前失效:authorization_revision",
+      "passed": true
+    },
+    {
+      "name": "human释放前失效:publisher_domain",
+      "passed": true
+    },
+    {
+      "name": "human释放前失效:service_boot_id",
+      "passed": true
+    },
+    {
+      "name": "human释放前失效:stream_epoch",
+      "passed": true
+    },
+    {
+      "name": "human释放前失效:now_tick",
+      "passed": true
+    },
+    {
+      "name": "human新凭据不得借旧socket",
+      "passed": true
+    },
+    {
+      "name": "human分页到期等号",
+      "passed": true
+    },
+    {
+      "name": "human重复关闭",
+      "passed": true
+    },
+    {
+      "name": "human重复创建不复活",
+      "passed": true
+    },
+    {
+      "name": "human关闭后attach拒绝",
+      "passed": true
+    },
+    {
+      "name": "service_status创建查原",
+      "passed": true
+    },
+    {
+      "name": "service_status禁止自报owner",
+      "passed": true
+    },
+    {
+      "name": "service_status基线ACK非manifest",
+      "passed": true
+    },
+    {
+      "name": "service_status同连接attach重复",
+      "passed": true
+    },
+    {
+      "name": "service_statusattempt换socket拒绝",
+      "passed": true
+    },
+    {
+      "name": "service_statusapplied重复",
+      "passed": true
+    },
+    {
+      "name": "service_status数据仍reconcile",
+      "passed": true
+    },
+    {
+      "name": "service_statusACK未发送拒绝",
+      "passed": true
+    },
+    {
+      "name": "service_status拒绝不变更ACK",
+      "passed": true
+    },
+    {
+      "name": "service_status推进ACK",
+      "passed": true
+    },
+    {
+      "name": "service_statusACK丢失重发",
+      "passed": true
+    },
+    {
+      "name": "service_statuscheckpoint未确认仍catching_up",
+      "passed": true
+    },
+    {
+      "name": "service_statuscheckpoint已确认才live",
+      "passed": true
+    },
+    {
+      "name": "service_status旧ACK不撤live",
+      "passed": true
+    },
+    {
+      "name": "service_status重连不自动live",
+      "passed": true
+    },
+    {
+      "name": "service_status旧连接ACK拒绝",
+      "passed": true
+    },
+    {
+      "name": "service_status旧代际页拒绝",
+      "passed": true
+    },
+    {
+      "name": "service_status历史attempt只查询",
+      "passed": true
+    },
+    {
+      "name": "service_status旧attempt不得复活",
+      "passed": true
+    },
+    {
+      "name": "service_status释放前失效:authorization_current",
+      "passed": true
+    },
+    {
+      "name": "service_status释放前失效:credential_current",
+      "passed": true
+    },
+    {
+      "name": "service_status释放前失效:authorization_revision",
+      "passed": true
+    },
+    {
+      "name": "service_status释放前失效:publisher_domain",
+      "passed": true
+    },
+    {
+      "name": "service_status释放前失效:service_boot_id",
+      "passed": true
+    },
+    {
+      "name": "service_status释放前失效:stream_epoch",
+      "passed": true
+    },
+    {
+      "name": "service_status释放前失效:now_tick",
+      "passed": true
+    },
+    {
+      "name": "service_status新凭据不得借旧socket",
+      "passed": true
+    },
+    {
+      "name": "service_status分页到期等号",
+      "passed": true
+    },
+    {
+      "name": "service_status重复关闭",
+      "passed": true
+    },
+    {
+      "name": "service_status重复创建不复活",
+      "passed": true
+    },
+    {
+      "name": "service_status关闭后attach拒绝",
+      "passed": true
+    },
+    {
+      "name": "canonical创建查原",
+      "passed": true
+    },
+    {
+      "name": "canonical禁止自报owner",
+      "passed": true
+    },
+    {
+      "name": "canonical基线ACK非manifest",
+      "passed": true
+    },
+    {
+      "name": "canonical同连接attach重复",
+      "passed": true
+    },
+    {
+      "name": "canonicalattempt换socket拒绝",
+      "passed": true
+    },
+    {
+      "name": "canonicalapplied重复",
+      "passed": true
+    },
+    {
+      "name": "canonical数据仍reconcile",
+      "passed": true
+    },
+    {
+      "name": "canonicalACK未发送拒绝",
+      "passed": true
+    },
+    {
+      "name": "canonical拒绝不变更ACK",
+      "passed": true
+    },
+    {
+      "name": "canonical推进ACK",
+      "passed": true
+    },
+    {
+      "name": "canonicalACK丢失重发",
+      "passed": true
+    },
+    {
+      "name": "canonicalcheckpoint未确认仍catching_up",
+      "passed": true
+    },
+    {
+      "name": "canonicalcheckpoint已确认才live",
+      "passed": true
+    },
+    {
+      "name": "canonical旧ACK不撤live",
+      "passed": true
+    },
+    {
+      "name": "canonical重连不自动live",
+      "passed": true
+    },
+    {
+      "name": "canonical旧连接ACK拒绝",
+      "passed": true
+    },
+    {
+      "name": "canonical旧代际页拒绝",
+      "passed": true
+    },
+    {
+      "name": "canonical历史attempt只查询",
+      "passed": true
+    },
+    {
+      "name": "canonical旧attempt不得复活",
+      "passed": true
+    },
+    {
+      "name": "canonical释放前失效:authorization_current",
+      "passed": true
+    },
+    {
+      "name": "canonical释放前失效:credential_current",
+      "passed": true
+    },
+    {
+      "name": "canonical释放前失效:authorization_revision",
+      "passed": true
+    },
+    {
+      "name": "canonical释放前失效:publisher_domain",
+      "passed": true
+    },
+    {
+      "name": "canonical释放前失效:service_boot_id",
+      "passed": true
+    },
+    {
+      "name": "canonical释放前失效:stream_epoch",
+      "passed": true
+    },
+    {
+      "name": "canonical释放前失效:now_tick",
+      "passed": true
+    },
+    {
+      "name": "canonical新凭据不得借旧socket",
+      "passed": true
+    },
+    {
+      "name": "canonical分页到期等号",
+      "passed": true
+    },
+    {
+      "name": "canonical重复关闭",
+      "passed": true
+    },
+    {
+      "name": "canonical重复创建不复活",
+      "passed": true
+    },
+    {
+      "name": "canonical关闭后attach拒绝",
+      "passed": true
+    },
+    {
+      "name": "logout只撤人员",
+      "passed": true
+    },
+    {
+      "name": "创建权限:csrf_valid",
+      "passed": true
+    },
+    {
+      "name": "创建权限:http_authenticated",
+      "passed": true
+    },
+    {
+      "name": "创建权限:request_context_current",
+      "passed": true
+    },
+    {
+      "name": "创建权限:request_context_id",
+      "passed": true
+    },
+    {
+      "name": "创建权限:permissions",
+      "passed": true
+    },
+    {
+      "name": "规范订阅资格:seamer_role",
+      "passed": true
+    },
+    {
+      "name": "规范订阅资格:canonical_scope_complete",
+      "passed": true
+    },
+    {
+      "name": "规范订阅资格:transport",
+      "passed": true
+    },
+    {
+      "name": "一个consumer一个活跃槽",
+      "passed": true
+    },
+    {
+      "name": "不能跳尾恢复:future_cursor",
+      "passed": true
+    },
+    {
+      "name": "失去恢复依据锁存:future_cursor",
+      "passed": true
+    },
+    {
+      "name": "不能跳尾恢复:no_projection",
+      "passed": true
+    },
+    {
+      "name": "失去恢复依据锁存:no_projection",
+      "passed": true
+    },
+    {
+      "name": "不能跳尾恢复:retention",
+      "passed": true
+    },
+    {
+      "name": "失去恢复依据锁存:retention",
+      "passed": true
+    },
+    {
+      "name": "同旧generation第二附着拒绝",
+      "passed": true
+    },
+    {
+      "name": "竞争失败保留第一连接",
+      "passed": true
+    },
+    {
+      "name": "generation不回绕",
+      "passed": true
+    },
+    {
+      "name": "耗尽停止旧连接释放",
+      "passed": true
+    },
+    {
+      "name": "耗尽后旧socket不可继续",
+      "passed": true
+    },
+    {
+      "name": "映射容量满拒绝",
+      "passed": true
+    },
+    {
+      "name": "容量满锁存失步",
+      "passed": true
+    },
+    {
+      "name": "有效结构的错数据:payload_digest",
+      "passed": true
+    },
+    {
+      "name": "错数据不推进链:payload_digest",
+      "passed": true
+    },
+    {
+      "name": "有效结构的错数据:previous_cursor",
+      "passed": true
+    },
+    {
+      "name": "错数据不推进链:previous_cursor",
+      "passed": true
+    },
+    {
+      "name": "有效结构的错数据:delivery_mode",
+      "passed": true
+    },
+    {
+      "name": "错数据不推进链:delivery_mode",
+      "passed": true
+    },
+    {
+      "name": "正确摘要仍不能越collection",
+      "passed": true
+    },
+    {
+      "name": "当前selector撤销",
+      "passed": true
+    },
+    {
+      "name": "有效结构的错ACK:payload_digest",
+      "passed": true
+    },
+    {
+      "name": "错ACK不释放pin:payload_digest",
+      "passed": true
+    },
+    {
+      "name": "有效结构的错ACK:ack_kind",
+      "passed": true
+    },
+    {
+      "name": "错ACK不释放pin:ack_kind",
+      "passed": true
+    },
+    {
+      "name": "错快照不能确认",
+      "passed": true
+    },
+    {
+      "name": "过期快照附着不能半提交",
+      "passed": true
+    },
+    {
+      "name": "附着失败代际未分配",
+      "passed": true
+    },
+    {
+      "name": "附着失败不留attempt",
+      "passed": true
+    },
+    {
+      "name": "过期原快照锁存失步",
+      "passed": true
+    },
+    {
+      "name": "只回显契约token",
+      "passed": true
+    },
+    {
+      "name": "101丢失票据仍已消费",
+      "passed": true
+    },
+    {
+      "name": "票据不能错绑:subscription_id",
+      "passed": true
+    },
+    {
+      "name": "错绑未消费:subscription_id",
+      "passed": true
+    },
+    {
+      "name": "票据不能错绑:service_boot_id",
+      "passed": true
+    },
+    {
+      "name": "错绑未消费:service_boot_id",
+      "passed": true
+    },
+    {
+      "name": "票据截止等号",
+      "passed": true
+    },
+    {
+      "name": "服务握手无人员票据",
+      "passed": true
+    },
+    {
+      "name": "服务不得走人员票据",
+      "passed": true
+    },
+    {
+      "name": "人员缺票据",
+      "passed": true
+    },
+    {
+      "name": "新Ready首帧",
+      "passed": true
+    },
+    {
+      "name": "附着确认绑定",
+      "passed": true
+    },
+    {
+      "name": "声明应用后数据",
+      "passed": true
+    },
+    {
+      "name": "重复attached不回退状态",
+      "passed": true
+    },
+    {
+      "name": "不能抢在Ready之前:server.attached",
+      "passed": true
+    },
+    {
+      "name": "首帧错误永久关闭:server.attached",
+      "passed": true
+    },
+    {
+      "name": "不能抢在Ready之前:server.data",
+      "passed": true
+    },
+    {
+      "name": "首帧错误永久关闭:server.data",
+      "passed": true
+    },
+    {
+      "name": "不能抢在Ready之前:server.sync.ready",
+      "passed": true
+    },
+    {
+      "name": "首帧错误永久关闭:server.sync.ready",
+      "passed": true
+    },
+    {
+      "name": "不能抢在Ready之前:server.resync.required",
+      "passed": true
+    },
+    {
+      "name": "首帧错误永久关闭:server.resync.required",
+      "passed": true
+    },
+    {
+      "name": "Ready截止等号",
+      "passed": true
+    },
+    {
+      "name": "Ready过期关闭",
+      "passed": true
+    },
+    {
+      "name": "不能先发送attach",
+      "passed": true
+    },
+    {
+      "name": "未应用快照不能收data",
+      "passed": true
+    },
+    {
+      "name": "重复Ready拒绝",
+      "passed": true
+    },
+    {
+      "name": "入口未自动广告",
+      "passed": true
+    }
+  ],
+  "runtime_tests_executed": 0,
+  "browser_tests_executed": 0,
+  "device_tests_executed": 0,
+  "database_concurrency_tests_executed": 0,
+  "inputs": {
+    "contracts/composition/compose.py": "a23b0ecf89824956a8194e8ecead8208ef7507bebb7e5d8d2bdd3f99b0c9eeb7",
+    "contracts/event-channel/build.py": "4ee26e65b6064e50cf373429302852845cab0731ef54766c893895ece51f632a",
+    "contracts/event-channel/check.py": "38476d2e1717948cdcec08e04382b64d05b792a5dfd5804d56aa529df80ffa96",
+    "contracts/event-channel/examples.json": "07e56d29960b1e3f654a1c47028a96320557c7448d40c8b015716fcca662963b",
+    "contracts/event-channel/fixtures.py": "5e9c162c65204d3bfbf5696eaa3d594cd4dd362e0853454ebe600cc085ec602d",
+    "contracts/event-channel/model.py": "7256d11d0725993ebf42b00ffb78bf738d6ad7c9afcddb880a44ef87417b3053",
+    "contracts/event-channel/preview/frames.schema.json": "ff41574455a19b6d822080e86f5ad097bb04404e60745d2850a15b83e25c1faa",
+    "contracts/event-channel/preview/models.schema.json": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a",
+    "contracts/event-channel/preview/policy.json": "37b1c52006c949a3514e377a92e351b0280732ed068695ebc6034a0d94f139dc",
+    "contracts/event-channel/preview/subscriptions.openapi.json": "d38062b3632aaceca6b838f5aca6f076e859d2cbf5dd3bc7f4610b14bdb14c25",
+    "contracts/event-channel/README.md": "be4ac54b3a1233b5d03cf87b5da782a1b050fe8ec93c871193b84b96aa062695",
+    "contracts/event-channel/source/service-subscription.schema.json": "e6c6f1eb8d87e51a2cc9a526565fe1ce85b96b8392596509b8cbe0cffab393ca",
+    "contracts/event-channel/sources.json": "94785224dd21d800bafce9cbaaae1aeac6a6d7717c65c53a18725aedaffe7ed0",
+    "contracts/event-projection/examples.json": "51fb40b6c1dea8120b43ff097934d0106b054d55f370c02a44d3189c53565e0a",
+    "contracts/event-projection/preview/models.schema.json": "24c8707849102ab59a9460499f5b4e5800a4af19d51782e3edea7b611d0aa068",
+    "contracts/event-projection/preview/snapshot.schema.json": "21ce875e721a003fe7a44f110742a53f98c9d061bb5c42c8e914f7367de74a7f",
+    "contracts/event-projection/source/snapshot-cases.json": "9f8df61ca7c7b6b069b5cecda694099961cb53d57fa61a808f0d1a0e983d2f46"
+  }
+}
