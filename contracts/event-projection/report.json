@@ -1,0 +1,566 @@
+{
+  "format": "command-snapshot-check/1",
+  "all_passed": true,
+  "approved": false,
+  "runtime_ready": false,
+  "cases_passed": 134,
+  "checks": [
+    {
+      "name": "生成字节:models.schema.json",
+      "passed": true
+    },
+    {
+      "name": "生成字节:snapshot.schema.json",
+      "passed": true
+    },
+    {
+      "name": "生成字节:projection-map.json",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__A__S0_Digest",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__A__S0_Id",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__A__S0_RequestIdentity",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__A__S0_RequestKey",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__A__S0_Scope",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__A__S1_Digest",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__A__S1_Id",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__CN__Scope",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__RequestIdentity",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__Scope",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S0_CancellationState",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S0_CancellationView",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S0_CompletionLevel",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S0_ControlVersion",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S0_Digest",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S0_Id",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S0_InitialCommandRef",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S0_PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S0_Ref",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S0_RequestIdentity",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S0_Scope",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S0_Timestamp",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S0_Version",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S1_CompletionLevel",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S1_Digest",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S1_Effect",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S1_Id",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S1_PositiveCounter",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S1_Ref",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S1_Scope",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S2_CommandRef",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S2_Counter",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S2_Digest",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S2_Id",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S2_RequestIdentity",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S2_Scope",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S3_Counter",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S3_Digest",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S3_Id",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S5_ControlVersion",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S5_Id",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S5_Revision",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S5_Timestamp",
+      "passed": true
+    },
+    {
+      "name": "完整复用:command__V__S5_Version",
+      "passed": true
+    },
+    {
+      "name": "旧投影边界:devices",
+      "passed": true
+    },
+    {
+      "name": "旧投影边界:catalogs",
+      "passed": true
+    },
+    {
+      "name": "旧投影边界:commands",
+      "passed": true
+    },
+    {
+      "name": "旧投影边界:controls",
+      "passed": true
+    },
+    {
+      "name": "旧投影边界:observations",
+      "passed": true
+    },
+    {
+      "name": "旧投影边界:sources",
+      "passed": true
+    },
+    {
+      "name": "旧投影边界:definitions",
+      "passed": true
+    },
+    {
+      "name": "旧投影边界:runs",
+      "passed": true
+    },
+    {
+      "name": "旧投影边界:business_states",
+      "passed": true
+    },
+    {
+      "name": "旧投影边界:executions",
+      "passed": true
+    },
+    {
+      "name": "旧投影边界:schedule_activations",
+      "passed": true
+    },
+    {
+      "name": "旧投影边界:occurrences",
+      "passed": true
+    },
+    {
+      "name": "当前投影:queued",
+      "passed": true
+    },
+    {
+      "name": "释放来源:queued",
+      "passed": true
+    },
+    {
+      "name": "原件不就地改写:queued",
+      "passed": true
+    },
+    {
+      "name": "当前投影:unknown",
+      "passed": true
+    },
+    {
+      "name": "释放来源:unknown",
+      "passed": true
+    },
+    {
+      "name": "原件不就地改写:unknown",
+      "passed": true
+    },
+    {
+      "name": "当前投影:unknown_clear",
+      "passed": true
+    },
+    {
+      "name": "释放来源:unknown_clear",
+      "passed": true
+    },
+    {
+      "name": "原件不就地改写:unknown_clear",
+      "passed": true
+    },
+    {
+      "name": "当前投影:automation",
+      "passed": true
+    },
+    {
+      "name": "释放来源:automation",
+      "passed": true
+    },
+    {
+      "name": "原件不就地改写:automation",
+      "passed": true
+    },
+    {
+      "name": "超过JS安全整数保留",
+      "passed": true
+    },
+    {
+      "name": "unknown仍unknown",
+      "passed": true
+    },
+    {
+      "name": "清理资源仍暂停",
+      "passed": true
+    },
+    {
+      "name": "取消状态:requested",
+      "passed": true
+    },
+    {
+      "name": "旧格式接受集:requested",
+      "passed": true
+    },
+    {
+      "name": "取消状态:confirmed",
+      "passed": true
+    },
+    {
+      "name": "旧格式接受集:confirmed",
+      "passed": true
+    },
+    {
+      "name": "取消状态:unsupported",
+      "passed": true
+    },
+    {
+      "name": "旧格式接受集:unsupported",
+      "passed": true
+    },
+    {
+      "name": "取消状态:failed",
+      "passed": true
+    },
+    {
+      "name": "旧格式接受集:failed",
+      "passed": true
+    },
+    {
+      "name": "取消状态:indeterminate",
+      "passed": true
+    },
+    {
+      "name": "旧格式接受集:indeterminate",
+      "passed": true
+    },
+    {
+      "name": "取消状态:too_late",
+      "passed": true
+    },
+    {
+      "name": "旧格式接受集:too_late",
+      "passed": true
+    },
+    {
+      "name": "释放前失效:current_authorization",
+      "passed": true
+    },
+    {
+      "name": "释放前失效:current_generation",
+      "passed": true
+    },
+    {
+      "name": "释放前失效:source_publishable",
+      "passed": true
+    },
+    {
+      "name": "释放前失效:device_id",
+      "passed": true
+    },
+    {
+      "name": "释放前失效:permissions",
+      "passed": true
+    },
+    {
+      "name": "释放前失效:subject_kind",
+      "passed": true
+    },
+    {
+      "name": "服务不得越权:paired",
+      "passed": true
+    },
+    {
+      "name": "服务不得越权:origin_owned",
+      "passed": true
+    },
+    {
+      "name": "服务不得读外来手动",
+      "passed": true
+    },
+    {
+      "name": "重算摘要仍拒绝:state.command_id",
+      "passed": true
+    },
+    {
+      "name": "重算摘要仍拒绝:state.revision",
+      "passed": true
+    },
+    {
+      "name": "重算摘要仍拒绝:request_identity.key.target_scope.database_instance_id",
+      "passed": true
+    },
+    {
+      "name": "重算摘要仍拒绝:initial_command_ref.object_id",
+      "passed": true
+    },
+    {
+      "name": "重算摘要仍拒绝:initial_command_ref.revision",
+      "passed": true
+    },
+    {
+      "name": "重算摘要仍拒绝:completion.required",
+      "passed": true
+    },
+    {
+      "name": "重算摘要仍拒绝:completion.evidence_refs",
+      "passed": true
+    },
+    {
+      "name": "重算摘要仍拒绝:state.attempt_ids",
+      "passed": true
+    },
+    {
+      "name": "重算摘要仍拒绝:state.outcome",
+      "passed": true
+    },
+    {
+      "name": "unknown-clear缺资源证据",
+      "passed": true
+    },
+    {
+      "name": "unknown不能解锁自动化",
+      "passed": true
+    },
+    {
+      "name": "终态修订越界",
+      "passed": true
+    },
+    {
+      "name": "未公开完整字段:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝透传字段:actor",
+      "passed": true
+    },
+    {
+      "name": "未公开完整字段:dispatch",
+      "passed": true
+    },
+    {
+      "name": "拒绝透传字段:dispatch",
+      "passed": true
+    },
+    {
+      "name": "未公开完整字段:attempts",
+      "passed": true
+    },
+    {
+      "name": "拒绝透传字段:attempts",
+      "passed": true
+    },
+    {
+      "name": "未公开完整字段:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝透传字段:run_binding",
+      "passed": true
+    },
+    {
+      "name": "未公开完整字段:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝透传字段:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "未公开完整字段:policy",
+      "passed": true
+    },
+    {
+      "name": "拒绝透传字段:policy",
+      "passed": true
+    },
+    {
+      "name": "未公开完整字段:evidence_index",
+      "passed": true
+    },
+    {
+      "name": "拒绝透传字段:evidence_index",
+      "passed": true
+    },
+    {
+      "name": "未公开完整字段:record_digest",
+      "passed": true
+    },
+    {
+      "name": "拒绝透传字段:record_digest",
+      "passed": true
+    },
+    {
+      "name": "错投影拒绝:entity_id",
+      "passed": true
+    },
+    {
+      "name": "错投影拒绝:entity_epoch",
+      "passed": true
+    },
+    {
+      "name": "错投影拒绝:entity_revision",
+      "passed": true
+    },
+    {
+      "name": "错投影拒绝:view.source_record_ref.digest",
+      "passed": true
+    },
+    {
+      "name": "错投影拒绝:view.state.phase",
+      "passed": true
+    },
+    {
+      "name": "新data入口",
+      "passed": true
+    },
+    {
+      "name": "旧版本不能混用",
+      "passed": true
+    },
+    {
+      "name": "快照摘要拒绝命令前缀",
+      "passed": true
+    },
+    {
+      "name": "命令引用拒绝裸hex",
+      "passed": true
+    },
+    {
+      "name": "重包裹不改entry摘要",
+      "passed": true
+    },
+    {
+      "name": "正例固定字节",
+      "passed": true
+    }
+  ],
+  "models": 86,
+  "runtime_tests_executed": 0,
+  "device_tests_executed": 0,
+  "authentication_tests_executed": 0,
+  "database_tests_executed": 0,
+  "inputs": {
+    "contracts/composition/compose.py": "a23b0ecf89824956a8194e8ecead8208ef7507bebb7e5d8d2bdd3f99b0c9eeb7",
+    "contracts/event-projection/build.py": "76f40ac89fafc7d12897637ec4e74e5b6bb931b72a3b26fe1dfbfb3f63040ad9",
+    "contracts/event-projection/check.py": "37c69081b0e2d079a43e016f2f3ef21a1c0fa962e91ef5a429333433fe73ca1e",
+    "contracts/event-projection/examples.json": "51fb40b6c1dea8120b43ff097934d0106b054d55f370c02a44d3189c53565e0a",
+    "contracts/event-projection/fixtures.py": "3cdf3e6d0f28047d76dd2e5c9811026852d565167233579239e59a96e1559dfe",
+    "contracts/event-projection/model.py": "e70ef7c6da743aea2e29840e8316b334740e66940e0f692837ce2b3f08d0f527",
+    "contracts/event-projection/preview/models.schema.json": "24c8707849102ab59a9460499f5b4e5800a4af19d51782e3edea7b611d0aa068",
+    "contracts/event-projection/preview/projection-map.json": "7273ea6ae0fbd0dc5dda7792084a27f6ca20e866e4c654d713870819a81af9fe",
+    "contracts/event-projection/preview/snapshot.schema.json": "21ce875e721a003fe7a44f110742a53f98c9d061bb5c42c8e914f7367de74a7f",
+    "contracts/event-projection/README.md": "2d483db375dc0b495a5ce7ba15345cb143c2015ef89e7fdec93edfeec16c1322",
+    "contracts/event-projection/source/snapshot-cases.json": "9f8df61ca7c7b6b069b5cecda694099961cb53d57fa61a808f0d1a0e983d2f46",
+    "contracts/event-projection/source/snapshot.schema.json": "6bce843a50d6a3f7a2d03ccad3e92c8b24bc0fea8de845efad0e749dd1e10ad8",
+    "contracts/event-projection/sources.json": "b740dae1173f1da1683e638d7cebe0e6606ea1b53f69d4f3c1f071e3cdd12106",
+    "contracts/negotiation/preview/models.schema.json": "35563cf6eeb9f914aa73b6edc97ec61fb557e039b784b28b6824d8bfb75403ed"
+  }
+}

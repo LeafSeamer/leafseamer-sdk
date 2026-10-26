@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://leafseamer.invalid/sdk/event-projection/0.1/snapshot.schema.json",
+  "oneOf": [
+    {
+      "$ref": "https://leafseamer.invalid/sdk/event-projection/0.1/models.schema.json#/$defs/snapshot__Manifest"
+    },
+    {
+      "$ref": "https://leafseamer.invalid/sdk/event-projection/0.1/models.schema.json#/$defs/snapshot__PageResponse"
+    },
+    {
+      "$ref": "https://leafseamer.invalid/sdk/event-projection/0.1/models.schema.json#/$defs/snapshot__Data"
+    }
+  ]
+}

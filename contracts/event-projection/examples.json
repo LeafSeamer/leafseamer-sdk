@@ -1,0 +1,492 @@
+{
+  "records": {
+    "queued": {
+      "entity_kind": "commands",
+      "entity_id": "command",
+      "entity_epoch": "command-epoch",
+      "entity_revision": "1",
+      "view": {
+        "initial_command_ref": {
+          "kind": "command",
+          "scope": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database"
+          },
+          "object_id": "command",
+          "revision": "1",
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "request_identity": {
+          "key": {
+            "target_scope": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database"
+            },
+            "issuer_id": "issuer",
+            "issuer_epoch": "issuer-epoch",
+            "principal_id": "operator",
+            "request_epoch": "request-epoch",
+            "operation_id": "createCommand",
+            "idempotency_key": "request-key"
+          },
+          "request_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "target": {
+          "device_id": "device",
+          "action_id": "obs.program_scene.set",
+          "capability_version": "1.0.0"
+        },
+        "origin": "manual",
+        "accepted_at": "2026-10-27T00:00:00.000Z",
+        "control_binding": {
+          "epoch": "control",
+          "version": "1"
+        },
+        "state_ref": {
+          "id": "command",
+          "revision": "1",
+          "digest": "sha256:4e9bcbaf320fca4df7ff8fe4bd41cd9c597047525300952d34a8baf1018038e4"
+        },
+        "cancellation": null,
+        "source_record_ref": {
+          "kind": "command",
+          "scope": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database"
+          },
+          "object_id": "command",
+          "revision": "1",
+          "digest": "sha256:ffc616c936260029f21fbd65f236d03e0841cea37e5b89f7aaa7f039abf82746"
+        },
+        "state": {
+          "command_id": "command",
+          "scope": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database"
+          },
+          "revision": "1",
+          "phase": "queued",
+          "outcome": "pending",
+          "effect_status": "not_sent",
+          "resource_status": "clear",
+          "automation_continuation": "eligible",
+          "reason_code": null,
+          "terminal_revision": null,
+          "resolution_ref": null,
+          "completion_evidence_count": 0,
+          "resource_evidence_count": 0,
+          "attempt_count": 0
+        },
+        "completion": {
+          "required": "effect_verified",
+          "achieved": null,
+          "policy_ref": {
+            "id": "completion-policy",
+            "revision": "1",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "evidence_count": 0
+        }
+      }
+    },
+    "unknown": {
+      "entity_kind": "commands",
+      "entity_id": "command",
+      "entity_epoch": "command-epoch",
+      "entity_revision": "9007199254740993",
+      "view": {
+        "initial_command_ref": {
+          "kind": "command",
+          "scope": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database"
+          },
+          "object_id": "command",
+          "revision": "1",
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "request_identity": {
+          "key": {
+            "target_scope": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database"
+            },
+            "issuer_id": "issuer",
+            "issuer_epoch": "issuer-epoch",
+            "principal_id": "operator",
+            "request_epoch": "request-epoch",
+            "operation_id": "createCommand",
+            "idempotency_key": "request-key"
+          },
+          "request_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "target": {
+          "device_id": "device",
+          "action_id": "obs.program_scene.set",
+          "capability_version": "1.0.0"
+        },
+        "origin": "manual",
+        "accepted_at": "2026-10-27T00:00:00.000Z",
+        "control_binding": {
+          "epoch": "control",
+          "version": "1"
+        },
+        "state_ref": {
+          "id": "command",
+          "revision": "9007199254740993",
+          "digest": "sha256:3fcd999838337f034038f77e4157c4bfb3b3ba416b570b9e78f2ff0840e1c660"
+        },
+        "cancellation": {
+          "operation_ref": {
+            "id": "cancellation",
+            "revision": "1",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "state": "indeterminate",
+          "future_writes": "indeterminate",
+          "reason_code": "closure_unproven"
+        },
+        "source_record_ref": {
+          "kind": "command",
+          "scope": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database"
+          },
+          "object_id": "command",
+          "revision": "9007199254740993",
+          "digest": "sha256:d4fd60ad9a92f386a39e87b43fd49ffbd2ff04935bbfb2449f57618f1d1a07cc"
+        },
+        "state": {
+          "command_id": "command",
+          "scope": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database"
+          },
+          "revision": "9007199254740993",
+          "phase": "finished",
+          "outcome": "unknown",
+          "effect_status": "possible",
+          "resource_status": "unresolved",
+          "automation_continuation": "paused_latched",
+          "reason_code": "effect_unproven",
+          "terminal_revision": "9007199254740992",
+          "resolution_ref": null,
+          "completion_evidence_count": 0,
+          "resource_evidence_count": 0,
+          "attempt_count": 0
+        },
+        "completion": {
+          "required": "effect_verified",
+          "achieved": null,
+          "policy_ref": {
+            "id": "completion-policy",
+            "revision": "1",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "evidence_count": 0
+        }
+      }
+    },
+    "unknown_clear": {
+      "entity_kind": "commands",
+      "entity_id": "command",
+      "entity_epoch": "command-epoch",
+      "entity_revision": "9007199254740993",
+      "view": {
+        "initial_command_ref": {
+          "kind": "command",
+          "scope": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database"
+          },
+          "object_id": "command",
+          "revision": "1",
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "request_identity": {
+          "key": {
+            "target_scope": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database"
+            },
+            "issuer_id": "issuer",
+            "issuer_epoch": "issuer-epoch",
+            "principal_id": "operator",
+            "request_epoch": "request-epoch",
+            "operation_id": "createCommand",
+            "idempotency_key": "request-key"
+          },
+          "request_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "target": {
+          "device_id": "device",
+          "action_id": "obs.program_scene.set",
+          "capability_version": "1.0.0"
+        },
+        "origin": "manual",
+        "accepted_at": "2026-10-27T00:00:00.000Z",
+        "control_binding": {
+          "epoch": "control",
+          "version": "1"
+        },
+        "state_ref": {
+          "id": "command",
+          "revision": "9007199254740993",
+          "digest": "sha256:f67951516a92feddab00fec68deffd58b5d739f913da290d9041a8d22cd587bc"
+        },
+        "cancellation": {
+          "operation_ref": {
+            "id": "cancellation",
+            "revision": "1",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "state": "indeterminate",
+          "future_writes": "indeterminate",
+          "reason_code": "closure_unproven"
+        },
+        "source_record_ref": {
+          "kind": "command",
+          "scope": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database"
+          },
+          "object_id": "command",
+          "revision": "9007199254740993",
+          "digest": "sha256:f149cda3c1213e5a21afabba6745afc6ab6b770593ebca4b97ad364ea2bd205e"
+        },
+        "state": {
+          "command_id": "command",
+          "scope": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database"
+          },
+          "revision": "9007199254740993",
+          "phase": "finished",
+          "outcome": "unknown",
+          "effect_status": "possible",
+          "resource_status": "clear",
+          "automation_continuation": "paused_latched",
+          "reason_code": "effect_unproven",
+          "terminal_revision": "9007199254740992",
+          "resolution_ref": {
+            "id": "resolution",
+            "revision": "1",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "completion_evidence_count": 0,
+          "resource_evidence_count": 1,
+          "attempt_count": 0
+        },
+        "completion": {
+          "required": "effect_verified",
+          "achieved": null,
+          "policy_ref": {
+            "id": "completion-policy",
+            "revision": "1",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "evidence_count": 0
+        }
+      }
+    },
+    "automation": {
+      "entity_kind": "commands",
+      "entity_id": "command",
+      "entity_epoch": "command-epoch",
+      "entity_revision": "1",
+      "view": {
+        "initial_command_ref": {
+          "kind": "command",
+          "scope": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database"
+          },
+          "object_id": "command",
+          "revision": "1",
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "request_identity": {
+          "key": {
+            "target_scope": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database"
+            },
+            "issuer_id": "issuer",
+            "issuer_epoch": "issuer-epoch",
+            "principal_id": "operator",
+            "request_epoch": "request-epoch",
+            "operation_id": "createCommand",
+            "idempotency_key": "request-key"
+          },
+          "request_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "target": {
+          "device_id": "device",
+          "action_id": "obs.program_scene.set",
+          "capability_version": "1.0.0"
+        },
+        "origin": "automation",
+        "accepted_at": "2026-10-27T00:00:00.000Z",
+        "control_binding": {
+          "epoch": "control",
+          "version": "1"
+        },
+        "state_ref": {
+          "id": "command",
+          "revision": "1",
+          "digest": "sha256:4e9bcbaf320fca4df7ff8fe4bd41cd9c597047525300952d34a8baf1018038e4"
+        },
+        "cancellation": null,
+        "source_record_ref": {
+          "kind": "command",
+          "scope": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database"
+          },
+          "object_id": "command",
+          "revision": "1",
+          "digest": "sha256:4562f005141e8b2eab79dede3acd6eed30ef3d50e790850d8d99837976a10a7a"
+        },
+        "state": {
+          "command_id": "command",
+          "scope": {
+            "authority_service_id": "controller",
+            "database_instance_id": "database"
+          },
+          "revision": "1",
+          "phase": "queued",
+          "outcome": "pending",
+          "effect_status": "not_sent",
+          "resource_status": "clear",
+          "automation_continuation": "eligible",
+          "reason_code": null,
+          "terminal_revision": null,
+          "resolution_ref": null,
+          "completion_evidence_count": 0,
+          "resource_evidence_count": 0,
+          "attempt_count": 0
+        },
+        "completion": {
+          "required": "effect_verified",
+          "achieved": null,
+          "policy_ref": {
+            "id": "completion-policy",
+            "revision": "1",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "evidence_count": 0
+        }
+      }
+    }
+  },
+  "data": {
+    "format_version": "snapshot-projection/0.2.0-draft.1",
+    "type": "server.data",
+    "binding": {
+      "subscription_id": "subscription",
+      "publisher_service_id": "controller",
+      "publisher_database_instance_id": "database",
+      "stream_id": "stream",
+      "stream_epoch": "stream-epoch",
+      "scope_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "authorization_revision": "1",
+      "connection_generation": "1"
+    },
+    "cursor": "2",
+    "previous_cursor": "1",
+    "delivery_mode": "reconcile",
+    "entry": {
+      "entry_kind": "entity.upsert",
+      "payload": {
+        "entity_kind": "commands",
+        "entity_id": "command",
+        "entity_epoch": "command-epoch",
+        "entity_revision": "1",
+        "view": {
+          "initial_command_ref": {
+            "kind": "command",
+            "scope": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database"
+            },
+            "object_id": "command",
+            "revision": "1",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "request_identity": {
+            "key": {
+              "target_scope": {
+                "authority_service_id": "controller",
+                "database_instance_id": "database"
+              },
+              "issuer_id": "issuer",
+              "issuer_epoch": "issuer-epoch",
+              "principal_id": "operator",
+              "request_epoch": "request-epoch",
+              "operation_id": "createCommand",
+              "idempotency_key": "request-key"
+            },
+            "request_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "target": {
+            "device_id": "device",
+            "action_id": "obs.program_scene.set",
+            "capability_version": "1.0.0"
+          },
+          "origin": "manual",
+          "accepted_at": "2026-10-27T00:00:00.000Z",
+          "control_binding": {
+            "epoch": "control",
+            "version": "1"
+          },
+          "state_ref": {
+            "id": "command",
+            "revision": "1",
+            "digest": "sha256:4e9bcbaf320fca4df7ff8fe4bd41cd9c597047525300952d34a8baf1018038e4"
+          },
+          "cancellation": null,
+          "source_record_ref": {
+            "kind": "command",
+            "scope": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database"
+            },
+            "object_id": "command",
+            "revision": "1",
+            "digest": "sha256:ffc616c936260029f21fbd65f236d03e0841cea37e5b89f7aaa7f039abf82746"
+          },
+          "state": {
+            "command_id": "command",
+            "scope": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database"
+            },
+            "revision": "1",
+            "phase": "queued",
+            "outcome": "pending",
+            "effect_status": "not_sent",
+            "resource_status": "clear",
+            "automation_continuation": "eligible",
+            "reason_code": null,
+            "terminal_revision": null,
+            "resolution_ref": null,
+            "completion_evidence_count": 0,
+            "resource_evidence_count": 0,
+            "attempt_count": 0
+          },
+          "completion": {
+            "required": "effect_verified",
+            "achieved": null,
+            "policy_ref": {
+              "id": "completion-policy",
+              "revision": "1",
+              "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "evidence_count": 0
+          }
+        }
+      }
+    },
+    "payload_digest": "dffb0950ae1aa18ecbfc052bca742663ee4b71892c6fd8a05cfc3876271c69cc"
+  }
+}

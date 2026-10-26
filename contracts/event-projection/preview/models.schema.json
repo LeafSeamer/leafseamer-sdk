@@ -1,0 +1,2686 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://leafseamer.invalid/sdk/event-projection/0.1/models.schema.json",
+  "title": "snapshot-projection/0.2.0-draft.1",
+  "x-approved": false,
+  "not": {},
+  "$defs": {
+    "command__A__S0_Digest": {
+      "$ref": "#/$defs/command__A__S1_Digest"
+    },
+    "command__A__S0_Id": {
+      "$ref": "#/$defs/command__A__S1_Id"
+    },
+    "command__A__S0_RequestIdentity": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "#/$defs/command__A__S0_RequestKey"
+        },
+        "request_digest": {
+          "$ref": "#/$defs/command__A__S0_Digest"
+        }
+      },
+      "required": [
+        "key",
+        "request_digest"
+      ],
+      "additionalProperties": false
+    },
+    "command__A__S0_RequestKey": {
+      "type": "object",
+      "properties": {
+        "target_scope": {
+          "$ref": "#/$defs/command__A__S0_Scope"
+        },
+        "issuer_id": {
+          "$ref": "#/$defs/command__A__S0_Id"
+        },
+        "issuer_epoch": {
+          "$ref": "#/$defs/command__A__S0_Id"
+        },
+        "principal_id": {
+          "$ref": "#/$defs/command__A__S0_Id"
+        },
+        "request_epoch": {
+          "$ref": "#/$defs/command__A__S0_Id"
+        },
+        "operation_id": {
+          "const": "createCommand"
+        },
+        "idempotency_key": {
+          "$ref": "#/$defs/command__A__S0_Id"
+        }
+      },
+      "required": [
+        "target_scope",
+        "issuer_id",
+        "issuer_epoch",
+        "principal_id",
+        "request_epoch",
+        "operation_id",
+        "idempotency_key"
+      ],
+      "additionalProperties": false
+    },
+    "command__A__S0_Scope": {
+      "$ref": "#/$defs/command__Scope"
+    },
+    "command__A__S1_Digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}(?![\\s\\S])"
+    },
+    "command__A__S1_Id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,128}(?![\\s\\S])"
+    },
+    "command__CN__Scope": {
+      "type": "object",
+      "properties": {
+        "authority_service_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+(?![\\s\\S])"
+        },
+        "database_instance_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+(?![\\s\\S])"
+        }
+      },
+      "required": [
+        "authority_service_id",
+        "database_instance_id"
+      ],
+      "additionalProperties": false
+    },
+    "command__RequestIdentity": {
+      "$ref": "#/$defs/command__A__S0_RequestIdentity"
+    },
+    "command__Scope": {
+      "$ref": "#/$defs/command__CN__Scope"
+    },
+    "command__V__S0_CancellationState": {
+      "enum": [
+        "requested",
+        "confirmed",
+        "unsupported",
+        "failed",
+        "indeterminate",
+        "too_late"
+      ]
+    },
+    "command__V__S0_CancellationView": {
+      "type": "object",
+      "properties": {
+        "operation_ref": {
+          "$ref": "#/$defs/command__V__S0_Ref"
+        },
+        "state": {
+          "$ref": "#/$defs/command__V__S0_CancellationState"
+        },
+        "future_writes": {
+          "enum": [
+            "pending",
+            "closed",
+            "indeterminate"
+          ]
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command__V__S0_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "operation_ref",
+        "state",
+        "future_writes",
+        "reason_code"
+      ],
+      "additionalProperties": false
+    },
+    "command__V__S0_CompletionLevel": {
+      "$ref": "#/$defs/command__V__S1_CompletionLevel"
+    },
+    "command__V__S0_ControlVersion": {
+      "$ref": "#/$defs/command__V__S5_ControlVersion"
+    },
+    "command__V__S0_Digest": {
+      "$ref": "#/$defs/command__V__S1_Digest"
+    },
+    "command__V__S0_Id": {
+      "$ref": "#/$defs/command__V__S1_Id"
+    },
+    "command__V__S0_InitialCommandRef": {
+      "$ref": "#/$defs/command__V__S2_CommandRef"
+    },
+    "command__V__S0_PositiveCounter": {
+      "$ref": "#/$defs/command__V__S1_PositiveCounter"
+    },
+    "command__V__S0_Ref": {
+      "$ref": "#/$defs/command__V__S1_Ref"
+    },
+    "command__V__S0_RequestIdentity": {
+      "$ref": "#/$defs/command__V__S2_RequestIdentity"
+    },
+    "command__V__S0_Scope": {
+      "$ref": "#/$defs/command__Scope"
+    },
+    "command__V__S0_Timestamp": {
+      "$ref": "#/$defs/command__V__S5_Timestamp"
+    },
+    "command__V__S0_Version": {
+      "$ref": "#/$defs/command__V__S5_Version"
+    },
+    "command__V__S1_CompletionLevel": {
+      "enum": [
+        "sent",
+        "acknowledged",
+        "effect_verified"
+      ]
+    },
+    "command__V__S1_Digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$(?![\\s\\S])"
+    },
+    "command__V__S1_Effect": {
+      "enum": [
+        "not_sent",
+        "possible",
+        "acknowledged",
+        "verified",
+        "partial"
+      ]
+    },
+    "command__V__S1_Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256,
+      "pattern": "^[A-Za-z0-9._:/-]+$(?![\\s\\S])"
+    },
+    "command__V__S1_PositiveCounter": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]{0,19}$(?![\\s\\S])"
+    },
+    "command__V__S1_Ref": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/command__V__S1_Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/command__V__S1_PositiveCounter"
+        },
+        "digest": {
+          "$ref": "#/$defs/command__V__S1_Digest"
+        }
+      },
+      "required": [
+        "id",
+        "revision",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "command__V__S1_Scope": {
+      "$ref": "#/$defs/command__Scope"
+    },
+    "command__V__S2_CommandRef": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "command"
+        },
+        "scope": {
+          "$ref": "#/$defs/command__V__S2_Scope"
+        },
+        "object_id": {
+          "$ref": "#/$defs/command__V__S2_Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/command__V__S2_Counter"
+        },
+        "digest": {
+          "$ref": "#/$defs/command__V__S2_Digest"
+        }
+      },
+      "required": [
+        "kind",
+        "scope",
+        "object_id",
+        "revision",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "command__V__S2_Counter": {
+      "$ref": "#/$defs/command__V__S3_Counter"
+    },
+    "command__V__S2_Digest": {
+      "$ref": "#/$defs/command__V__S3_Digest"
+    },
+    "command__V__S2_Id": {
+      "$ref": "#/$defs/command__V__S3_Id"
+    },
+    "command__V__S2_RequestIdentity": {
+      "$ref": "#/$defs/command__RequestIdentity"
+    },
+    "command__V__S2_Scope": {
+      "$ref": "#/$defs/command__Scope"
+    },
+    "command__V__S3_Counter": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,19})(?![\\s\\S])"
+    },
+    "command__V__S3_Digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}(?![\\s\\S])"
+    },
+    "command__V__S3_Id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,128}(?![\\s\\S])"
+    },
+    "command__V__S5_ControlVersion": {
+      "type": "object",
+      "properties": {
+        "epoch": {
+          "$ref": "#/$defs/command__V__S5_Id"
+        },
+        "version": {
+          "$ref": "#/$defs/command__V__S5_Revision"
+        }
+      },
+      "required": [
+        "epoch",
+        "version"
+      ],
+      "additionalProperties": false
+    },
+    "command__V__S5_Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9._-]+$"
+    },
+    "command__V__S5_Revision": {
+      "type": "string",
+      "maxLength": 20,
+      "pattern": "^(0|[1-9][0-9]*)$"
+    },
+    "command__V__S5_Timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+    },
+    "command__V__S5_Version": {
+      "type": "string",
+      "maxLength": 128,
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(-[0-9A-Za-z.-]+)?$"
+    },
+    "snapshot__BusinessStateSnapshotView": {
+      "type": "object",
+      "properties": {
+        "run_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "state_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "last_transition_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "active_execution_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "run_ref",
+        "state_id",
+        "last_transition_ref",
+        "active_execution_ref"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__CatalogSnapshotView": {
+      "type": "object",
+      "properties": {
+        "device_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "approval_state": {
+          "enum": [
+            "approved",
+            "unavailable",
+            "revoked"
+          ]
+        },
+        "capability_revision": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "capability_digest": {
+          "$ref": "#/$defs/snapshot__Digest"
+        },
+        "action_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__Id"
+          },
+          "maxItems": 256
+        },
+        "trigger_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__Id"
+          },
+          "maxItems": 256
+        },
+        "catalog_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unavailable_reason": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "device_ref",
+        "approval_state",
+        "capability_revision",
+        "capability_digest",
+        "action_ids",
+        "trigger_ids",
+        "catalog_ref",
+        "unavailable_reason"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__Collection": {
+      "type": "object",
+      "properties": {
+        "entity_kind": {
+          "$ref": "#/$defs/snapshot__EntityKind"
+        },
+        "count": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "view_schema_ref": {
+          "$ref": "#/$defs/snapshot__SchemaRef"
+        }
+      },
+      "required": [
+        "entity_kind",
+        "count",
+        "view_schema_ref"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__CommandSnapshotView": {
+      "type": "object",
+      "properties": {
+        "initial_command_ref": {
+          "$ref": "#/$defs/command__V__S0_InitialCommandRef"
+        },
+        "request_identity": {
+          "$ref": "#/$defs/command__V__S0_RequestIdentity"
+        },
+        "target": {
+          "type": "object",
+          "properties": {
+            "device_id": {
+              "$ref": "#/$defs/command__V__S0_Id"
+            },
+            "action_id": {
+              "$ref": "#/$defs/command__V__S0_Id"
+            },
+            "capability_version": {
+              "$ref": "#/$defs/command__V__S0_Version"
+            }
+          },
+          "required": [
+            "device_id",
+            "action_id",
+            "capability_version"
+          ],
+          "additionalProperties": false
+        },
+        "origin": {
+          "enum": [
+            "manual",
+            "automation"
+          ]
+        },
+        "accepted_at": {
+          "$ref": "#/$defs/command__V__S0_Timestamp"
+        },
+        "control_binding": {
+          "$ref": "#/$defs/command__V__S0_ControlVersion"
+        },
+        "state_ref": {
+          "$ref": "#/$defs/command__V__S0_Ref"
+        },
+        "cancellation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command__V__S0_CancellationView"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_record_ref": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "command"
+            },
+            "scope": {
+              "$ref": "#/$defs/command__V__S0_Scope"
+            },
+            "object_id": {
+              "$ref": "#/$defs/command__V__S0_Id"
+            },
+            "revision": {
+              "$ref": "#/$defs/command__V__S0_PositiveCounter"
+            },
+            "digest": {
+              "$ref": "#/$defs/command__V__S0_Digest"
+            }
+          },
+          "required": [
+            "kind",
+            "scope",
+            "object_id",
+            "revision",
+            "digest"
+          ],
+          "additionalProperties": false
+        },
+        "state": {
+          "$ref": "#/$defs/snapshot__CommandState"
+        },
+        "completion": {
+          "type": "object",
+          "properties": {
+            "required": {
+              "$ref": "#/$defs/command__V__S0_CompletionLevel"
+            },
+            "achieved": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/command__V__S0_CompletionLevel"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "policy_ref": {
+              "$ref": "#/$defs/command__V__S0_Ref"
+            },
+            "evidence_count": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 256
+            }
+          },
+          "required": [
+            "required",
+            "achieved",
+            "policy_ref",
+            "evidence_count"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "initial_command_ref",
+        "request_identity",
+        "target",
+        "origin",
+        "accepted_at",
+        "control_binding",
+        "state_ref",
+        "cancellation",
+        "source_record_ref",
+        "state",
+        "completion"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__CommandState": {
+      "type": "object",
+      "properties": {
+        "command_id": {
+          "$ref": "#/$defs/command__V__S1_Id"
+        },
+        "scope": {
+          "$ref": "#/$defs/command__V__S1_Scope"
+        },
+        "revision": {
+          "$ref": "#/$defs/command__V__S1_PositiveCounter"
+        },
+        "phase": {
+          "enum": [
+            "queued",
+            "dispatching",
+            "awaiting_evidence",
+            "finished"
+          ]
+        },
+        "outcome": {
+          "enum": [
+            "pending",
+            "succeeded",
+            "failed",
+            "unknown",
+            "cancelled",
+            "expired",
+            "blocked"
+          ]
+        },
+        "effect_status": {
+          "$ref": "#/$defs/command__V__S1_Effect"
+        },
+        "resource_status": {
+          "enum": [
+            "held",
+            "clear",
+            "unresolved"
+          ]
+        },
+        "automation_continuation": {
+          "enum": [
+            "eligible",
+            "paused_latched"
+          ]
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command__V__S1_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "terminal_revision": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command__V__S1_PositiveCounter"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "resolution_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/command__V__S1_Ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "completion_evidence_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 256
+        },
+        "resource_evidence_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 256
+        },
+        "attempt_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 256
+        }
+      },
+      "required": [
+        "command_id",
+        "scope",
+        "revision",
+        "phase",
+        "outcome",
+        "effect_status",
+        "resource_status",
+        "automation_continuation",
+        "reason_code",
+        "terminal_revision",
+        "resolution_ref",
+        "completion_evidence_count",
+        "resource_evidence_count",
+        "attempt_count"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "phase": {
+                "const": "finished"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "outcome": {
+                "not": {
+                  "const": "pending"
+                }
+              },
+              "terminal_revision": {
+                "$ref": "#/$defs/command__V__S1_PositiveCounter"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "outcome": {
+                "const": "pending"
+              },
+              "terminal_revision": {
+                "type": "null"
+              },
+              "resolution_ref": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "enum": [
+                  "failed",
+                  "unknown",
+                  "cancelled",
+                  "expired",
+                  "blocked"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "reason_code": {
+                "$ref": "#/$defs/command__V__S1_Id"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "enum": [
+                  "unknown",
+                  "blocked",
+                  "expired"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "automation_continuation": {
+                "const": "paused_latched"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "const": "unknown"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "effect_status": {
+                "not": {
+                  "const": "not_sent"
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "const": "unknown"
+              },
+              "resource_status": {
+                "const": "clear"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "resolution_ref": {
+                "$ref": "#/$defs/command__V__S1_Ref"
+              },
+              "resource_evidence_count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 256
+              }
+            }
+          }
+        }
+      ]
+    },
+    "snapshot__ContentBinding": {
+      "type": "object",
+      "properties": {
+        "snapshot_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "subscription_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "publisher_service_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "publisher_database_instance_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "stream_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "stream_epoch": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "scope_digest": {
+          "$ref": "#/$defs/snapshot__Digest"
+        },
+        "authorization_revision": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "projection_profile_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "publisher_domain_ref": {
+          "$ref": "#/$defs/snapshot__DomainRef"
+        }
+      },
+      "required": [
+        "snapshot_id",
+        "subscription_id",
+        "publisher_service_id",
+        "publisher_database_instance_id",
+        "stream_id",
+        "stream_epoch",
+        "scope_digest",
+        "authorization_revision",
+        "projection_profile_ref",
+        "publisher_domain_ref"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__ControlSnapshotView": {
+      "type": "object",
+      "properties": {
+        "device_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "control_epoch": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "effective_version": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "effective_holder_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "mode": {
+          "enum": [
+            "manual",
+            "automatic"
+          ]
+        },
+        "gate_state": {
+          "enum": [
+            "ready",
+            "fencing",
+            "protected"
+          ]
+        },
+        "pending_change": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__PendingControl"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "transfers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__Transfer"
+          },
+          "maxItems": 32
+        },
+        "in_flight_commands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__ObjectRef"
+          },
+          "maxItems": 256
+        },
+        "unresolved_commands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__ObjectRef"
+          },
+          "maxItems": 256
+        }
+      },
+      "required": [
+        "device_ref",
+        "control_epoch",
+        "effective_version",
+        "effective_holder_id",
+        "mode",
+        "gate_state",
+        "pending_change",
+        "transfers",
+        "in_flight_commands",
+        "unresolved_commands"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__Counter": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)(?![\\s\\S])",
+      "maxLength": 20
+    },
+    "snapshot__Data": {
+      "type": "object",
+      "properties": {
+        "format_version": {
+          "const": "snapshot-projection/0.2.0-draft.1"
+        },
+        "type": {
+          "const": "server.data"
+        },
+        "binding": {
+          "$ref": "#/$defs/snapshot__DeliveryBinding"
+        },
+        "cursor": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "previous_cursor": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "delivery_mode": {
+          "enum": [
+            "live",
+            "reconcile"
+          ]
+        },
+        "entry": {
+          "$ref": "#/$defs/snapshot__DeltaPayload"
+        },
+        "payload_digest": {
+          "$ref": "#/$defs/snapshot__Digest"
+        }
+      },
+      "required": [
+        "format_version",
+        "type",
+        "binding",
+        "cursor",
+        "previous_cursor",
+        "delivery_mode",
+        "entry",
+        "payload_digest"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__DefinitionSnapshotView": {
+      "type": "object",
+      "properties": {
+        "display_name": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "published_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "draft_revision": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "activation_state": {
+          "enum": [
+            "inactive",
+            "active",
+            "retired"
+          ]
+        }
+      },
+      "required": [
+        "display_name",
+        "published_ref",
+        "draft_revision",
+        "activation_state"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__DeliveryBinding": {
+      "type": "object",
+      "properties": {
+        "subscription_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "publisher_service_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "publisher_database_instance_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "stream_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "stream_epoch": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "scope_digest": {
+          "$ref": "#/$defs/snapshot__Digest"
+        },
+        "authorization_revision": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "connection_generation": {
+          "$ref": "#/$defs/snapshot__Counter"
+        }
+      },
+      "required": [
+        "subscription_id",
+        "publisher_service_id",
+        "publisher_database_instance_id",
+        "stream_id",
+        "stream_epoch",
+        "scope_digest",
+        "authorization_revision",
+        "connection_generation"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__DeltaPayload": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "entry_kind": {
+              "const": "entity.upsert"
+            },
+            "payload": {
+              "$ref": "#/$defs/snapshot__Record"
+            }
+          },
+          "required": [
+            "entry_kind",
+            "payload"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entry_kind": {
+              "const": "entity.remove"
+            },
+            "payload": {
+              "type": "object",
+              "properties": {
+                "entity_kind": {
+                  "$ref": "#/$defs/snapshot__EntityKind"
+                },
+                "entity_id": {
+                  "$ref": "#/$defs/snapshot__Id"
+                },
+                "entity_epoch": {
+                  "$ref": "#/$defs/snapshot__Id"
+                },
+                "entity_revision": {
+                  "$ref": "#/$defs/snapshot__Counter"
+                },
+                "reason": {
+                  "enum": [
+                    "deleted",
+                    "left_scope"
+                  ]
+                }
+              },
+              "required": [
+                "entity_kind",
+                "entity_id",
+                "entity_epoch",
+                "entity_revision",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "entry_kind",
+            "payload"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entry_kind": {
+              "const": "source.event"
+            },
+            "payload": {
+              "$ref": "#/$defs/snapshot__SourceEvent"
+            }
+          },
+          "required": [
+            "entry_kind",
+            "payload"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "snapshot__DeviceSnapshotView": {
+      "type": "object",
+      "properties": {
+        "device_kind": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "display_name": {
+          "type": "string",
+          "maxLength": 1024
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "firmware": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1024
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "connection_state": {
+          "enum": [
+            "disconnected",
+            "connecting",
+            "ready",
+            "faulted"
+          ]
+        },
+        "observation_quality": {
+          "enum": [
+            "fresh",
+            "stale",
+            "unavailable"
+          ]
+        },
+        "catalog_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "device_kind",
+        "display_name",
+        "model",
+        "firmware",
+        "connection_state",
+        "observation_quality",
+        "catalog_ref"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__Digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}(?![\\s\\S])",
+      "maxLength": 64
+    },
+    "snapshot__DomainRef": {
+      "type": "object",
+      "properties": {
+        "clock_domain_id": {
+          "type": "string",
+          "pattern": "^clock_[0-9a-f]{64}(?![\\s\\S])"
+        },
+        "descriptor_digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}(?![\\s\\S])"
+        }
+      },
+      "required": [
+        "clock_domain_id",
+        "descriptor_digest"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__EntityKind": {
+      "enum": [
+        "devices",
+        "catalogs",
+        "commands",
+        "controls",
+        "observations",
+        "sources",
+        "definitions",
+        "runs",
+        "business_states",
+        "executions",
+        "schedule_activations",
+        "occurrences"
+      ]
+    },
+    "snapshot__ExecutionSnapshotView": {
+      "type": "object",
+      "properties": {
+        "run_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "plan_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "generation": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "running",
+            "paused",
+            "succeeded",
+            "completed_with_failures",
+            "failed",
+            "unknown",
+            "blocked",
+            "cancelled"
+          ]
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__Step"
+          },
+          "maxItems": 256
+        },
+        "source_execution_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "run_ref",
+        "plan_ref",
+        "generation",
+        "state",
+        "steps",
+        "source_execution_ref"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__Gap": {
+      "type": "object",
+      "properties": {
+        "gap_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "loss_extent": {
+          "enum": [
+            "known",
+            "unknown"
+          ]
+        },
+        "first_missing": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "last_missing": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "resolution_state": {
+          "enum": [
+            "open",
+            "acknowledged",
+            "baseline_replaced"
+          ]
+        }
+      },
+      "required": [
+        "gap_id",
+        "loss_extent",
+        "first_missing",
+        "last_missing",
+        "resolution_state"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__Id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,128}(?![\\s\\S])",
+      "maxLength": 128
+    },
+    "snapshot__Manifest": {
+      "type": "object",
+      "properties": {
+        "format_version": {
+          "const": "snapshot-projection/0.2.0-draft.1"
+        },
+        "binding": {
+          "$ref": "#/$defs/snapshot__ContentBinding"
+        },
+        "snapshot_cursor": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "collections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__Collection"
+          },
+          "maxItems": 12
+        },
+        "source_watermarks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__Watermark"
+          },
+          "maxItems": 256
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__PageDescriptor"
+          },
+          "maxItems": 128
+        },
+        "page_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 128
+        },
+        "total_content_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8388608
+        },
+        "created_at": {
+          "$ref": "#/$defs/snapshot__Timestamp"
+        },
+        "expires_at": {
+          "$ref": "#/$defs/snapshot__Timestamp"
+        },
+        "manifest_digest": {
+          "$ref": "#/$defs/snapshot__Digest"
+        }
+      },
+      "required": [
+        "format_version",
+        "binding",
+        "snapshot_cursor",
+        "collections",
+        "source_watermarks",
+        "pages",
+        "page_count",
+        "total_content_bytes",
+        "created_at",
+        "expires_at",
+        "manifest_digest"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__ObjectRef": {
+      "type": "object",
+      "properties": {
+        "authority_service_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "database_instance_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "entity_kind": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "entity_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "entity_epoch": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "content_digest": {
+          "$ref": "#/$defs/snapshot__Digest"
+        }
+      },
+      "required": [
+        "authority_service_id",
+        "database_instance_id",
+        "entity_kind",
+        "entity_id",
+        "entity_epoch",
+        "revision",
+        "content_digest"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__ObservationSnapshotView": {
+      "type": "object",
+      "properties": {
+        "device_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "source_key": {
+          "$ref": "#/$defs/snapshot__SourceKey"
+        },
+        "provider_boot_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "device_session_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "observed_at": {
+          "$ref": "#/$defs/snapshot__Timestamp"
+        },
+        "sampling_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "freshness_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 86400000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "quality": {
+          "enum": [
+            "fresh",
+            "stale",
+            "unavailable"
+          ]
+        },
+        "integrity": {
+          "enum": [
+            "complete",
+            "gap",
+            "unavailable"
+          ]
+        },
+        "values": {
+          "$ref": "#/$defs/snapshot__QualifiedValue"
+        }
+      },
+      "required": [
+        "device_ref",
+        "source_key",
+        "provider_boot_id",
+        "device_session_id",
+        "observed_at",
+        "sampling_ref",
+        "freshness_ms",
+        "quality",
+        "integrity",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__OccurrenceSnapshotView": {
+      "type": "object",
+      "properties": {
+        "logical_key_digest": {
+          "$ref": "#/$defs/snapshot__Digest"
+        },
+        "schedule_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "original_local_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "planned_at": {
+          "$ref": "#/$defs/snapshot__Timestamp"
+        },
+        "window": {
+          "type": "object",
+          "properties": {
+            "earliest": {
+              "$ref": "#/$defs/snapshot__Timestamp"
+            },
+            "latest": {
+              "$ref": "#/$defs/snapshot__Timestamp"
+            }
+          },
+          "required": [
+            "earliest",
+            "latest"
+          ],
+          "additionalProperties": false
+        },
+        "activation_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "qualification_latch": {
+          "enum": [
+            "eligible",
+            "blocked",
+            "missed",
+            "cancelled"
+          ]
+        },
+        "admission_state": {
+          "enum": [
+            "unadmitted",
+            "accepted"
+          ]
+        },
+        "admission_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "execution_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "execution_summary": {
+          "anyOf": [
+            {
+              "enum": [
+                "pending",
+                "running",
+                "succeeded",
+                "completed_with_failures",
+                "failed",
+                "unknown",
+                "blocked",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "replay_of": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "logical_key_digest",
+        "schedule_id",
+        "original_local_date",
+        "planned_at",
+        "window",
+        "activation_ref",
+        "qualification_latch",
+        "admission_state",
+        "admission_ref",
+        "execution_ref",
+        "execution_summary",
+        "reason_code",
+        "replay_of"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__PageContent": {
+      "type": "object",
+      "properties": {
+        "format_version": {
+          "const": "snapshot-projection/0.2.0-draft.1"
+        },
+        "binding": {
+          "$ref": "#/$defs/snapshot__ContentBinding"
+        },
+        "page_index": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 127
+        },
+        "next_page_index": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 127
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__Record"
+          },
+          "maxItems": 256
+        }
+      },
+      "required": [
+        "format_version",
+        "binding",
+        "page_index",
+        "next_page_index",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__PageDescriptor": {
+      "type": "object",
+      "properties": {
+        "page_index": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 127
+        },
+        "content_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 245760
+        },
+        "content_digest": {
+          "$ref": "#/$defs/snapshot__Digest"
+        }
+      },
+      "required": [
+        "page_index",
+        "content_bytes",
+        "content_digest"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__PageResponse": {
+      "type": "object",
+      "properties": {
+        "manifest_digest": {
+          "$ref": "#/$defs/snapshot__Digest"
+        },
+        "content_digest": {
+          "$ref": "#/$defs/snapshot__Digest"
+        },
+        "content": {
+          "$ref": "#/$defs/snapshot__PageContent"
+        },
+        "delivery_binding": {
+          "$ref": "#/$defs/snapshot__DeliveryBinding"
+        }
+      },
+      "required": [
+        "manifest_digest",
+        "content_digest",
+        "content",
+        "delivery_binding"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__PendingControl": {
+      "type": "object",
+      "properties": {
+        "operation_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "target_version": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "target_holder_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "target_mode": {
+          "enum": [
+            "manual",
+            "automatic"
+          ]
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "effective",
+            "rejected",
+            "indeterminate"
+          ]
+        },
+        "reason_code": {
+          "$ref": "#/$defs/snapshot__Id"
+        }
+      },
+      "required": [
+        "operation_ref",
+        "target_version",
+        "target_holder_id",
+        "target_mode",
+        "state",
+        "reason_code"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__PositiveCounter": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]*(?![\\s\\S])",
+      "maxLength": 20
+    },
+    "snapshot__QualifiedValue": {
+      "type": "object",
+      "properties": {
+        "schema_ref": {
+          "$ref": "#/$defs/snapshot__SchemaRef"
+        },
+        "value": {}
+      },
+      "required": [
+        "schema_ref",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__Record": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "entity_kind": {
+              "const": "devices"
+            },
+            "entity_id": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_epoch": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_revision": {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            "view": {
+              "$ref": "#/$defs/snapshot__DeviceSnapshotView"
+            }
+          },
+          "required": [
+            "entity_kind",
+            "entity_id",
+            "entity_epoch",
+            "entity_revision",
+            "view"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entity_kind": {
+              "const": "catalogs"
+            },
+            "entity_id": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_epoch": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_revision": {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            "view": {
+              "$ref": "#/$defs/snapshot__CatalogSnapshotView"
+            }
+          },
+          "required": [
+            "entity_kind",
+            "entity_id",
+            "entity_epoch",
+            "entity_revision",
+            "view"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entity_kind": {
+              "const": "commands"
+            },
+            "entity_id": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_epoch": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_revision": {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            "view": {
+              "$ref": "#/$defs/snapshot__CommandSnapshotView"
+            }
+          },
+          "required": [
+            "entity_kind",
+            "entity_id",
+            "entity_epoch",
+            "entity_revision",
+            "view"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entity_kind": {
+              "const": "controls"
+            },
+            "entity_id": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_epoch": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_revision": {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            "view": {
+              "$ref": "#/$defs/snapshot__ControlSnapshotView"
+            }
+          },
+          "required": [
+            "entity_kind",
+            "entity_id",
+            "entity_epoch",
+            "entity_revision",
+            "view"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entity_kind": {
+              "const": "observations"
+            },
+            "entity_id": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_epoch": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_revision": {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            "view": {
+              "$ref": "#/$defs/snapshot__ObservationSnapshotView"
+            }
+          },
+          "required": [
+            "entity_kind",
+            "entity_id",
+            "entity_epoch",
+            "entity_revision",
+            "view"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entity_kind": {
+              "const": "sources"
+            },
+            "entity_id": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_epoch": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_revision": {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            "view": {
+              "$ref": "#/$defs/snapshot__SourceSnapshotView"
+            }
+          },
+          "required": [
+            "entity_kind",
+            "entity_id",
+            "entity_epoch",
+            "entity_revision",
+            "view"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entity_kind": {
+              "const": "definitions"
+            },
+            "entity_id": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_epoch": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_revision": {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            "view": {
+              "$ref": "#/$defs/snapshot__DefinitionSnapshotView"
+            }
+          },
+          "required": [
+            "entity_kind",
+            "entity_id",
+            "entity_epoch",
+            "entity_revision",
+            "view"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entity_kind": {
+              "const": "runs"
+            },
+            "entity_id": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_epoch": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_revision": {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            "view": {
+              "$ref": "#/$defs/snapshot__RunSnapshotView"
+            }
+          },
+          "required": [
+            "entity_kind",
+            "entity_id",
+            "entity_epoch",
+            "entity_revision",
+            "view"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entity_kind": {
+              "const": "business_states"
+            },
+            "entity_id": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_epoch": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_revision": {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            "view": {
+              "$ref": "#/$defs/snapshot__BusinessStateSnapshotView"
+            }
+          },
+          "required": [
+            "entity_kind",
+            "entity_id",
+            "entity_epoch",
+            "entity_revision",
+            "view"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entity_kind": {
+              "const": "executions"
+            },
+            "entity_id": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_epoch": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_revision": {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            "view": {
+              "$ref": "#/$defs/snapshot__ExecutionSnapshotView"
+            }
+          },
+          "required": [
+            "entity_kind",
+            "entity_id",
+            "entity_epoch",
+            "entity_revision",
+            "view"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entity_kind": {
+              "const": "schedule_activations"
+            },
+            "entity_id": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_epoch": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_revision": {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            "view": {
+              "$ref": "#/$defs/snapshot__ScheduleActivationSnapshotView"
+            }
+          },
+          "required": [
+            "entity_kind",
+            "entity_id",
+            "entity_epoch",
+            "entity_revision",
+            "view"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entity_kind": {
+              "const": "occurrences"
+            },
+            "entity_id": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_epoch": {
+              "$ref": "#/$defs/snapshot__Id"
+            },
+            "entity_revision": {
+              "$ref": "#/$defs/snapshot__Counter"
+            },
+            "view": {
+              "$ref": "#/$defs/snapshot__OccurrenceSnapshotView"
+            }
+          },
+          "required": [
+            "entity_kind",
+            "entity_id",
+            "entity_epoch",
+            "entity_revision",
+            "view"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "snapshot__Recovery": {
+      "type": "object",
+      "properties": {
+        "operation_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "state": {
+          "enum": [
+            "reserved",
+            "preparing",
+            "ready",
+            "running",
+            "completed",
+            "paused",
+            "indeterminate"
+          ]
+        },
+        "recovery_generation": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "new_execution_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "consumed": {
+          "const": true
+        }
+      },
+      "required": [
+        "operation_ref",
+        "state",
+        "recovery_generation",
+        "new_execution_ref",
+        "consumed"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__RequestLink": {
+      "type": "object",
+      "properties": {
+        "service_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "context_epoch": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "context_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "principal_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "idempotency_key": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "operation": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "issuer_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "issuer_epoch": {
+          "$ref": "#/$defs/snapshot__Id"
+        }
+      },
+      "required": [
+        "service_id",
+        "context_epoch",
+        "context_id",
+        "principal_id",
+        "idempotency_key",
+        "operation",
+        "issuer_id",
+        "issuer_epoch"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__RunSnapshotView": {
+      "type": "object",
+      "properties": {
+        "definition_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "business_state_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "arm_generation": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "lifecycle": {
+          "enum": [
+            "disarmed",
+            "armed",
+            "running",
+            "paused",
+            "completed"
+          ]
+        },
+        "execution_summary": {
+          "enum": [
+            "pending",
+            "succeeded",
+            "completed_with_failures",
+            "failed",
+            "unknown",
+            "blocked"
+          ]
+        },
+        "active_execution_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pause_reasons": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__Id"
+          },
+          "maxItems": 64
+        },
+        "authorization_state": {
+          "enum": [
+            "valid",
+            "pending",
+            "revoked",
+            "expired",
+            "unavailable"
+          ]
+        },
+        "recovery": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__Recovery"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "definition_ref",
+        "business_state_ref",
+        "arm_generation",
+        "lifecycle",
+        "execution_summary",
+        "active_execution_ref",
+        "pause_reasons",
+        "authorization_state",
+        "recovery"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__ScheduleActivationSnapshotView": {
+      "type": "object",
+      "properties": {
+        "schedule_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "active_version_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "activation_revision": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "calendar_profile_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "committed_at": {
+          "$ref": "#/$defs/snapshot__Timestamp"
+        },
+        "qualification_state": {
+          "enum": [
+            "eligible",
+            "blocked",
+            "unavailable"
+          ]
+        }
+      },
+      "required": [
+        "schedule_id",
+        "active_version_ref",
+        "activation_revision",
+        "calendar_profile_ref",
+        "committed_at",
+        "qualification_state"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__SchemaRef": {
+      "type": "object",
+      "properties": {
+        "schema_id": {
+          "type": "string",
+          "maxLength": 256,
+          "minLength": 1
+        },
+        "definition": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "schema_digest": {
+          "$ref": "#/$defs/snapshot__Digest"
+        }
+      },
+      "required": [
+        "schema_id",
+        "definition",
+        "schema_digest"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__SourceEvent": {
+      "type": "object",
+      "properties": {
+        "source_key": {
+          "$ref": "#/$defs/snapshot__SourceKey"
+        },
+        "event_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "source_sequence": {
+          "$ref": "#/$defs/snapshot__PositiveCounter"
+        },
+        "trigger_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "capability_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "occurred_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__Timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "observed_at": {
+          "$ref": "#/$defs/snapshot__Timestamp"
+        },
+        "origin_digest": {
+          "$ref": "#/$defs/snapshot__Digest"
+        },
+        "age_evidence_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "payload": {
+          "$ref": "#/$defs/snapshot__QualifiedValue"
+        }
+      },
+      "required": [
+        "source_key",
+        "event_id",
+        "source_sequence",
+        "trigger_id",
+        "capability_version",
+        "occurred_at",
+        "observed_at",
+        "origin_digest",
+        "age_evidence_ref",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__SourceKey": {
+      "type": "object",
+      "properties": {
+        "authority_service_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "database_instance_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "registration_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "source_stream_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "source_epoch": {
+          "$ref": "#/$defs/snapshot__Id"
+        }
+      },
+      "required": [
+        "authority_service_id",
+        "database_instance_id",
+        "registration_id",
+        "source_stream_id",
+        "source_epoch"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__SourceSnapshotView": {
+      "type": "object",
+      "properties": {
+        "source_key": {
+          "$ref": "#/$defs/snapshot__SourceKey"
+        },
+        "binding_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "state": {
+          "enum": [
+            "baseline_required",
+            "synchronized",
+            "desynchronized",
+            "quarantined",
+            "closed"
+          ]
+        },
+        "contiguous_sequence": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "highest_seen_sequence": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "baseline_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__Gap"
+          },
+          "maxItems": 64
+        }
+      },
+      "required": [
+        "source_key",
+        "binding_ref",
+        "state",
+        "contiguous_sequence",
+        "highest_seen_sequence",
+        "baseline_ref",
+        "gaps"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__Step": {
+      "type": "object",
+      "properties": {
+        "step_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "running",
+            "succeeded",
+            "failed",
+            "unknown",
+            "blocked",
+            "cancelled"
+          ]
+        },
+        "command_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__ObjectRef"
+          },
+          "maxItems": 256
+        }
+      },
+      "required": [
+        "step_id",
+        "required",
+        "state",
+        "command_ref",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__Timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "maxLength": 40
+    },
+    "snapshot__Transfer": {
+      "type": "object",
+      "properties": {
+        "transfer_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "from_principal_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "target_principal_id": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "expected_control_epoch": {
+          "$ref": "#/$defs/snapshot__Id"
+        },
+        "expected_effective_version": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "expires_at": {
+          "$ref": "#/$defs/snapshot__Timestamp"
+        },
+        "state": {
+          "enum": [
+            "offered",
+            "accepted",
+            "expired",
+            "cancelled"
+          ]
+        },
+        "accept_operation_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "transfer_ref",
+        "from_principal_id",
+        "target_principal_id",
+        "expected_control_epoch",
+        "expected_effective_version",
+        "expires_at",
+        "state",
+        "accept_operation_ref"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot__Watermark": {
+      "type": "object",
+      "properties": {
+        "source_key": {
+          "$ref": "#/$defs/snapshot__SourceKey"
+        },
+        "binding_ref": {
+          "$ref": "#/$defs/snapshot__ObjectRef"
+        },
+        "baseline_sequence": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "source_state_revision": {
+          "$ref": "#/$defs/snapshot__Counter"
+        },
+        "baseline_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/snapshot__ObjectRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "gap_summary": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot__Gap"
+          },
+          "maxItems": 64
+        }
+      },
+      "required": [
+        "source_key",
+        "binding_ref",
+        "baseline_sequence",
+        "source_state_revision",
+        "baseline_ref",
+        "gap_summary"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

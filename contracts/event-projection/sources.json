@@ -1,0 +1,21 @@
+{
+  "format": "event-projection-source/1",
+  "approved": false,
+  "suite_repository": "https://github.com/LeafSeamer/leafseamer-suite",
+  "suite_commit": "21dd0175abaf503f2ff8c348e3c7a5d0c40722c7",
+  "source_files": {
+    "snapshot.schema.json": {
+      "path": "docs/contracts/c05-snapshot/snapshot.schema.json",
+      "sha256": "6bce843a50d6a3f7a2d03ccad3e92c8b24bc0fea8de845efad0e749dd1e10ad8"
+    },
+    "snapshot-cases.json": {
+      "path": "docs/contracts/c05-snapshot/cases.json",
+      "sha256": "9f8df61ca7c7b6b069b5cecda694099961cb53d57fa61a808f0d1a0e983d2f46"
+    }
+  },
+  "sdk_commit": "c37256500c43092b145feebd026e273c5a2667f4",
+  "inputs": {
+    "contracts/negotiation/preview/models.schema.json": "35563cf6eeb9f914aa73b6edc97ec61fb557e039b784b28b6824d8bfb75403ed",
+    "contracts/composition/compose.py": "a23b0ecf89824956a8194e8ecead8208ef7507bebb7e5d8d2bdd3f99b0c9eeb7"
+  }
+}

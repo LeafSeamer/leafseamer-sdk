@@ -1,0 +1,58 @@
+{
+  "format": "command-snapshot-projection/1",
+  "approved": false,
+  "source_model": "command__CommandRecord",
+  "target_model": "snapshot__CommandSnapshotView",
+  "direct_fields": [
+    "initial_command_ref",
+    "request_identity",
+    "target",
+    "origin",
+    "accepted_at",
+    "control_binding",
+    "state_ref",
+    "cancellation"
+  ],
+  "state_fields": [
+    "command_id",
+    "scope",
+    "revision",
+    "phase",
+    "outcome",
+    "effect_status",
+    "resource_status",
+    "automation_continuation",
+    "reason_code",
+    "terminal_revision",
+    "resolution_ref"
+  ],
+  "count_fields": {
+    "completion_evidence_refs": "completion_evidence_count",
+    "resource_evidence_refs": "resource_evidence_count",
+    "attempt_ids": "attempt_count"
+  },
+  "derived_source_fields": [
+    "command_id",
+    "scope",
+    "revision",
+    "record_digest",
+    "state",
+    "completion"
+  ],
+  "omitted_source_fields": [
+    "actor",
+    "attempts",
+    "automation_binding",
+    "dispatch",
+    "evidence_index",
+    "policy",
+    "run_binding"
+  ],
+  "permission": "command.read",
+  "evidence_body_permission": "command.evidence.read",
+  "ordinary_status_permission_sufficient": false,
+  "reference_grants_access": false,
+  "applied_to_http": false,
+  "applied_to_ws": false,
+  "runtime_ready": false
+}
