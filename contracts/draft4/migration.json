@@ -1,0 +1,60 @@
+{
+  "format": "leafseamer-sdk-source-migration/1",
+  "source_repository": "https://github.com/LeafSeamer/leafseamer-suite",
+  "source_commit": "5a2847524316a80cf5d6e2e663d91854d4d15675",
+  "source_license_path": "LICENSE",
+  "source_license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+  "files": [
+    {
+      "path": "contracts/draft4/assemble_candidate.py",
+      "source_path": "docs/contracts/df01-source/assemble_candidate.py",
+      "sha256": "a468830ddb3f86e5b98dd69fc876eb8631b6cbf2aee134dd3f73691038471573"
+    },
+    {
+      "path": "contracts/draft4/source/fixtures.json",
+      "source_path": "docs/contracts/df01-source/source/fixtures.json",
+      "sha256": "8f08c2bf8fca80db323b3a5017e8d950a3a97f9611127bf08e1088a7f4d20f1c"
+    },
+    {
+      "path": "contracts/draft4/source/http/controller.operations.json",
+      "source_path": "docs/contracts/df01-source/source/http/controller.operations.json",
+      "sha256": "603e6f3555fd19e76761bbb0dbe808dbd880036dbe119b11f3f98c2009eb72cb"
+    },
+    {
+      "path": "contracts/draft4/source/http/seamer.operations.json",
+      "source_path": "docs/contracts/df01-source/source/http/seamer.operations.json",
+      "sha256": "3840cca04f99c00942897a42b08293db8727d93c0c1151d10ff339376a188136"
+    },
+    {
+      "path": "contracts/draft4/source/ipc.schema.json",
+      "source_path": "docs/contracts/df01-source/source/ipc.schema.json",
+      "sha256": "d5c420feb718f0051f4b693e2cb12a1159f8a01bba29e38352255622b18d2705"
+    },
+    {
+      "path": "contracts/draft4/source/public.schema.json",
+      "source_path": "docs/contracts/df01-source/source/public.schema.json",
+      "sha256": "b4ba39a5a060864cb194f34cf59231481afe76bbaff2a3ea88c76b642f501c18"
+    },
+    {
+      "path": "contracts/draft4/source/route-projection.json",
+      "source_path": "docs/contracts/df01-source/source/route-projection.json",
+      "sha256": "c2502e277535ec3d03e737328997559b8dc7a8ce7f10555ff8b3bd4c0c4dd221"
+    },
+    {
+      "path": "contracts/draft4/source/schema-registry.json",
+      "source_path": "docs/contracts/df01-source/source/schema-registry.json",
+      "sha256": "2cf3310a339b47e5285f35dc75fd0bc2bb58098dca295dee23746e56478e67bc"
+    },
+    {
+      "path": "contracts/draft4/source/source-manifest.json",
+      "source_path": "docs/contracts/df01-source/source/source-manifest.json",
+      "sha256": "fdeb4f6f8c34ad612cc454ecf857dbca39d9d5483504f241d75b6b16efb83351"
+    }
+  ],
+  "derived_checker_source": {
+    "path": "docs/contracts/df01-source/check_candidate.py",
+    "sha256": "f4f8d96723ef8c458ecd6dfc0bdfbe17610dd270e7ba361e76e55277375b467f"
+  },
+  "protocol_changed": false,
+  "production_sdk": false
+}
