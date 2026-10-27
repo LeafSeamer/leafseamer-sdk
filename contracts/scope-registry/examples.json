@@ -1,0 +1,306 @@
+{
+  "profile": {
+    "format_version": "scope-registry/0.1.0-draft.1",
+    "authority_service_id": "controller",
+    "database_instance_id": "database",
+    "entity_epoch": "epoch",
+    "revision": "1",
+    "kind": "projection_profile",
+    "entity_id": "profile",
+    "authority_role": "controller",
+    "selection": {
+      "contract_id": "synthetic.registry.candidate",
+      "contract_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "owner_kinds": [
+      "human",
+      "service"
+    ],
+    "purposes": [
+      "status_projection",
+      "canonical_trigger"
+    ],
+    "graph_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a",
+    "maximum_records": 64,
+    "collections": [
+      {
+        "entity_kind": "commands",
+        "permission": "command.read",
+        "view_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__CommandSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "relation_policies": [
+          "required_in_scope",
+          "authorized_reference"
+        ],
+        "history_policies": [
+          "current_and_unresolved",
+          "bounded_history_and_unresolved"
+        ]
+      },
+      {
+        "entity_kind": "sources",
+        "permission": "status.read",
+        "view_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__SourceSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "relation_policies": [
+          "required_in_scope",
+          "authorized_reference"
+        ],
+        "history_policies": [
+          "current",
+          "current_and_unresolved",
+          "bounded_history_and_unresolved"
+        ]
+      }
+    ]
+  },
+  "selectors": [
+    {
+      "format_version": "scope-registry/0.1.0-draft.1",
+      "authority_service_id": "controller",
+      "database_instance_id": "database",
+      "entity_epoch": "epoch",
+      "revision": "1",
+      "kind": "selector",
+      "entity_id": "commands_selector",
+      "profile_ref": {
+        "authority_service_id": "controller",
+        "database_instance_id": "database",
+        "entity_kind": "projection_profile",
+        "entity_id": "profile",
+        "entity_epoch": "epoch",
+        "revision": "1",
+        "content_digest": "e847abd3c166febe26126db9a0e7e7c5c190a8e3b9435fecc7a7df262d5cc25c"
+      },
+      "target_collection": "commands",
+      "mode": "entity_set",
+      "entity_ids": [
+        "command"
+      ],
+      "relation_policy": "authorized_reference",
+      "history_policy": "bounded_history_and_unresolved",
+      "window": {
+        "first_cursor": "9007199254740993",
+        "last_cursor": "9007199254740995",
+        "order": "journal_cursor_then_identity"
+      }
+    },
+    {
+      "format_version": "scope-registry/0.1.0-draft.1",
+      "authority_service_id": "controller",
+      "database_instance_id": "database",
+      "entity_epoch": "epoch",
+      "revision": "1",
+      "kind": "selector",
+      "entity_id": "sources_selector",
+      "profile_ref": {
+        "authority_service_id": "controller",
+        "database_instance_id": "database",
+        "entity_kind": "projection_profile",
+        "entity_id": "profile",
+        "entity_epoch": "epoch",
+        "revision": "1",
+        "content_digest": "e847abd3c166febe26126db9a0e7e7c5c190a8e3b9435fecc7a7df262d5cc25c"
+      },
+      "target_collection": "sources",
+      "mode": "entity_set",
+      "entity_ids": [
+        "sources_1"
+      ],
+      "relation_policy": "authorized_reference",
+      "history_policy": "bounded_history_and_unresolved",
+      "window": {
+        "first_cursor": "9007199254740993",
+        "last_cursor": "9007199254740995",
+        "order": "journal_cursor_then_identity"
+      }
+    }
+  ],
+  "scope": {
+    "scope_id": "scope",
+    "scope_revision": "1",
+    "projection_profile_ref": {
+      "authority_service_id": "controller",
+      "database_instance_id": "database",
+      "entity_kind": "projection_profile",
+      "entity_id": "profile",
+      "entity_epoch": "epoch",
+      "revision": "1",
+      "content_digest": "e847abd3c166febe26126db9a0e7e7c5c190a8e3b9435fecc7a7df262d5cc25c"
+    },
+    "collections": [
+      {
+        "entity_kind": "commands",
+        "selector_ref": {
+          "authority_service_id": "controller",
+          "database_instance_id": "database",
+          "entity_kind": "selector",
+          "entity_id": "commands_selector",
+          "entity_epoch": "epoch",
+          "revision": "1",
+          "content_digest": "cda9d5c4f851d36d6c3d85648b9c72a0245cc12f724be8edb9e4fd687407c30f"
+        },
+        "history_policy": "bounded_history_and_unresolved",
+        "relation_policy": "authorized_reference"
+      },
+      {
+        "entity_kind": "sources",
+        "selector_ref": {
+          "authority_service_id": "controller",
+          "database_instance_id": "database",
+          "entity_kind": "selector",
+          "entity_id": "sources_selector",
+          "entity_epoch": "epoch",
+          "revision": "1",
+          "content_digest": "858f7c776478e8873cedd372bcc943275e6a4a43cf564105afd735a11742f7c3"
+        },
+        "history_policy": "bounded_history_and_unresolved",
+        "relation_policy": "authorized_reference"
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "record": {
+        "entity_kind": "commands",
+        "entity_id": "command",
+        "entity_epoch": "command-epoch",
+        "entity_revision": "1",
+        "view": {
+          "initial_command_ref": {
+            "kind": "command",
+            "scope": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database"
+            },
+            "object_id": "command",
+            "revision": "1",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "request_identity": {
+            "key": {
+              "target_scope": {
+                "authority_service_id": "controller",
+                "database_instance_id": "database"
+              },
+              "issuer_id": "issuer",
+              "issuer_epoch": "issuer-epoch",
+              "principal_id": "operator",
+              "request_epoch": "request-epoch",
+              "operation_id": "createCommand",
+              "idempotency_key": "request-key"
+            },
+            "request_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "target": {
+            "device_id": "device",
+            "action_id": "obs.program_scene.set",
+            "capability_version": "1.0.0"
+          },
+          "origin": "manual",
+          "accepted_at": "2026-10-27T00:00:00.000Z",
+          "control_binding": {
+            "epoch": "control",
+            "version": "1"
+          },
+          "state_ref": {
+            "id": "command",
+            "revision": "1",
+            "digest": "sha256:4e9bcbaf320fca4df7ff8fe4bd41cd9c597047525300952d34a8baf1018038e4"
+          },
+          "cancellation": null,
+          "source_record_ref": {
+            "kind": "command",
+            "scope": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database"
+            },
+            "object_id": "command",
+            "revision": "1",
+            "digest": "sha256:ffc616c936260029f21fbd65f236d03e0841cea37e5b89f7aaa7f039abf82746"
+          },
+          "state": {
+            "command_id": "command",
+            "scope": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database"
+            },
+            "revision": "1",
+            "phase": "queued",
+            "outcome": "pending",
+            "effect_status": "not_sent",
+            "resource_status": "clear",
+            "automation_continuation": "eligible",
+            "reason_code": null,
+            "terminal_revision": null,
+            "resolution_ref": null,
+            "completion_evidence_count": 0,
+            "resource_evidence_count": 0,
+            "attempt_count": 0
+          },
+          "completion": {
+            "required": "effect_verified",
+            "achieved": null,
+            "policy_ref": {
+              "id": "completion-policy",
+              "revision": "1",
+              "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "evidence_count": 0
+          }
+        }
+      },
+      "journal_cursor": "9007199254740994",
+      "current": false,
+      "unresolved": false
+    },
+    {
+      "record": {
+        "entity_kind": "sources",
+        "entity_id": "sources_1",
+        "entity_epoch": "epoch_1",
+        "entity_revision": "1",
+        "view": {
+          "source_key": {
+            "authority_service_id": "controller_1",
+            "database_instance_id": "db_1",
+            "registration_id": "source_reg",
+            "source_stream_id": "source_stream",
+            "source_epoch": "source_epoch"
+          },
+          "binding_ref": {
+            "authority_service_id": "controller_1",
+            "database_instance_id": "db_1",
+            "entity_kind": "source_binding",
+            "entity_id": "evidence_1",
+            "entity_epoch": "epoch_1",
+            "revision": "1",
+            "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "state": "synchronized",
+          "contiguous_sequence": "7",
+          "highest_seen_sequence": "7",
+          "baseline_ref": {
+            "authority_service_id": "controller_1",
+            "database_instance_id": "db_1",
+            "entity_kind": "baseline",
+            "entity_id": "evidence_1",
+            "entity_epoch": "epoch_1",
+            "revision": "1",
+            "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "gaps": []
+        }
+      },
+      "journal_cursor": "9007199254740994",
+      "current": false,
+      "unresolved": false
+    }
+  ]
+}
