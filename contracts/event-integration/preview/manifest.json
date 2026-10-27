@@ -1,0 +1,22 @@
+{
+  "format": "sdk-contract-artifacts/1",
+  "contract_id": "leafseamer.api.v1.events2",
+  "approved": false,
+  "runtime_ready": false,
+  "advertisable": false,
+  "artifact_digest_algorithm": "sha256-bytes",
+  "selection_digest_algorithm": "sha256-jcs-manifest",
+  "artifacts": {
+    "controller.openapi.json": "794b108b73cbc3ca21579888c01a2784a68efc5693bae8f0ba29df3b97174eed",
+    "frames.schema.json": "0a426fa0a42e2480dcba6149907d0ae285e4481b71d4b4665ac0f484f541a79f",
+    "model-map.json": "94b6d6413844bc3bb3f1b23712723eed995f94fdc496466d7f45bce48a8d8289",
+    "models.schema.json": "f1c7a1a2a2ff4dd0834f05a8eb87033c7bb644e673a7b92d1f830f4e8ac1d6b5",
+    "registry-map.json": "c117ca46b24a1b68df13e994d5264ebe57d0c2d780740ce5001c02f8b435708f",
+    "routing.json": "d5893e5ed5fa2672caa4674725facf05ddd8eddc2dcfcd1d73eb3f4925d7c79b",
+    "seamer.openapi.json": "ebf630c970a64b2a897fbc2f3d975d8db158c9c956bffca19f669d0d05bf5bcf",
+    "worker-ipc.schema.json": "9e1956794736e0651f6d9400b88b3682ce92a0daa94fdbf9b3fc480a7e41b329",
+    "worker-messages.json": "91e63d7b62005a880bdffc97fbc42799c58a38f817e93f3616b7ac292346e314",
+    "policy.json": "f66f97eba589a6ddcd60898f07af7b35aec5e3fc0de350e89e2b5b289b1a59fd",
+    "PROTOCOL.md": "c876568e97ca7e6421f5e39d16adea0fe5083b8d237ad920133438e75ec30dc7"
+  }
+}

@@ -1,0 +1,1680 @@
+{
+  "format": "event-integration-routing/1",
+  "approved": false,
+  "operations": [
+    {
+      "authority": "controller",
+      "path": "/api/v1/auth/revocations/{operation_id}",
+      "method": "get",
+      "operation_id": "getRevocation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/capacity",
+      "method": "get",
+      "operation_id": "getCapacity",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/clock",
+      "method": "get",
+      "operation_id": "getClock",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/clock-assessment",
+      "method": "get",
+      "operation_id": "getClockAssessment",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/commands/{command_id}",
+      "method": "get",
+      "operation_id": "getCommand",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/commands/{command_id}/cancellations/{cancellation_id}",
+      "method": "get",
+      "operation_id": "getCommandCancellation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/commands/{command_id}/evidence",
+      "method": "get",
+      "operation_id": "getCommandEvidence",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/commands/{command_id}/evidence/{evidence_id}/revisions/{revision}",
+      "method": "get",
+      "operation_id": "getCommandEvidenceRevision",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/commands/{command_id}/revisions/{revision}",
+      "method": "get",
+      "operation_id": "getCommandRevision",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/control-operations/{operation_id}",
+      "method": "get",
+      "operation_id": "getControlOperation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/devices",
+      "method": "get",
+      "operation_id": "listDevices",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/devices/{device_id}/capabilities",
+      "method": "get",
+      "operation_id": "getCapabilities",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/devices/{device_id}/control",
+      "method": "get",
+      "operation_id": "getControl",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}",
+      "method": "get",
+      "operation_id": "getTransfer",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/devices/{device_id}/scene-catalog",
+      "method": "get",
+      "operation_id": "getSceneCatalog",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/devices/{device_id}/state",
+      "method": "get",
+      "operation_id": "getDeviceState",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/events",
+      "method": "get",
+      "operation_id": "openEvents",
+      "transport": "websocket",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extension-operations/{operation_id}",
+      "method": "get",
+      "operation_id": "getExtensionOperation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extension-slots/{slot_id}",
+      "method": "get",
+      "operation_id": "getExtensionSlot",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extensions/{installation_id}",
+      "method": "get",
+      "operation_id": "getExtensionInstallation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/meta",
+      "method": "get",
+      "operation_id": "getMeta",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-confirmations/{preview_id}",
+      "method": "get",
+      "operation_id": "getPanelConfirmation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-session-operations/{host_operation_id}",
+      "method": "get",
+      "operation_id": "getPanelSessionOperation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}",
+      "method": "get",
+      "operation_id": "getPanelSession",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}/requests/{request_id}",
+      "method": "get",
+      "operation_id": "getPanelRequest",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}",
+      "method": "get",
+      "operation_id": "getPanelSubscription",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/frames",
+      "method": "get",
+      "operation_id": "getPanelProjectionFrames",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/session",
+      "method": "get",
+      "operation_id": "getSession",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/subjects/{subject_id}",
+      "method": "get",
+      "operation_id": "getSubject",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshot",
+      "method": "get",
+      "operation_id": "getSnapshot",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/clock-domain",
+      "method": "get",
+      "operation_id": "getClockDomainDescriptor",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/reference-time/anchors/{id}/{revision}",
+      "method": "get",
+      "operation_id": "getReferenceTimeAnchor",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/reference-time/assessments/{id}/{revision}",
+      "method": "get",
+      "operation_id": "getReferenceTimeAssessment",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/reference-time/bundles/{id}/{revision}",
+      "method": "get",
+      "operation_id": "getReferenceTimeBundle",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/reference-time/profiles/{id}/{revision}",
+      "method": "get",
+      "operation_id": "getReferenceTimeProfile",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/auth/revocations",
+      "method": "post",
+      "operation_id": "revokeAuthorization",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/commands",
+      "method": "post",
+      "operation_id": "submitCommand",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/commands/lookup",
+      "method": "post",
+      "operation_id": "lookupCommandAdmission",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/commands/reject",
+      "method": "post",
+      "operation_id": "rejectCommandAdmission",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/commands/{command_id}/cancel",
+      "method": "post",
+      "operation_id": "cancelCommand",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/commands/{command_id}/cancellations/lookup",
+      "method": "post",
+      "operation_id": "lookupCommandCancellation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/control-requests/lookup",
+      "method": "post",
+      "operation_id": "lookupControlRequest",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/devices/{device_id}/control/acquire",
+      "method": "post",
+      "operation_id": "acquireControl",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/devices/{device_id}/control/release",
+      "method": "post",
+      "operation_id": "releaseControl",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/devices/{device_id}/control/transfers",
+      "method": "post",
+      "operation_id": "offerTransfer",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}/accept",
+      "method": "post",
+      "operation_id": "acceptTransfer",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}/cancel",
+      "method": "post",
+      "operation_id": "cancelTransfer",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extension-operations/lookup",
+      "method": "post",
+      "operation_id": "lookupExtensionRequest",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extension-slots",
+      "method": "post",
+      "operation_id": "createExtensionSlot",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extension-slots/{slot_id}/activate",
+      "method": "post",
+      "operation_id": "activateExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extension-slots/{slot_id}/disable",
+      "method": "post",
+      "operation_id": "disableExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extension-slots/{slot_id}/enable",
+      "method": "post",
+      "operation_id": "enableExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extension-slots/{slot_id}/plan",
+      "method": "post",
+      "operation_id": "planExtensionChange",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extension-slots/{slot_id}/uninstall",
+      "method": "post",
+      "operation_id": "uninstallExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extension-slots/{slot_id}/upgrade",
+      "method": "post",
+      "operation_id": "upgradeExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extensions/stage",
+      "method": "post",
+      "operation_id": "stageExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extensions/{installation_id}/approve",
+      "method": "post",
+      "operation_id": "approveExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extensions/{installation_id}/resolve",
+      "method": "post",
+      "operation_id": "resolveExtensionRoles",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/extensions/{installation_id}/review",
+      "method": "post",
+      "operation_id": "reviewExtensionPermissions",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-confirmations/{preview_id}/cancel",
+      "method": "post",
+      "operation_id": "cancelPanelConfirmation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-confirmations/{preview_id}/commit",
+      "method": "post",
+      "operation_id": "commitPanelConfirmation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions",
+      "method": "post",
+      "operation_id": "createPanelSession",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}/activate",
+      "method": "post",
+      "operation_id": "activatePanelSession",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}/close",
+      "method": "post",
+      "operation_id": "closePanelSession",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}/confirmations",
+      "method": "post",
+      "operation_id": "offerPanelConfirmation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}/handshake",
+      "method": "post",
+      "operation_id": "beginPanelHandshake",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}/prepare-activation",
+      "method": "post",
+      "operation_id": "preparePanelActivation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}/renew",
+      "method": "post",
+      "operation_id": "renewPanelSession",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}/requests",
+      "method": "post",
+      "operation_id": "invokePanelMethod",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions",
+      "method": "post",
+      "operation_id": "createPanelSubscription",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/ack",
+      "method": "post",
+      "operation_id": "acknowledgePanelProjection",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/close",
+      "method": "post",
+      "operation_id": "closePanelSubscription",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/request-contexts",
+      "method": "post",
+      "operation_id": "createRequestContext",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/run-grants/{grant_id}/revoke",
+      "method": "post",
+      "operation_id": "revokeRunGrant",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/subscriptions",
+      "method": "post",
+      "operation_id": "createSubscription",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/ws-tickets",
+      "method": "post",
+      "operation_id": "issueWsTicket",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/auth/bootstrap",
+      "method": "post",
+      "operation_id": "bootstrap",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/auth/service-tokens",
+      "method": "post",
+      "operation_id": "issueToken",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/auth/sessions",
+      "method": "post",
+      "operation_id": "login",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/auth/sessions/refresh",
+      "method": "post",
+      "operation_id": "refreshSession",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/auth/introspect",
+      "method": "post",
+      "operation_id": "introspect",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/automation/continuations",
+      "method": "post",
+      "operation_id": "issueContinuation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/automation/continuations/lookup",
+      "method": "post",
+      "operation_id": "lookupControllerContinuation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/automation/preparations",
+      "method": "post",
+      "operation_id": "prepareAutomation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/automation/preparations/close",
+      "method": "post",
+      "operation_id": "closePreparation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/automation/preparations/lookup",
+      "method": "post",
+      "operation_id": "lookupPreparation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/automation/protections",
+      "method": "post",
+      "operation_id": "protectRunGeneration",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/automation/protections/lookup",
+      "method": "post",
+      "operation_id": "lookupRunProtection",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/capacity/profile",
+      "method": "put",
+      "operation_id": "setCapacity",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/run-grants/{grant_id}",
+      "method": "put",
+      "operation_id": "updateRunGrant",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/.well-known/leafseamer-contracts",
+      "method": "get",
+      "operation_id": "discoverContracts",
+      "transport": "discovery",
+      "source": "base"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/subscriptions/{subscription_id}",
+      "method": "get",
+      "operation_id": "getSubscription",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/subscriptions/{subscription_id}",
+      "method": "delete",
+      "operation_id": "closeSubscription",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/subscriptions/{subscription_id}/connections/{attempt_id}",
+      "method": "get",
+      "operation_id": "getSubscriptionConnection",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshots/{snapshot_id}/pages/{page_index}",
+      "method": "get",
+      "operation_id": "getSnapshotPage",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/subscriptions",
+      "method": "post",
+      "operation_id": "internalCreateSubscription",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/subscriptions/{subscription_id}",
+      "method": "get",
+      "operation_id": "internalGetSubscription",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/subscriptions/{subscription_id}",
+      "method": "delete",
+      "operation_id": "internalCloseSubscription",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/subscriptions/{subscription_id}/connections/{attempt_id}",
+      "method": "get",
+      "operation_id": "internalGetSubscriptionConnection",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/subscriptions/{subscription_id}/snapshot",
+      "method": "get",
+      "operation_id": "internalGetSnapshot",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/subscriptions/{subscription_id}/snapshots/{snapshot_id}/pages/{page_index}",
+      "method": "get",
+      "operation_id": "internalGetSnapshotPage",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/internal/events",
+      "method": "get",
+      "operation_id": "internalOpenEvents",
+      "transport": "websocket",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/auth/revocations/{operation_id}",
+      "method": "get",
+      "operation_id": "getRevocation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/capacity",
+      "method": "get",
+      "operation_id": "getCapacity",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/clock",
+      "method": "get",
+      "operation_id": "getClock",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/clock-assessment",
+      "method": "get",
+      "operation_id": "getClockAssessment",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/definitions/{definition_id}/activation-slot",
+      "method": "get",
+      "operation_id": "getActivationSlot",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/definitions/{definition_id}/draft",
+      "method": "get",
+      "operation_id": "getDraft",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/definitions/{definition_id}/draft",
+      "method": "put",
+      "operation_id": "updateDraft",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/definitions/{definition_id}/proofs/{proof_id}",
+      "method": "get",
+      "operation_id": "getIndependenceProof",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/definitions/{definition_id}/versions/{definition_version}",
+      "method": "get",
+      "operation_id": "getDefinitionVersion",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/definitions/{definition_id}/versions/{definition_version}/artifact",
+      "method": "get",
+      "operation_id": "getPublishedArtifact",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/definitions/{definition_id}/versions/{definition_version}/program",
+      "method": "get",
+      "operation_id": "getCompiledProgram",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/events",
+      "method": "get",
+      "operation_id": "openEvents",
+      "transport": "websocket",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extension-operations/{operation_id}",
+      "method": "get",
+      "operation_id": "getExtensionOperation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extension-slots/{slot_id}",
+      "method": "get",
+      "operation_id": "getExtensionSlot",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extensions/{installation_id}",
+      "method": "get",
+      "operation_id": "getExtensionInstallation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/meta",
+      "method": "get",
+      "operation_id": "getMeta",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-confirmations/{preview_id}",
+      "method": "get",
+      "operation_id": "getPanelConfirmation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-session-operations/{host_operation_id}",
+      "method": "get",
+      "operation_id": "getPanelSessionOperation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}",
+      "method": "get",
+      "operation_id": "getPanelSession",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}/requests/{request_id}",
+      "method": "get",
+      "operation_id": "getPanelRequest",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}",
+      "method": "get",
+      "operation_id": "getPanelSubscription",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/frames",
+      "method": "get",
+      "operation_id": "getPanelProjectionFrames",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/recovery-operations/{operation_id}",
+      "method": "get",
+      "operation_id": "getRecoveryOperation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/run-operations/{operation_id}",
+      "method": "get",
+      "operation_id": "getRunOperation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/runs/{run_id}",
+      "method": "get",
+      "operation_id": "getRun",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/runs/{run_id}/decisions/{decision_id}",
+      "method": "get",
+      "operation_id": "getTriggerDecision",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/runs/{run_id}/executions/{execution_id}",
+      "method": "get",
+      "operation_id": "getExecution",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/session",
+      "method": "get",
+      "operation_id": "getSession",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/subjects/{subject_id}",
+      "method": "get",
+      "operation_id": "getSubject",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshot",
+      "method": "get",
+      "operation_id": "getSnapshot",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/clock-domain",
+      "method": "get",
+      "operation_id": "getClockDomainDescriptor",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/ingress/commits/{commit_id}",
+      "method": "get",
+      "operation_id": "readIngressCommit",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/reference-time/anchors/{id}/{revision}",
+      "method": "get",
+      "operation_id": "getReferenceTimeAnchor",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/reference-time/assessments/{id}/{revision}",
+      "method": "get",
+      "operation_id": "getReferenceTimeAssessment",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/reference-time/bundles/{id}/{revision}",
+      "method": "get",
+      "operation_id": "getReferenceTimeBundle",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/reference-time/profiles/{id}/{revision}",
+      "method": "get",
+      "operation_id": "getReferenceTimeProfile",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/auth/revocations",
+      "method": "post",
+      "operation_id": "revokeAuthorization",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/automation-requests/lookup",
+      "method": "post",
+      "operation_id": "lookupAutomationRequest",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/definitions",
+      "method": "post",
+      "operation_id": "createDefinition",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/definitions/{definition_id}/publish",
+      "method": "post",
+      "operation_id": "publishDefinition",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extension-operations/lookup",
+      "method": "post",
+      "operation_id": "lookupExtensionRequest",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extension-slots",
+      "method": "post",
+      "operation_id": "createExtensionSlot",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extension-slots/{slot_id}/activate",
+      "method": "post",
+      "operation_id": "activateExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extension-slots/{slot_id}/disable",
+      "method": "post",
+      "operation_id": "disableExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extension-slots/{slot_id}/enable",
+      "method": "post",
+      "operation_id": "enableExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extension-slots/{slot_id}/plan",
+      "method": "post",
+      "operation_id": "planExtensionChange",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extension-slots/{slot_id}/uninstall",
+      "method": "post",
+      "operation_id": "uninstallExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extension-slots/{slot_id}/upgrade",
+      "method": "post",
+      "operation_id": "upgradeExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extensions/stage",
+      "method": "post",
+      "operation_id": "stageExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extensions/{installation_id}/approve",
+      "method": "post",
+      "operation_id": "approveExtension",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extensions/{installation_id}/resolve",
+      "method": "post",
+      "operation_id": "resolveExtensionRoles",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/extensions/{installation_id}/review",
+      "method": "post",
+      "operation_id": "reviewExtensionPermissions",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-confirmations/{preview_id}/cancel",
+      "method": "post",
+      "operation_id": "cancelPanelConfirmation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-confirmations/{preview_id}/commit",
+      "method": "post",
+      "operation_id": "commitPanelConfirmation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions",
+      "method": "post",
+      "operation_id": "createPanelSession",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}/activate",
+      "method": "post",
+      "operation_id": "activatePanelSession",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}/close",
+      "method": "post",
+      "operation_id": "closePanelSession",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}/confirmations",
+      "method": "post",
+      "operation_id": "offerPanelConfirmation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}/handshake",
+      "method": "post",
+      "operation_id": "beginPanelHandshake",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}/prepare-activation",
+      "method": "post",
+      "operation_id": "preparePanelActivation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}/renew",
+      "method": "post",
+      "operation_id": "renewPanelSession",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}/requests",
+      "method": "post",
+      "operation_id": "invokePanelMethod",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions",
+      "method": "post",
+      "operation_id": "createPanelSubscription",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/ack",
+      "method": "post",
+      "operation_id": "acknowledgePanelProjection",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/close",
+      "method": "post",
+      "operation_id": "closePanelSubscription",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/providers/{provider_id}/events",
+      "method": "post",
+      "operation_id": "submitProviderEvent",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/providers/{provider_id}/events/lookup",
+      "method": "post",
+      "operation_id": "lookupProviderEvent",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/request-contexts",
+      "method": "post",
+      "operation_id": "createRequestContext",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/runs",
+      "method": "post",
+      "operation_id": "createRun",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/runs/{run_id}/arm",
+      "method": "post",
+      "operation_id": "armRun",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/runs/{run_id}/disarm",
+      "method": "post",
+      "operation_id": "disarmRun",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/runs/{run_id}/pause",
+      "method": "post",
+      "operation_id": "pauseRun",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/runs/{run_id}/preflight",
+      "method": "post",
+      "operation_id": "preflightRun",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/runs/{run_id}/recovery-preview",
+      "method": "post",
+      "operation_id": "previewRecovery",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/runs/{run_id}/resume",
+      "method": "post",
+      "operation_id": "resumeRun",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/runs/{run_id}/retire",
+      "method": "post",
+      "operation_id": "retireRun",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/subscriptions",
+      "method": "post",
+      "operation_id": "createSubscription",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/ws-tickets",
+      "method": "post",
+      "operation_id": "issueWsTicket",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/automation/continuations",
+      "method": "post",
+      "operation_id": "registerContinuation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/automation/continuations/adoptions",
+      "method": "post",
+      "operation_id": "adoptContinuation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/automation/continuations/finish",
+      "method": "post",
+      "operation_id": "finishContinuation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/automation/continuations/lookup",
+      "method": "post",
+      "operation_id": "lookupSeamerContinuation",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/automation/continuations/receipts",
+      "method": "post",
+      "operation_id": "observeContinuationReceipt",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/automation/continuations/withdrawals",
+      "method": "post",
+      "operation_id": "observeContinuationWithdrawal",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/capacity/profile",
+      "method": "put",
+      "operation_id": "setCapacity",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/definitions/{definition_id}/metadata",
+      "method": "put",
+      "operation_id": "updateDefinitionMetadata",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/providers/{provider_id}/catalog",
+      "method": "put",
+      "operation_id": "updateCatalog",
+      "transport": "http",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/.well-known/leafseamer-contracts",
+      "method": "get",
+      "operation_id": "discoverContracts",
+      "transport": "discovery",
+      "source": "base"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/subscriptions/{subscription_id}",
+      "method": "get",
+      "operation_id": "getSubscription",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/subscriptions/{subscription_id}",
+      "method": "delete",
+      "operation_id": "closeSubscription",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/subscriptions/{subscription_id}/connections/{attempt_id}",
+      "method": "get",
+      "operation_id": "getSubscriptionConnection",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshots/{snapshot_id}/pages/{page_index}",
+      "method": "get",
+      "operation_id": "getSnapshotPage",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/subscriptions",
+      "method": "post",
+      "operation_id": "internalCreateSubscription",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/subscriptions/{subscription_id}",
+      "method": "get",
+      "operation_id": "internalGetSubscription",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/subscriptions/{subscription_id}",
+      "method": "delete",
+      "operation_id": "internalCloseSubscription",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/subscriptions/{subscription_id}/connections/{attempt_id}",
+      "method": "get",
+      "operation_id": "internalGetSubscriptionConnection",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/subscriptions/{subscription_id}/snapshot",
+      "method": "get",
+      "operation_id": "internalGetSnapshot",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/subscriptions/{subscription_id}/snapshots/{snapshot_id}/pages/{page_index}",
+      "method": "get",
+      "operation_id": "internalGetSnapshotPage",
+      "transport": "http",
+      "source": "subscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/internal/events",
+      "method": "get",
+      "operation_id": "internalOpenEvents",
+      "transport": "websocket",
+      "source": "subscription"
+    }
+  ],
+  "replacements": [
+    {
+      "authority": "controller",
+      "path": "/api/v1/subscriptions",
+      "method": "post",
+      "old_operation_id": "createSubscription",
+      "old_operation_digest": "sha256:edfd40fe4839979b442ba3215ed48f78cdc5057a2450f9b145f9fdc0cb2a4303",
+      "new_operation_id": "createSubscription"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshot",
+      "method": "get",
+      "old_operation_id": "getSnapshot",
+      "old_operation_digest": "sha256:b60c0dc23adb82023e0e369e806596e4bc6b2e92fdce9d6b5290fea4cf5ecfc9",
+      "new_operation_id": "getSnapshot"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/events",
+      "method": "get",
+      "old_operation_id": "openEvents",
+      "old_operation_digest": "sha256:c8e88cc1974e2292b76376c1fff0a9b1fa91474777c2c4d489c7a880de23ff5f",
+      "new_operation_id": "openEvents"
+    },
+    {
+      "authority": "controller",
+      "path": "/api/v1/ws-tickets",
+      "method": "post",
+      "old_operation_id": "issueWsTicket",
+      "old_operation_digest": "sha256:1192b1ee74401808d1366f0e04cbc64cc02ad9e7fbafc76a1ebfd51d4df82f57",
+      "new_operation_id": "issueWsTicket"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/subscriptions",
+      "method": "post",
+      "old_operation_id": "createSubscription",
+      "old_operation_digest": "sha256:2f855cbccb019c58cb861610591105c1e97fc80029895efa2547b82485fbd4fe",
+      "new_operation_id": "createSubscription"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshot",
+      "method": "get",
+      "old_operation_id": "getSnapshot",
+      "old_operation_digest": "sha256:fb492bf1eb972c829c2167589b97f09e9aeaa8f632fec8408382fe976f7684c5",
+      "new_operation_id": "getSnapshot"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/events",
+      "method": "get",
+      "old_operation_id": "openEvents",
+      "old_operation_digest": "sha256:2f2fdbb7b4c5e1d1ebc3ed394aca398939fc6e6f1a6774a470751068082396c4",
+      "new_operation_id": "openEvents"
+    },
+    {
+      "authority": "seamer",
+      "path": "/api/v1/ws-tickets",
+      "method": "post",
+      "old_operation_id": "issueWsTicket",
+      "old_operation_digest": "sha256:dd796ae177f73c02d8a998082359bd4ad8793afdfea0cea1b591513942e78d65",
+      "new_operation_id": "issueWsTicket"
+    }
+  ]
+}

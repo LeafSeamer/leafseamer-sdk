@@ -1,0 +1,16 @@
+{
+  "format": "event-integration-policy/1",
+  "contract_id": "leafseamer.api.v1.events2",
+  "previous_contract_id": "leafseamer.api.v1.integration1",
+  "approved": false,
+  "runtime_ready": false,
+  "advertisable": false,
+  "negotiation_protocol": "contract-selection/1",
+  "implicit_fallback": false,
+  "automatic_write_retry": false,
+  "worker_wire_changed": false,
+  "selection_is_authorization": false,
+  "subscription_frame_version": "event-channel/0.1.0-draft.1",
+  "snapshot_frame_version": "snapshot-projection/0.2.0-draft.1",
+  "registry_format_version": "scope-registry/0.1.0-draft.1"
+}
