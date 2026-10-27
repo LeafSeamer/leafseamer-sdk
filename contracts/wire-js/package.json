@@ -1,0 +1,11 @@
+{
+  "name": "@leafseamer/reference-wire-json",
+  "version": "0.1.0-draft.1",
+  "private": true,
+  "type": "module",
+  "description": "阶段0的受限JSON解码与原始整数校验参考",
+  "license": "Apache-2.0",
+  "engines": {"node": "24.22.0", "npm": "11.19.1"},
+  "scripts": {"check": "node check.mjs"},
+  "dependencies": {"ajv": "8.20.0", "ajv-formats": "3.0.1"}
+}

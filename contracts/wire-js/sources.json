@@ -1,0 +1,19 @@
+{
+  "format": "wire-js-source/1",
+  "approved": false,
+  "source_commit": "5a0508016e63efc8d4baad9cd4f56c54f7bd5598",
+  "inputs": {
+    "contracts/composition/requirements-validation.txt": "a336de65ce30f3e834980f7ba382b336a92ff98c2189272409b88d55058b7e1b",
+    "contracts/event-integration/preview/models.schema.json": "f1c7a1a2a2ff4dd0834f05a8eb87033c7bb644e673a7b92d1f830f4e8ac1d6b5",
+    "contracts/event-integration/preview/selection.json": "efdd3a57be14c408764b3813a04b12ffd3bee57f0fdd31cbce9daac828fd6340",
+    "contracts/event-integration/report.json": "9c5caf7928aa0daa8e704fc7f8acfb3d1bf34ce5293323d7bffec8e8edf8b2d0",
+    "contracts/wire-json/README.md": "cf53f81edafb2f2d66fe2295b49b329d33ff423368e4a0b5f555a41d165cbb0a",
+    "contracts/wire-json/check.py": "f96b55bcc4d906ed2533a3098800dff457b84e0e32aaa550d369857dc105dcd5",
+    "contracts/wire-json/number-oracle.mjs": "ec5f13e96175e3f7726efc61f8d429359dfbc891cd01fbcb7eecd023106172fc",
+    "contracts/wire-json/report.json": "7d51fc3560d5ebaf9e20218641e69284e853e459e4e05386895321dc6280f911",
+    "contracts/wire-json/source/decoder-design-cases.json": "fd989d837216633721ce9fa7e5fa6ee5c81b5085d0db0bfbbabd578768e26a83",
+    "contracts/wire-json/source/decoder-design.schema.json": "6ce0196e8004e4425a2540c2c4ccd92d9652f7a3aaff5e0ae4eaec24df666d16",
+    "contracts/wire-json/sources.json": "3e3cdb1e258b9d0a0807d1cbf95a59f2807188a318b54193a03eae521a6557a5",
+    "contracts/wire-json/wire.py": "ab9629bb3f0e883296e8aeef53be321ed317275eb40e8eb4dc8cdbab86c395bb"
+  }
+}

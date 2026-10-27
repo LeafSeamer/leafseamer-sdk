@@ -1,0 +1,7852 @@
+{
+  "format": "wire-js-check/1",
+  "all_passed": true,
+  "approved": false,
+  "runtime_ready": false,
+  "cases_passed": 1951,
+  "checks": [
+    {
+      "name": "固定Node",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/composition/requirements-validation.txt",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-integration/preview/models.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-integration/preview/selection.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-integration/report.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/check.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/number-oracle.mjs",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/report.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/source/decoder-design-cases.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/source/decoder-design.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/sources.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/wire.py",
+      "passed": true
+    },
+    {
+      "name": "固定Node制品",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/LICENSE",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/README.md",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/dist/formats.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/dist/formats.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/dist/formats.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/dist/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/dist/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/dist/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/dist/limit.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/dist/limit.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/dist/limit.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/package.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/src/formats.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/src/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv-formats/src/limit.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/.runkit_example.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/LICENSE",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/README.md",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/2019.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/2019.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/2019.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/2020.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/2020.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/2020.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/ajv.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/ajv.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/ajv.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/codegen/code.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/codegen/code.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/codegen/code.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/codegen/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/codegen/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/codegen/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/codegen/scope.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/codegen/scope.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/codegen/scope.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/errors.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/errors.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/errors.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/jtd/parse.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/jtd/parse.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/jtd/parse.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/jtd/serialize.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/jtd/serialize.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/jtd/serialize.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/jtd/types.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/jtd/types.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/jtd/types.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/names.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/names.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/names.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/ref_error.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/ref_error.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/ref_error.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/resolve.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/resolve.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/resolve.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/rules.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/rules.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/rules.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/util.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/util.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/util.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/applicability.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/applicability.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/applicability.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/boolSchema.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/boolSchema.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/boolSchema.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/dataType.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/dataType.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/dataType.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/defaults.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/defaults.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/defaults.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/keyword.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/keyword.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/keyword.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/subschema.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/subschema.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/compile/validate/subschema.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/core.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/core.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/core.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/jtd.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/jtd.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/jtd.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/data.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2019-09/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2019-09/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2019-09/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2019-09/meta/applicator.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2019-09/meta/content.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2019-09/meta/core.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2019-09/meta/format.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2019-09/meta/meta-data.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2019-09/meta/validation.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2019-09/schema.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2020-12/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2020-12/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2020-12/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2020-12/meta/applicator.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2020-12/meta/content.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2020-12/meta/core.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2020-12/meta/format-annotation.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2020-12/meta/meta-data.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2020-12/meta/unevaluated.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2020-12/meta/validation.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-2020-12/schema.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-draft-06.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-draft-07.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/json-schema-secure.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/jtd-schema.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/jtd-schema.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/refs/jtd-schema.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/equal.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/equal.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/equal.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/parseJson.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/parseJson.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/parseJson.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/quote.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/quote.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/quote.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/re2.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/re2.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/re2.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/timestamp.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/timestamp.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/timestamp.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/ucs2length.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/ucs2length.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/ucs2length.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/uri.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/uri.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/uri.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/validation_error.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/validation_error.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/runtime/validation_error.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/standalone/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/standalone/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/standalone/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/standalone/instance.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/standalone/instance.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/standalone/instance.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/types/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/types/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/types/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/types/json-schema.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/types/json-schema.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/types/json-schema.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/types/jtd-schema.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/types/jtd-schema.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/types/jtd-schema.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/additionalItems.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/additionalItems.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/additionalItems.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/additionalProperties.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/additionalProperties.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/additionalProperties.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/allOf.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/allOf.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/allOf.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/anyOf.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/anyOf.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/anyOf.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/contains.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/contains.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/contains.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/dependencies.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/dependencies.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/dependencies.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/dependentSchemas.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/dependentSchemas.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/dependentSchemas.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/if.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/if.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/if.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/items.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/items.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/items.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/items2020.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/items2020.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/items2020.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/not.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/not.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/not.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/oneOf.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/oneOf.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/oneOf.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/patternProperties.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/patternProperties.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/patternProperties.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/prefixItems.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/prefixItems.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/prefixItems.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/properties.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/properties.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/properties.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/propertyNames.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/propertyNames.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/propertyNames.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/thenElse.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/thenElse.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/applicator/thenElse.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/code.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/code.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/code.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/core/id.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/core/id.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/core/id.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/core/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/core/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/core/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/core/ref.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/core/ref.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/core/ref.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/discriminator/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/discriminator/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/discriminator/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/discriminator/types.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/discriminator/types.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/discriminator/types.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/draft2020.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/draft2020.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/draft2020.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/draft7.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/draft7.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/draft7.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/dynamicAnchor.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/dynamicAnchor.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/dynamicAnchor.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/dynamicRef.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/dynamicRef.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/dynamicRef.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/recursiveAnchor.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/recursiveAnchor.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/recursiveAnchor.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/recursiveRef.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/recursiveRef.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/dynamic/recursiveRef.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/errors.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/errors.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/errors.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/format/format.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/format/format.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/format/format.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/format/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/format/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/format/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/discriminator.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/discriminator.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/discriminator.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/elements.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/elements.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/elements.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/enum.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/enum.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/enum.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/error.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/error.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/error.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/metadata.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/metadata.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/metadata.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/nullable.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/nullable.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/nullable.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/optionalProperties.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/optionalProperties.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/optionalProperties.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/properties.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/properties.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/properties.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/ref.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/ref.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/ref.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/type.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/type.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/type.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/union.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/union.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/union.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/values.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/values.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/jtd/values.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/metadata.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/metadata.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/metadata.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/next.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/next.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/next.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/unevaluated/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/unevaluated/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/unevaluated/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/unevaluated/unevaluatedItems.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/unevaluated/unevaluatedItems.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/unevaluated/unevaluatedItems.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/unevaluated/unevaluatedProperties.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/unevaluated/unevaluatedProperties.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/unevaluated/unevaluatedProperties.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/const.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/const.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/const.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/dependentRequired.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/dependentRequired.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/dependentRequired.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/enum.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/enum.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/enum.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/index.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitContains.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitContains.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitContains.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitItems.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitItems.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitItems.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitLength.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitLength.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitLength.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitNumber.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitNumber.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitNumber.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitProperties.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitProperties.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/limitProperties.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/multipleOf.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/multipleOf.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/multipleOf.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/pattern.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/pattern.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/pattern.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/required.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/required.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/required.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/uniqueItems.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/uniqueItems.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/dist/vocabularies/validation/uniqueItems.js.map",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/2019.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/2020.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/ajv.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/codegen/code.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/codegen/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/codegen/scope.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/errors.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/jtd/parse.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/jtd/serialize.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/jtd/types.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/names.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/ref_error.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/resolve.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/rules.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/util.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/validate/applicability.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/validate/boolSchema.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/validate/dataType.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/validate/defaults.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/validate/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/validate/keyword.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/compile/validate/subschema.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/core.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/jtd.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/data.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2019-09/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2019-09/meta/applicator.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2019-09/meta/content.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2019-09/meta/core.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2019-09/meta/format.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2019-09/meta/meta-data.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2019-09/meta/validation.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2019-09/schema.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2020-12/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2020-12/meta/applicator.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2020-12/meta/content.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2020-12/meta/core.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2020-12/meta/format-annotation.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2020-12/meta/meta-data.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2020-12/meta/unevaluated.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2020-12/meta/validation.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-2020-12/schema.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-draft-06.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-draft-07.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/json-schema-secure.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/refs/jtd-schema.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/runtime/equal.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/runtime/parseJson.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/runtime/quote.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/runtime/re2.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/runtime/timestamp.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/runtime/ucs2length.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/runtime/uri.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/runtime/validation_error.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/standalone/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/standalone/instance.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/types/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/types/json-schema.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/types/jtd-schema.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/additionalItems.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/additionalProperties.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/allOf.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/anyOf.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/contains.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/dependencies.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/dependentSchemas.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/if.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/items.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/items2020.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/not.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/oneOf.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/patternProperties.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/prefixItems.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/properties.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/propertyNames.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/applicator/thenElse.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/code.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/core/id.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/core/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/core/ref.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/discriminator/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/discriminator/types.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/draft2020.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/draft7.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/dynamic/dynamicAnchor.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/dynamic/dynamicRef.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/dynamic/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/dynamic/recursiveAnchor.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/dynamic/recursiveRef.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/errors.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/format/format.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/format/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/jtd/discriminator.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/jtd/elements.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/jtd/enum.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/jtd/error.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/jtd/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/jtd/metadata.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/jtd/nullable.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/jtd/optionalProperties.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/jtd/properties.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/jtd/ref.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/jtd/type.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/jtd/union.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/jtd/values.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/metadata.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/next.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/unevaluated/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/unevaluated/unevaluatedItems.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/unevaluated/unevaluatedProperties.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/validation/const.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/validation/dependentRequired.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/validation/enum.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/validation/index.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/validation/limitContains.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/validation/limitItems.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/validation/limitLength.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/validation/limitNumber.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/validation/limitProperties.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/validation/multipleOf.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/validation/pattern.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/validation/required.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/lib/vocabularies/validation/uniqueItems.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:ajv/package.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-deep-equal/LICENSE",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-deep-equal/README.md",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-deep-equal/es6/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-deep-equal/es6/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-deep-equal/es6/react.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-deep-equal/es6/react.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-deep-equal/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-deep-equal/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-deep-equal/package.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-deep-equal/react.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-deep-equal/react.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/.gitattributes",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/.github/dependabot.yml",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/.github/workflows/ci.yml",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/.github/workflows/lock-threads.yml",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/.github/workflows/package-manager-ci.yml",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/.github/workflows/release.yml",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/LICENSE",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/README.md",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/benchmark/benchmark.mjs",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/benchmark/equal.mjs",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/benchmark/non-simple-domain.mjs",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/benchmark/package.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/benchmark/string-array-to-hex-stripped.mjs",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/benchmark/ws-is-secure.mjs",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/eslint.config.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/lib/schemes.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/lib/utils.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/package.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/ajv.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/component-safe-serialization.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/equal.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/fixtures/uri-js-parse.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/fixtures/uri-js-serialize.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/host-delimiter-security.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/ipv6-canonical.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/ipv6-validation.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/malformed-percent.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/malformed-urn.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/parse.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/query-fragment-normalization.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/relative-normalization-security.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/reserved-path-normalization.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/resolve.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/rfc-3986.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/scheme-validation.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/security-normalization.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/security.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/serialize.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/uri-js-compatibility.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/uri-js.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/urn-full-input.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/util.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/test/websocket-query-preservation.test.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/tsconfig.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/types/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:fast-uri/types/index.test-d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:json-schema-traverse/.eslintrc.yml",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:json-schema-traverse/.github/FUNDING.yml",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:json-schema-traverse/.github/workflows/build.yml",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:json-schema-traverse/.github/workflows/publish.yml",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:json-schema-traverse/LICENSE",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:json-schema-traverse/README.md",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:json-schema-traverse/index.d.ts",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:json-schema-traverse/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:json-schema-traverse/package.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:json-schema-traverse/spec/.eslintrc.yml",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:json-schema-traverse/spec/fixtures/schema.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:json-schema-traverse/spec/index.spec.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:require-from-string/index.js",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:require-from-string/license",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:require-from-string/package.json",
+      "passed": true
+    },
+    {
+      "name": "已安装依赖:require-from-string/readme.md",
+      "passed": true
+    },
+    {
+      "name": "固定锁摘要",
+      "passed": true
+    },
+    {
+      "name": "候选预算保持",
+      "passed": true
+    },
+    {
+      "name": "DW01",
+      "passed": true
+    },
+    {
+      "name": "DW01错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW02",
+      "passed": true
+    },
+    {
+      "name": "DW03",
+      "passed": true
+    },
+    {
+      "name": "DW03错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW04",
+      "passed": true
+    },
+    {
+      "name": "DW04错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW05",
+      "passed": true
+    },
+    {
+      "name": "DW05错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW06",
+      "passed": true
+    },
+    {
+      "name": "DW07",
+      "passed": true
+    },
+    {
+      "name": "DW07错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW08",
+      "passed": true
+    },
+    {
+      "name": "DW09",
+      "passed": true
+    },
+    {
+      "name": "DW09错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW10",
+      "passed": true
+    },
+    {
+      "name": "DW10错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW11",
+      "passed": true
+    },
+    {
+      "name": "DW12",
+      "passed": true
+    },
+    {
+      "name": "DW12错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW13",
+      "passed": true
+    },
+    {
+      "name": "DW14",
+      "passed": true
+    },
+    {
+      "name": "DW14错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW15",
+      "passed": true
+    },
+    {
+      "name": "DW16",
+      "passed": true
+    },
+    {
+      "name": "DW17",
+      "passed": true
+    },
+    {
+      "name": "DW17错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW18",
+      "passed": true
+    },
+    {
+      "name": "DW18错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW19",
+      "passed": true
+    },
+    {
+      "name": "DW20",
+      "passed": true
+    },
+    {
+      "name": "DW20错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW21",
+      "passed": true
+    },
+    {
+      "name": "DW21错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW22",
+      "passed": true
+    },
+    {
+      "name": "DW23",
+      "passed": true
+    },
+    {
+      "name": "DW23错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW24",
+      "passed": true
+    },
+    {
+      "name": "DW24错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW25",
+      "passed": true
+    },
+    {
+      "name": "DW25错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW26",
+      "passed": true
+    },
+    {
+      "name": "DW27",
+      "passed": true
+    },
+    {
+      "name": "DW28",
+      "passed": true
+    },
+    {
+      "name": "DW28错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW29",
+      "passed": true
+    },
+    {
+      "name": "DW29错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DW30",
+      "passed": true
+    },
+    {
+      "name": "message等号接受",
+      "passed": true
+    },
+    {
+      "name": "message超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "message超一拒绝错误白名单",
+      "passed": true
+    },
+    {
+      "name": "depth等号接受",
+      "passed": true
+    },
+    {
+      "name": "depth超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "depth超一拒绝错误白名单",
+      "passed": true
+    },
+    {
+      "name": "nodes等号接受",
+      "passed": true
+    },
+    {
+      "name": "nodes超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "nodes超一拒绝错误白名单",
+      "passed": true
+    },
+    {
+      "name": "members等号接受",
+      "passed": true
+    },
+    {
+      "name": "members超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "members超一拒绝错误白名单",
+      "passed": true
+    },
+    {
+      "name": "key等号接受",
+      "passed": true
+    },
+    {
+      "name": "key超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "key超一拒绝错误白名单",
+      "passed": true
+    },
+    {
+      "name": "string等号接受",
+      "passed": true
+    },
+    {
+      "name": "string超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "string超一拒绝错误白名单",
+      "passed": true
+    },
+    {
+      "name": "number等号接受",
+      "passed": true
+    },
+    {
+      "name": "number超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "number超一拒绝错误白名单",
+      "passed": true
+    },
+    {
+      "name": "exponent等号接受",
+      "passed": true
+    },
+    {
+      "name": "exponent超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "exponent超一拒绝错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_message_bytes非法预算0",
+      "passed": true
+    },
+    {
+      "name": "max_message_bytes非法预算0错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_message_bytes非法预算true",
+      "passed": true
+    },
+    {
+      "name": "max_message_bytes非法预算true错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_message_bytes非法预算Infinity",
+      "passed": true
+    },
+    {
+      "name": "max_message_bytes非法预算Infinity错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_message_bytes非法预算null",
+      "passed": true
+    },
+    {
+      "name": "max_message_bytes非法预算null错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_depth非法预算0",
+      "passed": true
+    },
+    {
+      "name": "max_depth非法预算0错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_depth非法预算true",
+      "passed": true
+    },
+    {
+      "name": "max_depth非法预算true错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_depth非法预算Infinity",
+      "passed": true
+    },
+    {
+      "name": "max_depth非法预算Infinity错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_depth非法预算null",
+      "passed": true
+    },
+    {
+      "name": "max_depth非法预算null错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_value_nodes非法预算0",
+      "passed": true
+    },
+    {
+      "name": "max_value_nodes非法预算0错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_value_nodes非法预算true",
+      "passed": true
+    },
+    {
+      "name": "max_value_nodes非法预算true错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_value_nodes非法预算Infinity",
+      "passed": true
+    },
+    {
+      "name": "max_value_nodes非法预算Infinity错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_value_nodes非法预算null",
+      "passed": true
+    },
+    {
+      "name": "max_value_nodes非法预算null错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_object_members非法预算0",
+      "passed": true
+    },
+    {
+      "name": "max_object_members非法预算0错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_object_members非法预算true",
+      "passed": true
+    },
+    {
+      "name": "max_object_members非法预算true错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_object_members非法预算Infinity",
+      "passed": true
+    },
+    {
+      "name": "max_object_members非法预算Infinity错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_object_members非法预算null",
+      "passed": true
+    },
+    {
+      "name": "max_object_members非法预算null错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_key_utf8_bytes非法预算0",
+      "passed": true
+    },
+    {
+      "name": "max_key_utf8_bytes非法预算0错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_key_utf8_bytes非法预算true",
+      "passed": true
+    },
+    {
+      "name": "max_key_utf8_bytes非法预算true错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_key_utf8_bytes非法预算Infinity",
+      "passed": true
+    },
+    {
+      "name": "max_key_utf8_bytes非法预算Infinity错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_key_utf8_bytes非法预算null",
+      "passed": true
+    },
+    {
+      "name": "max_key_utf8_bytes非法预算null错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_string_utf8_bytes非法预算0",
+      "passed": true
+    },
+    {
+      "name": "max_string_utf8_bytes非法预算0错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_string_utf8_bytes非法预算true",
+      "passed": true
+    },
+    {
+      "name": "max_string_utf8_bytes非法预算true错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_string_utf8_bytes非法预算Infinity",
+      "passed": true
+    },
+    {
+      "name": "max_string_utf8_bytes非法预算Infinity错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_string_utf8_bytes非法预算null",
+      "passed": true
+    },
+    {
+      "name": "max_string_utf8_bytes非法预算null错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_number_chars非法预算0",
+      "passed": true
+    },
+    {
+      "name": "max_number_chars非法预算0错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_number_chars非法预算true",
+      "passed": true
+    },
+    {
+      "name": "max_number_chars非法预算true错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_number_chars非法预算Infinity",
+      "passed": true
+    },
+    {
+      "name": "max_number_chars非法预算Infinity错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_number_chars非法预算null",
+      "passed": true
+    },
+    {
+      "name": "max_number_chars非法预算null错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_exponent_abs非法预算0",
+      "passed": true
+    },
+    {
+      "name": "max_exponent_abs非法预算0错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_exponent_abs非法预算true",
+      "passed": true
+    },
+    {
+      "name": "max_exponent_abs非法预算true错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_exponent_abs非法预算Infinity",
+      "passed": true
+    },
+    {
+      "name": "max_exponent_abs非法预算Infinity错误白名单",
+      "passed": true
+    },
+    {
+      "name": "max_exponent_abs非法预算null",
+      "passed": true
+    },
+    {
+      "name": "max_exponent_abs非法预算null错误白名单",
+      "passed": true
+    },
+    {
+      "name": "slice_units非法预算0",
+      "passed": true
+    },
+    {
+      "name": "slice_units非法预算0错误白名单",
+      "passed": true
+    },
+    {
+      "name": "slice_units非法预算true",
+      "passed": true
+    },
+    {
+      "name": "slice_units非法预算true错误白名单",
+      "passed": true
+    },
+    {
+      "name": "slice_units非法预算Infinity",
+      "passed": true
+    },
+    {
+      "name": "slice_units非法预算Infinity错误白名单",
+      "passed": true
+    },
+    {
+      "name": "slice_units非法预算null",
+      "passed": true
+    },
+    {
+      "name": "slice_units非法预算null错误白名单",
+      "passed": true
+    },
+    {
+      "name": "parse_deadline_ms非法预算0",
+      "passed": true
+    },
+    {
+      "name": "parse_deadline_ms非法预算0错误白名单",
+      "passed": true
+    },
+    {
+      "name": "parse_deadline_ms非法预算true",
+      "passed": true
+    },
+    {
+      "name": "parse_deadline_ms非法预算true错误白名单",
+      "passed": true
+    },
+    {
+      "name": "parse_deadline_ms非法预算Infinity",
+      "passed": true
+    },
+    {
+      "name": "parse_deadline_ms非法预算Infinity错误白名单",
+      "passed": true
+    },
+    {
+      "name": "parse_deadline_ms非法预算null",
+      "passed": true
+    },
+    {
+      "name": "parse_deadline_ms非法预算null错误白名单",
+      "passed": true
+    },
+    {
+      "name": "__proto__约束迁移",
+      "passed": true
+    },
+    {
+      "name": "__proto__不绕过整数",
+      "passed": true
+    },
+    {
+      "name": "__proto__不绕过整数错误白名单",
+      "passed": true
+    },
+    {
+      "name": "__proto__原pattern仍约束",
+      "passed": true
+    },
+    {
+      "name": "__proto__原pattern仍约束错误白名单",
+      "passed": true
+    },
+    {
+      "name": "__proto__同时满足两约束",
+      "passed": true
+    },
+    {
+      "name": "原pattern迁移身份",
+      "passed": true
+    },
+    {
+      "name": "原properties迁移身份",
+      "passed": true
+    },
+    {
+      "name": "无原型污染",
+      "passed": true
+    },
+    {
+      "name": "特殊键保留",
+      "passed": true
+    },
+    {
+      "name": "递归冻结",
+      "passed": true
+    },
+    {
+      "name": "只读拒改",
+      "passed": true
+    },
+    {
+      "name": "UTF8区间/é",
+      "passed": true
+    },
+    {
+      "name": "UTF8区间/a~1b/~0x",
+      "passed": true
+    },
+    {
+      "name": "Pointer转义",
+      "passed": true
+    },
+    {
+      "name": "空键路径",
+      "passed": true
+    },
+    {
+      "name": "EOF",
+      "passed": true
+    },
+    {
+      "name": "EOF错误白名单",
+      "passed": true
+    },
+    {
+      "name": "EOF字节末尾",
+      "passed": true
+    },
+    {
+      "name": "SharedArrayBuffer拒绝",
+      "passed": true
+    },
+    {
+      "name": "SharedArrayBuffer拒绝错误白名单",
+      "passed": true
+    },
+    {
+      "name": "跨realm共享缓冲拒绝",
+      "passed": true
+    },
+    {
+      "name": "跨realm共享缓冲拒绝错误白名单",
+      "passed": true
+    },
+    {
+      "name": "DataView拒绝",
+      "passed": true
+    },
+    {
+      "name": "DataView拒绝错误白名单",
+      "passed": true
+    },
+    {
+      "name": "Proxy视图拒绝",
+      "passed": true
+    },
+    {
+      "name": "Proxy视图拒绝错误白名单",
+      "passed": true
+    },
+    {
+      "name": "输入已变",
+      "passed": true
+    },
+    {
+      "name": "首await前私有副本",
+      "passed": true
+    },
+    {
+      "name": "入口取消",
+      "passed": true
+    },
+    {
+      "name": "入口取消错误白名单",
+      "passed": true
+    },
+    {
+      "name": "让出执行后取消",
+      "passed": true
+    },
+    {
+      "name": "让出执行后取消错误白名单",
+      "passed": true
+    },
+    {
+      "name": "实际yield两次",
+      "passed": true
+    },
+    {
+      "name": "期限等号",
+      "passed": true
+    },
+    {
+      "name": "期限等号错误白名单",
+      "passed": true
+    },
+    {
+      "name": "时钟倒退",
+      "passed": true
+    },
+    {
+      "name": "时钟倒退错误白名单",
+      "passed": true
+    },
+    {
+      "name": "yield超时不可受理",
+      "passed": true
+    },
+    {
+      "name": "yield超时不可受理错误白名单",
+      "passed": true
+    },
+    {
+      "name": "外部引用",
+      "passed": true
+    },
+    {
+      "name": "外部引用错误白名单",
+      "passed": true
+    },
+    {
+      "name": "未知引用",
+      "passed": true
+    },
+    {
+      "name": "未知引用错误白名单",
+      "passed": true
+    },
+    {
+      "name": "保留关键字",
+      "passed": true
+    },
+    {
+      "name": "保留关键字错误白名单",
+      "passed": true
+    },
+    {
+      "name": "同名type属性Schema保留",
+      "passed": true
+    },
+    {
+      "name": "源Schema不改",
+      "passed": true
+    },
+    {
+      "name": "数据integer不作类型",
+      "passed": true
+    },
+    {
+      "name": "错误脱敏",
+      "passed": true
+    },
+    {
+      "name": "错误脱敏错误白名单",
+      "passed": true
+    },
+    {
+      "name": "错误不反射秘密",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW01",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW01",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW01",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW02",
+      "passed": true
+    },
+    {
+      "name": "Python值:DW02",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:DW02",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW03",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW03",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW04",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW04",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW04",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW05",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW05",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW05",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW06",
+      "passed": true
+    },
+    {
+      "name": "Python值:DW06",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:DW06",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW07",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW07",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW07",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW08",
+      "passed": true
+    },
+    {
+      "name": "Python值:DW08",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:DW08",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW09",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW09",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW09",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW10",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW10",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW10",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW11",
+      "passed": true
+    },
+    {
+      "name": "Python值:DW11",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:DW11",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW12",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW12",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW12",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW13",
+      "passed": true
+    },
+    {
+      "name": "Python值:DW13",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:DW13",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW14",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW14",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW14",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW15",
+      "passed": true
+    },
+    {
+      "name": "Python值:DW15",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:DW15",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW16",
+      "passed": true
+    },
+    {
+      "name": "Python值:DW16",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:DW16",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW17",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW17",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW17",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW18",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW18",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW18",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW19",
+      "passed": true
+    },
+    {
+      "name": "Python值:DW19",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:DW19",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW20",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW20",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW20",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW21",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW21",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW22",
+      "passed": true
+    },
+    {
+      "name": "Python值:DW22",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:DW22",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW23",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW23",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW23",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW24",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW24",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW24",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW25",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW25",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW25",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW26",
+      "passed": true
+    },
+    {
+      "name": "Python值:DW26",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:DW26",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW27",
+      "passed": true
+    },
+    {
+      "name": "Python值:DW27",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:DW27",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW28",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW28",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW28",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW29",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:DW29",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:DW29",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:DW30",
+      "passed": true
+    },
+    {
+      "name": "Python值:DW30",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:DW30",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax0",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax1",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax1",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax1",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax2",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax2",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax2",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax3",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax3",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax3",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax4",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax4",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax4",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax5",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax5",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax5",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax6",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax6",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax6",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax7",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax7",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax7",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax8",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax8",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax8",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax9",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax9",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax9",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax10",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax10",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax10",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax11",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax11",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax11",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax12",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax12",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax12",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax13",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax13",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax13",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax14",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax14",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax14",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax15",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax15",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax15",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax16",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax16",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax16",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax17",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax17",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax17",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:syntax18",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:syntax18",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:syntax18",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:scalar0",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:scalar0",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:scalar0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:scalar1",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:scalar1",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:scalar1",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:scalar2",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:scalar2",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:scalar2",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:scalar3",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:scalar3",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:scalar3",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:scalar4",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:scalar4",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:scalar4",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:scalar5",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:scalar5",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:scalar5",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:utf822eda08022",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:utf822eda08022",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:utf822f490808022",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:utf822f490808022",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:utf8228022",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:utf8228022",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:utf822e28222",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:utf822e28222",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:message0       ",
+      "passed": true
+    },
+    {
+      "name": "Python值:message0       ",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:message0       ",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:message0        ",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:message0        ",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:depth[[]]",
+      "passed": true
+    },
+    {
+      "name": "Python值:depth[[]]",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:depth[[]]",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:depth[[[]]]",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:depth[[[]]]",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:depth[[[]]]",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:nodes[1,2]",
+      "passed": true
+    },
+    {
+      "name": "Python值:nodes[1,2]",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:nodes[1,2]",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:nodes[1,2,3]",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:nodes[1,2,3]",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:nodes[1,2,3]",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:members{\"x\":1}",
+      "passed": true
+    },
+    {
+      "name": "Python值:members{\"x\":1}",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:members{\"x\":1}",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:members{\"x\":1,\"y\":2}",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:members{\"x\":1,\"y\":2}",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:members{\"x\":1,\"y\":2}",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:key{\"é\":1}",
+      "passed": true
+    },
+    {
+      "name": "Python值:key{\"é\":1}",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:key{\"é\":1}",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:key{\"中\":1}",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:key{\"中\":1}",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:key{\"中\":1}",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:string\"😀\"",
+      "passed": true
+    },
+    {
+      "name": "Python值:string\"😀\"",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:string\"😀\"",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:string\"😀x\"",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:string\"😀x\"",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:string\"😀x\"",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:number123",
+      "passed": true
+    },
+    {
+      "name": "Python值:number123",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:number123",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:number1234",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:number1234",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:number1234",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:exponent1e3",
+      "passed": true
+    },
+    {
+      "name": "Python值:exponent1e3",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:exponent1e3",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:exponent1e4",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:exponent1e4",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:exponent1e4",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch01.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:branch01.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:branch01.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch01.0",
+      "passed": true
+    },
+    {
+      "name": "Python值:branch01.0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:branch01.0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch09007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:branch09007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:branch09007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch11.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python值:branch11.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:branch11.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch11.0",
+      "passed": true
+    },
+    {
+      "name": "Python值:branch11.0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:branch11.0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch19007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python值:branch19007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:branch19007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch21.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python值:branch21.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:branch21.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch21.0",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:branch21.0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch29007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python值:branch29007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:branch29007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch31.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:branch31.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:branch31.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch31.0",
+      "passed": true
+    },
+    {
+      "name": "Python值:branch31.0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:branch31.0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch39007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:branch39007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:branch39007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch41.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python值:branch41.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:branch41.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch41.0",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:branch41.0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch49007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python值:branch49007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:branch49007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch51.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python值:branch51.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:branch51.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch51.0",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:branch51.0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch59007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python值:branch59007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:branch59007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch61.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:branch61.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:branch61.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch61.0",
+      "passed": true
+    },
+    {
+      "name": "Python值:branch61.0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:branch61.0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch69007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:branch69007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:branch69007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch71.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:branch71.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:branch71.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch71.0",
+      "passed": true
+    },
+    {
+      "name": "Python值:branch71.0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:branch71.0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:branch79007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:branch79007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:branch79007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber0",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger0",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericinteger0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericinteger0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber-0",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber-0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber-0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger-0",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericinteger-0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericinteger-0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber1",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber1",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber1",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger1",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericinteger1",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericinteger1",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber1.0",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber1.0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber1.0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger1.0",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericinteger1.0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericinteger1.0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber1e0",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber1e0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber1e0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger1e0",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericinteger1e0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericinteger1e0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber1.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber1.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber1.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger1.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericinteger1.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericinteger1.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericinteger9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericinteger9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber9007199254740992",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber9007199254740992",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber9007199254740992",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger9007199254740992",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericinteger9007199254740992",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericinteger9007199254740992",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber9007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber9007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber9007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger9007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericinteger9007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericinteger9007199254740993",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber-9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber-9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber-9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger-9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericinteger-9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericinteger-9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber1e20",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber1e20",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber1e20",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger1e20",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericinteger1e20",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericinteger1e20",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber1e-400",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericnumber1e-400",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericnumber1e-400",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger1e-400",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericinteger1e-400",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericinteger1e-400",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber0e-400",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber0e-400",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber0e-400",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger0e-400",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericinteger0e-400",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericinteger0e-400",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber1e309",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericnumber1e309",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericnumber1e309",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger1e309",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericinteger1e309",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericinteger1e309",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber5e-324",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber5e-324",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber5e-324",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger5e-324",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericinteger5e-324",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericinteger5e-324",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber2.2250738585072014e-308",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber2.2250738585072014e-308",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber2.2250738585072014e-308",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger2.2250738585072014e-308",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericinteger2.2250738585072014e-308",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericinteger2.2250738585072014e-308",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber1.7976931348623157e308",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber1.7976931348623157e308",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber1.7976931348623157e308",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger1.7976931348623157e308",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericinteger1.7976931348623157e308",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericinteger1.7976931348623157e308",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber123000e-3",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber123000e-3",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber123000e-3",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger123000e-3",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericinteger123000e-3",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericinteger123000e-3",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber10e-1",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber10e-1",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber10e-1",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger10e-1",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericinteger10e-1",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericinteger10e-1",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber1001e-3",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber1001e-3",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber1001e-3",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger1001e-3",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericinteger1001e-3",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericinteger1001e-3",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python值:numericnumber0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:numericnumber0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericinteger0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericinteger0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber1e4096",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericnumber1e4096",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericnumber1e4096",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger1e4096",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericinteger1e4096",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericinteger1e4096",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericnumber11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111.1",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericnumber11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111.1",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericnumber11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111.1",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:numericinteger11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111.1",
+      "passed": true
+    },
+    {
+      "name": "Python拒绝码:numericinteger11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111.1",
+      "passed": true
+    },
+    {
+      "name": "Python字节偏移:numericinteger11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111.1",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated0",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated0",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated0",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated1",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated1",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated1",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated2",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated2",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated2",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated3",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated3",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated3",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated4",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated4",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated4",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated5",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated5",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated5",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated6",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated6",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated6",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated7",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated7",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated7",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated8",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated8",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated8",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated9",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated9",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated9",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated10",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated10",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated10",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated11",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated11",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated11",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated12",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated12",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated12",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated13",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated13",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated13",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated14",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated14",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated14",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated15",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated15",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated15",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated16",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated16",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated16",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated17",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated17",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated17",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated18",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated18",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated18",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated19",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated19",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated19",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated20",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated20",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated20",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated21",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated21",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated21",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated22",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated22",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated22",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated23",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated23",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated23",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated24",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated24",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated24",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated25",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated25",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated25",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated26",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated26",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated26",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated27",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated27",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated27",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated28",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated28",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated28",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated29",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated29",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated29",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated30",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated30",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated30",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated31",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated31",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated31",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated32",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated32",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated32",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated33",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated33",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated33",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated34",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated34",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated34",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated35",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated35",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated35",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated36",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated36",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated36",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated37",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated37",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated37",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated38",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated38",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated38",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated39",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated39",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated39",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated40",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated40",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated40",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated41",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated41",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated41",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated42",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated42",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated42",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated43",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated43",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated43",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated44",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated44",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated44",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated45",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated45",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated45",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated46",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated46",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated46",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated47",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated47",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated47",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated48",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated48",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated48",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated49",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated49",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated49",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated50",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated50",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated50",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated51",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated51",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated51",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated52",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated52",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated52",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated53",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated53",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated53",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated54",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated54",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated54",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated55",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated55",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated55",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated56",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated56",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated56",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated57",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated57",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated57",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated58",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated58",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated58",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated59",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated59",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated59",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated60",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated60",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated60",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated61",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated61",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated61",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated62",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated62",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated62",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated63",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated63",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated63",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated64",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated64",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated64",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated65",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated65",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated65",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated66",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated66",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated66",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated67",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated67",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated67",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated68",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated68",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated68",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated69",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated69",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated69",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated70",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated70",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated70",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated71",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated71",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated71",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated72",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated72",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated72",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated73",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated73",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated73",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated74",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated74",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated74",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated75",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated75",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated75",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated76",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated76",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated76",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated77",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated77",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated77",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated78",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated78",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated78",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated79",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated79",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated79",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated80",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated80",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated80",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated81",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated81",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated81",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated82",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated82",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated82",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated83",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated83",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated83",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated84",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated84",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated84",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated85",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated85",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated85",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated86",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated86",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated86",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated87",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated87",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated87",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated88",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated88",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated88",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated89",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated89",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated89",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated90",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated90",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated90",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated91",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated91",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated91",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated92",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated92",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated92",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated93",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated93",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated93",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated94",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated94",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated94",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated95",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated95",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated95",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated96",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated96",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated96",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated97",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated97",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated97",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated98",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated98",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated98",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated99",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated99",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated99",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated100",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated100",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated100",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated101",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated101",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated101",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated102",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated102",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated102",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated103",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated103",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated103",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated104",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated104",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated104",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated105",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated105",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated105",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated106",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated106",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated106",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated107",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated107",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated107",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated108",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated108",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated108",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated109",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated109",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated109",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated110",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated110",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated110",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated111",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated111",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated111",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated112",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated112",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated112",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated113",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated113",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated113",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated114",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated114",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated114",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated115",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated115",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated115",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated116",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated116",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated116",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated117",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated117",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated117",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated118",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated118",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated118",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated119",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated119",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated119",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated120",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated120",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated120",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated121",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated121",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated121",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated122",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated122",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated122",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated123",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated123",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated123",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated124",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated124",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated124",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated125",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated125",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated125",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated126",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated126",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated126",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated127",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated127",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated127",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated128",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated128",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated128",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated129",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated129",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated129",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated130",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated130",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated130",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated131",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated131",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated131",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated132",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated132",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated132",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated133",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated133",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated133",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated134",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated134",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated134",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated135",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated135",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated135",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated136",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated136",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated136",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated137",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated137",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated137",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated138",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated138",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated138",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated139",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated139",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated139",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated140",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated140",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated140",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated141",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated141",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated141",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated142",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated142",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated142",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated143",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated143",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated143",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated144",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated144",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated144",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated145",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated145",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated145",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated146",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated146",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated146",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated147",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated147",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated147",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated148",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated148",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated148",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated149",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated149",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated149",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated150",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated150",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated150",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated151",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated151",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated151",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated152",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated152",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated152",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated153",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated153",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated153",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated154",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated154",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated154",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated155",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated155",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated155",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated156",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated156",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated156",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated157",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated157",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated157",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated158",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated158",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated158",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated159",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated159",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated159",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated160",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated160",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated160",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated161",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated161",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated161",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated162",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated162",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated162",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated163",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated163",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated163",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated164",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated164",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated164",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated165",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated165",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated165",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated166",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated166",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated166",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated167",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated167",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated167",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated168",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated168",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated168",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated169",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated169",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated169",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated170",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated170",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated170",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated171",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated171",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated171",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated172",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated172",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated172",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated173",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated173",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated173",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated174",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated174",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated174",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated175",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated175",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated175",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated176",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated176",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated176",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated177",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated177",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated177",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated178",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated178",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated178",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated179",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated179",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated179",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated180",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated180",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated180",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated181",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated181",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated181",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated182",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated182",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated182",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated183",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated183",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated183",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated184",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated184",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated184",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated185",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated185",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated185",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated186",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated186",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated186",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated187",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated187",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated187",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated188",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated188",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated188",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated189",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated189",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated189",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated190",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated190",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated190",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated191",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated191",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated191",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated192",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated192",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated192",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated193",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated193",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated193",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated194",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated194",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated194",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated195",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated195",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated195",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated196",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated196",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated196",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated197",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated197",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated197",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated198",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated198",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated198",
+      "passed": true
+    },
+    {
+      "name": "Python接受集:generated199",
+      "passed": true
+    },
+    {
+      "name": "Python值:generated199",
+      "passed": true
+    },
+    {
+      "name": "Python原始token:generated199",
+      "passed": true
+    },
+    {
+      "name": "64次异步上下文隔离",
+      "passed": true
+    },
+    {
+      "name": "完整图整数节点",
+      "passed": true
+    },
+    {
+      "name": "完整图拒绝舍入",
+      "passed": true
+    },
+    {
+      "name": "完整图拒绝舍入错误白名单",
+      "passed": true
+    },
+    {
+      "name": "完整图拒绝越界",
+      "passed": true
+    },
+    {
+      "name": "完整图拒绝越界错误白名单",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__AdmissionDecision/properties/retry_after_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__AuthorizationSnapshot/properties/fresh_for_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/barrier_intents/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/command_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/device_command_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/devices/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/evidence_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/frame_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/gui_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/gui_events/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/http_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/ipc_normal_slots/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/ipc_protection_slots/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/json_depth/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/login_burst/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/login_per_minute/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/max_reserved_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/max_wal_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/min_disk_free_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/protection_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/request_burst/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/requests_per_second/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/source_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/source_events/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/workers/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/capacity/properties/writer_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/clock/properties/drift_bound_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/clock/properties/max_sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/clock/properties/max_uncertainty_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/identity/properties/access_token_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/identity/properties/bootstrap_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/identity/properties/gate_lease_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/identity/properties/gate_renew_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/identity/properties/local_revoke_alarm_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/identity/properties/pairing_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/identity/properties/recent_auth_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/identity/properties/refresh_idle_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/identity/properties/remote_revoke_alarm_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/identity/properties/session_absolute_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/identity/properties/snapshot_fresh_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/identity/properties/snapshot_refresh_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/identity/properties/ws_ticket_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/retention/properties/audit_days/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/retention/properties/context_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityProfile/properties/retention/properties/terminal_detail_days/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityStatus/properties/usage/items/properties/limit/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__CapacityStatus/properties/usage/items/properties/used/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockAssessment/allOf/0/then/properties/sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockAssessment/allOf/0/then/properties/uncertainty_now_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockAssessment/allOf/0/then/properties/utc_lower_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockAssessment/allOf/0/then/properties/utc_upper_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockAssessment/properties/sample_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockAssessment/properties/uncertainty_now_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockAssessment/properties/utc_lower_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockAssessment/properties/utc_upper_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockSample/allOf/0/then/properties/uncertainty_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockSample/properties/drift_bound_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockSample/properties/estimated_utc_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockSample/properties/max_sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockSample/properties/uncertainty_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockStatus/allOf/0/then/properties/sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ClockStatus/properties/sample_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__EventAgeProof/allOf/0/else/properties/lower_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__EventAgeProof/allOf/0/else/properties/upper_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__EventAgeProof/properties/lower_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__EventAgeProof/properties/upper_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__EventReceipt/properties/age_at_admission_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__ObsCompletionBundle/properties/max_query_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__Observation/properties/freshness_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__RequestContext/properties/max_unique_requests/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__RequestContextRequest/properties/max_unique_requests/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__RetryPolicy/properties/backoff_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__RetryPolicy/properties/max_attempts/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__TimeBoundEvidence/allOf/0/then/properties/stratum/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__TimeBoundEvidence/allOf/0/then/properties/uncertainty_at_capture_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__TimeBoundEvidence/properties/drift_bound_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__TimeBoundEvidence/properties/stratum/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__TimeBoundEvidence/properties/uncertainty_at_capture_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__TimeBoundEvidence/properties/wall_read_utc_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__TimeBoundProfile/properties/drift_bound_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__TimeBoundProfile/properties/max_capture_span_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__TimeBoundProfile/properties/max_sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__TimeBoundProfile/properties/max_source_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__TimeBoundProfile/properties/max_uncertainty_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/baseline__TransitionDefinition/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__A__S3_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__EA__EncodingAuthorization/properties/max_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__S0__Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__S11__Exchange/properties/leap/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__S11__Exchange/properties/ntp_mode/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__S11__Exchange/properties/ntp_version/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__S11__Exchange/properties/precision/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__S11__Exchange/properties/response_size/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__S11__Exchange/properties/stratum/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__S11__Profile/properties/elapsed_error_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__S11__Profile/properties/max_packet_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__S11__Request/properties/request_size/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__S8__Packet/properties/byte_length/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__S9__ObsCompletionCandidate/properties/max_query_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__S9__TransportPacket/properties/byte_length/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__V__S0_AttemptView/properties/ordinal/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__V__S1_Policy/properties/max_attempts/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__V__S5_ClockStatus/allOf/0/then/properties/sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__V__S5_ClockStatus/properties/sample_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__V__S5_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/command__V__S5_ObsCompletionBundle/properties/max_query_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/control__OfferRequest/properties/offer_ttl_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/ingress__TransitionEvaluation/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/installation__Artifact_Binding_endpoint/properties/values/items/properties/port/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/installation__Permission_network_endpoint/properties/scope/properties/port/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/lifecycle__Program_CompileDiagnostic/properties/budget/anyOf/0/properties/limit/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/lifecycle__Program_CompileDiagnostic/properties/budget/anyOf/0/properties/observed/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/lifecycle__Program_DelayStep/properties/delay_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/lifecycle__Program_DelayStep/properties/max_lateness_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/lifecycle__Program_Transition/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/lifecycle__TransitionEvaluation/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/panel__Public_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/panel__Public_TransitionDefinition/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/panel__Result_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/panel__Result_SafeInt/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/preparation__S3_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/registry__Profile/properties/maximum_records/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/snapshot__CommandSnapshotView/properties/completion/properties/evidence_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/snapshot__CommandState/allOf/4/then/properties/resource_evidence_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/snapshot__CommandState/properties/attempt_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/snapshot__CommandState/properties/completion_evidence_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/snapshot__CommandState/properties/resource_evidence_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/snapshot__Manifest/properties/page_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/snapshot__Manifest/properties/total_content_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/snapshot__ObservationSnapshotView/properties/freshness_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/snapshot__PageContent/properties/next_page_index/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/snapshot__PageContent/properties/page_index/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/snapshot__PageDescriptor/properties/content_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/snapshot__PageDescriptor/properties/page_index/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/subscription__Result_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/subscription__Result_SafeInt/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/time_internal__S11__Exchange/properties/leap/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/time_internal__S11__Exchange/properties/ntp_mode/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/time_internal__S11__Exchange/properties/ntp_version/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/time_internal__S11__Exchange/properties/precision/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/time_internal__S11__Exchange/properties/response_size/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/time_internal__S11__Exchange/properties/stratum/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/time_internal__S11__Profile/properties/elapsed_error_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/time_internal__S11__Profile/properties/max_packet_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数路径:/$defs/time_internal__S11__Request/properties/request_size/type",
+      "passed": true
+    }
+  ],
+  "cross_language_messages": 345,
+  "generated_json_cases": 200,
+  "async_parallel_decodes": 64,
+  "full_graph_integer_nodes": 146,
+  "node": "v24.22.0",
+  "python": "3.14.0",
+  "dependency_packages": 6,
+  "product_runtime_tests_executed": 0,
+  "browser_tests_executed": 0,
+  "network_tests_executed": 0,
+  "device_tests_executed": 0,
+  "limitations": [
+    "Ajv运行时编译仅用于可信安装阶段，尚无浏览器CSP静态制品",
+    "yield不提供JSON.parse或Schema库调用的硬抢占",
+    "不实现传输重组及授权或业务语义"
+  ],
+  "inputs": {
+    "contracts/composition/requirements-validation.txt": "a336de65ce30f3e834980f7ba382b336a92ff98c2189272409b88d55058b7e1b",
+    "contracts/event-integration/preview/models.schema.json": "f1c7a1a2a2ff4dd0834f05a8eb87033c7bb644e673a7b92d1f830f4e8ac1d6b5",
+    "contracts/event-integration/preview/selection.json": "efdd3a57be14c408764b3813a04b12ffd3bee57f0fdd31cbce9daac828fd6340",
+    "contracts/event-integration/report.json": "9c5caf7928aa0daa8e704fc7f8acfb3d1bf34ce5293323d7bffec8e8edf8b2d0",
+    "contracts/wire-js/README.md": "600e638e7892c3638d0c62e32a1b9fedfb74dac22aeacf895b0db5a5b4e41563",
+    "contracts/wire-js/check.mjs": "231cc42e47a767c580e65e7e0a55380fb67a4e309f96ec3bdc1643bb3efead97",
+    "contracts/wire-js/dependencies.json": "dbcae02770866302233c18e475b263906d64971d76a1ea1f869f65dac7e8d3cc",
+    "contracts/wire-js/oracle.py": "c5d38958bbb29c69eef5b3b5d9d4d78533a0752a41889350e6f072430cf99326",
+    "contracts/wire-js/package-lock.json": "64097c158f67143afbf72ed378f1baffed263a1bb72475ee3be87497ee313f3b",
+    "contracts/wire-js/package.json": "fec7a0f66be113eb9a8229e041a40ab7f7f7462d1a0fd7eb6fe524075d71c85d",
+    "contracts/wire-js/schema.mjs": "6ce4f0ee2057b2af4fc7f8b8a2b8e8aa3addcfb4b3712bfceab34ed8f11c0c79",
+    "contracts/wire-js/sources.json": "24f95b7219a08d2956d94c21019fe937bde608636209cd04001a93af8372a2d0",
+    "contracts/wire-js/wire.mjs": "f433050503f6998fcaca56fda38b7191b0591e672ea107f4c2d7f7b25a7d8acb",
+    "contracts/wire-json/README.md": "cf53f81edafb2f2d66fe2295b49b329d33ff423368e4a0b5f555a41d165cbb0a",
+    "contracts/wire-json/check.py": "f96b55bcc4d906ed2533a3098800dff457b84e0e32aaa550d369857dc105dcd5",
+    "contracts/wire-json/number-oracle.mjs": "ec5f13e96175e3f7726efc61f8d429359dfbc891cd01fbcb7eecd023106172fc",
+    "contracts/wire-json/report.json": "7d51fc3560d5ebaf9e20218641e69284e853e459e4e05386895321dc6280f911",
+    "contracts/wire-json/source/decoder-design-cases.json": "fd989d837216633721ce9fa7e5fa6ee5c81b5085d0db0bfbbabd578768e26a83",
+    "contracts/wire-json/source/decoder-design.schema.json": "6ce0196e8004e4425a2540c2c4ccd92d9652f7a3aaff5e0ae4eaec24df666d16",
+    "contracts/wire-json/sources.json": "3e3cdb1e258b9d0a0807d1cbf95a59f2807188a318b54193a03eae521a6557a5",
+    "contracts/wire-json/wire.py": "ab9629bb3f0e883296e8aeef53be321ed317275eb40e8eb4dc8cdbab86c395bb"
+  }
+}
