@@ -1,0 +1,233 @@
+{
+  "format": "wire-browser-receipt/1",
+  "approved": false,
+  "runtime_ready": false,
+  "artifacts": {
+    "contracts/wire-browser/browser.html": "f12c3b4c2dcd2030357b0826f48a5720dad5c46e3282037545fef80f6bfc8831",
+    "contracts/wire-browser/browser.mjs": "5574abb93af8eef767b7f972e9e97cb6a98fd024d0ae7bf75d8dd3c8a3a57ecd",
+    "contracts/wire-browser/suite.mjs": "0e3a3f58ab0d395e98e95874148d0647d55143b465943420a298971f13b1a736",
+    "contracts/wire-browser/worker.mjs": "33f95019c466443e730b1905ccd90047c8a7719c65ceb29af6642b8eecf489cb",
+    "contracts/wire-browser/preview/runtime-tests.mjs": "3558ffaea77c5dd8b0fe9817b2daada8fd57f4335cfc4156856164659a896c22",
+    "contracts/wire-routing/decoder.mjs": "5cfe8727556867f6d8bb9254cbce40e3ffad84b9ac7dd02a06496aeb30b2e305",
+    "contracts/wire-routing/preview/routes.mjs": "3743f82284d643dd04584f19b4775ca55a4ede754d7549a1751f844ba2d75ca7",
+    "contracts/wire-routing/preview/wire.mjs": "47ee90c6585770cc16a1aee27f7d6fbcfb5cc7b64b46b791ed386443170b1520",
+    "contracts/wire-routing/preview/registry.mjs": "78b560368b47aa97f3ef74157317c8f256b7cdccc7be7ed38f4af198795dc945",
+    "contracts/wire-routing/preview/validators.mjs": "0b7a048b20ff32c33dcb573135aaf32c72420be8e501e19333bbd7e412990e52",
+    "contracts/wire-routing/preview/helpers.mjs": "920ee8279050fe2beae3657a95e98ad7ae5fbe141b8f184dfa217620959253fa",
+    "contracts/wire-routing/preview/inventory.json": "3cb7942adc07b1d51ba7464e97910b98c86b204b6240bf1971eb2a8a8fc0f61c",
+    "contracts/wire-routing/oracle.json": "1b8d659ab49b2eaba0b4341eddeea202e0aab7228d34cb67e61543c4d512c71d",
+    "contracts/event-integration/preview/selection.json": "efdd3a57be14c408764b3813a04b12ffd3bee57f0fdd31cbce9daac828fd6340",
+    "contracts/event-integration/preview/worker-messages.json": "91e63d7b62005a880bdffc97fbc42799c58a38f817e93f3616b7ac292346e314",
+    "contracts/integration/source/frames.json": "0c2a71f978b0dbfd6a756fc3f870c1f3b9c92b3be5df25051ff942419ca28979",
+    "contracts/wire-static/preview/contract-cases.json": "bad10e91dfdcd537c4c3824c2e228110789a70a2575b2e6e99c592b43caab2a6"
+  },
+  "reports": {
+    "plain": {
+      "report": {
+        "all_passed": true,
+        "mode": "plain",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+        "eval_blocked": true,
+        "inline_blocked": true,
+        "csp_violations": [
+          {
+            "directive": "script-src",
+            "blocked_uri": "eval"
+          },
+          {
+            "directive": "script-src-elem",
+            "blocked_uri": "inline"
+          },
+          {
+            "directive": "style-src-elem",
+            "blocked_uri": "inline"
+          }
+        ],
+        "page": {
+          "all_passed": true,
+          "cases_passed": 7767,
+          "operations": 201,
+          "worker_messages": 52,
+          "roots": 281,
+          "json_bindings": 2313,
+          "empty_bindings": 100,
+          "ws_positive_messages": 36,
+          "http_snapshot_positive_messages": 36,
+          "worker_positive_messages": 52,
+          "cross_origin_isolated": false,
+          "shared_array_buffer_available": false,
+          "skipped_shared_buffer_checks": 100,
+          "checks_sha256": "b89b790566610626a0dacf050a14eba588c7c890cefec52b917ab43e16035097",
+          "checks_count": 7767,
+          "checks_all_passed": true
+        },
+        "worker": {
+          "all_passed": true,
+          "result": {
+            "all_passed": true,
+            "cases_passed": 7767,
+            "operations": 201,
+            "worker_messages": 52,
+            "roots": 281,
+            "json_bindings": 2313,
+            "empty_bindings": 100,
+            "ws_positive_messages": 36,
+            "http_snapshot_positive_messages": 36,
+            "worker_positive_messages": 52,
+            "cross_origin_isolated": false,
+            "shared_array_buffer_available": false,
+            "skipped_shared_buffer_checks": 100,
+            "checks_sha256": "b89b790566610626a0dacf050a14eba588c7c890cefec52b917ab43e16035097",
+            "checks_count": 7767,
+            "checks_all_passed": true
+          },
+          "eval_blocked": true,
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36"
+        }
+      },
+      "headers": {
+        "Content-Security-Policy": "default-src 'none'; script-src 'self'; worker-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff"
+      },
+      "requests": [
+        "/browser.html",
+        "/browser.mjs",
+        "/suite.mjs",
+        "/preview/runtime-tests.mjs",
+        "/contracts/wire-routing/decoder.mjs",
+        "/contracts/wire-routing/preview/routes.mjs",
+        "/contracts/wire-routing/preview/wire.mjs",
+        "/contracts/wire-routing/preview/registry.mjs",
+        "/contracts/wire-routing/preview/validators.mjs",
+        "/contracts/wire-routing/preview/helpers.mjs",
+        "/contracts/wire-routing/preview/inventory.json",
+        "/contracts/event-integration/preview/selection.json",
+        "/contracts/event-integration/preview/worker-messages.json",
+        "/contracts/integration/source/frames.json",
+        "/contracts/wire-static/preview/contract-cases.json",
+        "/contracts/wire-routing/oracle.json",
+        "/worker.mjs",
+        "/suite.mjs",
+        "/preview/runtime-tests.mjs",
+        "/contracts/wire-routing/decoder.mjs",
+        "/contracts/wire-routing/preview/routes.mjs",
+        "/contracts/wire-routing/preview/wire.mjs",
+        "/contracts/wire-routing/preview/registry.mjs",
+        "/contracts/wire-routing/preview/validators.mjs",
+        "/contracts/wire-routing/preview/helpers.mjs",
+        "/contracts/wire-routing/preview/inventory.json",
+        "/contracts/event-integration/preview/selection.json",
+        "/contracts/event-integration/preview/worker-messages.json",
+        "/contracts/integration/source/frames.json",
+        "/contracts/wire-static/preview/contract-cases.json",
+        "/contracts/wire-routing/oracle.json"
+      ]
+    },
+    "isolated": {
+      "report": {
+        "all_passed": true,
+        "mode": "isolated",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+        "eval_blocked": true,
+        "inline_blocked": true,
+        "csp_violations": [
+          {
+            "directive": "script-src",
+            "blocked_uri": "eval"
+          },
+          {
+            "directive": "script-src-elem",
+            "blocked_uri": "inline"
+          },
+          {
+            "directive": "style-src-elem",
+            "blocked_uri": "inline"
+          }
+        ],
+        "page": {
+          "all_passed": true,
+          "cases_passed": 7867,
+          "operations": 201,
+          "worker_messages": 52,
+          "roots": 281,
+          "json_bindings": 2313,
+          "empty_bindings": 100,
+          "ws_positive_messages": 36,
+          "http_snapshot_positive_messages": 36,
+          "worker_positive_messages": 52,
+          "cross_origin_isolated": true,
+          "shared_array_buffer_available": true,
+          "skipped_shared_buffer_checks": 0,
+          "checks_sha256": "ea4ef7d7090d5f2c730c6b30a5a46cbbd8a9b51a2d0800b547a339f1cf9bf7d0",
+          "checks_count": 7867,
+          "checks_all_passed": true
+        },
+        "worker": {
+          "all_passed": true,
+          "result": {
+            "all_passed": true,
+            "cases_passed": 7867,
+            "operations": 201,
+            "worker_messages": 52,
+            "roots": 281,
+            "json_bindings": 2313,
+            "empty_bindings": 100,
+            "ws_positive_messages": 36,
+            "http_snapshot_positive_messages": 36,
+            "worker_positive_messages": 52,
+            "cross_origin_isolated": true,
+            "shared_array_buffer_available": true,
+            "skipped_shared_buffer_checks": 0,
+            "checks_sha256": "ea4ef7d7090d5f2c730c6b30a5a46cbbd8a9b51a2d0800b547a339f1cf9bf7d0",
+            "checks_count": 7867,
+            "checks_all_passed": true
+          },
+          "eval_blocked": true,
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36"
+        }
+      },
+      "headers": {
+        "Content-Security-Policy": "default-src 'none'; script-src 'self'; worker-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'",
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+        "Cross-Origin-Opener-Policy": "same-origin",
+        "Cross-Origin-Embedder-Policy": "require-corp",
+        "Cross-Origin-Resource-Policy": "same-origin"
+      },
+      "requests": [
+        "/browser.html",
+        "/browser.mjs",
+        "/suite.mjs",
+        "/preview/runtime-tests.mjs",
+        "/contracts/wire-routing/decoder.mjs",
+        "/contracts/wire-routing/preview/routes.mjs",
+        "/contracts/wire-routing/preview/wire.mjs",
+        "/contracts/wire-routing/preview/registry.mjs",
+        "/contracts/wire-routing/preview/validators.mjs",
+        "/contracts/wire-routing/preview/helpers.mjs",
+        "/contracts/wire-routing/preview/inventory.json",
+        "/contracts/event-integration/preview/selection.json",
+        "/contracts/event-integration/preview/worker-messages.json",
+        "/contracts/integration/source/frames.json",
+        "/contracts/wire-static/preview/contract-cases.json",
+        "/contracts/wire-routing/oracle.json",
+        "/worker.mjs",
+        "/suite.mjs",
+        "/preview/runtime-tests.mjs",
+        "/contracts/wire-routing/decoder.mjs",
+        "/contracts/wire-routing/preview/routes.mjs",
+        "/contracts/wire-routing/preview/wire.mjs",
+        "/contracts/wire-routing/preview/registry.mjs",
+        "/contracts/wire-routing/preview/validators.mjs",
+        "/contracts/wire-routing/preview/helpers.mjs",
+        "/contracts/wire-routing/preview/inventory.json",
+        "/contracts/event-integration/preview/selection.json",
+        "/contracts/event-integration/preview/worker-messages.json",
+        "/contracts/integration/source/frames.json",
+        "/contracts/wire-static/preview/contract-cases.json",
+        "/contracts/wire-routing/oracle.json"
+      ]
+    }
+  }
+}
