@@ -1,0 +1,1397 @@
+{
+  "controller": {
+    "manifest": {
+      "format_version": "snapshot-projection/0.2.0-draft.1",
+      "binding": {
+        "snapshot_id": "snapshot",
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream_epoch",
+        "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "authorization_revision": "1",
+        "projection_profile_ref": {
+          "authority_service_id": "controller",
+          "database_instance_id": "database",
+          "entity_kind": "projection_profile",
+          "entity_id": "profile",
+          "entity_epoch": "epoch",
+          "revision": "1",
+          "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "publisher_domain_ref": {
+          "clock_domain_id": "clock_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "descriptor_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      },
+      "snapshot_cursor": "9007199254740993",
+      "collections": [
+        {
+          "entity_kind": "catalogs",
+          "count": "1",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__CatalogSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "commands",
+          "count": "1",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__CommandSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "controls",
+          "count": "1",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__ControlSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "devices",
+          "count": "1",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__DeviceSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "observations",
+          "count": "1",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__ObservationSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "sources",
+          "count": "1",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__SourceSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        }
+      ],
+      "source_watermarks": [
+        {
+          "source_key": {
+            "authority_service_id": "controller_1",
+            "database_instance_id": "db_1",
+            "registration_id": "source_reg",
+            "source_stream_id": "source_stream",
+            "source_epoch": "source_epoch"
+          },
+          "binding_ref": {
+            "authority_service_id": "controller_1",
+            "database_instance_id": "db_1",
+            "entity_kind": "source_binding",
+            "entity_id": "evidence_1",
+            "entity_epoch": "epoch_1",
+            "revision": "1",
+            "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "baseline_sequence": "7",
+          "source_state_revision": "1",
+          "baseline_ref": {
+            "authority_service_id": "controller_1",
+            "database_instance_id": "db_1",
+            "entity_kind": "baseline",
+            "entity_id": "evidence_1",
+            "entity_epoch": "epoch_1",
+            "revision": "1",
+            "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "gap_summary": []
+        }
+      ],
+      "pages": [
+        {
+          "page_index": 0,
+          "content_bytes": 4514,
+          "content_digest": "45deed365898ac3e6ed0ea3a4c1c80251b619e48094ecae351ca59ec98add65a"
+        },
+        {
+          "page_index": 1,
+          "content_bytes": 3511,
+          "content_digest": "5c327a57195b26d45fe03cba39b1106de62b32c8fd5fe0cdcd11fb072cee2deb"
+        }
+      ],
+      "page_count": 2,
+      "total_content_bytes": 8025,
+      "created_at": "2026-10-27T00:00:00Z",
+      "expires_at": "2026-10-27T00:00:30Z",
+      "manifest_digest": "68ab4f8f6524e76329b89f6a7c325925aa3ea43d0d8027492c38224b989bc189"
+    },
+    "pages": [
+      {
+        "manifest_digest": "68ab4f8f6524e76329b89f6a7c325925aa3ea43d0d8027492c38224b989bc189",
+        "content_digest": "45deed365898ac3e6ed0ea3a4c1c80251b619e48094ecae351ca59ec98add65a",
+        "delivery_binding": {
+          "subscription_id": "subscription",
+          "publisher_service_id": "controller",
+          "publisher_database_instance_id": "database",
+          "stream_id": "stream",
+          "stream_epoch": "stream_epoch",
+          "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "authorization_revision": "1",
+          "connection_generation": "1"
+        },
+        "content": {
+          "format_version": "snapshot-projection/0.2.0-draft.1",
+          "binding": {
+            "snapshot_id": "snapshot",
+            "subscription_id": "subscription",
+            "publisher_service_id": "controller",
+            "publisher_database_instance_id": "database",
+            "stream_id": "stream",
+            "stream_epoch": "stream_epoch",
+            "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "authorization_revision": "1",
+            "projection_profile_ref": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database",
+              "entity_kind": "projection_profile",
+              "entity_id": "profile",
+              "entity_epoch": "epoch",
+              "revision": "1",
+              "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "publisher_domain_ref": {
+              "clock_domain_id": "clock_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+              "descriptor_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+            }
+          },
+          "page_index": 0,
+          "next_page_index": 1,
+          "records": [
+            {
+              "entity_kind": "catalogs",
+              "entity_id": "catalogs_1",
+              "entity_epoch": "epoch_1",
+              "entity_revision": "1",
+              "view": {
+                "device_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "devices",
+                  "entity_id": "devices_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "approval_state": "approved",
+                "capability_revision": "1",
+                "capability_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+                "action_ids": [
+                  "set_scene"
+                ],
+                "trigger_ids": [
+                  "scene_changed"
+                ],
+                "catalog_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "catalog_artifact",
+                  "entity_id": "evidence_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "unavailable_reason": null
+              }
+            },
+            {
+              "entity_kind": "commands",
+              "entity_id": "command",
+              "entity_epoch": "command-epoch",
+              "entity_revision": "1",
+              "view": {
+                "initial_command_ref": {
+                  "kind": "command",
+                  "scope": {
+                    "authority_service_id": "controller",
+                    "database_instance_id": "database"
+                  },
+                  "object_id": "command",
+                  "revision": "1",
+                  "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "request_identity": {
+                  "key": {
+                    "target_scope": {
+                      "authority_service_id": "controller",
+                      "database_instance_id": "database"
+                    },
+                    "issuer_id": "issuer",
+                    "issuer_epoch": "issuer-epoch",
+                    "principal_id": "operator",
+                    "request_epoch": "request-epoch",
+                    "operation_id": "createCommand",
+                    "idempotency_key": "request-key"
+                  },
+                  "request_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "target": {
+                  "device_id": "device",
+                  "action_id": "obs.program_scene.set",
+                  "capability_version": "1.0.0"
+                },
+                "origin": "manual",
+                "accepted_at": "2026-10-27T00:00:00.000Z",
+                "control_binding": {
+                  "epoch": "control",
+                  "version": "1"
+                },
+                "state_ref": {
+                  "id": "command",
+                  "revision": "1",
+                  "digest": "sha256:4e9bcbaf320fca4df7ff8fe4bd41cd9c597047525300952d34a8baf1018038e4"
+                },
+                "cancellation": null,
+                "source_record_ref": {
+                  "kind": "command",
+                  "scope": {
+                    "authority_service_id": "controller",
+                    "database_instance_id": "database"
+                  },
+                  "object_id": "command",
+                  "revision": "1",
+                  "digest": "sha256:ffc616c936260029f21fbd65f236d03e0841cea37e5b89f7aaa7f039abf82746"
+                },
+                "state": {
+                  "command_id": "command",
+                  "scope": {
+                    "authority_service_id": "controller",
+                    "database_instance_id": "database"
+                  },
+                  "revision": "1",
+                  "phase": "queued",
+                  "outcome": "pending",
+                  "effect_status": "not_sent",
+                  "resource_status": "clear",
+                  "automation_continuation": "eligible",
+                  "reason_code": null,
+                  "terminal_revision": null,
+                  "resolution_ref": null,
+                  "completion_evidence_count": 0,
+                  "resource_evidence_count": 0,
+                  "attempt_count": 0
+                },
+                "completion": {
+                  "required": "effect_verified",
+                  "achieved": null,
+                  "policy_ref": {
+                    "id": "completion-policy",
+                    "revision": "1",
+                    "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  },
+                  "evidence_count": 0
+                }
+              }
+            },
+            {
+              "entity_kind": "controls",
+              "entity_id": "controls_1",
+              "entity_epoch": "epoch_1",
+              "entity_revision": "1",
+              "view": {
+                "device_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "devices",
+                  "entity_id": "devices_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "control_epoch": "control_epoch",
+                "effective_version": "1",
+                "effective_holder_id": "human_1",
+                "mode": "manual",
+                "gate_state": "protected",
+                "pending_change": null,
+                "transfers": [],
+                "in_flight_commands": [],
+                "unresolved_commands": [
+                  {
+                    "authority_service_id": "controller_1",
+                    "database_instance_id": "db_1",
+                    "entity_kind": "commands",
+                    "entity_id": "commands_1",
+                    "entity_epoch": "epoch_1",
+                    "revision": "1",
+                    "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "manifest_digest": "68ab4f8f6524e76329b89f6a7c325925aa3ea43d0d8027492c38224b989bc189",
+        "content_digest": "5c327a57195b26d45fe03cba39b1106de62b32c8fd5fe0cdcd11fb072cee2deb",
+        "delivery_binding": {
+          "subscription_id": "subscription",
+          "publisher_service_id": "controller",
+          "publisher_database_instance_id": "database",
+          "stream_id": "stream",
+          "stream_epoch": "stream_epoch",
+          "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "authorization_revision": "1",
+          "connection_generation": "1"
+        },
+        "content": {
+          "format_version": "snapshot-projection/0.2.0-draft.1",
+          "binding": {
+            "snapshot_id": "snapshot",
+            "subscription_id": "subscription",
+            "publisher_service_id": "controller",
+            "publisher_database_instance_id": "database",
+            "stream_id": "stream",
+            "stream_epoch": "stream_epoch",
+            "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "authorization_revision": "1",
+            "projection_profile_ref": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database",
+              "entity_kind": "projection_profile",
+              "entity_id": "profile",
+              "entity_epoch": "epoch",
+              "revision": "1",
+              "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "publisher_domain_ref": {
+              "clock_domain_id": "clock_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+              "descriptor_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+            }
+          },
+          "page_index": 1,
+          "next_page_index": null,
+          "records": [
+            {
+              "entity_kind": "devices",
+              "entity_id": "devices_1",
+              "entity_epoch": "epoch_1",
+              "entity_revision": "1",
+              "view": {
+                "device_kind": "obs",
+                "display_name": "Synthetic device",
+                "model": null,
+                "firmware": null,
+                "connection_state": "ready",
+                "observation_quality": "fresh",
+                "catalog_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "catalogs",
+                  "entity_id": "catalogs_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              }
+            },
+            {
+              "entity_kind": "observations",
+              "entity_id": "observations_1",
+              "entity_epoch": "epoch_1",
+              "entity_revision": "1",
+              "view": {
+                "device_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "devices",
+                  "entity_id": "devices_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "source_key": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "registration_id": "source_reg",
+                  "source_stream_id": "source_stream",
+                  "source_epoch": "source_epoch"
+                },
+                "provider_boot_id": "provider_boot",
+                "device_session_id": "device_session",
+                "observed_at": "2026-10-18T00:00:00Z",
+                "sampling_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "sampling",
+                  "entity_id": "evidence_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "freshness_ms": 10,
+                "quality": "fresh",
+                "integrity": "complete",
+                "values": {
+                  "schema_ref": {
+                    "schema_id": "urn:leafseamer:design:snapshot-projection/0.1.0-draft.1",
+                    "definition": "SyntheticState",
+                    "schema_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                  },
+                  "value": {
+                    "active": true
+                  }
+                }
+              }
+            },
+            {
+              "entity_kind": "sources",
+              "entity_id": "sources_1",
+              "entity_epoch": "epoch_1",
+              "entity_revision": "1",
+              "view": {
+                "source_key": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "registration_id": "source_reg",
+                  "source_stream_id": "source_stream",
+                  "source_epoch": "source_epoch"
+                },
+                "binding_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "source_binding",
+                  "entity_id": "evidence_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "state": "synchronized",
+                "contiguous_sequence": "7",
+                "highest_seen_sequence": "7",
+                "baseline_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "baseline",
+                  "entity_id": "evidence_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "gaps": []
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "expected": {
+      "content_binding": {
+        "snapshot_id": "snapshot",
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream_epoch",
+        "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "authorization_revision": "1",
+        "projection_profile_ref": {
+          "authority_service_id": "controller",
+          "database_instance_id": "database",
+          "entity_kind": "projection_profile",
+          "entity_id": "profile",
+          "entity_epoch": "epoch",
+          "revision": "1",
+          "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "publisher_domain_ref": {
+          "clock_domain_id": "clock_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "descriptor_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      },
+      "delivery_binding": {
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream_epoch",
+        "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "authorization_revision": "1",
+        "connection_generation": "1"
+      },
+      "snapshot_ref": {
+        "snapshot_id": "snapshot",
+        "manifest_digest": "68ab4f8f6524e76329b89f6a7c325925aa3ea43d0d8027492c38224b989bc189",
+        "snapshot_cursor": "9007199254740993"
+      },
+      "schemas": {
+        "devices": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__DeviceSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "catalogs": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__CatalogSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "commands": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__CommandSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "controls": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__ControlSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "observations": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__ObservationSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "sources": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__SourceSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        }
+      },
+      "deadline_tick": 30
+    }
+  },
+  "seamer": {
+    "manifest": {
+      "format_version": "snapshot-projection/0.2.0-draft.1",
+      "binding": {
+        "snapshot_id": "snapshot",
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream_epoch",
+        "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "authorization_revision": "1",
+        "projection_profile_ref": {
+          "authority_service_id": "controller",
+          "database_instance_id": "database",
+          "entity_kind": "projection_profile",
+          "entity_id": "profile",
+          "entity_epoch": "epoch",
+          "revision": "1",
+          "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "publisher_domain_ref": {
+          "clock_domain_id": "clock_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "descriptor_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      },
+      "snapshot_cursor": "9007199254740993",
+      "collections": [
+        {
+          "entity_kind": "business_states",
+          "count": "1",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__BusinessStateSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "definitions",
+          "count": "1",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__DefinitionSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "executions",
+          "count": "1",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__ExecutionSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "occurrences",
+          "count": "1",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__OccurrenceSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "runs",
+          "count": "1",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__RunSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "schedule_activations",
+          "count": "1",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__ScheduleActivationSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "sources",
+          "count": "1",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__SourceSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        }
+      ],
+      "source_watermarks": [
+        {
+          "source_key": {
+            "authority_service_id": "controller_1",
+            "database_instance_id": "db_1",
+            "registration_id": "source_reg",
+            "source_stream_id": "source_stream",
+            "source_epoch": "source_epoch"
+          },
+          "binding_ref": {
+            "authority_service_id": "controller_1",
+            "database_instance_id": "db_1",
+            "entity_kind": "source_binding",
+            "entity_id": "evidence_1",
+            "entity_epoch": "epoch_1",
+            "revision": "1",
+            "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "baseline_sequence": "7",
+          "source_state_revision": "1",
+          "baseline_ref": {
+            "authority_service_id": "controller_1",
+            "database_instance_id": "db_1",
+            "entity_kind": "baseline",
+            "entity_id": "evidence_1",
+            "entity_epoch": "epoch_1",
+            "revision": "1",
+            "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "gap_summary": []
+        }
+      ],
+      "pages": [
+        {
+          "page_index": 0,
+          "content_bytes": 3074,
+          "content_digest": "809df1116a7fc3a7f4017a055808694821651c4790e00d3ebbd702257d2becfb"
+        },
+        {
+          "page_index": 1,
+          "content_bytes": 4104,
+          "content_digest": "ad75e892b399b39e8877fb3cca1a1c4b0e9223cb76c57a57a718792057e9effd"
+        },
+        {
+          "page_index": 2,
+          "content_bytes": 1797,
+          "content_digest": "1caa717545365729bb7ac06f45a5c625789f89ec9f6b054551691ad68c45c937"
+        }
+      ],
+      "page_count": 3,
+      "total_content_bytes": 8975,
+      "created_at": "2026-10-27T00:00:00Z",
+      "expires_at": "2026-10-27T00:00:30Z",
+      "manifest_digest": "fc779295256e4821e85d724ff835d5d33efaf67c64e3d2c04b4f80908cc7b136"
+    },
+    "pages": [
+      {
+        "manifest_digest": "fc779295256e4821e85d724ff835d5d33efaf67c64e3d2c04b4f80908cc7b136",
+        "content_digest": "809df1116a7fc3a7f4017a055808694821651c4790e00d3ebbd702257d2becfb",
+        "delivery_binding": {
+          "subscription_id": "subscription",
+          "publisher_service_id": "controller",
+          "publisher_database_instance_id": "database",
+          "stream_id": "stream",
+          "stream_epoch": "stream_epoch",
+          "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "authorization_revision": "1",
+          "connection_generation": "1"
+        },
+        "content": {
+          "format_version": "snapshot-projection/0.2.0-draft.1",
+          "binding": {
+            "snapshot_id": "snapshot",
+            "subscription_id": "subscription",
+            "publisher_service_id": "controller",
+            "publisher_database_instance_id": "database",
+            "stream_id": "stream",
+            "stream_epoch": "stream_epoch",
+            "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "authorization_revision": "1",
+            "projection_profile_ref": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database",
+              "entity_kind": "projection_profile",
+              "entity_id": "profile",
+              "entity_epoch": "epoch",
+              "revision": "1",
+              "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "publisher_domain_ref": {
+              "clock_domain_id": "clock_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+              "descriptor_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+            }
+          },
+          "page_index": 0,
+          "next_page_index": 1,
+          "records": [
+            {
+              "entity_kind": "business_states",
+              "entity_id": "business_states_1",
+              "entity_epoch": "epoch_1",
+              "entity_revision": "1",
+              "view": {
+                "run_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "runs",
+                  "entity_id": "runs_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "state_id": "state_idle",
+                "last_transition_ref": null,
+                "active_execution_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "executions",
+                  "entity_id": "executions_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              }
+            },
+            {
+              "entity_kind": "definitions",
+              "entity_id": "definitions_1",
+              "entity_epoch": "epoch_1",
+              "entity_revision": "1",
+              "view": {
+                "display_name": "Synthetic definition",
+                "published_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "definition_version",
+                  "entity_id": "evidence_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "draft_revision": null,
+                "activation_state": "active"
+              }
+            },
+            {
+              "entity_kind": "executions",
+              "entity_id": "executions_1",
+              "entity_epoch": "epoch_1",
+              "entity_revision": "1",
+              "view": {
+                "run_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "runs",
+                  "entity_id": "runs_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "plan_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "plan",
+                  "entity_id": "evidence_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "generation": "1",
+                "state": "paused",
+                "steps": [
+                  {
+                    "step_id": "step_1",
+                    "required": true,
+                    "state": "unknown",
+                    "command_ref": {
+                      "authority_service_id": "controller_1",
+                      "database_instance_id": "db_1",
+                      "entity_kind": "commands",
+                      "entity_id": "commands_1",
+                      "entity_epoch": "epoch_1",
+                      "revision": "1",
+                      "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    },
+                    "evidence_refs": []
+                  }
+                ],
+                "source_execution_ref": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "manifest_digest": "fc779295256e4821e85d724ff835d5d33efaf67c64e3d2c04b4f80908cc7b136",
+        "content_digest": "ad75e892b399b39e8877fb3cca1a1c4b0e9223cb76c57a57a718792057e9effd",
+        "delivery_binding": {
+          "subscription_id": "subscription",
+          "publisher_service_id": "controller",
+          "publisher_database_instance_id": "database",
+          "stream_id": "stream",
+          "stream_epoch": "stream_epoch",
+          "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "authorization_revision": "1",
+          "connection_generation": "1"
+        },
+        "content": {
+          "format_version": "snapshot-projection/0.2.0-draft.1",
+          "binding": {
+            "snapshot_id": "snapshot",
+            "subscription_id": "subscription",
+            "publisher_service_id": "controller",
+            "publisher_database_instance_id": "database",
+            "stream_id": "stream",
+            "stream_epoch": "stream_epoch",
+            "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "authorization_revision": "1",
+            "projection_profile_ref": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database",
+              "entity_kind": "projection_profile",
+              "entity_id": "profile",
+              "entity_epoch": "epoch",
+              "revision": "1",
+              "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "publisher_domain_ref": {
+              "clock_domain_id": "clock_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+              "descriptor_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+            }
+          },
+          "page_index": 1,
+          "next_page_index": 2,
+          "records": [
+            {
+              "entity_kind": "occurrences",
+              "entity_id": "occurrences_1",
+              "entity_epoch": "epoch_1",
+              "entity_revision": "1",
+              "view": {
+                "logical_key_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+                "schedule_id": "schedule_1",
+                "original_local_date": "2026-10-18",
+                "planned_at": "2026-10-18T00:00:00Z",
+                "window": {
+                  "earliest": "2026-10-18T00:00:00Z",
+                  "latest": "2026-10-18T00:00:10Z"
+                },
+                "activation_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "schedule_activations",
+                  "entity_id": "schedule_activations_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "qualification_latch": "blocked",
+                "admission_state": "accepted",
+                "admission_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "admission",
+                  "entity_id": "evidence_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "execution_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "executions",
+                  "entity_id": "executions_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "execution_summary": "unknown",
+                "reason_code": "manual_takeover",
+                "replay_of": null
+              }
+            },
+            {
+              "entity_kind": "runs",
+              "entity_id": "runs_1",
+              "entity_epoch": "epoch_1",
+              "entity_revision": "1",
+              "view": {
+                "definition_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "definition_version",
+                  "entity_id": "evidence_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "business_state_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "business_states",
+                  "entity_id": "business_states_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "arm_generation": "1",
+                "lifecycle": "paused",
+                "execution_summary": "unknown",
+                "active_execution_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "executions",
+                  "entity_id": "executions_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "pause_reasons": [
+                  "manual_takeover"
+                ],
+                "authorization_state": "valid",
+                "recovery": null
+              }
+            },
+            {
+              "entity_kind": "schedule_activations",
+              "entity_id": "schedule_activations_1",
+              "entity_epoch": "epoch_1",
+              "entity_revision": "1",
+              "view": {
+                "schedule_id": "schedule_1",
+                "active_version_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "schedule_version",
+                  "entity_id": "evidence_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "activation_revision": "1",
+                "calendar_profile_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "calendar_profile",
+                  "entity_id": "evidence_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "committed_at": "2026-10-18T00:00:00Z",
+                "qualification_state": "blocked"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "manifest_digest": "fc779295256e4821e85d724ff835d5d33efaf67c64e3d2c04b4f80908cc7b136",
+        "content_digest": "1caa717545365729bb7ac06f45a5c625789f89ec9f6b054551691ad68c45c937",
+        "delivery_binding": {
+          "subscription_id": "subscription",
+          "publisher_service_id": "controller",
+          "publisher_database_instance_id": "database",
+          "stream_id": "stream",
+          "stream_epoch": "stream_epoch",
+          "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "authorization_revision": "1",
+          "connection_generation": "1"
+        },
+        "content": {
+          "format_version": "snapshot-projection/0.2.0-draft.1",
+          "binding": {
+            "snapshot_id": "snapshot",
+            "subscription_id": "subscription",
+            "publisher_service_id": "controller",
+            "publisher_database_instance_id": "database",
+            "stream_id": "stream",
+            "stream_epoch": "stream_epoch",
+            "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "authorization_revision": "1",
+            "projection_profile_ref": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database",
+              "entity_kind": "projection_profile",
+              "entity_id": "profile",
+              "entity_epoch": "epoch",
+              "revision": "1",
+              "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "publisher_domain_ref": {
+              "clock_domain_id": "clock_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+              "descriptor_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+            }
+          },
+          "page_index": 2,
+          "next_page_index": null,
+          "records": [
+            {
+              "entity_kind": "sources",
+              "entity_id": "sources_1",
+              "entity_epoch": "epoch_1",
+              "entity_revision": "1",
+              "view": {
+                "source_key": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "registration_id": "source_reg",
+                  "source_stream_id": "source_stream",
+                  "source_epoch": "source_epoch"
+                },
+                "binding_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "source_binding",
+                  "entity_id": "evidence_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "state": "synchronized",
+                "contiguous_sequence": "7",
+                "highest_seen_sequence": "7",
+                "baseline_ref": {
+                  "authority_service_id": "controller_1",
+                  "database_instance_id": "db_1",
+                  "entity_kind": "baseline",
+                  "entity_id": "evidence_1",
+                  "entity_epoch": "epoch_1",
+                  "revision": "1",
+                  "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "gaps": []
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "expected": {
+      "content_binding": {
+        "snapshot_id": "snapshot",
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream_epoch",
+        "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "authorization_revision": "1",
+        "projection_profile_ref": {
+          "authority_service_id": "controller",
+          "database_instance_id": "database",
+          "entity_kind": "projection_profile",
+          "entity_id": "profile",
+          "entity_epoch": "epoch",
+          "revision": "1",
+          "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "publisher_domain_ref": {
+          "clock_domain_id": "clock_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "descriptor_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      },
+      "delivery_binding": {
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream_epoch",
+        "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "authorization_revision": "1",
+        "connection_generation": "1"
+      },
+      "snapshot_ref": {
+        "snapshot_id": "snapshot",
+        "manifest_digest": "fc779295256e4821e85d724ff835d5d33efaf67c64e3d2c04b4f80908cc7b136",
+        "snapshot_cursor": "9007199254740993"
+      },
+      "schemas": {
+        "definitions": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__DefinitionSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "runs": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__RunSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "business_states": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__BusinessStateSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "executions": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__ExecutionSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "schedule_activations": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__ScheduleActivationSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "occurrences": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__OccurrenceSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "sources": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__SourceSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        }
+      },
+      "deadline_tick": 30
+    }
+  },
+  "empty": {
+    "manifest": {
+      "format_version": "snapshot-projection/0.2.0-draft.1",
+      "binding": {
+        "snapshot_id": "snapshot",
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream_epoch",
+        "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "authorization_revision": "1",
+        "projection_profile_ref": {
+          "authority_service_id": "controller",
+          "database_instance_id": "database",
+          "entity_kind": "projection_profile",
+          "entity_id": "profile",
+          "entity_epoch": "epoch",
+          "revision": "1",
+          "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "publisher_domain_ref": {
+          "clock_domain_id": "clock_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "descriptor_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      },
+      "snapshot_cursor": "9007199254740993",
+      "collections": [
+        {
+          "entity_kind": "catalogs",
+          "count": "0",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__CatalogSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "commands",
+          "count": "0",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__CommandSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "controls",
+          "count": "0",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__ControlSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "devices",
+          "count": "0",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__DeviceSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "observations",
+          "count": "0",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__ObservationSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        },
+        {
+          "entity_kind": "sources",
+          "count": "0",
+          "view_schema_ref": {
+            "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+            "definition": "snapshot__SourceSnapshotView",
+            "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+          }
+        }
+      ],
+      "source_watermarks": [],
+      "pages": [
+        {
+          "page_index": 0,
+          "content_bytes": 903,
+          "content_digest": "806a05aca2336a744caf2fd2572fd57b641d84bf7710aac53eecdbd8db27c80d"
+        }
+      ],
+      "page_count": 1,
+      "total_content_bytes": 903,
+      "created_at": "2026-10-27T00:00:00Z",
+      "expires_at": "2026-10-27T00:00:30Z",
+      "manifest_digest": "b1e50ad35537d70908b3f2c3fff37cf81f8959d922ff2b56b667afb304b95910"
+    },
+    "pages": [
+      {
+        "manifest_digest": "b1e50ad35537d70908b3f2c3fff37cf81f8959d922ff2b56b667afb304b95910",
+        "content_digest": "806a05aca2336a744caf2fd2572fd57b641d84bf7710aac53eecdbd8db27c80d",
+        "delivery_binding": {
+          "subscription_id": "subscription",
+          "publisher_service_id": "controller",
+          "publisher_database_instance_id": "database",
+          "stream_id": "stream",
+          "stream_epoch": "stream_epoch",
+          "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "authorization_revision": "1",
+          "connection_generation": "1"
+        },
+        "content": {
+          "format_version": "snapshot-projection/0.2.0-draft.1",
+          "binding": {
+            "snapshot_id": "snapshot",
+            "subscription_id": "subscription",
+            "publisher_service_id": "controller",
+            "publisher_database_instance_id": "database",
+            "stream_id": "stream",
+            "stream_epoch": "stream_epoch",
+            "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "authorization_revision": "1",
+            "projection_profile_ref": {
+              "authority_service_id": "controller",
+              "database_instance_id": "database",
+              "entity_kind": "projection_profile",
+              "entity_id": "profile",
+              "entity_epoch": "epoch",
+              "revision": "1",
+              "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "publisher_domain_ref": {
+              "clock_domain_id": "clock_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+              "descriptor_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+            }
+          },
+          "page_index": 0,
+          "next_page_index": null,
+          "records": []
+        }
+      }
+    ],
+    "expected": {
+      "content_binding": {
+        "snapshot_id": "snapshot",
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream_epoch",
+        "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "authorization_revision": "1",
+        "projection_profile_ref": {
+          "authority_service_id": "controller",
+          "database_instance_id": "database",
+          "entity_kind": "projection_profile",
+          "entity_id": "profile",
+          "entity_epoch": "epoch",
+          "revision": "1",
+          "content_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "publisher_domain_ref": {
+          "clock_domain_id": "clock_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "descriptor_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      },
+      "delivery_binding": {
+        "subscription_id": "subscription",
+        "publisher_service_id": "controller",
+        "publisher_database_instance_id": "database",
+        "stream_id": "stream",
+        "stream_epoch": "stream_epoch",
+        "scope_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "authorization_revision": "1",
+        "connection_generation": "1"
+      },
+      "snapshot_ref": {
+        "snapshot_id": "snapshot",
+        "manifest_digest": "b1e50ad35537d70908b3f2c3fff37cf81f8959d922ff2b56b667afb304b95910",
+        "snapshot_cursor": "9007199254740993"
+      },
+      "schemas": {
+        "devices": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__DeviceSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "catalogs": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__CatalogSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "commands": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__CommandSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "controls": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__ControlSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "observations": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__ObservationSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        },
+        "sources": {
+          "schema_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+          "definition": "snapshot__SourceSnapshotView",
+          "schema_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a"
+        }
+      },
+      "deadline_tick": 30
+    }
+  }
+}

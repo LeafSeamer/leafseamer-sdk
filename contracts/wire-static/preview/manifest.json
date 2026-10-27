@@ -1,0 +1,27 @@
+{
+  "format": "wire-static-artifacts/1",
+  "approved": false,
+  "runtime_ready": false,
+  "roots": {
+    "selection": "negotiation__Selection",
+    "client_frame": "channel__ClientFrame",
+    "server_frame": "channel__ServerFrame",
+    "snapshot_manifest": "snapshot__Manifest",
+    "snapshot_page": "snapshot__PageResponse"
+  },
+  "graph_source": "f1c7a1a2a2ff4dd0834f05a8eb87033c7bb644e673a7b92d1f830f4e8ac1d6b5",
+  "artifacts": {
+    "contracts-validators.mjs": "27fdd60d69586390aca598b9b90b1a9ae94b0db8651e403fb4ce794575012208",
+    "test-validators.mjs": "583b9a69f00b96d8c53b96b6c1570c8953289ac69b799962174fed08d788137a",
+    "helpers.mjs": "920ee8279050fe2beae3657a95e98ad7ae5fbe141b8f184dfa217620959253fa",
+    "contracts-registry.mjs": "4674ddf3901d578110c75d1a8a96a04b96c8459c5e8cd3792175c4ff09c0c742",
+    "contracts-wire.mjs": "f2095ccfac0413b2d55ccf24b46fe2ba3a21ab6e416e67f073d748fd2ac77f6e",
+    "test-registry.mjs": "dd7f6c1d5e766a1dbdf4e9f2c4ad71ac40ec6864730c1025240bc7f963f6cbb8",
+    "test-wire.mjs": "68119eb6a2b179f6d2a956ba57d1ef3974319fef2dbaed036f0899a2f106a572",
+    "cases.json": "592c79d06adb00c28638a50c5835aaafa2972beec1d289757d748fc1d969264e",
+    "test-schemas.json": "f374f1b72e70e1f372f74b9229d15ed4928d19510c2c9d2e1b4b46a938bce128",
+    "contract-cases.json": "bad10e91dfdcd537c4c3824c2e228110789a70a2575b2e6e99c592b43caab2a6",
+    "integer-map.json": "3395be11c02206e8c3b2525bf3c881d2374eacf10d008a3da935d7a42493d239",
+    "LICENSES.txt": "8da6966734e4e5080bc5dedeff1d1e9dcd6cc239f043a97c127b9ef7a15b3c21"
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "DW01": {
+    "type": "object"
+  },
+  "DW02": {
+    "type": "object"
+  },
+  "DW03": {
+    "type": "object"
+  },
+  "DW04": {
+    "type": "object"
+  },
+  "DW05": {
+    "type": "object"
+  },
+  "DW06": {
+    "type": "object"
+  },
+  "DW07": {
+    "type": "object"
+  },
+  "DW08": {
+    "type": "object"
+  },
+  "DW09": {
+    "type": "object"
+  },
+  "DW10": {
+    "type": "object"
+  },
+  "DW11": {
+    "type": "object"
+  },
+  "DW12": {
+    "type": "integer"
+  },
+  "DW13": {
+    "type": "number"
+  },
+  "DW14": {
+    "type": "integer"
+  },
+  "DW15": {
+    "type": "integer"
+  },
+  "DW16": {
+    "type": "integer"
+  },
+  "DW17": {
+    "type": "number"
+  },
+  "DW18": {
+    "type": "number"
+  },
+  "DW19": {
+    "type": "number"
+  },
+  "DW20": {
+    "type": "number"
+  },
+  "DW21": {
+    "type": "object"
+  },
+  "DW22": {
+    "type": "object"
+  },
+  "DW23": {
+    "type": "object"
+  },
+  "DW24": {
+    "type": "array",
+    "items": {
+      "type": "integer"
+    }
+  },
+  "DW25": {
+    "anyOf": [
+      {
+        "type": "integer"
+      },
+      {
+        "type": "string"
+      }
+    ]
+  },
+  "DW26": {
+    "anyOf": [
+      {
+        "type": "integer"
+      },
+      {
+        "type": "number"
+      }
+    ]
+  },
+  "DW27": {
+    "if": {
+      "type": "integer"
+    },
+    "then": {
+      "type": "number",
+      "minimum": 2
+    },
+    "else": {
+      "type": "number"
+    }
+  },
+  "DW28": {
+    "$defs": {
+      "I": {
+        "type": "integer"
+      }
+    },
+    "type": "array",
+    "items": {
+      "$ref": "#/$defs/I"
+    }
+  },
+  "DW29": {
+    "type": "object",
+    "properties": {
+      "a/b": {
+        "type": "object",
+        "properties": {
+          "~x": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  },
+  "DW30": {
+    "type": "number"
+  },
+  "one_of_integer": {
+    "oneOf": [
+      {
+        "type": "integer"
+      },
+      {
+        "type": "number"
+      }
+    ]
+  },
+  "nullable": {
+    "type": [
+      "integer",
+      "null"
+    ]
+  },
+  "raw_nested": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$defs": {
+      "I": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "integer"
+      }
+    },
+    "$ref": "#/$defs/I"
+  },
+  "prototype": {
+    "properties": {
+      "__proto__": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "__proto__"
+    ],
+    "additionalProperties": false
+  },
+  "string_length": {
+    "type": "string",
+    "minLength": 1,
+    "maxLength": 1
+  },
+  "unique_objects": {
+    "type": "array",
+    "uniqueItems": true
+  },
+  "date_valid": {
+    "type": "string",
+    "format": "date-time"
+  },
+  "date_invalid": {
+    "type": "string",
+    "format": "date-time"
+  },
+  "anything": true,
+  "integer": {
+    "type": "integer"
+  }
+}

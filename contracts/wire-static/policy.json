@@ -1,0 +1,14 @@
+{
+  "format": "wire-static-policy/1",
+  "approved": false,
+  "runtime_ready": false,
+  "roots": {
+    "selection": "negotiation__Selection",
+    "client_frame": "channel__ClientFrame",
+    "server_frame": "channel__ServerFrame",
+    "snapshot_manifest": "snapshot__Manifest",
+    "snapshot_page": "snapshot__PageResponse"
+  },
+  "implicit_model_fallback": false,
+  "runtime_schema_compilation": false
+}

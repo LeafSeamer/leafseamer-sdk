@@ -1,0 +1,1390 @@
+{
+  "format": "wire-static-browser/1",
+  "approved": false,
+  "runtime_ready": false,
+  "report": {
+    "all_passed": true,
+    "cases_passed": 331,
+    "checks": [
+      {
+        "name": "固定接受集0:DW01",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码0",
+        "passed": true
+      },
+      {
+        "name": "固定接受集1:DW02",
+        "passed": true
+      },
+      {
+        "name": "固定接受集2:DW03",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码2",
+        "passed": true
+      },
+      {
+        "name": "固定接受集3:DW04",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码3",
+        "passed": true
+      },
+      {
+        "name": "固定接受集4:DW05",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码4",
+        "passed": true
+      },
+      {
+        "name": "固定接受集5:DW06",
+        "passed": true
+      },
+      {
+        "name": "固定接受集6:DW07",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码6",
+        "passed": true
+      },
+      {
+        "name": "固定接受集7:DW08",
+        "passed": true
+      },
+      {
+        "name": "固定接受集8:DW09",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码8",
+        "passed": true
+      },
+      {
+        "name": "固定接受集9:DW10",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码9",
+        "passed": true
+      },
+      {
+        "name": "固定接受集10:DW11",
+        "passed": true
+      },
+      {
+        "name": "固定接受集11:DW12",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码11",
+        "passed": true
+      },
+      {
+        "name": "固定接受集12:DW13",
+        "passed": true
+      },
+      {
+        "name": "固定接受集13:DW14",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码13",
+        "passed": true
+      },
+      {
+        "name": "固定接受集14:DW15",
+        "passed": true
+      },
+      {
+        "name": "固定接受集15:DW16",
+        "passed": true
+      },
+      {
+        "name": "固定接受集16:DW17",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码16",
+        "passed": true
+      },
+      {
+        "name": "固定接受集17:DW18",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码17",
+        "passed": true
+      },
+      {
+        "name": "固定接受集18:DW19",
+        "passed": true
+      },
+      {
+        "name": "固定接受集19:DW20",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码19",
+        "passed": true
+      },
+      {
+        "name": "固定接受集20:DW21",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码20",
+        "passed": true
+      },
+      {
+        "name": "固定接受集21:DW22",
+        "passed": true
+      },
+      {
+        "name": "固定接受集22:DW23",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码22",
+        "passed": true
+      },
+      {
+        "name": "固定接受集23:DW24",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码23",
+        "passed": true
+      },
+      {
+        "name": "固定接受集24:DW25",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码24",
+        "passed": true
+      },
+      {
+        "name": "固定接受集25:DW26",
+        "passed": true
+      },
+      {
+        "name": "固定接受集26:DW27",
+        "passed": true
+      },
+      {
+        "name": "固定接受集27:DW28",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码27",
+        "passed": true
+      },
+      {
+        "name": "固定接受集28:DW29",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码28",
+        "passed": true
+      },
+      {
+        "name": "固定接受集29:DW30",
+        "passed": true
+      },
+      {
+        "name": "固定接受集30:DW28",
+        "passed": true
+      },
+      {
+        "name": "固定接受集31:one_of_integer",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码31",
+        "passed": true
+      },
+      {
+        "name": "固定接受集32:nullable",
+        "passed": true
+      },
+      {
+        "name": "固定接受集33:raw_nested",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码33",
+        "passed": true
+      },
+      {
+        "name": "固定接受集34:prototype",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码34",
+        "passed": true
+      },
+      {
+        "name": "固定接受集35:string_length",
+        "passed": true
+      },
+      {
+        "name": "固定接受集36:unique_objects",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码36",
+        "passed": true
+      },
+      {
+        "name": "固定接受集37:date_valid",
+        "passed": true
+      },
+      {
+        "name": "固定接受集38:date_invalid",
+        "passed": true
+      },
+      {
+        "name": "固定拒绝码38",
+        "passed": true
+      },
+      {
+        "name": "固定接受集39:anything",
+        "passed": true
+      },
+      {
+        "name": "固定接受集40:integer",
+        "passed": true
+      },
+      {
+        "name": "真实契约根0:selection",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留0",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝0",
+        "passed": true
+      },
+      {
+        "name": "真实契约根1:client_frame",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留1",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝1",
+        "passed": true
+      },
+      {
+        "name": "真实契约根2:client_frame",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留2",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝2",
+        "passed": true
+      },
+      {
+        "name": "真实契约根3:client_frame",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留3",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝3",
+        "passed": true
+      },
+      {
+        "name": "真实契约根4:server_frame",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留4",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝4",
+        "passed": true
+      },
+      {
+        "name": "真实契约根5:server_frame",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留5",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝5",
+        "passed": true
+      },
+      {
+        "name": "真实契约根6:server_frame",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留6",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝6",
+        "passed": true
+      },
+      {
+        "name": "真实契约根7:server_frame",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留7",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝7",
+        "passed": true
+      },
+      {
+        "name": "真实契约根8:server_frame",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留8",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝8",
+        "passed": true
+      },
+      {
+        "name": "真实契约根9:snapshot_manifest",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留9",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝9",
+        "passed": true
+      },
+      {
+        "name": "真实契约根10:snapshot_page",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留10",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝10",
+        "passed": true
+      },
+      {
+        "name": "真实契约根11:snapshot_page",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留11",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝11",
+        "passed": true
+      },
+      {
+        "name": "真实契约根12:snapshot_manifest",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留12",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝12",
+        "passed": true
+      },
+      {
+        "name": "真实契约根13:snapshot_page",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留13",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝13",
+        "passed": true
+      },
+      {
+        "name": "真实契约根14:snapshot_page",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留14",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝14",
+        "passed": true
+      },
+      {
+        "name": "真实契约根15:snapshot_page",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留15",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝15",
+        "passed": true
+      },
+      {
+        "name": "真实契约根16:snapshot_manifest",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留16",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝16",
+        "passed": true
+      },
+      {
+        "name": "真实契约根17:snapshot_page",
+        "passed": true
+      },
+      {
+        "name": "契约字段保留17",
+        "passed": true
+      },
+      {
+        "name": "真实根额外字段拒绝17",
+        "passed": true
+      },
+      {
+        "name": "Manifest原始整数守卫",
+        "passed": true
+      },
+      {
+        "name": "分页引用原始整数守卫",
+        "passed": true
+      },
+      {
+        "name": "旧选择不降级",
+        "passed": true
+      },
+      {
+        "name": "生产候选不暴露测试根:anything",
+        "passed": true
+      },
+      {
+        "name": "生产候选不暴露测试根:unknown",
+        "passed": true
+      },
+      {
+        "name": "生产候选不暴露测试根:baseline__CommandRequest",
+        "passed": true
+      },
+      {
+        "name": "没有运行时编译入口",
+        "passed": true
+      },
+      {
+        "name": "原型保持",
+        "passed": true
+      },
+      {
+        "name": "递归冻结",
+        "passed": true
+      },
+      {
+        "name": "复制所有权",
+        "passed": true
+      },
+      {
+        "name": "yield后取消",
+        "passed": true
+      },
+      {
+        "name": "yield后超时",
+        "passed": true
+      },
+      {
+        "name": "64次静态引用异步交错",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分0",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分1",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分2",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分3",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分4",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分5",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分6",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分7",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分8",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分9",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分10",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分11",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分12",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分13",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分14",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分15",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分16",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分17",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分18",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分19",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分20",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分21",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分22",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分23",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分24",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分25",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分26",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分27",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分28",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分29",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分30",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分31",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分32",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分33",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分34",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分35",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分36",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分37",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分38",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分39",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分40",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分41",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分42",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分43",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分44",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分45",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分46",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分47",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分48",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分49",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分50",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分51",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分52",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分53",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分54",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分55",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分56",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分57",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分58",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分59",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分60",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分61",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分62",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分63",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分64",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分65",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分66",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分67",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分68",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分69",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分70",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分71",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分72",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分73",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分74",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分75",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分76",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分77",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分78",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分79",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分80",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分81",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分82",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分83",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分84",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分85",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分86",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分87",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分88",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分89",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分90",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分91",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分92",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分93",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分94",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分95",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分96",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分97",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分98",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分99",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分100",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分101",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分102",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分103",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分104",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分105",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分106",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分107",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分108",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分109",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分110",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分111",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分112",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分113",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分114",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分115",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分116",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分117",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分118",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分119",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分120",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分121",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分122",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分123",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分124",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分125",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分126",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分127",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分128",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分129",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分130",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分131",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分132",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分133",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分134",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分135",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分136",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分137",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分138",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分139",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分140",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分141",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分142",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分143",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分144",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分145",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分146",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分147",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分148",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分149",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分150",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分151",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分152",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分153",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分154",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分155",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分156",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分157",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分158",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分159",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分160",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分161",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分162",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分163",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分164",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分165",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分166",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分167",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分168",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分169",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分170",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分171",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分172",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分173",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分174",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分175",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分176",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分177",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分178",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分179",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分180",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分181",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分182",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分183",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分184",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分185",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分186",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分187",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分188",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分189",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分190",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分191",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分192",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分193",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分194",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分195",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分196",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分197",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分198",
+        "passed": true
+      },
+      {
+        "name": "静态构值差分199",
+        "passed": true
+      }
+    ],
+    "contract_samples": 18,
+    "fixture_messages": 41,
+    "async_parallel_decodes": 64,
+    "generated_messages": 200,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "eval_blocked": true,
+    "inline_blocked": true,
+    "csp_violations": [
+      {
+        "directive": "script-src",
+        "blocked_uri": "eval"
+      },
+      {
+        "directive": "script-src-elem",
+        "blocked_uri": "inline"
+      },
+      {
+        "directive": "style-src-elem",
+        "blocked_uri": "inline"
+      }
+    ]
+  },
+  "csp": "default-src 'none'; script-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'",
+  "requests": [
+    "/",
+    "/browser.mjs",
+    "/runtime-tests.mjs",
+    "/preview/test-wire.mjs",
+    "/preview/contracts-wire.mjs",
+    "/preview/test-registry.mjs",
+    "/preview/contracts-registry.mjs",
+    "/preview/test-validators.mjs",
+    "/preview/contracts-validators.mjs",
+    "/preview/helpers.mjs",
+    "/preview/cases.json",
+    "/preview/contract-cases.json"
+  ],
+  "artifacts": {
+    "browser.html": "310f92dcc11f766de665b42ff913919c11943a2706e98178e3819de7c625b9fa",
+    "browser.mjs": "4c027cfe10cd5c3bbf55955337984071ea4b4572f78cd2baa5a4cac1eb467e22",
+    "runtime-tests.mjs": "7dd4fdb08d3d8bbcea6800d20baaa2717b807ea67370a3607fb040a074c20c06",
+    "preview/contracts-validators.mjs": "27fdd60d69586390aca598b9b90b1a9ae94b0db8651e403fb4ce794575012208",
+    "preview/test-validators.mjs": "583b9a69f00b96d8c53b96b6c1570c8953289ac69b799962174fed08d788137a",
+    "preview/helpers.mjs": "920ee8279050fe2beae3657a95e98ad7ae5fbe141b8f184dfa217620959253fa",
+    "preview/contracts-registry.mjs": "4674ddf3901d578110c75d1a8a96a04b96c8459c5e8cd3792175c4ff09c0c742",
+    "preview/contracts-wire.mjs": "f2095ccfac0413b2d55ccf24b46fe2ba3a21ab6e416e67f073d748fd2ac77f6e",
+    "preview/test-registry.mjs": "dd7f6c1d5e766a1dbdf4e9f2c4ad71ac40ec6864730c1025240bc7f963f6cbb8",
+    "preview/test-wire.mjs": "68119eb6a2b179f6d2a956ba57d1ef3974319fef2dbaed036f0899a2f106a572",
+    "preview/cases.json": "592c79d06adb00c28638a50c5835aaafa2972beec1d289757d748fc1d969264e",
+    "preview/test-schemas.json": "f374f1b72e70e1f372f74b9229d15ed4928d19510c2c9d2e1b4b46a938bce128",
+    "preview/contract-cases.json": "bad10e91dfdcd537c4c3824c2e228110789a70a2575b2e6e99c592b43caab2a6",
+    "preview/integer-map.json": "3395be11c02206e8c3b2525bf3c881d2374eacf10d008a3da935d7a42493d239",
+    "preview/LICENSES.txt": "8da6966734e4e5080bc5dedeff1d1e9dcd6cc239f043a97c127b9ef7a15b3c21",
+    "preview/manifest.json": "15adba6a9ebf2ba9d85375477d19705a426e434af563a65e30cbbc8badca2e24"
+  },
+  "manifest_sha256": "15adba6a9ebf2ba9d85375477d19705a426e434af563a65e30cbbc8badca2e24"
+}

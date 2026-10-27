@@ -1,0 +1,1651 @@
+{
+  "format": "wire-static-check/1",
+  "approved": false,
+  "runtime_ready": false,
+  "all_passed": true,
+  "cases_passed": 380,
+  "checks": [
+    {
+      "name": "固定Node版本",
+      "passed": true
+    },
+    {
+      "name": "固定Node制品",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/channel-release/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/channel-release/bridge.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/channel-release/check.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/channel-release/report.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/channel-release/sources.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/composition/compose.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/composition/requirements-validation.txt",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-channel/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-channel/build.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-channel/check.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-channel/examples.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-channel/fixtures.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-channel/model.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-channel/preview/frames.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-channel/preview/models.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-channel/preview/policy.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-channel/preview/subscriptions.openapi.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-channel/report.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-channel/source/service-subscription.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-channel/sources.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-integration/preview/models.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-integration/preview/selection.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-integration/report.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-projection/examples.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-projection/preview/models.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-projection/preview/snapshot.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/event-projection/source/snapshot-cases.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-recovery/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-recovery/check.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-recovery/owner.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-recovery/recovery.sql",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-recovery/report.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-recovery/sources.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-recovery/worker.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-registry/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-registry/check.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-registry/examples.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-registry/fixtures.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-registry/generate.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-registry/preview/mapping.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-registry/preview/models.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-registry/registry.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-registry/report.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-registry/sources.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-release/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-release/check.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-release/gate.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-release/report.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-release/sources.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-storage/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-storage/check.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-storage/registry.sql",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-storage/report.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-storage/sources.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/scope-storage/storage.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/snapshot-consumer/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/snapshot-consumer/check.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/snapshot-consumer/consumer.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/snapshot-consumer/projection.sql",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/snapshot-consumer/report.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/snapshot-consumer/sources.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-js/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-js/check.mjs",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-js/dependencies.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-js/oracle.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-js/package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-js/package.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-js/report.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-js/schema.mjs",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-js/sources.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-js/wire.mjs",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/check.py",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/number-oracle.mjs",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/report.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/source/decoder-design-cases.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/source/decoder-design.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/sources.json",
+      "passed": true
+    },
+    {
+      "name": "固定输入:contracts/wire-json/wire.py",
+      "passed": true
+    },
+    {
+      "name": "重复构建字节一致",
+      "passed": true
+    },
+    {
+      "name": "生成清单精确",
+      "passed": true
+    },
+    {
+      "name": "静态制品字节:contracts-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "无动态代码:contracts-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "无Node依赖:contracts-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "封闭模块:contracts-validators.mjs:./helpers.mjs",
+      "passed": true
+    },
+    {
+      "name": "静态制品字节:test-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "无动态代码:test-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "无Node依赖:test-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "封闭模块:test-validators.mjs:./helpers.mjs",
+      "passed": true
+    },
+    {
+      "name": "静态制品字节:helpers.mjs",
+      "passed": true
+    },
+    {
+      "name": "无动态代码:helpers.mjs",
+      "passed": true
+    },
+    {
+      "name": "无Node依赖:helpers.mjs",
+      "passed": true
+    },
+    {
+      "name": "静态制品字节:contracts-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "无动态代码:contracts-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "无Node依赖:contracts-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "封闭模块:contracts-registry.mjs:./contracts-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "静态制品字节:contracts-wire.mjs",
+      "passed": true
+    },
+    {
+      "name": "无动态代码:contracts-wire.mjs",
+      "passed": true
+    },
+    {
+      "name": "无Node依赖:contracts-wire.mjs",
+      "passed": true
+    },
+    {
+      "name": "封闭模块:contracts-wire.mjs:./contracts-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "封闭模块:contracts-wire.mjs:./contracts-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "静态制品字节:test-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "无动态代码:test-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "无Node依赖:test-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "封闭模块:test-registry.mjs:./test-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "静态制品字节:test-wire.mjs",
+      "passed": true
+    },
+    {
+      "name": "无动态代码:test-wire.mjs",
+      "passed": true
+    },
+    {
+      "name": "无Node依赖:test-wire.mjs",
+      "passed": true
+    },
+    {
+      "name": "封闭模块:test-wire.mjs:./test-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "封闭模块:test-wire.mjs:./test-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "静态制品字节:cases.json",
+      "passed": true
+    },
+    {
+      "name": "静态制品字节:test-schemas.json",
+      "passed": true
+    },
+    {
+      "name": "静态制品字节:contract-cases.json",
+      "passed": true
+    },
+    {
+      "name": "静态制品字节:integer-map.json",
+      "passed": true
+    },
+    {
+      "name": "静态制品字节:LICENSES.txt",
+      "passed": true
+    },
+    {
+      "name": "静态制品字节:manifest.json",
+      "passed": true
+    },
+    {
+      "name": "五个明确入口",
+      "passed": true
+    },
+    {
+      "name": "候选状态",
+      "passed": true
+    },
+    {
+      "name": "清单绑定:contracts-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "清单绑定:test-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "清单绑定:helpers.mjs",
+      "passed": true
+    },
+    {
+      "name": "清单绑定:contracts-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "清单绑定:contracts-wire.mjs",
+      "passed": true
+    },
+    {
+      "name": "清单绑定:test-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "清单绑定:test-wire.mjs",
+      "passed": true
+    },
+    {
+      "name": "清单绑定:cases.json",
+      "passed": true
+    },
+    {
+      "name": "清单绑定:test-schemas.json",
+      "passed": true
+    },
+    {
+      "name": "清单绑定:contract-cases.json",
+      "passed": true
+    },
+    {
+      "name": "清单绑定:integer-map.json",
+      "passed": true
+    },
+    {
+      "name": "清单绑定:LICENSES.txt",
+      "passed": true
+    },
+    {
+      "name": "整数映射数量",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__AdmissionDecision/properties/retry_after_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__AuthorizationSnapshot/properties/fresh_for_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/barrier_intents/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/command_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/device_command_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/devices/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/evidence_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/frame_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/gui_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/gui_events/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/http_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/ipc_normal_slots/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/ipc_protection_slots/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/json_depth/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/login_burst/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/login_per_minute/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/max_reserved_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/max_wal_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/min_disk_free_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/protection_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/request_burst/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/requests_per_second/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/source_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/source_events/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/workers/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/writer_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/clock/properties/drift_bound_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/clock/properties/max_sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/clock/properties/max_uncertainty_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/identity/properties/access_token_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/identity/properties/bootstrap_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/identity/properties/gate_lease_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/identity/properties/gate_renew_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/identity/properties/local_revoke_alarm_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/identity/properties/pairing_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/identity/properties/recent_auth_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/identity/properties/refresh_idle_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/identity/properties/remote_revoke_alarm_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/identity/properties/session_absolute_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/identity/properties/snapshot_fresh_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/identity/properties/snapshot_refresh_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/identity/properties/ws_ticket_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/retention/properties/audit_days/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/retention/properties/context_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityProfile/properties/retention/properties/terminal_detail_days/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityStatus/properties/usage/items/properties/limit/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__CapacityStatus/properties/usage/items/properties/used/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockAssessment/allOf/0/then/properties/sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockAssessment/allOf/0/then/properties/uncertainty_now_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockAssessment/allOf/0/then/properties/utc_lower_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockAssessment/allOf/0/then/properties/utc_upper_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockAssessment/properties/sample_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockAssessment/properties/uncertainty_now_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockAssessment/properties/utc_lower_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockAssessment/properties/utc_upper_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockSample/allOf/0/then/properties/uncertainty_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockSample/properties/drift_bound_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockSample/properties/estimated_utc_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockSample/properties/max_sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockSample/properties/uncertainty_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockStatus/allOf/0/then/properties/sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ClockStatus/properties/sample_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__EventAgeProof/allOf/0/else/properties/lower_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__EventAgeProof/allOf/0/else/properties/upper_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__EventAgeProof/properties/lower_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__EventAgeProof/properties/upper_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__EventReceipt/properties/age_at_admission_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__ObsCompletionBundle/properties/max_query_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__Observation/properties/freshness_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__RequestContext/properties/max_unique_requests/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__RequestContextRequest/properties/max_unique_requests/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__RetryPolicy/properties/backoff_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__RetryPolicy/properties/max_attempts/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__TimeBoundEvidence/allOf/0/then/properties/stratum/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__TimeBoundEvidence/allOf/0/then/properties/uncertainty_at_capture_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__TimeBoundEvidence/properties/drift_bound_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__TimeBoundEvidence/properties/stratum/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__TimeBoundEvidence/properties/uncertainty_at_capture_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__TimeBoundEvidence/properties/wall_read_utc_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__TimeBoundProfile/properties/drift_bound_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__TimeBoundProfile/properties/max_capture_span_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__TimeBoundProfile/properties/max_sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__TimeBoundProfile/properties/max_source_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__TimeBoundProfile/properties/max_uncertainty_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/baseline__TransitionDefinition/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__A__S3_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__EA__EncodingAuthorization/properties/max_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__S0__Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__S11__Exchange/properties/leap/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__S11__Exchange/properties/ntp_mode/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__S11__Exchange/properties/ntp_version/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__S11__Exchange/properties/precision/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__S11__Exchange/properties/response_size/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__S11__Exchange/properties/stratum/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__S11__Profile/properties/elapsed_error_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__S11__Profile/properties/max_packet_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__S11__Request/properties/request_size/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__S8__Packet/properties/byte_length/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__S9__ObsCompletionCandidate/properties/max_query_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__S9__TransportPacket/properties/byte_length/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__V__S0_AttemptView/properties/ordinal/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__V__S1_Policy/properties/max_attempts/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__V__S5_ClockStatus/allOf/0/then/properties/sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__V__S5_ClockStatus/properties/sample_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__V__S5_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/command__V__S5_ObsCompletionBundle/properties/max_query_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/control__OfferRequest/properties/offer_ttl_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/ingress__TransitionEvaluation/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/installation__Artifact_Binding_endpoint/properties/values/items/properties/port/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/installation__Permission_network_endpoint/properties/scope/properties/port/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/lifecycle__Program_CompileDiagnostic/properties/budget/anyOf/0/properties/limit/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/lifecycle__Program_CompileDiagnostic/properties/budget/anyOf/0/properties/observed/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/lifecycle__Program_DelayStep/properties/delay_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/lifecycle__Program_DelayStep/properties/max_lateness_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/lifecycle__Program_Transition/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/lifecycle__TransitionEvaluation/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/panel__Public_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/panel__Public_TransitionDefinition/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/panel__Result_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/panel__Result_SafeInt/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/preparation__S3_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/registry__Profile/properties/maximum_records/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/snapshot__CommandSnapshotView/properties/completion/properties/evidence_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/snapshot__CommandState/allOf/4/then/properties/resource_evidence_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/snapshot__CommandState/properties/attempt_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/snapshot__CommandState/properties/completion_evidence_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/snapshot__CommandState/properties/resource_evidence_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/snapshot__Manifest/properties/page_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/snapshot__Manifest/properties/total_content_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/snapshot__ObservationSnapshotView/properties/freshness_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/snapshot__PageContent/properties/next_page_index/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/snapshot__PageContent/properties/page_index/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/snapshot__PageDescriptor/properties/content_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/snapshot__PageDescriptor/properties/page_index/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/subscription__Result_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/subscription__Result_SafeInt/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/time_internal__S11__Exchange/properties/leap/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/time_internal__S11__Exchange/properties/ntp_mode/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/time_internal__S11__Exchange/properties/ntp_version/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/time_internal__S11__Exchange/properties/precision/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/time_internal__S11__Exchange/properties/response_size/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/time_internal__S11__Exchange/properties/stratum/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/time_internal__S11__Profile/properties/elapsed_error_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/time_internal__S11__Profile/properties/max_packet_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数映射:/$defs/time_internal__S11__Request/properties/request_size/type",
+      "passed": true
+    },
+    {
+      "name": "快照夹具重建",
+      "passed": true
+    },
+    {
+      "name": "禁动态代码的Node实际运行",
+      "passed": true
+    },
+    {
+      "name": "Node检查完整",
+      "passed": true
+    },
+    {
+      "name": "Node明细数量",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:0",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:1",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:2",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:3",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:4",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:5",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:6",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:7",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:8",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:9",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:10",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:11",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:12",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:13",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:14",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:15",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:16",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:17",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:18",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:19",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:20",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:21",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:22",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:23",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:24",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:25",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:26",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:27",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:28",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:29",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:30",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:31",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:32",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:33",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:34",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:35",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:36",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:37",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:38",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:39",
+      "passed": true
+    },
+    {
+      "name": "静态与动态接受集及值:40",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:0",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:1",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:2",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:3",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:4",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:5",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:6",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:7",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:8",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:9",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:10",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:11",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:12",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:13",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:14",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:15",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:16",
+      "passed": true
+    },
+    {
+      "name": "实际入口差分:17",
+      "passed": true
+    },
+    {
+      "name": "浏览器实际验收状态",
+      "passed": true
+    },
+    {
+      "name": "浏览器明细",
+      "passed": true
+    },
+    {
+      "name": "浏览器计数",
+      "passed": true
+    },
+    {
+      "name": "浏览器全部通过",
+      "passed": true
+    },
+    {
+      "name": "浏览器候选状态",
+      "passed": true
+    },
+    {
+      "name": "浏览器CSP",
+      "passed": true
+    },
+    {
+      "name": "实际CSP拦截:eval",
+      "passed": true
+    },
+    {
+      "name": "实际CSP拦截:inline",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:browser.html",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:browser.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:runtime-tests.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:preview/contracts-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:preview/test-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:preview/helpers.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:preview/contracts-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:preview/contracts-wire.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:preview/test-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:preview/test-wire.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:preview/cases.json",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:preview/test-schemas.json",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:preview/contract-cases.json",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:preview/integer-map.json",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:preview/LICENSES.txt",
+      "passed": true
+    },
+    {
+      "name": "浏览器验收制品绑定:preview/manifest.json",
+      "passed": true
+    },
+    {
+      "name": "浏览器制品集合",
+      "passed": true
+    },
+    {
+      "name": "浏览器清单绑定",
+      "passed": true
+    },
+    {
+      "name": "浏览器实际加载:/",
+      "passed": true
+    },
+    {
+      "name": "浏览器实际加载:/browser.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器实际加载:/runtime-tests.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器实际加载:/preview/cases.json",
+      "passed": true
+    },
+    {
+      "name": "浏览器实际加载:/preview/contract-cases.json",
+      "passed": true
+    },
+    {
+      "name": "浏览器实际加载:/preview/contracts-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器实际加载:/preview/test-validators.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器实际加载:/preview/helpers.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器实际加载:/preview/contracts-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器实际加载:/preview/contracts-wire.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器实际加载:/preview/test-registry.mjs",
+      "passed": true
+    },
+    {
+      "name": "浏览器实际加载:/preview/test-wire.mjs",
+      "passed": true
+    }
+  ],
+  "node_static_checks": 331,
+  "browser_recorded_checks": 331,
+  "browser_rerun_by_checker": false,
+  "differential_messages": 59,
+  "contract_samples": 18,
+  "fixture_messages": 41,
+  "full_graph_integer_nodes": 146,
+  "node": "v24.22.0",
+  "product_runtime_tests_executed": 0,
+  "device_tests_executed": 0,
+  "limitations": [
+    "浏览器记录绑定已验收字节；命令行检查器不启动浏览器",
+    "五个入口静态校验不代表全部API导出或业务语义验收",
+    "扫描切片不抢占JSON.parse与Schema同步调用"
+  ],
+  "inputs": {
+    "contracts/channel-release/README.md": "30113017141860945ebd35ac691afd3db66ba0059d29992b5db6ac6be74da99b",
+    "contracts/channel-release/bridge.py": "4090660b61afd4be74b39ee2ef2b1632bb2cade2c8b29b51da356243e1b8bc98",
+    "contracts/channel-release/check.py": "c1ecaf8faba02c22dc365db7c5b62172b16abb5aaee7fb89edadbaf93c9e2dc4",
+    "contracts/channel-release/report.json": "6e02f6cd1791185bd5e9c17f66c10e6535f04ef3ef3a24a67a60a8d3fce437e4",
+    "contracts/channel-release/sources.json": "73a84c8f9c79ab6a9fb46fe42e504dd085489ff24810f36ff55adf6f1aa3447d",
+    "contracts/composition/compose.py": "a23b0ecf89824956a8194e8ecead8208ef7507bebb7e5d8d2bdd3f99b0c9eeb7",
+    "contracts/composition/requirements-validation.txt": "a336de65ce30f3e834980f7ba382b336a92ff98c2189272409b88d55058b7e1b",
+    "contracts/event-channel/README.md": "be4ac54b3a1233b5d03cf87b5da782a1b050fe8ec93c871193b84b96aa062695",
+    "contracts/event-channel/build.py": "4ee26e65b6064e50cf373429302852845cab0731ef54766c893895ece51f632a",
+    "contracts/event-channel/check.py": "38476d2e1717948cdcec08e04382b64d05b792a5dfd5804d56aa529df80ffa96",
+    "contracts/event-channel/examples.json": "07e56d29960b1e3f654a1c47028a96320557c7448d40c8b015716fcca662963b",
+    "contracts/event-channel/fixtures.py": "5e9c162c65204d3bfbf5696eaa3d594cd4dd362e0853454ebe600cc085ec602d",
+    "contracts/event-channel/model.py": "7256d11d0725993ebf42b00ffb78bf738d6ad7c9afcddb880a44ef87417b3053",
+    "contracts/event-channel/preview/frames.schema.json": "ff41574455a19b6d822080e86f5ad097bb04404e60745d2850a15b83e25c1faa",
+    "contracts/event-channel/preview/models.schema.json": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a",
+    "contracts/event-channel/preview/policy.json": "37b1c52006c949a3514e377a92e351b0280732ed068695ebc6034a0d94f139dc",
+    "contracts/event-channel/preview/subscriptions.openapi.json": "d38062b3632aaceca6b838f5aca6f076e859d2cbf5dd3bc7f4610b14bdb14c25",
+    "contracts/event-channel/report.json": "079dbadaa7e08e1fd25124aa9e3618682f45c7eeadbecaa19610d2cf1c867e80",
+    "contracts/event-channel/source/service-subscription.schema.json": "e6c6f1eb8d87e51a2cc9a526565fe1ce85b96b8392596509b8cbe0cffab393ca",
+    "contracts/event-channel/sources.json": "94785224dd21d800bafce9cbaaae1aeac6a6d7717c65c53a18725aedaffe7ed0",
+    "contracts/event-integration/preview/models.schema.json": "f1c7a1a2a2ff4dd0834f05a8eb87033c7bb644e673a7b92d1f830f4e8ac1d6b5",
+    "contracts/event-integration/preview/selection.json": "efdd3a57be14c408764b3813a04b12ffd3bee57f0fdd31cbce9daac828fd6340",
+    "contracts/event-integration/report.json": "9c5caf7928aa0daa8e704fc7f8acfb3d1bf34ce5293323d7bffec8e8edf8b2d0",
+    "contracts/event-projection/examples.json": "51fb40b6c1dea8120b43ff097934d0106b054d55f370c02a44d3189c53565e0a",
+    "contracts/event-projection/preview/models.schema.json": "24c8707849102ab59a9460499f5b4e5800a4af19d51782e3edea7b611d0aa068",
+    "contracts/event-projection/preview/snapshot.schema.json": "21ce875e721a003fe7a44f110742a53f98c9d061bb5c42c8e914f7367de74a7f",
+    "contracts/event-projection/source/snapshot-cases.json": "9f8df61ca7c7b6b069b5cecda694099961cb53d57fa61a808f0d1a0e983d2f46",
+    "contracts/scope-recovery/README.md": "d424c436313decce9de2d82d1a123068eca9a572143db73b6a8f82c78b1f530e",
+    "contracts/scope-recovery/check.py": "1ab6105cbd5046a71d5320ac4349d9680428b6aff4909913bc3cfb446e3a78b8",
+    "contracts/scope-recovery/owner.py": "e3bd9572854dc5ffa2710290b7fc26e79f74e22f122040443063797824d4b21a",
+    "contracts/scope-recovery/recovery.sql": "fc747a59588486b25da536f0f3b7c227fc6af65fa7d320b39ab670faf510d956",
+    "contracts/scope-recovery/report.json": "c1f178edd62df8610a756bf73493080f88f1584844b473cdc192120732aa0e38",
+    "contracts/scope-recovery/sources.json": "986b8ee9f8e6333cbc99c2dc3a0ec49d321dbd83e9646a92c4c9d002ebd2cbbc",
+    "contracts/scope-recovery/worker.py": "33031ba89ee160e2d54baa3edf18190e7b21adede203fa3dfb6cb79e63cb1ae0",
+    "contracts/scope-registry/README.md": "8795c1528154eb8a642eb2d1460af249c83608a0353205235041cc996391e52a",
+    "contracts/scope-registry/check.py": "484b29686914487dc2b2eb7c5270ced9f51b2f8b8e52bfcf3cb1d2c29bcff910",
+    "contracts/scope-registry/examples.json": "9c98806f361e18747f99881ad3ea53b53b61d15a6c64885fa6b4ac45f4218e3c",
+    "contracts/scope-registry/fixtures.py": "e3a23b57ebe693b70417f676c21eb589d1e82c0394dfc1bc34b0d2339e36acb2",
+    "contracts/scope-registry/generate.py": "6aa28f63a5dcaf0ed6beaecd033c3b5f20ac4d63f299618ff2ac48792d52debb",
+    "contracts/scope-registry/preview/mapping.json": "c117ca46b24a1b68df13e994d5264ebe57d0c2d780740ce5001c02f8b435708f",
+    "contracts/scope-registry/preview/models.schema.json": "63b70a69aa0134af9e09cae32b75ff5a215cd0c859ee8010a46be324a8b2637a",
+    "contracts/scope-registry/registry.py": "81930c519706fdef87580fcc93fa4ef18d220057d1fc196b7005911d77ff347c",
+    "contracts/scope-registry/report.json": "166283eb465929ab4e79dcdae3cd501a4fb40a0c0b0e0cc8aac1682cfaf11541",
+    "contracts/scope-registry/sources.json": "36faf7de18d6bd59bb60f2cfebec46acbb9b49f000144b344376a3a94a0d0575",
+    "contracts/scope-release/README.md": "fefa3c0f544d8f35a659f630e7f7fc23865e36788624b50e123ff7ec2ad12a07",
+    "contracts/scope-release/check.py": "e3c4e7167602ce547d718ac269baeba9b23a6128c63b245160eaefced9997d85",
+    "contracts/scope-release/gate.py": "e41da63c6af75c69f50e3fd1def3a577a97f023d35ff44af3ce0bac5272b0efb",
+    "contracts/scope-release/report.json": "9ef23aa901ecdb65da181c72db1e01c897e1f513dd36ab30bd3f4e9d88d99fdd",
+    "contracts/scope-release/sources.json": "9f6aea41d3b8443758f1016e54c96434837eca1c3e2dbd99fc35398fb14ab62f",
+    "contracts/scope-storage/README.md": "60975beaa298d4f2705e9259f373583e1d9d5146e439229d44429915188426ea",
+    "contracts/scope-storage/check.py": "c693c863fbd4844e16860869829972a92f655e0022a7ae8593bee1be03cb4a92",
+    "contracts/scope-storage/registry.sql": "e05b9302b798b97922de32fca77864b42e38acfc45a21dd6124d756e729e3dfa",
+    "contracts/scope-storage/report.json": "cc81debfc052ef9ef5dfd9a413cc245ccbe3fe71de13a51bd838cd2758ecdf52",
+    "contracts/scope-storage/sources.json": "3d3e9038d852b366b7e7bb43685c75bc08520528c8a2c9dad006e97d373a4aca",
+    "contracts/scope-storage/storage.py": "ba3da45c0d1de8b5e334a4f0c666a2f19e28293973f6d4a67bdbe44a6108dd2a",
+    "contracts/snapshot-consumer/README.md": "7deb7789ec218225ce6e7a68f7f93a1f50852e3ba50a9ba719047d970f414fa7",
+    "contracts/snapshot-consumer/check.py": "f8c334e7bdc74548ff47a355486f35a3939cb0645955dd43b660bc565a6c9ab2",
+    "contracts/snapshot-consumer/consumer.py": "51a41e1b34833722eaa90e6928ebf6bb57dcaddd3be5fbf5363595be984adbdc",
+    "contracts/snapshot-consumer/projection.sql": "414cb8556a0641b1a98e917b2f2f2881eb3a56a16bd287a46d742f8428c4c005",
+    "contracts/snapshot-consumer/report.json": "1f6ec9705ad249b33d06f3a486d8f72f6233ecfecd890088e6b1019413f0279a",
+    "contracts/snapshot-consumer/sources.json": "0918dbeff845f5c308dc243e2086ba8583fd8be84543df4f59aa22a94929ae29",
+    "contracts/wire-js/README.md": "600e638e7892c3638d0c62e32a1b9fedfb74dac22aeacf895b0db5a5b4e41563",
+    "contracts/wire-js/check.mjs": "231cc42e47a767c580e65e7e0a55380fb67a4e309f96ec3bdc1643bb3efead97",
+    "contracts/wire-js/dependencies.json": "dbcae02770866302233c18e475b263906d64971d76a1ea1f869f65dac7e8d3cc",
+    "contracts/wire-js/oracle.py": "c5d38958bbb29c69eef5b3b5d9d4d78533a0752a41889350e6f072430cf99326",
+    "contracts/wire-js/package-lock.json": "64097c158f67143afbf72ed378f1baffed263a1bb72475ee3be87497ee313f3b",
+    "contracts/wire-js/package.json": "fec7a0f66be113eb9a8229e041a40ab7f7f7462d1a0fd7eb6fe524075d71c85d",
+    "contracts/wire-js/report.json": "127e05370fb23b0ab5b8b45ff13b04b191855243eabf47aeee141543990c727d",
+    "contracts/wire-js/schema.mjs": "6ce4f0ee2057b2af4fc7f8b8a2b8e8aa3addcfb4b3712bfceab34ed8f11c0c79",
+    "contracts/wire-js/sources.json": "24f95b7219a08d2956d94c21019fe937bde608636209cd04001a93af8372a2d0",
+    "contracts/wire-js/wire.mjs": "f433050503f6998fcaca56fda38b7191b0591e672ea107f4c2d7f7b25a7d8acb",
+    "contracts/wire-json/README.md": "cf53f81edafb2f2d66fe2295b49b329d33ff423368e4a0b5f555a41d165cbb0a",
+    "contracts/wire-json/check.py": "f96b55bcc4d906ed2533a3098800dff457b84e0e32aaa550d369857dc105dcd5",
+    "contracts/wire-json/number-oracle.mjs": "ec5f13e96175e3f7726efc61f8d429359dfbc891cd01fbcb7eecd023106172fc",
+    "contracts/wire-json/report.json": "7d51fc3560d5ebaf9e20218641e69284e853e459e4e05386895321dc6280f911",
+    "contracts/wire-json/source/decoder-design-cases.json": "fd989d837216633721ce9fa7e5fa6ee5c81b5085d0db0bfbbabd578768e26a83",
+    "contracts/wire-json/source/decoder-design.schema.json": "6ce0196e8004e4425a2540c2c4ccd92d9652f7a3aaff5e0ae4eaec24df666d16",
+    "contracts/wire-json/sources.json": "3e3cdb1e258b9d0a0807d1cbf95a59f2807188a318b54193a03eae521a6557a5",
+    "contracts/wire-json/wire.py": "ab9629bb3f0e883296e8aeef53be321ed317275eb40e8eb4dc8cdbab86c395bb",
+    "contracts/wire-static/README.md": "34100453c63f91af7178141e532945dd11bfac95d7e91dccf949c9410597c7ac",
+    "contracts/wire-static/browser-report.json": "779a0d4953bb3cee430f3388ec873590908b6781b479e74e2b240da3c35ea850",
+    "contracts/wire-static/browser.html": "310f92dcc11f766de665b42ff913919c11943a2706e98178e3819de7c625b9fa",
+    "contracts/wire-static/browser.mjs": "4c027cfe10cd5c3bbf55955337984071ea4b4572f78cd2baa5a4cac1eb467e22",
+    "contracts/wire-static/build.mjs": "f02fbfe740a4ae42e0c135188f319d69b9f1abac5795fae81f06332d743c996e",
+    "contracts/wire-static/check.mjs": "75038ca716c5ca1909bd9672fc437470aa342c281b0d2d4d4710535644c411c8",
+    "contracts/wire-static/node-static.mjs": "3583c28b99d173024b29879786a32577926f42f4af3086b1441a031adcdad555",
+    "contracts/wire-static/policy.json": "69472e0fcd3560786d11052954925f7f33e56a3671d660752a6a4378c0e2c1a4",
+    "contracts/wire-static/preview/LICENSES.txt": "8da6966734e4e5080bc5dedeff1d1e9dcd6cc239f043a97c127b9ef7a15b3c21",
+    "contracts/wire-static/preview/cases.json": "592c79d06adb00c28638a50c5835aaafa2972beec1d289757d748fc1d969264e",
+    "contracts/wire-static/preview/contract-cases.json": "bad10e91dfdcd537c4c3824c2e228110789a70a2575b2e6e99c592b43caab2a6",
+    "contracts/wire-static/preview/contracts-registry.mjs": "4674ddf3901d578110c75d1a8a96a04b96c8459c5e8cd3792175c4ff09c0c742",
+    "contracts/wire-static/preview/contracts-validators.mjs": "27fdd60d69586390aca598b9b90b1a9ae94b0db8651e403fb4ce794575012208",
+    "contracts/wire-static/preview/contracts-wire.mjs": "f2095ccfac0413b2d55ccf24b46fe2ba3a21ab6e416e67f073d748fd2ac77f6e",
+    "contracts/wire-static/preview/helpers.mjs": "920ee8279050fe2beae3657a95e98ad7ae5fbe141b8f184dfa217620959253fa",
+    "contracts/wire-static/preview/integer-map.json": "3395be11c02206e8c3b2525bf3c881d2374eacf10d008a3da935d7a42493d239",
+    "contracts/wire-static/preview/manifest.json": "15adba6a9ebf2ba9d85375477d19705a426e434af563a65e30cbbc8badca2e24",
+    "contracts/wire-static/preview/test-registry.mjs": "dd7f6c1d5e766a1dbdf4e9f2c4ad71ac40ec6864730c1025240bc7f963f6cbb8",
+    "contracts/wire-static/preview/test-schemas.json": "f374f1b72e70e1f372f74b9229d15ed4928d19510c2c9d2e1b4b46a938bce128",
+    "contracts/wire-static/preview/test-validators.mjs": "583b9a69f00b96d8c53b96b6c1570c8953289ac69b799962174fed08d788137a",
+    "contracts/wire-static/preview/test-wire.mjs": "68119eb6a2b179f6d2a956ba57d1ef3974319fef2dbaed036f0899a2f106a572",
+    "contracts/wire-static/runtime-tests.mjs": "7dd4fdb08d3d8bbcea6800d20baaa2717b807ea67370a3607fb040a074c20c06",
+    "contracts/wire-static/serve.mjs": "9da6adebf30d461769ee3f6958b584f2a0cf7975b80d8265bc0628058459726c",
+    "contracts/wire-static/snapshot-fixtures.py": "9763bc259470f6903e46e24a995abce2bc522e5b0af61c30b83982b89dc10de2",
+    "contracts/wire-static/source/snapshots.json": "528b494b7ad73a77f1b81edd6763ead05b0aad781d29942f7214a14891bd72f7",
+    "contracts/wire-static/sources.json": "1b8c010aecc31d64fe4dbf61b373b582c58fa4475dfa789ab0c4a03cfcd0d7eb"
+  }
+}
