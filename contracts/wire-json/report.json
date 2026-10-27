@@ -1,0 +1,2635 @@
+{
+  "format": "wire-json-check/1",
+  "all_passed": true,
+  "approved": false,
+  "runtime_ready": false,
+  "cases_passed": 649,
+  "checks": [
+    {
+      "name": "输入字节:contracts/event-integration/preview/models.schema.json",
+      "passed": true
+    },
+    {
+      "name": "输入字节:contracts/event-integration/preview/selection.json",
+      "passed": true
+    },
+    {
+      "name": "输入字节:contracts/event-integration/report.json",
+      "passed": true
+    },
+    {
+      "name": "输入字节:contracts/composition/requirements-validation.txt",
+      "passed": true
+    },
+    {
+      "name": "固定候选:source/decoder-design-cases.json",
+      "passed": true
+    },
+    {
+      "name": "固定候选:source/decoder-design.schema.json",
+      "passed": true
+    },
+    {
+      "name": "Profile对应固定候选",
+      "passed": true
+    },
+    {
+      "name": "DW01",
+      "passed": true
+    },
+    {
+      "name": "DW01错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW02",
+      "passed": true
+    },
+    {
+      "name": "DW03",
+      "passed": true
+    },
+    {
+      "name": "DW03错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW04",
+      "passed": true
+    },
+    {
+      "name": "DW04错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW05",
+      "passed": true
+    },
+    {
+      "name": "DW05错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW06",
+      "passed": true
+    },
+    {
+      "name": "DW07",
+      "passed": true
+    },
+    {
+      "name": "DW07错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW08",
+      "passed": true
+    },
+    {
+      "name": "DW09",
+      "passed": true
+    },
+    {
+      "name": "DW09错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW10",
+      "passed": true
+    },
+    {
+      "name": "DW10错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW11",
+      "passed": true
+    },
+    {
+      "name": "DW12",
+      "passed": true
+    },
+    {
+      "name": "DW12错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW13",
+      "passed": true
+    },
+    {
+      "name": "DW14",
+      "passed": true
+    },
+    {
+      "name": "DW14错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW15",
+      "passed": true
+    },
+    {
+      "name": "DW16",
+      "passed": true
+    },
+    {
+      "name": "DW17",
+      "passed": true
+    },
+    {
+      "name": "DW17错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW18",
+      "passed": true
+    },
+    {
+      "name": "DW18错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW19",
+      "passed": true
+    },
+    {
+      "name": "DW20",
+      "passed": true
+    },
+    {
+      "name": "DW20错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW21",
+      "passed": true
+    },
+    {
+      "name": "DW21错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW22",
+      "passed": true
+    },
+    {
+      "name": "DW23",
+      "passed": true
+    },
+    {
+      "name": "DW23错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW24",
+      "passed": true
+    },
+    {
+      "name": "DW24错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW25",
+      "passed": true
+    },
+    {
+      "name": "DW25错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW26",
+      "passed": true
+    },
+    {
+      "name": "DW27",
+      "passed": true
+    },
+    {
+      "name": "DW28",
+      "passed": true
+    },
+    {
+      "name": "DW28错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW29",
+      "passed": true
+    },
+    {
+      "name": "DW29错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "DW29私有token定位",
+      "passed": true
+    },
+    {
+      "name": "DW30",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝20",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝20错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝5b",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝5b错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝7b",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝7b错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝5b312c5d",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝5b312c5d错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝7b22612220317d",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝7b22612220317d错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝7b2261223a7d",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝7b2261223a7d错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝5b30315d",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝5b30315d错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝312e",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝312e错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝3165",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝3165错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝2b31",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝2b31错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝2e31",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝2e31错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝2d2d31",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝2d2d31错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝7472756566616c7365",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝7472756566616c7365错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝6e756c6c78",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝6e756c6c78错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝2f2a782a2f31",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝2f2a782a2f31错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝22780a22",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝22780a22错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝225c78313222",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝225c78313222错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝225c753132673422",
+      "passed": true
+    },
+    {
+      "name": "语法拒绝225c753132673422错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "非法scalar225c756463303022",
+      "passed": true
+    },
+    {
+      "name": "非法scalar225c756463303022错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "非法scalar225c75643830307822",
+      "passed": true
+    },
+    {
+      "name": "非法scalar225c75643830307822错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "非法scalar225c756664643022",
+      "passed": true
+    },
+    {
+      "name": "非法scalar225c756664643022错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "非法scalar225c756666666522",
+      "passed": true
+    },
+    {
+      "name": "非法scalar225c756666666522错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "非法scalar225c756666666622",
+      "passed": true
+    },
+    {
+      "name": "非法scalar225c756666666622错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "非法scalar225c75643833665c756466666522",
+      "passed": true
+    },
+    {
+      "name": "非法scalar225c75643833665c756466666522错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "UTF8拒绝22eda08022",
+      "passed": true
+    },
+    {
+      "name": "UTF8拒绝22eda08022错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "UTF8拒绝22f490808022",
+      "passed": true
+    },
+    {
+      "name": "UTF8拒绝22f490808022错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "UTF8拒绝228022",
+      "passed": true
+    },
+    {
+      "name": "UTF8拒绝228022错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "UTF8拒绝22e28222",
+      "passed": true
+    },
+    {
+      "name": "UTF8拒绝22e28222错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "可变缓冲拒绝",
+      "passed": true
+    },
+    {
+      "name": "可变缓冲拒绝错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "内存视图拒绝",
+      "passed": true
+    },
+    {
+      "name": "内存视图拒绝错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_message_bytes零预算",
+      "passed": true
+    },
+    {
+      "name": "max_message_bytes零预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_message_bytes布尔预算",
+      "passed": true
+    },
+    {
+      "name": "max_message_bytes布尔预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_depth零预算",
+      "passed": true
+    },
+    {
+      "name": "max_depth零预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_depth布尔预算",
+      "passed": true
+    },
+    {
+      "name": "max_depth布尔预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_value_nodes零预算",
+      "passed": true
+    },
+    {
+      "name": "max_value_nodes零预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_value_nodes布尔预算",
+      "passed": true
+    },
+    {
+      "name": "max_value_nodes布尔预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_object_members零预算",
+      "passed": true
+    },
+    {
+      "name": "max_object_members零预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_object_members布尔预算",
+      "passed": true
+    },
+    {
+      "name": "max_object_members布尔预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_key_utf8_bytes零预算",
+      "passed": true
+    },
+    {
+      "name": "max_key_utf8_bytes零预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_key_utf8_bytes布尔预算",
+      "passed": true
+    },
+    {
+      "name": "max_key_utf8_bytes布尔预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_string_utf8_bytes零预算",
+      "passed": true
+    },
+    {
+      "name": "max_string_utf8_bytes零预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_string_utf8_bytes布尔预算",
+      "passed": true
+    },
+    {
+      "name": "max_string_utf8_bytes布尔预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_number_chars零预算",
+      "passed": true
+    },
+    {
+      "name": "max_number_chars零预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_number_chars布尔预算",
+      "passed": true
+    },
+    {
+      "name": "max_number_chars布尔预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_exponent_abs零预算",
+      "passed": true
+    },
+    {
+      "name": "max_exponent_abs零预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "max_exponent_abs布尔预算",
+      "passed": true
+    },
+    {
+      "name": "max_exponent_abs布尔预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "slice_units零预算",
+      "passed": true
+    },
+    {
+      "name": "slice_units零预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "slice_units布尔预算",
+      "passed": true
+    },
+    {
+      "name": "slice_units布尔预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "parse_deadline_ms零预算",
+      "passed": true
+    },
+    {
+      "name": "parse_deadline_ms零预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "parse_deadline_ms布尔预算",
+      "passed": true
+    },
+    {
+      "name": "parse_deadline_ms布尔预算错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "message等号接受",
+      "passed": true
+    },
+    {
+      "name": "message超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "message超一拒绝错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "depth等号接受",
+      "passed": true
+    },
+    {
+      "name": "depth超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "depth超一拒绝错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "nodes等号接受",
+      "passed": true
+    },
+    {
+      "name": "nodes超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "nodes超一拒绝错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "members等号接受",
+      "passed": true
+    },
+    {
+      "name": "members超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "members超一拒绝错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "key等号接受",
+      "passed": true
+    },
+    {
+      "name": "key超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "key超一拒绝错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "string等号接受",
+      "passed": true
+    },
+    {
+      "name": "string超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "string超一拒绝错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "number等号接受",
+      "passed": true
+    },
+    {
+      "name": "number超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "number超一拒绝错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "exponent等号接受",
+      "passed": true
+    },
+    {
+      "name": "exponent超一拒绝",
+      "passed": true
+    },
+    {
+      "name": "exponent超一拒绝错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "转义后长度一致",
+      "passed": true
+    },
+    {
+      "name": "取消拒绝",
+      "passed": true
+    },
+    {
+      "name": "取消拒绝错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "deadline等号拒绝",
+      "passed": true
+    },
+    {
+      "name": "deadline等号拒绝错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "时钟倒退",
+      "passed": true
+    },
+    {
+      "name": "时钟倒退错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "时钟类型",
+      "passed": true
+    },
+    {
+      "name": "时钟类型错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "扫描中取消",
+      "passed": true
+    },
+    {
+      "name": "扫描中取消错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "EOF字节偏移",
+      "passed": true
+    },
+    {
+      "name": "EOF字节偏移错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "EOF指向完整字节长度",
+      "passed": true
+    },
+    {
+      "name": "分支0",
+      "passed": true
+    },
+    {
+      "name": "分支0错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "分支1",
+      "passed": true
+    },
+    {
+      "name": "分支2",
+      "passed": true
+    },
+    {
+      "name": "分支3",
+      "passed": true
+    },
+    {
+      "name": "分支3错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "分支4",
+      "passed": true
+    },
+    {
+      "name": "分支5",
+      "passed": true
+    },
+    {
+      "name": "分支6",
+      "passed": true
+    },
+    {
+      "name": "分支6错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "nullable不误拦",
+      "passed": true
+    },
+    {
+      "name": "oneOf保留两个成功分支",
+      "passed": true
+    },
+    {
+      "name": "oneOf保留两个成功分支错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "范围下界",
+      "passed": true
+    },
+    {
+      "name": "范围下界错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "范围上界",
+      "passed": true
+    },
+    {
+      "name": "范围上界错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "不改原Schema",
+      "passed": true
+    },
+    {
+      "name": "不误改数据",
+      "passed": true
+    },
+    {
+      "name": "属性type的Schema照常进入",
+      "passed": true
+    },
+    {
+      "name": "常量中的integer不是类型节点",
+      "passed": true
+    },
+    {
+      "name": "外部引用禁止网络",
+      "passed": true
+    },
+    {
+      "name": "外部引用禁止网络错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "未知引用封闭失败",
+      "passed": true
+    },
+    {
+      "name": "未知引用封闭失败错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "无进展引用递归封闭失败",
+      "passed": true
+    },
+    {
+      "name": "无进展引用递归封闭失败错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "错误不含动态键",
+      "passed": true
+    },
+    {
+      "name": "错误不含动态键错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "无秘密反射",
+      "passed": true
+    },
+    {
+      "name": "字节半开区间/é",
+      "passed": true
+    },
+    {
+      "name": "字节半开区间/a~1b/~0x",
+      "passed": true
+    },
+    {
+      "name": "多字节前缀偏移",
+      "passed": true
+    },
+    {
+      "name": "Pointer保留空键",
+      "passed": true
+    },
+    {
+      "name": "DTO只读",
+      "passed": true
+    },
+    {
+      "name": "嵌套DTO只读",
+      "passed": true
+    },
+    {
+      "name": "数组只读",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:0",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:0",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:0",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:-0",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:-0",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:-0",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:1",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:1",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:1",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:1.0",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:1.0",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:1.0",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:1e0",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:1e0",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:1e0",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:1.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:1.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:1.0000000000000001",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:9007199254740992",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:9007199254740992",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:9007199254740992",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:9007199254740993",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:9007199254740993",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:9007199254740993",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:-9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:-9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:-9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:1e20",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:1e20",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:1e20",
+      "passed": true
+    },
+    {
+      "name": "V8下溢:1e-400",
+      "passed": true
+    },
+    {
+      "name": "V8下溢:1e-400错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:0e-400",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:0e-400",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:0e-400",
+      "passed": true
+    },
+    {
+      "name": "V8非有限:1e309",
+      "passed": true
+    },
+    {
+      "name": "V8非有限:1e309错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:5e-324",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:5e-324",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:5e-324",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:2.2250738585072014e-308",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:2.2250738585072014e-308",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:2.2250738585072014e-308",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:1.7976931348623157e308",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:1.7976931348623157e308",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:1.7976931348623157e308",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:123000e-3",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:123000e-3",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:123000e-3",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:10e-1",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:10e-1",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:10e-1",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:1001e-3",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:1001e-3",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:1001e-3",
+      "passed": true
+    },
+    {
+      "name": "BigInt数学整数:0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+      "passed": true
+    },
+    {
+      "name": "BigInt安全范围:0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+      "passed": true
+    },
+    {
+      "name": "V8位模式:0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+      "passed": true
+    },
+    {
+      "name": "V8非有限:1e4096",
+      "passed": true
+    },
+    {
+      "name": "V8非有限:1e4096错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分0",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分1",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分2",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分3",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分4",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分5",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分6",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分7",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分8",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分9",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分10",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分11",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分12",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分13",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分14",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分15",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分16",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分17",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分18",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分19",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分20",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分21",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分22",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分23",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分24",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分25",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分26",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分27",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分28",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分29",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分30",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分31",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分32",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分33",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分34",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分35",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分36",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分37",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分38",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分39",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分40",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分41",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分42",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分43",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分44",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分45",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分46",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分47",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分48",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分49",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分50",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分51",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分52",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分53",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分54",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分55",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分56",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分57",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分58",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分59",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分60",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分61",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分62",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分63",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分64",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分65",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分66",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分67",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分68",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分69",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分70",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分71",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分72",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分73",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分74",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分75",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分76",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分77",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分78",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分79",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分80",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分81",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分82",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分83",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分84",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分85",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分86",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分87",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分88",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分89",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分90",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分91",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分92",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分93",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分94",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分95",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分96",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分97",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分98",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分99",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分100",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分101",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分102",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分103",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分104",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分105",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分106",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分107",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分108",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分109",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分110",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分111",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分112",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分113",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分114",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分115",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分116",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分117",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分118",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分119",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分120",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分121",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分122",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分123",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分124",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分125",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分126",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分127",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分128",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分129",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分130",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分131",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分132",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分133",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分134",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分135",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分136",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分137",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分138",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分139",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分140",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分141",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分142",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分143",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分144",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分145",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分146",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分147",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分148",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分149",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分150",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分151",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分152",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分153",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分154",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分155",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分156",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分157",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分158",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分159",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分160",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分161",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分162",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分163",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分164",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分165",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分166",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分167",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分168",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分169",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分170",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分171",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分172",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分173",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分174",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分175",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分176",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分177",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分178",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分179",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分180",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分181",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分182",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分183",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分184",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分185",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分186",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分187",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分188",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分189",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分190",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分191",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分192",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分193",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分194",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分195",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分196",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分197",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分198",
+      "passed": true
+    },
+    {
+      "name": "标准解析差分199",
+      "passed": true
+    },
+    {
+      "name": "64并发上下文隔离",
+      "passed": true
+    },
+    {
+      "name": "完整图有具名整数",
+      "passed": true
+    },
+    {
+      "name": "完整图整数拒舍入",
+      "passed": true
+    },
+    {
+      "name": "完整图整数拒舍入错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "完整图整数拒越界",
+      "passed": true
+    },
+    {
+      "name": "完整图整数拒越界错误不回显原文",
+      "passed": true
+    },
+    {
+      "name": "完整图原件未改",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__AdmissionDecision/properties/retry_after_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__AuthorizationSnapshot/properties/fresh_for_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/barrier_intents/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/command_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/device_command_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/devices/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/evidence_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/frame_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/gui_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/gui_events/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/http_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/ipc_normal_slots/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/ipc_protection_slots/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/json_depth/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/login_burst/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/login_per_minute/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/max_reserved_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/max_wal_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/min_disk_free_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/protection_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/request_burst/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/requests_per_second/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/source_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/source_events/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/workers/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/capacity/properties/writer_queue/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/clock/properties/drift_bound_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/clock/properties/max_sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/clock/properties/max_uncertainty_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/identity/properties/access_token_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/identity/properties/bootstrap_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/identity/properties/gate_lease_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/identity/properties/gate_renew_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/identity/properties/local_revoke_alarm_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/identity/properties/pairing_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/identity/properties/recent_auth_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/identity/properties/refresh_idle_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/identity/properties/remote_revoke_alarm_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/identity/properties/session_absolute_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/identity/properties/snapshot_fresh_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/identity/properties/snapshot_refresh_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/identity/properties/ws_ticket_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/retention/properties/audit_days/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/retention/properties/context_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityProfile/properties/retention/properties/terminal_detail_days/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityStatus/properties/usage/items/properties/limit/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__CapacityStatus/properties/usage/items/properties/used/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockAssessment/allOf/0/then/properties/sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockAssessment/allOf/0/then/properties/uncertainty_now_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockAssessment/allOf/0/then/properties/utc_lower_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockAssessment/allOf/0/then/properties/utc_upper_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockAssessment/properties/sample_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockAssessment/properties/uncertainty_now_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockAssessment/properties/utc_lower_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockAssessment/properties/utc_upper_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockSample/allOf/0/then/properties/uncertainty_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockSample/properties/drift_bound_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockSample/properties/estimated_utc_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockSample/properties/max_sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockSample/properties/uncertainty_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockStatus/allOf/0/then/properties/sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ClockStatus/properties/sample_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__EventAgeProof/allOf/0/else/properties/lower_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__EventAgeProof/allOf/0/else/properties/upper_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__EventAgeProof/properties/lower_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__EventAgeProof/properties/upper_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__EventReceipt/properties/age_at_admission_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__ObsCompletionBundle/properties/max_query_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__Observation/properties/freshness_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__RequestContext/properties/max_unique_requests/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__RequestContextRequest/properties/max_unique_requests/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__RetryPolicy/properties/backoff_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__RetryPolicy/properties/max_attempts/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__TimeBoundEvidence/allOf/0/then/properties/stratum/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__TimeBoundEvidence/allOf/0/then/properties/uncertainty_at_capture_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__TimeBoundEvidence/properties/drift_bound_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__TimeBoundEvidence/properties/stratum/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__TimeBoundEvidence/properties/uncertainty_at_capture_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__TimeBoundEvidence/properties/wall_read_utc_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__TimeBoundProfile/properties/drift_bound_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__TimeBoundProfile/properties/max_capture_span_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__TimeBoundProfile/properties/max_sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__TimeBoundProfile/properties/max_source_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__TimeBoundProfile/properties/max_uncertainty_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/baseline__TransitionDefinition/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__A__S3_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__EA__EncodingAuthorization/properties/max_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__S0__Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__S11__Exchange/properties/leap/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__S11__Exchange/properties/ntp_mode/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__S11__Exchange/properties/ntp_version/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__S11__Exchange/properties/precision/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__S11__Exchange/properties/response_size/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__S11__Exchange/properties/stratum/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__S11__Profile/properties/elapsed_error_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__S11__Profile/properties/max_packet_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__S11__Request/properties/request_size/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__S8__Packet/properties/byte_length/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__S9__ObsCompletionCandidate/properties/max_query_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__S9__TransportPacket/properties/byte_length/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__V__S0_AttemptView/properties/ordinal/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__V__S1_Policy/properties/max_attempts/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__V__S5_ClockStatus/allOf/0/then/properties/sample_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__V__S5_ClockStatus/properties/sample_age_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__V__S5_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/command__V__S5_ObsCompletionBundle/properties/max_query_age_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/control__OfferRequest/properties/offer_ttl_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/ingress__TransitionEvaluation/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/installation__Artifact_Binding_endpoint/properties/values/items/properties/port/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/installation__Permission_network_endpoint/properties/scope/properties/port/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/lifecycle__Program_CompileDiagnostic/properties/budget/anyOf/0/properties/limit/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/lifecycle__Program_CompileDiagnostic/properties/budget/anyOf/0/properties/observed/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/lifecycle__Program_DelayStep/properties/delay_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/lifecycle__Program_DelayStep/properties/max_lateness_ms/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/lifecycle__Program_Transition/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/lifecycle__TransitionEvaluation/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/panel__Public_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/panel__Public_TransitionDefinition/properties/priority/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/panel__Result_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/panel__Result_SafeInt/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/preparation__S3_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/registry__Profile/properties/maximum_records/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/snapshot__CommandSnapshotView/properties/completion/properties/evidence_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/snapshot__CommandState/allOf/4/then/properties/resource_evidence_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/snapshot__CommandState/properties/attempt_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/snapshot__CommandState/properties/completion_evidence_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/snapshot__CommandState/properties/resource_evidence_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/snapshot__Manifest/properties/page_count/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/snapshot__Manifest/properties/total_content_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/snapshot__ObservationSnapshotView/properties/freshness_ms/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/snapshot__PageContent/properties/next_page_index/anyOf/0/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/snapshot__PageContent/properties/page_index/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/snapshot__PageDescriptor/properties/content_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/snapshot__PageDescriptor/properties/page_index/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/subscription__Result_Duration/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/subscription__Result_SafeInt/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/time_internal__S11__Exchange/properties/leap/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/time_internal__S11__Exchange/properties/ntp_mode/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/time_internal__S11__Exchange/properties/ntp_version/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/time_internal__S11__Exchange/properties/precision/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/time_internal__S11__Exchange/properties/response_size/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/time_internal__S11__Exchange/properties/stratum/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/time_internal__S11__Profile/properties/elapsed_error_ppm/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/time_internal__S11__Profile/properties/max_packet_bytes/type",
+      "passed": true
+    },
+    {
+      "name": "整数节点映射:/$defs/time_internal__S11__Request/properties/request_size/type",
+      "passed": true
+    }
+  ],
+  "planned_raw_cases_executed": 30,
+  "differential_json_cases": 200,
+  "parallel_decodes": 64,
+  "node": "v24.11.1",
+  "numeric_cross_language_cases": 22,
+  "full_graph_integer_nodes": 146,
+  "python": "3.14.0",
+  "jsonschema": "4.25.1",
+  "product_runtime_tests_executed": 0,
+  "browser_tests_executed": 0,
+  "network_tests_executed": 0,
+  "device_tests_executed": 0,
+  "limitations": [
+    "同步参考不提供worker池或让出执行",
+    "V8只验证数字算术与位模式，不是完整JS扫描器",
+    "业务关联与动态Schema批准仍由可信上层提供"
+  ],
+  "inputs": {
+    "contracts/composition/requirements-validation.txt": "a336de65ce30f3e834980f7ba382b336a92ff98c2189272409b88d55058b7e1b",
+    "contracts/event-integration/preview/models.schema.json": "f1c7a1a2a2ff4dd0834f05a8eb87033c7bb644e673a7b92d1f830f4e8ac1d6b5",
+    "contracts/event-integration/preview/selection.json": "efdd3a57be14c408764b3813a04b12ffd3bee57f0fdd31cbce9daac828fd6340",
+    "contracts/event-integration/report.json": "9c5caf7928aa0daa8e704fc7f8acfb3d1bf34ce5293323d7bffec8e8edf8b2d0",
+    "contracts/wire-json/check.py": "f96b55bcc4d906ed2533a3098800dff457b84e0e32aaa550d369857dc105dcd5",
+    "contracts/wire-json/number-oracle.mjs": "ec5f13e96175e3f7726efc61f8d429359dfbc891cd01fbcb7eecd023106172fc",
+    "contracts/wire-json/README.md": "cf53f81edafb2f2d66fe2295b49b329d33ff423368e4a0b5f555a41d165cbb0a",
+    "contracts/wire-json/source/decoder-design-cases.json": "fd989d837216633721ce9fa7e5fa6ee5c81b5085d0db0bfbbabd578768e26a83",
+    "contracts/wire-json/source/decoder-design.schema.json": "6ce0196e8004e4425a2540c2c4ccd92d9652f7a3aaff5e0ae4eaec24df666d16",
+    "contracts/wire-json/sources.json": "3e3cdb1e258b9d0a0807d1cbf95a59f2807188a318b54193a03eae521a6557a5",
+    "contracts/wire-json/wire.py": "ab9629bb3f0e883296e8aeef53be321ed317275eb40e8eb4dc8cdbab86c395bb"
+  }
+}
