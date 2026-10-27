@@ -1,0 +1,622 @@
+{
+  "format": "channel-release-check/1",
+  "all_passed": true,
+  "approved": false,
+  "runtime_ready": false,
+  "cases_passed": 138,
+  "checks": [
+    {
+      "name": "人员入队不推进发送",
+      "passed": true
+    },
+    {
+      "name": "人员入队不登记已交付映射",
+      "passed": true
+    },
+    {
+      "name": "人员阻塞可重试",
+      "passed": true
+    },
+    {
+      "name": "人员阻塞不推进ACK",
+      "passed": true
+    },
+    {
+      "name": "人员阻塞保留队首",
+      "passed": true
+    },
+    {
+      "name": "人员完整出口",
+      "passed": true
+    },
+    {
+      "name": "人员完整字节",
+      "passed": true
+    },
+    {
+      "name": "人员完整出口推进发送",
+      "passed": true
+    },
+    {
+      "name": "人员出口不伪造ACK",
+      "passed": true
+    },
+    {
+      "name": "人员当前ACK推进",
+      "passed": true
+    },
+    {
+      "name": "人员重复ACK",
+      "passed": true
+    },
+    {
+      "name": "人员外部原订阅副本不受改写",
+      "passed": true
+    },
+    {
+      "name": "人员屏障交付仍在补齐",
+      "passed": true
+    },
+    {
+      "name": "人员屏障ACK后进入实时",
+      "passed": true
+    },
+    {
+      "name": "人员实时状态",
+      "passed": true
+    },
+    {
+      "name": "人员实时帧ACK",
+      "passed": true
+    },
+    {
+      "name": "人员传输阶段无数据库事务",
+      "passed": true
+    },
+    {
+      "name": "服务入队不推进发送",
+      "passed": true
+    },
+    {
+      "name": "服务入队不登记已交付映射",
+      "passed": true
+    },
+    {
+      "name": "服务阻塞可重试",
+      "passed": true
+    },
+    {
+      "name": "服务阻塞不推进ACK",
+      "passed": true
+    },
+    {
+      "name": "服务阻塞保留队首",
+      "passed": true
+    },
+    {
+      "name": "服务完整出口",
+      "passed": true
+    },
+    {
+      "name": "服务完整字节",
+      "passed": true
+    },
+    {
+      "name": "服务完整出口推进发送",
+      "passed": true
+    },
+    {
+      "name": "服务出口不伪造ACK",
+      "passed": true
+    },
+    {
+      "name": "服务当前ACK推进",
+      "passed": true
+    },
+    {
+      "name": "服务重复ACK",
+      "passed": true
+    },
+    {
+      "name": "服务外部原订阅副本不受改写",
+      "passed": true
+    },
+    {
+      "name": "服务屏障交付仍在补齐",
+      "passed": true
+    },
+    {
+      "name": "服务屏障ACK后进入实时",
+      "passed": true
+    },
+    {
+      "name": "服务实时状态",
+      "passed": true
+    },
+    {
+      "name": "服务实时帧ACK",
+      "passed": true
+    },
+    {
+      "name": "服务传输阶段无数据库事务",
+      "passed": true
+    },
+    {
+      "name": "规范入队不推进发送",
+      "passed": true
+    },
+    {
+      "name": "规范入队不登记已交付映射",
+      "passed": true
+    },
+    {
+      "name": "规范阻塞可重试",
+      "passed": true
+    },
+    {
+      "name": "规范阻塞不推进ACK",
+      "passed": true
+    },
+    {
+      "name": "规范阻塞保留队首",
+      "passed": true
+    },
+    {
+      "name": "规范完整出口",
+      "passed": true
+    },
+    {
+      "name": "规范完整字节",
+      "passed": true
+    },
+    {
+      "name": "规范完整出口推进发送",
+      "passed": true
+    },
+    {
+      "name": "规范出口不伪造ACK",
+      "passed": true
+    },
+    {
+      "name": "规范当前ACK推进",
+      "passed": true
+    },
+    {
+      "name": "规范重复ACK",
+      "passed": true
+    },
+    {
+      "name": "规范外部原订阅副本不受改写",
+      "passed": true
+    },
+    {
+      "name": "规范屏障交付仍在补齐",
+      "passed": true
+    },
+    {
+      "name": "规范屏障ACK后进入实时",
+      "passed": true
+    },
+    {
+      "name": "规范实时状态",
+      "passed": true
+    },
+    {
+      "name": "规范实时帧ACK",
+      "passed": true
+    },
+    {
+      "name": "规范传输阶段无数据库事务",
+      "passed": true
+    },
+    {
+      "name": "未交付帧不能ACK",
+      "passed": true
+    },
+    {
+      "name": "未交付ACK不改游标",
+      "passed": true
+    },
+    {
+      "name": "错误ACK关闭出口",
+      "passed": true
+    },
+    {
+      "name": "ACK后重建队列影子保持链",
+      "passed": true
+    },
+    {
+      "name": "后一帧未ACK不跨越确认",
+      "passed": true
+    },
+    {
+      "name": "partial失败类别",
+      "passed": true
+    },
+    {
+      "name": "partial不推进发送",
+      "passed": true
+    },
+    {
+      "name": "partial清空整队列",
+      "passed": true
+    },
+    {
+      "name": "partial不重发后缀",
+      "passed": true
+    },
+    {
+      "name": "partial仅一次出口",
+      "passed": true
+    },
+    {
+      "name": "zero失败类别",
+      "passed": true
+    },
+    {
+      "name": "zero不推进发送",
+      "passed": true
+    },
+    {
+      "name": "zero清空整队列",
+      "passed": true
+    },
+    {
+      "name": "zero不重发后缀",
+      "passed": true
+    },
+    {
+      "name": "zero仅一次出口",
+      "passed": true
+    },
+    {
+      "name": "unknown失败类别",
+      "passed": true
+    },
+    {
+      "name": "unknown不推进发送",
+      "passed": true
+    },
+    {
+      "name": "unknown清空整队列",
+      "passed": true
+    },
+    {
+      "name": "unknown不重发后缀",
+      "passed": true
+    },
+    {
+      "name": "unknown仅一次出口",
+      "passed": true
+    },
+    {
+      "name": "boolean失败类别",
+      "passed": true
+    },
+    {
+      "name": "boolean不推进发送",
+      "passed": true
+    },
+    {
+      "name": "boolean清空整队列",
+      "passed": true
+    },
+    {
+      "name": "boolean不重发后缀",
+      "passed": true
+    },
+    {
+      "name": "boolean仅一次出口",
+      "passed": true
+    },
+    {
+      "name": "阻塞后重试重核资格",
+      "passed": true
+    },
+    {
+      "name": "资格变化没有出口字节",
+      "passed": true
+    },
+    {
+      "name": "entity正文变异拒绝",
+      "passed": true
+    },
+    {
+      "name": "entity正文变异不改交付历史",
+      "passed": true
+    },
+    {
+      "name": "epoch正文变异拒绝",
+      "passed": true
+    },
+    {
+      "name": "epoch正文变异不改交付历史",
+      "passed": true
+    },
+    {
+      "name": "origin正文变异拒绝",
+      "passed": true
+    },
+    {
+      "name": "origin正文变异不改交付历史",
+      "passed": true
+    },
+    {
+      "name": "history正文变异拒绝",
+      "passed": true
+    },
+    {
+      "name": "history正文变异不改交付历史",
+      "passed": true
+    },
+    {
+      "name": "body正文变异拒绝",
+      "passed": true
+    },
+    {
+      "name": "body正文变异不改交付历史",
+      "passed": true
+    },
+    {
+      "name": "cursor正文变异拒绝",
+      "passed": true
+    },
+    {
+      "name": "cursor正文变异不改交付历史",
+      "passed": true
+    },
+    {
+      "name": "digest正文变异拒绝",
+      "passed": true
+    },
+    {
+      "name": "digest正文变异不改交付历史",
+      "passed": true
+    },
+    {
+      "name": "connection正文变异拒绝",
+      "passed": true
+    },
+    {
+      "name": "connection正文变异不改交付历史",
+      "passed": true
+    },
+    {
+      "name": "checkpoint正文变异拒绝",
+      "passed": true
+    },
+    {
+      "name": "checkpoint正文变异不改交付历史",
+      "passed": true
+    },
+    {
+      "name": "入队后正文来源改变",
+      "passed": true
+    },
+    {
+      "name": "正文改变无字节",
+      "passed": true
+    },
+    {
+      "name": "同步屏障ACK前禁止后续排队",
+      "passed": true
+    },
+    {
+      "name": "enqueue重读期间撤权拒绝",
+      "passed": true
+    },
+    {
+      "name": "enqueue撤权不推进确认",
+      "passed": true
+    },
+    {
+      "name": "enqueue撤权后无出口",
+      "passed": true
+    },
+    {
+      "name": "release重读期间撤权拒绝",
+      "passed": true
+    },
+    {
+      "name": "release撤权不推进确认",
+      "passed": true
+    },
+    {
+      "name": "release撤权后无出口",
+      "passed": true
+    },
+    {
+      "name": "ack重读期间撤权拒绝",
+      "passed": true
+    },
+    {
+      "name": "ack撤权不推进确认",
+      "passed": true
+    },
+    {
+      "name": "ack撤权后无出口",
+      "passed": true
+    },
+    {
+      "name": "持久撤销接入帧出口",
+      "passed": true
+    },
+    {
+      "name": "持久撤销旧队列无出口",
+      "passed": true
+    },
+    {
+      "name": "过期帧不能交付",
+      "passed": true
+    },
+    {
+      "name": "过期无字节",
+      "passed": true
+    },
+    {
+      "name": "ACK重读后期限到达",
+      "passed": true
+    },
+    {
+      "name": "最终期限拒绝不推进ACK",
+      "passed": true
+    },
+    {
+      "name": "原身份移除帧可交付",
+      "passed": true
+    },
+    {
+      "name": "规范事件durable ACK",
+      "passed": true
+    },
+    {
+      "name": "规范事件authority拒绝",
+      "passed": true
+    },
+    {
+      "name": "规范事件source_epoch拒绝",
+      "passed": true
+    },
+    {
+      "name": "规范事件sequence拒绝",
+      "passed": true
+    },
+    {
+      "name": "规范事件member拒绝",
+      "passed": true
+    },
+    {
+      "name": "规范事件purpose拒绝",
+      "passed": true
+    },
+    {
+      "name": "规范事件json_type拒绝",
+      "passed": true
+    },
+    {
+      "name": "完整交付后撤权仍返回实际交付",
+      "passed": true
+    },
+    {
+      "name": "关闭不抹去已经发送的历史",
+      "passed": true
+    },
+    {
+      "name": "关闭后保留历史不代表可发送",
+      "passed": true
+    },
+    {
+      "name": "关闭后不能推进ACK",
+      "passed": true
+    },
+    {
+      "name": "同一订阅generation不能重复注册",
+      "passed": true
+    },
+    {
+      "name": "重复注册不影响原出口",
+      "passed": true
+    },
+    {
+      "name": "替换连接先关闭旧出口",
+      "passed": true
+    },
+    {
+      "name": "替换连接清除旧队列",
+      "passed": true
+    },
+    {
+      "name": "新generation可以使用",
+      "passed": true
+    },
+    {
+      "name": "旧ticket替换后无效",
+      "passed": true
+    },
+    {
+      "name": "旧ticket不会写入新传输",
+      "passed": true
+    },
+    {
+      "name": "出口排队容量拒绝",
+      "passed": true
+    },
+    {
+      "name": "容量拒绝清空旧排队",
+      "passed": true
+    },
+    {
+      "name": "人员订阅拒绝durable ACK",
+      "passed": true
+    },
+    {
+      "name": "外线程不能访问owner数据库",
+      "passed": true
+    },
+    {
+      "name": "外线程拒绝不损坏有效出口",
+      "passed": true
+    }
+  ],
+  "sqlite_file_scenarios": 40,
+  "thread_invalidation_scenarios": 4,
+  "product_runtime_tests_executed": 0,
+  "authentication_tests_executed": 0,
+  "http_ws_tls_tests_executed": 0,
+  "browser_tests_executed": 0,
+  "device_tests_executed": 0,
+  "power_loss_tests_executed": 0,
+  "scope": "真实SQLite与内存订阅状态的参考接线；出口为合成接收器，未证明生产传输、页完整性或消费端落库",
+  "inputs": {
+    "contracts/channel-release/bridge.py": "4090660b61afd4be74b39ee2ef2b1632bb2cade2c8b29b51da356243e1b8bc98",
+    "contracts/channel-release/check.py": "c1ecaf8faba02c22dc365db7c5b62172b16abb5aaee7fb89edadbaf93c9e2dc4",
+    "contracts/channel-release/README.md": "30113017141860945ebd35ac691afd3db66ba0059d29992b5db6ac6be74da99b",
+    "contracts/channel-release/sources.json": "73a84c8f9c79ab6a9fb46fe42e504dd085489ff24810f36ff55adf6f1aa3447d",
+    "contracts/composition/compose.py": "a23b0ecf89824956a8194e8ecead8208ef7507bebb7e5d8d2bdd3f99b0c9eeb7",
+    "contracts/event-channel/build.py": "4ee26e65b6064e50cf373429302852845cab0731ef54766c893895ece51f632a",
+    "contracts/event-channel/check.py": "38476d2e1717948cdcec08e04382b64d05b792a5dfd5804d56aa529df80ffa96",
+    "contracts/event-channel/examples.json": "07e56d29960b1e3f654a1c47028a96320557c7448d40c8b015716fcca662963b",
+    "contracts/event-channel/fixtures.py": "5e9c162c65204d3bfbf5696eaa3d594cd4dd362e0853454ebe600cc085ec602d",
+    "contracts/event-channel/model.py": "7256d11d0725993ebf42b00ffb78bf738d6ad7c9afcddb880a44ef87417b3053",
+    "contracts/event-channel/preview/frames.schema.json": "ff41574455a19b6d822080e86f5ad097bb04404e60745d2850a15b83e25c1faa",
+    "contracts/event-channel/preview/models.schema.json": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a",
+    "contracts/event-channel/preview/policy.json": "37b1c52006c949a3514e377a92e351b0280732ed068695ebc6034a0d94f139dc",
+    "contracts/event-channel/preview/subscriptions.openapi.json": "d38062b3632aaceca6b838f5aca6f076e859d2cbf5dd3bc7f4610b14bdb14c25",
+    "contracts/event-channel/README.md": "be4ac54b3a1233b5d03cf87b5da782a1b050fe8ec93c871193b84b96aa062695",
+    "contracts/event-channel/report.json": "079dbadaa7e08e1fd25124aa9e3618682f45c7eeadbecaa19610d2cf1c867e80",
+    "contracts/event-channel/source/service-subscription.schema.json": "e6c6f1eb8d87e51a2cc9a526565fe1ce85b96b8392596509b8cbe0cffab393ca",
+    "contracts/event-channel/sources.json": "94785224dd21d800bafce9cbaaae1aeac6a6d7717c65c53a18725aedaffe7ed0",
+    "contracts/event-projection/examples.json": "51fb40b6c1dea8120b43ff097934d0106b054d55f370c02a44d3189c53565e0a",
+    "contracts/event-projection/preview/models.schema.json": "24c8707849102ab59a9460499f5b4e5800a4af19d51782e3edea7b611d0aa068",
+    "contracts/event-projection/preview/snapshot.schema.json": "21ce875e721a003fe7a44f110742a53f98c9d061bb5c42c8e914f7367de74a7f",
+    "contracts/event-projection/source/snapshot-cases.json": "9f8df61ca7c7b6b069b5cecda694099961cb53d57fa61a808f0d1a0e983d2f46",
+    "contracts/scope-recovery/check.py": "1ab6105cbd5046a71d5320ac4349d9680428b6aff4909913bc3cfb446e3a78b8",
+    "contracts/scope-recovery/owner.py": "e3bd9572854dc5ffa2710290b7fc26e79f74e22f122040443063797824d4b21a",
+    "contracts/scope-recovery/README.md": "d424c436313decce9de2d82d1a123068eca9a572143db73b6a8f82c78b1f530e",
+    "contracts/scope-recovery/recovery.sql": "fc747a59588486b25da536f0f3b7c227fc6af65fa7d320b39ab670faf510d956",
+    "contracts/scope-recovery/report.json": "c1f178edd62df8610a756bf73493080f88f1584844b473cdc192120732aa0e38",
+    "contracts/scope-recovery/sources.json": "986b8ee9f8e6333cbc99c2dc3a0ec49d321dbd83e9646a92c4c9d002ebd2cbbc",
+    "contracts/scope-recovery/worker.py": "33031ba89ee160e2d54baa3edf18190e7b21adede203fa3dfb6cb79e63cb1ae0",
+    "contracts/scope-registry/check.py": "484b29686914487dc2b2eb7c5270ced9f51b2f8b8e52bfcf3cb1d2c29bcff910",
+    "contracts/scope-registry/examples.json": "9c98806f361e18747f99881ad3ea53b53b61d15a6c64885fa6b4ac45f4218e3c",
+    "contracts/scope-registry/fixtures.py": "e3a23b57ebe693b70417f676c21eb589d1e82c0394dfc1bc34b0d2339e36acb2",
+    "contracts/scope-registry/generate.py": "6aa28f63a5dcaf0ed6beaecd033c3b5f20ac4d63f299618ff2ac48792d52debb",
+    "contracts/scope-registry/preview/mapping.json": "c117ca46b24a1b68df13e994d5264ebe57d0c2d780740ce5001c02f8b435708f",
+    "contracts/scope-registry/preview/models.schema.json": "63b70a69aa0134af9e09cae32b75ff5a215cd0c859ee8010a46be324a8b2637a",
+    "contracts/scope-registry/README.md": "8795c1528154eb8a642eb2d1460af249c83608a0353205235041cc996391e52a",
+    "contracts/scope-registry/registry.py": "81930c519706fdef87580fcc93fa4ef18d220057d1fc196b7005911d77ff347c",
+    "contracts/scope-registry/report.json": "166283eb465929ab4e79dcdae3cd501a4fb40a0c0b0e0cc8aac1682cfaf11541",
+    "contracts/scope-registry/sources.json": "36faf7de18d6bd59bb60f2cfebec46acbb9b49f000144b344376a3a94a0d0575",
+    "contracts/scope-release/check.py": "e3c4e7167602ce547d718ac269baeba9b23a6128c63b245160eaefced9997d85",
+    "contracts/scope-release/gate.py": "e41da63c6af75c69f50e3fd1def3a577a97f023d35ff44af3ce0bac5272b0efb",
+    "contracts/scope-release/README.md": "fefa3c0f544d8f35a659f630e7f7fc23865e36788624b50e123ff7ec2ad12a07",
+    "contracts/scope-release/report.json": "9ef23aa901ecdb65da181c72db1e01c897e1f513dd36ab30bd3f4e9d88d99fdd",
+    "contracts/scope-release/sources.json": "9f6aea41d3b8443758f1016e54c96434837eca1c3e2dbd99fc35398fb14ab62f",
+    "contracts/scope-storage/check.py": "c693c863fbd4844e16860869829972a92f655e0022a7ae8593bee1be03cb4a92",
+    "contracts/scope-storage/README.md": "60975beaa298d4f2705e9259f373583e1d9d5146e439229d44429915188426ea",
+    "contracts/scope-storage/registry.sql": "e05b9302b798b97922de32fca77864b42e38acfc45a21dd6124d756e729e3dfa",
+    "contracts/scope-storage/report.json": "cc81debfc052ef9ef5dfd9a413cc245ccbe3fe71de13a51bd838cd2758ecdf52",
+    "contracts/scope-storage/sources.json": "3d3e9038d852b366b7e7bb43685c75bc08520528c8a2c9dad006e97d373a4aca",
+    "contracts/scope-storage/storage.py": "ba3da45c0d1de8b5e334a4f0c666a2f19e28293973f6d4a67bdbe44a6108dd2a"
+  }
+}
