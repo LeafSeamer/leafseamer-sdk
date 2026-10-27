@@ -1,0 +1,14 @@
+{
+  "format": "wire-routing-artifacts/1",
+  "approved": false,
+  "runtime_ready": false,
+  "artifacts": {
+    "validators.mjs": "0b7a048b20ff32c33dcb573135aaf32c72420be8e501e19333bbd7e412990e52",
+    "registry.mjs": "78b560368b47aa97f3ef74157317c8f256b7cdccc7be7ed38f4af198795dc945",
+    "wire.mjs": "47ee90c6585770cc16a1aee27f7d6fbcfb5cc7b64b46b791ed386443170b1520",
+    "helpers.mjs": "920ee8279050fe2beae3657a95e98ad7ae5fbe141b8f184dfa217620959253fa",
+    "LICENSES.txt": "8da6966734e4e5080bc5dedeff1d1e9dcd6cc239f043a97c127b9ef7a15b3c21",
+    "inventory.json": "3cb7942adc07b1d51ba7464e97910b98c86b204b6240bf1971eb2a8a8fc0f61c",
+    "routes.mjs": "3743f82284d643dd04584f19b4775ca55a4ede754d7549a1751f844ba2d75ca7"
+  }
+}

@@ -1,0 +1,6664 @@
+{
+  "format": "wire-routing-inventory/1",
+  "approved": false,
+  "runtime_ready": false,
+  "operations": [
+    {
+      "authority": "controller",
+      "operation_id": "getRevocation",
+      "method": "GET",
+      "path": "/api/v1/auth/revocations/{operation_id}",
+      "request": null,
+      "responses": {
+        "200": "r0",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1auth~1revocations~1{operation_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getCapacity",
+      "method": "GET",
+      "path": "/api/v1/capacity",
+      "request": null,
+      "responses": {
+        "200": "r3",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1capacity/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getClock",
+      "method": "GET",
+      "path": "/api/v1/clock",
+      "request": null,
+      "responses": {
+        "200": "r4",
+        "400": "r5",
+        "401": "r6",
+        "403": "r6",
+        "404": "r6",
+        "409": "r5",
+        "429": "r6",
+        "503": "r6"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1clock/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getClockAssessment",
+      "method": "GET",
+      "path": "/api/v1/clock-assessment",
+      "request": null,
+      "responses": {
+        "200": "r4",
+        "400": "r5",
+        "401": "r6",
+        "403": "r6",
+        "404": "r6",
+        "409": "r5",
+        "429": "r6",
+        "503": "r6"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1clock-assessment/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getCommand",
+      "method": "GET",
+      "path": "/api/v1/commands/{command_id}",
+      "request": null,
+      "responses": {
+        "200": "r7",
+        "400": "r8",
+        "401": "r9",
+        "403": "r10",
+        "404": "r11",
+        "409": "r12",
+        "410": "r13",
+        "413": "r14",
+        "422": "r15",
+        "429": "r16",
+        "503": "r17"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1commands~1{command_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getCommandCancellation",
+      "method": "GET",
+      "path": "/api/v1/commands/{command_id}/cancellations/{cancellation_id}",
+      "request": null,
+      "responses": {
+        "200": "r18",
+        "400": "r8",
+        "401": "r9",
+        "403": "r10",
+        "404": "r11",
+        "409": "r12",
+        "410": "r13",
+        "413": "r14",
+        "422": "r15",
+        "429": "r16",
+        "503": "r19"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1commands~1{command_id}~1cancellations~1{cancellation_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getCommandEvidence",
+      "method": "GET",
+      "path": "/api/v1/commands/{command_id}/evidence",
+      "request": null,
+      "responses": {
+        "200": "r20",
+        "400": "r8",
+        "401": "r9",
+        "403": "r10",
+        "404": "r11",
+        "409": "r12",
+        "410": "r13",
+        "413": "r14",
+        "422": "r15",
+        "429": "r16",
+        "503": "r19"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1commands~1{command_id}~1evidence/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getCommandEvidenceRevision",
+      "method": "GET",
+      "path": "/api/v1/commands/{command_id}/evidence/{evidence_id}/revisions/{revision}",
+      "request": null,
+      "responses": {
+        "200": "r21",
+        "400": "r8",
+        "401": "r9",
+        "403": "r10",
+        "404": "r11",
+        "409": "r12",
+        "410": "r13",
+        "413": "r14",
+        "422": "r15",
+        "429": "r16",
+        "503": "r19"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1commands~1{command_id}~1evidence~1{evidence_id}~1revisions~1{revision}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getCommandRevision",
+      "method": "GET",
+      "path": "/api/v1/commands/{command_id}/revisions/{revision}",
+      "request": null,
+      "responses": {
+        "200": "r22",
+        "400": "r8",
+        "401": "r9",
+        "403": "r10",
+        "404": "r11",
+        "409": "r12",
+        "410": "r13",
+        "413": "r14",
+        "422": "r15",
+        "429": "r16",
+        "503": "r19"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1commands~1{command_id}~1revisions~1{revision}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getControlOperation",
+      "method": "GET",
+      "path": "/api/v1/control-operations/{operation_id}",
+      "request": null,
+      "responses": {
+        "200": "r23",
+        "400": "r24",
+        "401": "r25",
+        "403": "r25",
+        "404": "r25",
+        "409": "r24",
+        "429": "r25",
+        "503": "r25"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1control-operations~1{operation_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "listDevices",
+      "method": "GET",
+      "path": "/api/v1/devices",
+      "request": null,
+      "responses": {
+        "200": "r26",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1devices/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getCapabilities",
+      "method": "GET",
+      "path": "/api/v1/devices/{device_id}/capabilities",
+      "request": null,
+      "responses": {
+        "200": "r27",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1devices~1{device_id}~1capabilities/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getControl",
+      "method": "GET",
+      "path": "/api/v1/devices/{device_id}/control",
+      "request": null,
+      "responses": {
+        "200": "r28",
+        "400": "r24",
+        "401": "r25",
+        "403": "r25",
+        "404": "r25",
+        "409": "r24",
+        "429": "r25",
+        "503": "r25"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1devices~1{device_id}~1control/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getTransfer",
+      "method": "GET",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}",
+      "request": null,
+      "responses": {
+        "200": "r29",
+        "400": "r24",
+        "401": "r25",
+        "403": "r25",
+        "404": "r25",
+        "409": "r24",
+        "429": "r25",
+        "503": "r25"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1devices~1{device_id}~1control~1transfers~1{transfer_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getSceneCatalog",
+      "method": "GET",
+      "path": "/api/v1/devices/{device_id}/scene-catalog",
+      "request": null,
+      "responses": {
+        "200": "r30",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1devices~1{device_id}~1scene-catalog/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getDeviceState",
+      "method": "GET",
+      "path": "/api/v1/devices/{device_id}/state",
+      "request": null,
+      "responses": {
+        "200": "r31",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1devices~1{device_id}~1state/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "openEvents",
+      "method": "GET",
+      "path": "/api/v1/events",
+      "request": null,
+      "responses": {
+        "101": null,
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {
+        "client": "r43",
+        "server": "r44",
+        "first_server": "r45"
+      },
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1events/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getExtensionOperation",
+      "method": "GET",
+      "path": "/api/v1/extension-operations/{operation_id}",
+      "request": null,
+      "responses": {
+        "200": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-operations~1{operation_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getExtensionSlot",
+      "method": "GET",
+      "path": "/api/v1/extension-slots/{slot_id}",
+      "request": null,
+      "responses": {
+        "200": "r56",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getExtensionInstallation",
+      "method": "GET",
+      "path": "/api/v1/extensions/{installation_id}",
+      "request": null,
+      "responses": {
+        "200": "r57",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extensions~1{installation_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getMeta",
+      "method": "GET",
+      "path": "/api/v1/meta",
+      "request": null,
+      "responses": {
+        "200": "r58",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1meta/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getPanelConfirmation",
+      "method": "GET",
+      "path": "/api/v1/panel-confirmations/{preview_id}",
+      "request": null,
+      "responses": {
+        "200": "r59",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-confirmations~1{preview_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getPanelSessionOperation",
+      "method": "GET",
+      "path": "/api/v1/panel-session-operations/{host_operation_id}",
+      "request": null,
+      "responses": {
+        "200": "r69",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-session-operations~1{host_operation_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getPanelSession",
+      "method": "GET",
+      "path": "/api/v1/panel-sessions/{session_id}",
+      "request": null,
+      "responses": {
+        "200": "r70",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getPanelRequest",
+      "method": "GET",
+      "path": "/api/v1/panel-sessions/{session_id}/requests/{request_id}",
+      "request": null,
+      "responses": {
+        "200": "r71",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1requests~1{request_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getPanelSubscription",
+      "method": "GET",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}",
+      "request": null,
+      "responses": {
+        "200": "r72",
+        "400": "r73",
+        "401": "r74",
+        "403": "r75",
+        "404": "r76",
+        "409": "r77",
+        "410": "r78",
+        "413": "r79",
+        "429": "r80",
+        "503": "r81"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1subscriptions~1{subscription_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getPanelProjectionFrames",
+      "method": "GET",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/frames",
+      "request": null,
+      "responses": {
+        "200": "r82",
+        "400": "r73",
+        "401": "r74",
+        "403": "r75",
+        "404": "r76",
+        "409": "r77",
+        "410": "r78",
+        "413": "r79",
+        "429": "r80",
+        "503": "r81"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1subscriptions~1{subscription_id}~1frames/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getSession",
+      "method": "GET",
+      "path": "/api/v1/session",
+      "request": null,
+      "responses": {
+        "200": "r83",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1session/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getSubject",
+      "method": "GET",
+      "path": "/api/v1/subjects/{subject_id}",
+      "request": null,
+      "responses": {
+        "200": "r84",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subjects~1{subject_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getSnapshot",
+      "method": "GET",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshot",
+      "request": null,
+      "responses": {
+        "200": "r85",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subscriptions~1{subscription_id}~1snapshot/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getClockDomainDescriptor",
+      "method": "GET",
+      "path": "/internal/clock-domain",
+      "request": null,
+      "responses": {
+        "200": "r86",
+        "400": "r87",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r87",
+        "412": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1clock-domain/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getReferenceTimeAnchor",
+      "method": "GET",
+      "path": "/internal/reference-time/anchors/{id}/{revision}",
+      "request": null,
+      "responses": {
+        "200": "r88",
+        "400": "r89",
+        "401": "r90",
+        "403": "r90",
+        "404": "r90",
+        "409": "r89",
+        "429": "r90",
+        "503": "r90"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1reference-time~1anchors~1{id}~1{revision}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getReferenceTimeAssessment",
+      "method": "GET",
+      "path": "/internal/reference-time/assessments/{id}/{revision}",
+      "request": null,
+      "responses": {
+        "200": "r91",
+        "400": "r89",
+        "401": "r90",
+        "403": "r90",
+        "404": "r90",
+        "409": "r89",
+        "429": "r90",
+        "503": "r90"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1reference-time~1assessments~1{id}~1{revision}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getReferenceTimeBundle",
+      "method": "GET",
+      "path": "/internal/reference-time/bundles/{id}/{revision}",
+      "request": null,
+      "responses": {
+        "200": "r92",
+        "400": "r89",
+        "401": "r90",
+        "403": "r90",
+        "404": "r90",
+        "409": "r89",
+        "429": "r90",
+        "503": "r90"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1reference-time~1bundles~1{id}~1{revision}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getReferenceTimeProfile",
+      "method": "GET",
+      "path": "/internal/reference-time/profiles/{id}/{revision}",
+      "request": null,
+      "responses": {
+        "200": "r93",
+        "400": "r89",
+        "401": "r90",
+        "403": "r90",
+        "404": "r90",
+        "409": "r89",
+        "429": "r90",
+        "503": "r90"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1reference-time~1profiles~1{id}~1{revision}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "revokeAuthorization",
+      "method": "POST",
+      "path": "/api/v1/auth/revocations",
+      "request": "r94",
+      "responses": {
+        "200": "r0",
+        "202": "r0",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1auth~1revocations/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "submitCommand",
+      "method": "POST",
+      "path": "/api/v1/commands",
+      "request": "r98",
+      "responses": {
+        "200": "r95",
+        "202": "r95",
+        "400": "r96",
+        "401": "r97",
+        "403": "r97",
+        "409": "r96",
+        "413": "r97",
+        "422": "r97",
+        "429": "r97",
+        "503": "r97"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1commands/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "lookupCommandAdmission",
+      "method": "POST",
+      "path": "/api/v1/commands/lookup",
+      "request": "r100",
+      "responses": {
+        "200": "r99",
+        "400": "r96",
+        "401": "r97",
+        "403": "r97",
+        "409": "r96",
+        "413": "r97",
+        "422": "r97",
+        "429": "r97",
+        "503": "r97"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1commands~1lookup/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "rejectCommandAdmission",
+      "method": "POST",
+      "path": "/api/v1/commands/reject",
+      "request": "r101",
+      "responses": {
+        "200": "r95",
+        "400": "r96",
+        "401": "r97",
+        "403": "r97",
+        "409": "r96",
+        "413": "r97",
+        "422": "r97",
+        "429": "r97",
+        "503": "r97"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1commands~1reject/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "cancelCommand",
+      "method": "POST",
+      "path": "/api/v1/commands/{command_id}/cancel",
+      "request": "r103",
+      "responses": {
+        "200": "r102",
+        "202": "r102",
+        "400": "r8",
+        "401": "r9",
+        "403": "r10",
+        "404": "r11",
+        "409": "r12",
+        "410": "r13",
+        "413": "r14",
+        "422": "r15",
+        "429": "r16",
+        "503": "r19"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1commands~1{command_id}~1cancel/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "lookupCommandCancellation",
+      "method": "POST",
+      "path": "/api/v1/commands/{command_id}/cancellations/lookup",
+      "request": "r105",
+      "responses": {
+        "200": "r104",
+        "400": "r8",
+        "401": "r9",
+        "403": "r10",
+        "404": "r11",
+        "409": "r12",
+        "410": "r13",
+        "413": "r14",
+        "422": "r15",
+        "429": "r16",
+        "503": "r19"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1commands~1{command_id}~1cancellations~1lookup/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "lookupControlRequest",
+      "method": "POST",
+      "path": "/api/v1/control-requests/lookup",
+      "request": "r107",
+      "responses": {
+        "200": "r106",
+        "400": "r24",
+        "401": "r25",
+        "403": "r25",
+        "404": "r25",
+        "409": "r24",
+        "429": "r25",
+        "503": "r25"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1control-requests~1lookup/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "acquireControl",
+      "method": "POST",
+      "path": "/api/v1/devices/{device_id}/control/acquire",
+      "request": "r109",
+      "responses": {
+        "200": "r108",
+        "202": "r108",
+        "400": "r24",
+        "401": "r25",
+        "403": "r25",
+        "404": "r25",
+        "409": "r24",
+        "429": "r25",
+        "503": "r25"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1devices~1{device_id}~1control~1acquire/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "releaseControl",
+      "method": "POST",
+      "path": "/api/v1/devices/{device_id}/control/release",
+      "request": "r110",
+      "responses": {
+        "200": "r108",
+        "202": "r108",
+        "400": "r24",
+        "401": "r25",
+        "403": "r25",
+        "404": "r25",
+        "409": "r24",
+        "429": "r25",
+        "503": "r25"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1devices~1{device_id}~1control~1release/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "offerTransfer",
+      "method": "POST",
+      "path": "/api/v1/devices/{device_id}/control/transfers",
+      "request": "r111",
+      "responses": {
+        "200": "r108",
+        "202": "r108",
+        "400": "r24",
+        "401": "r25",
+        "403": "r25",
+        "404": "r25",
+        "409": "r24",
+        "429": "r25",
+        "503": "r25"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1devices~1{device_id}~1control~1transfers/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "acceptTransfer",
+      "method": "POST",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}/accept",
+      "request": "r112",
+      "responses": {
+        "200": "r108",
+        "202": "r108",
+        "400": "r24",
+        "401": "r25",
+        "403": "r25",
+        "404": "r25",
+        "409": "r24",
+        "429": "r25",
+        "503": "r25"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1devices~1{device_id}~1control~1transfers~1{transfer_id}~1accept/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "cancelTransfer",
+      "method": "POST",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}/cancel",
+      "request": "r113",
+      "responses": {
+        "200": "r108",
+        "202": "r108",
+        "400": "r24",
+        "401": "r25",
+        "403": "r25",
+        "404": "r25",
+        "409": "r24",
+        "429": "r25",
+        "503": "r25"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1devices~1{device_id}~1control~1transfers~1{transfer_id}~1cancel/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "lookupExtensionRequest",
+      "method": "POST",
+      "path": "/api/v1/extension-operations/lookup",
+      "request": "r115",
+      "responses": {
+        "200": "r114",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-operations~1lookup/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "createExtensionSlot",
+      "method": "POST",
+      "path": "/api/v1/extension-slots",
+      "request": "r116",
+      "responses": {
+        "200": "r56",
+        "201": "r56",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "activateExtension",
+      "method": "POST",
+      "path": "/api/v1/extension-slots/{slot_id}/activate",
+      "request": "r117",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}~1activate/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "disableExtension",
+      "method": "POST",
+      "path": "/api/v1/extension-slots/{slot_id}/disable",
+      "request": "r118",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}~1disable/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "enableExtension",
+      "method": "POST",
+      "path": "/api/v1/extension-slots/{slot_id}/enable",
+      "request": "r119",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}~1enable/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "planExtensionChange",
+      "method": "POST",
+      "path": "/api/v1/extension-slots/{slot_id}/plan",
+      "request": "r121",
+      "responses": {
+        "200": "r120",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}~1plan/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "uninstallExtension",
+      "method": "POST",
+      "path": "/api/v1/extension-slots/{slot_id}/uninstall",
+      "request": "r122",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}~1uninstall/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "upgradeExtension",
+      "method": "POST",
+      "path": "/api/v1/extension-slots/{slot_id}/upgrade",
+      "request": "r123",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}~1upgrade/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "stageExtension",
+      "method": "POST",
+      "path": "/api/v1/extensions/stage",
+      "request": "r124",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extensions~1stage/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "approveExtension",
+      "method": "POST",
+      "path": "/api/v1/extensions/{installation_id}/approve",
+      "request": "r125",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extensions~1{installation_id}~1approve/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "resolveExtensionRoles",
+      "method": "POST",
+      "path": "/api/v1/extensions/{installation_id}/resolve",
+      "request": "r127",
+      "responses": {
+        "200": "r126",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extensions~1{installation_id}~1resolve/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "reviewExtensionPermissions",
+      "method": "POST",
+      "path": "/api/v1/extensions/{installation_id}/review",
+      "request": "r129",
+      "responses": {
+        "200": "r128",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extensions~1{installation_id}~1review/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "cancelPanelConfirmation",
+      "method": "POST",
+      "path": "/api/v1/panel-confirmations/{preview_id}/cancel",
+      "request": "r130",
+      "responses": {
+        "200": "r71",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-confirmations~1{preview_id}~1cancel/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "commitPanelConfirmation",
+      "method": "POST",
+      "path": "/api/v1/panel-confirmations/{preview_id}/commit",
+      "request": "r131",
+      "responses": {
+        "200": "r71",
+        "202": "r71",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-confirmations~1{preview_id}~1commit/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "createPanelSession",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions",
+      "request": "r132",
+      "responses": {
+        "200": "r70",
+        "201": "r70",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "activatePanelSession",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/activate",
+      "request": "r133",
+      "responses": {
+        "200": "r70",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1activate/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "closePanelSession",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/close",
+      "request": "r134",
+      "responses": {
+        "200": "r69",
+        "202": "r69",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1close/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "offerPanelConfirmation",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/confirmations",
+      "request": "r135",
+      "responses": {
+        "200": "r59",
+        "201": "r59",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1confirmations/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "beginPanelHandshake",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/handshake",
+      "request": "r136",
+      "responses": {
+        "200": "r70",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1handshake/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "preparePanelActivation",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/prepare-activation",
+      "request": "r137",
+      "responses": {
+        "200": "r70",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1prepare-activation/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "renewPanelSession",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/renew",
+      "request": "r138",
+      "responses": {
+        "200": "r70",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1renew/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "invokePanelMethod",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/requests",
+      "request": "r139",
+      "responses": {
+        "200": "r71",
+        "202": "r71",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1requests/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "createPanelSubscription",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions",
+      "request": "r140",
+      "responses": {
+        "200": "r72",
+        "201": "r72",
+        "400": "r73",
+        "401": "r74",
+        "403": "r75",
+        "404": "r76",
+        "409": "r77",
+        "410": "r78",
+        "413": "r79",
+        "429": "r80",
+        "503": "r81"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1subscriptions/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "acknowledgePanelProjection",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/ack",
+      "request": "r141",
+      "responses": {
+        "200": "r72",
+        "400": "r73",
+        "401": "r74",
+        "403": "r75",
+        "404": "r76",
+        "409": "r77",
+        "410": "r78",
+        "413": "r79",
+        "429": "r80",
+        "503": "r81"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1subscriptions~1{subscription_id}~1ack/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "closePanelSubscription",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/close",
+      "request": "r142",
+      "responses": {
+        "200": "r72",
+        "202": "r72",
+        "400": "r73",
+        "401": "r74",
+        "403": "r75",
+        "404": "r76",
+        "409": "r77",
+        "410": "r78",
+        "413": "r79",
+        "429": "r80",
+        "503": "r81"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1subscriptions~1{subscription_id}~1close/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "createRequestContext",
+      "method": "POST",
+      "path": "/api/v1/request-contexts",
+      "request": "r144",
+      "responses": {
+        "200": "r143",
+        "201": "r143",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1request-contexts/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "revokeRunGrant",
+      "method": "POST",
+      "path": "/api/v1/run-grants/{grant_id}/revoke",
+      "request": "r146",
+      "responses": {
+        "200": "r145",
+        "202": "r145",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1run-grants~1{grant_id}~1revoke/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "createSubscription",
+      "method": "POST",
+      "path": "/api/v1/subscriptions",
+      "request": "r148",
+      "responses": {
+        "200": "r147",
+        "202": "r147",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subscriptions/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "issueWsTicket",
+      "method": "POST",
+      "path": "/api/v1/ws-tickets",
+      "request": "r151",
+      "responses": {
+        "200": "r149",
+        "201": "r150",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1ws-tickets/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "bootstrap",
+      "method": "POST",
+      "path": "/auth/bootstrap",
+      "request": "r152",
+      "responses": {
+        "201": "r83",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1auth~1bootstrap/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "issueToken",
+      "method": "POST",
+      "path": "/auth/service-tokens",
+      "request": "r154",
+      "responses": {
+        "201": "r153",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1auth~1service-tokens/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "login",
+      "method": "POST",
+      "path": "/auth/sessions",
+      "request": "r155",
+      "responses": {
+        "201": "r83",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1auth~1sessions/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "refreshSession",
+      "method": "POST",
+      "path": "/auth/sessions/refresh",
+      "request": "r156",
+      "responses": {
+        "200": "r83",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1auth~1sessions~1refresh/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "introspect",
+      "method": "POST",
+      "path": "/internal/auth/introspect",
+      "request": "r158",
+      "responses": {
+        "200": "r157",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1auth~1introspect/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "issueContinuation",
+      "method": "POST",
+      "path": "/internal/automation/continuations",
+      "request": "r162",
+      "responses": {
+        "200": "r159",
+        "201": "r159",
+        "400": "r160",
+        "401": "r161",
+        "403": "r161",
+        "409": "r160",
+        "413": "r161",
+        "422": "r161",
+        "429": "r161",
+        "503": "r161"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1automation~1continuations/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "lookupControllerContinuation",
+      "method": "POST",
+      "path": "/internal/automation/continuations/lookup",
+      "request": "r164",
+      "responses": {
+        "200": "r163",
+        "400": "r160",
+        "401": "r161",
+        "403": "r161",
+        "409": "r160",
+        "413": "r161",
+        "422": "r161",
+        "429": "r161",
+        "503": "r161"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1automation~1continuations~1lookup/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "prepareAutomation",
+      "method": "POST",
+      "path": "/internal/automation/preparations",
+      "request": "r168",
+      "responses": {
+        "200": "r165",
+        "202": "r165",
+        "400": "r166",
+        "401": "r167",
+        "403": "r167",
+        "409": "r166",
+        "413": "r167",
+        "422": "r167",
+        "429": "r167",
+        "503": "r167"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1automation~1preparations/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "closePreparation",
+      "method": "POST",
+      "path": "/internal/automation/preparations/close",
+      "request": "r169",
+      "responses": {
+        "200": "r165",
+        "202": "r165",
+        "400": "r166",
+        "401": "r167",
+        "403": "r167",
+        "409": "r166",
+        "413": "r167",
+        "422": "r167",
+        "429": "r167",
+        "503": "r167"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1automation~1preparations~1close/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "lookupPreparation",
+      "method": "POST",
+      "path": "/internal/automation/preparations/lookup",
+      "request": "r171",
+      "responses": {
+        "200": "r170",
+        "400": "r166",
+        "401": "r167",
+        "403": "r167",
+        "409": "r166",
+        "413": "r167",
+        "422": "r167",
+        "429": "r167",
+        "503": "r167"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1automation~1preparations~1lookup/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "protectRunGeneration",
+      "method": "POST",
+      "path": "/internal/automation/protections",
+      "request": "r175",
+      "responses": {
+        "200": "r172",
+        "202": "r172",
+        "400": "r173",
+        "401": "r174",
+        "403": "r174",
+        "409": "r173",
+        "413": "r174",
+        "422": "r174",
+        "429": "r174",
+        "503": "r174"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1automation~1protections/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "lookupRunProtection",
+      "method": "POST",
+      "path": "/internal/automation/protections/lookup",
+      "request": "r177",
+      "responses": {
+        "200": "r176",
+        "400": "r173",
+        "401": "r174",
+        "403": "r174",
+        "409": "r173",
+        "413": "r174",
+        "422": "r174",
+        "429": "r174",
+        "503": "r174"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1automation~1protections~1lookup/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "setCapacity",
+      "method": "PUT",
+      "path": "/api/v1/capacity/profile",
+      "request": "r178",
+      "responses": {
+        "200": "r145",
+        "202": "r145",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1capacity~1profile/put"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "updateRunGrant",
+      "method": "PUT",
+      "path": "/api/v1/run-grants/{grant_id}",
+      "request": "r179",
+      "responses": {
+        "200": "r145",
+        "202": "r145",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1run-grants~1{grant_id}/put"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "discoverContracts",
+      "method": "GET",
+      "path": "/.well-known/leafseamer-contracts",
+      "request": null,
+      "responses": {
+        "200": "r180",
+        "429": null,
+        "503": null
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1.well-known~1leafseamer-contracts/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getSubscription",
+      "method": "GET",
+      "path": "/api/v1/subscriptions/{subscription_id}",
+      "request": null,
+      "responses": {
+        "200": "r147",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subscriptions~1{subscription_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "closeSubscription",
+      "method": "DELETE",
+      "path": "/api/v1/subscriptions/{subscription_id}",
+      "request": null,
+      "responses": {
+        "200": "r147",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subscriptions~1{subscription_id}/delete"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getSubscriptionConnection",
+      "method": "GET",
+      "path": "/api/v1/subscriptions/{subscription_id}/connections/{attempt_id}",
+      "request": null,
+      "responses": {
+        "200": "r181",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subscriptions~1{subscription_id}~1connections~1{attempt_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "getSnapshotPage",
+      "method": "GET",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshots/{snapshot_id}/pages/{page_index}",
+      "request": null,
+      "responses": {
+        "200": "r182",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subscriptions~1{subscription_id}~1snapshots~1{snapshot_id}~1pages~1{page_index}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "internalCreateSubscription",
+      "method": "POST",
+      "path": "/internal/subscriptions",
+      "request": "r183",
+      "responses": {
+        "200": "r147",
+        "202": "r147",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1subscriptions/post"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "internalGetSubscription",
+      "method": "GET",
+      "path": "/internal/subscriptions/{subscription_id}",
+      "request": null,
+      "responses": {
+        "200": "r147",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1subscriptions~1{subscription_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "internalCloseSubscription",
+      "method": "DELETE",
+      "path": "/internal/subscriptions/{subscription_id}",
+      "request": null,
+      "responses": {
+        "200": "r147",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1subscriptions~1{subscription_id}/delete"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "internalGetSubscriptionConnection",
+      "method": "GET",
+      "path": "/internal/subscriptions/{subscription_id}/connections/{attempt_id}",
+      "request": null,
+      "responses": {
+        "200": "r181",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1subscriptions~1{subscription_id}~1connections~1{attempt_id}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "internalGetSnapshot",
+      "method": "GET",
+      "path": "/internal/subscriptions/{subscription_id}/snapshot",
+      "request": null,
+      "responses": {
+        "200": "r85",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1subscriptions~1{subscription_id}~1snapshot/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "internalGetSnapshotPage",
+      "method": "GET",
+      "path": "/internal/subscriptions/{subscription_id}/snapshots/{snapshot_id}/pages/{page_index}",
+      "request": null,
+      "responses": {
+        "200": "r182",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1subscriptions~1{subscription_id}~1snapshots~1{snapshot_id}~1pages~1{page_index}/get"
+    },
+    {
+      "authority": "controller",
+      "operation_id": "internalOpenEvents",
+      "method": "GET",
+      "path": "/internal/events",
+      "request": null,
+      "responses": {
+        "101": null,
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {
+        "client": "r43",
+        "server": "r44",
+        "first_server": "r45"
+      },
+      "source": "contracts/event-integration/preview/controller.openapi.json",
+      "pointer": "/paths/~1internal~1events/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getRevocation",
+      "method": "GET",
+      "path": "/api/v1/auth/revocations/{operation_id}",
+      "request": null,
+      "responses": {
+        "200": "r0",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1auth~1revocations~1{operation_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getCapacity",
+      "method": "GET",
+      "path": "/api/v1/capacity",
+      "request": null,
+      "responses": {
+        "200": "r3",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1capacity/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getClock",
+      "method": "GET",
+      "path": "/api/v1/clock",
+      "request": null,
+      "responses": {
+        "200": "r4",
+        "400": "r5",
+        "401": "r6",
+        "403": "r6",
+        "404": "r6",
+        "409": "r5",
+        "429": "r6",
+        "503": "r6"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1clock/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getClockAssessment",
+      "method": "GET",
+      "path": "/api/v1/clock-assessment",
+      "request": null,
+      "responses": {
+        "200": "r4",
+        "400": "r5",
+        "401": "r6",
+        "403": "r6",
+        "404": "r6",
+        "409": "r5",
+        "429": "r6",
+        "503": "r6"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1clock-assessment/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getActivationSlot",
+      "method": "GET",
+      "path": "/api/v1/definitions/{definition_id}/activation-slot",
+      "request": null,
+      "responses": {
+        "200": "r184",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1definitions~1{definition_id}~1activation-slot/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getDraft",
+      "method": "GET",
+      "path": "/api/v1/definitions/{definition_id}/draft",
+      "request": null,
+      "responses": {
+        "200": "r187",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1definitions~1{definition_id}~1draft/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "updateDraft",
+      "method": "PUT",
+      "path": "/api/v1/definitions/{definition_id}/draft",
+      "request": "r188",
+      "responses": {
+        "200": "r187",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1definitions~1{definition_id}~1draft/put"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getIndependenceProof",
+      "method": "GET",
+      "path": "/api/v1/definitions/{definition_id}/proofs/{proof_id}",
+      "request": null,
+      "responses": {
+        "200": "r189",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1definitions~1{definition_id}~1proofs~1{proof_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getDefinitionVersion",
+      "method": "GET",
+      "path": "/api/v1/definitions/{definition_id}/versions/{definition_version}",
+      "request": null,
+      "responses": {
+        "200": "r190",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1definitions~1{definition_id}~1versions~1{definition_version}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getPublishedArtifact",
+      "method": "GET",
+      "path": "/api/v1/definitions/{definition_id}/versions/{definition_version}/artifact",
+      "request": null,
+      "responses": {
+        "200": "r191",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1definitions~1{definition_id}~1versions~1{definition_version}~1artifact/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getCompiledProgram",
+      "method": "GET",
+      "path": "/api/v1/definitions/{definition_id}/versions/{definition_version}/program",
+      "request": null,
+      "responses": {
+        "200": "r192",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1definitions~1{definition_id}~1versions~1{definition_version}~1program/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "openEvents",
+      "method": "GET",
+      "path": "/api/v1/events",
+      "request": null,
+      "responses": {
+        "101": null,
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {
+        "client": "r43",
+        "server": "r44",
+        "first_server": "r45"
+      },
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1events/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getExtensionOperation",
+      "method": "GET",
+      "path": "/api/v1/extension-operations/{operation_id}",
+      "request": null,
+      "responses": {
+        "200": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-operations~1{operation_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getExtensionSlot",
+      "method": "GET",
+      "path": "/api/v1/extension-slots/{slot_id}",
+      "request": null,
+      "responses": {
+        "200": "r56",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getExtensionInstallation",
+      "method": "GET",
+      "path": "/api/v1/extensions/{installation_id}",
+      "request": null,
+      "responses": {
+        "200": "r57",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extensions~1{installation_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getMeta",
+      "method": "GET",
+      "path": "/api/v1/meta",
+      "request": null,
+      "responses": {
+        "200": "r58",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1meta/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getPanelConfirmation",
+      "method": "GET",
+      "path": "/api/v1/panel-confirmations/{preview_id}",
+      "request": null,
+      "responses": {
+        "200": "r59",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-confirmations~1{preview_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getPanelSessionOperation",
+      "method": "GET",
+      "path": "/api/v1/panel-session-operations/{host_operation_id}",
+      "request": null,
+      "responses": {
+        "200": "r69",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-session-operations~1{host_operation_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getPanelSession",
+      "method": "GET",
+      "path": "/api/v1/panel-sessions/{session_id}",
+      "request": null,
+      "responses": {
+        "200": "r70",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getPanelRequest",
+      "method": "GET",
+      "path": "/api/v1/panel-sessions/{session_id}/requests/{request_id}",
+      "request": null,
+      "responses": {
+        "200": "r71",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1requests~1{request_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getPanelSubscription",
+      "method": "GET",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}",
+      "request": null,
+      "responses": {
+        "200": "r72",
+        "400": "r73",
+        "401": "r74",
+        "403": "r75",
+        "404": "r76",
+        "409": "r77",
+        "410": "r78",
+        "413": "r79",
+        "429": "r80",
+        "503": "r81"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1subscriptions~1{subscription_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getPanelProjectionFrames",
+      "method": "GET",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/frames",
+      "request": null,
+      "responses": {
+        "200": "r82",
+        "400": "r73",
+        "401": "r74",
+        "403": "r75",
+        "404": "r76",
+        "409": "r77",
+        "410": "r78",
+        "413": "r79",
+        "429": "r80",
+        "503": "r81"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1subscriptions~1{subscription_id}~1frames/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getRecoveryOperation",
+      "method": "GET",
+      "path": "/api/v1/recovery-operations/{operation_id}",
+      "request": null,
+      "responses": {
+        "200": "r193",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1recovery-operations~1{operation_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getRunOperation",
+      "method": "GET",
+      "path": "/api/v1/run-operations/{operation_id}",
+      "request": null,
+      "responses": {
+        "200": "r193",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1run-operations~1{operation_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getRun",
+      "method": "GET",
+      "path": "/api/v1/runs/{run_id}",
+      "request": null,
+      "responses": {
+        "200": "r194",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1runs~1{run_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getTriggerDecision",
+      "method": "GET",
+      "path": "/api/v1/runs/{run_id}/decisions/{decision_id}",
+      "request": null,
+      "responses": {
+        "200": "r195",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1runs~1{run_id}~1decisions~1{decision_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getExecution",
+      "method": "GET",
+      "path": "/api/v1/runs/{run_id}/executions/{execution_id}",
+      "request": null,
+      "responses": {
+        "200": "r196",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1runs~1{run_id}~1executions~1{execution_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getSession",
+      "method": "GET",
+      "path": "/api/v1/session",
+      "request": null,
+      "responses": {
+        "200": "r83",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1session/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getSubject",
+      "method": "GET",
+      "path": "/api/v1/subjects/{subject_id}",
+      "request": null,
+      "responses": {
+        "200": "r84",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subjects~1{subject_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getSnapshot",
+      "method": "GET",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshot",
+      "request": null,
+      "responses": {
+        "200": "r85",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subscriptions~1{subscription_id}~1snapshot/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getClockDomainDescriptor",
+      "method": "GET",
+      "path": "/internal/clock-domain",
+      "request": null,
+      "responses": {
+        "200": "r86",
+        "400": "r87",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r87",
+        "412": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1clock-domain/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "readIngressCommit",
+      "method": "GET",
+      "path": "/internal/ingress/commits/{commit_id}",
+      "request": null,
+      "responses": {
+        "200": "r197",
+        "400": "r198",
+        "401": "r199",
+        "403": "r199",
+        "404": "r199",
+        "409": "r198",
+        "410": "r199",
+        "412": "r199",
+        "413": "r199",
+        "422": "r199",
+        "429": "r199",
+        "503": "r199"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1ingress~1commits~1{commit_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getReferenceTimeAnchor",
+      "method": "GET",
+      "path": "/internal/reference-time/anchors/{id}/{revision}",
+      "request": null,
+      "responses": {
+        "200": "r88",
+        "400": "r89",
+        "401": "r90",
+        "403": "r90",
+        "404": "r90",
+        "409": "r89",
+        "429": "r90",
+        "503": "r90"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1reference-time~1anchors~1{id}~1{revision}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getReferenceTimeAssessment",
+      "method": "GET",
+      "path": "/internal/reference-time/assessments/{id}/{revision}",
+      "request": null,
+      "responses": {
+        "200": "r91",
+        "400": "r89",
+        "401": "r90",
+        "403": "r90",
+        "404": "r90",
+        "409": "r89",
+        "429": "r90",
+        "503": "r90"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1reference-time~1assessments~1{id}~1{revision}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getReferenceTimeBundle",
+      "method": "GET",
+      "path": "/internal/reference-time/bundles/{id}/{revision}",
+      "request": null,
+      "responses": {
+        "200": "r92",
+        "400": "r89",
+        "401": "r90",
+        "403": "r90",
+        "404": "r90",
+        "409": "r89",
+        "429": "r90",
+        "503": "r90"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1reference-time~1bundles~1{id}~1{revision}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getReferenceTimeProfile",
+      "method": "GET",
+      "path": "/internal/reference-time/profiles/{id}/{revision}",
+      "request": null,
+      "responses": {
+        "200": "r93",
+        "400": "r89",
+        "401": "r90",
+        "403": "r90",
+        "404": "r90",
+        "409": "r89",
+        "429": "r90",
+        "503": "r90"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1reference-time~1profiles~1{id}~1{revision}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "revokeAuthorization",
+      "method": "POST",
+      "path": "/api/v1/auth/revocations",
+      "request": "r94",
+      "responses": {
+        "200": "r0",
+        "202": "r0",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1auth~1revocations/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "lookupAutomationRequest",
+      "method": "POST",
+      "path": "/api/v1/automation-requests/lookup",
+      "request": "r201",
+      "responses": {
+        "200": "r200",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1automation-requests~1lookup/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "createDefinition",
+      "method": "POST",
+      "path": "/api/v1/definitions",
+      "request": "r202",
+      "responses": {
+        "201": "r187",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1definitions/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "publishDefinition",
+      "method": "POST",
+      "path": "/api/v1/definitions/{definition_id}/publish",
+      "request": "r203",
+      "responses": {
+        "201": "r190",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1definitions~1{definition_id}~1publish/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "lookupExtensionRequest",
+      "method": "POST",
+      "path": "/api/v1/extension-operations/lookup",
+      "request": "r115",
+      "responses": {
+        "200": "r114",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-operations~1lookup/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "createExtensionSlot",
+      "method": "POST",
+      "path": "/api/v1/extension-slots",
+      "request": "r116",
+      "responses": {
+        "200": "r56",
+        "201": "r56",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "activateExtension",
+      "method": "POST",
+      "path": "/api/v1/extension-slots/{slot_id}/activate",
+      "request": "r117",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}~1activate/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "disableExtension",
+      "method": "POST",
+      "path": "/api/v1/extension-slots/{slot_id}/disable",
+      "request": "r118",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}~1disable/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "enableExtension",
+      "method": "POST",
+      "path": "/api/v1/extension-slots/{slot_id}/enable",
+      "request": "r119",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}~1enable/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "planExtensionChange",
+      "method": "POST",
+      "path": "/api/v1/extension-slots/{slot_id}/plan",
+      "request": "r121",
+      "responses": {
+        "200": "r120",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}~1plan/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "uninstallExtension",
+      "method": "POST",
+      "path": "/api/v1/extension-slots/{slot_id}/uninstall",
+      "request": "r122",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}~1uninstall/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "upgradeExtension",
+      "method": "POST",
+      "path": "/api/v1/extension-slots/{slot_id}/upgrade",
+      "request": "r123",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extension-slots~1{slot_id}~1upgrade/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "stageExtension",
+      "method": "POST",
+      "path": "/api/v1/extensions/stage",
+      "request": "r124",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extensions~1stage/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "approveExtension",
+      "method": "POST",
+      "path": "/api/v1/extensions/{installation_id}/approve",
+      "request": "r125",
+      "responses": {
+        "200": "r46",
+        "202": "r46",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extensions~1{installation_id}~1approve/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "resolveExtensionRoles",
+      "method": "POST",
+      "path": "/api/v1/extensions/{installation_id}/resolve",
+      "request": "r127",
+      "responses": {
+        "200": "r126",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extensions~1{installation_id}~1resolve/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "reviewExtensionPermissions",
+      "method": "POST",
+      "path": "/api/v1/extensions/{installation_id}/review",
+      "request": "r129",
+      "responses": {
+        "200": "r128",
+        "400": "r47",
+        "401": "r48",
+        "403": "r49",
+        "404": "r50",
+        "409": "r51",
+        "413": "r52",
+        "422": "r53",
+        "429": "r54",
+        "503": "r55"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1extensions~1{installation_id}~1review/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "cancelPanelConfirmation",
+      "method": "POST",
+      "path": "/api/v1/panel-confirmations/{preview_id}/cancel",
+      "request": "r130",
+      "responses": {
+        "200": "r71",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-confirmations~1{preview_id}~1cancel/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "commitPanelConfirmation",
+      "method": "POST",
+      "path": "/api/v1/panel-confirmations/{preview_id}/commit",
+      "request": "r131",
+      "responses": {
+        "200": "r71",
+        "202": "r71",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-confirmations~1{preview_id}~1commit/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "createPanelSession",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions",
+      "request": "r132",
+      "responses": {
+        "200": "r70",
+        "201": "r70",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "activatePanelSession",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/activate",
+      "request": "r133",
+      "responses": {
+        "200": "r70",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1activate/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "closePanelSession",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/close",
+      "request": "r134",
+      "responses": {
+        "200": "r69",
+        "202": "r69",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1close/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "offerPanelConfirmation",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/confirmations",
+      "request": "r135",
+      "responses": {
+        "200": "r59",
+        "201": "r59",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1confirmations/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "beginPanelHandshake",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/handshake",
+      "request": "r136",
+      "responses": {
+        "200": "r70",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1handshake/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "preparePanelActivation",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/prepare-activation",
+      "request": "r137",
+      "responses": {
+        "200": "r70",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1prepare-activation/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "renewPanelSession",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/renew",
+      "request": "r138",
+      "responses": {
+        "200": "r70",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1renew/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "invokePanelMethod",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/requests",
+      "request": "r139",
+      "responses": {
+        "200": "r71",
+        "202": "r71",
+        "400": "r60",
+        "401": "r61",
+        "403": "r62",
+        "404": "r63",
+        "409": "r64",
+        "410": "r65",
+        "413": "r66",
+        "429": "r67",
+        "503": "r68"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1requests/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "createPanelSubscription",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions",
+      "request": "r140",
+      "responses": {
+        "200": "r72",
+        "201": "r72",
+        "400": "r73",
+        "401": "r74",
+        "403": "r75",
+        "404": "r76",
+        "409": "r77",
+        "410": "r78",
+        "413": "r79",
+        "429": "r80",
+        "503": "r81"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1subscriptions/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "acknowledgePanelProjection",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/ack",
+      "request": "r141",
+      "responses": {
+        "200": "r72",
+        "400": "r73",
+        "401": "r74",
+        "403": "r75",
+        "404": "r76",
+        "409": "r77",
+        "410": "r78",
+        "413": "r79",
+        "429": "r80",
+        "503": "r81"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1subscriptions~1{subscription_id}~1ack/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "closePanelSubscription",
+      "method": "POST",
+      "path": "/api/v1/panel-sessions/{session_id}/subscriptions/{subscription_id}/close",
+      "request": "r142",
+      "responses": {
+        "200": "r72",
+        "202": "r72",
+        "400": "r73",
+        "401": "r74",
+        "403": "r75",
+        "404": "r76",
+        "409": "r77",
+        "410": "r78",
+        "413": "r79",
+        "429": "r80",
+        "503": "r81"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1panel-sessions~1{session_id}~1subscriptions~1{subscription_id}~1close/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "submitProviderEvent",
+      "method": "POST",
+      "path": "/api/v1/providers/{provider_id}/events",
+      "request": "r205",
+      "responses": {
+        "200": "r204",
+        "202": "r204",
+        "400": "r198",
+        "401": "r199",
+        "403": "r199",
+        "404": "r199",
+        "409": "r198",
+        "410": "r199",
+        "412": "r199",
+        "413": "r199",
+        "422": "r199",
+        "429": "r199",
+        "503": "r199"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1providers~1{provider_id}~1events/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "lookupProviderEvent",
+      "method": "POST",
+      "path": "/api/v1/providers/{provider_id}/events/lookup",
+      "request": "r207",
+      "responses": {
+        "200": "r206",
+        "400": "r198",
+        "401": "r199",
+        "403": "r199",
+        "404": "r199",
+        "409": "r198",
+        "410": "r199",
+        "412": "r199",
+        "413": "r199",
+        "422": "r199",
+        "429": "r199",
+        "503": "r199"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1providers~1{provider_id}~1events~1lookup/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "createRequestContext",
+      "method": "POST",
+      "path": "/api/v1/request-contexts",
+      "request": "r144",
+      "responses": {
+        "200": "r143",
+        "201": "r143",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1request-contexts/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "createRun",
+      "method": "POST",
+      "path": "/api/v1/runs",
+      "request": "r208",
+      "responses": {
+        "201": "r194",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1runs/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "armRun",
+      "method": "POST",
+      "path": "/api/v1/runs/{run_id}/arm",
+      "request": "r209",
+      "responses": {
+        "202": "r193",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1runs~1{run_id}~1arm/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "disarmRun",
+      "method": "POST",
+      "path": "/api/v1/runs/{run_id}/disarm",
+      "request": "r210",
+      "responses": {
+        "202": "r193",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1runs~1{run_id}~1disarm/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "pauseRun",
+      "method": "POST",
+      "path": "/api/v1/runs/{run_id}/pause",
+      "request": "r210",
+      "responses": {
+        "202": "r193",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1runs~1{run_id}~1pause/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "preflightRun",
+      "method": "POST",
+      "path": "/api/v1/runs/{run_id}/preflight",
+      "request": "r212",
+      "responses": {
+        "200": "r211",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1runs~1{run_id}~1preflight/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "previewRecovery",
+      "method": "POST",
+      "path": "/api/v1/runs/{run_id}/recovery-preview",
+      "request": "r212",
+      "responses": {
+        "200": "r213",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1runs~1{run_id}~1recovery-preview/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "resumeRun",
+      "method": "POST",
+      "path": "/api/v1/runs/{run_id}/resume",
+      "request": "r214",
+      "responses": {
+        "202": "r193",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1runs~1{run_id}~1resume/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "retireRun",
+      "method": "POST",
+      "path": "/api/v1/runs/{run_id}/retire",
+      "request": "r210",
+      "responses": {
+        "202": "r193",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1runs~1{run_id}~1retire/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "createSubscription",
+      "method": "POST",
+      "path": "/api/v1/subscriptions",
+      "request": "r148",
+      "responses": {
+        "200": "r147",
+        "202": "r147",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subscriptions/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "issueWsTicket",
+      "method": "POST",
+      "path": "/api/v1/ws-tickets",
+      "request": "r151",
+      "responses": {
+        "200": "r149",
+        "201": "r150",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1ws-tickets/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "registerContinuation",
+      "method": "POST",
+      "path": "/internal/automation/continuations",
+      "request": "r218",
+      "responses": {
+        "200": "r215",
+        "201": "r215",
+        "400": "r216",
+        "401": "r217",
+        "403": "r217",
+        "409": "r216",
+        "413": "r217",
+        "422": "r217",
+        "429": "r217",
+        "503": "r217"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1automation~1continuations/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "adoptContinuation",
+      "method": "POST",
+      "path": "/internal/automation/continuations/adoptions",
+      "request": "r219",
+      "responses": {
+        "200": "r215",
+        "201": "r215",
+        "400": "r216",
+        "401": "r217",
+        "403": "r217",
+        "409": "r216",
+        "413": "r217",
+        "422": "r217",
+        "429": "r217",
+        "503": "r217"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1automation~1continuations~1adoptions/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "finishContinuation",
+      "method": "POST",
+      "path": "/internal/automation/continuations/finish",
+      "request": "r220",
+      "responses": {
+        "200": "r215",
+        "201": "r215",
+        "400": "r216",
+        "401": "r217",
+        "403": "r217",
+        "409": "r216",
+        "413": "r217",
+        "422": "r217",
+        "429": "r217",
+        "503": "r217"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1automation~1continuations~1finish/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "lookupSeamerContinuation",
+      "method": "POST",
+      "path": "/internal/automation/continuations/lookup",
+      "request": "r222",
+      "responses": {
+        "200": "r221",
+        "400": "r216",
+        "401": "r217",
+        "403": "r217",
+        "409": "r216",
+        "413": "r217",
+        "422": "r217",
+        "429": "r217",
+        "503": "r217"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1automation~1continuations~1lookup/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "observeContinuationReceipt",
+      "method": "POST",
+      "path": "/internal/automation/continuations/receipts",
+      "request": "r224",
+      "responses": {
+        "200": "r223",
+        "201": "r223",
+        "400": "r216",
+        "401": "r217",
+        "403": "r217",
+        "409": "r216",
+        "413": "r217",
+        "422": "r217",
+        "429": "r217",
+        "503": "r217"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1automation~1continuations~1receipts/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "observeContinuationWithdrawal",
+      "method": "POST",
+      "path": "/internal/automation/continuations/withdrawals",
+      "request": "r226",
+      "responses": {
+        "200": "r225",
+        "202": "r225",
+        "400": "r216",
+        "401": "r217",
+        "403": "r217",
+        "409": "r216",
+        "413": "r217",
+        "422": "r217",
+        "429": "r217",
+        "503": "r217"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1automation~1continuations~1withdrawals/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "setCapacity",
+      "method": "PUT",
+      "path": "/api/v1/capacity/profile",
+      "request": "r178",
+      "responses": {
+        "200": "r145",
+        "202": "r145",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1capacity~1profile/put"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "updateDefinitionMetadata",
+      "method": "PUT",
+      "path": "/api/v1/definitions/{definition_id}/metadata",
+      "request": "r227",
+      "responses": {
+        "200": "r187",
+        "400": "r185",
+        "401": "r186",
+        "403": "r186",
+        "404": "r186",
+        "409": "r185",
+        "412": "r186",
+        "413": "r186",
+        "422": "r186",
+        "429": "r186",
+        "503": "r186"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1definitions~1{definition_id}~1metadata/put"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "updateCatalog",
+      "method": "PUT",
+      "path": "/api/v1/providers/{provider_id}/catalog",
+      "request": "r228",
+      "responses": {
+        "200": "r27",
+        "400": "r1",
+        "401": "r2",
+        "403": "r2",
+        "404": "r2",
+        "409": "r1",
+        "410": "r2",
+        "412": "r2",
+        "413": "r2",
+        "422": "r2",
+        "429": "r2",
+        "503": "r2"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1providers~1{provider_id}~1catalog/put"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "discoverContracts",
+      "method": "GET",
+      "path": "/.well-known/leafseamer-contracts",
+      "request": null,
+      "responses": {
+        "200": "r180",
+        "429": null,
+        "503": null
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1.well-known~1leafseamer-contracts/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getSubscription",
+      "method": "GET",
+      "path": "/api/v1/subscriptions/{subscription_id}",
+      "request": null,
+      "responses": {
+        "200": "r147",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subscriptions~1{subscription_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "closeSubscription",
+      "method": "DELETE",
+      "path": "/api/v1/subscriptions/{subscription_id}",
+      "request": null,
+      "responses": {
+        "200": "r147",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subscriptions~1{subscription_id}/delete"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getSubscriptionConnection",
+      "method": "GET",
+      "path": "/api/v1/subscriptions/{subscription_id}/connections/{attempt_id}",
+      "request": null,
+      "responses": {
+        "200": "r181",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subscriptions~1{subscription_id}~1connections~1{attempt_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "getSnapshotPage",
+      "method": "GET",
+      "path": "/api/v1/subscriptions/{subscription_id}/snapshots/{snapshot_id}/pages/{page_index}",
+      "request": null,
+      "responses": {
+        "200": "r182",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1api~1v1~1subscriptions~1{subscription_id}~1snapshots~1{snapshot_id}~1pages~1{page_index}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "internalCreateSubscription",
+      "method": "POST",
+      "path": "/internal/subscriptions",
+      "request": "r183",
+      "responses": {
+        "200": "r147",
+        "202": "r147",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1subscriptions/post"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "internalGetSubscription",
+      "method": "GET",
+      "path": "/internal/subscriptions/{subscription_id}",
+      "request": null,
+      "responses": {
+        "200": "r147",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1subscriptions~1{subscription_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "internalCloseSubscription",
+      "method": "DELETE",
+      "path": "/internal/subscriptions/{subscription_id}",
+      "request": null,
+      "responses": {
+        "200": "r147",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1subscriptions~1{subscription_id}/delete"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "internalGetSubscriptionConnection",
+      "method": "GET",
+      "path": "/internal/subscriptions/{subscription_id}/connections/{attempt_id}",
+      "request": null,
+      "responses": {
+        "200": "r181",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1subscriptions~1{subscription_id}~1connections~1{attempt_id}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "internalGetSnapshot",
+      "method": "GET",
+      "path": "/internal/subscriptions/{subscription_id}/snapshot",
+      "request": null,
+      "responses": {
+        "200": "r85",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1subscriptions~1{subscription_id}~1snapshot/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "internalGetSnapshotPage",
+      "method": "GET",
+      "path": "/internal/subscriptions/{subscription_id}/snapshots/{snapshot_id}/pages/{page_index}",
+      "request": null,
+      "responses": {
+        "200": "r182",
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {},
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1subscriptions~1{subscription_id}~1snapshots~1{snapshot_id}~1pages~1{page_index}/get"
+    },
+    {
+      "authority": "seamer",
+      "operation_id": "internalOpenEvents",
+      "method": "GET",
+      "path": "/internal/events",
+      "request": null,
+      "responses": {
+        "101": null,
+        "400": "r32",
+        "401": "r33",
+        "403": "r34",
+        "404": "r35",
+        "409": "r36",
+        "410": "r37",
+        "412": "r38",
+        "413": "r39",
+        "422": "r40",
+        "429": "r41",
+        "503": "r42"
+      },
+      "ws": {
+        "client": "r43",
+        "server": "r44",
+        "first_server": "r45"
+      },
+      "source": "contracts/event-integration/preview/seamer.openapi.json",
+      "pointer": "/paths/~1internal~1events/get"
+    }
+  ],
+  "messages": [
+    {
+      "type": "AUTH_FENCE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__AUTH_FENCE",
+      "root": "r229"
+    },
+    {
+      "type": "AUTH_FENCE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "AUTH_FENCE",
+        "QUERY_BARRIER"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__AUTH_FENCE_ACK",
+      "root": "r230"
+    },
+    {
+      "type": "BARRIER_STORED",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__BARRIER_STORED",
+      "root": "r231"
+    },
+    {
+      "type": "BARRIER_UNAVAILABLE",
+      "direction": "w2c",
+      "reply_to_types": [
+        "QUERY_BARRIER"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__BARRIER_UNAVAILABLE",
+      "root": "r232"
+    },
+    {
+      "type": "CANCEL_ENCODING_FAILED",
+      "direction": "w2c",
+      "reply_to_types": [
+        "ENCODE_CANCEL_PACKET"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CANCEL_ENCODING_FAILED",
+      "root": "r233"
+    },
+    {
+      "type": "CANCEL_EVIDENCE_CANDIDATE",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CANCEL_EVIDENCE_CANDIDATE",
+      "root": "r234"
+    },
+    {
+      "type": "CANCEL_EXECUTION_STATUS",
+      "direction": "w2c",
+      "reply_to_types": [
+        "QUERY_CANCEL_EXECUTION"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CANCEL_EXECUTION_STATUS",
+      "root": "r235"
+    },
+    {
+      "type": "CANCEL_FENCE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CANCEL_FENCE",
+      "root": "r236"
+    },
+    {
+      "type": "CANCEL_FENCE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "CANCEL_FENCE",
+        "QUERY_BARRIER"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CANCEL_FENCE_ACK",
+      "root": "r237"
+    },
+    {
+      "type": "CANCEL_GUARD",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CANCEL_GUARD",
+      "root": "r238"
+    },
+    {
+      "type": "CANCEL_GUARD_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "CANCEL_GUARD"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CANCEL_GUARD_ACK",
+      "root": "r239"
+    },
+    {
+      "type": "CANCEL_PREPARE_REJECTED",
+      "direction": "c2w",
+      "reply_to_types": [
+        "PREPARE_CANCEL_PACKET"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CANCEL_PREPARE_REJECTED",
+      "root": "r240"
+    },
+    {
+      "type": "CANCEL_REPORT_STORED",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CANCEL_REPORT_STORED",
+      "root": "r241"
+    },
+    {
+      "type": "CANCEL_RESEND_REJECTED",
+      "direction": "c2w",
+      "reply_to_types": [
+        "CANCEL_RESEND_REQUEST"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CANCEL_RESEND_REJECTED",
+      "root": "r242"
+    },
+    {
+      "type": "CANCEL_RESEND_REQUEST",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CANCEL_RESEND_REQUEST",
+      "root": "r243"
+    },
+    {
+      "type": "CANCEL_SEND_REPORT",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CANCEL_SEND_REPORT",
+      "root": "r244"
+    },
+    {
+      "type": "CLOSE_GATE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CLOSE_GATE",
+      "root": "r245"
+    },
+    {
+      "type": "CLOSE_GATE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "CLOSE_GATE"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__CLOSE_GATE_ACK",
+      "root": "r246"
+    },
+    {
+      "type": "DENY_ENCODING",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__J__DENY_ENCODING",
+      "root": "r247"
+    },
+    {
+      "type": "DENY_ENCODING_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "DENY_ENCODING"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__J__DENY_ENCODING_ACK",
+      "root": "r248"
+    },
+    {
+      "type": "DISPATCH",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__DISPATCH",
+      "root": "r249"
+    },
+    {
+      "type": "DISPATCH_CANCEL",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__DISPATCH_CANCEL",
+      "root": "r250"
+    },
+    {
+      "type": "ENCODE_CANCEL_PACKET",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__ENCODE_CANCEL_PACKET",
+      "root": "r251"
+    },
+    {
+      "type": "ENCODE_PACKET",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__ENCODE_PACKET",
+      "root": "r252"
+    },
+    {
+      "type": "EVIDENCE_CANDIDATE",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__EVIDENCE_CANDIDATE",
+      "root": "r253"
+    },
+    {
+      "type": "FENCE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__FENCE",
+      "root": "r254"
+    },
+    {
+      "type": "FENCE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "FENCE",
+        "QUERY_BARRIER"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__FENCE_ACK",
+      "root": "r255"
+    },
+    {
+      "type": "GATE_FENCE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__GF__GATE_FENCE",
+      "root": "r256"
+    },
+    {
+      "type": "GATE_FENCE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "GATE_FENCE"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__GF__GATE_FENCE_ACK",
+      "root": "r257"
+    },
+    {
+      "type": "GUARD_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "GUARD_INSTALL"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__GUARD_ACK",
+      "root": "r258"
+    },
+    {
+      "type": "GUARD_INSTALL",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__GUARD_INSTALL",
+      "root": "r259"
+    },
+    {
+      "type": "HELLO",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__HELLO",
+      "root": "r260"
+    },
+    {
+      "type": "HELLO_ACK",
+      "direction": "c2w",
+      "reply_to_types": [
+        "HELLO"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__HELLO_ACK",
+      "root": "r261"
+    },
+    {
+      "type": "OPEN_GATE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__OPEN_GATE",
+      "root": "r262"
+    },
+    {
+      "type": "OPEN_GATE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "OPEN_GATE"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__OPEN_GATE_ACK",
+      "root": "r263"
+    },
+    {
+      "type": "PACKET_ENCODING_FAILED",
+      "direction": "w2c",
+      "reply_to_types": [
+        "ENCODE_PACKET"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__PACKET_ENCODING_FAILED",
+      "root": "r264"
+    },
+    {
+      "type": "PREPARE_CANCEL_PACKET",
+      "direction": "w2c",
+      "reply_to_types": [
+        "ENCODE_CANCEL_PACKET"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__PREPARE_CANCEL_PACKET",
+      "root": "r265"
+    },
+    {
+      "type": "PREPARE_PACKET",
+      "direction": "w2c",
+      "reply_to_types": [
+        "ENCODE_PACKET"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__PREPARE_PACKET",
+      "root": "r266"
+    },
+    {
+      "type": "PREPARE_PACKET_REJECTED",
+      "direction": "c2w",
+      "reply_to_types": [
+        "PREPARE_PACKET"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__PREPARE_PACKET_REJECTED",
+      "root": "r267"
+    },
+    {
+      "type": "QUERY_BARRIER",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__QUERY_BARRIER",
+      "root": "r268"
+    },
+    {
+      "type": "QUERY_CANCEL_EXECUTION",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__QUERY_CANCEL_EXECUTION",
+      "root": "r269"
+    },
+    {
+      "type": "RELEASE_ENCODING",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__ER__RELEASE_ENCODING",
+      "root": "r270"
+    },
+    {
+      "type": "RELEASE_ENCODING_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "RELEASE_ENCODING"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__ER__RELEASE_ENCODING_ACK",
+      "root": "r271"
+    },
+    {
+      "type": "REPORT_STORED",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__REPORT_STORED",
+      "root": "r272"
+    },
+    {
+      "type": "RESEND_DISPATCH",
+      "direction": "c2w",
+      "reply_to_types": [
+        "RESEND_REQUEST"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__RESEND_DISPATCH",
+      "root": "r273"
+    },
+    {
+      "type": "RESEND_REJECTED",
+      "direction": "c2w",
+      "reply_to_types": [
+        "RESEND_REQUEST"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__RESEND_REJECTED",
+      "root": "r274"
+    },
+    {
+      "type": "RESEND_REQUEST",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__RESEND_REQUEST",
+      "root": "r275"
+    },
+    {
+      "type": "RUN_FENCE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__RUN_FENCE",
+      "root": "r276"
+    },
+    {
+      "type": "RUN_FENCE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "RUN_FENCE",
+        "QUERY_BARRIER"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__RUN_FENCE_ACK",
+      "root": "r277"
+    },
+    {
+      "type": "SEND_REPORT",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__SEND_REPORT",
+      "root": "r278"
+    },
+    {
+      "type": "TIME_FENCE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__TIME_FENCE",
+      "root": "r279"
+    },
+    {
+      "type": "TIME_FENCE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "TIME_FENCE",
+        "QUERY_BARRIER"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__S9__TIME_FENCE_ACK",
+      "root": "r280"
+    }
+  ],
+  "schemas": {
+    "r0": {
+      "$ref": "#/$defs/baseline__RevocationRecordResponse"
+    },
+    "r1": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/baseline__ErrorResponse"
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r2": {
+      "$ref": "#/$defs/baseline__ErrorResponse"
+    },
+    "r3": {
+      "$ref": "#/$defs/baseline__CapacityStatusResponse"
+    },
+    "r4": {
+      "$ref": "#/$defs/time_public__S12__ClockResponse"
+    },
+    "r5": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/time_public__S12__Error"
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r6": {
+      "$ref": "#/$defs/time_public__S12__Error"
+    },
+    "r7": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/command__V__S0_CommandRead"
+        },
+        {
+          "properties": {
+            "view": {
+              "const": "current"
+            }
+          }
+        }
+      ]
+    },
+    "r8": {
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/command__V__S0_Error"
+            },
+            {
+              "properties": {
+                "code": {
+                  "enum": [
+                    "invalid"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r9": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/command__V__S0_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "unauthenticated"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r10": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/command__V__S0_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "forbidden"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r11": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/command__V__S0_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "not_found"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r12": {
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/command__V__S0_Error"
+            },
+            {
+              "properties": {
+                "code": {
+                  "enum": [
+                    "state_conflict",
+                    "identity_conflict",
+                    "cancellation_exists",
+                    "snapshot_conflict"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r13": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/command__V__S0_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "snapshot_gone",
+                "context_expired"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r14": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/command__V__S0_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "payload_too_large"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r15": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/command__V__S0_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "invalid_semantics"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r16": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/command__V__S0_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "capacity"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r17": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/command__V__S0_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "unavailable",
+                "state_projection_pending"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r18": {
+      "$ref": "#/$defs/command__V__S0_CancelOperation"
+    },
+    "r19": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/command__V__S0_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "unavailable"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r20": {
+      "$ref": "#/$defs/command__V__S0_EvidencePage"
+    },
+    "r21": {
+      "$ref": "#/$defs/command__V__S0_EvidenceRecord"
+    },
+    "r22": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/command__V__S0_CommandRead"
+        },
+        {
+          "properties": {
+            "view": {
+              "const": "historical"
+            }
+          }
+        }
+      ]
+    },
+    "r23": {
+      "$ref": "#/$defs/control__ControlOperation"
+    },
+    "r24": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/control__Error"
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r25": {
+      "$ref": "#/$defs/control__Error"
+    },
+    "r26": {
+      "$ref": "#/$defs/baseline__DevicePageResponse"
+    },
+    "r27": {
+      "$ref": "#/$defs/baseline__CapabilityCatalogResponse"
+    },
+    "r28": {
+      "$ref": "#/$defs/control__ControlRecord"
+    },
+    "r29": {
+      "$ref": "#/$defs/control__TransferOffer"
+    },
+    "r30": {
+      "$ref": "#/$defs/baseline__CatalogBindingResponse"
+    },
+    "r31": {
+      "$ref": "#/$defs/baseline__ObservationResponse"
+    },
+    "r32": {
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/channel__Error"
+            },
+            {
+              "properties": {
+                "code": {
+                  "const": "invalid_request"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/channel__SelectionError"
+            },
+            {
+              "properties": {
+                "code": {
+                  "const": "CONTRACT_SELECTION_INVALID"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "r33": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/channel__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "authentication_required"
+            }
+          }
+        }
+      ]
+    },
+    "r34": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/channel__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "forbidden"
+            }
+          }
+        }
+      ]
+    },
+    "r35": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/channel__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "not_found_or_invisible"
+            }
+          }
+        }
+      ]
+    },
+    "r36": {
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/channel__Error"
+            },
+            {
+              "properties": {
+                "code": {
+                  "const": "conflict"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/channel__SelectionError"
+            },
+            {
+              "properties": {
+                "code": {
+                  "enum": [
+                    "CONTRACT_NOT_SUPPORTED",
+                    "CONTRACT_BINDING_MISMATCH"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "r37": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/channel__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "gone"
+            }
+          }
+        }
+      ]
+    },
+    "r38": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/channel__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "binding_invalid"
+            }
+          }
+        }
+      ]
+    },
+    "r39": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/channel__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "payload_too_large"
+            }
+          }
+        }
+      ]
+    },
+    "r40": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/channel__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "invalid_scope"
+            }
+          }
+        }
+      ]
+    },
+    "r41": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/channel__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "capacity_exceeded"
+            }
+          }
+        }
+      ]
+    },
+    "r42": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/channel__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "source_unavailable"
+            }
+          }
+        }
+      ]
+    },
+    "r43": {
+      "$ref": "#/$defs/channel__ClientFrame"
+    },
+    "r44": {
+      "$ref": "#/$defs/channel__ServerFrame"
+    },
+    "r45": {
+      "$ref": "#/$defs/channel__Ready"
+    },
+    "r46": {
+      "$ref": "#/$defs/installation__OperationView"
+    },
+    "r47": {
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/installation__Error"
+            },
+            {
+              "properties": {
+                "code": {
+                  "enum": [
+                    "invalid_request"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r48": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/installation__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "authentication_required"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r49": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/installation__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "authority_denied"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r50": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/installation__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "not_found_or_invisible"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r51": {
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/installation__Error"
+            },
+            {
+              "properties": {
+                "code": {
+                  "enum": [
+                    "conflict"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r52": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/installation__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "payload_too_large"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r53": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/installation__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "unsupported_candidate"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r54": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/installation__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "capacity_exceeded"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r55": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/installation__Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "source_unavailable",
+                "unknown_outcome"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r56": {
+      "$ref": "#/$defs/installation__SlotView"
+    },
+    "r57": {
+      "$ref": "#/$defs/installation__InstanceView"
+    },
+    "r58": {
+      "$ref": "#/$defs/baseline__MetaResponse"
+    },
+    "r59": {
+      "$ref": "#/$defs/panel__Service_ConfirmationRecord"
+    },
+    "r60": {
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/panel__Service_Error"
+            },
+            {
+              "properties": {
+                "code": {
+                  "enum": [
+                    "invalid_request"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r61": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/panel__Service_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "authentication_required"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r62": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/panel__Service_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "authority_denied"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r63": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/panel__Service_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "not_found_or_invisible"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r64": {
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/panel__Service_Error"
+            },
+            {
+              "properties": {
+                "code": {
+                  "enum": [
+                    "conflict"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r65": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/panel__Service_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "expired"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r66": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/panel__Service_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "payload_too_large"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r67": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/panel__Service_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "capacity_exceeded"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r68": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/panel__Service_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "source_unavailable",
+                "unknown_outcome"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r69": {
+      "$ref": "#/$defs/panel__Service_LifecycleReceipt"
+    },
+    "r70": {
+      "$ref": "#/$defs/panel__Service_HostSession"
+    },
+    "r71": {
+      "$ref": "#/$defs/panel__Service_RequestReceipt"
+    },
+    "r72": {
+      "$ref": "#/$defs/subscription__Subscription_SubscriptionRecord"
+    },
+    "r73": {
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/subscription__Subscription_Error"
+            },
+            {
+              "properties": {
+                "code": {
+                  "enum": [
+                    "invalid_request"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r74": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/subscription__Subscription_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "authentication_required"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r75": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/subscription__Subscription_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "authority_denied"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r76": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/subscription__Subscription_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "not_found_or_invisible"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r77": {
+      "anyOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/$defs/subscription__Subscription_Error"
+            },
+            {
+              "properties": {
+                "code": {
+                  "enum": [
+                    "conflict"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r78": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/subscription__Subscription_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "expired"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r79": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/subscription__Subscription_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "payload_too_large"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r80": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/subscription__Subscription_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "capacity_exceeded"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r81": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/subscription__Subscription_Error"
+        },
+        {
+          "properties": {
+            "code": {
+              "enum": [
+                "source_unavailable",
+                "unknown_outcome"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "r82": {
+      "$ref": "#/$defs/subscription__Subscription_ProjectionBatch"
+    },
+    "r83": {
+      "$ref": "#/$defs/baseline__SessionResponse"
+    },
+    "r84": {
+      "$ref": "#/$defs/baseline__SubjectRecordResponse"
+    },
+    "r85": {
+      "$ref": "#/$defs/snapshot__Manifest"
+    },
+    "r86": {
+      "$ref": "#/$defs/baseline__ClockDomainDescriptorResponse"
+    },
+    "r87": {
+      "$ref": "#/$defs/negotiation__SelectionError"
+    },
+    "r88": {
+      "$ref": "#/$defs/time_internal__S12__AnchorResponse"
+    },
+    "r89": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/time_internal__S12__Error"
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r90": {
+      "$ref": "#/$defs/time_internal__S12__Error"
+    },
+    "r91": {
+      "$ref": "#/$defs/time_internal__S12__AssessmentResponse"
+    },
+    "r92": {
+      "$ref": "#/$defs/time_internal__S12__BundleResponse"
+    },
+    "r93": {
+      "$ref": "#/$defs/time_internal__S12__ProfileResponse"
+    },
+    "r94": {
+      "$ref": "#/$defs/baseline__RevocationRequest"
+    },
+    "r95": {
+      "$ref": "#/$defs/command__A__S0_RequestAdjudication"
+    },
+    "r96": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/command__A__S0_Error"
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r97": {
+      "$ref": "#/$defs/command__A__S0_Error"
+    },
+    "r98": {
+      "$ref": "#/$defs/command__A__S0_CommandRequest"
+    },
+    "r99": {
+      "$ref": "#/$defs/command__A__S0_LookupResult"
+    },
+    "r100": {
+      "$ref": "#/$defs/command__A__S0_RequestIdentity"
+    },
+    "r101": {
+      "$ref": "#/$defs/command__A__S0_RejectRequest"
+    },
+    "r102": {
+      "$ref": "#/$defs/command__V__S0_CancelReceipt"
+    },
+    "r103": {
+      "$ref": "#/$defs/command__V__S0_CancelRequest"
+    },
+    "r104": {
+      "$ref": "#/$defs/command__V__S0_CancelLookup"
+    },
+    "r105": {
+      "$ref": "#/$defs/command__V__S0_CancelIdentity"
+    },
+    "r106": {
+      "$ref": "#/$defs/control__LookupResult"
+    },
+    "r107": {
+      "$ref": "#/$defs/control__LookupRequest"
+    },
+    "r108": {
+      "$ref": "#/$defs/control__RequestReceipt"
+    },
+    "r109": {
+      "$ref": "#/$defs/control__AcquireRequest"
+    },
+    "r110": {
+      "$ref": "#/$defs/control__ReleaseRequest"
+    },
+    "r111": {
+      "$ref": "#/$defs/control__OfferRequest"
+    },
+    "r112": {
+      "$ref": "#/$defs/control__AcceptRequest"
+    },
+    "r113": {
+      "$ref": "#/$defs/control__CancelRequest"
+    },
+    "r114": {
+      "$ref": "#/$defs/installation__LookupResult"
+    },
+    "r115": {
+      "$ref": "#/$defs/installation__LookupRequest"
+    },
+    "r116": {
+      "$ref": "#/$defs/installation__CreateSlot"
+    },
+    "r117": {
+      "$ref": "#/$defs/installation__Activate"
+    },
+    "r118": {
+      "$ref": "#/$defs/installation__Disable"
+    },
+    "r119": {
+      "$ref": "#/$defs/installation__Enable"
+    },
+    "r120": {
+      "$ref": "#/$defs/installation__DependencyPlan"
+    },
+    "r121": {
+      "$ref": "#/$defs/installation__PlanRequest"
+    },
+    "r122": {
+      "$ref": "#/$defs/installation__Uninstall"
+    },
+    "r123": {
+      "$ref": "#/$defs/installation__Upgrade"
+    },
+    "r124": {
+      "$ref": "#/$defs/installation__Stage"
+    },
+    "r125": {
+      "$ref": "#/$defs/installation__Approve"
+    },
+    "r126": {
+      "$ref": "#/$defs/installation__ResolutionView"
+    },
+    "r127": {
+      "$ref": "#/$defs/installation__ResolveRoles"
+    },
+    "r128": {
+      "$ref": "#/$defs/installation__PermissionReview"
+    },
+    "r129": {
+      "$ref": "#/$defs/installation__Review"
+    },
+    "r130": {
+      "$ref": "#/$defs/panel__Service_ConfirmationCancel"
+    },
+    "r131": {
+      "$ref": "#/$defs/panel__Service_ConfirmationCommit"
+    },
+    "r132": {
+      "$ref": "#/$defs/panel__Service_CreateSession"
+    },
+    "r133": {
+      "$ref": "#/$defs/panel__Service_Activate"
+    },
+    "r134": {
+      "$ref": "#/$defs/panel__Service_CloseSession"
+    },
+    "r135": {
+      "$ref": "#/$defs/panel__Service_ConfirmInvocation"
+    },
+    "r136": {
+      "$ref": "#/$defs/panel__Service_Handshake"
+    },
+    "r137": {
+      "$ref": "#/$defs/panel__Service_PrepareActivation"
+    },
+    "r138": {
+      "$ref": "#/$defs/panel__Service_Renew"
+    },
+    "r139": {
+      "$ref": "#/$defs/panel__Service_Invocation"
+    },
+    "r140": {
+      "$ref": "#/$defs/subscription__Subscription_CreateSubscription"
+    },
+    "r141": {
+      "$ref": "#/$defs/subscription__Subscription_AcknowledgeProjection"
+    },
+    "r142": {
+      "$ref": "#/$defs/subscription__Subscription_CloseSubscription"
+    },
+    "r143": {
+      "$ref": "#/$defs/baseline__RequestContextResponse"
+    },
+    "r144": {
+      "$ref": "#/$defs/baseline__RequestContextRequest"
+    },
+    "r145": {
+      "$ref": "#/$defs/baseline__MutationReceiptResponse"
+    },
+    "r146": {
+      "$ref": "#/$defs/baseline__RevokeRequest"
+    },
+    "r147": {
+      "$ref": "#/$defs/channel__SubscriptionView"
+    },
+    "r148": {
+      "$ref": "#/$defs/channel__HumanCreate"
+    },
+    "r149": {
+      "$ref": "#/$defs/channel__TicketBinding"
+    },
+    "r150": {
+      "$ref": "#/$defs/channel__TicketIssued"
+    },
+    "r151": {
+      "$ref": "#/$defs/channel__TicketRequest"
+    },
+    "r152": {
+      "$ref": "#/$defs/baseline__BootstrapRequest"
+    },
+    "r153": {
+      "$ref": "#/$defs/baseline__TokenResultResponse"
+    },
+    "r154": {
+      "$ref": "#/$defs/baseline__TokenRequest"
+    },
+    "r155": {
+      "$ref": "#/$defs/baseline__LoginRequest"
+    },
+    "r156": {
+      "$ref": "#/$defs/baseline__RefreshRequest"
+    },
+    "r157": {
+      "$ref": "#/$defs/baseline__IntrospectResultResponse"
+    },
+    "r158": {
+      "$ref": "#/$defs/baseline__IntrospectRequest"
+    },
+    "r159": {
+      "$ref": "#/$defs/continuation_controller__ControllerRecord"
+    },
+    "r160": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/continuation_controller__ProtocolError"
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r161": {
+      "$ref": "#/$defs/continuation_controller__ProtocolError"
+    },
+    "r162": {
+      "$ref": "#/$defs/continuation_controller__IssueInput"
+    },
+    "r163": {
+      "$ref": "#/$defs/continuation_controller__ControllerLookup"
+    },
+    "r164": {
+      "$ref": "#/$defs/continuation_controller__LookupInput"
+    },
+    "r165": {
+      "$ref": "#/$defs/preparation__S0_PreparationRecord"
+    },
+    "r166": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/preparation__S0_PreparationError"
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r167": {
+      "$ref": "#/$defs/preparation__S0_PreparationError"
+    },
+    "r168": {
+      "$ref": "#/$defs/preparation__S0_PrepareRequest"
+    },
+    "r169": {
+      "$ref": "#/$defs/preparation__S0_PreparationClose"
+    },
+    "r170": {
+      "$ref": "#/$defs/preparation__S0_PreparationLookupResult"
+    },
+    "r171": {
+      "$ref": "#/$defs/preparation__S0_PreparationLookup"
+    },
+    "r172": {
+      "$ref": "#/$defs/protection__Protocol_ControllerProtectionRecord"
+    },
+    "r173": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/protection__Protocol_ProtectionError"
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r174": {
+      "$ref": "#/$defs/protection__Protocol_ProtectionError"
+    },
+    "r175": {
+      "$ref": "#/$defs/protection__Protocol_ProtectionRequest"
+    },
+    "r176": {
+      "$ref": "#/$defs/protection__Protocol_ProtectionLookupResult"
+    },
+    "r177": {
+      "$ref": "#/$defs/protection__Protocol_ProtectionLookup"
+    },
+    "r178": {
+      "$ref": "#/$defs/baseline__CapacityUpdate"
+    },
+    "r179": {
+      "$ref": "#/$defs/baseline__GrantUpdate"
+    },
+    "r180": {
+      "$ref": "#/$defs/negotiation__Discovery"
+    },
+    "r181": {
+      "$ref": "#/$defs/channel__AttemptView"
+    },
+    "r182": {
+      "$ref": "#/$defs/snapshot__PageResponse"
+    },
+    "r183": {
+      "$ref": "#/$defs/channel__ServiceCreate"
+    },
+    "r184": {
+      "$ref": "#/$defs/lifecycle__ActivationSlot"
+    },
+    "r185": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/lifecycle__Error"
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r186": {
+      "$ref": "#/$defs/lifecycle__Error"
+    },
+    "r187": {
+      "$ref": "#/$defs/lifecycle__DraftRecord"
+    },
+    "r188": {
+      "$ref": "#/$defs/lifecycle__UpdateDraft"
+    },
+    "r189": {
+      "$ref": "#/$defs/lifecycle__Program_IndependenceProof"
+    },
+    "r190": {
+      "$ref": "#/$defs/lifecycle__PublishedVersion"
+    },
+    "r191": {
+      "$ref": "#/$defs/lifecycle__Program_PublishedArtifact"
+    },
+    "r192": {
+      "$ref": "#/$defs/lifecycle__Program_CompiledProgram"
+    },
+    "r193": {
+      "$ref": "#/$defs/lifecycle__LifecycleOperation"
+    },
+    "r194": {
+      "$ref": "#/$defs/lifecycle__RunRecord"
+    },
+    "r195": {
+      "$ref": "#/$defs/lifecycle__TriggerDecision"
+    },
+    "r196": {
+      "$ref": "#/$defs/lifecycle__ExecutionRecord"
+    },
+    "r197": {
+      "$ref": "#/$defs/ingress__CommittedBatch"
+    },
+    "r198": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ingress__Error"
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r199": {
+      "$ref": "#/$defs/ingress__Error"
+    },
+    "r200": {
+      "$ref": "#/$defs/lifecycle__LookupResult"
+    },
+    "r201": {
+      "$ref": "#/$defs/lifecycle__Lookup"
+    },
+    "r202": {
+      "$ref": "#/$defs/lifecycle__CreateDefinition"
+    },
+    "r203": {
+      "$ref": "#/$defs/lifecycle__Publish"
+    },
+    "r204": {
+      "$ref": "#/$defs/ingress__ProviderReceipt"
+    },
+    "r205": {
+      "$ref": "#/$defs/ingress__SubmitEvent"
+    },
+    "r206": {
+      "$ref": "#/$defs/ingress__LookupResult"
+    },
+    "r207": {
+      "$ref": "#/$defs/ingress__LookupEvent"
+    },
+    "r208": {
+      "$ref": "#/$defs/lifecycle__CreateRun"
+    },
+    "r209": {
+      "$ref": "#/$defs/lifecycle__Arm"
+    },
+    "r210": {
+      "$ref": "#/$defs/lifecycle__ProtectRun"
+    },
+    "r211": {
+      "$ref": "#/$defs/lifecycle__Preflight"
+    },
+    "r212": {
+      "$ref": "#/$defs/lifecycle__InspectRun"
+    },
+    "r213": {
+      "$ref": "#/$defs/lifecycle__RecoveryPreview"
+    },
+    "r214": {
+      "$ref": "#/$defs/lifecycle__Resume"
+    },
+    "r215": {
+      "$ref": "#/$defs/continuation_seamer__SeamerRecord"
+    },
+    "r216": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/continuation_seamer__ProtocolError"
+        },
+        {
+          "$ref": "#/$defs/negotiation__SelectionError"
+        }
+      ]
+    },
+    "r217": {
+      "$ref": "#/$defs/continuation_seamer__ProtocolError"
+    },
+    "r218": {
+      "$ref": "#/$defs/continuation_seamer__IssueInput"
+    },
+    "r219": {
+      "$ref": "#/$defs/continuation_seamer__AdoptionInput"
+    },
+    "r220": {
+      "$ref": "#/$defs/continuation_seamer__FinishInput"
+    },
+    "r221": {
+      "$ref": "#/$defs/continuation_seamer__SeamerLookup"
+    },
+    "r222": {
+      "$ref": "#/$defs/continuation_seamer__LookupInput"
+    },
+    "r223": {
+      "$ref": "#/$defs/continuation_seamer__ReceiptAck"
+    },
+    "r224": {
+      "$ref": "#/$defs/continuation_seamer__ReceiptInput"
+    },
+    "r225": {
+      "$ref": "#/$defs/continuation_seamer__WithdrawalAck"
+    },
+    "r226": {
+      "$ref": "#/$defs/continuation_seamer__WithdrawalNotice"
+    },
+    "r227": {
+      "$ref": "#/$defs/lifecycle__UpdateMetadata"
+    },
+    "r228": {
+      "$ref": "#/$defs/baseline__CatalogUpdate"
+    },
+    "r229": {
+      "$ref": "#/$defs/command__S9__AUTH_FENCE"
+    },
+    "r230": {
+      "$ref": "#/$defs/command__S9__AUTH_FENCE_ACK"
+    },
+    "r231": {
+      "$ref": "#/$defs/command__S9__BARRIER_STORED"
+    },
+    "r232": {
+      "$ref": "#/$defs/command__S9__BARRIER_UNAVAILABLE"
+    },
+    "r233": {
+      "$ref": "#/$defs/command__S9__CANCEL_ENCODING_FAILED"
+    },
+    "r234": {
+      "$ref": "#/$defs/command__S9__CANCEL_EVIDENCE_CANDIDATE"
+    },
+    "r235": {
+      "$ref": "#/$defs/command__S9__CANCEL_EXECUTION_STATUS"
+    },
+    "r236": {
+      "$ref": "#/$defs/command__S9__CANCEL_FENCE"
+    },
+    "r237": {
+      "$ref": "#/$defs/command__S9__CANCEL_FENCE_ACK"
+    },
+    "r238": {
+      "$ref": "#/$defs/command__S9__CANCEL_GUARD"
+    },
+    "r239": {
+      "$ref": "#/$defs/command__S9__CANCEL_GUARD_ACK"
+    },
+    "r240": {
+      "$ref": "#/$defs/command__S9__CANCEL_PREPARE_REJECTED"
+    },
+    "r241": {
+      "$ref": "#/$defs/command__S9__CANCEL_REPORT_STORED"
+    },
+    "r242": {
+      "$ref": "#/$defs/command__S9__CANCEL_RESEND_REJECTED"
+    },
+    "r243": {
+      "$ref": "#/$defs/command__S9__CANCEL_RESEND_REQUEST"
+    },
+    "r244": {
+      "$ref": "#/$defs/command__S9__CANCEL_SEND_REPORT"
+    },
+    "r245": {
+      "$ref": "#/$defs/command__S9__CLOSE_GATE"
+    },
+    "r246": {
+      "$ref": "#/$defs/command__S9__CLOSE_GATE_ACK"
+    },
+    "r247": {
+      "$ref": "#/$defs/command__J__DENY_ENCODING"
+    },
+    "r248": {
+      "$ref": "#/$defs/command__J__DENY_ENCODING_ACK"
+    },
+    "r249": {
+      "$ref": "#/$defs/command__S9__DISPATCH"
+    },
+    "r250": {
+      "$ref": "#/$defs/command__S9__DISPATCH_CANCEL"
+    },
+    "r251": {
+      "$ref": "#/$defs/command__S9__ENCODE_CANCEL_PACKET"
+    },
+    "r252": {
+      "$ref": "#/$defs/command__S9__ENCODE_PACKET"
+    },
+    "r253": {
+      "$ref": "#/$defs/command__S9__EVIDENCE_CANDIDATE"
+    },
+    "r254": {
+      "$ref": "#/$defs/command__S9__FENCE"
+    },
+    "r255": {
+      "$ref": "#/$defs/command__S9__FENCE_ACK"
+    },
+    "r256": {
+      "$ref": "#/$defs/command__GF__GATE_FENCE"
+    },
+    "r257": {
+      "$ref": "#/$defs/command__GF__GATE_FENCE_ACK"
+    },
+    "r258": {
+      "$ref": "#/$defs/command__S9__GUARD_ACK"
+    },
+    "r259": {
+      "$ref": "#/$defs/command__S9__GUARD_INSTALL"
+    },
+    "r260": {
+      "$ref": "#/$defs/command__S9__HELLO"
+    },
+    "r261": {
+      "$ref": "#/$defs/command__S9__HELLO_ACK"
+    },
+    "r262": {
+      "$ref": "#/$defs/command__S9__OPEN_GATE"
+    },
+    "r263": {
+      "$ref": "#/$defs/command__S9__OPEN_GATE_ACK"
+    },
+    "r264": {
+      "$ref": "#/$defs/command__S9__PACKET_ENCODING_FAILED"
+    },
+    "r265": {
+      "$ref": "#/$defs/command__S9__PREPARE_CANCEL_PACKET"
+    },
+    "r266": {
+      "$ref": "#/$defs/command__S9__PREPARE_PACKET"
+    },
+    "r267": {
+      "$ref": "#/$defs/command__S9__PREPARE_PACKET_REJECTED"
+    },
+    "r268": {
+      "$ref": "#/$defs/command__S9__QUERY_BARRIER"
+    },
+    "r269": {
+      "$ref": "#/$defs/command__S9__QUERY_CANCEL_EXECUTION"
+    },
+    "r270": {
+      "$ref": "#/$defs/command__ER__RELEASE_ENCODING"
+    },
+    "r271": {
+      "$ref": "#/$defs/command__ER__RELEASE_ENCODING_ACK"
+    },
+    "r272": {
+      "$ref": "#/$defs/command__S9__REPORT_STORED"
+    },
+    "r273": {
+      "$ref": "#/$defs/command__S9__RESEND_DISPATCH"
+    },
+    "r274": {
+      "$ref": "#/$defs/command__S9__RESEND_REJECTED"
+    },
+    "r275": {
+      "$ref": "#/$defs/command__S9__RESEND_REQUEST"
+    },
+    "r276": {
+      "$ref": "#/$defs/command__S9__RUN_FENCE"
+    },
+    "r277": {
+      "$ref": "#/$defs/command__S9__RUN_FENCE_ACK"
+    },
+    "r278": {
+      "$ref": "#/$defs/command__S9__SEND_REPORT"
+    },
+    "r279": {
+      "$ref": "#/$defs/command__S9__TIME_FENCE"
+    },
+    "r280": {
+      "$ref": "#/$defs/command__S9__TIME_FENCE_ACK"
+    }
+  }
+}
