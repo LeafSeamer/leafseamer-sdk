@@ -1,0 +1,453 @@
+{
+  "format": "panel-dynamic-report/1",
+  "approved": false,
+  "runtime_ready": false,
+  "installed": false,
+  "all_passed": true,
+  "cases_passed": 103,
+  "checks": [
+    {
+      "name": "固定SDK原件:contracts/panel-integration/preview/models.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定SDK原件:contracts/panel-integration/preview/selection.json",
+      "passed": true
+    },
+    {
+      "name": "固定SDK原件:contracts/panel-integration/preview/method-registry.json",
+      "passed": true
+    },
+    {
+      "name": "固定SDK原件:contracts/panel-results/RESULTS.md",
+      "passed": true
+    },
+    {
+      "name": "固定SDK原件:contracts/publication-source/README.md",
+      "passed": true
+    },
+    {
+      "name": "固定副本:contracts/panel-dynamic/source/bundle.txt",
+      "passed": true
+    },
+    {
+      "name": "固定副本:contracts/panel-dynamic/source/check_bundle.py",
+      "passed": true
+    },
+    {
+      "name": "固定副本:contracts/panel-dynamic/source/bundle.schema.json",
+      "passed": true
+    },
+    {
+      "name": "嵌套验证并冻结副本",
+      "passed": true
+    },
+    {
+      "name": "候选不可重复消费",
+      "passed": true
+    },
+    {
+      "name": "自报候选JSON拒绝",
+      "passed": true
+    },
+    {
+      "name": "伪造对象无登记",
+      "passed": true
+    },
+    {
+      "name": "候选不能跨权威",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:selection",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:selection",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:document_generation",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:document_generation",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:channel",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:channel",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:panel_session",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:panel_session",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:scope_revision",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:scope_revision",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:activation",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:activation",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:installation",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:installation",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:approval",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:approval",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:authorization",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:authorization",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:input_digest",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:input_digest",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:purpose",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:purpose",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:access",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:access",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:source_revision",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:source_revision",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:source_database",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:source_database",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:method",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:method",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:slot",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:slot",
+      "passed": true
+    },
+    {
+      "name": "准备不能跨绑定:binding",
+      "passed": true
+    },
+    {
+      "name": "消费必须复核:binding",
+      "passed": true
+    },
+    {
+      "name": "错上下文未消费正确候选",
+      "passed": true
+    },
+    {
+      "name": "能力仅导出精确SchemaRef",
+      "passed": true
+    },
+    {
+      "name": "候选容量拒绝不挤掉旧值",
+      "passed": true
+    },
+    {
+      "name": "消费后释放一个容量槽",
+      "passed": true
+    },
+    {
+      "name": "容量保持64",
+      "passed": true
+    },
+    {
+      "name": "撤权清空待消费记录",
+      "passed": true
+    },
+    {
+      "name": "精确导出:doc_digest",
+      "passed": true
+    },
+    {
+      "name": "精确导出:definition",
+      "passed": true
+    },
+    {
+      "name": "精确导出:schema_id",
+      "passed": true
+    },
+    {
+      "name": "精确导出:extra",
+      "passed": true
+    },
+    {
+      "name": "嵌套范围",
+      "passed": true
+    },
+    {
+      "name": "禁止数值强转",
+      "passed": true
+    },
+    {
+      "name": "数组元素类型",
+      "passed": true
+    },
+    {
+      "name": "不能缺必需字段",
+      "passed": true
+    },
+    {
+      "name": "未批准嵌套字段拒绝",
+      "passed": true
+    },
+    {
+      "name": "每个容器与叶节点均需读权:",
+      "passed": true
+    },
+    {
+      "name": "每个容器与叶节点均需读权:/device",
+      "passed": true
+    },
+    {
+      "name": "每个容器与叶节点均需读权:/device/labels",
+      "passed": true
+    },
+    {
+      "name": "每个容器与叶节点均需读权:/device/labels/0",
+      "passed": true
+    },
+    {
+      "name": "每个容器与叶节点均需读权:/device/level",
+      "passed": true
+    },
+    {
+      "name": "非法字段策略:['/bad~2']",
+      "passed": true
+    },
+    {
+      "name": "非法字段策略:['/a', '/a']",
+      "passed": true
+    },
+    {
+      "name": "非法字段策略:['/z', '/a']",
+      "passed": true
+    },
+    {
+      "name": "非法字段策略:['relative']",
+      "passed": true
+    },
+    {
+      "name": "改内容或引擎不继承批准:71",
+      "passed": true
+    },
+    {
+      "name": "改内容或引擎不继承批准:72",
+      "passed": true
+    },
+    {
+      "name": "改内容或引擎不继承批准:73",
+      "passed": true
+    },
+    {
+      "name": "改内容或引擎不继承批准:74",
+      "passed": true
+    },
+    {
+      "name": "改内容或引擎不继承批准:75",
+      "passed": true
+    },
+    {
+      "name": "改内容或引擎不继承批准:76",
+      "passed": true
+    },
+    {
+      "name": "外部HTTP引用",
+      "passed": true
+    },
+    {
+      "name": "缺本地引用",
+      "passed": true
+    },
+    {
+      "name": "同实例环",
+      "passed": true
+    },
+    {
+      "name": "未知关键字",
+      "passed": true
+    },
+    {
+      "name": "未批准模式",
+      "passed": true
+    },
+    {
+      "name": "未批准format",
+      "passed": true
+    },
+    {
+      "name": "不能注入默认值",
+      "passed": true
+    },
+    {
+      "name": "转义字段及空容器不被删掉",
+      "passed": true
+    },
+    {
+      "name": "下降子实例递归可验证",
+      "passed": true
+    },
+    {
+      "name": "完整tuple应用器",
+      "passed": true
+    },
+    {
+      "name": "批准pattern实际验证",
+      "passed": true
+    },
+    {
+      "name": "pattern字段类型仍拒绝",
+      "passed": true
+    },
+    {
+      "name": "批准format实际验证",
+      "passed": true
+    },
+    {
+      "name": "format不是仅注解",
+      "passed": true
+    },
+    {
+      "name": "值预算或数值拒绝:91",
+      "passed": true
+    },
+    {
+      "name": "值预算或数值拒绝:92",
+      "passed": true
+    },
+    {
+      "name": "值预算或数值拒绝:93",
+      "passed": true
+    },
+    {
+      "name": "值预算或数值拒绝:94",
+      "passed": true
+    },
+    {
+      "name": "实例深度拒绝",
+      "passed": true
+    },
+    {
+      "name": "准备后撤权拒绝消费",
+      "passed": true
+    },
+    {
+      "name": "撤权不能新准备",
+      "passed": true
+    },
+    {
+      "name": "同权威只允许一个在途验证",
+      "passed": true
+    },
+    {
+      "name": "验证中撤权不能生成候选",
+      "passed": true
+    },
+    {
+      "name": "子进程截止拒绝",
+      "passed": true
+    },
+    {
+      "name": "截止后没有可消费候选",
+      "passed": true
+    },
+    {
+      "name": "超时后正常值仍通过",
+      "passed": true
+    }
+  ],
+  "validator_subprocess_calls": 17,
+  "revocation_thread_scenarios": 1,
+  "validator_timeout_scenarios": 1,
+  "production_authority_tests_executed": 0,
+  "production_projection_tests_executed": 0,
+  "worker_memory_limit_tests_executed": 0,
+  "browser_tests_executed": 0,
+  "network_tests_executed": 0,
+  "database_tests_executed": 0,
+  "device_tests_executed": 0,
+  "tools": {
+    "jsonschema": "4.25.1",
+    "referencing": "0.36.2",
+    "rfc8785": "0.1.4"
+  },
+  "inputs": {
+    "contracts/panel-dynamic/check.py": "43dfb346ad5f3423bbba3602a616c2bed6ac46d43e750101cf715f503c7b2669",
+    "contracts/panel-dynamic/fixtures.py": "ec745236e5043645834cad1fb1f55bd616e4ac38aec50b51c56660ab735026f6",
+    "contracts/panel-dynamic/provider.py": "1cb3f3051e7ecde7bab3d92f9f9a16b190b8acc2ee7592436b679bdd2ea28b9b",
+    "contracts/panel-dynamic/README.md": "aea8dba177b1e62e5db2ae73081bbca5472e1684570f8267cf3b69fa542cfd7e",
+    "contracts/panel-dynamic/source/bundle.schema.json": "b6fd30c08babcd3adddb48d347253541c9607b2db36008cb15f448524b3bef3d",
+    "contracts/panel-dynamic/source/bundle.txt": "6587f47ca1bdbe7896f64308c30326b0963fa9dc4dffed5210fc1a95581b6470",
+    "contracts/panel-dynamic/source/check_bundle.py": "2646547149865dcc20397f878f41f20746dac999c6d12d6f33ff11be7bd8d05f",
+    "contracts/panel-dynamic/sources.json": "ed490bd3cd6c03925c81d253f13efa773240a33101fae7438702a994f2c177e2",
+    "contracts/panel-dynamic/worker.py": "b7a1ac6b2cdab4c8930ade89a840d364ace58a2382d1c3b1231b5ef8112e056d",
+    "contracts/panel-integration/preview/models.schema.json": "9e12b81ac9d9a3a0f63ad5ea5737ce7c3bdd76f1a63c259dd35757ce43901b1f",
+    "contracts/panel-integration/preview/selection.json": "284bc9d50448186b00d1e730c47252f38145a9bf7c5e466ce7643d15cdd1d391",
+    "contracts/panel-integration/preview/method-registry.json": "4eea500650007d450afab918a8cfbd81c60cb80608874194498c10dd2e8c8301",
+    "contracts/panel-results/RESULTS.md": "c8751a57042fe46369ff5af0a2e7a066ed3c25bb4219c8a33e2e486a307b905c",
+    "contracts/publication-source/README.md": "8d3e29b4cde1cba23f718dd237331014831ac03eb6de7e9167ee11a18e8bb43f"
+  }
+}
