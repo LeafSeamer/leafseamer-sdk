@@ -1,0 +1,2234 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://leafseamer.invalid/sdk/panel-results/0.3/result.schema.json",
+  "title": "panel-results/0.3.0-draft.1",
+  "$defs": {
+    "CancelView": {
+      "type": "object",
+      "properties": {
+        "operation_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_Id"
+        },
+        "command_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_Id"
+        },
+        "revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_PositiveCounter"
+        },
+        "state": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_CancellationState"
+        },
+        "future_writes": {
+          "enum": [
+            "pending",
+            "closed",
+            "indeterminate"
+          ]
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "operation_id",
+        "command_id",
+        "revision",
+        "state",
+        "future_writes",
+        "reason_code"
+      ],
+      "additionalProperties": false
+    },
+    "CapabilityView": {
+      "type": "object",
+      "properties": {
+        "device_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+        },
+        "catalog_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Revision"
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_ActionSummary"
+          },
+          "maxItems": 256
+        },
+        "triggers": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_TriggerSummary"
+          },
+          "maxItems": 256
+        },
+        "state_schema_ref": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_SchemaRef"
+        }
+      },
+      "required": [
+        "device_id",
+        "catalog_revision",
+        "actions",
+        "triggers",
+        "state_schema_ref"
+      ],
+      "additionalProperties": false
+    },
+    "CapacityView": {
+      "type": "object",
+      "properties": {
+        "pressure": {
+          "enum": [
+            "normal",
+            "limited",
+            "protected"
+          ]
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+          },
+          "maxItems": 64,
+          "uniqueItems": true
+        },
+        "panel_budget": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_PanelBudget"
+        },
+        "current_panel_usage": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_PanelUsage"
+        }
+      },
+      "required": [
+        "pressure",
+        "reason_codes",
+        "panel_budget",
+        "current_panel_usage"
+      ],
+      "additionalProperties": false
+    },
+    "ClockAssessmentView": {
+      "type": "object",
+      "properties": {
+        "model_id": {
+          "const": "reference-bound/1"
+        },
+        "model_revision": {
+          "const": "1"
+        },
+        "status": {
+          "enum": [
+            "conditional",
+            "unavailable"
+          ]
+        },
+        "reference_utc": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/time_public__S12__Interval"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "estimated_utc_ns": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/time_public__S12__Signed"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "error_radius_ns": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/time_public__S12__UInt"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 12,
+          "items": {
+            "enum": [
+              "clock_unavailable",
+              "source_unavailable",
+              "expired",
+              "unqualified",
+              "storage_unavailable"
+            ]
+          }
+        },
+        "grants_execution": {
+          "const": false
+        }
+      },
+      "required": [
+        "model_id",
+        "model_revision",
+        "status",
+        "reference_utc",
+        "estimated_utc_ns",
+        "error_radius_ns",
+        "reasons",
+        "grants_execution"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "conditional"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "reference_utc": {
+                "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/time_public__S12__Interval"
+              },
+              "estimated_utc_ns": {
+                "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/time_public__S12__Signed"
+              },
+              "error_radius_ns": {
+                "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/time_public__S12__UInt"
+              },
+              "reasons": {
+                "maxItems": 0
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "reference_utc": {
+                "type": "null"
+              },
+              "estimated_utc_ns": {
+                "type": "null"
+              },
+              "error_radius_ns": {
+                "type": "null"
+              },
+              "reasons": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ClockView": {
+      "type": "object",
+      "properties": {
+        "model_id": {
+          "const": "reference-bound/1"
+        },
+        "model_revision": {
+          "const": "1"
+        },
+        "status": {
+          "enum": [
+            "conditional",
+            "unavailable"
+          ]
+        },
+        "reference_utc": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/time_public__S12__Interval"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "estimated_utc_ns": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/time_public__S12__Signed"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "error_radius_ns": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/time_public__S12__UInt"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 12,
+          "items": {
+            "enum": [
+              "clock_unavailable",
+              "source_unavailable",
+              "expired",
+              "unqualified",
+              "storage_unavailable"
+            ]
+          }
+        },
+        "grants_execution": {
+          "const": false
+        }
+      },
+      "required": [
+        "model_id",
+        "model_revision",
+        "status",
+        "reference_utc",
+        "estimated_utc_ns",
+        "error_radius_ns",
+        "reasons",
+        "grants_execution"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "conditional"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "reference_utc": {
+                "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/time_public__S12__Interval"
+              },
+              "estimated_utc_ns": {
+                "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/time_public__S12__Signed"
+              },
+              "error_radius_ns": {
+                "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/time_public__S12__UInt"
+              },
+              "reasons": {
+                "maxItems": 0
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "reference_utc": {
+                "type": "null"
+              },
+              "estimated_utc_ns": {
+                "type": "null"
+              },
+              "error_radius_ns": {
+                "type": "null"
+              },
+              "reasons": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "CommandView": {
+      "type": "object",
+      "properties": {
+        "command_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_Id"
+        },
+        "revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_PositiveCounter"
+        },
+        "target": {
+          "type": "object",
+          "properties": {
+            "device_id": {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_Id"
+            },
+            "action_id": {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_Id"
+            },
+            "capability_version": {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_Version"
+            }
+          },
+          "required": [
+            "device_id",
+            "action_id",
+            "capability_version"
+          ],
+          "additionalProperties": false
+        },
+        "origin": {
+          "enum": [
+            "manual",
+            "automation"
+          ]
+        },
+        "accepted_at": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_Timestamp"
+        },
+        "phase": {
+          "enum": [
+            "queued",
+            "dispatching",
+            "awaiting_evidence",
+            "finished"
+          ]
+        },
+        "outcome": {
+          "enum": [
+            "pending",
+            "succeeded",
+            "failed",
+            "unknown",
+            "cancelled",
+            "expired",
+            "blocked"
+          ]
+        },
+        "effect_status": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S1_Effect"
+        },
+        "resource_status": {
+          "enum": [
+            "held",
+            "clear",
+            "unresolved"
+          ]
+        },
+        "required_completion": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_CompletionLevel"
+        },
+        "achieved_completion": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_CompletionLevel"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cancellation_state": {
+          "enum": [
+            "none",
+            "requested",
+            "confirmed",
+            "unsupported",
+            "failed"
+          ]
+        },
+        "automation_continuation": {
+          "enum": [
+            "eligible",
+            "paused_latched"
+          ]
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "resolution_summary": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_ResolutionSummary"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state_ref": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_Ref"
+        }
+      },
+      "required": [
+        "command_id",
+        "revision",
+        "target",
+        "origin",
+        "accepted_at",
+        "phase",
+        "outcome",
+        "effect_status",
+        "resource_status",
+        "required_completion",
+        "achieved_completion",
+        "cancellation_state",
+        "automation_continuation",
+        "reason_code",
+        "resolution_summary",
+        "state_ref"
+      ],
+      "additionalProperties": false
+    },
+    "ControlOperationView": {
+      "type": "object",
+      "properties": {
+        "operation_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__Id"
+        },
+        "device_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__Id"
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "effective",
+            "rejected",
+            "indeterminate"
+          ]
+        },
+        "target": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_ControlTarget"
+        },
+        "failure_code": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effective_version": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Counter"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ready": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "operation_id",
+        "device_id",
+        "state",
+        "target",
+        "failure_code",
+        "effective_version",
+        "ready"
+      ],
+      "additionalProperties": false
+    },
+    "ControlView": {
+      "type": "object",
+      "properties": {
+        "device_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__Id"
+        },
+        "revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__U20"
+        },
+        "control_epoch": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__Id"
+        },
+        "effective_version": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__U20"
+        },
+        "mode": {
+          "enum": [
+            "manual",
+            "automatic"
+          ]
+        },
+        "holder": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Holder"
+        },
+        "gate_state": {
+          "enum": [
+            "ready",
+            "fencing",
+            "protected"
+          ]
+        },
+        "pending_change": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_PendingControl"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "in_flight": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_CommandSet"
+        },
+        "unresolved": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_CommandSet"
+        }
+      },
+      "required": [
+        "device_id",
+        "revision",
+        "control_epoch",
+        "effective_version",
+        "mode",
+        "holder",
+        "gate_state",
+        "pending_change",
+        "in_flight",
+        "unresolved"
+      ],
+      "additionalProperties": false
+    },
+    "DefinitionView": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/DraftDefinitionView"
+        },
+        {
+          "$ref": "#/$defs/PublishedDefinitionView"
+        }
+      ]
+    },
+    "DevicePageView": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_DeviceSummary"
+          },
+          "maxItems": 256
+        },
+        "catalog_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Revision"
+        },
+        "next_page_handle": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "items",
+        "catalog_revision",
+        "next_page_handle"
+      ],
+      "additionalProperties": false
+    },
+    "EvidencePageView": {
+      "type": "object",
+      "properties": {
+        "command_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_Id"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_EvidenceSummary"
+          },
+          "maxItems": 256
+        },
+        "resource_release_summary": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_ResourceReleaseSummary"
+        },
+        "next_page_handle": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "command_id",
+        "items",
+        "resource_release_summary",
+        "next_page_handle"
+      ],
+      "additionalProperties": false
+    },
+    "IndependenceView": {
+      "type": "object",
+      "properties": {
+        "proof_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+        },
+        "proof_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "definition_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+        },
+        "definition_version": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "failed_step_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+        },
+        "successor_step_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+          },
+          "maxItems": 4096,
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "verdict": {
+          "enum": [
+            "independent",
+            "dependent",
+            "unknown"
+          ]
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+          },
+          "maxItems": 64,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "proof_id",
+        "proof_revision",
+        "definition_id",
+        "definition_version",
+        "failed_step_id",
+        "successor_step_ids",
+        "verdict",
+        "reason_codes"
+      ],
+      "additionalProperties": false
+    },
+    "MetaView": {
+      "type": "object",
+      "properties": {
+        "component_version": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Version"
+        },
+        "protocol_version": {
+          "const": "leafseamer.api.v1.events2"
+        },
+        "panel_features": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+          },
+          "maxItems": 256,
+          "uniqueItems": true
+        },
+        "limits_profile_ref": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+        }
+      },
+      "required": [
+        "component_version",
+        "protocol_version",
+        "panel_features",
+        "limits_profile_ref"
+      ],
+      "additionalProperties": false
+    },
+    "MutationView": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/GrantMutationView"
+        },
+        {
+          "$ref": "#/$defs/LifecycleMutationView"
+        }
+      ]
+    },
+    "ObservationView": {
+      "type": "object",
+      "properties": {
+        "device_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Id"
+        },
+        "observation_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Id"
+        },
+        "state_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Revision"
+        },
+        "observed_at": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Timestamp"
+        },
+        "freshness_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 86400000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "integrity": {
+          "enum": [
+            "complete",
+            "gap",
+            "unavailable"
+          ]
+        },
+        "projection_status": {
+          "enum": [
+            "complete",
+            "filtered"
+          ]
+        },
+        "values": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_QualifiedValue"
+        }
+      },
+      "required": [
+        "device_id",
+        "observation_id",
+        "state_revision",
+        "observed_at",
+        "freshness_ms",
+        "integrity",
+        "projection_status",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "PreflightView": {
+      "type": "object",
+      "properties": {
+        "run_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Id"
+        },
+        "run_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "slot_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "passed": {
+          "type": "boolean"
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CheckSummary"
+          },
+          "maxItems": 256
+        },
+        "remaining_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "assessment_handle": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+        }
+      },
+      "required": [
+        "run_id",
+        "run_revision",
+        "slot_revision",
+        "passed",
+        "checks",
+        "remaining_ms",
+        "assessment_handle"
+      ],
+      "additionalProperties": false
+    },
+    "RecoveryOperationView": {
+      "type": "object",
+      "properties": {
+        "operation_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Id"
+        },
+        "run_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Id"
+        },
+        "previous_run_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "committed_run_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "committed_slot_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "target_arm_generation": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "state": {
+          "enum": [
+            "reserved",
+            "preparing",
+            "ready",
+            "running",
+            "reconciling",
+            "completed",
+            "paused",
+            "indeterminate"
+          ]
+        },
+        "new_execution_id": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "visible_new_command_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+          },
+          "maxItems": 4096,
+          "uniqueItems": true
+        },
+        "has_hidden_commands": {
+          "type": "boolean"
+        },
+        "target_status_summary": {
+          "$ref": "#/$defs/TargetSet"
+        }
+      },
+      "required": [
+        "operation_id",
+        "run_id",
+        "previous_run_revision",
+        "committed_run_revision",
+        "committed_slot_revision",
+        "target_arm_generation",
+        "state",
+        "new_execution_id",
+        "visible_new_command_ids",
+        "has_hidden_commands",
+        "target_status_summary"
+      ],
+      "additionalProperties": false
+    },
+    "RecoveryPlanView": {
+      "type": "object",
+      "properties": {
+        "run_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Id"
+        },
+        "prior_execution_id": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "run_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "slot_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "recovery_handle": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+        },
+        "remaining_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/RecoveryItem"
+          },
+          "maxItems": 4096
+        },
+        "unresolved": {
+          "$ref": "#/$defs/CommandSet"
+        }
+      },
+      "required": [
+        "run_id",
+        "prior_execution_id",
+        "run_revision",
+        "slot_revision",
+        "recovery_handle",
+        "remaining_ms",
+        "items",
+        "unresolved"
+      ],
+      "additionalProperties": false
+    },
+    "RunView": {
+      "type": "object",
+      "properties": {
+        "run_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Id"
+        },
+        "definition_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Id"
+        },
+        "definition_version": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "business_state": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__BusinessState"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "transition_summary": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_TransitionSummary"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lifecycle": {
+          "enum": [
+            "disarmed",
+            "armed",
+            "running",
+            "paused",
+            "completed"
+          ]
+        },
+        "execution_summary": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ExecutionSummary"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "arm_generation": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "active_execution_id": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "grant_summaries": {
+          "$ref": "#/$defs/GrantSet"
+        },
+        "artifact_ref": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__ArtifactRef"
+        },
+        "slot_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        }
+      },
+      "required": [
+        "run_id",
+        "definition_id",
+        "definition_version",
+        "revision",
+        "business_state",
+        "transition_summary",
+        "lifecycle",
+        "execution_summary",
+        "arm_generation",
+        "active_execution_id",
+        "grant_summaries",
+        "artifact_ref",
+        "slot_revision"
+      ],
+      "additionalProperties": false
+    },
+    "SceneCatalogView": {
+      "type": "object",
+      "properties": {
+        "device_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Id"
+        },
+        "collection_ref": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Id"
+        },
+        "collection_generation": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Revision"
+        },
+        "catalog_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Revision"
+        },
+        "binding_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Revision"
+        },
+        "status": {
+          "enum": [
+            "unconfirmed",
+            "ready",
+            "changing",
+            "stale"
+          ]
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_SceneItem"
+          },
+          "maxItems": 256
+        }
+      },
+      "required": [
+        "device_id",
+        "collection_ref",
+        "collection_generation",
+        "catalog_revision",
+        "binding_revision",
+        "status",
+        "entries"
+      ],
+      "additionalProperties": false
+    },
+    "TransferView": {
+      "type": "object",
+      "properties": {
+        "transfer_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__Id"
+        },
+        "device_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__Id"
+        },
+        "from_holder": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Holder"
+        },
+        "target_holder": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Holder"
+        },
+        "expected_control": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__ControlVersion"
+        },
+        "state": {
+          "enum": [
+            "offered",
+            "accepted",
+            "expired",
+            "cancelled"
+          ]
+        },
+        "accept_operation_id": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "remaining_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "transfer_id",
+        "device_id",
+        "from_holder",
+        "target_holder",
+        "expected_control",
+        "state",
+        "accept_operation_id",
+        "remaining_ms"
+      ],
+      "additionalProperties": false
+    },
+    "TargetStatus": {
+      "type": "object",
+      "properties": {
+        "service_alias": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "applied",
+            "closing",
+            "closed",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "service_alias",
+        "state"
+      ],
+      "additionalProperties": false
+    },
+    "TargetSet": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TargetStatus"
+          },
+          "maxItems": 256
+        },
+        "has_hidden": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "items",
+        "has_hidden"
+      ],
+      "additionalProperties": false
+    },
+    "GrantTarget": {
+      "type": "object",
+      "properties": {
+        "service_alias": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "applied",
+            "closing",
+            "closed",
+            "unknown"
+          ]
+        },
+        "baseline_grant_id": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "target_grant_id": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "service_alias",
+        "state",
+        "baseline_grant_id",
+        "target_grant_id"
+      ],
+      "additionalProperties": false
+    },
+    "GrantSet": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/GrantTarget"
+          },
+          "maxItems": 256
+        },
+        "has_hidden": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "items",
+        "has_hidden"
+      ],
+      "additionalProperties": false
+    },
+    "ExecutionSummary": {
+      "type": "object",
+      "properties": {
+        "execution_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+        },
+        "phase": {
+          "enum": [
+            "reserved",
+            "validating",
+            "exit",
+            "transition",
+            "enter",
+            "sequence",
+            "commit",
+            "reconciling",
+            "finished"
+          ]
+        },
+        "outcome": {
+          "enum": [
+            "pending",
+            "succeeded",
+            "completed_with_failures",
+            "failed",
+            "unknown",
+            "blocked"
+          ]
+        }
+      },
+      "required": [
+        "execution_id",
+        "phase",
+        "outcome"
+      ],
+      "additionalProperties": false
+    },
+    "CheckSummary": {
+      "type": "object",
+      "properties": {
+        "service_alias": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+        },
+        "status": {
+          "enum": [
+            "passed",
+            "failed",
+            "unknown"
+          ]
+        },
+        "reason_code": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+        }
+      },
+      "required": [
+        "service_alias",
+        "status",
+        "reason_code"
+      ],
+      "additionalProperties": false
+    },
+    "RecoveryItem": {
+      "type": "object",
+      "properties": {
+        "step_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+        },
+        "disposition": {
+          "enum": [
+            "retain_success",
+            "execute_new",
+            "reconcile_commit"
+          ]
+        },
+        "previous_command_id": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "has_hidden_previous": {
+          "type": "boolean"
+        },
+        "evidence_summaries": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_QualifiedValue"
+          },
+          "maxItems": 4096
+        },
+        "parameters_summary": {
+          "anyOf": [
+            {
+              "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_QualifiedValue"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "step_id",
+        "disposition",
+        "previous_command_id",
+        "has_hidden_previous",
+        "evidence_summaries",
+        "parameters_summary"
+      ],
+      "additionalProperties": false
+    },
+    "CommandSet": {
+      "type": "object",
+      "properties": {
+        "visible_command_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_Id"
+          },
+          "maxItems": 4096,
+          "uniqueItems": true
+        },
+        "has_hidden": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "visible_command_ids",
+        "has_hidden"
+      ],
+      "additionalProperties": false
+    },
+    "LifecycleMutationView": {
+      "type": "object",
+      "properties": {
+        "operation_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Id"
+        },
+        "run_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Id"
+        },
+        "kind": {
+          "enum": [
+            "arm",
+            "pause"
+          ]
+        },
+        "state": {
+          "enum": [
+            "reserved",
+            "preparing",
+            "ready",
+            "running",
+            "reconciling",
+            "completed",
+            "paused",
+            "indeterminate"
+          ]
+        },
+        "committed_run_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "committed_slot_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "target_arm_generation": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "locally_closed": {
+          "type": "boolean"
+        },
+        "protection_complete": {
+          "type": "boolean"
+        },
+        "target_status_summary": {
+          "$ref": "#/$defs/TargetSet"
+        }
+      },
+      "required": [
+        "operation_id",
+        "run_id",
+        "kind",
+        "state",
+        "committed_run_revision",
+        "committed_slot_revision",
+        "target_arm_generation",
+        "locally_closed",
+        "protection_complete",
+        "target_status_summary"
+      ],
+      "additionalProperties": false
+    },
+    "DraftDefinitionView": {
+      "type": "object",
+      "properties": {
+        "definition_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Id"
+        },
+        "revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "content_digest": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Digest"
+        },
+        "selection_digest": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Digest"
+        },
+        "metadata_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "kind": {
+          "const": "draft"
+        },
+        "content": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__DraftContent"
+        },
+        "metadata": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__DefinitionMetadata"
+        },
+        "proof_summaries": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_ProofSummary"
+          },
+          "maxItems": 256
+        }
+      },
+      "required": [
+        "definition_id",
+        "revision",
+        "content_digest",
+        "selection_digest",
+        "metadata_revision",
+        "kind",
+        "content",
+        "metadata",
+        "proof_summaries"
+      ],
+      "additionalProperties": false
+    },
+    "PublishedDefinitionView": {
+      "type": "object",
+      "properties": {
+        "definition_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Id"
+        },
+        "definition_version": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "source_draft_revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Revision"
+        },
+        "artifact_ref": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__ArtifactRef"
+        },
+        "program_digest": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Digest"
+        },
+        "bindings_digest": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Digest"
+        },
+        "kind": {
+          "const": "published"
+        },
+        "content": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__DraftContent"
+        },
+        "metadata": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__DefinitionMetadata"
+        },
+        "proof_summaries": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_ProofSummary"
+          },
+          "maxItems": 256
+        }
+      },
+      "required": [
+        "definition_id",
+        "definition_version",
+        "source_draft_revision",
+        "artifact_ref",
+        "program_digest",
+        "bindings_digest",
+        "kind",
+        "content",
+        "metadata",
+        "proof_summaries"
+      ],
+      "additionalProperties": false
+    },
+    "GrantMutationView": {
+      "type": "object",
+      "properties": {
+        "operation_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Id"
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "applied",
+            "rejected",
+            "indeterminate"
+          ]
+        },
+        "entity_id": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Id"
+        },
+        "revision": {
+          "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__Revision"
+        },
+        "visible_targets": {
+          "type": "array",
+          "items": {
+            "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/panel__Result_TargetStatus"
+          },
+          "maxItems": 256
+        },
+        "has_hidden_targets": {
+          "type": "boolean"
+        },
+        "kind": {
+          "const": "grant_revocation"
+        }
+      },
+      "required": [
+        "operation_id",
+        "state",
+        "entity_id",
+        "revision",
+        "visible_targets",
+        "has_hidden_targets",
+        "kind"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.getMeta"
+        },
+        "value": {
+          "$ref": "#/$defs/MetaView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.getClock"
+        },
+        "value": {
+          "$ref": "#/$defs/ClockView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.listDevices"
+        },
+        "value": {
+          "$ref": "#/$defs/DevicePageView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.getCapabilities"
+        },
+        "value": {
+          "$ref": "#/$defs/CapabilityView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.getDeviceState"
+        },
+        "value": {
+          "$ref": "#/$defs/ObservationView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.submitCommand"
+        },
+        "value": {
+          "$ref": "#/$defs/CommandView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.getCommand"
+        },
+        "value": {
+          "$ref": "#/$defs/CommandView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.cancelCommand"
+        },
+        "value": {
+          "$ref": "#/$defs/CancelView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.getControlOperation"
+        },
+        "value": {
+          "$ref": "#/$defs/ControlOperationView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.getControl"
+        },
+        "value": {
+          "$ref": "#/$defs/ControlView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.acquireControl"
+        },
+        "value": {
+          "$ref": "#/$defs/ControlOperationView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.releaseControl"
+        },
+        "value": {
+          "$ref": "#/$defs/ControlOperationView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.offerTransfer"
+        },
+        "value": {
+          "$ref": "#/$defs/TransferView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.acceptTransfer"
+        },
+        "value": {
+          "$ref": "#/$defs/ControlOperationView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.revokeRunGrant"
+        },
+        "value": {
+          "$ref": "#/$defs/GrantMutationView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.getClockAssessment"
+        },
+        "value": {
+          "$ref": "#/$defs/ClockAssessmentView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.getCapacity"
+        },
+        "value": {
+          "$ref": "#/$defs/CapacityView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.getSceneCatalog"
+        },
+        "value": {
+          "$ref": "#/$defs/SceneCatalogView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "controller.getCommandEvidence"
+        },
+        "value": {
+          "$ref": "#/$defs/EvidencePageView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.getMeta"
+        },
+        "value": {
+          "$ref": "#/$defs/MetaView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.getClock"
+        },
+        "value": {
+          "$ref": "#/$defs/ClockView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.createDefinition"
+        },
+        "value": {
+          "$ref": "#/$defs/DraftDefinitionView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.updateDraft"
+        },
+        "value": {
+          "$ref": "#/$defs/DraftDefinitionView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.publishDefinition"
+        },
+        "value": {
+          "$ref": "#/$defs/PublishedDefinitionView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.createRun"
+        },
+        "value": {
+          "$ref": "#/$defs/RunView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.getRun"
+        },
+        "value": {
+          "$ref": "#/$defs/RunView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.preflightRun"
+        },
+        "value": {
+          "$ref": "#/$defs/PreflightView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.armRun"
+        },
+        "value": {
+          "$ref": "#/$defs/LifecycleMutationView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.pauseRun"
+        },
+        "value": {
+          "$ref": "#/$defs/LifecycleMutationView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.previewRecovery"
+        },
+        "value": {
+          "$ref": "#/$defs/RecoveryPlanView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.resumeRun"
+        },
+        "value": {
+          "$ref": "#/$defs/RecoveryOperationView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.getClockAssessment"
+        },
+        "value": {
+          "$ref": "#/$defs/ClockAssessmentView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.getCapacity"
+        },
+        "value": {
+          "$ref": "#/$defs/CapacityView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.getRecoveryOperation"
+        },
+        "value": {
+          "$ref": "#/$defs/RecoveryOperationView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "seamer.getIndependenceProof"
+        },
+        "value": {
+          "$ref": "#/$defs/IndependenceView"
+        }
+      },
+      "required": [
+        "method",
+        "value"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

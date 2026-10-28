@@ -1,0 +1,2650 @@
+{
+  "format": "panel-result-report/1",
+  "approved": false,
+  "runtime_ready": false,
+  "all_passed": true,
+  "cases_passed": 652,
+  "checks": [
+    {
+      "name": "生成一致:result.schema.json",
+      "passed": true
+    },
+    {
+      "name": "生成一致:bindings.json",
+      "passed": true
+    },
+    {
+      "name": "23变体完整样例",
+      "passed": true
+    },
+    {
+      "name": "21视图35方法",
+      "passed": true
+    },
+    {
+      "name": "181顶层字段",
+      "passed": true
+    },
+    {
+      "name": "结果正例:MetaView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:MetaView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:MetaView:component_version",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:MetaView:component_version",
+      "passed": true
+    },
+    {
+      "name": "字段来源:MetaView:protocol_version",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:MetaView:protocol_version",
+      "passed": true
+    },
+    {
+      "name": "字段来源:MetaView:panel_features",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:MetaView:panel_features",
+      "passed": true
+    },
+    {
+      "name": "字段来源:MetaView:limits_profile_ref",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:MetaView:limits_profile_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:MetaView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:MetaView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:MetaView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:MetaView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:MetaView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:MetaView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:ClockView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:ClockView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockView:model_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockView:model_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockView:model_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockView:model_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockView:status",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockView:status",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockView:reference_utc",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockView:reference_utc",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockView:estimated_utc_ns",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockView:estimated_utc_ns",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockView:error_radius_ns",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockView:error_radius_ns",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockView:reasons",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockView:reasons",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockView:grants_execution",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockView:grants_execution",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ClockView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ClockView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ClockView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ClockView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ClockView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ClockView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:ClockAssessmentView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:ClockAssessmentView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockAssessmentView:model_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockAssessmentView:model_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockAssessmentView:model_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockAssessmentView:model_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockAssessmentView:status",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockAssessmentView:status",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockAssessmentView:reference_utc",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockAssessmentView:reference_utc",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockAssessmentView:estimated_utc_ns",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockAssessmentView:estimated_utc_ns",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockAssessmentView:error_radius_ns",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockAssessmentView:error_radius_ns",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockAssessmentView:reasons",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockAssessmentView:reasons",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ClockAssessmentView:grants_execution",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ClockAssessmentView:grants_execution",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ClockAssessmentView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ClockAssessmentView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ClockAssessmentView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ClockAssessmentView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ClockAssessmentView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ClockAssessmentView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:DevicePageView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:DevicePageView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:DevicePageView:catalog_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:DevicePageView:catalog_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:DevicePageView:items",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:DevicePageView:items",
+      "passed": true
+    },
+    {
+      "name": "字段来源:DevicePageView:next_page_handle",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:DevicePageView:next_page_handle",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:DevicePageView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:DevicePageView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:DevicePageView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:DevicePageView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:DevicePageView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:DevicePageView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:CapabilityView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:CapabilityView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CapabilityView:catalog_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CapabilityView:catalog_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CapabilityView:device_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CapabilityView:device_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CapabilityView:actions",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CapabilityView:actions",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CapabilityView:triggers",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CapabilityView:triggers",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CapabilityView:state_schema_ref",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CapabilityView:state_schema_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CapabilityView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CapabilityView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CapabilityView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CapabilityView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CapabilityView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CapabilityView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:ObservationView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:ObservationView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ObservationView:device_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ObservationView:device_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ObservationView:observation_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ObservationView:observation_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ObservationView:state_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ObservationView:state_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ObservationView:observed_at",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ObservationView:observed_at",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ObservationView:freshness_ms",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ObservationView:freshness_ms",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ObservationView:integrity",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ObservationView:integrity",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ObservationView:projection_status",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ObservationView:projection_status",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ObservationView:values",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ObservationView:values",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ObservationView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ObservationView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ObservationView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ObservationView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ObservationView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ObservationView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:CommandView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:CommandView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:command_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:command_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:state_ref",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:state_ref",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:target",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:target",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:origin",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:origin",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:accepted_at",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:accepted_at",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:phase",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:phase",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:outcome",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:outcome",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:effect_status",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:effect_status",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:resource_status",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:resource_status",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:required_completion",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:required_completion",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:achieved_completion",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:achieved_completion",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:automation_continuation",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:automation_continuation",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:cancellation_state",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:cancellation_state",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:reason_code",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:reason_code",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CommandView:resolution_summary",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CommandView:resolution_summary",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CommandView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CommandView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CommandView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CommandView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CommandView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CommandView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:CancelView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:CancelView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CancelView:operation_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CancelView:operation_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CancelView:command_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CancelView:command_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CancelView:revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CancelView:revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CancelView:state",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CancelView:state",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CancelView:future_writes",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CancelView:future_writes",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CancelView:reason_code",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CancelView:reason_code",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CancelView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CancelView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CancelView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CancelView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CancelView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CancelView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:ControlOperationView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:ControlOperationView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlOperationView:operation_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlOperationView:operation_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlOperationView:device_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlOperationView:device_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlOperationView:state",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlOperationView:state",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlOperationView:target",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlOperationView:target",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlOperationView:failure_code",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlOperationView:failure_code",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlOperationView:effective_version",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlOperationView:effective_version",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlOperationView:ready",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlOperationView:ready",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ControlOperationView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ControlOperationView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ControlOperationView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ControlOperationView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ControlOperationView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ControlOperationView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:ControlView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:ControlView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlView:device_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlView:device_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlView:revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlView:revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlView:control_epoch",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlView:control_epoch",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlView:effective_version",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlView:effective_version",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlView:mode",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlView:mode",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlView:gate_state",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlView:gate_state",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlView:holder",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlView:holder",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlView:pending_change",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlView:pending_change",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlView:in_flight",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlView:in_flight",
+      "passed": true
+    },
+    {
+      "name": "字段来源:ControlView:unresolved",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:ControlView:unresolved",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ControlView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ControlView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ControlView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ControlView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ControlView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:ControlView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:TransferView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:TransferView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:TransferView:transfer_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:TransferView:transfer_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:TransferView:device_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:TransferView:device_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:TransferView:expected_control",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:TransferView:expected_control",
+      "passed": true
+    },
+    {
+      "name": "字段来源:TransferView:state",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:TransferView:state",
+      "passed": true
+    },
+    {
+      "name": "字段来源:TransferView:accept_operation_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:TransferView:accept_operation_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:TransferView:from_holder",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:TransferView:from_holder",
+      "passed": true
+    },
+    {
+      "name": "字段来源:TransferView:target_holder",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:TransferView:target_holder",
+      "passed": true
+    },
+    {
+      "name": "字段来源:TransferView:remaining_ms",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:TransferView:remaining_ms",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:TransferView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:TransferView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:TransferView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:TransferView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:TransferView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:TransferView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:GrantMutationView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:GrantMutationView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:GrantMutationView:operation_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:GrantMutationView:operation_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:GrantMutationView:state",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:GrantMutationView:state",
+      "passed": true
+    },
+    {
+      "name": "字段来源:GrantMutationView:entity_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:GrantMutationView:entity_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:GrantMutationView:revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:GrantMutationView:revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:GrantMutationView:kind",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:GrantMutationView:kind",
+      "passed": true
+    },
+    {
+      "name": "字段来源:GrantMutationView:visible_targets",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:GrantMutationView:visible_targets",
+      "passed": true
+    },
+    {
+      "name": "字段来源:GrantMutationView:has_hidden_targets",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:GrantMutationView:has_hidden_targets",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:GrantMutationView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:GrantMutationView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:GrantMutationView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:GrantMutationView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:GrantMutationView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:GrantMutationView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:LifecycleMutationView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:LifecycleMutationView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:LifecycleMutationView:operation_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:LifecycleMutationView:operation_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:LifecycleMutationView:run_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:LifecycleMutationView:run_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:LifecycleMutationView:kind",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:LifecycleMutationView:kind",
+      "passed": true
+    },
+    {
+      "name": "字段来源:LifecycleMutationView:state",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:LifecycleMutationView:state",
+      "passed": true
+    },
+    {
+      "name": "字段来源:LifecycleMutationView:committed_run_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:LifecycleMutationView:committed_run_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:LifecycleMutationView:committed_slot_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:LifecycleMutationView:committed_slot_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:LifecycleMutationView:target_arm_generation",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:LifecycleMutationView:target_arm_generation",
+      "passed": true
+    },
+    {
+      "name": "字段来源:LifecycleMutationView:locally_closed",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:LifecycleMutationView:locally_closed",
+      "passed": true
+    },
+    {
+      "name": "字段来源:LifecycleMutationView:protection_complete",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:LifecycleMutationView:protection_complete",
+      "passed": true
+    },
+    {
+      "name": "字段来源:LifecycleMutationView:target_status_summary",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:LifecycleMutationView:target_status_summary",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:LifecycleMutationView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:LifecycleMutationView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:LifecycleMutationView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:LifecycleMutationView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:LifecycleMutationView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:LifecycleMutationView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:CapacityView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:CapacityView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CapacityView:pressure",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CapacityView:pressure",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CapacityView:reason_codes",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CapacityView:reason_codes",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CapacityView:panel_budget",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CapacityView:panel_budget",
+      "passed": true
+    },
+    {
+      "name": "字段来源:CapacityView:current_panel_usage",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:CapacityView:current_panel_usage",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CapacityView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CapacityView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CapacityView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CapacityView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CapacityView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:CapacityView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:SceneCatalogView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:SceneCatalogView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:SceneCatalogView:device_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:SceneCatalogView:device_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:SceneCatalogView:collection_ref",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:SceneCatalogView:collection_ref",
+      "passed": true
+    },
+    {
+      "name": "字段来源:SceneCatalogView:collection_generation",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:SceneCatalogView:collection_generation",
+      "passed": true
+    },
+    {
+      "name": "字段来源:SceneCatalogView:catalog_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:SceneCatalogView:catalog_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:SceneCatalogView:binding_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:SceneCatalogView:binding_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:SceneCatalogView:status",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:SceneCatalogView:status",
+      "passed": true
+    },
+    {
+      "name": "字段来源:SceneCatalogView:entries",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:SceneCatalogView:entries",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:SceneCatalogView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:SceneCatalogView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:SceneCatalogView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:SceneCatalogView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:SceneCatalogView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:SceneCatalogView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:EvidencePageView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:EvidencePageView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:EvidencePageView:command_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:EvidencePageView:command_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:EvidencePageView:items",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:EvidencePageView:items",
+      "passed": true
+    },
+    {
+      "name": "字段来源:EvidencePageView:resource_release_summary",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:EvidencePageView:resource_release_summary",
+      "passed": true
+    },
+    {
+      "name": "字段来源:EvidencePageView:next_page_handle",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:EvidencePageView:next_page_handle",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:EvidencePageView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:EvidencePageView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:EvidencePageView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:EvidencePageView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:EvidencePageView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:EvidencePageView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:DraftDefinitionView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:DraftDefinitionView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:DraftDefinitionView:definition_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:DraftDefinitionView:definition_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:DraftDefinitionView:revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:DraftDefinitionView:revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:DraftDefinitionView:content_digest",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:DraftDefinitionView:content_digest",
+      "passed": true
+    },
+    {
+      "name": "字段来源:DraftDefinitionView:selection_digest",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:DraftDefinitionView:selection_digest",
+      "passed": true
+    },
+    {
+      "name": "字段来源:DraftDefinitionView:metadata_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:DraftDefinitionView:metadata_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:DraftDefinitionView:kind",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:DraftDefinitionView:kind",
+      "passed": true
+    },
+    {
+      "name": "字段来源:DraftDefinitionView:content",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:DraftDefinitionView:content",
+      "passed": true
+    },
+    {
+      "name": "字段来源:DraftDefinitionView:metadata",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:DraftDefinitionView:metadata",
+      "passed": true
+    },
+    {
+      "name": "字段来源:DraftDefinitionView:proof_summaries",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:DraftDefinitionView:proof_summaries",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:DraftDefinitionView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:DraftDefinitionView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:DraftDefinitionView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:DraftDefinitionView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:DraftDefinitionView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:DraftDefinitionView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:PublishedDefinitionView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:PublishedDefinitionView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PublishedDefinitionView:definition_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PublishedDefinitionView:definition_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PublishedDefinitionView:definition_version",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PublishedDefinitionView:definition_version",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PublishedDefinitionView:source_draft_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PublishedDefinitionView:source_draft_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PublishedDefinitionView:artifact_ref",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PublishedDefinitionView:artifact_ref",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PublishedDefinitionView:program_digest",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PublishedDefinitionView:program_digest",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PublishedDefinitionView:bindings_digest",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PublishedDefinitionView:bindings_digest",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PublishedDefinitionView:kind",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PublishedDefinitionView:kind",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PublishedDefinitionView:content",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PublishedDefinitionView:content",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PublishedDefinitionView:metadata",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PublishedDefinitionView:metadata",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PublishedDefinitionView:proof_summaries",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PublishedDefinitionView:proof_summaries",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:PublishedDefinitionView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:PublishedDefinitionView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:PublishedDefinitionView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:PublishedDefinitionView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:PublishedDefinitionView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:PublishedDefinitionView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:RunView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:RunView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RunView:run_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RunView:run_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RunView:definition_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RunView:definition_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RunView:definition_version",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RunView:definition_version",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RunView:artifact_ref",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RunView:artifact_ref",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RunView:revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RunView:revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RunView:business_state",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RunView:business_state",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RunView:lifecycle",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RunView:lifecycle",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RunView:arm_generation",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RunView:arm_generation",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RunView:active_execution_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RunView:active_execution_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RunView:slot_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RunView:slot_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RunView:transition_summary",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RunView:transition_summary",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RunView:execution_summary",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RunView:execution_summary",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RunView:grant_summaries",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RunView:grant_summaries",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RunView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RunView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RunView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RunView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RunView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RunView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:PreflightView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:PreflightView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PreflightView:run_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PreflightView:run_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PreflightView:run_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PreflightView:run_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PreflightView:slot_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PreflightView:slot_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PreflightView:passed",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PreflightView:passed",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PreflightView:checks",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PreflightView:checks",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PreflightView:remaining_ms",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PreflightView:remaining_ms",
+      "passed": true
+    },
+    {
+      "name": "字段来源:PreflightView:assessment_handle",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:PreflightView:assessment_handle",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:PreflightView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:PreflightView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:PreflightView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:PreflightView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:PreflightView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:PreflightView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:RecoveryPlanView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:RecoveryPlanView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryPlanView:run_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryPlanView:run_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryPlanView:prior_execution_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryPlanView:prior_execution_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryPlanView:run_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryPlanView:run_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryPlanView:slot_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryPlanView:slot_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryPlanView:recovery_handle",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryPlanView:recovery_handle",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryPlanView:remaining_ms",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryPlanView:remaining_ms",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryPlanView:items",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryPlanView:items",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryPlanView:unresolved",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryPlanView:unresolved",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RecoveryPlanView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RecoveryPlanView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RecoveryPlanView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RecoveryPlanView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RecoveryPlanView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RecoveryPlanView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:RecoveryOperationView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:RecoveryOperationView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryOperationView:operation_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryOperationView:operation_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryOperationView:run_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryOperationView:run_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryOperationView:previous_run_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryOperationView:previous_run_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryOperationView:committed_run_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryOperationView:committed_run_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryOperationView:committed_slot_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryOperationView:committed_slot_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryOperationView:target_arm_generation",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryOperationView:target_arm_generation",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryOperationView:state",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryOperationView:state",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryOperationView:new_execution_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryOperationView:new_execution_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryOperationView:visible_new_command_ids",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryOperationView:visible_new_command_ids",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryOperationView:has_hidden_commands",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryOperationView:has_hidden_commands",
+      "passed": true
+    },
+    {
+      "name": "字段来源:RecoveryOperationView:target_status_summary",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:RecoveryOperationView:target_status_summary",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RecoveryOperationView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RecoveryOperationView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RecoveryOperationView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RecoveryOperationView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RecoveryOperationView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:RecoveryOperationView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "结果正例:IndependenceView",
+      "passed": true
+    },
+    {
+      "name": "完整字段归属:IndependenceView",
+      "passed": true
+    },
+    {
+      "name": "字段来源:IndependenceView:failed_step_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:IndependenceView:failed_step_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:IndependenceView:successor_step_ids",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:IndependenceView:successor_step_ids",
+      "passed": true
+    },
+    {
+      "name": "字段来源:IndependenceView:verdict",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:IndependenceView:verdict",
+      "passed": true
+    },
+    {
+      "name": "字段来源:IndependenceView:proof_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:IndependenceView:proof_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:IndependenceView:proof_revision",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:IndependenceView:proof_revision",
+      "passed": true
+    },
+    {
+      "name": "字段来源:IndependenceView:definition_id",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:IndependenceView:definition_id",
+      "passed": true
+    },
+    {
+      "name": "字段来源:IndependenceView:definition_version",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:IndependenceView:definition_version",
+      "passed": true
+    },
+    {
+      "name": "字段来源:IndependenceView:reason_codes",
+      "passed": true
+    },
+    {
+      "name": "缺字段拒绝:IndependenceView:reason_codes",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:IndependenceView:actor",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:IndependenceView:request_identity",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:IndependenceView:permit",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:IndependenceView:raw_response",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:IndependenceView:credentials",
+      "passed": true
+    },
+    {
+      "name": "拒绝额外原件:IndependenceView:source_ref",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.getMeta",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.getMeta",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.getClock",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.getClock",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.listDevices",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.listDevices",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.getCapabilities",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.getCapabilities",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.getDeviceState",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.getDeviceState",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.submitCommand",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.submitCommand",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.getCommand",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.getCommand",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.cancelCommand",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.cancelCommand",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.getControlOperation",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.getControlOperation",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.getControl",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.getControl",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.acquireControl",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.acquireControl",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.releaseControl",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.releaseControl",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.offerTransfer",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.offerTransfer",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.acceptTransfer",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.acceptTransfer",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.revokeRunGrant",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.revokeRunGrant",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.getCapacity",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.getCapacity",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.getSceneCatalog",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.getSceneCatalog",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:controller.getCommandEvidence",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:controller.getCommandEvidence",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.getMeta",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.getMeta",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.getClock",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.getClock",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.createDefinition",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.createDefinition",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.updateDraft",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.updateDraft",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.publishDefinition",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.publishDefinition",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.createRun",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.createRun",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.getRun",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.getRun",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.preflightRun",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.preflightRun",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.armRun",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.armRun",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.pauseRun",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.pauseRun",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.previewRecovery",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.previewRecovery",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.resumeRun",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.resumeRun",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.getCapacity",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.getCapacity",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.getRecoveryOperation",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.getRecoveryOperation",
+      "passed": true
+    },
+    {
+      "name": "方法结果联合:seamer.getIndependenceProof",
+      "passed": true
+    },
+    {
+      "name": "不得安装或透传:seamer.getIndependenceProof",
+      "passed": true
+    },
+    {
+      "name": "拒绝:时钟浮点纳秒",
+      "passed": true
+    },
+    {
+      "name": "拒绝:条件时间冒充执行资格",
+      "passed": true
+    },
+    {
+      "name": "拒绝:旧同步状态",
+      "passed": true
+    },
+    {
+      "name": "拒绝:区间倒置",
+      "passed": true
+    },
+    {
+      "name": "拒绝:半径不足",
+      "passed": true
+    },
+    {
+      "name": "拒绝:不可用保留有效区间",
+      "passed": true
+    },
+    {
+      "name": "拒绝:草稿伪装发布",
+      "passed": true
+    },
+    {
+      "name": "拒绝:发布缺制品引用",
+      "passed": true
+    },
+    {
+      "name": "拒绝:旧语义版本运行",
+      "passed": true
+    },
+    {
+      "name": "拒绝:预检unknown伪通过",
+      "passed": true
+    },
+    {
+      "name": "拒绝:恢复修订倒退",
+      "passed": true
+    },
+    {
+      "name": "拒绝:无执行却有新命令",
+      "passed": true
+    },
+    {
+      "name": "拒绝:旧恢复世代",
+      "passed": true
+    },
+    {
+      "name": "拒绝:旧UTC期限",
+      "passed": true
+    },
+    {
+      "name": "拒绝:未知结果解锁继续",
+      "passed": true
+    },
+    {
+      "name": "拒绝:未知已清资源无处置",
+      "passed": true
+    },
+    {
+      "name": "拒绝:错误生命周期用途",
+      "passed": true
+    },
+    {
+      "name": "不可用时间明确null",
+      "passed": true
+    },
+    {
+      "name": "空目标预检不自动失败",
+      "passed": true
+    },
+    {
+      "name": "无执行运行明确null",
+      "passed": true
+    },
+    {
+      "name": "过期剩余时间为零",
+      "passed": true
+    },
+    {
+      "name": "不可信时基剩余时间未知",
+      "passed": true
+    },
+    {
+      "name": "格式不证明来源",
+      "passed": true
+    },
+    {
+      "name": "两代授权ID分别显示",
+      "passed": true
+    },
+    {
+      "name": "拒绝:授权不得透传原Ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝:恢复不能丢参数摘要槽",
+      "passed": true
+    },
+    {
+      "name": "拒绝:恢复不能透传证据Ref",
+      "passed": true
+    },
+    {
+      "name": "恢复摘要封装格式",
+      "passed": true
+    },
+    {
+      "name": "静态格式不证明动态字段批准",
+      "passed": true
+    },
+    {
+      "name": "完整4096步计划",
+      "passed": true
+    },
+    {
+      "name": "4097步不能截断",
+      "passed": true
+    }
+  ],
+  "views": 21,
+  "variants": 23,
+  "methods": 35,
+  "top_level_field_bindings": 181,
+  "providers": 14,
+  "coverage_unit": "variant_top_level_output_field",
+  "runtime_projection_tests_executed": 0,
+  "authority_provider_tests_executed": 0,
+  "database_tests_executed": 0,
+  "browser_tests_executed": 0,
+  "network_tests_executed": 0,
+  "device_tests_executed": 0,
+  "tools": {
+    "jsonschema": "4.25.1",
+    "referencing": "0.36.2"
+  },
+  "inputs": {
+    "contracts/panel-results/bindings.json": "f146637240cf6ca04e7c6f68f4abc8553c78e01ceb3c5096e2f292f64fef466c",
+    "contracts/panel-results/build.py": "b1f66d7f0a4c22196007a526d22498560742182bd6d4e02ce8f9e5281acef52b",
+    "contracts/panel-results/catalog.py": "2593e333e784dbca62908062679f55da008b45cebd26013d6c95d05a4ddbd6ef",
+    "contracts/panel-results/check.py": "6f3943c06780f6e48ac64bf9fd5f45b266e89a71d12cb57605a88619ac643b48",
+    "contracts/panel-results/fixtures.py": "a7fa8c924e66db5a4fc62302d92a2dc85c70cff82ee6f326ce727929ad0eb7b7",
+    "contracts/panel-results/README.md": "cd809a2f09a5d3bfbcdf0a0866764ecb715fef238a2475cf32abb6c86d116ebb",
+    "contracts/panel-results/result.schema.json": "c694feb6bb0205754b2aa1bf229d875e3628a6e7d117846b2aaf0e578d35d3d8",
+    "contracts/panel-results/RESULTS.md": "c8751a57042fe46369ff5af0a2e7a066ed3c25bb4219c8a33e2e486a307b905c",
+    "contracts/panel-results/source/legacy-cases.json": "70f8d5a6bfcb21367bc79216bdf19608d65332e2efad475572dff4bd344db72a",
+    "contracts/panel-results/sources.json": "2677760a1122dc8568732fc61f8ac4862a8da1bebfcefe7037dece932da8321f",
+    "contracts/event-integration/preview/models.schema.json": "f1c7a1a2a2ff4dd0834f05a8eb87033c7bb644e673a7b92d1f830f4e8ac1d6b5",
+    "contracts/event-integration/preview/controller.openapi.json": "794b108b73cbc3ca21579888c01a2784a68efc5693bae8f0ba29df3b97174eed",
+    "contracts/event-integration/preview/seamer.openapi.json": "ebf630c970a64b2a897fbc2f3d975d8db158c9c956bffca19f669d0d05bf5bcf",
+    "contracts/event-integration/preview/selection.json": "efdd3a57be14c408764b3813a04b12ffd3bee57f0fdd31cbce9daac828fd6340",
+    "contracts/panel-methods/bindings.json": "3349e2ccd265a6f0785457d27782dbbf77c7a3a31ddd5931f10edca428d08bb8"
+  }
+}

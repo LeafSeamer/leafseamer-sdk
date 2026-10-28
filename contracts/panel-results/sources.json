@@ -1,0 +1,21 @@
+{
+  "format": "panel-result-sources/1",
+  "approved": false,
+  "runtime_ready": false,
+  "source_commit": "cf2d074b0b8307d74a1ebec8b092f9d94d1f9dbf",
+  "inputs": {
+    "contracts/event-integration/preview/models.schema.json": "f1c7a1a2a2ff4dd0834f05a8eb87033c7bb644e673a7b92d1f830f4e8ac1d6b5",
+    "contracts/event-integration/preview/controller.openapi.json": "794b108b73cbc3ca21579888c01a2784a68efc5693bae8f0ba29df3b97174eed",
+    "contracts/event-integration/preview/seamer.openapi.json": "ebf630c970a64b2a897fbc2f3d975d8db158c9c956bffca19f669d0d05bf5bcf",
+    "contracts/event-integration/preview/selection.json": "efdd3a57be14c408764b3813a04b12ffd3bee57f0fdd31cbce9daac828fd6340",
+    "contracts/panel-methods/bindings.json": "3349e2ccd265a6f0785457d27782dbbf77c7a3a31ddd5931f10edca428d08bb8"
+  },
+  "copied_sources": {
+    "contracts/panel-results/source/legacy-cases.json": {
+      "repository": "https://github.com/LeafSeamer/leafseamer-suite",
+      "commit": "e10b9565ac81a3a4211157efbccd2c9b383d0292",
+      "path": "docs/contracts/c09-panel/result-cases.json",
+      "sha256": "70f8d5a6bfcb21367bc79216bdf19608d65332e2efad475572dff4bd344db72a"
+    }
+  }
+}
