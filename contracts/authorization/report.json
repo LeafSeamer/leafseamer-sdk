@@ -1,0 +1,2654 @@
+{
+  "format": "authorization-bindings-report/1",
+  "approved": false,
+  "runtime_ready": false,
+  "all_passed": true,
+  "cases_passed": 655,
+  "checks": [
+    {
+      "name": "完整策略闭包",
+      "passed": true
+    },
+    {
+      "name": "两次生成字节一致",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getRevocation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getRevocation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getRevocation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getCapacity",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getCapacity",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getCapacity",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getClock",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getClock",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getClock",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getCommand",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getCommand",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getCommand",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getCommandCancellation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getCommandCancellation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getCommandCancellation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getCommandEvidence",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getCommandEvidence",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getCommandEvidence",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getCommandEvidenceRevision",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getCommandEvidenceRevision",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getCommandEvidenceRevision",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getCommandRevision",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getCommandRevision",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getCommandRevision",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getControlOperation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getControlOperation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getControlOperation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:listDevices",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:listDevices",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:listDevices",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getCapabilities",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getCapabilities",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getCapabilities",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getControl",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getControl",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getControl",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getTransfer",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getTransfer",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getTransfer",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getSceneCatalog",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getSceneCatalog",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getSceneCatalog",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getDeviceState",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getDeviceState",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getDeviceState",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:openEvents",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:openEvents",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:openEvents",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getExtensionOperation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getExtensionOperation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getExtensionOperation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getExtensionInstallation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getExtensionInstallation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getExtensionInstallation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getMeta",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getMeta",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getMeta",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getPanelSessionOperation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getPanelSessionOperation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getPanelSessionOperation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getPanelSession",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getPanelSession",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getPanelSession",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getPanelRequest",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getPanelRequest",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getPanelRequest",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getPanelProjectionFrames",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getPanelProjectionFrames",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getPanelProjectionFrames",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getSession",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getSession",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getSession",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getSubject",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getSubject",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getSubject",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getSnapshot",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getSnapshot",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getSnapshot",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getClockDomainDescriptor",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getClockDomainDescriptor",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getClockDomainDescriptor",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getReferenceTimeAnchor",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getReferenceTimeAnchor",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getReferenceTimeAnchor",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getReferenceTimeAssessment",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getReferenceTimeAssessment",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getReferenceTimeAssessment",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getReferenceTimeBundle",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getReferenceTimeBundle",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getReferenceTimeBundle",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getReferenceTimeProfile",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getReferenceTimeProfile",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getReferenceTimeProfile",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:revokeAuthorization",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:revokeAuthorization",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:revokeAuthorization",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:submitCommand",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:submitCommand",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:submitCommand",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:lookupCommandAdmission",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:lookupCommandAdmission",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:lookupCommandAdmission",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:rejectCommandAdmission",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:rejectCommandAdmission",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:rejectCommandAdmission",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:cancelCommand",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:cancelCommand",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:cancelCommand",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:lookupCommandCancellation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:lookupCommandCancellation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:lookupCommandCancellation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:lookupControlRequest",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:lookupControlRequest",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:lookupControlRequest",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:acquireControl",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:acquireControl",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:acquireControl",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:releaseControl",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:releaseControl",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:releaseControl",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:offerTransfer",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:offerTransfer",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:offerTransfer",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:acceptTransfer",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:acceptTransfer",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:acceptTransfer",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:cancelTransfer",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:cancelTransfer",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:cancelTransfer",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:lookupExtensionRequest",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:lookupExtensionRequest",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:lookupExtensionRequest",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:createExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:createExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:createExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:activateExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:activateExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:activateExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:disableExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:disableExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:disableExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:enableExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:enableExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:enableExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:planExtensionChange",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:planExtensionChange",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:planExtensionChange",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:uninstallExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:uninstallExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:uninstallExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:upgradeExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:upgradeExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:upgradeExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:stageExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:stageExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:stageExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:approveExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:approveExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:approveExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:resolveExtensionRoles",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:resolveExtensionRoles",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:resolveExtensionRoles",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:reviewExtensionPermissions",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:reviewExtensionPermissions",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:reviewExtensionPermissions",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:cancelPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:cancelPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:cancelPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:commitPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:commitPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:commitPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:createPanelSession",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:createPanelSession",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:createPanelSession",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:activatePanelSession",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:activatePanelSession",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:activatePanelSession",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:closePanelSession",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:closePanelSession",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:closePanelSession",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:offerPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:offerPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:offerPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:beginPanelHandshake",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:beginPanelHandshake",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:beginPanelHandshake",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:preparePanelActivation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:preparePanelActivation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:preparePanelActivation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:renewPanelSession",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:renewPanelSession",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:renewPanelSession",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:invokePanelMethod",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:invokePanelMethod",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:invokePanelMethod",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:createPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:createPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:createPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:acknowledgePanelProjection",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:acknowledgePanelProjection",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:acknowledgePanelProjection",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:closePanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:closePanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:closePanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:createRequestContext",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:createRequestContext",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:createRequestContext",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:revokeRunGrant",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:revokeRunGrant",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:revokeRunGrant",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:createSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:createSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:createSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:issueWsTicket",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:issueWsTicket",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:issueWsTicket",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:bootstrap",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:bootstrap",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:bootstrap",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:issueToken",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:issueToken",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:issueToken",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:login",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:login",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:login",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:refreshSession",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:refreshSession",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:refreshSession",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:introspect",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:introspect",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:introspect",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:issueContinuation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:issueContinuation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:issueContinuation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:lookupControllerContinuation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:lookupControllerContinuation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:lookupControllerContinuation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:prepareAutomation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:prepareAutomation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:prepareAutomation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:closePreparation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:closePreparation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:closePreparation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:lookupPreparation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:lookupPreparation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:lookupPreparation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:protectRunGeneration",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:protectRunGeneration",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:protectRunGeneration",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:lookupRunProtection",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:lookupRunProtection",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:lookupRunProtection",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:setCapacity",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:setCapacity",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:setCapacity",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:updateRunGrant",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:updateRunGrant",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:updateRunGrant",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:discoverContracts",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:discoverContracts",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:discoverContracts",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:closeSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:closeSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:closeSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:getSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:getSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:getSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:internalCreateSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:internalCreateSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:internalCreateSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:internalGetSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:internalGetSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:internalGetSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:internalCloseSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:internalCloseSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:internalCloseSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:internalGetSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:internalGetSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:internalGetSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:internalGetSnapshot",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:internalGetSnapshot",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:internalGetSnapshot",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:internalGetSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:internalGetSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:internalGetSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:controller:internalOpenEvents",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:controller:internalOpenEvents",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:controller:internalOpenEvents",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getRevocation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getRevocation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getRevocation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getCapacity",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getCapacity",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getCapacity",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getClock",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getClock",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getClock",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getActivationSlot",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getActivationSlot",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getActivationSlot",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getDraft",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getDraft",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getDraft",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:updateDraft",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:updateDraft",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:updateDraft",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getIndependenceProof",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getIndependenceProof",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getIndependenceProof",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getDefinitionVersion",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getDefinitionVersion",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getDefinitionVersion",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getPublishedArtifact",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getPublishedArtifact",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getPublishedArtifact",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getCompiledProgram",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getCompiledProgram",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getCompiledProgram",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:openEvents",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:openEvents",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:openEvents",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getExtensionOperation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getExtensionOperation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getExtensionOperation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getExtensionInstallation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getExtensionInstallation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getExtensionInstallation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getMeta",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getMeta",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getMeta",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getPanelSessionOperation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getPanelSessionOperation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getPanelSessionOperation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getPanelSession",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getPanelSession",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getPanelSession",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getPanelRequest",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getPanelRequest",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getPanelRequest",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getPanelProjectionFrames",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getPanelProjectionFrames",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getPanelProjectionFrames",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getRecoveryOperation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getRecoveryOperation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getRecoveryOperation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getRunOperation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getRunOperation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getRunOperation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getRun",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getRun",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getRun",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getTriggerDecision",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getTriggerDecision",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getTriggerDecision",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getExecution",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getExecution",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getExecution",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getSession",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getSession",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getSession",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getSubject",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getSubject",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getSubject",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getSnapshot",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getSnapshot",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getSnapshot",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getClockDomainDescriptor",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getClockDomainDescriptor",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getClockDomainDescriptor",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:readIngressCommit",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:readIngressCommit",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:readIngressCommit",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getReferenceTimeAnchor",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getReferenceTimeAnchor",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getReferenceTimeAnchor",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getReferenceTimeAssessment",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getReferenceTimeAssessment",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getReferenceTimeAssessment",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getReferenceTimeBundle",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getReferenceTimeBundle",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getReferenceTimeBundle",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getReferenceTimeProfile",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getReferenceTimeProfile",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getReferenceTimeProfile",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:revokeAuthorization",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:revokeAuthorization",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:revokeAuthorization",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:lookupAutomationRequest",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:lookupAutomationRequest",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:lookupAutomationRequest",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:createDefinition",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:createDefinition",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:createDefinition",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:publishDefinition",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:publishDefinition",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:publishDefinition",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:lookupExtensionRequest",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:lookupExtensionRequest",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:lookupExtensionRequest",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:createExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:createExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:createExtensionSlot",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:activateExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:activateExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:activateExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:disableExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:disableExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:disableExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:enableExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:enableExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:enableExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:planExtensionChange",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:planExtensionChange",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:planExtensionChange",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:uninstallExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:uninstallExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:uninstallExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:upgradeExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:upgradeExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:upgradeExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:stageExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:stageExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:stageExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:approveExtension",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:approveExtension",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:approveExtension",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:resolveExtensionRoles",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:resolveExtensionRoles",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:resolveExtensionRoles",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:reviewExtensionPermissions",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:reviewExtensionPermissions",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:reviewExtensionPermissions",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:cancelPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:cancelPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:cancelPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:commitPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:commitPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:commitPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:createPanelSession",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:createPanelSession",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:createPanelSession",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:activatePanelSession",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:activatePanelSession",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:activatePanelSession",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:closePanelSession",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:closePanelSession",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:closePanelSession",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:offerPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:offerPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:offerPanelConfirmation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:beginPanelHandshake",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:beginPanelHandshake",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:beginPanelHandshake",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:preparePanelActivation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:preparePanelActivation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:preparePanelActivation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:renewPanelSession",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:renewPanelSession",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:renewPanelSession",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:invokePanelMethod",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:invokePanelMethod",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:invokePanelMethod",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:createPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:createPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:createPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:acknowledgePanelProjection",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:acknowledgePanelProjection",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:acknowledgePanelProjection",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:closePanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:closePanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:closePanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:submitProviderEvent",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:submitProviderEvent",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:submitProviderEvent",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:lookupProviderEvent",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:lookupProviderEvent",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:lookupProviderEvent",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:createRequestContext",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:createRequestContext",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:createRequestContext",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:createRun",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:createRun",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:createRun",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:armRun",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:armRun",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:armRun",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:disarmRun",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:disarmRun",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:disarmRun",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:pauseRun",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:pauseRun",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:pauseRun",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:preflightRun",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:preflightRun",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:preflightRun",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:previewRecovery",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:previewRecovery",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:previewRecovery",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:resumeRun",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:resumeRun",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:resumeRun",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:retireRun",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:retireRun",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:retireRun",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:createSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:createSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:createSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:issueWsTicket",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:issueWsTicket",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:issueWsTicket",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:registerContinuation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:registerContinuation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:registerContinuation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:adoptContinuation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:adoptContinuation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:adoptContinuation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:finishContinuation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:finishContinuation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:finishContinuation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:lookupSeamerContinuation",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:lookupSeamerContinuation",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:lookupSeamerContinuation",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:observeContinuationReceipt",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:observeContinuationReceipt",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:observeContinuationReceipt",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:observeContinuationWithdrawal",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:observeContinuationWithdrawal",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:observeContinuationWithdrawal",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:setCapacity",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:setCapacity",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:setCapacity",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:updateDefinitionMetadata",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:updateDefinitionMetadata",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:updateDefinitionMetadata",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:updateCatalog",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:updateCatalog",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:updateCatalog",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:discoverContracts",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:discoverContracts",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:discoverContracts",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:closeSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:closeSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:closeSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:getSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:getSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:getSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:internalCreateSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:internalCreateSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:internalCreateSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:internalGetSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:internalGetSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:internalGetSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:internalCloseSubscription",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:internalCloseSubscription",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:internalCloseSubscription",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:internalGetSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:internalGetSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:internalGetSubscriptionConnection",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:internalGetSnapshot",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:internalGetSnapshot",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:internalGetSnapshot",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:internalGetSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:internalGetSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:internalGetSnapshotPage",
+      "passed": true
+    },
+    {
+      "name": "精确调用身份:seamer:internalOpenEvents",
+      "passed": true
+    },
+    {
+      "name": "原认证OR与AND:seamer:internalOpenEvents",
+      "passed": true
+    },
+    {
+      "name": "不授予权限:seamer:internalOpenEvents",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:controller:bootstrap",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:controller:login",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:controller:issueToken",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:controller:submitCommand",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:controller:getCommand",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:controller:getClock",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:controller:acquireControl",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:controller:createPanelSession",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:seamer:invokePanelMethod",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:seamer:createPanelSubscription",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:controller:approveExtension",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:seamer:createRun",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:seamer:publishDefinition",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:seamer:armRun",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:seamer:submitProviderEvent",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:seamer:readIngressCommit",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:controller:prepareAutomation",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:controller:protectRunGeneration",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:seamer:observeContinuationWithdrawal",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:controller:openEvents",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:seamer:internalOpenEvents",
+      "passed": true
+    },
+    {
+      "name": "独立主体预期:controller:discoverContracts",
+      "passed": true
+    },
+    {
+      "name": "关键用途守卫:controller:acquireControl",
+      "passed": true
+    },
+    {
+      "name": "关键用途守卫:seamer:invokePanelMethod",
+      "passed": true
+    },
+    {
+      "name": "关键用途守卫:controller:issueWsTicket",
+      "passed": true
+    },
+    {
+      "name": "关键用途守卫:seamer:internalCreateSubscription",
+      "passed": true
+    },
+    {
+      "name": "关键用途守卫:seamer:observeContinuationReceipt",
+      "passed": true
+    },
+    {
+      "name": "关键用途守卫:controller:issueContinuation",
+      "passed": true
+    },
+    {
+      "name": "关键用途守卫:controller:lookupCommandAdmission",
+      "passed": true
+    },
+    {
+      "name": "票据守卫显式迁移",
+      "passed": true
+    },
+    {
+      "name": "拒绝:批准伪标",
+      "passed": true
+    },
+    {
+      "name": "拒绝:运行伪标",
+      "passed": true
+    },
+    {
+      "name": "拒绝:选择漂移",
+      "passed": true
+    },
+    {
+      "name": "拒绝:缺操作",
+      "passed": true
+    },
+    {
+      "name": "拒绝:重复操作",
+      "passed": true
+    },
+    {
+      "name": "拒绝:跨authority",
+      "passed": true
+    },
+    {
+      "name": "拒绝:认证AND拆分",
+      "passed": true
+    },
+    {
+      "name": "拒绝:服务命令扩权",
+      "passed": true
+    },
+    {
+      "name": "拒绝:人员布防扩服务",
+      "passed": true
+    },
+    {
+      "name": "拒绝:伪造许可",
+      "passed": true
+    },
+    {
+      "name": "拒绝:清空守卫",
+      "passed": true
+    },
+    {
+      "name": "拒绝:丢提供者",
+      "passed": true
+    },
+    {
+      "name": "拒绝:伪造提供者",
+      "passed": true
+    },
+    {
+      "name": "拒绝:释放前不复核",
+      "passed": true
+    },
+    {
+      "name": "拒绝:WS不逐帧复核",
+      "passed": true
+    },
+    {
+      "name": "拒绝:不可用伪装成功",
+      "passed": true
+    },
+    {
+      "name": "拒绝:命名权限降级",
+      "passed": true
+    },
+    {
+      "name": "拒绝:发现入口加载身份",
+      "passed": true
+    },
+    {
+      "name": "拒绝:伪造manual服务",
+      "passed": true
+    },
+    {
+      "name": "拒绝:票据旧守卫复活",
+      "passed": true
+    }
+  ],
+  "operations": 201,
+  "branches": 245,
+  "registered_guards": 62,
+  "active_guards": 61,
+  "providers": 12,
+  "legacy_changes": 163,
+  "runtime_authorization_tests_executed": 0,
+  "network_tests_executed": 0,
+  "device_tests_executed": 0,
+  "inputs": {
+    "contracts/authorization/AUTHORIZATION.md": "885f862d92d7aa81bb3ee9d4afc41ebbaccf5ab9115b864117c23f956ce88038",
+    "contracts/authorization/bindings.json": "9a9661272dd344dc97ffedc1022ac322f4abf7f6dd393a80f723f1807f44d3d4",
+    "contracts/authorization/build.py": "c490ca7178e49cf78f29e2f458efda72578ef3ce25be4392ca7cd6239289be2f",
+    "contracts/authorization/check.py": "bb1935af6efa38927cad61ab770b2218e3e6b6e086944747922352c13a67ff99",
+    "contracts/authorization/policy.py": "8fd0a85a19adbc7e747833f988049d1a648ce6b801ea90a30a02fdd6acfc13e4",
+    "contracts/authorization/providers.py": "4a8270c1389549897e178594d57a29a5a654bacd7b429cc8a6bd01869f2bafca",
+    "contracts/authorization/README.md": "ed5e564a5abb561a2b42074ba4baf0611516a93dea18d257dc3c69d63b1b1310",
+    "contracts/authorization/source/legacy-authorization.json": "e3a72f9c4a91c3a914941b420ef2b4c6ee89eba340f7fe0fd27e4f2bcd3e55c9",
+    "contracts/authorization/source/legacy-authorization.md": "53f2fe1060ffc5cae3f1737e33ee5ede86e08512c1b2cc80d23766c4d69dec36",
+    "contracts/authorization/sources.json": "6a2e1692df876f0ae4e53a6880e81961f08400ae63af46ae13c9290e2aecec62",
+    "contracts/http-envelope/preview/inventory.json": "b3af40aea253a31895b2329e5d05bc7344e8393812c3a064778fdc00fc02b4ce",
+    "contracts/event-integration/preview/controller.openapi.json": "794b108b73cbc3ca21579888c01a2784a68efc5693bae8f0ba29df3b97174eed",
+    "contracts/event-integration/preview/seamer.openapi.json": "ebf630c970a64b2a897fbc2f3d975d8db158c9c956bffca19f669d0d05bf5bcf",
+    "contracts/event-integration/preview/selection.json": "efdd3a57be14c408764b3813a04b12ffd3bee57f0fdd31cbce9daac828fd6340"
+  }
+}

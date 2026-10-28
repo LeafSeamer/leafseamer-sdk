@@ -1,0 +1,26 @@
+{
+  "format": "authorization-sources/1",
+  "approved": false,
+  "runtime_ready": false,
+  "sdk_source_commit": "201f88b3ee60bf37ff8baabb70ba1ea1c840439e",
+  "inputs": {
+    "contracts/http-envelope/preview/inventory.json": "b3af40aea253a31895b2329e5d05bc7344e8393812c3a064778fdc00fc02b4ce",
+    "contracts/event-integration/preview/controller.openapi.json": "794b108b73cbc3ca21579888c01a2784a68efc5693bae8f0ba29df3b97174eed",
+    "contracts/event-integration/preview/seamer.openapi.json": "ebf630c970a64b2a897fbc2f3d975d8db158c9c956bffca19f669d0d05bf5bcf",
+    "contracts/event-integration/preview/selection.json": "efdd3a57be14c408764b3813a04b12ffd3bee57f0fdd31cbce9daac828fd6340"
+  },
+  "copied_sources": {
+    "contracts/authorization/source/legacy-authorization.json": {
+      "repository": "https://github.com/LeafSeamer/leafseamer-suite",
+      "commit": "3ef692533388852d88a76e164649c006c2f4d566",
+      "path": "docs/contracts/df01-source/authorization-candidate.json",
+      "sha256": "e3a72f9c4a91c3a914941b420ef2b4c6ee89eba340f7fe0fd27e4f2bcd3e55c9"
+    },
+    "contracts/authorization/source/legacy-authorization.md": {
+      "repository": "https://github.com/LeafSeamer/leafseamer-suite",
+      "commit": "3ef692533388852d88a76e164649c006c2f4d566",
+      "path": "docs/contracts/df01-source/AUTHORIZATION.md",
+      "sha256": "53f2fe1060ffc5cae3f1737e33ee5ede86e08512c1b2cc80d23766c4d69dec36"
+    }
+  }
+}
