@@ -1,0 +1,3123 @@
+{
+  "format": "panel-method-report/1",
+  "approved": false,
+  "runtime_ready": false,
+  "all_passed": true,
+  "methods": 35,
+  "semantic_rules": 28,
+  "cases_passed": 771,
+  "checks": [
+    {
+      "name": "生成字节一致:input.schema.json",
+      "passed": true
+    },
+    {
+      "name": "生成字节一致:bindings.json",
+      "passed": true
+    },
+    {
+      "name": "手写全部方法样例",
+      "passed": true
+    },
+    {
+      "name": "固定双权威方法数",
+      "passed": true
+    },
+    {
+      "name": "固定八项确认",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.getMeta",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getMeta:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getMeta:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getMeta:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getMeta:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getMeta:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getMeta:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getMeta:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getMeta:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getMeta:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getMeta:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getMeta:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getMeta:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getMeta:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:controller.getMeta",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.getMeta",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.getMeta",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.getClock",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClock:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClock:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClock:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClock:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClock:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClock:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClock:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClock:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClock:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getClock:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getClock:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getClock:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getClock:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:controller.getClock",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.getClock",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.getClock",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.listDevices",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.listDevices:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.listDevices:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.listDevices:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.listDevices:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.listDevices:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.listDevices:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.listDevices:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.listDevices:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.listDevices:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.listDevices:cursor",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.listDevices:cursor",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.listDevices:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.listDevices:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.listDevices:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.listDevices:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:controller.listDevices",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.listDevices",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.listDevices",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.getCapabilities",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapabilities:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapabilities:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapabilities:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapabilities:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapabilities:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapabilities:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapabilities:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapabilities:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapabilities:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.getCapabilities:device_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCapabilities:device_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCapabilities:device_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCapabilities:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCapabilities:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCapabilities:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCapabilities:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:controller.getCapabilities",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.getCapabilities",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.getCapabilities",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.getDeviceState",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getDeviceState:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getDeviceState:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getDeviceState:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getDeviceState:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getDeviceState:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getDeviceState:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getDeviceState:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getDeviceState:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getDeviceState:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.getDeviceState:device_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getDeviceState:device_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getDeviceState:device_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getDeviceState:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getDeviceState:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getDeviceState:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getDeviceState:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:controller.getDeviceState",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.getDeviceState",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.getDeviceState",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.submitCommand",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.submitCommand:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.submitCommand:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.submitCommand:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.submitCommand:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.submitCommand:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.submitCommand:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.submitCommand:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.submitCommand:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.submitCommand:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.submitCommand:device_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.submitCommand:action_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.submitCommand:capability_version",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.submitCommand:parameters",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.submitCommand:expected_control",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.submitCommand:required_completion",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.submitCommand:preconditions",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.submitCommand:dispatch",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.submitCommand:evidence_timeout_ms",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.submitCommand:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.submitCommand:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.submitCommand:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.submitCommand:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:controller.submitCommand",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.submitCommand",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.submitCommand",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.getCommand",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommand:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommand:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommand:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommand:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommand:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommand:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommand:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommand:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommand:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.getCommand:command_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCommand:command_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCommand:command_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCommand:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCommand:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCommand:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCommand:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:controller.getCommand",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.getCommand",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.getCommand",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.cancelCommand",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.cancelCommand:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.cancelCommand:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.cancelCommand:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.cancelCommand:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.cancelCommand:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.cancelCommand:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.cancelCommand:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.cancelCommand:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.cancelCommand:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.cancelCommand:command_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.cancelCommand:expected_state_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.cancelCommand:reason",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.cancelCommand:command_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.cancelCommand:command_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.cancelCommand:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.cancelCommand:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.cancelCommand:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.cancelCommand:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:controller.cancelCommand",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.cancelCommand",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.cancelCommand",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.getControlOperation",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControlOperation:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControlOperation:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControlOperation:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControlOperation:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControlOperation:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControlOperation:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControlOperation:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControlOperation:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControlOperation:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.getControlOperation:operation_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getControlOperation:operation_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getControlOperation:operation_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getControlOperation:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getControlOperation:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getControlOperation:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getControlOperation:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:controller.getControlOperation",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.getControlOperation",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.getControlOperation",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.getControl",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControl:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControl:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControl:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControl:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControl:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControl:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControl:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControl:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getControl:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.getControl:device_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getControl:device_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getControl:device_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getControl:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getControl:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getControl:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getControl:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:controller.getControl",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.getControl",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.getControl",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.acquireControl",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acquireControl:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acquireControl:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acquireControl:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acquireControl:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acquireControl:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acquireControl:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acquireControl:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acquireControl:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acquireControl:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.acquireControl:device_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.acquireControl:expected_control",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.acquireControl:reason",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.acquireControl:device_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.acquireControl:device_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.acquireControl:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.acquireControl:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.acquireControl:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.acquireControl:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:controller.acquireControl",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.acquireControl",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.acquireControl",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.releaseControl",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.releaseControl:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.releaseControl:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.releaseControl:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.releaseControl:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.releaseControl:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.releaseControl:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.releaseControl:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.releaseControl:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.releaseControl:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.releaseControl:device_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.releaseControl:expected_control",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.releaseControl:reason",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.releaseControl:device_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.releaseControl:device_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.releaseControl:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.releaseControl:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.releaseControl:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.releaseControl:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:controller.releaseControl",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.releaseControl",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.releaseControl",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.offerTransfer",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.offerTransfer:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.offerTransfer:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.offerTransfer:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.offerTransfer:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.offerTransfer:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.offerTransfer:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.offerTransfer:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.offerTransfer:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.offerTransfer:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.offerTransfer:device_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.offerTransfer:expected_control",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.offerTransfer:reason",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.offerTransfer:member_handle",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.offerTransfer:offer_ttl_ms",
+      "passed": true
+    },
+    {
+      "name": "句柄先由面板选择:controller.offerTransfer:target_principal",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.offerTransfer:device_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.offerTransfer:device_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.offerTransfer:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.offerTransfer:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.offerTransfer:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.offerTransfer:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:controller.offerTransfer",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.offerTransfer",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.offerTransfer",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.acceptTransfer",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acceptTransfer:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acceptTransfer:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acceptTransfer:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acceptTransfer:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acceptTransfer:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acceptTransfer:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acceptTransfer:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acceptTransfer:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.acceptTransfer:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.acceptTransfer:device_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.acceptTransfer:transfer_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.acceptTransfer:expected_control",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.acceptTransfer:reason",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.acceptTransfer:device_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.acceptTransfer:device_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.acceptTransfer:transfer_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.acceptTransfer:transfer_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.acceptTransfer:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.acceptTransfer:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.acceptTransfer:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.acceptTransfer:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:controller.acceptTransfer",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.acceptTransfer",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.acceptTransfer",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.revokeRunGrant",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.revokeRunGrant:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.revokeRunGrant:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.revokeRunGrant:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.revokeRunGrant:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.revokeRunGrant:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.revokeRunGrant:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.revokeRunGrant:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.revokeRunGrant:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.revokeRunGrant:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.revokeRunGrant:grant_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.revokeRunGrant:expected_revision",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.revokeRunGrant:reason",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.revokeRunGrant:grant_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.revokeRunGrant:grant_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.revokeRunGrant:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.revokeRunGrant:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.revokeRunGrant:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.revokeRunGrant:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:controller.revokeRunGrant",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.revokeRunGrant",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.revokeRunGrant",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClockAssessment:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClockAssessment:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClockAssessment:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClockAssessment:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClockAssessment:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClockAssessment:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClockAssessment:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClockAssessment:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getClockAssessment:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getClockAssessment:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getClockAssessment:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getClockAssessment:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getClockAssessment:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:controller.getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.getCapacity",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapacity:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapacity:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapacity:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapacity:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapacity:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapacity:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapacity:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapacity:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCapacity:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCapacity:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCapacity:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCapacity:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCapacity:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:controller.getCapacity",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.getCapacity",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.getCapacity",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.getSceneCatalog",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getSceneCatalog:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getSceneCatalog:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getSceneCatalog:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getSceneCatalog:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getSceneCatalog:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getSceneCatalog:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getSceneCatalog:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getSceneCatalog:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getSceneCatalog:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.getSceneCatalog:device_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getSceneCatalog:device_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getSceneCatalog:device_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getSceneCatalog:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getSceneCatalog:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getSceneCatalog:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getSceneCatalog:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:controller.getSceneCatalog",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.getSceneCatalog",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.getSceneCatalog",
+      "passed": true
+    },
+    {
+      "name": "输入正例:controller.getCommandEvidence",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommandEvidence:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommandEvidence:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommandEvidence:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommandEvidence:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommandEvidence:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommandEvidence:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommandEvidence:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommandEvidence:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:controller.getCommandEvidence:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.getCommandEvidence:command_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.getCommandEvidence:state_revision",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:controller.getCommandEvidence:limit",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCommandEvidence:command_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCommandEvidence:command_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCommandEvidence:state_revision",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCommandEvidence:state_revision",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCommandEvidence:cursor",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCommandEvidence:cursor",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCommandEvidence:limit",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCommandEvidence:limit",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCommandEvidence:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCommandEvidence:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:controller.getCommandEvidence:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:controller.getCommandEvidence:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:controller.getCommandEvidence",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:controller.getCommandEvidence",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:controller.getCommandEvidence",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.getMeta",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getMeta:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getMeta:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getMeta:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getMeta:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getMeta:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getMeta:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getMeta:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getMeta:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getMeta:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getMeta:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getMeta:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getMeta:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getMeta:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:seamer.getMeta",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.getMeta",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.getMeta",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.getClock",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClock:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClock:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClock:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClock:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClock:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClock:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClock:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClock:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClock:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getClock:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getClock:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getClock:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getClock:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:seamer.getClock",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.getClock",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.getClock",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.createDefinition",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createDefinition:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createDefinition:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createDefinition:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createDefinition:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createDefinition:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createDefinition:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createDefinition:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createDefinition:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createDefinition:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.createDefinition:content",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.createDefinition:metadata",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.createDefinition:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.createDefinition:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.createDefinition:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.createDefinition:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:seamer.createDefinition",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.createDefinition",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.createDefinition",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.updateDraft",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.updateDraft:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.updateDraft:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.updateDraft:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.updateDraft:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.updateDraft:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.updateDraft:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.updateDraft:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.updateDraft:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.updateDraft:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.updateDraft:definition_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.updateDraft:expected_draft_revision",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.updateDraft:content",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.updateDraft:definition_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.updateDraft:definition_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.updateDraft:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.updateDraft:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.updateDraft:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.updateDraft:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:seamer.updateDraft",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.updateDraft",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.updateDraft",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.publishDefinition",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.publishDefinition:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.publishDefinition:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.publishDefinition:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.publishDefinition:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.publishDefinition:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.publishDefinition:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.publishDefinition:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.publishDefinition:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.publishDefinition:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.publishDefinition:definition_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.publishDefinition:expected_draft_revision",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.publishDefinition:expected_content_digest",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.publishDefinition:expected_selection_digest",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.publishDefinition:definition_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.publishDefinition:definition_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.publishDefinition:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.publishDefinition:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.publishDefinition:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.publishDefinition:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:seamer.publishDefinition",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.publishDefinition",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.publishDefinition",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.createRun",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createRun:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createRun:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createRun:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createRun:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createRun:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createRun:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createRun:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createRun:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.createRun:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.createRun:definition_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.createRun:definition_version",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.createRun:expected_artifact_ref",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.createRun:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.createRun:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.createRun:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.createRun:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:seamer.createRun",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.createRun",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.createRun",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.getRun",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRun:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRun:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRun:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRun:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRun:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRun:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRun:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRun:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRun:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.getRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getRun:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getRun:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getRun:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getRun:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:seamer.getRun",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.getRun",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.getRun",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.preflightRun",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.preflightRun:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.preflightRun:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.preflightRun:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.preflightRun:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.preflightRun:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.preflightRun:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.preflightRun:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.preflightRun:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.preflightRun:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.preflightRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.preflightRun:expected_run_revision",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.preflightRun:expected_slot_revision",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.preflightRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.preflightRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.preflightRun:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.preflightRun:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.preflightRun:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.preflightRun:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:seamer.preflightRun",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.preflightRun",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.preflightRun",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.armRun",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.armRun:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.armRun:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.armRun:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.armRun:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.armRun:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.armRun:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.armRun:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.armRun:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.armRun:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.armRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.armRun:expected_run_revision",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.armRun:expected_slot_revision",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.armRun:assessment_handle",
+      "passed": true
+    },
+    {
+      "name": "句柄先由面板选择:seamer.armRun:preflight_id",
+      "passed": true
+    },
+    {
+      "name": "句柄先由面板选择:seamer.armRun:preflight_digest",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.armRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.armRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.armRun:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.armRun:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.armRun:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.armRun:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:seamer.armRun",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.armRun",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.armRun",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.pauseRun",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.pauseRun:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.pauseRun:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.pauseRun:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.pauseRun:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.pauseRun:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.pauseRun:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.pauseRun:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.pauseRun:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.pauseRun:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.pauseRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.pauseRun:expected_run_revision",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.pauseRun:reason_code",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.pauseRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.pauseRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.pauseRun:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.pauseRun:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.pauseRun:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.pauseRun:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:seamer.pauseRun",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.pauseRun",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.pauseRun",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.previewRecovery",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.previewRecovery:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.previewRecovery:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.previewRecovery:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.previewRecovery:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.previewRecovery:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.previewRecovery:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.previewRecovery:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.previewRecovery:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.previewRecovery:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.previewRecovery:run_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.previewRecovery:expected_run_revision",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.previewRecovery:expected_slot_revision",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.previewRecovery:run_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.previewRecovery:run_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.previewRecovery:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.previewRecovery:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.previewRecovery:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.previewRecovery:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:seamer.previewRecovery",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.previewRecovery",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.previewRecovery",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.resumeRun",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.resumeRun:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.resumeRun:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.resumeRun:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.resumeRun:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.resumeRun:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.resumeRun:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.resumeRun:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.resumeRun:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.resumeRun:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.resumeRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.resumeRun:expected_run_revision",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.resumeRun:expected_slot_revision",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.resumeRun:recovery_handle",
+      "passed": true
+    },
+    {
+      "name": "句柄先由面板选择:seamer.resumeRun:preview_id",
+      "passed": true
+    },
+    {
+      "name": "句柄先由面板选择:seamer.resumeRun:preview_digest",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.resumeRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.resumeRun:run_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.resumeRun:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.resumeRun:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.resumeRun:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.resumeRun:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "合成完整HTTP正文:seamer.resumeRun",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.resumeRun",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.resumeRun",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClockAssessment:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClockAssessment:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClockAssessment:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClockAssessment:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClockAssessment:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClockAssessment:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClockAssessment:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClockAssessment:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getClockAssessment:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getClockAssessment:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getClockAssessment:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getClockAssessment:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getClockAssessment:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:seamer.getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.getClockAssessment",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.getCapacity",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getCapacity:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getCapacity:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getCapacity:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getCapacity:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getCapacity:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getCapacity:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getCapacity:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getCapacity:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getCapacity:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getCapacity:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getCapacity:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getCapacity:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getCapacity:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:seamer.getCapacity",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.getCapacity",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.getCapacity",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.getRecoveryOperation",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRecoveryOperation:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRecoveryOperation:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRecoveryOperation:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRecoveryOperation:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRecoveryOperation:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRecoveryOperation:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRecoveryOperation:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRecoveryOperation:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getRecoveryOperation:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.getRecoveryOperation:operation_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getRecoveryOperation:operation_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getRecoveryOperation:operation_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getRecoveryOperation:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getRecoveryOperation:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getRecoveryOperation:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getRecoveryOperation:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:seamer.getRecoveryOperation",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.getRecoveryOperation",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.getRecoveryOperation",
+      "passed": true
+    },
+    {
+      "name": "输入正例:seamer.getIndependenceProof",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getIndependenceProof:context",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getIndependenceProof:context_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getIndependenceProof:idempotency_key",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getIndependenceProof:origin",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getIndependenceProof:run_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getIndependenceProof:automation_binding",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getIndependenceProof:correlation_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getIndependenceProof:authorization",
+      "passed": true
+    },
+    {
+      "name": "拒绝宿主字段:seamer.getIndependenceProof:delegation_ref",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.getIndependenceProof:definition_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.getIndependenceProof:proof_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝缺少参数:seamer.getIndependenceProof:revision",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getIndependenceProof:definition_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getIndependenceProof:definition_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getIndependenceProof:proof_id",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getIndependenceProof:proof_id",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getIndependenceProof:revision",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getIndependenceProof:revision",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getIndependenceProof:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getIndependenceProof:X-LeafSeamer-Contract",
+      "passed": true
+    },
+    {
+      "name": "完整参数映射:seamer.getIndependenceProof:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "参数格式:seamer.getIndependenceProof:X-LeafSeamer-Contract-Digest",
+      "passed": true
+    },
+    {
+      "name": "无正文不注入字段:seamer.getIndependenceProof",
+      "passed": true
+    },
+    {
+      "name": "候选未安装未授权:seamer.getIndependenceProof",
+      "passed": true
+    },
+    {
+      "name": "语义所有者具名:seamer.getIndependenceProof",
+      "passed": true
+    },
+    {
+      "name": "独立当前字段:controller.cancelCommand",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:controller.cancelCommand:expected_revision",
+      "passed": true
+    },
+    {
+      "name": "独立当前字段:controller.offerTransfer",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:controller.offerTransfer:target_principal",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:controller.offerTransfer:target_principal_id",
+      "passed": true
+    },
+    {
+      "name": "独立当前字段:controller.getCommandEvidence",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:controller.getCommandEvidence:cursor",
+      "passed": true
+    },
+    {
+      "name": "独立当前字段:seamer.createDefinition",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:seamer.createDefinition:definition",
+      "passed": true
+    },
+    {
+      "name": "独立当前字段:seamer.updateDraft",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:seamer.updateDraft:definition",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:seamer.updateDraft:expected_revision",
+      "passed": true
+    },
+    {
+      "name": "独立当前字段:seamer.publishDefinition",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:seamer.publishDefinition:expected_revision",
+      "passed": true
+    },
+    {
+      "name": "独立当前字段:seamer.createRun",
+      "passed": true
+    },
+    {
+      "name": "独立当前字段:seamer.armRun",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:seamer.armRun:approval_id",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:seamer.armRun:expected_revision",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:seamer.armRun:preflight_digest",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:seamer.armRun:preflight_id",
+      "passed": true
+    },
+    {
+      "name": "独立当前字段:seamer.resumeRun",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:seamer.resumeRun:expected_revision",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:seamer.resumeRun:preview_digest",
+      "passed": true
+    },
+    {
+      "name": "拒绝旧版字段:seamer.resumeRun:preview_id",
+      "passed": true
+    },
+    {
+      "name": "独立当前字段:seamer.getIndependenceProof",
+      "passed": true
+    },
+    {
+      "name": "手动命令不带运行绑定",
+      "passed": true
+    },
+    {
+      "name": "强制默认值规范化",
+      "passed": true
+    },
+    {
+      "name": "拒绝数字代替修订:controller.submitCommand",
+      "passed": true
+    },
+    {
+      "name": "拒绝数字代替修订:controller.acquireControl",
+      "passed": true
+    },
+    {
+      "name": "保留OBS条件限制",
+      "passed": true
+    },
+    {
+      "name": "完整HTTP再验宿主字段",
+      "passed": true
+    },
+    {
+      "name": "格式不能证明原件归属",
+      "passed": true
+    },
+    {
+      "name": "旧选择未改写",
+      "passed": true
+    }
+  ],
+  "synthetic_http_mappings": 35,
+  "real_handle_tests_executed": 0,
+  "authorization_tests_executed": 0,
+  "result_projection_tests_executed": 0,
+  "browser_tests_executed": 0,
+  "network_tests_executed": 0,
+  "device_tests_executed": 0,
+  "tools": {
+    "jsonschema": "4.25.1",
+    "referencing": "0.36.2"
+  },
+  "inputs": {
+    "contracts/panel-methods/bindings.json": "3349e2ccd265a6f0785457d27782dbbf77c7a3a31ddd5931f10edca428d08bb8",
+    "contracts/panel-methods/build.py": "b776478fb92fdf607b6f4558e834da44d0f9efcf62f70b7c14d7448cca0bc6f7",
+    "contracts/panel-methods/check.py": "86b4183756efdb569d8328777c06992e8b51d8e130a20cbb2ac606dbb364bd96",
+    "contracts/panel-methods/fixtures.py": "da1609cd85f2056328c58ace04e0484b17ae0f1e47d197452035f7fd96de09ac",
+    "contracts/panel-methods/input.schema.json": "d384906672fdf79a9a8c46eb8ef3e06d0bb9174181993e3ffaa8e13f7e47d76d",
+    "contracts/panel-methods/METHODS.md": "35047066dbb1005c90bd478f78923363140c73407d823f5c03a5a4f6fd79d11b",
+    "contracts/panel-methods/policy.py": "b5af663b1c9f6f01e38c2cc3feb24af4accd2f6a5226a4fed406f86909928145",
+    "contracts/panel-methods/README.md": "89a049a6f19f094a599cf661063096a98ecd5886b4b78c78f57681b8738a5a5d",
+    "contracts/panel-methods/source/legacy-bindings.json": "49add3ec9f11f4226af628fc79455db1cee22499a2485b5684e667520c71ade4",
+    "contracts/panel-methods/sources.json": "317cf52ff42b60aedb79d680df57d163c9a14c34be54d0444998c3e4957a44e8",
+    "contracts/event-integration/preview/models.schema.json": "f1c7a1a2a2ff4dd0834f05a8eb87033c7bb644e673a7b92d1f830f4e8ac1d6b5",
+    "contracts/event-integration/preview/controller.openapi.json": "794b108b73cbc3ca21579888c01a2784a68efc5693bae8f0ba29df3b97174eed",
+    "contracts/event-integration/preview/seamer.openapi.json": "ebf630c970a64b2a897fbc2f3d975d8db158c9c956bffca19f669d0d05bf5bcf",
+    "contracts/event-integration/preview/selection.json": "efdd3a57be14c408764b3813a04b12ffd3bee57f0fdd31cbce9daac828fd6340",
+    "contracts/authorization/bindings.json": "9a9661272dd344dc97ffedc1022ac322f4abf7f6dd393a80f723f1807f44d3d4"
+  }
+}

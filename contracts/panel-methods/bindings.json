@@ -1,0 +1,2846 @@
+{
+  "format": "panel-methods/0.3.0-draft.1",
+  "approved": false,
+  "runtime_ready": false,
+  "installed": false,
+  "source_selection": {
+    "contract_id": "leafseamer.api.v1.events2",
+    "contract_digest": "sha256:104a1404590c97baaee4f8d0cab43deb25835c6d9a378ac4457bac819ae93919"
+  },
+  "requires_new_complete_selection": true,
+  "methods": {
+    "controller.getMeta": {
+      "operation_key": "controller:getMeta",
+      "authority": "controller",
+      "http_method": "get",
+      "path": "/api/v1/meta",
+      "mode": "panel_read",
+      "target_kind": "service",
+      "semantic_rule": "service_projection",
+      "source_fields": {
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "controller_getMeta",
+      "http_body_schema": null,
+      "permission": "status.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "public_projection"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object"
+        ]
+      },
+      "result_view": "MetaView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "service_projection"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.getClock": {
+      "operation_key": "controller:getClock",
+      "authority": "controller",
+      "http_method": "get",
+      "path": "/api/v1/clock",
+      "mode": "panel_read",
+      "target_kind": "service",
+      "semantic_rule": "service_projection",
+      "source_fields": {
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "controller_getClock",
+      "http_body_schema": null,
+      "permission": "status.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "public_projection"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object"
+        ]
+      },
+      "result_view": "ClockView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "service_projection"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.listDevices": {
+      "operation_key": "controller:listDevices",
+      "authority": "controller",
+      "http_method": "get",
+      "path": "/api/v1/devices",
+      "mode": "panel_read",
+      "target_kind": "service",
+      "semantic_rule": "device_page",
+      "source_fields": {
+        "query.cursor": {
+          "owner": "page_handle",
+          "argument": "page_handle"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "controller_listDevices",
+      "http_body_schema": null,
+      "permission": "device.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "device_scope"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object"
+        ]
+      },
+      "result_view": "DevicePageView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "device_page"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.getCapabilities": {
+      "operation_key": "controller:getCapabilities",
+      "authority": "controller",
+      "http_method": "get",
+      "path": "/api/v1/devices/{device_id}/capabilities",
+      "mode": "panel_read",
+      "target_kind": "device",
+      "semantic_rule": "device_catalog",
+      "source_fields": {
+        "path.device_id": {
+          "owner": "panel_expected",
+          "argument": "device_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "controller_getCapabilities",
+      "http_body_schema": null,
+      "permission": "device.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "device_scope"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object"
+        ]
+      },
+      "result_view": "CapabilityView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "device_catalog"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.getDeviceState": {
+      "operation_key": "controller:getDeviceState",
+      "authority": "controller",
+      "http_method": "get",
+      "path": "/api/v1/devices/{device_id}/state",
+      "mode": "panel_read",
+      "target_kind": "device",
+      "semantic_rule": "device_observation",
+      "source_fields": {
+        "path.device_id": {
+          "owner": "panel_expected",
+          "argument": "device_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "controller_getDeviceState",
+      "http_body_schema": null,
+      "permission": "device.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "device_scope"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object"
+        ]
+      },
+      "result_view": "ObservationView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "device_observation"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.submitCommand": {
+      "operation_key": "controller:submitCommand",
+      "authority": "controller",
+      "http_method": "post",
+      "path": "/api/v1/commands",
+      "mode": "panel_write",
+      "target_kind": "device",
+      "semantic_rule": "manual_command",
+      "source_fields": {
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context_id": {
+          "owner": "request_identity"
+        },
+        "body.idempotency_key": {
+          "owner": "request_identity"
+        },
+        "body.device_id": {
+          "owner": "panel_expected",
+          "argument": "device_id"
+        },
+        "body.action_id": {
+          "owner": "panel_expected",
+          "argument": "action_id"
+        },
+        "body.capability_version": {
+          "owner": "panel_expected",
+          "argument": "capability_version"
+        },
+        "body.parameters": {
+          "owner": "panel_expected",
+          "argument": "parameters"
+        },
+        "body.expected_control": {
+          "owner": "panel_expected",
+          "argument": "expected_control"
+        },
+        "body.origin": {
+          "owner": "fixed_manual"
+        },
+        "body.run_binding": {
+          "owner": "forbidden"
+        },
+        "body.required_completion": {
+          "owner": "panel_expected",
+          "argument": "required_completion"
+        },
+        "body.preconditions": {
+          "owner": "panel_expected",
+          "argument": "preconditions"
+        },
+        "body.dispatch": {
+          "owner": "panel_expected",
+          "argument": "dispatch"
+        },
+        "body.evidence_timeout_ms": {
+          "owner": "panel_expected",
+          "argument": "evidence_timeout_ms"
+        },
+        "body.correlation_id": {
+          "owner": "host_correlation"
+        },
+        "body.automation_binding": {
+          "owner": "fixed_null"
+        }
+      },
+      "input_definition": "controller_submitCommand",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__A__S0_CommandRequest"
+      },
+      "permission": "device.command",
+      "human_branch": {
+        "profile": "human",
+        "origin": "manual",
+        "guards": [
+          "manual_holder"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "control"
+        ]
+      },
+      "result_view": "CommandView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "manual_command"
+      ],
+      "commit_boundary": "domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.getCommand": {
+      "operation_key": "controller:getCommand",
+      "authority": "controller",
+      "http_method": "get",
+      "path": "/api/v1/commands/{command_id}",
+      "mode": "panel_read",
+      "target_kind": "command",
+      "semantic_rule": "command_read",
+      "source_fields": {
+        "path.command_id": {
+          "owner": "panel_expected",
+          "argument": "command_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "controller_getCommand",
+      "http_body_schema": null,
+      "permission": "command.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "command_scope"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "control"
+        ]
+      },
+      "result_view": "CommandView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "command_read"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.cancelCommand": {
+      "operation_key": "controller:cancelCommand",
+      "authority": "controller",
+      "http_method": "post",
+      "path": "/api/v1/commands/{command_id}/cancel",
+      "mode": "panel_write",
+      "target_kind": "command",
+      "semantic_rule": "command_cancel",
+      "source_fields": {
+        "path.command_id": {
+          "owner": "panel_expected",
+          "argument": "command_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context_id": {
+          "owner": "request_identity"
+        },
+        "body.idempotency_key": {
+          "owner": "request_identity"
+        },
+        "body.expected_state_ref": {
+          "owner": "panel_expected",
+          "argument": "expected_state_ref"
+        },
+        "body.reason": {
+          "owner": "panel_expected",
+          "argument": "reason"
+        }
+      },
+      "input_definition": "controller_cancelCommand",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/command__V__S0_CancelRequest"
+      },
+      "permission": "command.cancel",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "cancel_target"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "control"
+        ]
+      },
+      "result_view": "CancelView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "command_cancel"
+      ],
+      "commit_boundary": "domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.getControlOperation": {
+      "operation_key": "controller:getControlOperation",
+      "authority": "controller",
+      "http_method": "get",
+      "path": "/api/v1/control-operations/{operation_id}",
+      "mode": "panel_read",
+      "target_kind": "control_operation",
+      "semantic_rule": "control_operation",
+      "source_fields": {
+        "path.operation_id": {
+          "owner": "panel_expected",
+          "argument": "operation_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "controller_getControlOperation",
+      "http_body_schema": null,
+      "permission": "control.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "control_scope"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "control"
+        ]
+      },
+      "result_view": "ControlOperationView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "control_operation"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.getControl": {
+      "operation_key": "controller:getControl",
+      "authority": "controller",
+      "http_method": "get",
+      "path": "/api/v1/devices/{device_id}/control",
+      "mode": "panel_read",
+      "target_kind": "device",
+      "semantic_rule": "control_read",
+      "source_fields": {
+        "path.device_id": {
+          "owner": "panel_expected",
+          "argument": "device_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "controller_getControl",
+      "http_body_schema": null,
+      "permission": "control.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "control_scope"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "control"
+        ]
+      },
+      "result_view": "ControlView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "control_read"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.acquireControl": {
+      "operation_key": "controller:acquireControl",
+      "authority": "controller",
+      "http_method": "post",
+      "path": "/api/v1/devices/{device_id}/control/acquire",
+      "mode": "host_confirm",
+      "target_kind": "device",
+      "semantic_rule": "control_acquire",
+      "source_fields": {
+        "path.device_id": {
+          "owner": "panel_expected",
+          "argument": "device_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context_id": {
+          "owner": "request_identity"
+        },
+        "body.idempotency_key": {
+          "owner": "request_identity"
+        },
+        "body.expected_control": {
+          "owner": "panel_expected",
+          "argument": "expected_control"
+        },
+        "body.reason": {
+          "owner": "panel_expected",
+          "argument": "reason"
+        },
+        "body.force": {
+          "owner": "panel_expected",
+          "argument": "force"
+        }
+      },
+      "input_definition": "controller_acquireControl",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__AcquireRequest"
+      },
+      "permission": "control.acquire",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "acquire_target"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "control"
+        ]
+      },
+      "result_view": "ControlOperationView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "control_acquire"
+      ],
+      "commit_boundary": "confirmed_domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.releaseControl": {
+      "operation_key": "controller:releaseControl",
+      "authority": "controller",
+      "http_method": "post",
+      "path": "/api/v1/devices/{device_id}/control/release",
+      "mode": "host_confirm",
+      "target_kind": "device",
+      "semantic_rule": "control_release",
+      "source_fields": {
+        "path.device_id": {
+          "owner": "panel_expected",
+          "argument": "device_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context_id": {
+          "owner": "request_identity"
+        },
+        "body.idempotency_key": {
+          "owner": "request_identity"
+        },
+        "body.expected_control": {
+          "owner": "panel_expected",
+          "argument": "expected_control"
+        },
+        "body.reason": {
+          "owner": "panel_expected",
+          "argument": "reason"
+        }
+      },
+      "input_definition": "controller_releaseControl",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__ReleaseRequest"
+      },
+      "permission": "control.release",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "release_target"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "control"
+        ]
+      },
+      "result_view": "ControlOperationView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "control_release"
+      ],
+      "commit_boundary": "confirmed_domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.offerTransfer": {
+      "operation_key": "controller:offerTransfer",
+      "authority": "controller",
+      "http_method": "post",
+      "path": "/api/v1/devices/{device_id}/control/transfers",
+      "mode": "host_confirm",
+      "target_kind": "device",
+      "semantic_rule": "transfer_offer",
+      "source_fields": {
+        "path.device_id": {
+          "owner": "panel_expected",
+          "argument": "device_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context_id": {
+          "owner": "request_identity"
+        },
+        "body.idempotency_key": {
+          "owner": "request_identity"
+        },
+        "body.expected_control": {
+          "owner": "panel_expected",
+          "argument": "expected_control"
+        },
+        "body.reason": {
+          "owner": "panel_expected",
+          "argument": "reason"
+        },
+        "body.target_principal": {
+          "owner": "member_handle",
+          "argument": "member_handle"
+        },
+        "body.offer_ttl_ms": {
+          "owner": "panel_expected",
+          "argument": "offer_ttl_ms"
+        }
+      },
+      "input_definition": "controller_offerTransfer",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__OfferRequest"
+      },
+      "permission": "control.transfer",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "offer_target"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "control"
+        ]
+      },
+      "result_view": "TransferView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "transfer_offer"
+      ],
+      "commit_boundary": "confirmed_domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.acceptTransfer": {
+      "operation_key": "controller:acceptTransfer",
+      "authority": "controller",
+      "http_method": "post",
+      "path": "/api/v1/devices/{device_id}/control/transfers/{transfer_id}/accept",
+      "mode": "host_confirm",
+      "target_kind": "device",
+      "semantic_rule": "transfer_accept",
+      "source_fields": {
+        "path.device_id": {
+          "owner": "panel_expected",
+          "argument": "device_id"
+        },
+        "path.transfer_id": {
+          "owner": "panel_expected",
+          "argument": "transfer_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context_id": {
+          "owner": "request_identity"
+        },
+        "body.idempotency_key": {
+          "owner": "request_identity"
+        },
+        "body.expected_control": {
+          "owner": "panel_expected",
+          "argument": "expected_control"
+        },
+        "body.reason": {
+          "owner": "panel_expected",
+          "argument": "reason"
+        }
+      },
+      "input_definition": "controller_acceptTransfer",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/control__AcceptRequest"
+      },
+      "permission": "control.accept",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "accept_target"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "control"
+        ]
+      },
+      "result_view": "ControlOperationView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "transfer_accept"
+      ],
+      "commit_boundary": "confirmed_domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.revokeRunGrant": {
+      "operation_key": "controller:revokeRunGrant",
+      "authority": "controller",
+      "http_method": "post",
+      "path": "/api/v1/run-grants/{grant_id}/revoke",
+      "mode": "host_confirm",
+      "target_kind": "grant",
+      "semantic_rule": "grant_revoke",
+      "source_fields": {
+        "path.grant_id": {
+          "owner": "panel_expected",
+          "argument": "grant_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context_id": {
+          "owner": "request_identity"
+        },
+        "body.idempotency_key": {
+          "owner": "request_identity"
+        },
+        "body.expected_revision": {
+          "owner": "panel_expected",
+          "argument": "expected_revision"
+        },
+        "body.reason": {
+          "owner": "panel_expected",
+          "argument": "reason"
+        }
+      },
+      "input_definition": "controller_revokeRunGrant",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/baseline__RevokeRequest"
+      },
+      "permission": "grant.revoke",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "grant_revoke_target"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "control"
+        ]
+      },
+      "result_view": "MutationView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "grant_revoke"
+      ],
+      "commit_boundary": "confirmed_domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.getClockAssessment": {
+      "operation_key": "controller:getClockAssessment",
+      "authority": "controller",
+      "http_method": "get",
+      "path": "/api/v1/clock-assessment",
+      "mode": "panel_read",
+      "target_kind": "service",
+      "semantic_rule": "service_projection",
+      "source_fields": {
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "controller_getClockAssessment",
+      "http_body_schema": null,
+      "permission": "status.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "public_projection"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object"
+        ]
+      },
+      "result_view": "ClockAssessmentView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "service_projection"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.getCapacity": {
+      "operation_key": "controller:getCapacity",
+      "authority": "controller",
+      "http_method": "get",
+      "path": "/api/v1/capacity",
+      "mode": "panel_read",
+      "target_kind": "service",
+      "semantic_rule": "service_projection",
+      "source_fields": {
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "controller_getCapacity",
+      "http_body_schema": null,
+      "permission": "status.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "public_projection"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object"
+        ]
+      },
+      "result_view": "CapacityView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "service_projection"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.getSceneCatalog": {
+      "operation_key": "controller:getSceneCatalog",
+      "authority": "controller",
+      "http_method": "get",
+      "path": "/api/v1/devices/{device_id}/scene-catalog",
+      "mode": "panel_read",
+      "target_kind": "device",
+      "semantic_rule": "scene_catalog",
+      "source_fields": {
+        "path.device_id": {
+          "owner": "panel_expected",
+          "argument": "device_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "controller_getSceneCatalog",
+      "http_body_schema": null,
+      "permission": "device.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "device_scope"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object"
+        ]
+      },
+      "result_view": "SceneCatalogView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "scene_catalog"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "controller.getCommandEvidence": {
+      "operation_key": "controller:getCommandEvidence",
+      "authority": "controller",
+      "http_method": "get",
+      "path": "/api/v1/commands/{command_id}/evidence",
+      "mode": "panel_read",
+      "target_kind": "command",
+      "semantic_rule": "command_evidence",
+      "source_fields": {
+        "path.command_id": {
+          "owner": "panel_expected",
+          "argument": "command_id"
+        },
+        "query.state_revision": {
+          "owner": "panel_expected",
+          "argument": "state_revision"
+        },
+        "query.cursor": {
+          "owner": "page_handle",
+          "argument": "page_handle"
+        },
+        "query.limit": {
+          "owner": "panel_expected",
+          "argument": "limit"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "controller_getCommandEvidence",
+      "http_body_schema": null,
+      "permission": "command.evidence.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "command_scope"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "control"
+        ]
+      },
+      "result_view": "EvidencePageView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "command_evidence"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.getMeta": {
+      "operation_key": "seamer:getMeta",
+      "authority": "seamer",
+      "http_method": "get",
+      "path": "/api/v1/meta",
+      "mode": "panel_read",
+      "target_kind": "service",
+      "semantic_rule": "service_projection",
+      "source_fields": {
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "seamer_getMeta",
+      "http_body_schema": null,
+      "permission": "status.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "public_projection"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object"
+        ]
+      },
+      "result_view": "MetaView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "service_projection"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.getClock": {
+      "operation_key": "seamer:getClock",
+      "authority": "seamer",
+      "http_method": "get",
+      "path": "/api/v1/clock",
+      "mode": "panel_read",
+      "target_kind": "service",
+      "semantic_rule": "service_projection",
+      "source_fields": {
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "seamer_getClock",
+      "http_body_schema": null,
+      "permission": "status.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "public_projection"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object"
+        ]
+      },
+      "result_view": "ClockView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "service_projection"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.createDefinition": {
+      "operation_key": "seamer:createDefinition",
+      "authority": "seamer",
+      "http_method": "post",
+      "path": "/api/v1/definitions",
+      "mode": "panel_write",
+      "target_kind": "service",
+      "semantic_rule": "definition_create",
+      "source_fields": {
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context": {
+          "owner": "request_identity"
+        },
+        "body.content": {
+          "owner": "panel_expected",
+          "argument": "content"
+        },
+        "body.metadata": {
+          "owner": "panel_expected",
+          "argument": "metadata"
+        }
+      },
+      "input_definition": "seamer_createDefinition",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__CreateDefinition"
+      },
+      "permission": "definition.edit",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "definition_edit"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "automation"
+        ]
+      },
+      "result_view": "DefinitionView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "definition_create"
+      ],
+      "commit_boundary": "domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.updateDraft": {
+      "operation_key": "seamer:updateDraft",
+      "authority": "seamer",
+      "http_method": "put",
+      "path": "/api/v1/definitions/{definition_id}/draft",
+      "mode": "panel_write",
+      "target_kind": "definition",
+      "semantic_rule": "definition_update",
+      "source_fields": {
+        "path.definition_id": {
+          "owner": "panel_expected",
+          "argument": "definition_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context": {
+          "owner": "request_identity"
+        },
+        "body.expected_draft_revision": {
+          "owner": "panel_expected",
+          "argument": "expected_draft_revision"
+        },
+        "body.content": {
+          "owner": "panel_expected",
+          "argument": "content"
+        }
+      },
+      "input_definition": "seamer_updateDraft",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__UpdateDraft"
+      },
+      "permission": "definition.edit",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "definition_edit"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "automation"
+        ]
+      },
+      "result_view": "DefinitionView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "definition_update"
+      ],
+      "commit_boundary": "domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.publishDefinition": {
+      "operation_key": "seamer:publishDefinition",
+      "authority": "seamer",
+      "http_method": "post",
+      "path": "/api/v1/definitions/{definition_id}/publish",
+      "mode": "host_confirm",
+      "target_kind": "definition",
+      "semantic_rule": "definition_publish",
+      "source_fields": {
+        "path.definition_id": {
+          "owner": "panel_expected",
+          "argument": "definition_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context": {
+          "owner": "request_identity"
+        },
+        "body.expected_draft_revision": {
+          "owner": "panel_expected",
+          "argument": "expected_draft_revision"
+        },
+        "body.expected_content_digest": {
+          "owner": "panel_expected",
+          "argument": "expected_content_digest"
+        },
+        "body.expected_selection_digest": {
+          "owner": "panel_expected",
+          "argument": "expected_selection_digest"
+        }
+      },
+      "input_definition": "seamer_publishDefinition",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Publish"
+      },
+      "permission": "definition.publish",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "definition_publish"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "automation"
+        ]
+      },
+      "result_view": "DefinitionView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "definition_publish"
+      ],
+      "commit_boundary": "confirmed_domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.createRun": {
+      "operation_key": "seamer:createRun",
+      "authority": "seamer",
+      "http_method": "post",
+      "path": "/api/v1/runs",
+      "mode": "panel_write",
+      "target_kind": "service",
+      "semantic_rule": "run_create",
+      "source_fields": {
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context": {
+          "owner": "request_identity"
+        },
+        "body.definition_id": {
+          "owner": "panel_expected",
+          "argument": "definition_id"
+        },
+        "body.definition_version": {
+          "owner": "panel_expected",
+          "argument": "definition_version"
+        },
+        "body.expected_artifact_ref": {
+          "owner": "panel_expected",
+          "argument": "expected_artifact_ref"
+        }
+      },
+      "input_definition": "seamer_createRun",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__CreateRun"
+      },
+      "permission": "run.manage",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "run_create_unarmed"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "automation"
+        ]
+      },
+      "result_view": "RunView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "run_create"
+      ],
+      "commit_boundary": "domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.getRun": {
+      "operation_key": "seamer:getRun",
+      "authority": "seamer",
+      "http_method": "get",
+      "path": "/api/v1/runs/{run_id}",
+      "mode": "panel_read",
+      "target_kind": "run",
+      "semantic_rule": "run_read",
+      "source_fields": {
+        "path.run_id": {
+          "owner": "panel_expected",
+          "argument": "run_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "seamer_getRun",
+      "http_body_schema": null,
+      "permission": "run.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "run_read"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "automation"
+        ]
+      },
+      "result_view": "RunView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "run_read"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.preflightRun": {
+      "operation_key": "seamer:preflightRun",
+      "authority": "seamer",
+      "http_method": "post",
+      "path": "/api/v1/runs/{run_id}/preflight",
+      "mode": "panel_read",
+      "target_kind": "run",
+      "semantic_rule": "run_preflight",
+      "source_fields": {
+        "path.run_id": {
+          "owner": "panel_expected",
+          "argument": "run_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context": {
+          "owner": "request_identity"
+        },
+        "body.expected_run_revision": {
+          "owner": "panel_expected",
+          "argument": "expected_run_revision"
+        },
+        "body.expected_slot_revision": {
+          "owner": "panel_expected",
+          "argument": "expected_slot_revision"
+        }
+      },
+      "input_definition": "seamer_preflightRun",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__InspectRun"
+      },
+      "permission": "run.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "preflight_readonly"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "automation"
+        ]
+      },
+      "result_view": "PreflightView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "run_preflight"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.armRun": {
+      "operation_key": "seamer:armRun",
+      "authority": "seamer",
+      "http_method": "post",
+      "path": "/api/v1/runs/{run_id}/arm",
+      "mode": "host_confirm",
+      "target_kind": "run",
+      "semantic_rule": "run_arm",
+      "source_fields": {
+        "path.run_id": {
+          "owner": "panel_expected",
+          "argument": "run_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context": {
+          "owner": "request_identity"
+        },
+        "body.expected_run_revision": {
+          "owner": "panel_expected",
+          "argument": "expected_run_revision"
+        },
+        "body.expected_slot_revision": {
+          "owner": "panel_expected",
+          "argument": "expected_slot_revision"
+        },
+        "body.preflight_id": {
+          "owner": "assessment_handle",
+          "argument": "assessment_handle"
+        },
+        "body.preflight_digest": {
+          "owner": "assessment_handle",
+          "argument": "assessment_handle"
+        }
+      },
+      "input_definition": "seamer_armRun",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Arm"
+      },
+      "permission": "run.arm",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "arm_approval"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "automation"
+        ]
+      },
+      "result_view": "MutationView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "run_arm"
+      ],
+      "commit_boundary": "confirmed_domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.pauseRun": {
+      "operation_key": "seamer:pauseRun",
+      "authority": "seamer",
+      "http_method": "post",
+      "path": "/api/v1/runs/{run_id}/pause",
+      "mode": "panel_write",
+      "target_kind": "run",
+      "semantic_rule": "run_pause",
+      "source_fields": {
+        "path.run_id": {
+          "owner": "panel_expected",
+          "argument": "run_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context": {
+          "owner": "request_identity"
+        },
+        "body.expected_run_revision": {
+          "owner": "panel_expected",
+          "argument": "expected_run_revision"
+        },
+        "body.reason_code": {
+          "owner": "panel_expected",
+          "argument": "reason_code"
+        }
+      },
+      "input_definition": "seamer_pauseRun",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__ProtectRun"
+      },
+      "permission": "run.pause",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "pause_target"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "automation"
+        ]
+      },
+      "result_view": "MutationView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "run_pause"
+      ],
+      "commit_boundary": "domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.previewRecovery": {
+      "operation_key": "seamer:previewRecovery",
+      "authority": "seamer",
+      "http_method": "post",
+      "path": "/api/v1/runs/{run_id}/recovery-preview",
+      "mode": "panel_read",
+      "target_kind": "run",
+      "semantic_rule": "run_recovery_preview",
+      "source_fields": {
+        "path.run_id": {
+          "owner": "panel_expected",
+          "argument": "run_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context": {
+          "owner": "request_identity"
+        },
+        "body.expected_run_revision": {
+          "owner": "panel_expected",
+          "argument": "expected_run_revision"
+        },
+        "body.expected_slot_revision": {
+          "owner": "panel_expected",
+          "argument": "expected_slot_revision"
+        }
+      },
+      "input_definition": "seamer_previewRecovery",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__InspectRun"
+      },
+      "permission": "run.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "recovery_readonly"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "automation"
+        ]
+      },
+      "result_view": "RecoveryPlanView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "run_recovery_preview"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.resumeRun": {
+      "operation_key": "seamer:resumeRun",
+      "authority": "seamer",
+      "http_method": "post",
+      "path": "/api/v1/runs/{run_id}/resume",
+      "mode": "host_confirm",
+      "target_kind": "run",
+      "semantic_rule": "run_resume",
+      "source_fields": {
+        "path.run_id": {
+          "owner": "panel_expected",
+          "argument": "run_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        },
+        "body.context": {
+          "owner": "request_identity"
+        },
+        "body.expected_run_revision": {
+          "owner": "panel_expected",
+          "argument": "expected_run_revision"
+        },
+        "body.expected_slot_revision": {
+          "owner": "panel_expected",
+          "argument": "expected_slot_revision"
+        },
+        "body.preview_id": {
+          "owner": "recovery_handle",
+          "argument": "recovery_handle"
+        },
+        "body.preview_digest": {
+          "owner": "recovery_handle",
+          "argument": "recovery_handle"
+        }
+      },
+      "input_definition": "seamer_resumeRun",
+      "http_body_schema": {
+        "$ref": "https://leafseamer.invalid/sdk/event-integration/0.1/models.schema.json#/$defs/lifecycle__Resume"
+      },
+      "permission": "run.resume",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "recovery_confirm"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "automation"
+        ]
+      },
+      "result_view": "RecoveryOperationView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "run_resume"
+      ],
+      "commit_boundary": "confirmed_domain_transaction",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.getClockAssessment": {
+      "operation_key": "seamer:getClockAssessment",
+      "authority": "seamer",
+      "http_method": "get",
+      "path": "/api/v1/clock-assessment",
+      "mode": "panel_read",
+      "target_kind": "service",
+      "semantic_rule": "service_projection",
+      "source_fields": {
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "seamer_getClockAssessment",
+      "http_body_schema": null,
+      "permission": "status.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "public_projection"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object"
+        ]
+      },
+      "result_view": "ClockAssessmentView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "service_projection"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.getCapacity": {
+      "operation_key": "seamer:getCapacity",
+      "authority": "seamer",
+      "http_method": "get",
+      "path": "/api/v1/capacity",
+      "mode": "panel_read",
+      "target_kind": "service",
+      "semantic_rule": "service_projection",
+      "source_fields": {
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "seamer_getCapacity",
+      "http_body_schema": null,
+      "permission": "status.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "public_projection"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object"
+        ]
+      },
+      "result_view": "CapacityView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "service_projection"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.getRecoveryOperation": {
+      "operation_key": "seamer:getRecoveryOperation",
+      "authority": "seamer",
+      "http_method": "get",
+      "path": "/api/v1/recovery-operations/{operation_id}",
+      "mode": "panel_read",
+      "target_kind": "recovery_operation",
+      "semantic_rule": "recovery_operation",
+      "source_fields": {
+        "path.operation_id": {
+          "owner": "panel_expected",
+          "argument": "operation_id"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "seamer_getRecoveryOperation",
+      "http_body_schema": null,
+      "permission": "run.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "recovery_visibility"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "automation"
+        ]
+      },
+      "result_view": "RecoveryOperationView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "recovery_operation"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    },
+    "seamer.getIndependenceProof": {
+      "operation_key": "seamer:getIndependenceProof",
+      "authority": "seamer",
+      "http_method": "get",
+      "path": "/api/v1/definitions/{definition_id}/proofs/{proof_id}",
+      "mode": "panel_read",
+      "target_kind": "definition",
+      "semantic_rule": "independence_proof",
+      "source_fields": {
+        "path.definition_id": {
+          "owner": "panel_expected",
+          "argument": "definition_id"
+        },
+        "path.proof_id": {
+          "owner": "panel_expected",
+          "argument": "proof_id"
+        },
+        "query.revision": {
+          "owner": "panel_expected",
+          "argument": "revision"
+        },
+        "header.X-LeafSeamer-Contract": {
+          "owner": "host_selection"
+        },
+        "header.X-LeafSeamer-Contract-Digest": {
+          "owner": "host_selection"
+        }
+      },
+      "input_definition": "seamer_getIndependenceProof",
+      "http_body_schema": null,
+      "permission": "definition.read",
+      "human_branch": {
+        "profile": "human",
+        "origin": null,
+        "guards": [
+          "proof_visibility"
+        ],
+        "security_alternatives": [
+          0
+        ],
+        "providers": [
+          "capacity",
+          "identity",
+          "permission",
+          "object",
+          "automation"
+        ]
+      },
+      "result_view": "IndependenceView",
+      "raw_response_allowed": false,
+      "authorization_granted": false,
+      "installed": false,
+      "preconditions": [
+        "current_host_session",
+        "activation_and_delegation",
+        "method_capability_intersection",
+        "target_relation",
+        "independence_proof"
+      ],
+      "commit_boundary": "read_or_assessment_record",
+      "release_checks": [
+        "current_identity",
+        "current_scope",
+        "same_activation",
+        "whitelist_projection",
+        "view_schema"
+      ]
+    }
+  },
+  "semantic_rules": {
+    "service_projection": {
+      "owner": "服务当前公开投影所有者",
+      "contract": "仅当前已授权服务投影；元信息功能取当前安装交集，时间不暴露源或时钟私有身份，容量不泄漏其他主体"
+    },
+    "device_page": {
+      "owner": "Controller设备目录",
+      "contract": "固定目录修订、权限交集与分页句柄；不返回隐藏设备数量，不拼接不同目录版本"
+    },
+    "device_catalog": {
+      "owner": "Controller能力目录",
+      "contract": "目标device与安装激活同域；能力、参数和结果Schema引用均来自当前批准目录"
+    },
+    "device_observation": {
+      "owner": "Controller观察读取器",
+      "contract": "设备和字段读权逐项校验，来源完整性与投影裁剪分别表示，不把缺值变零"
+    },
+    "manual_command": {
+      "owner": "Controller命令受理与控制事务",
+      "contract": "设备与目标相同；手动holder、expected_control、动作版本及动态参数成立；origin=manual，automation_binding=null且无run_binding"
+    },
+    "command_read": {
+      "owner": "Controller命令记录",
+      "contract": "命令原权威与目标device一致；读取当前修订，历史成功不绕过当前读权"
+    },
+    "command_cancel": {
+      "owner": "Controller取消事务",
+      "contract": "expected_state_ref完整匹配目标命令状态原件；原命令修订和取消操作修订独立；受理取消不证明原动作未发送"
+    },
+    "control_operation": {
+      "owner": "Controller控制操作日志",
+      "contract": "operation归属目标设备与原authority；操作完成不代表当前仍持有或ready"
+    },
+    "control_read": {
+      "owner": "Controller控制当前状态",
+      "contract": "读取当前holder、control_version和gate；历史控制记录不代表当前可写"
+    },
+    "control_acquire": {
+      "owner": "Controller接管事务",
+      "contract": "明确目标设备及expected_control；force缺省在确认前固定false，true需额外强制权限；接管受理与ready分离"
+    },
+    "control_release": {
+      "owner": "Controller释放事务",
+      "contract": "当前holder与expected_control匹配；确认释放不自动恢复自动化，不清除在途或未知资源"
+    },
+    "transfer_offer": {
+      "owner": "Controller转交事务与受限成员目录",
+      "contract": "member_handle解析完整issuer/epoch/principal，绑定当前目录与目标；邀请期限和expected_control固定，不允许裸principal跨域匹配"
+    },
+    "transfer_accept": {
+      "owner": "Controller转交事务",
+      "contract": "device与transfer父子关系成立；当前人员正是原邀请目标且未过期，expected_control未变"
+    },
+    "grant_revoke": {
+      "owner": "Controller运行授权事务",
+      "contract": "grant归属固定run与当前管理范围；expected_revision匹配，撤销不等于远端完成保护"
+    },
+    "scene_catalog": {
+      "owner": "Controller场景目录",
+      "contract": "device、目录修订、场景参数和当前可见范围一致；展示名称不是稳定设备对象身份"
+    },
+    "command_evidence": {
+      "owner": "Controller命令证据日志",
+      "contract": "目标command、state_revision、证据修订和页句柄全部绑定；原报文不返回，未决资源不能靠裁剪隐藏"
+    },
+    "definition_create": {
+      "owner": "Seamer定义与编译前校验",
+      "contract": "父服务范围可写；content中全部input/action及资源引用、policy与动态Schema逐项授权；metadata.layout是无副作用有限数据"
+    },
+    "definition_update": {
+      "owner": "Seamer草稿事务",
+      "contract": "definition与expected_draft_revision匹配；完整content可编辑才允许覆盖，不用裁剪后草稿覆盖隐藏步骤"
+    },
+    "definition_publish": {
+      "owner": "Seamer发布与编译事务",
+      "contract": "当前草稿修订、内容摘要及选择摘要同时匹配；确认不替代编译、证明、预算和批准"
+    },
+    "run_create": {
+      "owner": "Seamer运行事务",
+      "contract": "定义版本与expected_artifact_ref完整关联且可见；只创建未布防run，不签发运行许可"
+    },
+    "run_read": {
+      "owner": "Seamer运行当前投影",
+      "contract": "run、definition、slot与原权威关联；展示完整未决状态，不因隐藏命令ID删去风险"
+    },
+    "run_preflight": {
+      "owner": "Seamer预检提供者",
+      "contract": "expected_run_revision和expected_slot_revision同时匹配；只读评估可保存结果，不能布防或签授权"
+    },
+    "run_arm": {
+      "owner": "Seamer布防事务",
+      "contract": "assessment_handle解析原预检id/digest，绑定同run、slot、版本、主体、激活与期限；确认消费时重核组织批准与预检，不采用面板自报通过"
+    },
+    "run_pause": {
+      "owner": "Seamer保护事务",
+      "contract": "expected_run_revision匹配；reason_code来自有限词表；保护受理不代表所有远端出口已关闭"
+    },
+    "run_recovery_preview": {
+      "owner": "Seamer恢复评估器",
+      "contract": "固定run与slot修订、未知/在途/资源和失败继续策略；只生成预览，不自动执行或循环刷新订阅"
+    },
+    "run_resume": {
+      "owner": "Seamer恢复事务",
+      "contract": "recovery_handle解析原preview id/digest，绑定同run、slot、原失败集合与策略；确认消费同事务，当前资源和授权重新核验"
+    },
+    "recovery_operation": {
+      "owner": "Seamer恢复操作日志",
+      "contract": "operation归属原run与authority；查原只读，不重复创建恢复或据成功历史绕过当前权限"
+    },
+    "independence_proof": {
+      "owner": "Seamer编译证明存储",
+      "contract": "definition、proof_id与revision完整匹配固定发布/编译原件；unknown不能投影为independent，面板摘要不成为执行证明"
+    }
+  },
+  "changes": [
+    {
+      "method": "controller.getMeta",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": []
+    },
+    {
+      "method": "controller.getClock",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": []
+    },
+    {
+      "method": "controller.listDevices",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "page_handle"
+      ]
+    },
+    {
+      "method": "controller.getCapabilities",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "device_id"
+      ]
+    },
+    {
+      "method": "controller.getDeviceState",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "device_id"
+      ]
+    },
+    {
+      "method": "controller.submitCommand",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "action_id",
+        "capability_version",
+        "device_id",
+        "dispatch",
+        "evidence_timeout_ms",
+        "expected_control",
+        "parameters",
+        "preconditions",
+        "required_completion"
+      ]
+    },
+    {
+      "method": "controller.getCommand",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "command_id"
+      ]
+    },
+    {
+      "method": "controller.cancelCommand",
+      "added_arguments": [
+        "expected_state_ref"
+      ],
+      "removed_arguments": [
+        "expected_revision"
+      ],
+      "retained_arguments_with_changed_schema": [
+        "command_id"
+      ]
+    },
+    {
+      "method": "controller.getControlOperation",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "operation_id"
+      ]
+    },
+    {
+      "method": "controller.getControl",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "device_id"
+      ]
+    },
+    {
+      "method": "controller.acquireControl",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "device_id",
+        "expected_control",
+        "reason"
+      ]
+    },
+    {
+      "method": "controller.releaseControl",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "device_id",
+        "expected_control",
+        "reason"
+      ]
+    },
+    {
+      "method": "controller.offerTransfer",
+      "added_arguments": [
+        "member_handle"
+      ],
+      "removed_arguments": [
+        "target_principal_id"
+      ],
+      "retained_arguments_with_changed_schema": [
+        "device_id",
+        "expected_control",
+        "offer_ttl_ms",
+        "reason"
+      ]
+    },
+    {
+      "method": "controller.acceptTransfer",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "device_id",
+        "expected_control",
+        "reason",
+        "transfer_id"
+      ]
+    },
+    {
+      "method": "controller.revokeRunGrant",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "expected_revision",
+        "grant_id"
+      ]
+    },
+    {
+      "method": "controller.getClockAssessment",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": []
+    },
+    {
+      "method": "controller.getCapacity",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": []
+    },
+    {
+      "method": "controller.getSceneCatalog",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "device_id"
+      ]
+    },
+    {
+      "method": "controller.getCommandEvidence",
+      "added_arguments": [
+        "limit",
+        "state_revision"
+      ],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "command_id",
+        "page_handle"
+      ]
+    },
+    {
+      "method": "seamer.getMeta",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": []
+    },
+    {
+      "method": "seamer.getClock",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": []
+    },
+    {
+      "method": "seamer.createDefinition",
+      "added_arguments": [
+        "content",
+        "metadata"
+      ],
+      "removed_arguments": [
+        "definition"
+      ],
+      "retained_arguments_with_changed_schema": []
+    },
+    {
+      "method": "seamer.updateDraft",
+      "added_arguments": [
+        "content",
+        "expected_draft_revision"
+      ],
+      "removed_arguments": [
+        "definition",
+        "expected_revision"
+      ],
+      "retained_arguments_with_changed_schema": [
+        "definition_id"
+      ]
+    },
+    {
+      "method": "seamer.publishDefinition",
+      "added_arguments": [
+        "expected_content_digest",
+        "expected_draft_revision",
+        "expected_selection_digest"
+      ],
+      "removed_arguments": [
+        "expected_revision"
+      ],
+      "retained_arguments_with_changed_schema": [
+        "definition_id"
+      ]
+    },
+    {
+      "method": "seamer.createRun",
+      "added_arguments": [
+        "expected_artifact_ref"
+      ],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "definition_id",
+        "definition_version"
+      ]
+    },
+    {
+      "method": "seamer.getRun",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "run_id"
+      ]
+    },
+    {
+      "method": "seamer.preflightRun",
+      "added_arguments": [
+        "expected_run_revision",
+        "expected_slot_revision"
+      ],
+      "removed_arguments": [
+        "expected_revision"
+      ],
+      "retained_arguments_with_changed_schema": [
+        "run_id"
+      ]
+    },
+    {
+      "method": "seamer.armRun",
+      "added_arguments": [
+        "expected_run_revision",
+        "expected_slot_revision"
+      ],
+      "removed_arguments": [
+        "expected_revision"
+      ],
+      "retained_arguments_with_changed_schema": [
+        "assessment_handle",
+        "run_id"
+      ]
+    },
+    {
+      "method": "seamer.pauseRun",
+      "added_arguments": [
+        "expected_run_revision",
+        "reason_code"
+      ],
+      "removed_arguments": [
+        "expected_revision",
+        "reason"
+      ],
+      "retained_arguments_with_changed_schema": [
+        "run_id"
+      ]
+    },
+    {
+      "method": "seamer.previewRecovery",
+      "added_arguments": [
+        "expected_run_revision",
+        "expected_slot_revision"
+      ],
+      "removed_arguments": [
+        "expected_revision"
+      ],
+      "retained_arguments_with_changed_schema": [
+        "run_id"
+      ]
+    },
+    {
+      "method": "seamer.resumeRun",
+      "added_arguments": [
+        "expected_run_revision",
+        "expected_slot_revision"
+      ],
+      "removed_arguments": [
+        "expected_revision"
+      ],
+      "retained_arguments_with_changed_schema": [
+        "recovery_handle",
+        "run_id"
+      ]
+    },
+    {
+      "method": "seamer.getClockAssessment",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": []
+    },
+    {
+      "method": "seamer.getCapacity",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": []
+    },
+    {
+      "method": "seamer.getRecoveryOperation",
+      "added_arguments": [],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "operation_id"
+      ]
+    },
+    {
+      "method": "seamer.getIndependenceProof",
+      "added_arguments": [
+        "revision"
+      ],
+      "removed_arguments": [],
+      "retained_arguments_with_changed_schema": [
+        "definition_id",
+        "proof_id"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "format": "panel-method-sources/1",
+  "approved": false,
+  "runtime_ready": false,
+  "sdk_source_commit": "436728a3a113daebae502f8997f20f734942e5b6",
+  "inputs": {
+    "contracts/event-integration/preview/models.schema.json": "f1c7a1a2a2ff4dd0834f05a8eb87033c7bb644e673a7b92d1f830f4e8ac1d6b5",
+    "contracts/event-integration/preview/controller.openapi.json": "794b108b73cbc3ca21579888c01a2784a68efc5693bae8f0ba29df3b97174eed",
+    "contracts/event-integration/preview/seamer.openapi.json": "ebf630c970a64b2a897fbc2f3d975d8db158c9c956bffca19f669d0d05bf5bcf",
+    "contracts/event-integration/preview/selection.json": "efdd3a57be14c408764b3813a04b12ffd3bee57f0fdd31cbce9daac828fd6340",
+    "contracts/authorization/bindings.json": "9a9661272dd344dc97ffedc1022ac322f4abf7f6dd393a80f723f1807f44d3d4"
+  },
+  "copied_sources": {
+    "contracts/panel-methods/source/legacy-bindings.json": {
+      "repository": "https://github.com/LeafSeamer/leafseamer-suite",
+      "commit": "3ef692533388852d88a76e164649c006c2f4d566",
+      "path": "docs/contracts/c09-panel/method-bindings.json",
+      "sha256": "49add3ec9f11f4226af628fc79455db1cee22499a2485b5684e667520c71ade4"
+    }
+  }
+}

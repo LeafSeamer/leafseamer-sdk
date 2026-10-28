@@ -1,0 +1,57 @@
+"""35方法的对象和领域约束；名称匹配不代表规则已执行。"""
+RULES={
+'service_projection':('服务当前公开投影所有者','仅当前已授权服务投影；元信息功能取当前安装交集，时间不暴露源或时钟私有身份，容量不泄漏其他主体'),
+'device_page':('Controller设备目录','固定目录修订、权限交集与分页句柄；不返回隐藏设备数量，不拼接不同目录版本'),
+'device_catalog':('Controller能力目录','目标device与安装激活同域；能力、参数和结果Schema引用均来自当前批准目录'),
+'device_observation':('Controller观察读取器','设备和字段读权逐项校验，来源完整性与投影裁剪分别表示，不把缺值变零'),
+'manual_command':('Controller命令受理与控制事务','设备与目标相同；手动holder、expected_control、动作版本及动态参数成立；origin=manual，automation_binding=null且无run_binding'),
+'command_read':('Controller命令记录','命令原权威与目标device一致；读取当前修订，历史成功不绕过当前读权'),
+'command_cancel':('Controller取消事务','expected_state_ref完整匹配目标命令状态原件；原命令修订和取消操作修订独立；受理取消不证明原动作未发送'),
+'control_operation':('Controller控制操作日志','operation归属目标设备与原authority；操作完成不代表当前仍持有或ready'),
+'control_read':('Controller控制当前状态','读取当前holder、control_version和gate；历史控制记录不代表当前可写'),
+'control_acquire':('Controller接管事务','明确目标设备及expected_control；force缺省在确认前固定false，true需额外强制权限；接管受理与ready分离'),
+'control_release':('Controller释放事务','当前holder与expected_control匹配；确认释放不自动恢复自动化，不清除在途或未知资源'),
+'transfer_offer':('Controller转交事务与受限成员目录','member_handle解析完整issuer/epoch/principal，绑定当前目录与目标；邀请期限和expected_control固定，不允许裸principal跨域匹配'),
+'transfer_accept':('Controller转交事务','device与transfer父子关系成立；当前人员正是原邀请目标且未过期，expected_control未变'),
+'grant_revoke':('Controller运行授权事务','grant归属固定run与当前管理范围；expected_revision匹配，撤销不等于远端完成保护'),
+'scene_catalog':('Controller场景目录','device、目录修订、场景参数和当前可见范围一致；展示名称不是稳定设备对象身份'),
+'command_evidence':('Controller命令证据日志','目标command、state_revision、证据修订和页句柄全部绑定；原报文不返回，未决资源不能靠裁剪隐藏'),
+'definition_create':('Seamer定义与编译前校验','父服务范围可写；content中全部input/action及资源引用、policy与动态Schema逐项授权；metadata.layout是无副作用有限数据'),
+'definition_update':('Seamer草稿事务','definition与expected_draft_revision匹配；完整content可编辑才允许覆盖，不用裁剪后草稿覆盖隐藏步骤'),
+'definition_publish':('Seamer发布与编译事务','当前草稿修订、内容摘要及选择摘要同时匹配；确认不替代编译、证明、预算和批准'),
+'run_create':('Seamer运行事务','定义版本与expected_artifact_ref完整关联且可见；只创建未布防run，不签发运行许可'),
+'run_read':('Seamer运行当前投影','run、definition、slot与原权威关联；展示完整未决状态，不因隐藏命令ID删去风险'),
+'run_preflight':('Seamer预检提供者','expected_run_revision和expected_slot_revision同时匹配；只读评估可保存结果，不能布防或签授权'),
+'run_arm':('Seamer布防事务','assessment_handle解析原预检id/digest，绑定同run、slot、版本、主体、激活与期限；确认消费时重核组织批准与预检，不采用面板自报通过'),
+'run_pause':('Seamer保护事务','expected_run_revision匹配；reason_code来自有限词表；保护受理不代表所有远端出口已关闭'),
+'run_recovery_preview':('Seamer恢复评估器','固定run与slot修订、未知/在途/资源和失败继续策略；只生成预览，不自动执行或循环刷新订阅'),
+'run_resume':('Seamer恢复事务','recovery_handle解析原preview id/digest，绑定同run、slot、原失败集合与策略；确认消费同事务，当前资源和授权重新核验'),
+'recovery_operation':('Seamer恢复操作日志','operation归属原run与authority；查原只读，不重复创建恢复或据成功历史绕过当前权限'),
+'independence_proof':('Seamer编译证明存储','definition、proof_id与revision完整匹配固定发布/编译原件；unknown不能投影为independent，面板摘要不成为执行证明')
+}
+CONTROLLER={
+'getMeta':('service','service_projection'),'getClock':('service','service_projection'),
+'listDevices':('service','device_page'),'getCapabilities':('device','device_catalog'),
+'getDeviceState':('device','device_observation'),'submitCommand':('device','manual_command'),
+'getCommand':('command','command_read'),'cancelCommand':('command','command_cancel'),
+'getControlOperation':('control_operation','control_operation'),'getControl':('device','control_read'),
+'acquireControl':('device','control_acquire'),'releaseControl':('device','control_release'),
+'offerTransfer':('device','transfer_offer'),'acceptTransfer':('device','transfer_accept'),
+'revokeRunGrant':('grant','grant_revoke'),'getClockAssessment':('service','service_projection'),
+'getCapacity':('service','service_projection'),'getSceneCatalog':('device','scene_catalog'),
+'getCommandEvidence':('command','command_evidence')}
+SEAMER={
+'getMeta':('service','service_projection'),'getClock':('service','service_projection'),
+'createDefinition':('service','definition_create'),'updateDraft':('definition','definition_update'),
+'publishDefinition':('definition','definition_publish'),'createRun':('service','run_create'),
+'getRun':('run','run_read'),'preflightRun':('run','run_preflight'),'armRun':('run','run_arm'),
+'pauseRun':('run','run_pause'),'previewRecovery':('run','run_recovery_preview'),'resumeRun':('run','run_resume'),
+'getClockAssessment':('service','service_projection'),'getCapacity':('service','service_projection'),
+'getRecoveryOperation':('recovery_operation','recovery_operation'),'getIndependenceProof':('definition','independence_proof')}
+METHODS={**{'controller.'+k:v for k,v in CONTROLLER.items()},**{'seamer.'+k:v for k,v in SEAMER.items()}}
+HOST_FIELDS={'context_id':'request_identity','idempotency_key':'request_identity','context':'request_identity',
+ 'correlation_id':'host_correlation','origin':'fixed_manual','automation_binding':'fixed_null','run_binding':'forbidden',
+ 'target_principal':'member_handle','preflight_id':'assessment_handle','preflight_digest':'assessment_handle',
+ 'preview_id':'recovery_handle','preview_digest':'recovery_handle'}
+CONFIRM={'controller.acquireControl','controller.releaseControl','controller.offerTransfer','controller.acceptTransfer',
+ 'controller.revokeRunGrant','seamer.publishDefinition','seamer.armRun','seamer.resumeRun'}
