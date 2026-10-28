@@ -1,0 +1,10 @@
+{
+  "name": "@leafseamer/reference-typed-client",
+  "version": "0.1.0-draft.1",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "description": "完整HTTP候选的类型生成与单次传输客户端参考",
+  "engines": {"node": "24.22.0", "npm": "11.19.1"},
+  "devDependencies": {"openapi-typescript": "7.13.0", "typescript": "5.9.3"}
+}

@@ -1,0 +1,22 @@
+[
+  "c.call('missing');",
+  "c.call('openEvents');",
+  "c.call('internalOpenEvents');",
+  "c.call('getCommand');",
+  "c.call('getCommand',{path:{command_id:1}});",
+  "c.call('getCommandRevision',{path:{command_id:'command',revision:9007199254740992}});",
+  "c.call('getCommandEvidence',{path:{command_id:'command'},query:{state_revision:'1',limit:'10'}});",
+  "c.call('discoverContracts',{body:{}});",
+  "c.call('createRequestContext');",
+  "c.call('createRequestContext',{body:{audience:'controller',operations:['read'],ttl_ms:'1000',max_unique_requests:1,selection}});",
+  "c.call('createRequestContext',{body:{audience:'controller',operations:['read'],ttl_ms:1000,max_unique_requests:1,selection,other:1}});",
+  "c.call('getCapacity',{headers:{'X-LeafSeamer-Contract':'other'}});",
+  "c.call('discoverContracts',{query:null});",
+  "c.call('discoverContracts',{}, {retry:3});",
+  "createClient('other',selection,transport);",
+  "const wrongRecursive:components['schemas']['baseline__JsonValue']=()=>1;",
+  "const wrongResult:string=result.body;",
+  "result.authorization_granted=true;",
+  "if(result.status==='200')result.body.authority_role='controller';",
+  "c.call('getCommand',{path:{command_id:'command'},body:{}});"
+]

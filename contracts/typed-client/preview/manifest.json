@@ -1,0 +1,11 @@
+{
+  "format": "typed-client-artifacts/1",
+  "approved": false,
+  "runtime_ready": false,
+  "artifacts": {
+    "controller.d.ts": "e1d3cf012f78eb98e0e5d7d2523a4d88a8fdd7e83c71eed78f8ec72ea8b090a6",
+    "seamer.d.ts": "839dce64f36423ee7dcdc743fd42210f1105c882634f2bdf4503cc936fb875fc",
+    "operations.d.ts": "86887d67c5a401205e005f17d4b25f41a38a2f3203769250b96093a79936a57c",
+    "bindings.json": "909f2b1a14f69668560c23dc1f2b43ed5dedbb4ec29acbf9444ac66c3cef494d"
+  }
+}
