@@ -1,0 +1,375 @@
+{
+  "format": "publication-source-report/1",
+  "approved": false,
+  "runtime_ready": false,
+  "installed": false,
+  "all_passed": true,
+  "cases_passed": 83,
+  "checks": [
+    {
+      "name": "生成字节一致",
+      "passed": true
+    },
+    {
+      "name": "固定SDK原件:contracts/panel-integration/preview/models.schema.json",
+      "passed": true
+    },
+    {
+      "name": "固定SDK原件:contracts/panel-integration/preview/selection.json",
+      "passed": true
+    },
+    {
+      "name": "固定SDK原件:contracts/panel-results/RESULTS.md",
+      "passed": true
+    },
+    {
+      "name": "固定来源副本:contracts/publication-source/source/lifecycle.txt",
+      "passed": true
+    },
+    {
+      "name": "29模型闭包",
+      "passed": true
+    },
+    {
+      "name": "无外部Schema获取",
+      "passed": true
+    },
+    {
+      "name": "完整关联正例",
+      "passed": true
+    },
+    {
+      "name": "缺少根字段:format",
+      "passed": true
+    },
+    {
+      "name": "缺少根字段:selection",
+      "passed": true
+    },
+    {
+      "name": "缺少根字段:published",
+      "passed": true
+    },
+    {
+      "name": "缺少根字段:source",
+      "passed": true
+    },
+    {
+      "name": "缺少根字段:metadata_digest",
+      "passed": true
+    },
+    {
+      "name": "缺少根字段:record_digest",
+      "passed": true
+    },
+    {
+      "name": "即使重算封装仍拒绝:跨authority",
+      "passed": true
+    },
+    {
+      "name": "即使重算封装仍拒绝:跨database",
+      "passed": true
+    },
+    {
+      "name": "即使重算封装仍拒绝:制品跨scope",
+      "passed": true
+    },
+    {
+      "name": "即使重算封装仍拒绝:定义错配",
+      "passed": true
+    },
+    {
+      "name": "即使重算封装仍拒绝:草稿修订错配",
+      "passed": true
+    },
+    {
+      "name": "即使重算封装仍拒绝:内容未重算",
+      "passed": true
+    },
+    {
+      "name": "即使重算封装仍拒绝:选择摘要伪造",
+      "passed": true
+    },
+    {
+      "name": "即使重算封装仍拒绝:metadata未重算",
+      "passed": true
+    },
+    {
+      "name": "即使重算封装仍拒绝:非法选择",
+      "passed": true
+    },
+    {
+      "name": "即使重算封装仍拒绝:注入批准",
+      "passed": true
+    },
+    {
+      "name": "即使重算封装仍拒绝:当前草稿代填",
+      "passed": true
+    },
+    {
+      "name": "封装摘要",
+      "passed": true
+    },
+    {
+      "name": "深度预算",
+      "passed": true
+    },
+    {
+      "name": "字符预算",
+      "passed": true
+    },
+    {
+      "name": "节点预算",
+      "passed": true
+    },
+    {
+      "name": "NaN不可规范化",
+      "passed": true
+    },
+    {
+      "name": "必须由writer拥有事务",
+      "passed": true
+    },
+    {
+      "name": "未开启事务零写入",
+      "passed": true
+    },
+    {
+      "name": "首次写入",
+      "passed": true
+    },
+    {
+      "name": "同事务完整查原",
+      "passed": true
+    },
+    {
+      "name": "故障回滚没有半份原件",
+      "passed": true
+    },
+    {
+      "name": "原件精确重试",
+      "passed": true
+    },
+    {
+      "name": "重试无重复版本",
+      "passed": true
+    },
+    {
+      "name": "同版本不可替换:metadata修订",
+      "passed": true
+    },
+    {
+      "name": "同版本不可替换:名称内容",
+      "passed": true
+    },
+    {
+      "name": "同版本不可替换:发布主体",
+      "passed": true
+    },
+    {
+      "name": "同版本不可替换:制品摘要",
+      "passed": true
+    },
+    {
+      "name": "直接SQL不可变:UPDATE",
+      "passed": true
+    },
+    {
+      "name": "直接SQL不可变:DELETE",
+      "passed": true
+    },
+    {
+      "name": "直接SQL不可变:REPLACE",
+      "passed": true
+    },
+    {
+      "name": "关闭递归仍拒绝REPLACE",
+      "passed": true
+    },
+    {
+      "name": "原件保持",
+      "passed": true
+    },
+    {
+      "name": "查原核完整发布对象:program_digest",
+      "passed": true
+    },
+    {
+      "name": "查原核完整发布对象:bindings_digest",
+      "passed": true
+    },
+    {
+      "name": "查原核完整发布对象:published_by",
+      "passed": true
+    },
+    {
+      "name": "查原核完整发布对象:source_draft_revision",
+      "passed": true
+    },
+    {
+      "name": "缺失版本不能回退最新",
+      "passed": true
+    },
+    {
+      "name": "返回副本不改原件",
+      "passed": true
+    },
+    {
+      "name": "SQL列与封装联核:0",
+      "passed": true
+    },
+    {
+      "name": "错配没有存入:0",
+      "passed": true
+    },
+    {
+      "name": "SQL列与封装联核:1",
+      "passed": true
+    },
+    {
+      "name": "错配没有存入:1",
+      "passed": true
+    },
+    {
+      "name": "SQL列与封装联核:2",
+      "passed": true
+    },
+    {
+      "name": "错配没有存入:2",
+      "passed": true
+    },
+    {
+      "name": "SQL列与封装联核:3",
+      "passed": true
+    },
+    {
+      "name": "错配没有存入:3",
+      "passed": true
+    },
+    {
+      "name": "SQL列与封装联核:4",
+      "passed": true
+    },
+    {
+      "name": "错配没有存入:4",
+      "passed": true
+    },
+    {
+      "name": "SQL列与封装联核:5",
+      "passed": true
+    },
+    {
+      "name": "错配没有存入:5",
+      "passed": true
+    },
+    {
+      "name": "SQL列与封装联核:6",
+      "passed": true
+    },
+    {
+      "name": "错配没有存入:6",
+      "passed": true
+    },
+    {
+      "name": "SQL列与封装联核:7",
+      "passed": true
+    },
+    {
+      "name": "错配没有存入:7",
+      "passed": true
+    },
+    {
+      "name": "SQL列与封装联核:8",
+      "passed": true
+    },
+    {
+      "name": "错配没有存入:8",
+      "passed": true
+    },
+    {
+      "name": "非规范JSON字节拒绝",
+      "passed": true
+    },
+    {
+      "name": "重复JSON键拒绝",
+      "passed": true
+    },
+    {
+      "name": "DELETE:第二连接看不到未提交记录",
+      "passed": true
+    },
+    {
+      "name": "DELETE:第二writer不能插入竞争版本",
+      "passed": true
+    },
+    {
+      "name": "DELETE:提交后完整原件可见",
+      "passed": true
+    },
+    {
+      "name": "DELETE:丢失响应后只查原",
+      "passed": true
+    },
+    {
+      "name": "DELETE:关闭重开保留原件",
+      "passed": true
+    },
+    {
+      "name": "WAL:第二连接看不到未提交记录",
+      "passed": true
+    },
+    {
+      "name": "WAL:第二writer不能插入竞争版本",
+      "passed": true
+    },
+    {
+      "name": "WAL:提交后完整原件可见",
+      "passed": true
+    },
+    {
+      "name": "WAL:丢失响应后只查原",
+      "passed": true
+    },
+    {
+      "name": "WAL:关闭重开保留原件",
+      "passed": true
+    },
+    {
+      "name": "局部校验不伪称编译证明",
+      "passed": true
+    }
+  ],
+  "models": 29,
+  "sqlite_tables": 1,
+  "sqlite_file_modes_tested": [
+    "DELETE",
+    "WAL"
+  ],
+  "sqlite_two_connection_scenarios": 2,
+  "production_publication_tests_executed": 0,
+  "compiler_tests_executed": 0,
+  "dynamic_schema_authorization_tests_executed": 0,
+  "browser_tests_executed": 0,
+  "network_tests_executed": 0,
+  "device_tests_executed": 0,
+  "power_loss_tests_executed": 0,
+  "sqlite_version": "3.50.4",
+  "tools": {
+    "jsonschema": "4.25.1",
+    "rfc8785": "0.1.4"
+  },
+  "inputs": {
+    "contracts/publication-source/build.py": "bbece446a69ae917b3b462b7e9178ef76e313d85049061d8aa3fa5b3be9abd33",
+    "contracts/publication-source/check.py": "12281739ce3f3c3552fc51d6a00a24eebec4597229836b73797effb77f3954df",
+    "contracts/publication-source/fixtures.py": "42bae49d70f57a1b5c1764312dbe7dd2304bf370a9b0fa4cdf753870287f4cbe",
+    "contracts/publication-source/layout.sql": "95e50c4534145c75a93f19d50f1bb0721968551624032e16eea9058610b407e6",
+    "contracts/publication-source/README.md": "8d3e29b4cde1cba23f718dd237331014831ac03eb6de7e9167ee11a18e8bb43f",
+    "contracts/publication-source/record.schema.json": "934e5409790705cb429340b624d95d097c63abf92d93d232e60ca97af5473527",
+    "contracts/publication-source/source/lifecycle.txt": "e972dd205861f240dea0085a33ce106bd461a44c3ccbfee54e0ef16399099f18",
+    "contracts/publication-source/sources.json": "3d2018c3b7c203f2f6b6bc988a05131c7c04d3298b8bf09b3cc6b4348670f96c",
+    "contracts/publication-source/store.py": "16806307a2bcd95407ed8195f129d7cd34704518b5fe77966d14d252020b4dfc",
+    "contracts/panel-integration/preview/models.schema.json": "9e12b81ac9d9a3a0f63ad5ea5737ce7c3bdd76f1a63c259dd35757ce43901b1f",
+    "contracts/panel-integration/preview/selection.json": "284bc9d50448186b00d1e730c47252f38145a9bf7c5e466ce7643d15cdd1d391",
+    "contracts/panel-results/RESULTS.md": "c8751a57042fe46369ff5af0a2e7a066ed3c25bb4219c8a33e2e486a307b905c"
+  }
+}

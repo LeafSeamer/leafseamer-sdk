@@ -1,0 +1,19 @@
+{
+  "format": "publication-source-inputs/1",
+  "approved": false,
+  "runtime_ready": false,
+  "source_commit": "eef557ddfcf8cc53bf1c7258502e841b96accb1b",
+  "inputs": {
+    "contracts/panel-integration/preview/models.schema.json": "9e12b81ac9d9a3a0f63ad5ea5737ce7c3bdd76f1a63c259dd35757ce43901b1f",
+    "contracts/panel-integration/preview/selection.json": "284bc9d50448186b00d1e730c47252f38145a9bf7c5e466ce7643d15cdd1d391",
+    "contracts/panel-results/RESULTS.md": "c8751a57042fe46369ff5af0a2e7a066ed3c25bb4219c8a33e2e486a307b905c"
+  },
+  "copied_sources": {
+    "contracts/publication-source/source/lifecycle.txt": {
+      "repository": "https://github.com/LeafSeamer/leafseamer-suite",
+      "commit": "b3a1fe2f43333167d7df10cc4034689c9a6515c5",
+      "path": "docs/contracts/c04-lifecycle/README.md",
+      "sha256": "e972dd205861f240dea0085a33ce106bd461a44c3ccbfee54e0ef16399099f18"
+    }
+  }
+}
