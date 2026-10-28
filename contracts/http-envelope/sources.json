@@ -1,0 +1,22 @@
+{
+  "format": "http-envelope-sources/1",
+  "approved": false,
+  "runtime_ready": false,
+  "source_commit": "7675185575d014d6138c8283dd16eacb94dbd46d",
+  "inputs": {
+    "contracts/event-integration/preview/controller.openapi.json": "794b108b73cbc3ca21579888c01a2784a68efc5693bae8f0ba29df3b97174eed",
+    "contracts/event-integration/preview/seamer.openapi.json": "ebf630c970a64b2a897fbc2f3d975d8db158c9c956bffca19f669d0d05bf5bcf",
+    "contracts/event-integration/preview/selection.json": "efdd3a57be14c408764b3813a04b12ffd3bee57f0fdd31cbce9daac828fd6340",
+    "contracts/wire-js/dependencies.json": "dbcae02770866302233c18e475b263906d64971d76a1ea1f869f65dac7e8d3cc",
+    "contracts/wire-js/package-lock.json": "64097c158f67143afbf72ed378f1baffed263a1bb72475ee3be87497ee313f3b",
+    "contracts/wire-js/package.json": "fec7a0f66be113eb9a8229e041a40ab7f7f7462d1a0fd7eb6fe524075d71c85d",
+    "contracts/wire-routing/decoder.mjs": "5cfe8727556867f6d8bb9254cbce40e3ffad84b9ac7dd02a06496aeb30b2e305",
+    "contracts/wire-routing/preview/LICENSES.txt": "8da6966734e4e5080bc5dedeff1d1e9dcd6cc239f043a97c127b9ef7a15b3c21",
+    "contracts/wire-routing/preview/helpers.mjs": "920ee8279050fe2beae3657a95e98ad7ae5fbe141b8f184dfa217620959253fa",
+    "contracts/wire-routing/preview/inventory.json": "3cb7942adc07b1d51ba7464e97910b98c86b204b6240bf1971eb2a8a8fc0f61c",
+    "contracts/wire-routing/preview/registry.mjs": "78b560368b47aa97f3ef74157317c8f256b7cdccc7be7ed38f4af198795dc945",
+    "contracts/wire-routing/preview/routes.mjs": "3743f82284d643dd04584f19b4775ca55a4ede754d7549a1751f844ba2d75ca7",
+    "contracts/wire-routing/preview/validators.mjs": "0b7a048b20ff32c33dcb573135aaf32c72420be8e501e19333bbd7e412990e52",
+    "contracts/wire-routing/preview/wire.mjs": "47ee90c6585770cc16a1aee27f7d6fbcfb5cc7b64b46b791ed386443170b1520"
+  }
+}

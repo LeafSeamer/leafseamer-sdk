@@ -1,0 +1,10 @@
+{
+  "format": "http-envelope-artifacts/1",
+  "approved": false,
+  "runtime_ready": false,
+  "artifacts": {
+    "inventory.json": "b3af40aea253a31895b2329e5d05bc7344e8393812c3a064778fdc00fc02b4ce",
+    "catalog.mjs": "8dba5a773d0667484e99e57863f7571d9fdbc28c0f3fa09265b7ba32f2a886b8",
+    "validators.mjs": "154209fa3b324782e423eca3e3a4d6c6660c8937968f45efa5e1cdd2047b00d8"
+  }
+}
