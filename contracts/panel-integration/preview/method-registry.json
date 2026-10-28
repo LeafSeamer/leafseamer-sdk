@@ -1,0 +1,539 @@
+{
+  "approved": false,
+  "runtime_ready": false,
+  "registry_ref": {
+    "revision": "1",
+    "digest": "e7659ff6894f66d934531de6f2b60d05fefa82a94caa1ba1a4deff099a850770"
+  },
+  "registry": {
+    "format_version": "panel-method-registry/0.3.0-draft.1",
+    "revision": "1",
+    "methods": [
+      {
+        "method": "controller.acceptTransfer",
+        "mode": "host_confirm",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_acceptTransfer",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "ControlOperationView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.acquireControl",
+        "mode": "host_confirm",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_acquireControl",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "ControlOperationView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.cancelCommand",
+        "mode": "panel_write",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_cancelCommand",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "CancelView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.getCapabilities",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_getCapabilities",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "CapabilityView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.getCapacity",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_getCapacity",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "CapacityView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.getClock",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_getClock",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "ClockView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.getClockAssessment",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_getClockAssessment",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "ClockAssessmentView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.getCommand",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_getCommand",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "CommandView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.getCommandEvidence",
+        "mode": "panel_read",
+        "subscription_mode": "invalidation",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_getCommandEvidence",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "EvidencePageView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.getControl",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_getControl",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "ControlView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.getControlOperation",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_getControlOperation",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "ControlOperationView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.getDeviceState",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_getDeviceState",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "ObservationView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.getMeta",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_getMeta",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "MetaView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.getSceneCatalog",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_getSceneCatalog",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "SceneCatalogView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.listDevices",
+        "mode": "panel_read",
+        "subscription_mode": "invalidation",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_listDevices",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "DevicePageView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.offerTransfer",
+        "mode": "host_confirm",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_offerTransfer",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "TransferView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.releaseControl",
+        "mode": "host_confirm",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_releaseControl",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "ControlOperationView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.revokeRunGrant",
+        "mode": "host_confirm",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_revokeRunGrant",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "GrantMutationView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "controller.submitCommand",
+        "mode": "panel_write",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "controller_submitCommand",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "CommandView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.armRun",
+        "mode": "host_confirm",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_armRun",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "LifecycleMutationView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.createDefinition",
+        "mode": "panel_write",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_createDefinition",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "DraftDefinitionView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.createRun",
+        "mode": "panel_write",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_createRun",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "RunView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.getCapacity",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_getCapacity",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "CapacityView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.getClock",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_getClock",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "ClockView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.getClockAssessment",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_getClockAssessment",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "ClockAssessmentView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.getIndependenceProof",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_getIndependenceProof",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "IndependenceView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.getMeta",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_getMeta",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "MetaView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.getRecoveryOperation",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_getRecoveryOperation",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "RecoveryOperationView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.getRun",
+        "mode": "panel_read",
+        "subscription_mode": "projection",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_getRun",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "RunView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.pauseRun",
+        "mode": "panel_write",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_pauseRun",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "LifecycleMutationView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.preflightRun",
+        "mode": "panel_read",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_preflightRun",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "PreflightView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.previewRecovery",
+        "mode": "panel_read",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_previewRecovery",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "RecoveryPlanView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.publishDefinition",
+        "mode": "host_confirm",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_publishDefinition",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "PublishedDefinitionView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.resumeRun",
+        "mode": "host_confirm",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_resumeRun",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "RecoveryOperationView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      },
+      {
+        "method": "seamer.updateDraft",
+        "mode": "panel_write",
+        "subscription_mode": "none",
+        "input_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/input.schema.json",
+          "definition": "seamer_updateDraft",
+          "schema_digest": "cbfa10dc31e968876140a9a6f39cd905d6220e3cf2f0a4d7c4674895cd354614"
+        },
+        "result_schema_ref": {
+          "schema_id": "https://leafseamer.invalid/sdk/panel-integration/0.3/result.schema.json",
+          "definition": "DraftDefinitionView",
+          "schema_digest": "8d7b4a4502a3c9aae711bf3a287ce3f8409e4bf1fc763aa89b42ab6512c3f5d3"
+        }
+      }
+    ]
+  }
+}

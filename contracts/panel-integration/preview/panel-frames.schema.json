@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://leafseamer.invalid/sdk/panel-integration/0.3/panel-frames.schema.json",
+  "oneOf": [
+    {
+      "$ref": "https://leafseamer.invalid/sdk/panel-integration/0.3/models.schema.json#/$defs/panel__Channel_WindowFrame"
+    },
+    {
+      "$ref": "https://leafseamer.invalid/sdk/panel-integration/0.3/models.schema.json#/$defs/panel__Channel_PanelFrame"
+    },
+    {
+      "$ref": "https://leafseamer.invalid/sdk/panel-integration/0.3/models.schema.json#/$defs/panel__Channel_HostFrame"
+    }
+  ]
+}

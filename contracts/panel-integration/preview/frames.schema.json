@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://leafseamer.invalid/sdk/panel-integration/0.3/frames.schema.json",
+  "oneOf": [
+    {
+      "$ref": "https://leafseamer.invalid/sdk/panel-integration/0.3/models.schema.json#/$defs/channel__ClientFrame"
+    },
+    {
+      "$ref": "https://leafseamer.invalid/sdk/panel-integration/0.3/models.schema.json#/$defs/channel__ServerFrame"
+    }
+  ]
+}

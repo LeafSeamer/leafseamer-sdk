@@ -1,0 +1,52 @@
+{
+  "format": "panel-integration-sources/1",
+  "approved": false,
+  "runtime_ready": false,
+  "source_commit": "5209d06af1d91dbb41923d28f33943ed3c0158be",
+  "inputs": {
+    "contracts/event-integration/preview/models.schema.json": "f1c7a1a2a2ff4dd0834f05a8eb87033c7bb644e673a7b92d1f830f4e8ac1d6b5",
+    "contracts/event-integration/preview/controller.openapi.json": "794b108b73cbc3ca21579888c01a2784a68efc5693bae8f0ba29df3b97174eed",
+    "contracts/event-integration/preview/seamer.openapi.json": "ebf630c970a64b2a897fbc2f3d975d8db158c9c956bffca19f669d0d05bf5bcf",
+    "contracts/event-integration/preview/selection.json": "efdd3a57be14c408764b3813a04b12ffd3bee57f0fdd31cbce9daac828fd6340",
+    "contracts/event-integration/preview/manifest.json": "f0a83d989c7733ade608487697801a694c5f9149cff67a34ccf1803ec3317f15",
+    "contracts/event-integration/preview/worker-ipc.schema.json": "9e1956794736e0651f6d9400b88b3682ce92a0daa94fdbf9b3fc480a7e41b329",
+    "contracts/event-integration/preview/worker-messages.json": "91e63d7b62005a880bdffc97fbc42799c58a38f817e93f3616b7ac292346e314",
+    "contracts/event-integration/preview/frames.schema.json": "0a426fa0a42e2480dcba6149907d0ae285e4481b71d4b4665ac0f484f541a79f",
+    "contracts/event-integration/preview/registry-map.json": "c117ca46b24a1b68df13e994d5264ebe57d0c2d780740ce5001c02f8b435708f",
+    "contracts/event-integration/preview/routing.json": "d5893e5ed5fa2672caa4674725facf05ddd8eddc2dcfcd1d73eb3f4925d7c79b",
+    "contracts/panel-methods/input.schema.json": "d384906672fdf79a9a8c46eb8ef3e06d0bb9174181993e3ffaa8e13f7e47d76d",
+    "contracts/panel-methods/bindings.json": "3349e2ccd265a6f0785457d27782dbbf77c7a3a31ddd5931f10edca428d08bb8",
+    "contracts/panel-methods/fixtures.py": "da1609cd85f2056328c58ace04e0484b17ae0f1e47d197452035f7fd96de09ac",
+    "contracts/panel-results/result.schema.json": "c694feb6bb0205754b2aa1bf229d875e3628a6e7d117846b2aaf0e578d35d3d8",
+    "contracts/panel-results/bindings.json": "f146637240cf6ca04e7c6f68f4abc8553c78e01ceb3c5096e2f292f64fef466c",
+    "contracts/panel-results/fixtures.py": "a7fa8c924e66db5a4fc62302d92a2dc85c70cff82ee6f326ce727929ad0eb7b7",
+    "contracts/panel-results/source/legacy-cases.json": "70f8d5a6bfcb21367bc79216bdf19608d65332e2efad475572dff4bd344db72a",
+    "contracts/authorization/bindings.json": "9a9661272dd344dc97ffedc1022ac322f4abf7f6dd393a80f723f1807f44d3d4"
+  },
+  "copied_sources": {
+    "contracts/panel-integration/source/channel-v02.schema.json": {
+      "repository": "https://github.com/LeafSeamer/leafseamer-suite",
+      "commit": "e10b9565ac81a3a4211157efbccd2c9b383d0292",
+      "path": "docs/contracts/c09-panel/channel-v02.schema.json",
+      "sha256": "f6e71178af8ffc8a8d784aab1416a0a4e30fedbc589e2032171f9a9581b64a1f"
+    },
+    "contracts/panel-integration/source/bundle.schema.json": {
+      "repository": "https://github.com/LeafSeamer/leafseamer-suite",
+      "commit": "e10b9565ac81a3a4211157efbccd2c9b383d0292",
+      "path": "docs/contracts/c09-panel/bundle.schema.json",
+      "sha256": "b6fd30c08babcd3adddb48d347253541c9607b2db36008cb15f448524b3bef3d"
+    },
+    "contracts/panel-integration/source/method-registry-v02.json": {
+      "repository": "https://github.com/LeafSeamer/leafseamer-suite",
+      "commit": "e10b9565ac81a3a4211157efbccd2c9b383d0292",
+      "path": "docs/contracts/c09-panel/method-registry-v02.json",
+      "sha256": "94dd15b4b265f8d212253751201dda37edd75d5801d2bd9fc2c18a702ac28733"
+    },
+    "contracts/panel-integration/source/channel-v02-cases.json": {
+      "repository": "https://github.com/LeafSeamer/leafseamer-suite",
+      "commit": "e10b9565ac81a3a4211157efbccd2c9b383d0292",
+      "path": "docs/contracts/c09-panel/channel-v02-cases.json",
+      "sha256": "e6e3b604dc0669c6d25fa9af78d8580da7ddcba44f4f885b464bdd8eb03b1e9a"
+    }
+  }
+}
