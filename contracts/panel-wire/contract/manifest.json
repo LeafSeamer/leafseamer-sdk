@@ -1,0 +1,24 @@
+{
+  "format": "sdk-contract-artifacts/1",
+  "contract_id": "leafseamer.api.v1.panel4",
+  "approved": false,
+  "runtime_ready": false,
+  "advertisable": false,
+  "artifact_digest_algorithm": "sha256-bytes",
+  "selection_digest_algorithm": "sha256-jcs-manifest",
+  "artifacts": {
+    "binding-map.json": "09a5dc3415cc41dccfd90d13209649d106af7bb08c020793d3dd1c4f06aeb00d",
+    "controller.openapi.json": "062814a2bf72a1f30c4dbf88f06f77e33bfb54ad8d00abcb35ed786ec6984f90",
+    "frames.schema.json": "5cad741b8edaf1ace42eb1b2ca5d80991bada23e9236679fc900f066bed2042a",
+    "input.schema.json": "db9fc32cf2e03005b1b637561da4d5ae68563bac9b491afc23f0ac64ac86a58b",
+    "method-registry.json": "facdfdd74c3ce1403ff0e4d1c1c745fe0050c22b984f22c51522a1e04ce45561",
+    "models.schema.json": "6976abefa2ed3d3e5ae8893fc23519969b07daac931a146c4c7fafd4aa67e773",
+    "panel-frames.schema.json": "516c35c46687852cd465075783cc15f32a67144810086c1902eae4de19f98e70",
+    "registry-map.json": "c117ca46b24a1b68df13e994d5264ebe57d0c2d780740ce5001c02f8b435708f",
+    "result.schema.json": "8a9364d583db73a3967744f5e030bbc002bccf5e0d15279691ca56d8c3c9c451",
+    "seamer.openapi.json": "0797854d04a031ef34556a4faea6de1809591466f53c76614ea419348ab5a75d",
+    "worker-ipc.schema.json": "e221b20b5b98d4199194f1319493fa1147b1922ef0b6f0e4c044664987548c31",
+    "worker-messages.json": "7eb34a19d1d374c4ffe2ca90fe643d00afe5848a1ef36fbf9f985bbe6b20c575",
+    "PROTOCOL.md": "25bcd4f13ef0e10058a3295d811222f2994dbdff68bd12a351f93fd57807d42a"
+  }
+}

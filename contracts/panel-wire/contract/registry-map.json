@@ -1,0 +1,102 @@
+{
+  "format": "scope-registry-mapping/1",
+  "approved": false,
+  "runtime_ready": false,
+  "source_graph_id": "https://leafseamer.invalid/sdk/event-channel/0.1/models.schema.json",
+  "source_graph_digest": "9203b37aa98dace7cd57aa43b9f6e32dc5c2aaa81f9b5bd90ee139d27cb41a1a",
+  "collection_models": {
+    "devices": "snapshot__DeviceSnapshotView",
+    "catalogs": "snapshot__CatalogSnapshotView",
+    "commands": "snapshot__CommandSnapshotView",
+    "controls": "snapshot__ControlSnapshotView",
+    "observations": "snapshot__ObservationSnapshotView",
+    "sources": "snapshot__SourceSnapshotView",
+    "definitions": "snapshot__DefinitionSnapshotView",
+    "runs": "snapshot__RunSnapshotView",
+    "business_states": "snapshot__BusinessStateSnapshotView",
+    "executions": "snapshot__ExecutionSnapshotView",
+    "schedule_activations": "snapshot__ScheduleActivationSnapshotView",
+    "occurrences": "snapshot__OccurrenceSnapshotView"
+  },
+  "collection_permissions": {
+    "devices": {
+      "authorities": [
+        "controller"
+      ],
+      "permission": "device.read"
+    },
+    "catalogs": {
+      "authorities": [
+        "controller"
+      ],
+      "permission": "device.read"
+    },
+    "commands": {
+      "authorities": [
+        "controller"
+      ],
+      "permission": "command.read"
+    },
+    "controls": {
+      "authorities": [
+        "controller"
+      ],
+      "permission": "control.read"
+    },
+    "observations": {
+      "authorities": [
+        "controller"
+      ],
+      "permission": "device.read"
+    },
+    "sources": {
+      "authorities": [
+        "controller",
+        "seamer"
+      ],
+      "permission": "status.read"
+    },
+    "definitions": {
+      "authorities": [
+        "seamer"
+      ],
+      "permission": "definition.read"
+    },
+    "runs": {
+      "authorities": [
+        "seamer"
+      ],
+      "permission": "run.read"
+    },
+    "business_states": {
+      "authorities": [
+        "seamer"
+      ],
+      "permission": "run.read"
+    },
+    "executions": {
+      "authorities": [
+        "seamer"
+      ],
+      "permission": "run.read"
+    },
+    "schedule_activations": {
+      "authorities": [
+        "seamer"
+      ],
+      "permission": "run.read"
+    },
+    "occurrences": {
+      "authorities": [
+        "seamer"
+      ],
+      "permission": "run.read"
+    }
+  },
+  "mandatory_unresolved": [
+    "commands",
+    "executions",
+    "occurrences"
+  ],
+  "silent_truncation_allowed": false
+}

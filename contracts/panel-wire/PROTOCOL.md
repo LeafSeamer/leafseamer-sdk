@@ -1,0 +1,11 @@
+# panel4完整选择与静态消费者
+
+本候选是`leafseamer.api.v1.panel4`，保持`approved=false`、`runtime_ready=false`及`advertisable=false`。旧panel3及events2原件保持不变，不能使用旧选择身份调用新消费者。
+
+panel3的worker消息表schema_ref仍指向events2模型URI，旧归并检查未将该字段视为引用，往返比较因此没有发现缺口。本候选通过固定panel-integration生成器重新生成完整图，显式纳入消息表schema_ref的URI迁移，并更换完整选择ID及模型文档URI。worker消息正文、IPC版本与方向保持原语义；只修正其模型资源定位。跨制品引用闭包和52个消息的实际解码均须通过。
+
+输入／结果文档、Registry与其内容摘要、面板激活与Bundle引用、完整HTTP选择及相关协议版本常量按新选择重新生成。面板通道仍为0.3，订阅仍为0.2，worker IPC仍为0.14候选。发布清单按完整字节绑定，selection摘要为清单的JCS摘要。SchemaRef摘要是整份输入或结果文档的JCS摘要，不能混作模型图字节摘要。
+
+静态消费者支持HTTP正文、双向WS及首帧、worker消息和19类面板帧，构建期允许Schema编译，运行制品禁止动态生成代码。面板group是window、panel、host三个Schema联合的类别；它不认证真实窗口、消息来源、port或握手顺序。方法／载荷及完整SchemaRef必须匹配；动态SchemaRef/value的内部值仍须经过独立批准及字段授权校验。
+
+格式通过不产生安装、会话、来源、用户或设备权限；不验证真实投影、完整业务语义、最终输出Gate或设备效果。HTTP头与参数适配器、类型客户端及浏览器验收需要按本完整选择重新交付，不能沿用events2的运行结论。候选默认预算不是生产profile，不提供JSON.parse或静态验证阶段的硬抢占。全系统设计门槛及候选审阅继续保持开放。

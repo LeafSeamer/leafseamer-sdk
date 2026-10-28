@@ -1,0 +1,3140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://leafseamer.invalid/sdk/panel-wire/0.1/result.schema.json",
+  "not": {},
+  "$defs": {
+    "CancelView": {
+      "type": "object",
+      "properties": {
+        "operation_id": {
+          "$ref": "#/$defs/D__command__V__S0_Id"
+        },
+        "command_id": {
+          "$ref": "#/$defs/D__command__V__S0_Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/D__command__V__S0_PositiveCounter"
+        },
+        "state": {
+          "$ref": "#/$defs/D__command__V__S0_CancellationState"
+        },
+        "future_writes": {
+          "enum": [
+            "pending",
+            "closed",
+            "indeterminate"
+          ]
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "operation_id",
+        "command_id",
+        "revision",
+        "state",
+        "future_writes",
+        "reason_code"
+      ],
+      "additionalProperties": false
+    },
+    "D__command__V__S0_Id": {
+      "$ref": "#/$defs/D__command__V__S1_Id"
+    },
+    "D__command__V__S1_Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256,
+      "pattern": "^[A-Za-z0-9._:/-]+$(?![\\s\\S])"
+    },
+    "D__command__V__S0_PositiveCounter": {
+      "$ref": "#/$defs/D__command__V__S1_PositiveCounter"
+    },
+    "D__command__V__S1_PositiveCounter": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]{0,19}$(?![\\s\\S])"
+    },
+    "D__command__V__S0_CancellationState": {
+      "enum": [
+        "requested",
+        "confirmed",
+        "unsupported",
+        "failed",
+        "indeterminate",
+        "too_late"
+      ]
+    },
+    "D__panel__Result_Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9._-]+(?![\\s\\S])"
+    },
+    "CapabilityView": {
+      "type": "object",
+      "properties": {
+        "device_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "catalog_revision": {
+          "$ref": "#/$defs/D__baseline__Revision"
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_ActionSummary"
+          },
+          "maxItems": 256
+        },
+        "triggers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_TriggerSummary"
+          },
+          "maxItems": 256
+        },
+        "state_schema_ref": {
+          "$ref": "#/$defs/D__panel__Result_SchemaRef"
+        }
+      },
+      "required": [
+        "device_id",
+        "catalog_revision",
+        "actions",
+        "triggers",
+        "state_schema_ref"
+      ],
+      "additionalProperties": false
+    },
+    "D__baseline__Revision": {
+      "type": "string",
+      "maxLength": 20,
+      "pattern": "^(0|[1-9][0-9]*)$"
+    },
+    "D__panel__Result_ActionSummary": {
+      "type": "object",
+      "properties": {
+        "action_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "capability_version": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "parameters_schema_ref": {
+          "$ref": "#/$defs/D__panel__Result_SchemaRef"
+        },
+        "result_schema_ref": {
+          "$ref": "#/$defs/D__panel__Result_SchemaRef"
+        },
+        "supported_completion": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "sent",
+              "acknowledged",
+              "effect_verified"
+            ]
+          },
+          "maxItems": 3,
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "default_completion": {
+          "enum": [
+            "sent",
+            "acknowledged",
+            "effect_verified"
+          ]
+        },
+        "cancel_mode": {
+          "enum": [
+            "before_dispatch_only",
+            "cooperative"
+          ]
+        },
+        "retry_mode": {
+          "enum": [
+            "never",
+            "conditional"
+          ]
+        },
+        "evidence_timeout_ms": {
+          "$ref": "#/$defs/D__panel__Result_Duration"
+        }
+      },
+      "required": [
+        "action_id",
+        "capability_version",
+        "parameters_schema_ref",
+        "result_schema_ref",
+        "supported_completion",
+        "default_completion",
+        "cancel_mode",
+        "retry_mode",
+        "evidence_timeout_ms"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_SchemaRef": {
+      "type": "object",
+      "properties": {
+        "schema_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "definition": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "schema_digest": {
+          "$ref": "#/$defs/D__panel__Result_Digest"
+        }
+      },
+      "required": [
+        "schema_id",
+        "definition",
+        "schema_digest"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_Digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}(?![\\s\\S])"
+    },
+    "D__panel__Result_Duration": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 86400000
+    },
+    "D__panel__Result_TriggerSummary": {
+      "type": "object",
+      "properties": {
+        "trigger_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "capability_version": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "payload_schema_ref": {
+          "$ref": "#/$defs/D__panel__Result_SchemaRef"
+        },
+        "delivery_semantics": {
+          "enum": [
+            "discrete",
+            "sampled"
+          ]
+        },
+        "time_requirement": {
+          "enum": [
+            "relative_age",
+            "trusted_utc"
+          ]
+        },
+        "max_age_ms": {
+          "$ref": "#/$defs/D__panel__Result_Duration"
+        }
+      },
+      "required": [
+        "trigger_id",
+        "capability_version",
+        "payload_schema_ref",
+        "delivery_semantics",
+        "time_requirement",
+        "max_age_ms"
+      ],
+      "additionalProperties": false
+    },
+    "CapacityView": {
+      "type": "object",
+      "properties": {
+        "pressure": {
+          "enum": [
+            "normal",
+            "limited",
+            "protected"
+          ]
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_Id"
+          },
+          "maxItems": 64,
+          "uniqueItems": true
+        },
+        "panel_budget": {
+          "$ref": "#/$defs/D__panel__Result_PanelBudget"
+        },
+        "current_panel_usage": {
+          "$ref": "#/$defs/D__panel__Result_PanelUsage"
+        }
+      },
+      "required": [
+        "pressure",
+        "reason_codes",
+        "panel_budget",
+        "current_panel_usage"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_PanelBudget": {
+      "type": "object",
+      "properties": {
+        "max_pending_requests": {
+          "$ref": "#/$defs/D__panel__Result_SafeInt"
+        },
+        "max_unacked_frames": {
+          "$ref": "#/$defs/D__panel__Result_SafeInt"
+        },
+        "max_unacked_bytes": {
+          "$ref": "#/$defs/D__panel__Result_SafeInt"
+        }
+      },
+      "required": [
+        "max_pending_requests",
+        "max_unacked_frames",
+        "max_unacked_bytes"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_SafeInt": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "D__panel__Result_PanelUsage": {
+      "type": "object",
+      "properties": {
+        "pending_requests": {
+          "$ref": "#/$defs/D__panel__Result_SafeInt"
+        },
+        "unacked_frames": {
+          "$ref": "#/$defs/D__panel__Result_SafeInt"
+        },
+        "unacked_bytes": {
+          "$ref": "#/$defs/D__panel__Result_SafeInt"
+        }
+      },
+      "required": [
+        "pending_requests",
+        "unacked_frames",
+        "unacked_bytes"
+      ],
+      "additionalProperties": false
+    },
+    "ClockAssessmentView": {
+      "type": "object",
+      "properties": {
+        "model_id": {
+          "const": "reference-bound/1"
+        },
+        "model_revision": {
+          "const": "1"
+        },
+        "status": {
+          "enum": [
+            "conditional",
+            "unavailable"
+          ]
+        },
+        "reference_utc": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__time_public__S12__Interval"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "estimated_utc_ns": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__time_public__S12__Signed"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "error_radius_ns": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__time_public__S12__UInt"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 12,
+          "items": {
+            "enum": [
+              "clock_unavailable",
+              "source_unavailable",
+              "expired",
+              "unqualified",
+              "storage_unavailable"
+            ]
+          }
+        },
+        "grants_execution": {
+          "const": false
+        }
+      },
+      "required": [
+        "model_id",
+        "model_revision",
+        "status",
+        "reference_utc",
+        "estimated_utc_ns",
+        "error_radius_ns",
+        "reasons",
+        "grants_execution"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "conditional"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "reference_utc": {
+                "$ref": "#/$defs/D__time_public__S12__Interval"
+              },
+              "estimated_utc_ns": {
+                "$ref": "#/$defs/D__time_public__S12__Signed"
+              },
+              "error_radius_ns": {
+                "$ref": "#/$defs/D__time_public__S12__UInt"
+              },
+              "reasons": {
+                "maxItems": 0
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "reference_utc": {
+                "type": "null"
+              },
+              "estimated_utc_ns": {
+                "type": "null"
+              },
+              "error_radius_ns": {
+                "type": "null"
+              },
+              "reasons": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "D__time_public__S12__Interval": {
+      "$ref": "#/$defs/D__time_public__S11__Interval"
+    },
+    "D__time_public__S11__Interval": {
+      "type": "object",
+      "properties": {
+        "lower_ns": {
+          "$ref": "#/$defs/D__time_public__S11__Signed"
+        },
+        "upper_ns": {
+          "$ref": "#/$defs/D__time_public__S11__Signed"
+        }
+      },
+      "required": [
+        "lower_ns",
+        "upper_ns"
+      ],
+      "additionalProperties": false
+    },
+    "D__time_public__S11__Signed": {
+      "type": "string",
+      "pattern": "^(0|-?[1-9][0-9]{0,29})$(?![\\s\\S])"
+    },
+    "D__time_public__S12__Signed": {
+      "$ref": "#/$defs/D__time_public__S11__Signed"
+    },
+    "D__time_public__S12__UInt": {
+      "$ref": "#/$defs/D__time_public__S11__UInt"
+    },
+    "D__time_public__S11__UInt": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,19})$(?![\\s\\S])"
+    },
+    "ClockView": {
+      "type": "object",
+      "properties": {
+        "model_id": {
+          "const": "reference-bound/1"
+        },
+        "model_revision": {
+          "const": "1"
+        },
+        "status": {
+          "enum": [
+            "conditional",
+            "unavailable"
+          ]
+        },
+        "reference_utc": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__time_public__S12__Interval"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "estimated_utc_ns": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__time_public__S12__Signed"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "error_radius_ns": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__time_public__S12__UInt"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 12,
+          "items": {
+            "enum": [
+              "clock_unavailable",
+              "source_unavailable",
+              "expired",
+              "unqualified",
+              "storage_unavailable"
+            ]
+          }
+        },
+        "grants_execution": {
+          "const": false
+        }
+      },
+      "required": [
+        "model_id",
+        "model_revision",
+        "status",
+        "reference_utc",
+        "estimated_utc_ns",
+        "error_radius_ns",
+        "reasons",
+        "grants_execution"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "conditional"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "reference_utc": {
+                "$ref": "#/$defs/D__time_public__S12__Interval"
+              },
+              "estimated_utc_ns": {
+                "$ref": "#/$defs/D__time_public__S12__Signed"
+              },
+              "error_radius_ns": {
+                "$ref": "#/$defs/D__time_public__S12__UInt"
+              },
+              "reasons": {
+                "maxItems": 0
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "reference_utc": {
+                "type": "null"
+              },
+              "estimated_utc_ns": {
+                "type": "null"
+              },
+              "error_radius_ns": {
+                "type": "null"
+              },
+              "reasons": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "CommandView": {
+      "type": "object",
+      "properties": {
+        "command_id": {
+          "$ref": "#/$defs/D__command__V__S0_Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/D__command__V__S0_PositiveCounter"
+        },
+        "target": {
+          "type": "object",
+          "properties": {
+            "device_id": {
+              "$ref": "#/$defs/D__command__V__S0_Id"
+            },
+            "action_id": {
+              "$ref": "#/$defs/D__command__V__S0_Id"
+            },
+            "capability_version": {
+              "$ref": "#/$defs/D__command__V__S0_Version"
+            }
+          },
+          "required": [
+            "device_id",
+            "action_id",
+            "capability_version"
+          ],
+          "additionalProperties": false
+        },
+        "origin": {
+          "enum": [
+            "manual",
+            "automation"
+          ]
+        },
+        "accepted_at": {
+          "$ref": "#/$defs/D__command__V__S0_Timestamp"
+        },
+        "phase": {
+          "enum": [
+            "queued",
+            "dispatching",
+            "awaiting_evidence",
+            "finished"
+          ]
+        },
+        "outcome": {
+          "enum": [
+            "pending",
+            "succeeded",
+            "failed",
+            "unknown",
+            "cancelled",
+            "expired",
+            "blocked"
+          ]
+        },
+        "effect_status": {
+          "$ref": "#/$defs/D__command__V__S1_Effect"
+        },
+        "resource_status": {
+          "enum": [
+            "held",
+            "clear",
+            "unresolved"
+          ]
+        },
+        "required_completion": {
+          "$ref": "#/$defs/D__command__V__S0_CompletionLevel"
+        },
+        "achieved_completion": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__command__V__S0_CompletionLevel"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cancellation_state": {
+          "enum": [
+            "none",
+            "requested",
+            "confirmed",
+            "unsupported",
+            "failed"
+          ]
+        },
+        "automation_continuation": {
+          "enum": [
+            "eligible",
+            "paused_latched"
+          ]
+        },
+        "reason_code": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "resolution_summary": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_ResolutionSummary"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state_ref": {
+          "$ref": "#/$defs/D__command__V__S0_Ref"
+        }
+      },
+      "required": [
+        "command_id",
+        "revision",
+        "target",
+        "origin",
+        "accepted_at",
+        "phase",
+        "outcome",
+        "effect_status",
+        "resource_status",
+        "required_completion",
+        "achieved_completion",
+        "cancellation_state",
+        "automation_continuation",
+        "reason_code",
+        "resolution_summary",
+        "state_ref"
+      ],
+      "additionalProperties": false
+    },
+    "D__command__V__S0_Version": {
+      "$ref": "#/$defs/D__command__V__S5_Version"
+    },
+    "D__command__V__S5_Version": {
+      "type": "string",
+      "maxLength": 128,
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(-[0-9A-Za-z.-]+)?$"
+    },
+    "D__command__V__S0_Timestamp": {
+      "$ref": "#/$defs/D__command__V__S5_Timestamp"
+    },
+    "D__command__V__S5_Timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+    },
+    "D__command__V__S1_Effect": {
+      "enum": [
+        "not_sent",
+        "possible",
+        "acknowledged",
+        "verified",
+        "partial"
+      ]
+    },
+    "D__command__V__S0_CompletionLevel": {
+      "$ref": "#/$defs/D__command__V__S1_CompletionLevel"
+    },
+    "D__command__V__S1_CompletionLevel": {
+      "enum": [
+        "sent",
+        "acknowledged",
+        "effect_verified"
+      ]
+    },
+    "D__panel__Result_ResolutionSummary": {
+      "type": "object",
+      "properties": {
+        "revision": {
+          "$ref": "#/$defs/D__panel__Result_Counter"
+        },
+        "resolved_outcome": {
+          "enum": [
+            "succeeded",
+            "failed",
+            "cancelled",
+            "not_sent"
+          ]
+        },
+        "resolved_at": {
+          "$ref": "#/$defs/D__panel__Result_Timestamp"
+        }
+      },
+      "required": [
+        "revision",
+        "resolved_outcome",
+        "resolved_at"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_Counter": {
+      "type": "string",
+      "maxLength": 20,
+      "pattern": "^(0|[1-9][0-9]*)(?![\\s\\S])"
+    },
+    "D__panel__Result_Timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z(?![\\s\\S])"
+    },
+    "D__command__V__S0_Ref": {
+      "$ref": "#/$defs/D__command__V__S1_Ref"
+    },
+    "D__command__V__S1_Ref": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/D__command__V__S1_Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/D__command__V__S1_PositiveCounter"
+        },
+        "digest": {
+          "$ref": "#/$defs/D__command__V__S1_Digest"
+        }
+      },
+      "required": [
+        "id",
+        "revision",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "D__command__V__S1_Digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$(?![\\s\\S])"
+    },
+    "ControlOperationView": {
+      "type": "object",
+      "properties": {
+        "operation_id": {
+          "$ref": "#/$defs/D__control__Id"
+        },
+        "device_id": {
+          "$ref": "#/$defs/D__control__Id"
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "effective",
+            "rejected",
+            "indeterminate"
+          ]
+        },
+        "target": {
+          "$ref": "#/$defs/D__panel__Result_ControlTarget"
+        },
+        "failure_code": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effective_version": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_Counter"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ready": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "operation_id",
+        "device_id",
+        "state",
+        "target",
+        "failure_code",
+        "effective_version",
+        "ready"
+      ],
+      "additionalProperties": false
+    },
+    "D__control__Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+    },
+    "D__panel__Result_ControlTarget": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "$ref": "#/$defs/D__panel__Result_Counter"
+        },
+        "mode": {
+          "enum": [
+            "manual",
+            "automatic"
+          ]
+        },
+        "holder": {
+          "$ref": "#/$defs/D__panel__Result_Holder"
+        }
+      },
+      "required": [
+        "version",
+        "mode",
+        "holder"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_Holder": {
+      "type": "object",
+      "properties": {
+        "relation": {
+          "enum": [
+            "self",
+            "other",
+            "none"
+          ]
+        },
+        "display_label": {
+          "$ref": "#/$defs/D__panel__Result_Text"
+        }
+      },
+      "required": [
+        "relation",
+        "display_label"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_Text": {
+      "type": "string",
+      "maxLength": 1024
+    },
+    "ControlView": {
+      "type": "object",
+      "properties": {
+        "device_id": {
+          "$ref": "#/$defs/D__control__Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/D__control__U20"
+        },
+        "control_epoch": {
+          "$ref": "#/$defs/D__control__Id"
+        },
+        "effective_version": {
+          "$ref": "#/$defs/D__control__U20"
+        },
+        "mode": {
+          "enum": [
+            "manual",
+            "automatic"
+          ]
+        },
+        "holder": {
+          "$ref": "#/$defs/D__panel__Result_Holder"
+        },
+        "gate_state": {
+          "enum": [
+            "ready",
+            "fencing",
+            "protected"
+          ]
+        },
+        "pending_change": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_PendingControl"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "in_flight": {
+          "$ref": "#/$defs/D__panel__Result_CommandSet"
+        },
+        "unresolved": {
+          "$ref": "#/$defs/D__panel__Result_CommandSet"
+        }
+      },
+      "required": [
+        "device_id",
+        "revision",
+        "control_epoch",
+        "effective_version",
+        "mode",
+        "holder",
+        "gate_state",
+        "pending_change",
+        "in_flight",
+        "unresolved"
+      ],
+      "additionalProperties": false
+    },
+    "D__control__U20": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,19})$(?![\\s\\S])"
+    },
+    "D__panel__Result_PendingControl": {
+      "type": "object",
+      "properties": {
+        "operation_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "target_version": {
+          "$ref": "#/$defs/D__panel__Result_Counter"
+        },
+        "target_mode": {
+          "enum": [
+            "manual",
+            "automatic"
+          ]
+        },
+        "holder": {
+          "$ref": "#/$defs/D__panel__Result_Holder"
+        },
+        "reason_code": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        }
+      },
+      "required": [
+        "operation_id",
+        "target_version",
+        "target_mode",
+        "holder",
+        "reason_code"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_CommandSet": {
+      "type": "object",
+      "properties": {
+        "visible_command_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_Id"
+          },
+          "maxItems": 256,
+          "uniqueItems": true
+        },
+        "has_hidden": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "visible_command_ids",
+        "has_hidden"
+      ],
+      "additionalProperties": false
+    },
+    "DefinitionView": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/DraftDefinitionView"
+        },
+        {
+          "$ref": "#/$defs/PublishedDefinitionView"
+        }
+      ]
+    },
+    "DraftDefinitionView": {
+      "type": "object",
+      "properties": {
+        "definition_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "content_digest": {
+          "$ref": "#/$defs/D__lifecycle__Digest"
+        },
+        "selection_digest": {
+          "$ref": "#/$defs/D__lifecycle__Digest"
+        },
+        "metadata_revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "kind": {
+          "const": "draft"
+        },
+        "content": {
+          "$ref": "#/$defs/D__lifecycle__DraftContent"
+        },
+        "metadata": {
+          "$ref": "#/$defs/D__lifecycle__DefinitionMetadata"
+        },
+        "proof_summaries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_ProofSummary"
+          },
+          "maxItems": 256
+        }
+      },
+      "required": [
+        "definition_id",
+        "revision",
+        "content_digest",
+        "selection_digest",
+        "metadata_revision",
+        "kind",
+        "content",
+        "metadata",
+        "proof_summaries"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__Id": {
+      "$ref": "#/$defs/D__lifecycle__Program_Id"
+    },
+    "D__lifecycle__Program_Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+    },
+    "D__lifecycle__Revision": {
+      "$ref": "#/$defs/D__lifecycle__Program_Revision"
+    },
+    "D__lifecycle__Program_Revision": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,19})$(?![\\s\\S])"
+    },
+    "D__lifecycle__Digest": {
+      "$ref": "#/$defs/D__lifecycle__Program_Digest"
+    },
+    "D__lifecycle__Program_Digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$(?![\\s\\S])"
+    },
+    "D__lifecycle__DraftContent": {
+      "type": "object",
+      "properties": {
+        "program": {
+          "$ref": "#/$defs/D__lifecycle__Program_Program"
+        },
+        "selections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__lifecycle__BindingSelection"
+          },
+          "minItems": 0,
+          "maxItems": 4096
+        },
+        "policy_ref": {
+          "$ref": "#/$defs/D__lifecycle__PolicyRef"
+        }
+      },
+      "required": [
+        "program",
+        "selections",
+        "policy_ref"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__Program_Program": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/D__lifecycle__Program_Rule"
+        },
+        {
+          "$ref": "#/$defs/D__lifecycle__Program_StateMachine"
+        }
+      ]
+    },
+    "D__lifecycle__Program_Rule": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "rule"
+        },
+        "trigger_binding_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+        },
+        "condition": {
+          "$ref": "#/$defs/D__lifecycle__Program_Condition"
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__lifecycle__Program_Group"
+          },
+          "maxItems": 64,
+          "minItems": 1,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "kind",
+        "trigger_binding_id",
+        "condition",
+        "groups"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__Program_Condition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "literal"
+            },
+            "value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "compare"
+            },
+            "operator": {
+              "enum": [
+                "eq",
+                "ne",
+                "lt",
+                "lte",
+                "gt",
+                "gte"
+              ]
+            },
+            "value_type": {
+              "$ref": "#/$defs/D__lifecycle__Program_TypeSpec"
+            },
+            "left": {
+              "$ref": "#/$defs/D__lifecycle__Program_Value"
+            },
+            "right": {
+              "$ref": "#/$defs/D__lifecycle__Program_Value"
+            }
+          },
+          "required": [
+            "kind",
+            "operator",
+            "value_type",
+            "left",
+            "right"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "all",
+                "any"
+              ]
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/D__lifecycle__Program_Condition"
+              },
+              "maxItems": 256,
+              "minItems": 1,
+              "uniqueItems": false
+            }
+          },
+          "required": [
+            "kind",
+            "items"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "not"
+            },
+            "item": {
+              "$ref": "#/$defs/D__lifecycle__Program_Condition"
+            }
+          },
+          "required": [
+            "kind",
+            "item"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "exists",
+                "is_null"
+              ]
+            },
+            "value": {
+              "$ref": "#/$defs/D__lifecycle__Program_Reference"
+            }
+          },
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "D__lifecycle__Program_TypeSpec": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "boolean",
+            "null",
+            "string",
+            "binary64",
+            "integer_string",
+            "json"
+          ]
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "unit"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__Program_Value": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/D__lifecycle__Program_Literal"
+        },
+        {
+          "$ref": "#/$defs/D__lifecycle__Program_Reference"
+        }
+      ]
+    },
+    "D__lifecycle__Program_Literal": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "literal"
+        },
+        "value": {}
+      },
+      "required": [
+        "kind",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__Program_Reference": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "ref"
+        },
+        "source": {
+          "enum": [
+            "event",
+            "observation",
+            "machine",
+            "step_result"
+          ]
+        },
+        "binding_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+        },
+        "pointer": {
+          "type": "string",
+          "maxLength": 1024,
+          "pattern": "^(?:/(?:[^~/]|~[01])*)*$(?![\\s\\S])"
+        }
+      },
+      "required": [
+        "kind",
+        "source",
+        "binding_id",
+        "pointer"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__Program_Group": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "sequence",
+            "parallel"
+          ]
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__lifecycle__Program_Step"
+          },
+          "maxItems": 64,
+          "minItems": 1,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "mode",
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__Program_Step": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/D__lifecycle__Program_ActionStep"
+        },
+        {
+          "$ref": "#/$defs/D__lifecycle__Program_DelayStep"
+        }
+      ]
+    },
+    "D__lifecycle__Program_ActionStep": {
+      "type": "object",
+      "properties": {
+        "step_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+        },
+        "depends_on": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+          },
+          "maxItems": 4096,
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "failure_policy": {
+          "enum": [
+            "stop",
+            "continue_if_independent"
+          ]
+        },
+        "kind": {
+          "const": "action"
+        },
+        "action_binding_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+        },
+        "parameters": {
+          "type": "object"
+        },
+        "parameter_bindings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__lifecycle__Program_ParameterBinding"
+          },
+          "maxItems": 256,
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "guard": {
+          "$ref": "#/$defs/D__lifecycle__Program_Condition"
+        }
+      },
+      "required": [
+        "step_id",
+        "depends_on",
+        "required",
+        "failure_policy",
+        "kind",
+        "action_binding_id",
+        "parameters",
+        "parameter_bindings",
+        "guard"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__Program_ParameterBinding": {
+      "type": "object",
+      "properties": {
+        "target_pointer": {
+          "type": "string",
+          "maxLength": 1024,
+          "pattern": "^(?:/(?:[^~/]|~[01])*)*$(?![\\s\\S])"
+        },
+        "value": {
+          "$ref": "#/$defs/D__lifecycle__Program_Value"
+        }
+      },
+      "required": [
+        "target_pointer",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__Program_DelayStep": {
+      "type": "object",
+      "properties": {
+        "step_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+        },
+        "depends_on": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+          },
+          "maxItems": 4096,
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "required": {
+          "const": true
+        },
+        "failure_policy": {
+          "const": "stop"
+        },
+        "kind": {
+          "const": "delay"
+        },
+        "delay_ms": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 86400000
+        },
+        "max_lateness_ms": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 60000
+        }
+      },
+      "required": [
+        "step_id",
+        "depends_on",
+        "required",
+        "failure_policy",
+        "kind",
+        "delay_ms",
+        "max_lateness_ms"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__Program_StateMachine": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "state_machine"
+        },
+        "states": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+          },
+          "maxItems": 256,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "initial_state": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+        },
+        "transitions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__lifecycle__Program_Transition"
+          },
+          "maxItems": 256,
+          "minItems": 1,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "kind",
+        "states",
+        "initial_state",
+        "transitions"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__Program_Transition": {
+      "type": "object",
+      "properties": {
+        "transition_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+        },
+        "from_state": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+        },
+        "to_state": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+        },
+        "priority": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647
+        },
+        "trigger_binding_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+        },
+        "condition": {
+          "$ref": "#/$defs/D__lifecycle__Program_Condition"
+        },
+        "exit": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__lifecycle__Program_Step"
+          },
+          "maxItems": 64,
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "transition": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__lifecycle__Program_Step"
+          },
+          "maxItems": 64,
+          "minItems": 0,
+          "uniqueItems": false
+        },
+        "enter": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__lifecycle__Program_Step"
+          },
+          "maxItems": 64,
+          "minItems": 0,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "transition_id",
+        "from_state",
+        "to_state",
+        "priority",
+        "trigger_binding_id",
+        "condition",
+        "exit",
+        "transition",
+        "enter"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__BindingSelection": {
+      "type": "object",
+      "properties": {
+        "binding_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "kind": {
+          "enum": [
+            "input",
+            "action"
+          ]
+        },
+        "content_ref": {
+          "$ref": "#/$defs/D__lifecycle__Program_ContentRef"
+        }
+      },
+      "required": [
+        "binding_id",
+        "kind",
+        "content_ref"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__Program_ContentRef": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]{0,19})$(?![\\s\\S])"
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$(?![\\s\\S])"
+        }
+      },
+      "required": [
+        "id",
+        "revision",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__PolicyRef": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "policy"
+        },
+        "scope": {
+          "$ref": "#/$defs/D__lifecycle__Scope"
+        },
+        "object_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "digest": {
+          "$ref": "#/$defs/D__lifecycle__Digest"
+        }
+      },
+      "required": [
+        "kind",
+        "scope",
+        "object_id",
+        "revision",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__Scope": {
+      "type": "object",
+      "properties": {
+        "authority_service_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "database_instance_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        }
+      },
+      "required": [
+        "authority_service_id",
+        "database_instance_id"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__DefinitionMetadata": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 4096
+        },
+        "layout": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "layout"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_ProofSummary": {
+      "type": "object",
+      "properties": {
+        "proof_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "failed_step_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "successor_step_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_Id"
+          },
+          "maxItems": 256,
+          "uniqueItems": true
+        },
+        "verdict": {
+          "enum": [
+            "independent",
+            "dependent",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "proof_id",
+        "failed_step_id",
+        "successor_step_ids",
+        "verdict"
+      ],
+      "additionalProperties": false
+    },
+    "PublishedDefinitionView": {
+      "type": "object",
+      "properties": {
+        "definition_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "definition_version": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "source_draft_revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "artifact_ref": {
+          "$ref": "#/$defs/D__lifecycle__ArtifactRef"
+        },
+        "program_digest": {
+          "$ref": "#/$defs/D__lifecycle__Digest"
+        },
+        "bindings_digest": {
+          "$ref": "#/$defs/D__lifecycle__Digest"
+        },
+        "kind": {
+          "const": "published"
+        },
+        "content": {
+          "$ref": "#/$defs/D__lifecycle__DraftContent"
+        },
+        "metadata": {
+          "$ref": "#/$defs/D__lifecycle__DefinitionMetadata"
+        },
+        "proof_summaries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_ProofSummary"
+          },
+          "maxItems": 256
+        }
+      },
+      "required": [
+        "definition_id",
+        "definition_version",
+        "source_draft_revision",
+        "artifact_ref",
+        "program_digest",
+        "bindings_digest",
+        "kind",
+        "content",
+        "metadata",
+        "proof_summaries"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__ArtifactRef": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "artifact"
+        },
+        "scope": {
+          "$ref": "#/$defs/D__lifecycle__Scope"
+        },
+        "object_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "digest": {
+          "$ref": "#/$defs/D__lifecycle__Digest"
+        }
+      },
+      "required": [
+        "kind",
+        "scope",
+        "object_id",
+        "revision",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "DevicePageView": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_DeviceSummary"
+          },
+          "maxItems": 256
+        },
+        "catalog_revision": {
+          "$ref": "#/$defs/D__baseline__Revision"
+        },
+        "next_page_handle": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "items",
+        "catalog_revision",
+        "next_page_handle"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_DeviceSummary": {
+      "type": "object",
+      "properties": {
+        "device_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "device_kind": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "display_name": {
+          "$ref": "#/$defs/D__panel__Result_Text"
+        },
+        "connection_state": {
+          "enum": [
+            "disconnected",
+            "connecting",
+            "ready",
+            "faulted"
+          ]
+        }
+      },
+      "required": [
+        "device_id",
+        "device_kind",
+        "display_name",
+        "connection_state"
+      ],
+      "additionalProperties": false
+    },
+    "EvidencePageView": {
+      "type": "object",
+      "properties": {
+        "command_id": {
+          "$ref": "#/$defs/D__command__V__S0_Id"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_EvidenceSummary"
+          },
+          "maxItems": 256
+        },
+        "resource_release_summary": {
+          "$ref": "#/$defs/D__panel__Result_ResourceReleaseSummary"
+        },
+        "next_page_handle": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "command_id",
+        "items",
+        "resource_release_summary",
+        "next_page_handle"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_EvidenceSummary": {
+      "type": "object",
+      "properties": {
+        "evidence_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "kind": {
+          "enum": [
+            "transport_submission",
+            "device_ack",
+            "fresh_query",
+            "device_event",
+            "cancel_ack"
+          ]
+        },
+        "captured_at": {
+          "$ref": "#/$defs/D__panel__Result_Timestamp"
+        },
+        "predicate_result": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "completion_level": {
+          "anyOf": [
+            {
+              "enum": [
+                "sent",
+                "acknowledged",
+                "effect_verified"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "evidence_id",
+        "kind",
+        "captured_at",
+        "predicate_result",
+        "completion_level"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_ResourceReleaseSummary": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "held",
+            "clear",
+            "unresolved"
+          ]
+        },
+        "policy_label": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "policy_label"
+      ],
+      "additionalProperties": false
+    },
+    "IndependenceView": {
+      "type": "object",
+      "properties": {
+        "proof_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "proof_revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "definition_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "definition_version": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "failed_step_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+        },
+        "successor_step_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9_.:-]+$(?![\\s\\S])"
+          },
+          "maxItems": 4096,
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "verdict": {
+          "enum": [
+            "independent",
+            "dependent",
+            "unknown"
+          ]
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_Id"
+          },
+          "maxItems": 64,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "proof_id",
+        "proof_revision",
+        "definition_id",
+        "definition_version",
+        "failed_step_id",
+        "successor_step_ids",
+        "verdict",
+        "reason_codes"
+      ],
+      "additionalProperties": false
+    },
+    "MetaView": {
+      "type": "object",
+      "properties": {
+        "component_version": {
+          "$ref": "#/$defs/D__baseline__Version"
+        },
+        "protocol_version": {
+          "const": "leafseamer.api.v1.panel4"
+        },
+        "panel_features": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_Id"
+          },
+          "maxItems": 256,
+          "uniqueItems": true
+        },
+        "limits_profile_ref": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        }
+      },
+      "required": [
+        "component_version",
+        "protocol_version",
+        "panel_features",
+        "limits_profile_ref"
+      ],
+      "additionalProperties": false
+    },
+    "D__baseline__Version": {
+      "type": "string",
+      "maxLength": 128,
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(-[0-9A-Za-z.-]+)?$"
+    },
+    "MutationView": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/GrantMutationView"
+        },
+        {
+          "$ref": "#/$defs/LifecycleMutationView"
+        }
+      ]
+    },
+    "GrantMutationView": {
+      "type": "object",
+      "properties": {
+        "operation_id": {
+          "$ref": "#/$defs/D__baseline__Id"
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "applied",
+            "rejected",
+            "indeterminate"
+          ]
+        },
+        "entity_id": {
+          "$ref": "#/$defs/D__baseline__Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/D__baseline__Revision"
+        },
+        "visible_targets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_TargetStatus"
+          },
+          "maxItems": 256
+        },
+        "has_hidden_targets": {
+          "type": "boolean"
+        },
+        "kind": {
+          "const": "grant_revocation"
+        }
+      },
+      "required": [
+        "operation_id",
+        "state",
+        "entity_id",
+        "revision",
+        "visible_targets",
+        "has_hidden_targets",
+        "kind"
+      ],
+      "additionalProperties": false
+    },
+    "D__baseline__Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9._-]+$"
+    },
+    "D__panel__Result_TargetStatus": {
+      "type": "object",
+      "properties": {
+        "service_alias": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "status": {
+          "enum": [
+            "pending",
+            "applied",
+            "indeterminate"
+          ]
+        },
+        "applied_revision": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_Counter"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "service_alias",
+        "status",
+        "applied_revision"
+      ],
+      "additionalProperties": false
+    },
+    "LifecycleMutationView": {
+      "type": "object",
+      "properties": {
+        "operation_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "run_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "kind": {
+          "enum": [
+            "arm",
+            "pause"
+          ]
+        },
+        "state": {
+          "enum": [
+            "reserved",
+            "preparing",
+            "ready",
+            "running",
+            "reconciling",
+            "completed",
+            "paused",
+            "indeterminate"
+          ]
+        },
+        "committed_run_revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "committed_slot_revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "target_arm_generation": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "locally_closed": {
+          "type": "boolean"
+        },
+        "protection_complete": {
+          "type": "boolean"
+        },
+        "target_status_summary": {
+          "$ref": "#/$defs/TargetSet"
+        }
+      },
+      "required": [
+        "operation_id",
+        "run_id",
+        "kind",
+        "state",
+        "committed_run_revision",
+        "committed_slot_revision",
+        "target_arm_generation",
+        "locally_closed",
+        "protection_complete",
+        "target_status_summary"
+      ],
+      "additionalProperties": false
+    },
+    "TargetSet": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TargetStatus"
+          },
+          "maxItems": 256
+        },
+        "has_hidden": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "items",
+        "has_hidden"
+      ],
+      "additionalProperties": false
+    },
+    "TargetStatus": {
+      "type": "object",
+      "properties": {
+        "service_alias": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "applied",
+            "closing",
+            "closed",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "service_alias",
+        "state"
+      ],
+      "additionalProperties": false
+    },
+    "ObservationView": {
+      "type": "object",
+      "properties": {
+        "device_id": {
+          "$ref": "#/$defs/D__baseline__Id"
+        },
+        "observation_id": {
+          "$ref": "#/$defs/D__baseline__Id"
+        },
+        "state_revision": {
+          "$ref": "#/$defs/D__baseline__Revision"
+        },
+        "observed_at": {
+          "$ref": "#/$defs/D__baseline__Timestamp"
+        },
+        "freshness_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 86400000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "integrity": {
+          "enum": [
+            "complete",
+            "gap",
+            "unavailable"
+          ]
+        },
+        "projection_status": {
+          "enum": [
+            "complete",
+            "filtered"
+          ]
+        },
+        "values": {
+          "$ref": "#/$defs/D__panel__Result_QualifiedValue"
+        }
+      },
+      "required": [
+        "device_id",
+        "observation_id",
+        "state_revision",
+        "observed_at",
+        "freshness_ms",
+        "integrity",
+        "projection_status",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "D__baseline__Timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+    },
+    "D__panel__Result_QualifiedValue": {
+      "type": "object",
+      "properties": {
+        "schema_ref": {
+          "$ref": "#/$defs/D__panel__Result_SchemaRef"
+        },
+        "value": {}
+      },
+      "required": [
+        "schema_ref",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "PreflightView": {
+      "type": "object",
+      "properties": {
+        "run_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "run_revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "slot_revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "passed": {
+          "type": "boolean"
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CheckSummary"
+          },
+          "maxItems": 256
+        },
+        "remaining_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "assessment_handle": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        }
+      },
+      "required": [
+        "run_id",
+        "run_revision",
+        "slot_revision",
+        "passed",
+        "checks",
+        "remaining_ms",
+        "assessment_handle"
+      ],
+      "additionalProperties": false
+    },
+    "CheckSummary": {
+      "type": "object",
+      "properties": {
+        "service_alias": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "status": {
+          "enum": [
+            "passed",
+            "failed",
+            "unknown"
+          ]
+        },
+        "reason_code": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        }
+      },
+      "required": [
+        "service_alias",
+        "status",
+        "reason_code"
+      ],
+      "additionalProperties": false
+    },
+    "RecoveryOperationView": {
+      "type": "object",
+      "properties": {
+        "operation_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "run_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "previous_run_revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "committed_run_revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "committed_slot_revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "target_arm_generation": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "state": {
+          "enum": [
+            "reserved",
+            "preparing",
+            "ready",
+            "running",
+            "reconciling",
+            "completed",
+            "paused",
+            "indeterminate"
+          ]
+        },
+        "new_execution_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__lifecycle__Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "visible_new_command_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_Id"
+          },
+          "maxItems": 4096,
+          "uniqueItems": true
+        },
+        "has_hidden_commands": {
+          "type": "boolean"
+        },
+        "target_status_summary": {
+          "$ref": "#/$defs/TargetSet"
+        }
+      },
+      "required": [
+        "operation_id",
+        "run_id",
+        "previous_run_revision",
+        "committed_run_revision",
+        "committed_slot_revision",
+        "target_arm_generation",
+        "state",
+        "new_execution_id",
+        "visible_new_command_ids",
+        "has_hidden_commands",
+        "target_status_summary"
+      ],
+      "additionalProperties": false
+    },
+    "RecoveryPlanView": {
+      "type": "object",
+      "properties": {
+        "run_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "prior_execution_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__lifecycle__Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "run_revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "slot_revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "recovery_handle": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "remaining_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/RecoveryItem"
+          },
+          "maxItems": 4096
+        },
+        "unresolved": {
+          "$ref": "#/$defs/CommandSet"
+        }
+      },
+      "required": [
+        "run_id",
+        "prior_execution_id",
+        "run_revision",
+        "slot_revision",
+        "recovery_handle",
+        "remaining_ms",
+        "items",
+        "unresolved"
+      ],
+      "additionalProperties": false
+    },
+    "RecoveryItem": {
+      "type": "object",
+      "properties": {
+        "step_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "disposition": {
+          "enum": [
+            "retain_success",
+            "execute_new",
+            "reconcile_commit"
+          ]
+        },
+        "previous_command_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "has_hidden_previous": {
+          "type": "boolean"
+        },
+        "evidence_summaries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_QualifiedValue"
+          },
+          "maxItems": 4096
+        },
+        "parameters_summary": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_QualifiedValue"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "step_id",
+        "disposition",
+        "previous_command_id",
+        "has_hidden_previous",
+        "evidence_summaries",
+        "parameters_summary"
+      ],
+      "additionalProperties": false
+    },
+    "CommandSet": {
+      "type": "object",
+      "properties": {
+        "visible_command_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_Id"
+          },
+          "maxItems": 4096,
+          "uniqueItems": true
+        },
+        "has_hidden": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "visible_command_ids",
+        "has_hidden"
+      ],
+      "additionalProperties": false
+    },
+    "RunView": {
+      "type": "object",
+      "properties": {
+        "run_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "definition_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "definition_version": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "business_state": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__lifecycle__BusinessState"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "transition_summary": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_TransitionSummary"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lifecycle": {
+          "enum": [
+            "disarmed",
+            "armed",
+            "running",
+            "paused",
+            "completed"
+          ]
+        },
+        "execution_summary": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ExecutionSummary"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "arm_generation": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        },
+        "active_execution_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__lifecycle__Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "grant_summaries": {
+          "$ref": "#/$defs/GrantSet"
+        },
+        "artifact_ref": {
+          "$ref": "#/$defs/D__lifecycle__ArtifactRef"
+        },
+        "slot_revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        }
+      },
+      "required": [
+        "run_id",
+        "definition_id",
+        "definition_version",
+        "revision",
+        "business_state",
+        "transition_summary",
+        "lifecycle",
+        "execution_summary",
+        "arm_generation",
+        "active_execution_id",
+        "grant_summaries",
+        "artifact_ref",
+        "slot_revision"
+      ],
+      "additionalProperties": false
+    },
+    "D__lifecycle__BusinessState": {
+      "type": "object",
+      "properties": {
+        "state_id": {
+          "$ref": "#/$defs/D__lifecycle__Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/D__lifecycle__Revision"
+        }
+      },
+      "required": [
+        "state_id",
+        "revision"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_TransitionSummary": {
+      "type": "object",
+      "properties": {
+        "transition_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "from_state": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "to_state": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "phase": {
+          "enum": [
+            "validating",
+            "exit",
+            "transition",
+            "enter",
+            "committing",
+            "completed",
+            "failed",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "transition_id",
+        "from_state",
+        "to_state",
+        "phase"
+      ],
+      "additionalProperties": false
+    },
+    "ExecutionSummary": {
+      "type": "object",
+      "properties": {
+        "execution_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "phase": {
+          "enum": [
+            "reserved",
+            "validating",
+            "exit",
+            "transition",
+            "enter",
+            "sequence",
+            "commit",
+            "reconciling",
+            "finished"
+          ]
+        },
+        "outcome": {
+          "enum": [
+            "pending",
+            "succeeded",
+            "completed_with_failures",
+            "failed",
+            "unknown",
+            "blocked"
+          ]
+        }
+      },
+      "required": [
+        "execution_id",
+        "phase",
+        "outcome"
+      ],
+      "additionalProperties": false
+    },
+    "GrantSet": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/GrantTarget"
+          },
+          "maxItems": 256
+        },
+        "has_hidden": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "items",
+        "has_hidden"
+      ],
+      "additionalProperties": false
+    },
+    "GrantTarget": {
+      "type": "object",
+      "properties": {
+        "service_alias": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "applied",
+            "closing",
+            "closed",
+            "unknown"
+          ]
+        },
+        "baseline_grant_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "target_grant_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__panel__Result_Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "service_alias",
+        "state",
+        "baseline_grant_id",
+        "target_grant_id"
+      ],
+      "additionalProperties": false
+    },
+    "SceneCatalogView": {
+      "type": "object",
+      "properties": {
+        "device_id": {
+          "$ref": "#/$defs/D__baseline__Id"
+        },
+        "collection_ref": {
+          "$ref": "#/$defs/D__baseline__Id"
+        },
+        "collection_generation": {
+          "$ref": "#/$defs/D__baseline__Revision"
+        },
+        "catalog_revision": {
+          "$ref": "#/$defs/D__baseline__Revision"
+        },
+        "binding_revision": {
+          "$ref": "#/$defs/D__baseline__Revision"
+        },
+        "status": {
+          "enum": [
+            "unconfirmed",
+            "ready",
+            "changing",
+            "stale"
+          ]
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/D__panel__Result_SceneItem"
+          },
+          "maxItems": 256
+        }
+      },
+      "required": [
+        "device_id",
+        "collection_ref",
+        "collection_generation",
+        "catalog_revision",
+        "binding_revision",
+        "status",
+        "entries"
+      ],
+      "additionalProperties": false
+    },
+    "D__panel__Result_SceneItem": {
+      "type": "object",
+      "properties": {
+        "scene_id": {
+          "$ref": "#/$defs/D__panel__Result_Id"
+        },
+        "display_name": {
+          "$ref": "#/$defs/D__panel__Result_Text"
+        }
+      },
+      "required": [
+        "scene_id",
+        "display_name"
+      ],
+      "additionalProperties": false
+    },
+    "TransferView": {
+      "type": "object",
+      "properties": {
+        "transfer_id": {
+          "$ref": "#/$defs/D__control__Id"
+        },
+        "device_id": {
+          "$ref": "#/$defs/D__control__Id"
+        },
+        "from_holder": {
+          "$ref": "#/$defs/D__panel__Result_Holder"
+        },
+        "target_holder": {
+          "$ref": "#/$defs/D__panel__Result_Holder"
+        },
+        "expected_control": {
+          "$ref": "#/$defs/D__control__ControlVersion"
+        },
+        "state": {
+          "enum": [
+            "offered",
+            "accepted",
+            "expired",
+            "cancelled"
+          ]
+        },
+        "accept_operation_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/D__control__Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "remaining_ms": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "transfer_id",
+        "device_id",
+        "from_holder",
+        "target_holder",
+        "expected_control",
+        "state",
+        "accept_operation_id",
+        "remaining_ms"
+      ],
+      "additionalProperties": false
+    },
+    "D__control__ControlVersion": {
+      "type": "object",
+      "properties": {
+        "epoch": {
+          "$ref": "#/$defs/D__control__Id"
+        },
+        "version": {
+          "$ref": "#/$defs/D__control__U20"
+        }
+      },
+      "required": [
+        "epoch",
+        "version"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

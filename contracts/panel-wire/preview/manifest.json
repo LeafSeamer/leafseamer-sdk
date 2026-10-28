@@ -1,0 +1,14 @@
+{
+  "format": "panel-wire-artifacts/1",
+  "approved": false,
+  "runtime_ready": false,
+  "artifacts": {
+    "validators.mjs": "274cf7b9177bfa569985a0ee66ac8e79aede65f89f7e747a9897360b45ab228e",
+    "registry.mjs": "e6f0e6a4006632e21c14730c691d0df7873d489bcd2ad3b13bb9b13ed1d455e6",
+    "wire.mjs": "47ee90c6585770cc16a1aee27f7d6fbcfb5cc7b64b46b791ed386443170b1520",
+    "helpers.mjs": "920ee8279050fe2beae3657a95e98ad7ae5fbe141b8f184dfa217620959253fa",
+    "LICENSES.txt": "8da6966734e4e5080bc5dedeff1d1e9dcd6cc239f043a97c127b9ef7a15b3c21",
+    "inventory.json": "a95635ad8fdd73e5488f0fb79f20f4c1da182b3e8d171ecc374f7f2f16c5cc65",
+    "routes.mjs": "4d780cf9fe9daaf6348e3222a66f4c228c8ad33450adf3db3adbcaa2e767b926"
+  }
+}

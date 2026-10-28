@@ -1,0 +1,433 @@
+{
+  "format": "sdk-worker-messages/1",
+  "approved": false,
+  "ipc_version": "ipc/0.14.0-continuation-draft.1",
+  "messages": [
+    {
+      "type": "AUTH_FENCE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__AUTH_FENCE"
+    },
+    {
+      "type": "AUTH_FENCE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "AUTH_FENCE",
+        "QUERY_BARRIER"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__AUTH_FENCE_ACK"
+    },
+    {
+      "type": "BARRIER_STORED",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__BARRIER_STORED"
+    },
+    {
+      "type": "BARRIER_UNAVAILABLE",
+      "direction": "w2c",
+      "reply_to_types": [
+        "QUERY_BARRIER"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__BARRIER_UNAVAILABLE"
+    },
+    {
+      "type": "CANCEL_ENCODING_FAILED",
+      "direction": "w2c",
+      "reply_to_types": [
+        "ENCODE_CANCEL_PACKET"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CANCEL_ENCODING_FAILED"
+    },
+    {
+      "type": "CANCEL_EVIDENCE_CANDIDATE",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CANCEL_EVIDENCE_CANDIDATE"
+    },
+    {
+      "type": "CANCEL_EXECUTION_STATUS",
+      "direction": "w2c",
+      "reply_to_types": [
+        "QUERY_CANCEL_EXECUTION"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CANCEL_EXECUTION_STATUS"
+    },
+    {
+      "type": "CANCEL_FENCE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CANCEL_FENCE"
+    },
+    {
+      "type": "CANCEL_FENCE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "CANCEL_FENCE",
+        "QUERY_BARRIER"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CANCEL_FENCE_ACK"
+    },
+    {
+      "type": "CANCEL_GUARD",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CANCEL_GUARD"
+    },
+    {
+      "type": "CANCEL_GUARD_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "CANCEL_GUARD"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CANCEL_GUARD_ACK"
+    },
+    {
+      "type": "CANCEL_PREPARE_REJECTED",
+      "direction": "c2w",
+      "reply_to_types": [
+        "PREPARE_CANCEL_PACKET"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CANCEL_PREPARE_REJECTED"
+    },
+    {
+      "type": "CANCEL_REPORT_STORED",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CANCEL_REPORT_STORED"
+    },
+    {
+      "type": "CANCEL_RESEND_REJECTED",
+      "direction": "c2w",
+      "reply_to_types": [
+        "CANCEL_RESEND_REQUEST"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CANCEL_RESEND_REJECTED"
+    },
+    {
+      "type": "CANCEL_RESEND_REQUEST",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CANCEL_RESEND_REQUEST"
+    },
+    {
+      "type": "CANCEL_SEND_REPORT",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CANCEL_SEND_REPORT"
+    },
+    {
+      "type": "CLOSE_GATE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CLOSE_GATE"
+    },
+    {
+      "type": "CLOSE_GATE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "CLOSE_GATE"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__CLOSE_GATE_ACK"
+    },
+    {
+      "type": "DENY_ENCODING",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__J__DENY_ENCODING"
+    },
+    {
+      "type": "DENY_ENCODING_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "DENY_ENCODING"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__J__DENY_ENCODING_ACK"
+    },
+    {
+      "type": "DISPATCH",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__DISPATCH"
+    },
+    {
+      "type": "DISPATCH_CANCEL",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__DISPATCH_CANCEL"
+    },
+    {
+      "type": "ENCODE_CANCEL_PACKET",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__ENCODE_CANCEL_PACKET"
+    },
+    {
+      "type": "ENCODE_PACKET",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__ENCODE_PACKET"
+    },
+    {
+      "type": "EVIDENCE_CANDIDATE",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__EVIDENCE_CANDIDATE"
+    },
+    {
+      "type": "FENCE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__FENCE"
+    },
+    {
+      "type": "FENCE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "FENCE",
+        "QUERY_BARRIER"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__FENCE_ACK"
+    },
+    {
+      "type": "GATE_FENCE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__GF__GATE_FENCE"
+    },
+    {
+      "type": "GATE_FENCE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "GATE_FENCE"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__GF__GATE_FENCE_ACK"
+    },
+    {
+      "type": "GUARD_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "GUARD_INSTALL"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__GUARD_ACK"
+    },
+    {
+      "type": "GUARD_INSTALL",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__GUARD_INSTALL"
+    },
+    {
+      "type": "HELLO",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__HELLO"
+    },
+    {
+      "type": "HELLO_ACK",
+      "direction": "c2w",
+      "reply_to_types": [
+        "HELLO"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__HELLO_ACK"
+    },
+    {
+      "type": "OPEN_GATE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__OPEN_GATE"
+    },
+    {
+      "type": "OPEN_GATE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "OPEN_GATE"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__OPEN_GATE_ACK"
+    },
+    {
+      "type": "PACKET_ENCODING_FAILED",
+      "direction": "w2c",
+      "reply_to_types": [
+        "ENCODE_PACKET"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__PACKET_ENCODING_FAILED"
+    },
+    {
+      "type": "PREPARE_CANCEL_PACKET",
+      "direction": "w2c",
+      "reply_to_types": [
+        "ENCODE_CANCEL_PACKET"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__PREPARE_CANCEL_PACKET"
+    },
+    {
+      "type": "PREPARE_PACKET",
+      "direction": "w2c",
+      "reply_to_types": [
+        "ENCODE_PACKET"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__PREPARE_PACKET"
+    },
+    {
+      "type": "PREPARE_PACKET_REJECTED",
+      "direction": "c2w",
+      "reply_to_types": [
+        "PREPARE_PACKET"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__PREPARE_PACKET_REJECTED"
+    },
+    {
+      "type": "QUERY_BARRIER",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__QUERY_BARRIER"
+    },
+    {
+      "type": "QUERY_CANCEL_EXECUTION",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__QUERY_CANCEL_EXECUTION"
+    },
+    {
+      "type": "RELEASE_ENCODING",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__ER__RELEASE_ENCODING"
+    },
+    {
+      "type": "RELEASE_ENCODING_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "RELEASE_ENCODING"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__ER__RELEASE_ENCODING_ACK"
+    },
+    {
+      "type": "REPORT_STORED",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__REPORT_STORED"
+    },
+    {
+      "type": "RESEND_DISPATCH",
+      "direction": "c2w",
+      "reply_to_types": [
+        "RESEND_REQUEST"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__RESEND_DISPATCH"
+    },
+    {
+      "type": "RESEND_REJECTED",
+      "direction": "c2w",
+      "reply_to_types": [
+        "RESEND_REQUEST"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__RESEND_REJECTED"
+    },
+    {
+      "type": "RESEND_REQUEST",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__RESEND_REQUEST"
+    },
+    {
+      "type": "RUN_FENCE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__RUN_FENCE"
+    },
+    {
+      "type": "RUN_FENCE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "RUN_FENCE",
+        "QUERY_BARRIER"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__RUN_FENCE_ACK"
+    },
+    {
+      "type": "SEND_REPORT",
+      "direction": "w2c",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__SEND_REPORT"
+    },
+    {
+      "type": "TIME_FENCE",
+      "direction": "c2w",
+      "reply_to_types": [],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__TIME_FENCE"
+    },
+    {
+      "type": "TIME_FENCE_ACK",
+      "direction": "w2c",
+      "reply_to_types": [
+        "TIME_FENCE",
+        "QUERY_BARRIER"
+      ],
+      "schema_ref": "https://leafseamer.invalid/sdk/panel-wire/0.1/models.schema.json#/$defs/command__S9__TIME_FENCE_ACK"
+    }
+  ],
+  "required_features": {
+    "HELLO": [
+      "panel_execution_binding",
+      "panel_scoped_fence",
+      "automation_origin_binding",
+      "run_generation_fence",
+      "run_deny_snapshot",
+      "per_transmission_permit",
+      "complete_transmission_fence",
+      "barrier_attempt_history",
+      "command_cancel_deny",
+      "separate_cancel_execution",
+      "complete_cancel_transmission_fence",
+      "reference_bound_time",
+      "reference_time_floor",
+      "schedule_source_binding",
+      "scoped_gate_access",
+      "immutable_hold_ownership",
+      "fresh_gate_fence",
+      "encoding_authority_before_issue",
+      "encoding_release_after_quiescence",
+      "shared_direction_journal",
+      "terminal_volatile_close",
+      "prepare_deny_before_release",
+      "continuation_grant_binding"
+    ],
+    "HELLO_ACK": [
+      "execution_guard",
+      "scoped_authorization_fence",
+      "clock_generation_guard",
+      "typed_obs_evidence",
+      "recovery_single_consume",
+      "supervised_runtime_domain",
+      "time_bound_evidence",
+      "panel_execution_binding",
+      "panel_scoped_fence",
+      "automation_origin_binding",
+      "run_generation_fence",
+      "run_deny_snapshot",
+      "per_transmission_permit",
+      "complete_transmission_fence",
+      "barrier_attempt_history",
+      "command_cancel_deny",
+      "separate_cancel_execution",
+      "complete_cancel_transmission_fence",
+      "reference_bound_time",
+      "reference_time_floor",
+      "schedule_source_binding",
+      "scoped_gate_access",
+      "immutable_hold_ownership",
+      "fresh_gate_fence",
+      "encoding_authority_before_issue",
+      "encoding_release_after_quiescence",
+      "shared_direction_journal",
+      "terminal_volatile_close",
+      "prepare_deny_before_release",
+      "continuation_grant_binding"
+    ]
+  },
+  "handshake_result": "wire_compatible_closed",
+  "send_authorized": false
+}
