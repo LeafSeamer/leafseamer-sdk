@@ -1,0 +1,10 @@
+{
+  "format": "panel-http-artifacts/1",
+  "approved": false,
+  "runtime_ready": false,
+  "artifacts": {
+    "inventory.json": "e3699ea7eabe6b2312a0a094be7cfba45f2abbe4f034ead48379f634bdc90f14",
+    "catalog.mjs": "dd6c127a92178a8485306a45c59c80485b2820d13e32d6c38b99c468109b00f5",
+    "validators.mjs": "7e1b187ec12e3344965e68d602477aecd2ef2746ca84ef788e96c2e18df91bf8"
+  }
+}
