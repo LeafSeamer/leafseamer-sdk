@@ -55,6 +55,12 @@ Cookie由浏览器管理，CSRF及token只存在客户端闭包内存，不写�
 
 19项SDK检查覆盖错误CSRF、错误选择、HTTPS／路径限制、凭据发送、完整操作保留、历史输入摘要及新选择的SchemaRef／RegistryRef／WS一致性。Controller另有实际文件库、原生采样与HTTPS往返验证，使用模拟Cookie容器和合成环境批准；不能当作真实浏览器或生产身份资格验收。`fetchImpl` 注入仅供可信宿主适配和测试，调用方不得记录密码、Cookie、CSRF或token。当前Controller的token `expires_in` 使用秒提示，客户端不据它放宽服务端截止。
 
+## 独立bootstrap入口
+
+`@leafseamer/sdk/bootstrap` 提供 `decodeBootstrap(bytes, expectedType)` 和 `decodeProtectedLaunchIntent(bytes)`，分别解析ASSIGNMENT／PROOF／ADMISSION／REJECT及core／time_provider空设备启动意图，导出具名类型。版本固定 `bootstrap/0.1.0-draft.1`，不修改HTTP product1、worker IPC或面板选择。解码在16KiB及深度／成员／节点预算内拒绝重复键、错误方向、未知字段和非规范Secret32；整数保持字符串，结果深冻结，运行时不动态编译。
+
+本入口只做字节与结构检查，不生成秘密、计算挑战证明或授准入。可信管道来源、HMAC、域／意图摘要、截止、OS进程归属与单次消费由监督宿主及核心实施。完整来源闭包与摘要记录在 `contracts/bootstrap/source.json`，产物进入统一构建清单；runtime_approved保持false，worker启动与完整运行域验收不因类型存在而完成。
+
 SDK 的首份独立契约资料位于 [contracts/draft4](contracts/draft4/README.md)：迁入公共 Schema、IPC、HTTP 骨架、路由投影及正反例，可离线重组六份历史产物。该目录冻结旧基线，后续修订须进入明确的新候选版本，不能覆盖旧版。该目录不是当前产品接受集；完整语义判定器及生产工具链仍待交付。
 
 旧 NodeCG 实现及历史保留于 [leafseamer-legacy](https://github.com/ikenainanodesu/leafseamer-legacy)。本仓尚未导入旧业务源码；后续复用时逐项记录来源、历史映射和必要许可声明。

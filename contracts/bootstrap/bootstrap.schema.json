@@ -1,0 +1,602 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:leafseamer:bootstrap:1",
+  "$defs": {
+    "supervisor_BootstrapAssignment": {
+      "type": "object",
+      "properties": {
+        "bootstrap_version": {
+          "const": "bootstrap/0.1.0-draft.1"
+        },
+        "bootstrap_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "launch_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "launch_intent_digest": {
+          "$ref": "#/$defs/supervisor_Digest"
+        },
+        "member_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "member_boot_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "role": {
+          "enum": [
+            "core",
+            "worker",
+            "time_provider"
+          ]
+        },
+        "artifact_manifest_ref": {
+          "$ref": "#/$defs/supervisor_RuntimeManifestRef"
+        },
+        "channel_binding_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "challenge_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "clock_domain_descriptor": {
+          "$ref": "#/$defs/supervisor_ClockDomainDescriptor"
+        },
+        "challenge_nonce": {
+          "$ref": "#/$defs/supervisor_Secret32"
+        },
+        "issued_tick_ns": {
+          "$ref": "#/$defs/supervisor_U20"
+        },
+        "expires_tick_ns": {
+          "$ref": "#/$defs/supervisor_U20"
+        },
+        "secret": {
+          "$ref": "#/$defs/supervisor_Secret32"
+        }
+      },
+      "required": [
+        "bootstrap_version",
+        "bootstrap_id",
+        "launch_id",
+        "launch_intent_digest",
+        "member_id",
+        "member_boot_id",
+        "role",
+        "artifact_manifest_ref",
+        "channel_binding_id",
+        "challenge_id",
+        "clock_domain_descriptor",
+        "challenge_nonce",
+        "issued_tick_ns",
+        "expires_tick_ns",
+        "secret"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_Id": {
+      "$ref": "#/$defs/installation2_Id"
+    },
+    "installation2_Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*(?![\\s\\S])"
+    },
+    "supervisor_Digest": {
+      "$ref": "#/$defs/installation2_Digest"
+    },
+    "installation2_Digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}(?![\\s\\S])"
+    },
+    "supervisor_RuntimeManifestRef": {
+      "$ref": "#/$defs/installation2_RuntimeManifestRef"
+    },
+    "installation2_RuntimeManifestRef": {
+      "type": "object",
+      "properties": {
+        "manifest_id": {
+          "$ref": "#/$defs/installation2_Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/installation2_U20"
+        },
+        "digest": {
+          "$ref": "#/$defs/installation2_Digest"
+        }
+      },
+      "required": [
+        "manifest_id",
+        "revision",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "installation2_U20": {
+      "type": "string",
+      "maxLength": 20,
+      "pattern": "^(0|[1-9][0-9]*)(?![\\s\\S])"
+    },
+    "supervisor_ClockDomainDescriptor": {
+      "$ref": "#/$defs/public_ClockDomainDescriptor"
+    },
+    "public_ClockDomainDescriptor": {
+      "type": "object",
+      "properties": {
+        "descriptor_version": {
+          "const": "clock-domain/1"
+        },
+        "domain_kind": {
+          "const": "supervised_runtime"
+        },
+        "authority_service_id": {
+          "$ref": "#/$defs/public_Id"
+        },
+        "runtime_generation": {
+          "$ref": "#/$defs/public_Id"
+        },
+        "supervisor_instance_id": {
+          "$ref": "#/$defs/public_Id"
+        },
+        "clock_backend_id": {
+          "enum": [
+            "windows_interrupt_precise",
+            "linux_boottime"
+          ]
+        },
+        "clock_backend_revision": {
+          "$ref": "#/$defs/public_Id"
+        },
+        "tick_unit": {
+          "const": "ns"
+        },
+        "suspend_accounting": {
+          "const": "included"
+        },
+        "namespace_identity": {
+          "$ref": "#/$defs/public_Id"
+        },
+        "os_boot_identity": {
+          "$ref": "#/$defs/public_OsBootIdentity"
+        },
+        "platform_profile_id": {
+          "$ref": "#/$defs/public_Id"
+        },
+        "platform_profile_revision": {
+          "$ref": "#/$defs/public_Revision"
+        },
+        "clock_domain_id": {
+          "type": "string",
+          "pattern": "^clock_[0-9a-f]{64}$"
+        },
+        "descriptor_digest": {
+          "$ref": "#/$defs/public_Digest"
+        }
+      },
+      "required": [
+        "descriptor_version",
+        "domain_kind",
+        "authority_service_id",
+        "runtime_generation",
+        "supervisor_instance_id",
+        "clock_backend_id",
+        "clock_backend_revision",
+        "tick_unit",
+        "suspend_accounting",
+        "namespace_identity",
+        "os_boot_identity",
+        "platform_profile_id",
+        "platform_profile_revision",
+        "clock_domain_id",
+        "descriptor_digest"
+      ],
+      "additionalProperties": false
+    },
+    "public_Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9._-]+$"
+    },
+    "public_OsBootIdentity": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "unavailable"
+            }
+          },
+          "required": [
+            "status"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "verified"
+            },
+            "source": {
+              "$ref": "#/$defs/public_Id"
+            },
+            "value": {
+              "$ref": "#/$defs/public_Id"
+            },
+            "evidence_ref": {
+              "$ref": "#/$defs/public_Id"
+            }
+          },
+          "required": [
+            "status",
+            "source",
+            "value",
+            "evidence_ref"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "public_Revision": {
+      "type": "string",
+      "maxLength": 20,
+      "pattern": "^(0|[1-9][0-9]*)$"
+    },
+    "public_Digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "supervisor_Secret32": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{42}[AEIMQUYcgkosw048]$(?![\\s\\S])"
+    },
+    "supervisor_U20": {
+      "$ref": "#/$defs/installation2_U20"
+    },
+    "supervisor_BootstrapProof": {
+      "type": "object",
+      "properties": {
+        "bootstrap_version": {
+          "const": "bootstrap/0.1.0-draft.1"
+        },
+        "bootstrap_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "launch_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "launch_intent_digest": {
+          "$ref": "#/$defs/supervisor_Digest"
+        },
+        "member_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "member_boot_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "role": {
+          "enum": [
+            "core",
+            "worker",
+            "time_provider"
+          ]
+        },
+        "artifact_manifest_ref": {
+          "$ref": "#/$defs/supervisor_RuntimeManifestRef"
+        },
+        "channel_binding_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "challenge_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "clock_domain_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "descriptor_digest": {
+          "$ref": "#/$defs/supervisor_Digest"
+        },
+        "proof": {
+          "$ref": "#/$defs/supervisor_Secret32"
+        }
+      },
+      "required": [
+        "bootstrap_version",
+        "bootstrap_id",
+        "launch_id",
+        "launch_intent_digest",
+        "member_id",
+        "member_boot_id",
+        "role",
+        "artifact_manifest_ref",
+        "channel_binding_id",
+        "challenge_id",
+        "clock_domain_id",
+        "descriptor_digest",
+        "proof"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_AdmissionReceipt": {
+      "type": "object",
+      "properties": {
+        "bootstrap_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "launch_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "launch_intent_digest": {
+          "$ref": "#/$defs/supervisor_Digest"
+        },
+        "member_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "member_boot_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "role": {
+          "enum": [
+            "core",
+            "worker",
+            "time_provider"
+          ]
+        },
+        "artifact_manifest_ref": {
+          "$ref": "#/$defs/supervisor_RuntimeManifestRef"
+        },
+        "channel_binding_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "receipt_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "domain_ref": {
+          "$ref": "#/$defs/supervisor_ClockDomainRef"
+        },
+        "containment_ref": {
+          "$ref": "#/$defs/supervisor_ContainmentRef"
+        },
+        "os_observation_ref": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "admitted_tick_ns": {
+          "$ref": "#/$defs/supervisor_U20"
+        },
+        "gate_state": {
+          "const": "closed"
+        }
+      },
+      "required": [
+        "bootstrap_id",
+        "launch_id",
+        "launch_intent_digest",
+        "member_id",
+        "member_boot_id",
+        "role",
+        "artifact_manifest_ref",
+        "channel_binding_id",
+        "receipt_id",
+        "domain_ref",
+        "containment_ref",
+        "os_observation_ref",
+        "admitted_tick_ns",
+        "gate_state"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_ClockDomainRef": {
+      "$ref": "#/$defs/public_ClockDomainRef"
+    },
+    "public_ClockDomainRef": {
+      "type": "object",
+      "properties": {
+        "clock_domain_id": {
+          "type": "string",
+          "pattern": "^clock_[0-9a-f]{64}$"
+        },
+        "descriptor_digest": {
+          "$ref": "#/$defs/public_Digest"
+        }
+      },
+      "required": [
+        "clock_domain_id",
+        "descriptor_digest"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_ContainmentRef": {
+      "$ref": "#/$defs/installation2_ContainmentRef"
+    },
+    "installation2_ContainmentRef": {
+      "type": "object",
+      "properties": {
+        "group_id": {
+          "$ref": "#/$defs/installation2_Id"
+        },
+        "generation": {
+          "$ref": "#/$defs/installation2_Id"
+        },
+        "backend": {
+          "enum": [
+            "windows_job",
+            "linux_cgroup_v2",
+            "container_runtime"
+          ]
+        }
+      },
+      "required": [
+        "group_id",
+        "generation",
+        "backend"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_Error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "enum": [
+            "identity_conflict",
+            "stale_fence",
+            "unauthorized",
+            "invalid_binding",
+            "expired",
+            "capacity",
+            "journal_unavailable",
+            "indeterminate",
+            "not_found"
+          ]
+        },
+        "retry_action": {
+          "const": "query_only"
+        }
+      },
+      "required": [
+        "code",
+        "retry_action"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_ProtectedLaunchIntent": {
+      "type": "object",
+      "properties": {
+        "launch_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "service_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "supervisor_instance_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "runtime_generation": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "member_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "role": {
+          "enum": [
+            "core",
+            "time_provider"
+          ]
+        },
+        "artifact_manifest_ref": {
+          "$ref": "#/$defs/supervisor_RuntimeManifestRef"
+        },
+        "containment_ref": {
+          "$ref": "#/$defs/supervisor_ContainmentRef"
+        },
+        "device_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/supervisor_Id"
+          },
+          "maxItems": 0,
+          "uniqueItems": true
+        },
+        "policy_revision": {
+          "$ref": "#/$defs/supervisor_U20"
+        }
+      },
+      "required": [
+        "launch_id",
+        "service_id",
+        "supervisor_instance_id",
+        "runtime_generation",
+        "member_id",
+        "role",
+        "artifact_manifest_ref",
+        "containment_ref",
+        "device_ids",
+        "policy_revision"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "bootstrap/0.1.0-draft.1"
+        },
+        "type": {
+          "const": "ASSIGNMENT"
+        },
+        "payload": {
+          "$ref": "#/$defs/supervisor_BootstrapAssignment"
+        }
+      },
+      "required": [
+        "version",
+        "type",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "bootstrap/0.1.0-draft.1"
+        },
+        "type": {
+          "const": "PROOF"
+        },
+        "payload": {
+          "$ref": "#/$defs/supervisor_BootstrapProof"
+        }
+      },
+      "required": [
+        "version",
+        "type",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "bootstrap/0.1.0-draft.1"
+        },
+        "type": {
+          "const": "ADMISSION"
+        },
+        "payload": {
+          "$ref": "#/$defs/supervisor_AdmissionReceipt"
+        }
+      },
+      "required": [
+        "version",
+        "type",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "bootstrap/0.1.0-draft.1"
+        },
+        "type": {
+          "const": "REJECT"
+        },
+        "payload": {
+          "$ref": "#/$defs/supervisor_Error"
+        }
+      },
+      "required": [
+        "version",
+        "type",
+        "payload"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

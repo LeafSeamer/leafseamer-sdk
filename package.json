@@ -10,6 +10,10 @@
   },
   "packageManager": "npm@11.19.1",
   "exports": {
+    "./bootstrap": {
+      "types": "./dist/bootstrap.d.mts",
+      "import": "./dist/bootstrap.mjs"
+    },
     ".": {
       "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs"

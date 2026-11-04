@@ -1,0 +1,56 @@
+{
+  "format": "leafseamer-bootstrap-input/1",
+  "source_repository": "https://github.com/LeafSeamer/leafseamer-suite",
+  "source_commit": "0c388b814b837aff3bf7fcf76344a8df3e2e61e9",
+  "source_files": [
+    {
+      "path": "docs/contracts/df02-supervisor/bootstrap.schema.json",
+      "sha256": "fedc394c0262a99bd5aed2b88881b1101f50f4545c586d3f60d09afe770455bb"
+    },
+    {
+      "path": "docs/contracts/df02-supervisor/supervisor.schema.json",
+      "sha256": "ba848f2245140294fa20fbcc7cae9f4f18a8afb7a96aee809522ed70556a7091"
+    },
+    {
+      "path": "docs/contracts/c09-installation/installation-v02.schema.json",
+      "sha256": "2520c2a279260f144228d5e9c415b2c5d928cb960587ff0a0297e2e3c77a9b78"
+    },
+    {
+      "path": "docs/contracts/draft4/first-loop.schema.json",
+      "sha256": "b4ba39a5a060864cb194f34cf59231481afe76bbaff2a3ea88c76b642f501c18"
+    },
+    {
+      "path": "docs/contracts/c09-installation/installation.schema.json",
+      "sha256": "42e45bb314f83326d30bb4e2174da2b7a521460b05c229c3419f409338fbce3d"
+    }
+  ],
+  "definition_sources": {
+    "supervisor_BootstrapAssignment": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/BootstrapAssignment",
+    "supervisor_Id": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Id",
+    "installation2_Id": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/Id",
+    "supervisor_Digest": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Digest",
+    "installation2_Digest": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/Digest",
+    "supervisor_RuntimeManifestRef": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/RuntimeManifestRef",
+    "installation2_RuntimeManifestRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/RuntimeManifestRef",
+    "installation2_U20": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/U20",
+    "supervisor_ClockDomainDescriptor": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/ClockDomainDescriptor",
+    "public_ClockDomainDescriptor": "https://leafseamer.invalid/contracts/draft4/first-loop.schema.json#/$defs/ClockDomainDescriptor",
+    "public_Id": "https://leafseamer.invalid/contracts/draft4/first-loop.schema.json#/$defs/Id",
+    "public_OsBootIdentity": "https://leafseamer.invalid/contracts/draft4/first-loop.schema.json#/$defs/OsBootIdentity",
+    "public_Revision": "https://leafseamer.invalid/contracts/draft4/first-loop.schema.json#/$defs/Revision",
+    "public_Digest": "https://leafseamer.invalid/contracts/draft4/first-loop.schema.json#/$defs/Digest",
+    "supervisor_Secret32": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Secret32",
+    "supervisor_U20": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/U20",
+    "supervisor_BootstrapProof": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/BootstrapProof",
+    "supervisor_AdmissionReceipt": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/AdmissionReceipt",
+    "supervisor_ClockDomainRef": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/ClockDomainRef",
+    "public_ClockDomainRef": "https://leafseamer.invalid/contracts/draft4/first-loop.schema.json#/$defs/ClockDomainRef",
+    "supervisor_ContainmentRef": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/ContainmentRef",
+    "installation2_ContainmentRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/ContainmentRef",
+    "supervisor_Error": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Error",
+    "supervisor_ProtectedLaunchIntent": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/ProtectedLaunchIntent"
+  },
+  "schema_sha256": "fd6b246827e7e803c814c5b387717dc26c09a366efce020c45c4211a1c5a6e59",
+  "bootstrap_version": "bootstrap/0.1.0-draft.1",
+  "runtime_approved": false
+}
