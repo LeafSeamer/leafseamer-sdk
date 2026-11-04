@@ -47,6 +47,8 @@ const result = await controller.call('discoverContracts');
 
 Cookie由浏览器管理，CSRF及token只存在客户端闭包内存，不写本地持久存储；CSRF只从通过选择、Schema和规范编码校验的响应采用。所有会话操作拒绝并发进入，不自动重试或自动刷新。`clearLocalState()` 清内存并使在途响应失效，迟到响应不能重新安装内存凭据；它不能删除HttpOnly Cookie或撤销服务端会话。`logout()` 调用签发Controller的当前会话注销，无body目标选择；202表示本地已撤销，远端传播仍按receipts判断。注销成功或失败均清SDK内存，不自动重试；401或清Cookie不代表传播applied。完整主体管理及服务身份接受集仍须生成。
 
+`createRequestContext({audience, operations, ttl_ms, max_unique_requests})` 使用内存中的定向token，自动填入当前契约选择并发送同源Origin。token须包含request.create及全部目标操作权限；服务可缩短期限和新请求容量，以返回的上下文为准。Controller当前将上下文绑定实际凭据链并持久保留，重启和撤销会关闭旧资格；命令受理与去重消费尚未接入。上下文不代替设备控制权，也不改变无自动重试策略。
+
 19项SDK检查覆盖错误CSRF、错误选择、HTTPS／路径限制、凭据发送、完整操作保留、历史输入摘要及新选择的SchemaRef／RegistryRef／WS一致性。Controller另有实际文件库、原生采样与HTTPS往返验证，使用模拟Cookie容器和合成环境批准；不能当作真实浏览器或生产身份资格验收。`fetchImpl` 注入仅供可信宿主适配和测试，调用方不得记录密码、Cookie、CSRF或token。当前Controller的token `expires_in` 使用秒提示，客户端不据它放宽服务端截止。
 
 SDK 的首份独立契约资料位于 [contracts/draft4](contracts/draft4/README.md)：迁入公共 Schema、IPC、HTTP 骨架、路由投影及正反例，可离线重组六份历史产物。该目录冻结旧基线，后续修订须进入明确的新候选版本，不能覆盖旧版。该目录不是当前产品接受集；完整语义判定器及生产工具链仍待交付。

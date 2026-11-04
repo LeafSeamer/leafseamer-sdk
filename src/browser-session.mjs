@@ -34,7 +34,8 @@ export function createBrowserSessionClient({baseUrl, timeoutMs, maxResponseBytes
       let responseHeaders = [];
       const client = createClient('controller', contractSelection, async request => {
         if (generation !== currentGeneration) fail('session_state_changed');
-        const extra = mode === 'cookie' ? [['X-CSRF-Token', csrf]] : mode === 'bearer' ? [['Authorization', 'Bearer ' + token]] : [];
+        const extra = mode === 'cookie' ? [['X-CSRF-Token', csrf]] : mode === 'bearer' ? [['Authorization', 'Bearer ' + token],
+          ...(operation === 'createRequestContext' ? [['Origin', origin]] : [])] : [];
         const response = await transport({...request, headers: [...request.headers, ...extra]});
         responseHeaders = response.headers.map(pair => [...pair]); return response;
       });
@@ -60,6 +61,7 @@ export function createBrowserSessionClient({baseUrl, timeoutMs, maxResponseBytes
     issueToken: ({audience, requested_scopes}) => execute('issueToken', {headers: {origin}, body: {audience, requested_scopes, extension_instance_id: null}}, 'cookie'),
     current: () => execute('getSession', {}, 'bearer'),
     logout: () => execute('logoutSession', {headers: {origin}}, 'cookie'),
+    createRequestContext: body => execute('createRequestContext', {body: {...body, selection: contractSelection}}, 'bearer'),
     clearLocalState,
   });
 }

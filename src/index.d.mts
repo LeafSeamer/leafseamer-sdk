@@ -34,6 +34,7 @@ export interface BrowserSessionClient {
   current(): Promise<Results['controller']['getSession']>;
   /** 仅退出当前人员会话；202不证明远端撤销已完成，失败也清本地内存。 */
   logout(): Promise<Results['controller']['logoutSession']>;
+  createRequestContext(body: {audience: string; operations: string[]; ttl_ms: number; max_unique_requests: number}): Promise<Results['controller']['createRequestContext']>;
   /** 只清除内存凭据，不撤销服务端会话或删除HttpOnly Cookie。 */
   clearLocalState(): void;
 }
