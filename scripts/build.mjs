@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
+import {buildContract} from './contract.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const lock = JSON.parse(await fs.readFile(path.join(root, 'sdk-inputs.json'), 'utf8'));
 const hash = b => crypto.createHash('sha256').update(b).digest('hex');
@@ -12,8 +13,10 @@ for (const [name, digest] of Object.entries(lock.files)) {
   if (hash(bytes) !== digest) throw new Error('input_drift:' + name);
   files.set(name.replace(/^contracts\//, 'runtime/'), bytes);
 }
-const selected = JSON.parse(await fs.readFile(path.join(root, 'contracts/panel-wire/contract/selection.json'), 'utf8'));
-if (JSON.stringify(selected) !== JSON.stringify(lock.selection)) throw new Error('selection_drift');
+const baseline = JSON.parse(await fs.readFile(path.join(root, 'contracts/panel-wire/contract/selection.json'), 'utf8'));
+if (JSON.stringify(baseline) !== JSON.stringify(lock.selection)) throw new Error('selection_drift');
+const product = await buildContract(), selected = product.selection;
+for (const [name, bytes] of product.files) files.set(name, bytes);
 for (const name of ['index.mjs', 'index.d.mts', 'fetch-transport.mjs', 'browser-session.mjs', 'http.mjs', 'http.d.mts']) files.set(name, await fs.readFile(path.join(root, 'src', name)));
 files.set('selection.mjs', Buffer.from('export const contractSelection = Object.freeze(' + JSON.stringify(selected) + ');\n'));
 files.set('THIRD_PARTY_LICENSES.txt', files.get('runtime/panel-wire/preview/LICENSES.txt'));
@@ -28,4 +31,4 @@ for (const [name, bytes] of files) {
   const target = path.join(output, name);
   await fs.mkdir(path.dirname(target), {recursive: true}); await fs.writeFile(target, bytes);
 }
-console.log(JSON.stringify({package: '@leafseamer/sdk', artifacts: files.size, selection: selected.contract_id, final_contract: false}));
+console.log(JSON.stringify({package: '@leafseamer/sdk', artifacts: files.size, operations: product.operations, selection: selected.contract_id, final_contract: false}));

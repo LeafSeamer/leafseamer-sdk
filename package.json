@@ -5,16 +5,36 @@
   "type": "module",
   "license": "Apache-2.0",
   "description": "LeafSeamer 类型客户端、严格报文校验与定向 HTTP 传输",
-  "engines": { "node": ">=24.22.0 <25" },
+  "engines": {
+    "node": ">=24.22.0 <25"
+  },
   "packageManager": "npm@11.19.1",
   "exports": {
-    ".": { "types": "./dist/index.d.mts", "import": "./dist/index.mjs" },
-    "./http": { "types": "./dist/http.d.mts", "import": "./dist/http.mjs" }
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./http": {
+      "types": "./dist/http.d.mts",
+      "import": "./dist/http.mjs"
+    }
   },
-  "files": ["dist", "LICENSE", "README.md"],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "CONTRACT.md"
+  ],
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "npm run build && node --disallow-code-generation-from-strings --test test/*.test.mjs",
     "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "canonicalize": "5.1.0",
+    "openapi-typescript": "7.13.0",
+    "typescript": "5.9.3"
   }
 }

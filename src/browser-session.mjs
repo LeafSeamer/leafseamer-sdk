@@ -52,13 +52,14 @@ export function createBrowserSessionClient({baseUrl, timeoutMs, maxResponseBytes
       }
       return result;
     } catch (error) { clearLocalState(); throw error; }
-    finally { busy = false; }
+    finally { if (operation === 'logoutSession') clearLocalState(); busy = false; }
   }
   return Object.freeze({
     login: body => execute('login', {headers: {origin}, body}, 'login'),
     refresh: clientInstanceId => execute('refreshSession', {headers: {origin}, body: {client_instance_id: clientInstanceId}}, 'cookie'),
     issueToken: ({audience, requested_scopes}) => execute('issueToken', {headers: {origin}, body: {audience, requested_scopes, extension_instance_id: null}}, 'cookie'),
     current: () => execute('getSession', {}, 'bearer'),
+    logout: () => execute('logoutSession', {headers: {origin}}, 'cookie'),
     clearLocalState,
   });
 }
