@@ -1,0 +1,26 @@
+{
+  "format": "leafseamer-sdk-inputs/1",
+  "source_commit": "aff5ccbb75b6140109f948f81284785c75e46d1e",
+  "selection": {
+    "contract_id": "leafseamer.api.v1.panel4",
+    "contract_digest": "sha256:decbdf83f91486da0f473d0cbd5ad20efd188cc681de3b04a39921a4e72fa4fd"
+  },
+  "files": {
+    "contracts/panel-client/client.mjs": "dad9f28428c584135600f2eb7cf60c6184cfca22e3d5192daa7dd4d5108fba04",
+    "contracts/panel-client/client.d.mts": "f4557bd1f35944c481795869fc7920efa0182c0973a9275f04cfb9445b12235a",
+    "contracts/panel-http/adapter.mjs": "9dc437e5e277595673258bda259a3832f33f454409fc0f9141b94070b5a17456",
+    "contracts/panel-http/preview/catalog.mjs": "dd6c127a92178a8485306a45c59c80485b2820d13e32d6c38b99c468109b00f5",
+    "contracts/panel-http/preview/validators.mjs": "7e1b187ec12e3344965e68d602477aecd2ef2746ca84ef788e96c2e18df91bf8",
+    "contracts/panel-wire/decoder.mjs": "801ec02a7d7644263a7578a51f02401574e25a4dc0ea4d80264a219b8ef6df28",
+    "contracts/panel-wire/contract/selection.json": "e1f864062a8bebce992b010c3df01966dc37fc35f3ddafb0e3d459ad15a1c363",
+    "contracts/panel-client/preview/operations.d.ts": "86887d67c5a401205e005f17d4b25f41a38a2f3203769250b96093a79936a57c",
+    "contracts/panel-client/preview/controller.d.ts": "f11a28193a3f01151b7a904e44f8288aecf8faca4d81e56b46cca835a0cd1055",
+    "contracts/panel-client/preview/seamer.d.ts": "d9eb0e97927ea7e4f4e3a0ea9f65d1a055ef32ff8a6835073c361bd01113ac7c",
+    "contracts/panel-wire/preview/routes.mjs": "4d780cf9fe9daaf6348e3222a66f4c228c8ad33450adf3db3adbcaa2e767b926",
+    "contracts/panel-wire/preview/registry.mjs": "e6f0e6a4006632e21c14730c691d0df7873d489bcd2ad3b13bb9b13ed1d455e6",
+    "contracts/panel-wire/preview/validators.mjs": "274cf7b9177bfa569985a0ee66ac8e79aede65f89f7e747a9897360b45ab228e",
+    "contracts/panel-wire/preview/wire.mjs": "47ee90c6585770cc16a1aee27f7d6fbcfb5cc7b64b46b791ed386443170b1520",
+    "contracts/panel-wire/preview/helpers.mjs": "920ee8279050fe2beae3657a95e98ad7ae5fbe141b8f184dfa217620959253fa",
+    "contracts/panel-wire/preview/LICENSES.txt": "8da6966734e4e5080bc5dedeff1d1e9dcd6cc239f043a97c127b9ef7a15b3c21"
+  }
+}
