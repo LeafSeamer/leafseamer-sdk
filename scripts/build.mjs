@@ -14,7 +14,7 @@ for (const [name, digest] of Object.entries(lock.files)) {
 }
 const selected = JSON.parse(await fs.readFile(path.join(root, 'contracts/panel-wire/contract/selection.json'), 'utf8'));
 if (JSON.stringify(selected) !== JSON.stringify(lock.selection)) throw new Error('selection_drift');
-for (const name of ['index.mjs', 'index.d.mts', 'fetch-transport.mjs', 'http.mjs', 'http.d.mts']) files.set(name, await fs.readFile(path.join(root, 'src', name)));
+for (const name of ['index.mjs', 'index.d.mts', 'fetch-transport.mjs', 'browser-session.mjs', 'http.mjs', 'http.d.mts']) files.set(name, await fs.readFile(path.join(root, 'src', name)));
 files.set('selection.mjs', Buffer.from('export const contractSelection = Object.freeze(' + JSON.stringify(selected) + ');\n'));
 files.set('THIRD_PARTY_LICENSES.txt', files.get('runtime/panel-wire/preview/LICENSES.txt'));
 files.set('build-manifest.json', Buffer.from(JSON.stringify({format: 'leafseamer-sdk-build/1', selection: selected,

@@ -24,3 +24,16 @@ export interface FetchTransportOptions {
 }
 /** SDK 不重试、不跟随重定向；超时不证明服务端未执行。 */
 export function createFetchTransport(options: FetchTransportOptions): Transport;
+
+import type {Results} from './runtime/panel-client/preview/operations.js';
+export class SessionClientError extends Error { constructor(code: string); readonly code: string; }
+export interface BrowserSessionClient {
+  login(body: {login: string; password: string}): Promise<Results['controller']['login']>;
+  refresh(clientInstanceId: string): Promise<Results['controller']['refreshSession']>;
+  issueToken(body: {audience: string; requested_scopes: string[]}): Promise<Results['controller']['issueToken']>;
+  current(): Promise<Results['controller']['getSession']>;
+  /** 只清除内存凭据，不撤销服务端会话或删除HttpOnly Cookie。 */
+  clearLocalState(): void;
+}
+/** 当前会话Cookie路径为/auth；baseUrl只接受同源HTTPS根入口。 */
+export function createBrowserSessionClient(options: Pick<FetchTransportOptions, 'baseUrl' | 'timeoutMs' | 'maxResponseBytes' | 'fetchImpl'>): BrowserSessionClient;

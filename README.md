@@ -39,7 +39,15 @@ const result = await controller.call('discoverContracts');
 
 `npm test` 验证真实本机 HTTP、路径及 authority 绑定、重定向拒绝、发送后断线、响应大小、超时和取消。它不证明浏览器权限流程、生产认证、产品服务、数据库、部署或设备已验收。构建产物在 `dist/`，带字节清单和第三方许可；仅这些运行文件进入 npm 包，本地日志和治理资料不打包。
 
-服务端从 `@leafseamer/sdk/http` 导入 `createHttpAdapter`，将原始方法、目标和逐项原始头传给 `prepareRequest`，再用 `decodeRequest` 校验有界正文；发送前用 `prepareResponse` 和 `decodeResponse` 校验完整响应。解码结果含 `value` 与数值词法信息，业务层须按操作收窄未知类型。句柄绑定创建它的适配器实例，不能跨实例或手工伪造；敏感头不进入参数投影。此出口使用同一份锁定校验器，不复制协议规则，也不提供认证、Origin信任、Cookie管理或网络接收预算。新增检查覆盖客户端／服务端同选择往返、跨实例句柄、重复敏感头、错选择、未知字段和重复JSON键；当前共15项检查通过。
+服务端从 `@leafseamer/sdk/http` 导入 `createHttpAdapter`，将原始方法、目标和逐项原始头传给 `prepareRequest`，再用 `decodeRequest` 校验有界正文；发送前用 `prepareResponse` 和 `decodeResponse` 校验完整响应。解码结果含 `value` 与数值词法信息，业务层须按操作收窄未知类型。句柄绑定创建它的适配器实例，不能跨实例或手工伪造；敏感头不进入参数投影。此出口使用同一份锁定校验器，不复制协议规则，也不提供认证、Origin信任、Cookie管理或网络接收预算。新增检查覆盖客户端／服务端同选择往返、跨实例句柄、重复敏感头、错选择、未知字段和重复JSON键；
+
+## 人员会话客户端
+
+从根入口导入 `createBrowserSessionClient`，传入与页面同源的 HTTPS 根 `baseUrl`，然后依次调用 `login({login, password})`、`issueToken({audience, requested_scopes})`、`current()`。`refresh(clientInstanceId)` 轮换Cookie凭据并清本地旧token；需要继续读取时重新签发token。当前会话Cookie路径为 `/auth`，此客户端拒绝 `/services/<service_id>` 前缀，避免Cookie发送范围不匹配；通用fetch传输的前缀能力不变。
+
+Cookie由浏览器管理，CSRF及token只存在客户端闭包内存，不写本地持久存储；CSRF只从通过选择、Schema和规范编码校验的响应采用。所有会话操作拒绝并发进入，不自动重试或自动刷新。`clearLocalState()` 清内存并使在途响应失效，迟到响应不能重新安装内存凭据；它不能删除HttpOnly Cookie或撤销服务端会话。旧panel4没有完整注销／主体管理接口，完整身份接受集仍须生成。
+
+17项SDK检查覆盖新增的错误CSRF、错误选择、HTTPS／路径限制、凭据发送和失败后清理。Controller另有实际文件库、原生采样与HTTPS往返验证，使用模拟Cookie容器和合成环境批准；不能当作真实浏览器或生产身份资格验收。`fetchImpl` 注入仅供可信宿主适配和测试，调用方不得记录密码、Cookie、CSRF或token。当前Controller的token `expires_in` 使用秒提示，客户端不据它放宽服务端截止。
 
 SDK 的首份独立契约资料位于 [contracts/draft4](contracts/draft4/README.md)：迁入公共 Schema、IPC、HTTP 骨架、路由投影及正反例，可离线重组六份历史产物。该目录冻结旧基线，后续修订须进入明确的新候选版本，不能覆盖旧版。类型客户端、语义判定器及生产工具链仍待交付。
 
