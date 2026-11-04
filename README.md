@@ -51,6 +51,8 @@ Cookie由浏览器管理，CSRF及token只存在客户端闭包内存，不写�
 
 人员会话客户端还提供 `lookupCommandAdmission(identity)`、`rejectCommandAdmission({rejection_operation_id, identity, content})` 和 `submitCommand(command)`，沿用同源Bearer／Origin及不自动重试策略。命令操作返回具名正文：200查原读取 `result.body.state`，裁决读取 `result.body.decision`，不使用身份接口的data信封。Controller当前已实现自身命名空间的持久拒收与查原；新动作仍返回503，只有已有裁决可由迟到submit取回。command.read／command.cancel须显式授予，拒收不是取消已受理动作，not_found也不证明未来副本已被永久拒收。
 
+`listDevices(cursor?)` 和 `getControl(deviceId)` 使用当前Bearer分别读取本Controller设备目录及控制记录，要求device.read和control.read。目录从 `result.body.data` 读取；控制记录从 `result.body` 读取。目录游标失效返回409后重新列举，不能拼接跨修订页面；客户端不自动重试。当前新登记设备保持disconnected和protected，空能力不代表型号已支持，automatic/null也不代表自动化已布防。
+
 19项SDK检查覆盖错误CSRF、错误选择、HTTPS／路径限制、凭据发送、完整操作保留、历史输入摘要及新选择的SchemaRef／RegistryRef／WS一致性。Controller另有实际文件库、原生采样与HTTPS往返验证，使用模拟Cookie容器和合成环境批准；不能当作真实浏览器或生产身份资格验收。`fetchImpl` 注入仅供可信宿主适配和测试，调用方不得记录密码、Cookie、CSRF或token。当前Controller的token `expires_in` 使用秒提示，客户端不据它放宽服务端截止。
 
 SDK 的首份独立契约资料位于 [contracts/draft4](contracts/draft4/README.md)：迁入公共 Schema、IPC、HTTP 骨架、路由投影及正反例，可离线重组六份历史产物。该目录冻结旧基线，后续修订须进入明确的新候选版本，不能覆盖旧版。该目录不是当前产品接受集；完整语义判定器及生产工具链仍待交付。

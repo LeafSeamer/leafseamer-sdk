@@ -65,6 +65,8 @@ export function createBrowserSessionClient({baseUrl, timeoutMs, maxResponseBytes
     submitCommand: body => execute('submitCommand', {body}, 'bearer'),
     lookupCommandAdmission: body => execute('lookupCommandAdmission', {body}, 'bearer'),
     rejectCommandAdmission: body => execute('rejectCommandAdmission', {body}, 'bearer'),
+    listDevices: cursor => execute('listDevices', cursor === undefined ? {} : {query: {cursor}}, 'bearer'),
+    getControl: deviceId => execute('getControl', {path: {device_id: deviceId}}, 'bearer'),
     clearLocalState,
   });
 }
