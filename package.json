@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "license": "Apache-2.0",
-  "description": "LeafSeamer 类型客户端、严格报文校验与定向 HTTP 传输",
+  "description": "LeafSeamer \u7c7b\u578b\u5ba2\u6237\u7aef\u3001\u4e25\u683c\u62a5\u6587\u6821\u9a8c\u4e0e\u5b9a\u5411 HTTP \u4f20\u8f93",
   "engines": {
     "node": ">=24.22.0 <25"
   },
@@ -21,6 +21,10 @@
     "./http": {
       "types": "./dist/http.d.mts",
       "import": "./dist/http.mjs"
+    },
+    "./supervisor-control": {
+      "types": "./dist/supervisor-control.d.mts",
+      "import": "./dist/supervisor-control.mjs"
     }
   },
   "files": [

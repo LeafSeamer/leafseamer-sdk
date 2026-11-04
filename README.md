@@ -61,6 +61,12 @@ Cookie由浏览器管理，CSRF及token只存在客户端闭包内存，不写�
 
 本入口只做字节与结构检查，不生成秘密、计算挑战证明或授准入。可信管道来源、HMAC、域／意图摘要、截止、OS进程归属与单次消费由监督宿主及核心实施。完整来源闭包与摘要记录在 `contracts/bootstrap/source.json`，产物进入统一构建清单；runtime_approved保持false，worker启动与完整运行域验收不因类型存在而完成。
 
+## 监督控制查询入口
+
+`@leafseamer/sdk/supervisor-control` 提供 `decodeSupervisorControl(bytes, expectedType)`、SupervisorScope、LaunchKey及JournalView类型，采用既定 `supervisor-control/0.1.0-draft.1` 的LAUNCH_QUERY／LAUNCH_RESULT／ERROR查询接受集。方向、完整scope／信封、十进制序号和具名结果经静态校验，拒绝重复键和未知字段，正文上限64KiB。查询入口与bootstrap和公开HTTP分别导出，HTTP product1选择及摘要保持不变。
+
+此入口不证明对端身份、当前进程存活或准入有效性；序号连续性、reply_to对应关系和原件一致性由控制连接消费者逐帧核验。当前没有将LAUNCH_REGISTER／CREATE、FENCE或RETIRE写操作宣称为已实现，扩展worker必须采用包含完整object_scope及extension_binding的既定启动意图，不能沿用core空设备分支。
+
 SDK 的首份独立契约资料位于 [contracts/draft4](contracts/draft4/README.md)：迁入公共 Schema、IPC、HTTP 骨架、路由投影及正反例，可离线重组六份历史产物。该目录冻结旧基线，后续修订须进入明确的新候选版本，不能覆盖旧版。该目录不是当前产品接受集；完整语义判定器及生产工具链仍待交付。
 
 旧 NodeCG 实现及历史保留于 [leafseamer-legacy](https://github.com/ikenainanodesu/leafseamer-legacy)。本仓尚未导入旧业务源码；后续复用时逐项记录来源、历史映射和必要许可声明。

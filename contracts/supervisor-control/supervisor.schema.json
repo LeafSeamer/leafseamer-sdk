@@ -1,0 +1,519 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:leafseamer:supervisor-query:1",
+  "$defs": {
+    "supervisor_LAUNCH_QUERY": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "supervisor-control/0.1.0-draft.1"
+        },
+        "type": {
+          "const": "LAUNCH_QUERY"
+        },
+        "scope": {
+          "$ref": "#/$defs/supervisor_Scope"
+        },
+        "channel_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "sequence": {
+          "$ref": "#/$defs/supervisor_U20"
+        },
+        "message_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "reply_to": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "#/$defs/supervisor_LaunchKey"
+        }
+      },
+      "required": [
+        "version",
+        "type",
+        "scope",
+        "channel_id",
+        "sequence",
+        "message_id",
+        "reply_to",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_Scope": {
+      "type": "object",
+      "properties": {
+        "service_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "database_instance_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "supervisor_instance_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "domain_ref": {
+          "$ref": "#/$defs/supervisor_ClockDomainRef"
+        }
+      },
+      "required": [
+        "service_id",
+        "database_instance_id",
+        "supervisor_instance_id",
+        "domain_ref"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_Id": {
+      "$ref": "#/$defs/installation2_Id"
+    },
+    "installation2_Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*(?![\\s\\S])"
+    },
+    "supervisor_ClockDomainRef": {
+      "$ref": "#/$defs/public_ClockDomainRef"
+    },
+    "public_ClockDomainRef": {
+      "type": "object",
+      "properties": {
+        "clock_domain_id": {
+          "type": "string",
+          "pattern": "^clock_[0-9a-f]{64}$"
+        },
+        "descriptor_digest": {
+          "$ref": "#/$defs/public_Digest"
+        }
+      },
+      "required": [
+        "clock_domain_id",
+        "descriptor_digest"
+      ],
+      "additionalProperties": false
+    },
+    "public_Digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "supervisor_U20": {
+      "$ref": "#/$defs/installation2_U20"
+    },
+    "installation2_U20": {
+      "type": "string",
+      "maxLength": 20,
+      "pattern": "^(0|[1-9][0-9]*)(?![\\s\\S])"
+    },
+    "supervisor_LaunchKey": {
+      "type": "object",
+      "properties": {
+        "launch_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "launch_intent_digest": {
+          "$ref": "#/$defs/supervisor_Digest"
+        }
+      },
+      "required": [
+        "launch_id",
+        "launch_intent_digest"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_Digest": {
+      "$ref": "#/$defs/installation2_Digest"
+    },
+    "installation2_Digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}(?![\\s\\S])"
+    },
+    "supervisor_LAUNCH_RESULT": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "supervisor-control/0.1.0-draft.1"
+        },
+        "type": {
+          "const": "LAUNCH_RESULT"
+        },
+        "scope": {
+          "$ref": "#/$defs/supervisor_Scope"
+        },
+        "channel_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "sequence": {
+          "$ref": "#/$defs/supervisor_U20"
+        },
+        "message_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "reply_to": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "payload": {
+          "$ref": "#/$defs/supervisor_LaunchResult"
+        }
+      },
+      "required": [
+        "version",
+        "type",
+        "scope",
+        "channel_id",
+        "sequence",
+        "message_id",
+        "reply_to",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_LaunchResult": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "#/$defs/supervisor_LaunchKey"
+        },
+        "record": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/supervisor_JournalView"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "key",
+        "record"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_JournalView": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "#/$defs/supervisor_LaunchKey"
+        },
+        "supervisor_instance_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "state": {
+          "enum": [
+            "registered",
+            "creating",
+            "awaiting_bootstrap",
+            "admitted_closed",
+            "retiring",
+            "retired",
+            "rejected",
+            "indeterminate"
+          ]
+        },
+        "creation_attempted": {
+          "type": "boolean"
+        },
+        "admission_receipt": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/supervisor_AdmissionReceipt"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "retirement_evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/supervisor_RetirementEvidence"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "gate_state": {
+          "const": "closed"
+        }
+      },
+      "required": [
+        "key",
+        "supervisor_instance_id",
+        "state",
+        "creation_attempted",
+        "admission_receipt",
+        "retirement_evidence",
+        "gate_state"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_AdmissionReceipt": {
+      "type": "object",
+      "properties": {
+        "bootstrap_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "launch_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "launch_intent_digest": {
+          "$ref": "#/$defs/supervisor_Digest"
+        },
+        "member_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "member_boot_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "role": {
+          "enum": [
+            "core",
+            "worker",
+            "time_provider"
+          ]
+        },
+        "artifact_manifest_ref": {
+          "$ref": "#/$defs/supervisor_RuntimeManifestRef"
+        },
+        "channel_binding_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "receipt_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "domain_ref": {
+          "$ref": "#/$defs/supervisor_ClockDomainRef"
+        },
+        "containment_ref": {
+          "$ref": "#/$defs/supervisor_ContainmentRef"
+        },
+        "os_observation_ref": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "admitted_tick_ns": {
+          "$ref": "#/$defs/supervisor_U20"
+        },
+        "gate_state": {
+          "const": "closed"
+        }
+      },
+      "required": [
+        "bootstrap_id",
+        "launch_id",
+        "launch_intent_digest",
+        "member_id",
+        "member_boot_id",
+        "role",
+        "artifact_manifest_ref",
+        "channel_binding_id",
+        "receipt_id",
+        "domain_ref",
+        "containment_ref",
+        "os_observation_ref",
+        "admitted_tick_ns",
+        "gate_state"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_RuntimeManifestRef": {
+      "$ref": "#/$defs/installation2_RuntimeManifestRef"
+    },
+    "installation2_RuntimeManifestRef": {
+      "type": "object",
+      "properties": {
+        "manifest_id": {
+          "$ref": "#/$defs/installation2_Id"
+        },
+        "revision": {
+          "$ref": "#/$defs/installation2_U20"
+        },
+        "digest": {
+          "$ref": "#/$defs/installation2_Digest"
+        }
+      },
+      "required": [
+        "manifest_id",
+        "revision",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_ContainmentRef": {
+      "$ref": "#/$defs/installation2_ContainmentRef"
+    },
+    "installation2_ContainmentRef": {
+      "type": "object",
+      "properties": {
+        "group_id": {
+          "$ref": "#/$defs/installation2_Id"
+        },
+        "generation": {
+          "$ref": "#/$defs/installation2_Id"
+        },
+        "backend": {
+          "enum": [
+            "windows_job",
+            "linux_cgroup_v2",
+            "container_runtime"
+          ]
+        }
+      },
+      "required": [
+        "group_id",
+        "generation",
+        "backend"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_RetirementEvidence": {
+      "type": "object",
+      "properties": {
+        "evidence_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "service_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "old_domain_ref": {
+          "$ref": "#/$defs/supervisor_ClockDomainRef"
+        },
+        "target_scope": {
+          "enum": [
+            "member_group",
+            "runtime_domain"
+          ]
+        },
+        "target_member_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/supervisor_Id"
+          },
+          "maxItems": 256,
+          "uniqueItems": true
+        },
+        "containment_ref": {
+          "$ref": "#/$defs/supervisor_ContainmentRef"
+        },
+        "launch_intake_closed": {
+          "type": "boolean"
+        },
+        "os_observation_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/supervisor_Id"
+          },
+          "maxItems": 256,
+          "uniqueItems": true
+        },
+        "result": {
+          "enum": [
+            "confirmed_empty",
+            "unproven"
+          ]
+        },
+        "evaluator_domain_ref": {
+          "$ref": "#/$defs/supervisor_ClockDomainRef"
+        },
+        "observed_tick_ns": {
+          "$ref": "#/$defs/supervisor_U20"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "service_id",
+        "old_domain_ref",
+        "target_scope",
+        "target_member_ids",
+        "containment_ref",
+        "launch_intake_closed",
+        "os_observation_refs",
+        "result",
+        "evaluator_domain_ref",
+        "observed_tick_ns"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_ERROR": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "supervisor-control/0.1.0-draft.1"
+        },
+        "type": {
+          "const": "ERROR"
+        },
+        "scope": {
+          "$ref": "#/$defs/supervisor_Scope"
+        },
+        "channel_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "sequence": {
+          "$ref": "#/$defs/supervisor_U20"
+        },
+        "message_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "reply_to": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "payload": {
+          "$ref": "#/$defs/supervisor_Error"
+        }
+      },
+      "required": [
+        "version",
+        "type",
+        "scope",
+        "channel_id",
+        "sequence",
+        "message_id",
+        "reply_to",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_Error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "enum": [
+            "identity_conflict",
+            "stale_fence",
+            "unauthorized",
+            "invalid_binding",
+            "expired",
+            "capacity",
+            "journal_unavailable",
+            "indeterminate",
+            "not_found"
+          ]
+        },
+        "retry_action": {
+          "const": "query_only"
+        }
+      },
+      "required": [
+        "code",
+        "retry_action"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/supervisor_LAUNCH_QUERY"
+    },
+    {
+      "$ref": "#/$defs/supervisor_LAUNCH_RESULT"
+    },
+    {
+      "$ref": "#/$defs/supervisor_ERROR"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {buildContract} from './contract.mjs';
+import {buildSupervisorControl} from './supervisor-control-contract.mjs';
 import {buildBootstrap} from './bootstrap-contract.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const lock = JSON.parse(await fs.readFile(path.join(root, 'sdk-inputs.json'), 'utf8'));
@@ -19,6 +20,7 @@ if (JSON.stringify(baseline) !== JSON.stringify(lock.selection)) throw new Error
 const product = await buildContract(), selected = product.selection;
 for (const [name, bytes] of product.files) files.set(name, bytes);
 for (const [name, bytes] of await buildBootstrap()) files.set(name, bytes);
+for (const [name, bytes] of await buildSupervisorControl()) files.set(name, bytes);
 for (const name of ['index.mjs', 'index.d.mts', 'fetch-transport.mjs', 'browser-session.mjs', 'http.mjs', 'http.d.mts']) files.set(name, await fs.readFile(path.join(root, 'src', name)));
 files.set('selection.mjs', Buffer.from('export const contractSelection = Object.freeze(' + JSON.stringify(selected) + ');\n'));
 files.set('THIRD_PARTY_LICENSES.txt', files.get('runtime/panel-wire/preview/LICENSES.txt'));

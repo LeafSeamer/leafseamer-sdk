@@ -1,0 +1,55 @@
+{
+  "format": "leafseamer-supervisor-query-input/1",
+  "source_repository": "https://github.com/LeafSeamer/leafseamer-suite",
+  "source_commit": "0eee0aea7e64a66ea90427be361c196a54e2e192",
+  "source_files": [
+    {
+      "path": "docs/contracts/df02-supervisor/bootstrap.schema.json",
+      "sha256": "fedc394c0262a99bd5aed2b88881b1101f50f4545c586d3f60d09afe770455bb"
+    },
+    {
+      "path": "docs/contracts/df02-supervisor/supervisor.schema.json",
+      "sha256": "ba848f2245140294fa20fbcc7cae9f4f18a8afb7a96aee809522ed70556a7091"
+    },
+    {
+      "path": "docs/contracts/c09-installation/installation-v02.schema.json",
+      "sha256": "2520c2a279260f144228d5e9c415b2c5d928cb960587ff0a0297e2e3c77a9b78"
+    },
+    {
+      "path": "docs/contracts/draft4/first-loop.schema.json",
+      "sha256": "b4ba39a5a060864cb194f34cf59231481afe76bbaff2a3ea88c76b642f501c18"
+    },
+    {
+      "path": "docs/contracts/c09-installation/installation.schema.json",
+      "sha256": "42e45bb314f83326d30bb4e2174da2b7a521460b05c229c3419f409338fbce3d"
+    }
+  ],
+  "definition_sources": {
+    "supervisor_LAUNCH_QUERY": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/LAUNCH_QUERY",
+    "supervisor_Scope": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Scope",
+    "supervisor_Id": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Id",
+    "installation2_Id": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/Id",
+    "supervisor_ClockDomainRef": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/ClockDomainRef",
+    "public_ClockDomainRef": "https://leafseamer.invalid/contracts/draft4/first-loop.schema.json#/$defs/ClockDomainRef",
+    "public_Digest": "https://leafseamer.invalid/contracts/draft4/first-loop.schema.json#/$defs/Digest",
+    "supervisor_U20": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/U20",
+    "installation2_U20": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/U20",
+    "supervisor_LaunchKey": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/LaunchKey",
+    "supervisor_Digest": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Digest",
+    "installation2_Digest": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/Digest",
+    "supervisor_LAUNCH_RESULT": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/LAUNCH_RESULT",
+    "supervisor_LaunchResult": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/LaunchResult",
+    "supervisor_JournalView": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/JournalView",
+    "supervisor_AdmissionReceipt": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/AdmissionReceipt",
+    "supervisor_RuntimeManifestRef": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/RuntimeManifestRef",
+    "installation2_RuntimeManifestRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/RuntimeManifestRef",
+    "supervisor_ContainmentRef": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/ContainmentRef",
+    "installation2_ContainmentRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/ContainmentRef",
+    "supervisor_RetirementEvidence": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/RetirementEvidence",
+    "supervisor_ERROR": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/ERROR",
+    "supervisor_Error": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Error"
+  },
+  "schema_sha256": "3ed73d24e6fa6301471fe142aef69421c60b7fa6b464dc25646d59fd6b05848d",
+  "control_version": "supervisor-control/0.1.0-draft.1",
+  "runtime_approved": false
+}
