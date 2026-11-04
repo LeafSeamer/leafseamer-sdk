@@ -25,7 +25,7 @@ export interface FetchTransportOptions {
 /** SDK 不重试、不跟随重定向；超时不证明服务端未执行。 */
 export function createFetchTransport(options: FetchTransportOptions): Transport;
 
-import type {Results} from './runtime/panel-client/preview/operations.js';
+import type {Results, Inputs} from './runtime/panel-client/preview/operations.js';
 export class SessionClientError extends Error { constructor(code: string); readonly code: string; }
 export interface BrowserSessionClient {
   login(body: {login: string; password: string}): Promise<Results['controller']['login']>;
@@ -35,6 +35,9 @@ export interface BrowserSessionClient {
   /** 仅退出当前人员会话；202不证明远端撤销已完成，失败也清本地内存。 */
   logout(): Promise<Results['controller']['logoutSession']>;
   createRequestContext(body: {audience: string; operations: string[]; ttl_ms: number; max_unique_requests: number}): Promise<Results['controller']['createRequestContext']>;
+  submitCommand(body: Inputs['controller']['submitCommand']['body']): Promise<Results['controller']['submitCommand']>;
+  lookupCommandAdmission(body: Inputs['controller']['lookupCommandAdmission']['body']): Promise<Results['controller']['lookupCommandAdmission']>;
+  rejectCommandAdmission(body: Inputs['controller']['rejectCommandAdmission']['body']): Promise<Results['controller']['rejectCommandAdmission']>;
   /** 只清除内存凭据，不撤销服务端会话或删除HttpOnly Cookie。 */
   clearLocalState(): void;
 }
