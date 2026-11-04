@@ -39,6 +39,8 @@ const result = await controller.call('discoverContracts');
 
 `npm test` 验证真实本机 HTTP、路径及 authority 绑定、重定向拒绝、发送后断线、响应大小、超时和取消。它不证明浏览器权限流程、生产认证、产品服务、数据库、部署或设备已验收。构建产物在 `dist/`，带字节清单和第三方许可；仅这些运行文件进入 npm 包，本地日志和治理资料不打包。
 
+服务端从 `@leafseamer/sdk/http` 导入 `createHttpAdapter`，将原始方法、目标和逐项原始头传给 `prepareRequest`，再用 `decodeRequest` 校验有界正文；发送前用 `prepareResponse` 和 `decodeResponse` 校验完整响应。解码结果含 `value` 与数值词法信息，业务层须按操作收窄未知类型。句柄绑定创建它的适配器实例，不能跨实例或手工伪造；敏感头不进入参数投影。此出口使用同一份锁定校验器，不复制协议规则，也不提供认证、Origin信任、Cookie管理或网络接收预算。新增检查覆盖客户端／服务端同选择往返、跨实例句柄、重复敏感头、错选择、未知字段和重复JSON键；当前共15项检查通过。
+
 SDK 的首份独立契约资料位于 [contracts/draft4](contracts/draft4/README.md)：迁入公共 Schema、IPC、HTTP 骨架、路由投影及正反例，可离线重组六份历史产物。该目录冻结旧基线，后续修订须进入明确的新候选版本，不能覆盖旧版。类型客户端、语义判定器及生产工具链仍待交付。
 
 旧 NodeCG 实现及历史保留于 [leafseamer-legacy](https://github.com/ikenainanodesu/leafseamer-legacy)。本仓尚未导入旧业务源码；后续复用时逐项记录来源、历史映射和必要许可声明。
