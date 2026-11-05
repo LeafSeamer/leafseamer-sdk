@@ -20,3 +20,12 @@ test('采样响应必须关联请求并将采样tick限定在原窗口',()=>{
  assert.equal(validateDeviceModuleFrame(value).body.value.level,0);
  for(const tick of ['18446744073709549999','18446744073709551000'])assert.throws(()=>validateDeviceModuleFrame({...value,body:{...value.body,captured_tick_ns:tick}}));
 });
+test('目录提议只属于v2连接响应，集合有序唯一且不接受自报批准',()=>{
+ const base=frame(),value={...base,type:'CONNECTED',reply_to:'request',body:{device_id:'device',device_session_id:'session',
+  identity:{kind:'virtual',model:'simulator',revision:'1'},catalog:{catalog_revision:'1',state_schema:{schema_id:'state',dialect:'https://json-schema.org/draft/2020-12/schema',document:false,digest:'sha256:'+'1'.repeat(64)},action_ids:[],trigger_ids:[]}}};
+ assert.equal(validateDeviceModuleFrame(structuredClone(value)).body.catalog.catalog_revision,'1');
+ for(const change of [v=>v.version='device-module/1',v=>delete v.body.catalog,v=>v.body.catalog.approved=true,v=>v.body.catalog.catalog_revision='0',
+  v=>v.body.catalog.action_ids=['set','get'],v=>v.body.catalog.action_ids=['get','get'],v=>v.body.catalog.trigger_ids=['event\n']]){
+  const changed=structuredClone(value);change(changed);assert.throws(()=>validateDeviceModuleFrame(changed));
+ }
+});

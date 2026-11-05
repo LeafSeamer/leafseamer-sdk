@@ -1,10 +1,15 @@
-export const deviceModuleProtocol:'device-module/1';
+export const deviceModuleProtocol:'device-module/2';
 export type Json= null|boolean|number|string|Json[]|{[key:string]:Json};
 export type ModuleIdentity={kind:'virtual'|'physical';model:string;revision:string};
+export interface ModuleCatalogProposal {
+ readonly catalog_revision:string;readonly state_schema:Readonly<{schema_id:string;dialect:string;digest:string;document:Json}>;
+ readonly action_ids:readonly string[];readonly trigger_ids:readonly string[];
+}
 export interface DeviceModuleContext {readonly configuration:Json;readonly device_ids:readonly string[];readonly signal:AbortSignal;tick():bigint;}
 export interface DeviceModule {
- readonly api_version:'leafseamer-device-module/1';
+ readonly api_version:'leafseamer-device-module/2';
  connectReadOnly(input:{device_id:string;device_session_id:string;signal:AbortSignal}):Promise<ModuleIdentity>;
+ proposeCatalog(input:{device_id:string;device_session_id:string;identity:Readonly<ModuleIdentity>;signal:AbortSignal}):Promise<ModuleCatalogProposal>;
  captureBaseline(input:{device_id:string;device_session_id:string;capture_id:string;signal:AbortSignal}):Promise<Json>;
  stopReadOnly(input:{device_id:string;device_session_id:string;signal:AbortSignal}):Promise<void>;
 }
@@ -26,7 +31,7 @@ export interface DeviceModuleBodies {
  LOAD:{readonly runtime:object;readonly configuration:{readonly reference:ModuleReference<'configuration'>;readonly value:unknown}};
  LOADED:{readonly entry_id:string};
  CONNECT:ModuleSession;
- CONNECTED:ModuleSession&{readonly identity:Readonly<ModuleIdentity>};
+ CONNECTED:ModuleSession&{readonly identity:Readonly<ModuleIdentity>;readonly catalog:ModuleCatalogProposal};
  CAPTURE:ModuleCapture;
  CAPTURED:ModuleCapture&{readonly value:unknown;readonly captured_tick_ns:string};
  DISCONNECT:ModuleSession;

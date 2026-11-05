@@ -1,5 +1,5 @@
 // 设备模块的加载、只读连接与候选采样通道；设备命令仍使用独立执行IPC。
-export const deviceModuleProtocol='device-module/1';
+export const deviceModuleProtocol='device-module/2';
 export class DeviceModuleError extends Error {constructor(code){super(code);this.name='DeviceModuleError';this.code=code;}}
 export const moduleNeed=(ok,code='module_frame')=>{if(!ok)throw new DeviceModuleError(code);};
 export const moduleExact=(value,keys)=>moduleNeed(value&&typeof value==='object'&&!Array.isArray(value)&&Object.keys(value).sort().join(',')===[...keys].sort().join(','));
@@ -7,7 +7,7 @@ const id=v=>typeof v==='string'&&/^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$(?![\s\S])/
 const integer=v=>typeof v==='string'&&/^(0|[1-9][0-9]{0,19})$(?![\s\S])/.test(v);
 const digest=v=>typeof v==='string'&&/^sha256:[0-9a-f]{64}$(?![\s\S])/.test(v);
 const freeze=v=>{if(v&&typeof v==='object'){for(const item of Object.values(v))freeze(item);Object.freeze(v);}return v;};
-const fields={LOAD:['runtime','configuration'],LOADED:['entry_id'],CONNECT:['device_id','device_session_id'],CONNECTED:['device_id','device_session_id','identity'],
+const fields={LOAD:['runtime','configuration'],LOADED:['entry_id'],CONNECT:['device_id','device_session_id'],CONNECTED:['device_id','device_session_id','identity','catalog'],
  CAPTURE:['device_id','device_session_id','capture_id'],CAPTURED:['device_id','device_session_id','capture_id','value','captured_tick_ns'],
  DISCONNECT:['device_id','device_session_id'],DISCONNECTED:['device_id','device_session_id']};
 export function validateDeviceModuleFrame(frame){
@@ -26,7 +26,15 @@ export function validateDeviceModuleFrame(frame){
   const config=frame.body.configuration.reference;moduleExact(config,['kind','authority_service_id','database_instance_id','object_id','revision','digest']);
   moduleNeed(config.kind==='configuration'&&[config.authority_service_id,config.database_instance_id,config.object_id].every(id)&&integer(config.revision)&&digest(config.digest));
  }
- if(frame.type==='CONNECTED'){moduleExact(frame.body.identity,['kind','model','revision']);moduleNeed(['virtual','physical'].includes(frame.body.identity.kind)&&id(frame.body.identity.model)&&id(frame.body.identity.revision));}
+ if(frame.type==='CONNECTED'){
+  moduleExact(frame.body.identity,['kind','model','revision']);moduleNeed(['virtual','physical'].includes(frame.body.identity.kind)&&id(frame.body.identity.model)&&id(frame.body.identity.revision));
+  const proposal=frame.body.catalog;moduleExact(proposal,['catalog_revision','state_schema','action_ids','trigger_ids']);
+  moduleNeed(integer(proposal.catalog_revision)&&proposal.catalog_revision!=='0');
+  for(const name of ['action_ids','trigger_ids'])moduleNeed(Array.isArray(proposal[name])&&proposal[name].length<=128&&proposal[name].every((v,i)=>id(v)&&(i===0||v>proposal[name][i-1])));
+  const schema=proposal.state_schema;moduleExact(schema,['schema_id','dialect','document','digest']);
+  moduleNeed(id(schema.schema_id)&&schema.dialect==='https://json-schema.org/draft/2020-12/schema'&&digest(schema.digest)&&
+   (typeof schema.document==='boolean'||schema.document&&typeof schema.document==='object'&&!Array.isArray(schema.document)));
+ }
  if(frame.type==='CAPTURED')moduleNeed(integer(frame.body.captured_tick_ns)&&BigInt(frame.body.captured_tick_ns)>=BigInt(frame.issued_tick_ns)&&BigInt(frame.body.captured_tick_ns)<BigInt(frame.deadline_tick_ns));
  return freeze(frame);
 }

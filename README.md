@@ -57,7 +57,9 @@ Cookie由浏览器管理，CSRF及token只存在客户端闭包内存，不写�
 
 ## 设备模块只读接口
 
-`@leafseamer/sdk/device-module` 导出 `DeviceModuleFactory`、`DeviceModuleFrame` 和 `validateDeviceModuleFrame`。扩展入口导出 `createDeviceModule(context)`，返回版本为 `leafseamer-device-module/1` 的实现，提供 `connectReadOnly`、`captureBaseline`、`stopReadOnly` 三个异步方法。宿主供应已绑定的配置、设备范围、取消信号和本域单调读数；模块须核设备与session并响应取消。清单须声明该API版本及 `device-module/1` IPC版本。
+`@leafseamer/sdk/device-module` 导出 `DeviceModuleFactory`、`DeviceModuleFrame` 和 `validateDeviceModuleFrame`。扩展入口导出 `createDeviceModule(context)`，返回版本为 `leafseamer-device-module/2` 的实现，提供 `connectReadOnly`、`proposeCatalog`、`captureBaseline`、`stopReadOnly` 四个异步方法。宿主供应已绑定的配置、设备范围、取消信号和本域单调读数；模块须核设备与session并响应取消。清单须声明该API版本及 `device-module/2` IPC版本。
+
+连接取得identity后，宿主在同一截止窗口内调用 `proposeCatalog`，把只含目录修订、状态Schema和动作／触发器ID集合的提议附于CONNECTED。提议不能自报批准；Controller须按当前安装批准与具体型号资格核验。v2不接受缺少目录的v1连接响应。
 
 通道依次使用 LOAD／LOADED、CONNECT／CONNECTED、CAPTURE／CAPTURED、DISCONNECT／DISCONNECTED。帧携带运行引用、通道及member boot，序号和tick保留十进制字符串，每次请求窗口至多两秒；响应回绑原序号、请求ID、时间窗口及设备／session／capture身份。类型按消息判别，但采样value保持unknown，须按已批准设备能力另行验证。
 
