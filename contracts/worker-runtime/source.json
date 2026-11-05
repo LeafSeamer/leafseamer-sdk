@@ -1,0 +1,97 @@
+{
+  "format": "leafseamer-worker-runtime-input/1",
+  "source_repository": "https://github.com/LeafSeamer/leafseamer-suite",
+  "source_commit": "79d97928fc8da8373ed907a028777f2737c8cf7d",
+  "source_files": [
+    {
+      "path": "docs/contracts/df02-supervisor/bootstrap.schema.json",
+      "sha256": "fedc394c0262a99bd5aed2b88881b1101f50f4545c586d3f60d09afe770455bb"
+    },
+    {
+      "path": "docs/contracts/df02-supervisor/supervisor.schema.json",
+      "sha256": "ba848f2245140294fa20fbcc7cae9f4f18a8afb7a96aee809522ed70556a7091"
+    },
+    {
+      "path": "docs/contracts/c09-installation/installation-v02.schema.json",
+      "sha256": "2520c2a279260f144228d5e9c415b2c5d928cb960587ff0a0297e2e3c77a9b78"
+    },
+    {
+      "path": "docs/contracts/draft4/first-loop.schema.json",
+      "sha256": "b4ba39a5a060864cb194f34cf59231481afe76bbaff2a3ea88c76b642f501c18"
+    },
+    {
+      "path": "docs/contracts/c09-installation/installation.schema.json",
+      "sha256": "42e45bb314f83326d30bb4e2174da2b7a521460b05c229c3419f409338fbce3d"
+    },
+    {
+      "path": "docs/rebirth-c09-extension-design.md",
+      "sha256": "5a12b6d1f32342687014e7ab9c9eed1597a128e3323fc984848bc239a154df19"
+    },
+    {
+      "path": "docs/rebirth-c05-event-sync-design.md",
+      "sha256": "7e5c1f2fc7f9fdba49acc8d6b3567125dc800d3af2321b79aa78c371bf1f2a6b"
+    },
+    {
+      "path": "docs/rebirth-c06-schedule-design.md",
+      "sha256": "0efa24d7533fc793a1cbaa4b1f6703b4364d91570df64dd691e8839a43abc16f"
+    }
+  ],
+  "definition_sources": {
+    "supervisor_LAUNCH_QUERY": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/LAUNCH_QUERY",
+    "supervisor_Scope": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Scope",
+    "supervisor_Id": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Id",
+    "installation2_Id": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/Id",
+    "supervisor_ClockDomainRef": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/ClockDomainRef",
+    "public_ClockDomainRef": "https://leafseamer.invalid/contracts/draft4/first-loop.schema.json#/$defs/ClockDomainRef",
+    "public_Digest": "https://leafseamer.invalid/contracts/draft4/first-loop.schema.json#/$defs/Digest",
+    "supervisor_U20": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/U20",
+    "installation2_U20": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/U20",
+    "supervisor_LaunchKey": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/LaunchKey",
+    "supervisor_Digest": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Digest",
+    "installation2_Digest": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/Digest",
+    "supervisor_LAUNCH_RESULT": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/LAUNCH_RESULT",
+    "supervisor_LaunchResult": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/LaunchResult",
+    "supervisor_JournalView": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/JournalView",
+    "supervisor_AdmissionReceipt": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/AdmissionReceipt",
+    "supervisor_RuntimeManifestRef": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/RuntimeManifestRef",
+    "installation2_RuntimeManifestRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/RuntimeManifestRef",
+    "supervisor_ContainmentRef": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/ContainmentRef",
+    "installation2_ContainmentRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/ContainmentRef",
+    "supervisor_RetirementEvidence": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/RetirementEvidence",
+    "supervisor_ERROR": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/ERROR",
+    "supervisor_Error": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Error",
+    "supervisor_FENCE_PUT": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/FENCE_PUT",
+    "supervisor_FenceSnapshot": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/FenceSnapshot",
+    "supervisor_FenceItem": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/FenceItem",
+    "supervisor_FENCE_RESULT": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/FENCE_RESULT",
+    "supervisor_FenceResult": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/FenceResult",
+    "supervisor_LAUNCH_REGISTER": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/LAUNCH_REGISTER",
+    "supervisor_Register": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Register",
+    "supervisor_ExtensionLaunchIntent": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/ExtensionLaunchIntent",
+    "installation2_ExtensionLaunchIntent": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/ExtensionLaunchIntent",
+    "installation2_ExtensionLaunchBinding": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/ExtensionLaunchBinding",
+    "installation2_InstallationRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/InstallationRef",
+    "installation2_ApprovalRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/ApprovalRef",
+    "installation2_ReviewRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/ReviewRef",
+    "installation2_RoleResolutionRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/RoleResolutionRef",
+    "installation2_ConfigurationRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/ConfigurationRef",
+    "installation2_IntakeRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/IntakeRef",
+    "installation2_PlatformProfileRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/PlatformProfileRef",
+    "supervisor_LaunchAuthorization": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/LaunchAuthorization",
+    "installation2_LaunchAuthorization": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/LaunchAuthorization",
+    "installation2_LaunchAuthorizationRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/LaunchAuthorizationRef",
+    "installation2_Lifetime": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/Lifetime",
+    "installation2_ClockRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/ClockRef",
+    "supervisor_LAUNCH_CREATE": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/LAUNCH_CREATE",
+    "supervisor_Create": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Create",
+    "supervisor_RETIRE_REQUEST": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/RETIRE_REQUEST",
+    "supervisor_RetireRequest": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/RetireRequest",
+    "supervisor_RETIRE_RESULT": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/RETIRE_RESULT",
+    "installation2_SourceRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/SourceRef",
+    "installation2_DataObjectRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/DataObjectRef",
+    "installation2_RuntimeBindingRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/RuntimeBindingRef"
+  },
+  "schema_sha256": "6489551b4686fcbaee338571620cdea612eaf27c8d7580deba48a9578bd29dcf",
+  "control_version": "supervisor-control/0.1.0-draft.1",
+  "runtime_approved": false
+}

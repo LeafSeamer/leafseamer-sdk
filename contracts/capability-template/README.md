@@ -1,0 +1,9 @@
+# 静态设备能力模板
+
+独立入口`@leafseamer/sdk/capability-template`，选择`leafseamer.capability-template.1`。不改变HTTP product1、安装导入或worker通道接受集。原始JSON使用既有严格解析器，至多1MiB、深度32；结构校验器在构建时编译，运行核心不生成代码。
+
+`extension-capability-template/1`固定template_id、device_role、device_kind、actions、triggers和state_schema。device_role引用本包声明的device角色；模板不携带本地设备ID。动作／触发器和SchemaDescriptor从产品唯一模型闭包派生，动作模板只去除运行期footprint；运行期footprint必须在实际CatalogApproval中另行绑定。静态模板不能预填运行manifest摘要形成自引用环，也不提供字符串插值。
+
+每文件动作与触发器各至多128，按ID严格排序，动作集合字段排序且唯一，默认完成等级属于声明集合。SchemaDescriptor摘要须由宿主核对；文档本身须在受预算的固定校验子进程编译，不加载外部引用。结构解码不冒充动态Schema编译成功。
+
+安装服务只能从清单capability_template_file_ids指定且库存role=schema的原受保护文件读取。Controller必须核完整intake／清单／库存／文件摘要，将device_role映射到当前配置所绑定的本地设备，并匹配device_kind，才能据此审阅静态动作请求。模板是发行包的声明；它不证明物理型号、固件、连接、完成／取消能力、资源足迹或设备运行资格。启动后的只读身份观测、运行目录与CatalogApproval仍是执行前的独立条件。

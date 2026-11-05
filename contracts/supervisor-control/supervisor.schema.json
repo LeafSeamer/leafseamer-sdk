@@ -503,6 +503,158 @@
         "retry_action"
       ],
       "additionalProperties": false
+    },
+    "supervisor_FENCE_PUT": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "supervisor-control/0.1.0-draft.1"
+        },
+        "type": {
+          "const": "FENCE_PUT"
+        },
+        "scope": {
+          "$ref": "#/$defs/supervisor_Scope"
+        },
+        "channel_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "sequence": {
+          "$ref": "#/$defs/supervisor_U20"
+        },
+        "message_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "reply_to": {
+          "type": "null"
+        },
+        "payload": {
+          "$ref": "#/$defs/supervisor_FenceSnapshot"
+        }
+      },
+      "required": [
+        "version",
+        "type",
+        "scope",
+        "channel_id",
+        "sequence",
+        "message_id",
+        "reply_to",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_FenceSnapshot": {
+      "type": "object",
+      "properties": {
+        "scope": {
+          "$ref": "#/$defs/supervisor_Scope"
+        },
+        "revision": {
+          "$ref": "#/$defs/supervisor_U20"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/supervisor_FenceItem"
+          },
+          "maxItems": 256,
+          "uniqueItems": true
+        },
+        "digest": {
+          "$ref": "#/$defs/supervisor_Digest"
+        }
+      },
+      "required": [
+        "scope",
+        "revision",
+        "items",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_FenceItem": {
+      "type": "object",
+      "properties": {
+        "launch_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "launch_intent_digest": {
+          "$ref": "#/$defs/supervisor_Digest"
+        },
+        "disposition": {
+          "enum": [
+            "allow",
+            "deny"
+          ]
+        }
+      },
+      "required": [
+        "launch_id",
+        "launch_intent_digest",
+        "disposition"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_FENCE_RESULT": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "supervisor-control/0.1.0-draft.1"
+        },
+        "type": {
+          "const": "FENCE_RESULT"
+        },
+        "scope": {
+          "$ref": "#/$defs/supervisor_Scope"
+        },
+        "channel_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "sequence": {
+          "$ref": "#/$defs/supervisor_U20"
+        },
+        "message_id": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "reply_to": {
+          "$ref": "#/$defs/supervisor_Id"
+        },
+        "payload": {
+          "$ref": "#/$defs/supervisor_FenceResult"
+        }
+      },
+      "required": [
+        "version",
+        "type",
+        "scope",
+        "channel_id",
+        "sequence",
+        "message_id",
+        "reply_to",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "supervisor_FenceResult": {
+      "type": "object",
+      "properties": {
+        "revision": {
+          "$ref": "#/$defs/supervisor_U20"
+        },
+        "snapshot_digest": {
+          "$ref": "#/$defs/supervisor_Digest"
+        },
+        "journal_committed": {
+          "const": true
+        }
+      },
+      "required": [
+        "revision",
+        "snapshot_digest",
+        "journal_committed"
+      ],
+      "additionalProperties": false
     }
   },
   "oneOf": [
@@ -514,6 +666,12 @@
     },
     {
       "$ref": "#/$defs/supervisor_ERROR"
+    },
+    {
+      "$ref": "#/$defs/supervisor_FENCE_PUT"
+    },
+    {
+      "$ref": "#/$defs/supervisor_FENCE_RESULT"
     }
   ]
 }

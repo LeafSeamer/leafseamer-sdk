@@ -1,7 +1,7 @@
 {
   "format": "leafseamer-supervisor-query-input/1",
   "source_repository": "https://github.com/LeafSeamer/leafseamer-suite",
-  "source_commit": "0eee0aea7e64a66ea90427be361c196a54e2e192",
+  "source_commit": "79d97928fc8da8373ed907a028777f2737c8cf7d",
   "source_files": [
     {
       "path": "docs/contracts/df02-supervisor/bootstrap.schema.json",
@@ -47,9 +47,14 @@
     "installation2_ContainmentRef": "https://leafseamer.invalid/design/c09-installation/installation-v02.schema.json#/$defs/ContainmentRef",
     "supervisor_RetirementEvidence": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/RetirementEvidence",
     "supervisor_ERROR": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/ERROR",
-    "supervisor_Error": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Error"
+    "supervisor_Error": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/Error",
+    "supervisor_FENCE_PUT": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/FENCE_PUT",
+    "supervisor_FenceSnapshot": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/FenceSnapshot",
+    "supervisor_FenceItem": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/FenceItem",
+    "supervisor_FENCE_RESULT": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/FENCE_RESULT",
+    "supervisor_FenceResult": "https://leafseamer.invalid/design/df02-supervisor/supervisor.schema.json#/$defs/FenceResult"
   },
-  "schema_sha256": "3ed73d24e6fa6301471fe142aef69421c60b7fa6b464dc25646d59fd6b05848d",
+  "schema_sha256": "d44f1827c6e84def8c8e73ae0f4fd9372f6fc22c2213811667d588cc0d1ff56d",
   "control_version": "supervisor-control/0.1.0-draft.1",
   "runtime_approved": false
 }

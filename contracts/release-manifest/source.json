@@ -1,0 +1,15 @@
+{
+  "format": "leafseamer-release-input/1",
+  "repository": "https://github.com/LeafSeamer/leafseamer-suite",
+  "commit": "79d97928fc8da8373ed907a028777f2737c8cf7d",
+  "schema_path": "docs/contracts/df05/release-manifest.schema.json",
+  "schema_sha256": "fc7a613d4bc61b2dd779081b6d22728e749c90da772691293fd31e13845cfee9",
+  "design_path": "docs/rebirth-df05-release-design.md",
+  "design_sha256": "f226ae3959d0738c3d5a9271b25caf41daa97af953973f5169b56dd0b3136c6a",
+  "design_sections": [
+    "2",
+    "8",
+    "10"
+  ],
+  "runtime_approved": false
+}

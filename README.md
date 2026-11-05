@@ -61,14 +61,32 @@ Cookie由浏览器管理，CSRF及token只存在客户端闭包内存，不写�
 
 本入口只做字节与结构检查，不生成秘密、计算挑战证明或授准入。可信管道来源、HMAC、域／意图摘要、截止、OS进程归属与单次消费由监督宿主及核心实施。完整来源闭包与摘要记录在 `contracts/bootstrap/source.json`，产物进入统一构建清单；runtime_approved保持false，worker启动与完整运行域验收不因类型存在而完成。
 
-## 监督控制查询入口
+## 监督控制入口
 
-`@leafseamer/sdk/supervisor-control` 提供 `decodeSupervisorControl(bytes, expectedType)`、SupervisorScope、LaunchKey及JournalView类型，采用既定 `supervisor-control/0.1.0-draft.1` 的LAUNCH_QUERY／LAUNCH_RESULT／ERROR查询接受集。方向、完整scope／信封、十进制序号和具名结果经静态校验，拒绝重复键和未知字段，正文上限64KiB。查询入口与bootstrap和公开HTTP分别导出，HTTP product1选择及摘要保持不变。
+`@leafseamer/sdk/supervisor-control` 提供 `decodeSupervisorControl(bytes, expectedType)`、SupervisorScope、LaunchKey、JournalView、FenceSnapshot及FenceResult类型，采用既定 `supervisor-control/0.1.0-draft.1` 的LAUNCH_QUERY／LAUNCH_RESULT／ERROR及FENCE_PUT／FENCE_RESULT接受集。方向、完整scope／信封、十进制序号和具名结果经静态校验，拒绝重复键和未知字段，查询与响应正文上限64KiB；完整FENCE_PUT上限256KiB、256项，解析预算1秒，查询解析预算100毫秒。控制入口与bootstrap和公开HTTP分别导出，HTTP product1选择及摘要保持不变。
 
-此入口不证明对端身份、当前进程存活或准入有效性；序号连续性、reply_to对应关系和原件一致性由控制连接消费者逐帧核验。当前没有将LAUNCH_REGISTER／CREATE、FENCE或RETIRE写操作宣称为已实现，扩展worker必须采用包含完整object_scope及extension_binding的既定启动意图，不能沿用core空设备分支。
+此入口不证明对端身份、当前进程存活或准入有效性；序号连续性、reply_to对应关系和原件一致性由控制连接消费者逐帧核验。快照结构通过不证明完整覆盖、摘要正确或耐久提交，消费者与监督日志负责这些约束；当前没有将LAUNCH_REGISTER／CREATE或RETIRE写操作宣称为已实现，扩展worker必须采用包含完整object_scope及extension_binding的既定启动意图，不能沿用core空设备分支。
+
+## Worker完整范围与来源通道
+
+`@leafseamer/sdk/worker-runtime`导出独立选择`leafseamer.worker-runtime.3`，提供完整object_scope／extension_binding意图、监督控制0.4十三帧、SourceRuntimeBinding、来源采集八帧及C05设备／数据源判别身份。LAUNCH_MATERIALIZE与MATERIALIZATION_RESULT使监督器取得并保管物化证据；LAUNCH_LOAD与LOAD_RESULT按固定截止分片交接完整内容材料，CREATE必须引用同监督实例持有的load_id。核心以固定请求ID轮询，不延长原健康期限。verified物化回执绑定完整启动摘要、challenge、证据ID及监督器本地域最多五秒的寿命；加载ready只证明内容保护，不授予创建许可。0.2与0.3生成函数保留，新入口拒绝旧监督版本和旧顶层device_ids；旧监督查询入口保留其固定接受集。
+
+详见[运行契约](contracts/worker-runtime/README.md)。八种来源消息具有独立字节预算、方向和具名类型，数据源只能由Seamer消费；类型与解码通过不替代真实批准、采集宿主或业务摄取。公开HTTP product1及其摘要不变，不能把独立来源身份直接混入旧HTTP接受集。
+
+`@leafseamer/sdk/artifact-import`提供独立选择`leafseamer.artifact-import.1`，包含安装控制文档、库存及九种导入IPC帧的严格解码和具名类型。文档最多4MiB、IPC最多64KiB；拒绝重复键、畸形UTF8、额外字段及错误方向。库存另核严格file_id顺序、可移植ASCII路径、保留名、大小写／父目录碰撞及容量。详见[导入契约](contracts/artifact-import/README.md)。入口只证明结构与局部约束，不证明真实peer、发行信任、角色绑定、物化或运行准入；Suite负责实际ZIP及持久结果，原HTTP选择保持不变。
 
 SDK 的首份独立契约资料位于 [contracts/draft4](contracts/draft4/README.md)：迁入公共 Schema、IPC、HTTP 骨架、路由投影及正反例，可离线重组六份历史产物。该目录冻结旧基线，后续修订须进入明确的新候选版本，不能覆盖旧版。该目录不是当前产品接受集；完整语义判定器及生产工具链仍待交付。
 
 旧 NodeCG 实现及历史保留于 [leafseamer-legacy](https://github.com/ikenainanodesu/leafseamer-legacy)。本仓尚未导入旧业务源码；后续复用时逐项记录来源、历史映射和必要许可声明。
+
+## 完整发行清单入口
+
+`@leafseamer/sdk/release-manifest` 提供 `decodeReleaseManifest(bytes)`、`decodeReleaseRevocations(bytes)` 及具名类型，采用独立选择 `leafseamer.release-manifest.1`。新版 `native-release/0.2.0-draft.1` 表达五仓组件、运行入口、多通道、存储修订、独立连接策略、运行时和多镜像部署；旧发行格式及 HTTP product1 摘要不变。
+
+输入上限4MiB，严格拒绝重复键、未知字段和畸形UTF8，核引用齐全、依赖无环、端点配对、ABI声明、可读写修订及部署依赖闭包。发行序号保持十进制字符串，完整原字节摘要用于发行身份；报告引用与镜像声明通过不代表内容或环境真实。`decodeReleaseExtensionBinding`及具名`ReleaseExtensionBinding`解析受签target的完整发行／扩展归档关联，区分完整manifest原字节摘要与扩展清单JCS摘要。详见[发行清单契约](contracts/release-manifest/README.md)。Suite 已将这些入口接入下载原件、当前撤销、发行序号和新导入受理；SDK解码本身不核签名或安装资格。
+
+## 静态设备能力模板入口
+
+`@leafseamer/sdk/capability-template`提供`decodeCapabilityTemplate(bytes)`与具名`CapabilityTemplate`类型，采用独立选择`leafseamer.capability-template.1`。从产品动作、触发器与Schema模型派生，静态动作去除运行footprint；原始JSON严格解析并校验有序唯一集合，最多1MiB。此新入口使用普通点分版本号，不改变旧HTTP接受集。Schema文档摘要与动态编译由宿主另行核验；模板声明不证明设备支持或运行批准。详见[静态模板契约](contracts/capability-template/README.md)。
 
 本仓主许可为 [Apache-2.0](LICENSE)。

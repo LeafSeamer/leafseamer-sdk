@@ -16,10 +16,25 @@ test('独立监督查询入口保持精确序号、方向和既有HTTP选择', a
   assert.equal((await decodeSupervisorControl(bytes({...query, type: 'ERROR', reply_to: 'request', payload: {code: 'identity_conflict', retry_action: 'query_only'}}), 'ERROR')).payload.retry_action, 'query_only');
   assert.equal(contractSelection.contract_digest, 'sha256:b7101ca292511299a0940b5dd4cc3c29d022afcdc2a2e3489d1ce4300ee2e5c9');
 });
-test('错误消息、重复键、额外字段与容量在采用前拒绝，查询入口不冒充启动写协议', async () => {
+test('错误消息、重复键、额外字段与容量在采用前拒绝，查询与启动创建消息保持分离', async () => {
   await assert.rejects(decodeSupervisorControl(bytes(query), 'LAUNCH_RESULT'));
   await assert.rejects(decodeSupervisorControl(bytes(query), 'LAUNCH_CREATE'));
   await assert.rejects(decodeSupervisorControl(bytes({...query, secret: 'A'.repeat(43)}), 'LAUNCH_QUERY'));
   await assert.rejects(decodeSupervisorControl(Buffer.from('{"type":"LAUNCH_QUERY","type":"ERROR"}'), 'LAUNCH_QUERY'), e => e.reason === 'duplicate_key');
   await assert.rejects(decodeSupervisorControl(new Uint8Array(65537), 'LAUNCH_QUERY'));
+});
+
+test('启动许可通道保留完整256项快照并拒绝越界、重复项及错误响应方向', async () => {
+  const items = Array.from({length: 256}, (_, i) => ({launch_id: 'launch' + String(i).padStart(3, '0') + 'x'.repeat(115),
+    launch_intent_digest: key.launch_intent_digest, disposition: 'deny'}));
+  const snapshot = {scope, revision: '99999999999999999999', items, digest: key.launch_intent_digest};
+  const frame = {...query, type: 'FENCE_PUT', payload: snapshot};
+  const parsed = await decodeSupervisorControl(bytes(frame), 'FENCE_PUT');
+  assert.equal(parsed.payload.items.length, 256); assert(Object.isFrozen(parsed.payload.items));
+  const response = {...query, type: 'FENCE_RESULT', reply_to: 'request', payload: {revision: snapshot.revision, snapshot_digest: snapshot.digest, journal_committed: true}};
+  assert.deepEqual(await decodeSupervisorControl(bytes(response), 'FENCE_RESULT'), response);
+  await assert.rejects(decodeSupervisorControl(bytes(response), 'FENCE_PUT'));
+  await assert.rejects(decodeSupervisorControl(bytes({...frame, payload: {...snapshot, items: [...items, items[0]]}}), 'FENCE_PUT'));
+  await assert.rejects(decodeSupervisorControl(bytes({...frame, payload: {...snapshot, items: [items[0], items[0]]}}), 'FENCE_PUT'));
+  await assert.rejects(decodeSupervisorControl(new Uint8Array(262145), 'FENCE_PUT'));
 });

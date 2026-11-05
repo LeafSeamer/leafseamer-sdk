@@ -1,0 +1,24 @@
+{
+  "format": "leafseamer-artifact-import-input/1",
+  "source_repository": "https://github.com/LeafSeamer/leafseamer-suite",
+  "source_commit": "79d97928fc8da8373ed907a028777f2737c8cf7d",
+  "runtime_approved": false,
+  "files": {
+    "artifact.schema.json": {
+      "path": "docs/contracts/c09-artifact-import/artifact.schema.json",
+      "sha256": "53fd5ca631fed1cd1b5537f2263588aabd086191080d6960340e7e6ab41050ef"
+    },
+    "ipc.schema.json": {
+      "path": "docs/contracts/c09-artifact-import/ipc.schema.json",
+      "sha256": "2201af7840bc683bb0c7f59cc8dabb21242d8ed6836236ca9ca2d43ee7c219e4"
+    },
+    "installation.schema.json": {
+      "path": "docs/contracts/c09-installation/installation.schema.json",
+      "sha256": "42e45bb314f83326d30bb4e2174da2b7a521460b05c229c3419f409338fbce3d"
+    },
+    "source-policy.md": {
+      "path": "docs/contracts/c09-artifact-import/README.md",
+      "sha256": "794ce64613a93a2d68efa4df988a0e16124ac9c1774fa3e75e14b14335f64975"
+    }
+  }
+}
