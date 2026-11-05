@@ -55,6 +55,14 @@ Cookie由浏览器管理，CSRF及token只存在客户端闭包内存，不写�
 
 19项SDK检查覆盖错误CSRF、错误选择、HTTPS／路径限制、凭据发送、完整操作保留、历史输入摘要及新选择的SchemaRef／RegistryRef／WS一致性。Controller另有实际文件库、原生采样与HTTPS往返验证，使用模拟Cookie容器和合成环境批准；不能当作真实浏览器或生产身份资格验收。`fetchImpl` 注入仅供可信宿主适配和测试，调用方不得记录密码、Cookie、CSRF或token。当前Controller的token `expires_in` 使用秒提示，客户端不据它放宽服务端截止。
 
+## 设备模块只读接口
+
+`@leafseamer/sdk/device-module` 导出 `DeviceModuleFactory`、`DeviceModuleFrame` 和 `validateDeviceModuleFrame`。扩展入口导出 `createDeviceModule(context)`，返回版本为 `leafseamer-device-module/1` 的实现，提供 `connectReadOnly`、`captureBaseline`、`stopReadOnly` 三个异步方法。宿主供应已绑定的配置、设备范围、取消信号和本域单调读数；模块须核设备与session并响应取消。清单须声明该API版本及 `device-module/1` IPC版本。
+
+通道依次使用 LOAD／LOADED、CONNECT／CONNECTED、CAPTURE／CAPTURED、DISCONNECT／DISCONNECTED。帧携带运行引用、通道及member boot，序号和tick保留十进制字符串，每次请求窗口至多两秒；响应回绑原序号、请求ID、时间窗口及设备／session／capture身份。类型按消息判别，但采样value保持unknown，须按已批准设备能力另行验证。
+
+本入口检查对象结构并深冻结，不验证原始JSON字节、真实对端或当前授权。Controller宿主负责规范JSON、大小／深度预算、实际进程绑定、原件持久化、当前运行资格及超时关闭。CAPTURED是候选读数；它不授予设备写入、目录批准、事件发布或年龄资格，也不能单凭模块自报identity证明物理设备身份。命令执行继续使用独立设备IPC。
+
 ## 独立bootstrap入口
 
 `@leafseamer/sdk/bootstrap` 提供 `decodeBootstrap(bytes, expectedType)` 和 `decodeProtectedLaunchIntent(bytes)`，分别解析ASSIGNMENT／PROOF／ADMISSION／REJECT及core／time_provider空设备启动意图，导出具名类型。版本固定 `bootstrap/0.1.0-draft.1`，不修改HTTP product1、worker IPC或面板选择。解码在16KiB及深度／成员／节点预算内拒绝重复键、错误方向、未知字段和非规范Secret32；整数保持字符串，结果深冻结，运行时不动态编译。

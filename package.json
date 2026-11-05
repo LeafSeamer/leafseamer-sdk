@@ -10,6 +10,10 @@
   },
   "packageManager": "npm@11.19.1",
   "exports": {
+    "./device-module": {
+      "types": "./dist/device-module.d.mts",
+      "import": "./dist/device-module.mjs"
+    },
     "./capability-template": {
       "types": "./dist/capability-template.d.mts",
       "import": "./dist/capability-template.mjs"

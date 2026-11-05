@@ -30,7 +30,7 @@ const artifactFiles=await buildArtifactImport();
 for (const [name, bytes] of artifactFiles) files.set(name, bytes);
 for (const [name, bytes] of await buildWorkerRuntime(JSON.parse(artifactFiles.get('artifact-import/schema.json')))) files.set(name, bytes);
 for (const [name, bytes] of await buildReleaseManifest()) files.set(name, bytes);
-for (const name of ['index.mjs', 'index.d.mts', 'fetch-transport.mjs', 'browser-session.mjs', 'http.mjs', 'http.d.mts']) files.set(name, await fs.readFile(path.join(root, 'src', name)));
+for (const name of ['device-module.mjs','device-module.d.mts','index.mjs', 'index.d.mts', 'fetch-transport.mjs', 'browser-session.mjs', 'http.mjs', 'http.d.mts']) files.set(name, await fs.readFile(path.join(root, 'src', name)));
 files.set('selection.mjs', Buffer.from('export const contractSelection = Object.freeze(' + JSON.stringify(selected) + ');\n'));
 files.set('THIRD_PARTY_LICENSES.txt', files.get('runtime/panel-wire/preview/LICENSES.txt'));
 files.set('build-manifest.json', Buffer.from(JSON.stringify({format: 'leafseamer-sdk-build/1', selection: selected,
