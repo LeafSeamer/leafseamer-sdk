@@ -4,6 +4,7 @@ import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import canonicalize from 'canonicalize';
 import {addIdentity} from './identity.mjs';
+import {addExecutionNegotiation} from './execution-negotiation.mjs';
 import {build as wire} from './generate/wire.mjs';
 import {build as http} from './generate/http.mjs';
 import {build as types} from './generate/types.mjs';
@@ -17,11 +18,12 @@ export async function buildContract() {
   const base = 'contracts/panel-wire/contract/', manifestBytes = read(base + 'manifest.json');
   if (hash(manifestBytes) !== config.base_manifest_sha256) throw new Error('contract_baseline_drift');
   const original = JSON.parse(manifestBytes), documents = {};
-  const oldBase = 'https://leafseamer.invalid/sdk/panel-wire/0.1/', newBase = 'https://leafseamer.invalid/sdk/product/1/';
+  const oldBase = 'https://leafseamer.invalid/sdk/panel-wire/0.1/', newBase = 'https://leafseamer.invalid/sdk/product/4/';
   const escaped = value => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const replace = value => {
     if (typeof value === 'string') return value.replaceAll(original.contract_id, config.contract_id)
-      .replaceAll(escaped(original.contract_id), escaped(config.contract_id)).replaceAll(oldBase, newBase);
+      .replaceAll(escaped(original.contract_id), escaped(config.contract_id)).replaceAll(oldBase, newBase)
+      .replaceAll('ipc/0.14.0-continuation-draft.1','ipc/0.16.0-reference-optional-draft.1');
     if (Array.isArray(value)) return value.map(replace);
     if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, replace(v)]));
     return value;
@@ -33,14 +35,26 @@ export async function buildContract() {
   }
   const apis = {controller: documents['controller.openapi.json'], seamer: documents['seamer.openapi.json']};
   addIdentity(apis, documents['models.schema.json']);
-  // SchemaRef摘要绑定完整叶文档；RegistryRef随后绑定已重绑的Registry。
-  const leafDigests = new Map(['input', 'result'].map(kind => {
-    const doc = documents[kind + '.schema.json']; return [doc.$id, hash(canonicalize(doc))];
-  }));
+  addExecutionNegotiation(documents);
   function walk(value, visit) {
     if (!value || typeof value !== 'object') return;
     visit(value); for (const child of Object.values(value)) walk(child, visit);
   }
+  // product4显式允许即时命令缺少参考时间。完整记录、快照及面板投影共同保留null，
+  // 不把认证时钟或机器墙钟伪装为应用参考时间。实际受理单调域与tick由Controller持久保存。
+  walk(documents, value => {
+    const p=value.properties;
+    if(!p?.accepted_at||!p.target||!p.origin)return;
+    p.accepted_at={anyOf:[p.accepted_at,{type:'null'}]};
+    if(p.dispatch)value.allOf=[...(value.allOf??[]),{
+      if:{properties:{accepted_at:{type:'null'}},required:['accepted_at']},
+      then:{properties:{dispatch:{properties:{mode:{const:'immediate'}},required:['mode']}}}
+    }];
+  });
+  // 所有产品字段变化完成后再绑定完整叶文档；Registry随后绑定已重绑的SchemaRef。
+  const leafDigests = new Map(['input', 'result'].map(kind => {
+    const doc = documents[kind + '.schema.json']; return [doc.$id, hash(canonicalize(doc))];
+  }));
   walk(documents, value => {
     if (typeof value.schema_id === 'string' && typeof value.definition === 'string' && typeof value.schema_digest === 'string') {
       if (!leafDigests.has(value.schema_id)) throw new Error('schema_ref_document');

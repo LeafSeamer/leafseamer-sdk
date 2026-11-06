@@ -16,7 +16,7 @@ const assignment = {version: bootstrapVersion, type: 'ASSIGNMENT', payload: {...
 test('独立bootstrap入口保留完整字段、大整数与深冻结，不扩大HTTP选择', async () => {
   const value = await decodeBootstrap(bytes(assignment), 'ASSIGNMENT');
   assert.equal(value.payload.issued_tick_ns, '9007199254740993'); assert(Object.isFrozen(value.payload.clock_domain_descriptor));
-  assert.equal(JSON.parse(fs.readFileSync(new URL('../dist/contract/selection.json', import.meta.url))).contract_id, 'leafseamer.api.v1.product1');
+  assert.equal(JSON.parse(fs.readFileSync(new URL('../dist/contract/selection.json', import.meta.url))).contract_id, 'leafseamer.api.v1.product4');
 });
 test('四种bootstrap帧与独立core意图均由同源Schema约束', async () => {
   const {bootstrap_version: _v, challenge_id: _c, ...receipt} = common;

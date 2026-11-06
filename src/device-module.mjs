@@ -1,5 +1,5 @@
 // 设备模块的加载、只读连接与候选采样通道；设备命令仍使用独立执行IPC。
-export const deviceModuleProtocol='device-module/2';
+export const deviceModuleProtocol='device-module/3';
 export class DeviceModuleError extends Error {constructor(code){super(code);this.name='DeviceModuleError';this.code=code;}}
 export const moduleNeed=(ok,code='module_frame')=>{if(!ok)throw new DeviceModuleError(code);};
 export const moduleExact=(value,keys)=>moduleNeed(value&&typeof value==='object'&&!Array.isArray(value)&&Object.keys(value).sort().join(',')===[...keys].sort().join(','));
@@ -9,11 +9,13 @@ const digest=v=>typeof v==='string'&&/^sha256:[0-9a-f]{64}$(?![\s\S])/.test(v);
 const freeze=v=>{if(v&&typeof v==='object'){for(const item of Object.values(v))freeze(item);Object.freeze(v);}return v;};
 const fields={LOAD:['runtime','configuration'],LOADED:['entry_id'],CONNECT:['device_id','device_session_id'],CONNECTED:['device_id','device_session_id','identity','catalog'],
  CAPTURE:['device_id','device_session_id','capture_id'],CAPTURED:['device_id','device_session_id','capture_id','value','captured_tick_ns'],
- DISCONNECT:['device_id','device_session_id'],DISCONNECTED:['device_id','device_session_id']};
+ DISCONNECT:['device_id','device_session_id'],DISCONNECTED:['device_id','device_session_id'],
+ BIND_EXECUTION:['device_id','device_session_id','execution'],EXECUTION_BOUND:['device_id','device_session_id','execution_ref']};
+function executionRef(value){moduleExact(value,['id','revision','digest']);moduleNeed(id(value.id)&&value.revision==='1'&&digest(value.digest));}
 export function validateDeviceModuleFrame(frame){
  moduleExact(frame,['version','type','sequence','request_id','reply_to','binding','issued_tick_ns','deadline_tick_ns','body']);
  moduleNeed(frame.version===deviceModuleProtocol&&Object.hasOwn(fields,frame.type)&&integer(frame.sequence)&&frame.sequence!=='0'&&id(frame.request_id));
- const response=['LOADED','CONNECTED','CAPTURED','DISCONNECTED'].includes(frame.type);
+ const response=['LOADED','CONNECTED','CAPTURED','DISCONNECTED','EXECUTION_BOUND'].includes(frame.type);
  moduleNeed(response?id(frame.reply_to):frame.reply_to===null);
  moduleNeed(integer(frame.issued_tick_ns)&&integer(frame.deadline_tick_ns)&&BigInt(frame.deadline_tick_ns)>BigInt(frame.issued_tick_ns)&&BigInt(frame.deadline_tick_ns)-BigInt(frame.issued_tick_ns)<=2000000000n);
  moduleExact(frame.binding,['runtime_binding_ref','ipc_session_id','member_boot_id']);moduleNeed(id(frame.binding.ipc_session_id)&&id(frame.binding.member_boot_id));
@@ -36,5 +38,10 @@ export function validateDeviceModuleFrame(frame){
    (typeof schema.document==='boolean'||schema.document&&typeof schema.document==='object'&&!Array.isArray(schema.document)));
  }
  if(frame.type==='CAPTURED')moduleNeed(integer(frame.body.captured_tick_ns)&&BigInt(frame.body.captured_tick_ns)>=BigInt(frame.issued_tick_ns)&&BigInt(frame.body.captured_tick_ns)<BigInt(frame.deadline_tick_ns));
+ if(frame.type==='BIND_EXECUTION'){
+  moduleExact(frame.body.execution,['ref','value']);executionRef(frame.body.execution.ref);
+  moduleNeed(frame.body.execution.value&&typeof frame.body.execution.value==='object'&&!Array.isArray(frame.body.execution.value));
+ }
+ if(frame.type==='EXECUTION_BOUND')executionRef(frame.body.execution_ref);
  return freeze(frame);
 }

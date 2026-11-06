@@ -14,7 +14,7 @@ test('独立监督查询入口保持精确序号、方向和既有HTTP选择', a
   assert.deepEqual(await decodeSupervisorControl(bytes({...query, type: 'LAUNCH_RESULT', reply_to: 'request', payload: {key, record: null}}), 'LAUNCH_RESULT'),
     {...query, type: 'LAUNCH_RESULT', reply_to: 'request', payload: {key, record: null}});
   assert.equal((await decodeSupervisorControl(bytes({...query, type: 'ERROR', reply_to: 'request', payload: {code: 'identity_conflict', retry_action: 'query_only'}}), 'ERROR')).payload.retry_action, 'query_only');
-  assert.equal(contractSelection.contract_digest, 'sha256:b7101ca292511299a0940b5dd4cc3c29d022afcdc2a2e3489d1ce4300ee2e5c9');
+  assert.equal(contractSelection.contract_digest, 'sha256:f35fed8a04bd0c827f9c3bd0df0354d4b51208e7b1a0750450392d7ce81232c3');
 });
 test('错误消息、重复键、额外字段与容量在采用前拒绝，查询与启动创建消息保持分离', async () => {
   await assert.rejects(decodeSupervisorControl(bytes(query), 'LAUNCH_RESULT'));

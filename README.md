@@ -35,7 +35,7 @@ const result = await controller.call('discoverContracts');
 
 传输不自动重试、不跟随重定向，累计正文和整次请求均有预算。取消或超时发生在发送后时保留 `outcome_unknown`，不能据此重新提交动作。错误不暴露原始凭据或响应。浏览器 fetch 只能提供浏览器公开的头字段，不能证明拿到了原始重复头；服务端仍须在原始 HTTP 边界执行完整信封检查。现有字节校验的协作式预算也不等于硬内存隔离。
 
-当前包采用 `leafseamer.api.v1.product1`，完整承接 [sdk-inputs.json](sdk-inputs.json) 固定的201项旧操作，增加Controller当前会话注销，共202项；198项普通HTTP操作有类型入口，4个WS入口不经fetch发送。产品构建按 [sdk-contract.json](sdk-contract.json) 归并具名根、类型、静态校验器、完整SchemaRef／RegistryRef和新选择；详见 [产品契约](CONTRACT.md)。旧panel4字节与候选批准标志保持不变，不接受旧选择混投。完整主体视图、服务身份、配对、权限及其他DF01差集仍按首期范围实施；本开发选择不是最终发行接受集，声明操作不等于服务已经实现。
+当前包采用 `leafseamer.api.v1.product4`，完整承接 [sdk-inputs.json](sdk-inputs.json) 固定的201项旧操作，增加Controller当前会话注销，共202项；198项普通HTTP操作有类型入口，4个WS入口不经fetch发送。产品构建按 [sdk-contract.json](sdk-contract.json) 归并具名根、类型、静态校验器、完整SchemaRef／RegistryRef和新选择；详见 [产品契约](CONTRACT.md)。旧panel4字节与候选批准标志保持不变，不接受旧选择混投。完整主体视图、服务身份、配对、权限及其他DF01差集仍按首期范围实施；本开发选择不是最终发行接受集，声明操作不等于服务已经实现。
 
 `npm test` 验证真实本机 HTTP、路径及 authority 绑定、重定向拒绝、发送后断线、响应大小、超时和取消。它不证明浏览器权限流程、生产认证、产品服务、数据库、部署或设备已验收。构建产物在 `dist/`，带字节清单和第三方许可；仅这些运行文件进入 npm 包，本地日志和治理资料不打包。
 
@@ -57,7 +57,9 @@ Cookie由浏览器管理，CSRF及token只存在客户端闭包内存，不写�
 
 ## 设备模块只读接口
 
-`@leafseamer/sdk/device-module` 导出 `DeviceModuleFactory`、`DeviceModuleFrame` 和 `validateDeviceModuleFrame`。扩展入口导出 `createDeviceModule(context)`，返回版本为 `leafseamer-device-module/2` 的实现，提供 `connectReadOnly`、`proposeCatalog`、`captureBaseline`、`stopReadOnly` 四个异步方法。宿主供应已绑定的配置、设备范围、取消信号和本域单调读数；模块须核设备与session并响应取消。清单须声明该API版本及 `device-module/2` IPC版本。
+`@leafseamer/sdk/device-module` 导出 `DeviceModuleFactory`、`DeviceModuleFrame` 和 `validateDeviceModuleFrame`。扩展入口导出 `createDeviceModule(context)`，返回版本为 `leafseamer-device-module/2` 的实现，提供 `connectReadOnly`、`proposeCatalog`、`captureBaseline`、`stopReadOnly` 四个异步方法。宿主供应已绑定的配置、设备范围、取消信号和本域单调读数；模块须核设备与session并响应取消。清单须声明该API版本及 `device-module/3` IPC版本。
+
+v3新增仅供固定宿主装配的`BIND_EXECUTION`／`EXECUTION_BOUND`，传递核心持久执行Binding及其精确引用。SDK核帧结构、引用和方向，固定宿主核当前运行及具体模块配置；该确认不授予设备写许可。旧模块IPC版本严格拒绝，模块实现API仍为`leafseamer-device-module/2`。
 
 连接取得identity后，宿主在同一截止窗口内调用 `proposeCatalog`，把只含目录修订、状态Schema和动作／触发器ID集合的提议附于CONNECTED。提议不能自报批准；Controller须按当前安装批准与具体型号资格核验。v2不接受缺少目录的v1连接响应。
 
@@ -67,13 +69,13 @@ Cookie由浏览器管理，CSRF及token只存在客户端闭包内存，不写�
 
 ## 独立bootstrap入口
 
-`@leafseamer/sdk/bootstrap` 提供 `decodeBootstrap(bytes, expectedType)` 和 `decodeProtectedLaunchIntent(bytes)`，分别解析ASSIGNMENT／PROOF／ADMISSION／REJECT及core／time_provider空设备启动意图，导出具名类型。版本固定 `bootstrap/0.1.0-draft.1`，不修改HTTP product1、worker IPC或面板选择。解码在16KiB及深度／成员／节点预算内拒绝重复键、错误方向、未知字段和非规范Secret32；整数保持字符串，结果深冻结，运行时不动态编译。
+`@leafseamer/sdk/bootstrap` 提供 `decodeBootstrap(bytes, expectedType)` 和 `decodeProtectedLaunchIntent(bytes)`，分别解析ASSIGNMENT／PROOF／ADMISSION／REJECT及core／time_provider空设备启动意图，导出具名类型。版本固定 `bootstrap/0.1.0-draft.1`，不修改HTTP产品选择、worker IPC或面板选择。解码在16KiB及深度／成员／节点预算内拒绝重复键、错误方向、未知字段和非规范Secret32；整数保持字符串，结果深冻结，运行时不动态编译。
 
 本入口只做字节与结构检查，不生成秘密、计算挑战证明或授准入。可信管道来源、HMAC、域／意图摘要、截止、OS进程归属与单次消费由监督宿主及核心实施。完整来源闭包与摘要记录在 `contracts/bootstrap/source.json`，产物进入统一构建清单；runtime_approved保持false，worker启动与完整运行域验收不因类型存在而完成。
 
 ## 监督控制入口
 
-`@leafseamer/sdk/supervisor-control` 提供 `decodeSupervisorControl(bytes, expectedType)`、SupervisorScope、LaunchKey、JournalView、FenceSnapshot及FenceResult类型，采用既定 `supervisor-control/0.1.0-draft.1` 的LAUNCH_QUERY／LAUNCH_RESULT／ERROR及FENCE_PUT／FENCE_RESULT接受集。方向、完整scope／信封、十进制序号和具名结果经静态校验，拒绝重复键和未知字段，查询与响应正文上限64KiB；完整FENCE_PUT上限256KiB、256项，解析预算1秒，查询解析预算100毫秒。控制入口与bootstrap和公开HTTP分别导出，HTTP product1选择及摘要保持不变。
+`@leafseamer/sdk/supervisor-control` 提供 `decodeSupervisorControl(bytes, expectedType)`、SupervisorScope、LaunchKey、JournalView、FenceSnapshot及FenceResult类型，采用既定 `supervisor-control/0.1.0-draft.1` 的LAUNCH_QUERY／LAUNCH_RESULT／ERROR及FENCE_PUT／FENCE_RESULT接受集。方向、完整scope／信封、十进制序号和具名结果经静态校验，拒绝重复键和未知字段，查询与响应正文上限64KiB；完整FENCE_PUT上限256KiB、256项，解析预算1秒，查询解析预算100毫秒。控制入口与bootstrap和公开HTTP分别导出，HTTP产品选择选择及摘要保持不变。
 
 此入口不证明对端身份、当前进程存活或准入有效性；序号连续性、reply_to对应关系和原件一致性由控制连接消费者逐帧核验。快照结构通过不证明完整覆盖、摘要正确或耐久提交，消费者与监督日志负责这些约束；当前没有将LAUNCH_REGISTER／CREATE或RETIRE写操作宣称为已实现，扩展worker必须采用包含完整object_scope及extension_binding的既定启动意图，不能沿用core空设备分支。
 
@@ -81,7 +83,7 @@ Cookie由浏览器管理，CSRF及token只存在客户端闭包内存，不写�
 
 `@leafseamer/sdk/worker-runtime`导出独立选择`leafseamer.worker-runtime.3`，提供完整object_scope／extension_binding意图、监督控制0.4十三帧、SourceRuntimeBinding、来源采集八帧及C05设备／数据源判别身份。LAUNCH_MATERIALIZE与MATERIALIZATION_RESULT使监督器取得并保管物化证据；LAUNCH_LOAD与LOAD_RESULT按固定截止分片交接完整内容材料，CREATE必须引用同监督实例持有的load_id。核心以固定请求ID轮询，不延长原健康期限。verified物化回执绑定完整启动摘要、challenge、证据ID及监督器本地域最多五秒的寿命；加载ready只证明内容保护，不授予创建许可。0.2与0.3生成函数保留，新入口拒绝旧监督版本和旧顶层device_ids；旧监督查询入口保留其固定接受集。
 
-详见[运行契约](contracts/worker-runtime/README.md)。八种来源消息具有独立字节预算、方向和具名类型，数据源只能由Seamer消费；类型与解码通过不替代真实批准、采集宿主或业务摄取。公开HTTP product1及其摘要不变，不能把独立来源身份直接混入旧HTTP接受集。
+详见[运行契约](contracts/worker-runtime/README.md)。八种来源消息具有独立字节预算、方向和具名类型，数据源只能由Seamer消费；类型与解码通过不替代真实批准、采集宿主或业务摄取。公开HTTP产品选择及其摘要不变，不能把独立来源身份直接混入旧HTTP接受集。
 
 `@leafseamer/sdk/artifact-import`提供独立选择`leafseamer.artifact-import.1`，包含安装控制文档、库存及九种导入IPC帧的严格解码和具名类型。文档最多4MiB、IPC最多64KiB；拒绝重复键、畸形UTF8、额外字段及错误方向。库存另核严格file_id顺序、可移植ASCII路径、保留名、大小写／父目录碰撞及容量。详见[导入契约](contracts/artifact-import/README.md)。入口只证明结构与局部约束，不证明真实peer、发行信任、角色绑定、物化或运行准入；Suite负责实际ZIP及持久结果，原HTTP选择保持不变。
 
@@ -91,7 +93,7 @@ SDK 的首份独立契约资料位于 [contracts/draft4](contracts/draft4/README
 
 ## 完整发行清单入口
 
-`@leafseamer/sdk/release-manifest` 提供 `decodeReleaseManifest(bytes)`、`decodeReleaseRevocations(bytes)` 及具名类型，采用独立选择 `leafseamer.release-manifest.1`。新版 `native-release/0.2.0-draft.1` 表达五仓组件、运行入口、多通道、存储修订、独立连接策略、运行时和多镜像部署；旧发行格式及 HTTP product1 摘要不变。
+`@leafseamer/sdk/release-manifest` 提供 `decodeReleaseManifest(bytes)`、`decodeReleaseRevocations(bytes)` 及具名类型，采用独立选择 `leafseamer.release-manifest.1`。新版 `native-release/0.2.0-draft.1` 表达五仓组件、运行入口、多通道、存储修订、独立连接策略、运行时和多镜像部署；旧发行格式及 HTTP产品选择 摘要不变。
 
 输入上限4MiB，严格拒绝重复键、未知字段和畸形UTF8，核引用齐全、依赖无环、端点配对、ABI声明、可读写修订及部署依赖闭包。发行序号保持十进制字符串，完整原字节摘要用于发行身份；报告引用与镜像声明通过不代表内容或环境真实。`decodeReleaseExtensionBinding`及具名`ReleaseExtensionBinding`解析受签target的完整发行／扩展归档关联，区分完整manifest原字节摘要与扩展清单JCS摘要。详见[发行清单契约](contracts/release-manifest/README.md)。Suite 已将这些入口接入下载原件、当前撤销、发行序号和新导入受理；SDK解码本身不核签名或安装资格。
 

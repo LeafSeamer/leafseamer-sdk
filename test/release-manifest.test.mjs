@@ -8,7 +8,7 @@ test('新版完整发行选择保留原HTTP摘要、完整五仓及不同存储p
   const value = releaseFixture(); assert.deepEqual(await decodeReleaseManifest(bytes(value)),value);
   assert.equal((await decodeReleaseManifest(bytes(releaseFixture('linux')))).target.libc,'glibc');
   assert.equal(releaseManifestSelection.contract_id,'leafseamer.release-manifest.1');
-  assert.equal(contractSelection.contract_digest,'sha256:b7101ca292511299a0940b5dd4cc3c29d022afcdc2a2e3489d1ce4300ee2e5c9');
+  assert.equal(contractSelection.contract_digest,'sha256:f35fed8a04bd0c827f9c3bd0df0354d4b51208e7b1a0750450392d7ce81232c3');
   assert.equal(value.release_sequence,'9007199254740993');
 });
 test('发行严格字节与新版本拒绝重复键、未知字段、错误日期、旧格式及非安全文件数字', async () => {

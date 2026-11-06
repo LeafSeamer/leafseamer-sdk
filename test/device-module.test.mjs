@@ -8,6 +8,18 @@ test('设备模块帧保持字符串tick、固定运行身份和深冻结',()=>{
  const value=validateDeviceModuleFrame(frame());assert.equal(value.issued_tick_ns,'18446744073709550000');assert.ok(Object.isFrozen(value.binding.runtime_binding_ref));
  assert.throws(()=>{value.body.device_id='other';},TypeError);
 });
+test('v3装配请求和确认分别携带持久原件与精确引用，旧协议严格拒绝',()=>{
+ const ref={id:'binding',revision:'1',digest:'sha256:'+'3'.repeat(64)},base=frame();
+ const request={...base,type:'BIND_EXECUTION',body:{device_id:'device',device_session_id:'session',execution:{ref,value:{format:'synthetic-binding'}}}};
+ assert.deepEqual(validateDeviceModuleFrame(structuredClone(request)).body.execution.ref,ref);
+ const ack={...base,type:'EXECUTION_BOUND',reply_to:'request',body:{device_id:'device',device_session_id:'session',execution_ref:ref}};
+ assert.deepEqual(validateDeviceModuleFrame(structuredClone(ack)).body.execution_ref,ref);
+ for(const change of [v=>v.version='device-module/2',v=>v.body.execution.ref.revision='2',v=>v.body.execution.ref.digest='invalid',
+  v=>v.body.execution.value=null,v=>v.body.execution.extra=true]){
+  const invalid=structuredClone(request);change(invalid);assert.throws(()=>validateDeviceModuleFrame(invalid));
+ }
+ assert.throws(()=>validateDeviceModuleFrame({...ack,reply_to:null}));
+});
 test('设备模块入口拒绝跨通道、错方向、额外字段、数字tick和超长窗口',()=>{
  for(const change of [f=>f.version='ipc/0.14.0-continuation-draft.1',f=>f.type='DISPATCH',f=>f.reply_to='other',f=>f.extra=true,
   f=>f.sequence='0',f=>f.request_id='request\n',f=>f.binding.runtime_binding_ref.digest+='\n',f=>f.issued_tick_ns=1,
