@@ -40,6 +40,8 @@ export interface BrowserSessionClient {
   rejectCommandAdmission(body: Inputs['controller']['rejectCommandAdmission']['body']): Promise<Results['controller']['rejectCommandAdmission']>;
   listDevices(cursor?: string): Promise<Results['controller']['listDevices']>;
   getControl(deviceId: string): Promise<Results['controller']['getControl']>;
+  getCommand(commandId: string): Promise<Results['controller']['getCommand']>;
+  getCommandEvidence(commandId: string, query: Inputs['controller']['getCommandEvidence']['query']): Promise<Results['controller']['getCommandEvidence']>;
   /** 只清除内存凭据，不撤销服务端会话或删除HttpOnly Cookie。 */
   clearLocalState(): void;
 }

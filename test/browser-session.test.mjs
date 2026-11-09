@@ -33,3 +33,29 @@ test('会话客户端必须HTTPS，刷新只使用同源Cookie和内存CSRF', as
   assert.equal(seen[1].options.headers.get('x-csrf-token'), 'A'.repeat(43)); assert.equal(seen[1].options.headers.get('cookie'), null);
   await assert.rejects(client.refresh('client'), e => e.code === 'session_credentials_missing'); assert.equal(seen.length, 2);
 });
+
+test('命令与证据查询采用定向令牌，GET路径和固定修订参数无重试', async () => {
+  const seen = [];
+  const headers = {'Content-Type':'application/json','X-LeafSeamer-Contract':selection.contract_id,'X-LeafSeamer-Contract-Digest':selection.contract_digest};
+  const client = createBrowserSessionClient({baseUrl:'https://controller.invalid',fetchImpl:async (url,options)=>{
+    seen.push({url,options});
+    if(url.endsWith('/auth/sessions'))return response('A'.repeat(43));
+    if(url.endsWith('/auth/service-tokens'))return new Response(JSON.stringify({request_id:'request',service_id:'service',service_boot_id:'boot',protocol_version:selection.contract_id,selection,
+      data:{access_token:'synthetic-access-token',token_type:'Bearer',expires_in:60,audience:'controller'}}),{status:201,headers});
+    // 非合约响应必须失败，并清空客户端凭据。
+    return new Response('',{status:503});
+  }});
+  for (const evidence of [false,true]) {
+    await client.login({login:'operator',password:'synthetic-password-012345'});
+    await client.issueToken({audience:'controller',requested_scopes:[evidence?'command.evidence.read':'command.read']});
+    const start=seen.length;
+    await assert.rejects(evidence?client.getCommandEvidence('command_a',{state_revision:'9007199254740993',limit:32,cursor:'next_page_cursor_1'}):client.getCommand('command_a'));
+    assert.equal(seen.length,start+1);
+    const request=seen.at(-1),url=new URL(request.url);
+    assert.equal(request.options.method,'GET');assert.equal(request.options.headers.get('authorization'),'Bearer synthetic-access-token');
+    assert.equal(url.pathname,evidence?'/api/v1/commands/command_a/evidence':'/api/v1/commands/command_a');
+    if(evidence)assert.deepEqual(Object.fromEntries(url.searchParams),{cursor:'next_page_cursor_1',limit:'32',state_revision:'9007199254740993'});
+    await assert.rejects(client.getCommand('command_a'),e=>e.code==='session_credentials_missing');
+    assert.equal(seen.length,start+1);
+  }
+});
