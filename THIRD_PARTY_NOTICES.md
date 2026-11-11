@@ -9,3 +9,5 @@
 纯数据源内 `license_provenance_paths` 原样保留，指向其 `source_repository/source_commit` 下的来源文件，并不是本仓路径。Suite 中旧设计文档及设备目录的 MIT 许可声明适用于相应材料；本次没有迁入这些文档、目录或旧业务源码，不声称对它们重新授权。后续引入代码、依赖或素材须另行保留相应版权和许可声明。
 
 此次迁入不包含第三方运行依赖。执行标准库生成不等于已完成未来 SDK 依赖的许可审查。
+
+控制请求查原身份的运行实现包含 canonicalize 5.1.0（Apache-2.0）。构建固定核对该版本，分发文件为 `dist/vendor/canonicalize.mjs`，原许可全文随 `dist/THIRD_PARTY_LICENSES.txt` 交付。

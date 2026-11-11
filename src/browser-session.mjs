@@ -35,7 +35,8 @@ export function createBrowserSessionClient({baseUrl, timeoutMs, maxResponseBytes
       const client = createClient('controller', contractSelection, async request => {
         if (generation !== currentGeneration) fail('session_state_changed');
         const extra = mode === 'cookie' ? [['X-CSRF-Token', csrf]] : mode === 'bearer' ? [['Authorization', 'Bearer ' + token],
-          ...(['createRequestContext', 'submitCommand', 'lookupCommandAdmission', 'rejectCommandAdmission'].includes(operation) ? [['Origin', origin]] : [])] : [];
+          ...(['createRequestContext', 'submitCommand', 'lookupCommandAdmission', 'rejectCommandAdmission', 'acquireControl', 'releaseControl', 'lookupControlRequest'].includes(operation) ? [['Origin', origin]] : []),
+          ...(['acquireControl', 'releaseControl', 'lookupControlRequest'].includes(operation) ? [['X-CSRF-Token', csrf]] : [])] : [];
         const response = await transport({...request, headers: [...request.headers, ...extra]});
         responseHeaders = response.headers.map(pair => [...pair]); return response;
       });
@@ -67,6 +68,10 @@ export function createBrowserSessionClient({baseUrl, timeoutMs, maxResponseBytes
     rejectCommandAdmission: body => execute('rejectCommandAdmission', {body}, 'bearer'),
     listDevices: cursor => execute('listDevices', cursor === undefined ? {} : {query: {cursor}}, 'bearer'),
     getControl: deviceId => execute('getControl', {path: {device_id: deviceId}}, 'bearer'),
+    acquireControl: (deviceId, body) => execute('acquireControl', {path: {device_id: deviceId}, body}, 'bearer'),
+    releaseControl: (deviceId, body) => execute('releaseControl', {path: {device_id: deviceId}, body}, 'bearer'),
+    getControlOperation: operationId => execute('getControlOperation', {path: {operation_id: operationId}}, 'bearer'),
+    lookupControlRequest: body => execute('lookupControlRequest', {body}, 'bearer'),
     getCommand: commandId => execute('getCommand', {path: {command_id: commandId}}, 'bearer'),
     getCommandEvidence: (commandId, query) => execute('getCommandEvidence', {path: {command_id: commandId}, query}, 'bearer'),
     clearLocalState,

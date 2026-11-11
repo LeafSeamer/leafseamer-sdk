@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createBrowserSessionClient, contractSelection as selection} from '../dist/index.mjs';
+import {prepareControlChange} from '../dist/index.mjs';
 
 function response(csrf, digest = selection.contract_digest) {
   return new Response(JSON.stringify({request_id: 'request', service_id: 'service', service_boot_id: 'boot', protocol_version: selection.contract_id, selection,
@@ -58,4 +59,32 @@ test('命令与证据查询采用定向令牌，GET路径和固定修订参数�
     await assert.rejects(client.getCommand('command_a'),e=>e.code==='session_credentials_missing');
     assert.equal(seen.length,start+1);
   }
+});
+
+test('控制写入及查原携带Origin和CSRF，操作读取仅GET，错误响应不重发',async()=>{
+ const seen=[],headers={'Content-Type':'application/json','X-LeafSeamer-Contract':selection.contract_id,'X-LeafSeamer-Contract-Digest':selection.contract_digest};
+ const client=createBrowserSessionClient({baseUrl:'https://controller.invalid',fetchImpl:async(url,options)=>{
+  seen.push({url,options});
+  if(url.endsWith('/auth/sessions'))return response('A'.repeat(43));
+  if(url.endsWith('/auth/service-tokens'))return new Response(JSON.stringify({request_id:'request',service_id:'service',service_boot_id:'boot',protocol_version:selection.contract_id,selection,
+   data:{access_token:'synthetic-access-token',token_type:'Bearer',expires_in:60,audience:'controller'}}),{status:201,headers});
+  return new Response('',{status:503});
+ }});
+ const body={context_id:'context',idempotency_key:'control',expected_control:{epoch:'epoch',version:'0'},reason:'显式操作'};
+ const prepared=await prepareControlChange({operation:'acquireControl',device_id:'device',scope:{authority_service_id:'controller',database_instance_id:'database'},body,
+  context:{context_id:'context',context_epoch:'epoch',service_id:'controller',audience:'controller',selection,operations:['acquireControl'],issuer_id:'issuer',issuer_epoch:'epoch',principal_id:'principal'}});
+ for(const operation of ['acquireControl','releaseControl','lookupControlRequest','getControlOperation']){
+  await client.login({login:'operator',password:'synthetic-password-012345'});
+  await client.issueToken({audience:'controller',requested_scopes:['control.read','control.acquire','control.release']});
+  const start=seen.length;
+  await assert.rejects(operation==='lookupControlRequest'?client[operation](prepared.identity):operation==='getControlOperation'?client[operation]('operation-one'):client[operation]('device',body));
+  assert.equal(seen.length,start+1);
+  const request=seen.at(-1),read=operation==='getControlOperation';
+  assert.equal(request.options.method,read?'GET':'POST');
+  assert.equal(request.options.headers.get('authorization'),'Bearer synthetic-access-token');
+  assert.equal(request.options.headers.get('origin'),read?null:'https://controller.invalid');
+  assert.equal(request.options.headers.get('x-csrf-token'),read?null:'A'.repeat(43));
+  if(read)assert.equal(new URL(request.url).pathname,'/api/v1/control-operations/operation-one');
+  await assert.rejects(client.getControlOperation('operation-one'),e=>e.code==='session_credentials_missing');assert.equal(seen.length,start+1);
+ }
 });

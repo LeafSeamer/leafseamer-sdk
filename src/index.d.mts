@@ -40,6 +40,10 @@ export interface BrowserSessionClient {
   rejectCommandAdmission(body: Inputs['controller']['rejectCommandAdmission']['body']): Promise<Results['controller']['rejectCommandAdmission']>;
   listDevices(cursor?: string): Promise<Results['controller']['listDevices']>;
   getControl(deviceId: string): Promise<Results['controller']['getControl']>;
+  acquireControl(deviceId: string, body: Inputs['controller']['acquireControl']['body']): Promise<Results['controller']['acquireControl']>;
+  releaseControl(deviceId: string, body: Inputs['controller']['releaseControl']['body']): Promise<Results['controller']['releaseControl']>;
+  getControlOperation(operationId: string): Promise<Results['controller']['getControlOperation']>;
+  lookupControlRequest(body: Inputs['controller']['lookupControlRequest']['body']): Promise<Results['controller']['lookupControlRequest']>;
   getCommand(commandId: string): Promise<Results['controller']['getCommand']>;
   getCommandEvidence(commandId: string, query: Inputs['controller']['getCommandEvidence']['query']): Promise<Results['controller']['getCommandEvidence']>;
   /** 只清除内存凭据，不撤销服务端会话或删除HttpOnly Cookie。 */
@@ -47,3 +51,11 @@ export interface BrowserSessionClient {
 }
 /** 当前会话Cookie路径为/auth；baseUrl只接受同源HTTPS根入口。 */
 export function createBrowserSessionClient(options: Pick<FetchTransportOptions, 'baseUrl' | 'timeoutMs' | 'maxResponseBytes' | 'fetchImpl'>): BrowserSessionClient;
+export type ControlChangeOperation = 'acquireControl' | 'releaseControl';
+export type PreparedControlChange = {[K in ControlChangeOperation]: Readonly<{operation: K; device_id: string;
+  body: Inputs['controller'][K]['body']; identity: Inputs['controller']['lookupControlRequest']['body']}>}[ControlChangeOperation];
+export type ControlChangeInput = {[K in ControlChangeOperation]: {operation: K; device_id: string;
+  scope: Inputs['controller']['lookupControlRequest']['body']['key']['target_scope'];
+  context: Extract<Results['controller']['createRequestContext'], {status: '201'}>['body']['data'];
+  body: Inputs['controller'][K]['body']}}[ControlChangeOperation];
+export function prepareControlChange(input: ControlChangeInput): Promise<PreparedControlChange>;
