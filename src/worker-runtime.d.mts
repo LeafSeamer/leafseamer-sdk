@@ -13,7 +13,7 @@ export const workerRuntimeSelection: Readonly<{contract_id: 'leafseamer.worker-r
 export class WorkerRuntimeWireError extends Error { readonly stage: string; readonly reason: string; public(): {stage: string; reason_code: string; byte_offset?: number}; }
 export function decodeWorkerIntent(bytes: Uint8Array, context: Readonly<{authority: 'controller' | 'seamer'; service_id: string; database_instance_id: string}>): Promise<WorkerIntent>;
 export function decodeLaunchAuthorization(bytes: Uint8Array): Promise<LaunchAuthorization>;
-export function decodeWorkerControl<T extends WorkerControlFrame['type']>(bytes: Uint8Array, type: T): Promise<Extract<WorkerControlFrame, {type: T}>>;
+export function decodeWorkerControl<T extends WorkerControlFrame['type']>(bytes: Uint8Array, type: T, options?: Readonly<{yieldNow?: () => Promise<void>}>): Promise<Extract<WorkerControlFrame, {type: T}>>;
 export function decodeSourceWorker<T extends SourceWorkerFrame['type']>(bytes: Uint8Array, type: T): Promise<Extract<SourceWorkerFrame, {type: T}>>;
 export function decodeSourceRuntimeBinding(bytes: Uint8Array): Promise<SourceRuntimeBinding>;
 export function decodeSourceBinding(bytes: Uint8Array): Promise<SourceBinding>;

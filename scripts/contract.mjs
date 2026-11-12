@@ -4,7 +4,10 @@ import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import canonicalize from 'canonicalize';
 import {addIdentity} from './identity.mjs';
+import {addBindingApprovals} from './binding-approvals.mjs';
 import {addExecutionNegotiation} from './execution-negotiation.mjs';
+import {addEventTime} from './event-time-contract.mjs';
+import {addSnapshotContext} from './snapshot-context.mjs';
 import {build as wire} from './generate/wire.mjs';
 import {build as http} from './generate/http.mjs';
 import {build as types} from './generate/types.mjs';
@@ -18,7 +21,7 @@ export async function buildContract() {
   const base = 'contracts/panel-wire/contract/', manifestBytes = read(base + 'manifest.json');
   if (hash(manifestBytes) !== config.base_manifest_sha256) throw new Error('contract_baseline_drift');
   const original = JSON.parse(manifestBytes), documents = {};
-  const oldBase = 'https://leafseamer.invalid/sdk/panel-wire/0.1/', newBase = 'https://leafseamer.invalid/sdk/product/4/';
+  const oldBase = 'https://leafseamer.invalid/sdk/panel-wire/0.1/', newBase = 'https://leafseamer.invalid/sdk/product/8/';
   const escaped = value => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const replace = value => {
     if (typeof value === 'string') return value.replaceAll(original.contract_id, config.contract_id)
@@ -35,7 +38,10 @@ export async function buildContract() {
   }
   const apis = {controller: documents['controller.openapi.json'], seamer: documents['seamer.openapi.json']};
   addIdentity(apis, documents['models.schema.json']);
+  addBindingApprovals(apis, documents['models.schema.json']);
   addExecutionNegotiation(documents);
+  const eventModels=addEventTime(documents);
+  const snapshotContextModels=addSnapshotContext(apis,documents['models.schema.json']);
   function walk(value, visit) {
     if (!value || typeof value !== 'object') return;
     visit(value); for (const child of Object.values(value)) walk(child, visit);
@@ -69,7 +75,9 @@ export async function buildContract() {
   walk(documents, value => {
     if (Object.keys(value).sort().join(',') === 'digest,revision' && value.revision === oldRef.revision && value.digest === oldRef.digest) value.digest = digest;
   });
-  documents['binding-map.json'].added_models.push(...Object.keys(documents['models.schema.json'].$defs).filter(n => n.startsWith('identity__')));
+  documents['binding-map.json'].added_models.push(...Object.keys(documents['models.schema.json'].$defs).filter(n => n.startsWith('identity__')||n.startsWith('bindingApproval__')));
+  documents['binding-map.json'].added_models.push(...eventModels);
+  documents['binding-map.json'].added_models.push(...snapshotContextModels);
   documents['PROTOCOL.md'] = read('CONTRACT.md').toString('utf8');
   const artifacts = Object.fromEntries(Object.entries(documents).map(([n, v]) => [n, n.endsWith('.json') ? json(v) : v]));
   const manifest = {format: 'sdk-contract-artifacts/1', contract_id: config.contract_id,

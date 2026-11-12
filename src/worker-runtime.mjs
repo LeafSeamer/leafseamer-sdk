@@ -12,8 +12,8 @@ const controls = new Set(['FENCE_PUT', 'FENCE_RESULT', 'LAUNCH_REGISTER', 'LAUNC
 const sourceTypes = new Set(['CAPTURE', 'CAPTURE_RESULT', 'CAPTURE_FAILED', 'CAPTURE_ACK', 'CANCEL', 'CANCEL_ACK', 'STOP', 'STOP_ACK']);
 const check = (ok, reason) => { if (!ok) throw new WireError('binding', reason); };
 const yieldNow = () => new Promise(resolve => { if (typeof setImmediate === 'function') setImmediate(resolve); else setTimeout(resolve, 0); });
-async function decode(bytes, schema, budget = small) {
-  return (await decodeWire(bytes, getSchema(schema), {profile: budget, yieldNow})).value;
+async function decode(bytes, schema, budget = small, scheduler = yieldNow) {
+  return (await decodeWire(bytes, getSchema(schema), {profile: budget, yieldNow:scheduler})).value;
 }
 const sameOwner = (value, scope) => value.authority_service_id === scope.service_id && value.database_instance_id === scope.database_instance_id;
 const refKey = ref => [ref.kind, ref.authority_service_id, ref.database_instance_id, ref.object_id, ref.revision, ref.digest].join('\0');
@@ -37,9 +37,10 @@ export async function decodeWorkerIntent(bytes, context) {
   if (value.object_scope.kind === 'data_sources') for (const ref of [...value.object_scope.source_refs, ...value.object_scope.data_object_refs]) check(sameOwner(ref, context), 'worker_binding_scope');
   return value;
 }
-export async function decodeWorkerControl(bytes, expectedType) {
+export async function decodeWorkerControl(bytes, expectedType, {yieldNow:scheduler=yieldNow}={}) {
   check(controls.has(expectedType), 'worker_control_type');
-  const value = await decode(bytes, 'control', control); check(value.type === expectedType, 'worker_control_direction');
+  check(typeof scheduler==='function','worker_control_scheduler');
+  const value = await decode(bytes, 'control', control, scheduler); check(value.type === expectedType, 'worker_control_direction');
   if (value.type === 'LAUNCH_LOAD' && value.payload.operation === 'chunk') base64Length(value.payload.bytes);
   if (value.type === 'LAUNCH_REGISTER') intentSemantics(value.payload.intent);
   if(value.type==='MATERIALIZATION_RESULT'&&value.payload.status==='verified'){

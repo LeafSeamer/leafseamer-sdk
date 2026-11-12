@@ -27,7 +27,30 @@ export function createFetchTransport(options: FetchTransportOptions): Transport;
 
 import type {Results, Inputs} from './runtime/panel-client/preview/operations.js';
 export class SessionClientError extends Error { constructor(code: string); readonly code: string; }
+/** 与父会话共享注销、刷新和在途代际；Seamer请求不携带Controller的Cookie或CSRF；发布使用Seamer自己的context凭据。 */
+export interface BrowserDraftClient {
+  issueToken(requested_scopes: string[]): Promise<Results['controller']['issueToken']>;
+  createRequestContext(body: {operations: string[]; ttl_ms: number; max_unique_requests: number}): Promise<Results['seamer']['createRequestContext']>;
+  createDefinition(body: Inputs['seamer']['createDefinition']['body']): Promise<Results['seamer']['createDefinition']>;
+  getDraft(definitionId: string): Promise<Results['seamer']['getDraft']>;
+  updateDraft(definitionId: string, body: Inputs['seamer']['updateDraft']['body']): Promise<Results['seamer']['updateDraft']>;
+  updateDefinitionMetadata(definitionId: string, body: Inputs['seamer']['updateDefinitionMetadata']['body']): Promise<Results['seamer']['updateDefinitionMetadata']>;
+  lookupAutomationRequest(body: Inputs['seamer']['lookupAutomationRequest']['body']): Promise<Results['seamer']['lookupAutomationRequest']>;
+  publishDefinition(definitionId: string, body: Inputs['seamer']['publishDefinition']['body']): Promise<Results['seamer']['publishDefinition']>;
+  getPublishedArtifact(definitionId: string, version: string): Promise<Results['seamer']['getPublishedArtifact']>;
+  getCompiledProgram(definitionId: string, version: string): Promise<Results['seamer']['getCompiledProgram']>;
+  getIndependenceProof(definitionId: string, proofId: string, revision: string): Promise<Results['seamer']['getIndependenceProof']>;
+  queryBindingCandidate(definitionId: string, body: Inputs['seamer']['queryBindingCandidate']['body']): Promise<Results['seamer']['queryBindingCandidate']>;
+  approveDefinitionBindings(definitionId: string, body: Inputs['seamer']['approveDefinitionBindings']['body']): Promise<Results['seamer']['approveDefinitionBindings']>;
+  getBindingApproval(definitionId: string, approvalId: string): Promise<Results['seamer']['getBindingApproval']>;
+  revokeBindingApproval(definitionId: string, approvalId: string, body: Inputs['seamer']['revokeBindingApproval']['body']): Promise<Results['seamer']['revokeBindingApproval']>;
+  lookupBindingApproval(definitionId: string, body: Inputs['seamer']['lookupBindingApproval']['body']): Promise<Results['seamer']['lookupBindingApproval']>;
+  /** 只忘记该客户端的内存令牌与发布CSRF，不撤销已受理的请求。 */
+  clearLocalState(): void;
+}
 export interface BrowserSessionClient {
+  /** 固定地址及audience须由可信站点配置提供；支持HTTPS根或固定service前缀。 */
+  createDraftClient(options: {baseUrl: string; audience: string}): BrowserDraftClient;
   login(body: {login: string; password: string}): Promise<Results['controller']['login']>;
   refresh(clientInstanceId: string): Promise<Results['controller']['refreshSession']>;
   issueToken(body: {audience: string; requested_scopes: string[]}): Promise<Results['controller']['issueToken']>;
@@ -39,6 +62,7 @@ export interface BrowserSessionClient {
   lookupCommandAdmission(body: Inputs['controller']['lookupCommandAdmission']['body']): Promise<Results['controller']['lookupCommandAdmission']>;
   rejectCommandAdmission(body: Inputs['controller']['rejectCommandAdmission']['body']): Promise<Results['controller']['rejectCommandAdmission']>;
   listDevices(cursor?: string): Promise<Results['controller']['listDevices']>;
+  getCapabilities(deviceId: string): Promise<Results['controller']['getCapabilities']>;
   getControl(deviceId: string): Promise<Results['controller']['getControl']>;
   acquireControl(deviceId: string, body: Inputs['controller']['acquireControl']['body']): Promise<Results['controller']['acquireControl']>;
   releaseControl(deviceId: string, body: Inputs['controller']['releaseControl']['body']): Promise<Results['controller']['releaseControl']>;
@@ -52,6 +76,12 @@ export interface BrowserSessionClient {
 /** 当前会话Cookie路径为/auth；baseUrl只接受同源HTTPS根入口。 */
 export function createBrowserSessionClient(options: Pick<FetchTransportOptions, 'baseUrl' | 'timeoutMs' | 'maxResponseBytes' | 'fetchImpl'>): BrowserSessionClient;
 export type ControlChangeOperation = 'acquireControl' | 'releaseControl';
+export type DraftChangeOperation = 'createDefinition' | 'updateDraft' | 'updateDefinitionMetadata' | 'publishDefinition';
+export type PreparedDraftChange = {[K in DraftChangeOperation]: Readonly<{operation:K;definition_id:K extends 'createDefinition'?null:string;
+  body:Inputs['seamer'][K]['body'];lookup:Inputs['seamer']['lookupAutomationRequest']['body'];request_digest:string}>}[DraftChangeOperation];
+export type DraftChangeInput = {[K in DraftChangeOperation]: {operation:K;definition_id:K extends 'createDefinition'?null:string;
+  scope:{authority_service_id:string;database_instance_id:string};context:Extract<Results['seamer']['createRequestContext'],{status:'201'}>['body']['data'];body:Inputs['seamer'][K]['body']}}[DraftChangeOperation];
+export function prepareDraftChange(input:DraftChangeInput):Promise<PreparedDraftChange>;
 export type PreparedControlChange = {[K in ControlChangeOperation]: Readonly<{operation: K; device_id: string;
   body: Inputs['controller'][K]['body']; identity: Inputs['controller']['lookupControlRequest']['body']}>}[ControlChangeOperation];
 export type ControlChangeInput = {[K in ControlChangeOperation]: {operation: K; device_id: string;

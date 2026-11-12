@@ -10,6 +10,14 @@
   },
   "packageManager": "npm@11.19.1",
   "exports": {
+    "./event-time": {
+      "types": "./dist/event-time.d.mts",
+      "import": "./dist/event-time.mjs"
+    },
+    "./automation-program": {
+      "types": "./dist/automation-program.d.mts",
+      "import": "./dist/automation-program.mjs"
+    },
     "./device-execution": {
       "types": "./dist/device-execution.d.mts",
       "import": "./dist/device-execution.mjs"

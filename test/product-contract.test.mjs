@@ -9,7 +9,7 @@ import {routes} from '../dist/runtime/panel-wire/preview/routes.mjs';
 const read = path => JSON.parse(fs.readFileSync(new URL(path, import.meta.url)));
 const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 
-test('产品选择覆盖完整原操作及新增注销，清单摘要和历史输入均可核验', () => {
+test('产品选择覆盖完整原操作、注销及绑定批准，清单摘要和历史输入均可核验', () => {
   const baseline = read('../contracts/panel-wire/contract/selection.json'), lock = read('../sdk-inputs.json');
   assert.notDeepEqual(selection, baseline);
   for (const [path, digest] of Object.entries(lock.files)) assert.equal(hash(fs.readFileSync(new URL('../' + path, import.meta.url))), digest);
@@ -26,7 +26,7 @@ test('产品选择覆盖完整原操作及新增注销，清单摘要和历史�
       assert.deepEqual(Object.keys(current.responses), Object.keys(operation.responses));
     }
   }
-  assert.equal(originalCount, 201); assert.equal(routes.operations.length, originalCount + 1);
+  assert.equal(originalCount, 201); assert.equal(routes.operations.length, originalCount + 12);
   const logout = routes.operations.find(v => v.operation_id === 'logoutSession');
   assert.equal(logout.authority, 'controller'); assert.equal(logout.path, '/auth/sessions/current');
   assert.equal(logout.request, null); assert(logout.responses['202']);

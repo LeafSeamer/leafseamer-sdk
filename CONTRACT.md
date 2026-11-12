@@ -1,6 +1,8 @@
 # 产品开发契约
 
-当前选择为 `leafseamer.api.v1.product4`。它包含完整的202项HTTP／WS操作声明：承接panel4的201项并新增签发Controller的 `DELETE /auth/sessions/current`。四个WS入口使用专用升级通道，其余198项有普通HTTP类型入口。声明存在不表示产品已实现该操作；服务仅开放已有处理器，其它能力不得宣称可用。
+当前选择为 `leafseamer.api.v1.product8`。它包含213项HTTP／WS操作声明：承接panel4的201项、Controller当前会话注销、五项Seamer绑定批准操作、双方各两项事件时间原件读取及双方快照上下文查询。四个WS入口使用专用升级通道，其余209项有普通HTTP类型入口。声明存在不表示产品已实现该操作；服务仅开放已有处理器，其它能力不得宣称可用。
+
+product8新增内部只读 `POST /internal/subscriptions/{subscription_id}/snapshot-context`，请求绑定challenge、预期连接代际和原快照引用，响应给出固定Profile／Selector、owner、发布者启动标识与保守剩余租期。服务mTLS、当前配对、权限、owner、scope、运行域及释放前复核仍必需。租期沿原快照、授权、认证采集、运行与健康证明的最早截止，查询不延期；接收端扣除完整往返、两端量化和漂移误差，且不得超过原本地时钟样本期限。UTC展示值不证明租期，缺少合格单调域证据、切域或到期均停止应用。该查询不确认baseline、不产生采样或执行资格。product7精确选择不能混投，三方须同步采用product8；历史持久原件保持原样。
 
 生成入口为 `scripts/build.mjs`；`sdk-inputs.json` 固定历史消费者与静态运行依赖，`sdk-contract.json` 固定完整契约基线清单。构建先核原件字节，再归并产品模型、路由、选择及类型；SchemaRef采用完整input／result文档的JCS摘要，RegistryRef采用已重绑Registry的JCS摘要，完整selection采用制品清单的JCS摘要。制品字节另以SHA-256核验，不混用三种摘要。
 
@@ -21,3 +23,25 @@ product4将命令记录及其快照、面板投影的 `accepted_at` 显式扩为
 SDK的 `logout()` 无自动重试，完成或失败后清除内存认证材料。202只证明本地受理，401或本地清理都不证明传播完成。Controller发送202前再次核对已提交注销事实与认证时钟；结果未知保持错误，不补造成功或替用户重发。
 
 当前仍保持 `approved=false`、`runtime_ready=false`、`advertisable=false`。完整主体视图、服务身份、配对、权限收紧及其他DF01差集仍须按既定首期范围生成并实现；本开发选择不代表最终发行接受集、生产认证资格、浏览器或设备验收。
+
+product5保留product4行为，为已配对服务的introspect响应增加必填的recent_authentication：active人员快照含签发方实际会话的近期认证区间及同一session修订；服务主体或inactive结果为null。该区间可以已经到期，普通读取不能据此推断当前仍有管理资格。接收方必须核对它与snapshot的会话身份一致，并以自己的认证时间上界检查expires_at；不能从token TTL重建近期认证。
+
+introspect新增必填X-LeafSeamer-Pairing头，选择接收端本地配对记录。选择器、audience和challenge均不授予服务身份；只有当前TLS对端匹配已激活记录且具备auth.introspect用途才可核验。required_revision是签发方授权账本的整体修订下界，不能用主体、策略或会话修订替代；响应绑定原challenge。历史product4响应不带近期认证证明，不能作为product5解析或管理授权来源。快照新鲜度从接收方发起挑战的原始单调时刻计算，重传或收包不续期。
+
+
+product6新增 queryBindingCandidate、approveDefinitionBindings、getBindingApproval、revokeBindingApproval、lookupBindingApproval。候选来自具名配对读取，批准请求只选择来源、精确注册和原审阅摘要，不能提交绑定正文或批准标志。批准与撤销要求真实人员、近期认证、双端auth.manage交集、定义范围，以及本Seamer发出的上下文和Origin／CSRF；同事务计入上下文额度，精确重放不重复计费。查询批准要求auth.read，查本人请求还须request.read。候选不是持续来源租约，批准仅用于definition_compile，不替代发布来源核验或RunGrant。
+
+公共视图保留完整绑定bundle；approval_ref引用内部不可变批准原件，摘要不等于公共投影摘要。查原固定request_id、定义与原业务请求完整JCS摘要：批准请求为request_id、approval_id、definition_id、expected_bundle_digest；撤销为request_id、approval_id、expected_revision。上下文和来源定位器不进入此摘要；新上下文仍必须重新通过当前写权限检查，查原不要求旧写上下文有效。撤销后查原可返回第一版批准，不能据此判定当前有效。产品5选择不能混投，既有IPC版本与能力协商不变。
+
+
+五项绑定批准响应采用契约固定的扫描预算：512KiB、深度48、131072值节点、65536对象成员、键4KiB、单字符串256KiB和1000毫秒解析期限；范围只覆盖这些响应，不改变请求或其它操作的默认预算。超限仍拒绝，不截断、不自动重试。产品适配器按固定操作元数据采用预算，旧适配器原件不变；认证身份、配对、来源句柄及已受理命令的原截止均不延长，响应解析后继续核当前授权。
+
+设备模块采集通道独立新增显式 `device-module/4`，公共product6及设备执行IPC选择保持不变。v3仅接受原消息，v4增加采集启动、批次读取、精确确认与停止，通道版本从LOAD起固定。原单调采集区间、连续序号和批次正文不得在重读时重新生成；故障状态不能被后续active响应清除。模块确认仅用于释放有界缓存，不能解释为规范事件摄取、执行成功、完整保护或RunGrant。具体模块的基线和事件正文分别位于 `baseline` 与 `payload`，模块Schema和当前来源批准仍须独立核验。
+
+product7采用C05第17／19节与DF03第20节的事件时间模型。SourceBindingRef以target区分device和data_source，后者仅允许sampled并绑定同一owner的来源、运行及观察绑定引用。Origin必须携带可空source_time_ref，整个Origin参与JCS摘要，旧正文不能在新选择下省略该字段。SourceTimeEvidence保存来源身份、完整QualifiedValue摘要、捕获语义、域及原区间；无参考UTC时reference_context_ref与utc_interval同时为null。时间原件摘要仅排除自身digest，Origin引用其固定摘要，不建立双向摘要循环。
+
+AgeEvidence固定首次接收与求值时刻，trusted_utc、causal_capture、local_capture及unproven各自关闭其他分支字段。unproven年龄上下界为null并带原因，不补零。FirstObservation采用完整owner scope的AgeEvidenceRef。双方新增精确摘要查询的getSourceTimeEvidence及getEventAgeEvidence声明，复用配对mTLS、当前对象授权、no-store和选择检查，权限为events.internal.read；仅可由所属服务交付自己的原件，不授全局枚举。
+
+product7的来源键、来源绑定及事件标识沿用程序生命周期的统一Id规则，保留真实设备与运行成员名称中的点号和冒号，长度限制为128。来源引用保持原身份，不通过重命名设备、成员或事件绕过校验；非法字符与超长标识继续拒绝。
+
+`@leafseamer/sdk/event-time`提供静态结构、区间顺序、来源关联及摘要核验。通过这些检查不证明引用当前、采集资格可信、UTC相容或可触发；服务仍须解析实际平台／参考／捕获原件，执行漂移包络的年龄计算及撤销、连续性、同writer提交和消费前重核。SDK不从认证时钟、接收墙钟或自报年龄制造证据；当前新增内部读取声明不代表服务处理器已实现。执行IPC与模块IPC版本保持原选择，公共product6选择不能混投到product7。

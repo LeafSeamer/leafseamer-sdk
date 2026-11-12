@@ -35,7 +35,9 @@ const result = await controller.call('discoverContracts');
 
 传输不自动重试、不跟随重定向，累计正文和整次请求均有预算。取消或超时发生在发送后时保留 `outcome_unknown`，不能据此重新提交动作。错误不暴露原始凭据或响应。浏览器 fetch 只能提供浏览器公开的头字段，不能证明拿到了原始重复头；服务端仍须在原始 HTTP 边界执行完整信封检查。现有字节校验的协作式预算也不等于硬内存隔离。
 
-当前包采用 `leafseamer.api.v1.product4`，完整承接 [sdk-inputs.json](sdk-inputs.json) 固定的201项旧操作，增加Controller当前会话注销，共202项；198项普通HTTP操作有类型入口，4个WS入口不经fetch发送。产品构建按 [sdk-contract.json](sdk-contract.json) 归并具名根、类型、静态校验器、完整SchemaRef／RegistryRef和新选择；详见 [产品契约](CONTRACT.md)。旧panel4字节与候选批准标志保持不变，不接受旧选择混投。完整主体视图、服务身份、配对、权限及其他DF01差集仍按首期范围实施；本开发选择不是最终发行接受集，声明操作不等于服务已经实现。
+当前包采用 `leafseamer.api.v1.product8`，完整承接 [sdk-inputs.json](sdk-inputs.json) 固定的201项旧操作，增加Controller当前会话注销、五项Seamer绑定批准、双方各两项事件时间原件读取及双方快照上下文查询，共213项；209项普通HTTP操作有类型入口，4个WS入口不经fetch发送。产品构建按 [sdk-contract.json](sdk-contract.json) 归并具名根、类型、静态校验器、完整SchemaRef／RegistryRef和新选择；详见 [产品契约](CONTRACT.md)。旧panel4字节与候选批准标志保持不变，不接受旧选择混投。完整主体视图、服务身份、配对、权限及其他DF01差集仍按首期范围实施；本开发选择不是最终发行接受集，声明操作不等于服务已经实现。
+
+事件时间入口为 `@leafseamer/sdk/event-time`。`validateEventTimeModel` 核验Origin、SourceBinding、SourceTimeEvidence及AgeEvidence的结构与本地关联，`digestEventTimeModel`使用固定JCS投影，`verifyEventOrigin`核对完整来源与时间原件并返回深冻结的`origin`和`source_time_evidence`副本。异步核验固定调用时输入，调用方应消费返回副本；摘要一致不授信任、发布或执行权限。实际引用解析、年龄包络计算、撤销、连续性及持久摄取仍由服务实现，不能从Schema通过或空时间引用推断事件新鲜。
 
 `npm test` 验证真实本机 HTTP、路径及 authority 绑定、重定向拒绝、发送后断线、响应大小、超时和取消。它不证明浏览器权限流程、生产认证、产品服务、数据库、部署或设备已验收。构建产物在 `dist/`，带字节清单和第三方许可；仅这些运行文件进入 npm 包，本地日志和治理资料不打包。
 
@@ -60,6 +62,10 @@ Cookie由浏览器管理，CSRF及token只存在客户端闭包内存，不写�
 `@leafseamer/sdk/device-module` 导出 `DeviceModuleFactory`、`DeviceModuleFrame` 和 `validateDeviceModuleFrame`。扩展入口导出 `createDeviceModule(context)`，返回版本为 `leafseamer-device-module/2` 的实现，提供 `connectReadOnly`、`proposeCatalog`、`captureBaseline`、`stopReadOnly` 四个异步方法。宿主供应已绑定的配置、设备范围、取消信号和本域单调读数；模块须核设备与session并响应取消。清单须声明该API版本及 `device-module/3` IPC版本。
 
 v3新增仅供固定宿主装配的`BIND_EXECUTION`／`EXECUTION_BOUND`，传递核心持久执行Binding及其精确引用。SDK核帧结构、引用和方向，固定宿主核当前运行及具体模块配置；该确认不授予设备写许可。旧模块IPC版本严格拒绝，模块实现API仍为`leafseamer-device-module/2`。
+
+事件采集通过独立常量 `deviceModuleEventProtocol` 显式选择 `device-module/4`；v3保留原消息集合，不能携带事件操作。v4清单还须声明 `leafseamer-device-event-capture/1`，实现 `events.start/read/acknowledge/stop`。协议新增 `EVENT_START/STARTED`、`EVENT_READ/BATCH`、`EVENT_ACK/ACKED`、`EVENT_STOP/STOPPED` 四组请求／响应，同一通道从LOAD起固定版本，不在途中降级或升级。
+
+采集描述符包含当前设备、会话、采集身份、事件类型、原单调起点及模块基线 `baseline`；事件包含 `event_id`、连续 `sequence`、`event_type`、模块正文 `payload` 和 `capture_interval`。基线和正文仍须由具体模块Schema裁决。SDK限制每批32条、每条1024字节、正文深度16，并检查顺序、区间、明确缺失和停止计数；接收端另核原描述符、JCS摘要、跨批次时钟及故障锁存。采样快照不能作为事件提交，读取请求时间不替换原采集区间。确认仅释放模块缓存，不构成规范事件持久摄取、RunGrant或运行恢复。
 
 连接取得identity后，宿主在同一截止窗口内调用 `proposeCatalog`，把只含目录修订、状态Schema和动作／触发器ID集合的提议附于CONNECTED。提议不能自报批准；Controller须按当前安装批准与具体型号资格核验。v2不接受缺少目录的v1连接响应。
 
@@ -91,6 +97,14 @@ SDK 的首份独立契约资料位于 [contracts/draft4](contracts/draft4/README
 
 旧 NodeCG 实现及历史保留于 [leafseamer-legacy](https://github.com/ikenainanodesu/leafseamer-legacy)。本仓尚未导入旧业务源码；后续复用时逐项记录来源、历史映射和必要许可声明。
 
+## 自动化程序模型入口
+
+`@leafseamer/sdk/automation-program` 导出当前 product5 中继承的既有程序模型的 TypeScript 类型及 `validateAutomationModel(name, value)`。生成器从同一接受集提取模型并预编译校验器，运行期不生成代码，不改变HTTP选择。输入须为普通JSON值，拒绝访问器、循环、稀疏数组、非有限数和畸形Unicode，并限制深度48、节点1048576及实际JSON UTF8大小16MiB。该接口接受已解码的值，原始报文仍须经对应的严格字节入口处理。 `digestAutomationValue(value)` 对同一有界JSON检查通过后的值计算JCS规范SHA-256摘要，供固定发布产物、程序、绑定和证明原件比对；摘要一致不授予来源批准或运行资格。
+
+模型合法不代表表达式语义、依赖图、绑定批准、发布或运行资格；这些由Seamer及相应权威实现。
+
+同一入口以 `Lifecycle` 前缀导出既有草稿、元数据、修订记录和创建／更新请求模型及其引用闭包。内容与metadata分别修订，客户端提交绑定选择而不是自行批准的CompiledProgram；程序和草稿生成结果仍与继承的product4原模型逐项对账。
+
 ## 完整发行清单入口
 
 `@leafseamer/sdk/release-manifest` 提供 `decodeReleaseManifest(bytes)`、`decodeReleaseRevocations(bytes)` 及具名类型，采用独立选择 `leafseamer.release-manifest.1`。新版 `native-release/0.2.0-draft.1` 表达五仓组件、运行入口、多通道、存储修订、独立连接策略、运行时和多镜像部署；旧发行格式及 HTTP产品选择 摘要不变。
@@ -102,3 +116,20 @@ SDK 的首份独立契约资料位于 [contracts/draft4](contracts/draft4/README
 `@leafseamer/sdk/capability-template`提供`decodeCapabilityTemplate(bytes)`与具名`CapabilityTemplate`类型，采用独立选择`leafseamer.capability-template.1`。从产品动作、触发器与Schema模型派生，静态动作去除运行footprint；原始JSON严格解析并校验有序唯一集合，最多1MiB。此新入口使用普通点分版本号，不改变旧HTTP接受集。Schema文档摘要与动态编译由宿主另行核验；模板声明不证明设备支持或运行批准。详见[静态模板契约](contracts/capability-template/README.md)。
 
 本仓主许可为 [Apache-2.0](LICENSE)。
+
+`createBrowserSessionClient` 可通过 `createDraftClient({baseUrl, audience})` 建立固定Seamer草稿入口。地址与audience必须来自可信站点配置；先完成Controller登录，再显式调用草稿客户端的 `issueToken(scopes)`。签发仍只访问Controller并使用同源Cookie与内存CSRF，草稿五操作仅向固定Seamer发送其独立的内存Bearer，传输固定 `credentials: 'omit'`，不转发Controller的Cookie或CSRF，也不自动重试／刷新／重新签发。context请求的audience与SDK选择由客户端固定；写入仍要求调用者提供原context、幂等键和相应CAS修订。
+
+父会话清理、退出、成功刷新或认证响应失败会清除相应内存凭据；清理前发起的迟到签发不能恢复token。不同Seamer客户端不共享token，签发响应audience必须与请求精确一致。Seamer需要显式允许Controller页面origin，并在CORS响应中公开两个契约选择头。该接口延用Fetch传输预算：默认响应64KiB，可在父会话配置中显式提高至8MiB；超限响应拒收不表示写入未提交。客户端可用不表示GUI编辑器、真实浏览器、首次配对引导或发布／运行功能已验收。
+
+product5的人员introspection响应必须携带同一会话修订的近期认证原区间；服务与inactive结果为null。请求必填目标端本地配对选择器，水位采用签发方整体授权修订；接收方从发起原挑战的本地单调时刻计算新鲜期限。此协议不授予目标服务对象权限，近期认证过期也不能用令牌TTL替代。
+
+`prepareDraftChange` 为创建、内容更新、元数据更新和固定修订发布生成已校验请求、原请求摘要与 `lookupAutomationRequest` 的非秘密查询身份；摘要与Seamer采用同一具名语义版本，排除顶层context但保留嵌套同名内容。准备工具不发送请求或授予权限。草稿客户端提供 `lookupAutomationRequest`：重新登录／重新签发后可在当前request.read与对象读取权下查询原结果；必须核对返回操作、摘要和目标范围，不把原结果当最新草稿。产品HTTP选择已显式升级为product6。
+
+浏览器会话客户端提供 `getCapabilities(deviceId)`，承接既有GET能力契约、内存定向Bearer及严格响应校验。调用前须显式签发目标Controller的device.read令牌；不自动重试、刷新或把Schema内容当作设备写入／发布批准。
+
+草稿客户端新增 `publishDefinition(definitionId, body)`、`getPublishedArtifact(definitionId, version)`、`getCompiledProgram(definitionId, version)` 和 `getIndependenceProof(definitionId, proofId, revision)`。发布须先显式取得包含 publishDefinition 的 Seamer context；SDK 只从完整校验成功的该 context 响应采用独立 X-CSRF-Token，最多保留256项内存映射，仅向对应Seamer的对应context发送。重新签发、客户端清理或父会话刷新／清理会丢弃这些凭据；不转发Controller CSRF，不自动补context或重试发布。静态自动化模型出口新增 LifecyclePublish／LifecyclePublishedVersion，定义仍来自同一product5选择。完整权威发布来源和浏览器发布界面仍待集成验收。
+
+
+浏览器草稿客户端新增五项本地绑定批准方法，沿用定向内存令牌及完整选择校验。批准／撤销先显式创建包含对应操作的Seamer请求上下文，SDK使用该上下文响应的独立CSRF；没有自动重试。候选、批准与查原均不授予发布或运行资格，具体保证及摘要投影见CONTRACT.md。
+
+`decodeWorkerControl(bytes, type, {yieldNow})` 允许可信调用方显式指定解析分片的调度函数。默认仍让出事件循环；已绑定的本地监督通道可使用微任务调度，先完成完整回复校验再处理业务回调。调度函数不改变结构校验、方向、容量或原1秒解析预算，也不延长监督确认期限。

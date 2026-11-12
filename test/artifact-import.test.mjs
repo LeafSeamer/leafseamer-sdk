@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import {decodeArtifactDocument, decodeImportFrame, artifactImportVersion, artifactImportSelection} from '../dist/artifact-import.mjs';
 import {contractSelection} from '../dist/index.mjs';
 const hash = 'sha256:' + '1'.repeat(64), encoded = value => Buffer.from(JSON.stringify(value));
@@ -9,7 +10,7 @@ const request = {identity, target_authority_service_id: 'controller.synthetic', 
   package_bytes: '100', expected_manifest_digest: hash, host_trust_epoch: '1', release_authorization_ref: ref('release_authorization'), validation_policy_ref: ref('validation_policy')};
 const inventory = {inventory_version: 'extension-files/1', files: [{file_id: 'a', path: 'payload/a.mjs', size_bytes: '1', digest: hash, role: 'module', executable: false}]};
 test('独立安装选择保留HTTP摘要，严格解码拒绝重复键、未知字段、畸形UTF8和超限文档', async () => {
-  assert.equal(contractSelection.contract_digest, 'sha256:f35fed8a04bd0c827f9c3bd0df0354d4b51208e7b1a0750450392d7ce81232c3');
+  assert.deepEqual(contractSelection,JSON.parse(fs.readFileSync(new URL('../dist/contract/selection.json',import.meta.url))));
   assert.equal(artifactImportSelection.contract_id, 'leafseamer.artifact-import.1');
   assert.deepEqual(await decodeArtifactDocument(encoded(request), 'ImportBegin'), request);
   await assert.rejects(decodeArtifactDocument(Buffer.from(JSON.stringify(request).replace('{', '{"host_trust_epoch":"2",')), 'ImportBegin'));

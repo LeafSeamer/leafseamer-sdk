@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import {decodeSupervisorControl, supervisorControlVersion} from '../dist/supervisor-control.mjs';
 import {contractSelection} from '../dist/index.mjs';
 const scope = {service_id: 'service', database_instance_id: 'database', supervisor_instance_id: 'supervisor',
@@ -14,7 +15,7 @@ test('独立监督查询入口保持精确序号、方向和既有HTTP选择', a
   assert.deepEqual(await decodeSupervisorControl(bytes({...query, type: 'LAUNCH_RESULT', reply_to: 'request', payload: {key, record: null}}), 'LAUNCH_RESULT'),
     {...query, type: 'LAUNCH_RESULT', reply_to: 'request', payload: {key, record: null}});
   assert.equal((await decodeSupervisorControl(bytes({...query, type: 'ERROR', reply_to: 'request', payload: {code: 'identity_conflict', retry_action: 'query_only'}}), 'ERROR')).payload.retry_action, 'query_only');
-  assert.equal(contractSelection.contract_digest, 'sha256:f35fed8a04bd0c827f9c3bd0df0354d4b51208e7b1a0750450392d7ce81232c3');
+  assert.deepEqual(contractSelection,JSON.parse(fs.readFileSync(new URL('../dist/contract/selection.json',import.meta.url))));
 });
 test('错误消息、重复键、额外字段与容量在采用前拒绝，查询与启动创建消息保持分离', async () => {
   await assert.rejects(decodeSupervisorControl(bytes(query), 'LAUNCH_RESULT'));

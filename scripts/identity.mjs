@@ -8,6 +8,15 @@ export function addIdentity(documents, graph) {
   propagation.properties.target_service_ids.maxItems = 4096;
   propagation.properties.receipts.maxItems = 4096;
   const definitions = {
+    identity__RecentAuthentication: object({format:{const:'issuer-recent-authentication/1'},session_id:ref('baseline__Id'),
+      session_revision:ref('baseline__Revision'),not_before:ref('baseline__Timestamp'),expires_at:ref('baseline__Timestamp')}),
+    identity__IntrospectResult: {...structuredClone(base.baseline__IntrospectResult),properties:{
+      ...structuredClone(base.baseline__IntrospectResult.properties),recent_authentication:{anyOf:[ref('identity__RecentAuthentication'),{type:'null'}]}},
+      required:[...base.baseline__IntrospectResult.required,'recent_authentication'],allOf:[...structuredClone(base.baseline__IntrospectResult.allOf),
+        {if:{properties:{active:{const:true},snapshot:{properties:{principal_kind:{const:'human'}}}},required:['active','snapshot']},
+          then:{properties:{recent_authentication:ref('identity__RecentAuthentication')}},else:{properties:{recent_authentication:{type:'null'}}}}]},
+    identity__IntrospectResponse: {...structuredClone(base.baseline__IntrospectResultResponse),properties:{
+      ...structuredClone(base.baseline__IntrospectResultResponse.properties),data:ref('identity__IntrospectResult')}},
     identity__LogoutOperationRef: object({authority_service_id: ref('baseline__Id'), database_instance_id: ref('baseline__Id'),
       kind: {const: 'session_revocation'}, id: ref('baseline__Id'), revision: ref('baseline__Revision')}),
     identity__SessionRevocationRecord: propagation,
@@ -23,6 +32,10 @@ export function addIdentity(documents, graph) {
   };
   for (const doc of Object.values(documents)) Object.assign(doc.components.schemas, structuredClone(definitions));
   Object.assign(graph.$defs, local(definitions));
+  const introspect=controller.paths['/internal/auth/introspect'].post;
+  introspect.responses['200'].content['application/json'].schema=ref('identity__IntrospectResponse');
+  introspect.parameters.push({in:'header',name:'X-LeafSeamer-Pairing',required:true,schema:ref('baseline__Id'),
+    description:'目标端本地配对记录选择器；只在当前双向认证连接及已激活用途核验后生效。'});
   const route = structuredClone(controller.paths['/auth/sessions/refresh'].post);
   route.operationId = 'logoutSession'; route.summary = '退出当前人员会话';
   route['x-permission'] = 'session.self'; route['x-principal-kind'] = 'human';

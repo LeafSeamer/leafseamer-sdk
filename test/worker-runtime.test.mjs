@@ -35,6 +35,12 @@ test('新版监督通道不回退旧版本，注册报文包含完整新意图',
   const frame = {version: workerControlVersion, type: 'LAUNCH_REGISTER', scope: {service_id: 'service', database_instance_id: 'database', supervisor_instance_id: 'supervisor', domain_ref: domain},
     channel_id: 'channel', sequence: '1', message_id: 'message', reply_to: null, payload: {intent: intent(), authorization: grant}};
   assert.deepEqual(await decodeWorkerControl(bytes(frame), 'LAUNCH_REGISTER'), frame);
+  let yields=0;const options={yieldNow:async()=>{yields++;}};
+  assert.deepEqual(await decodeWorkerControl(bytes(frame), 'LAUNCH_REGISTER',options),frame);assert.ok(yields>0);
+  await assert.rejects(decodeWorkerControl(bytes({...frame,extra:true}),'LAUNCH_REGISTER',options));
+  await assert.rejects(decodeWorkerControl(bytes(frame),'LAUNCH_CREATE',options));
+  await assert.rejects(decodeWorkerControl(bytes(frame),'LAUNCH_REGISTER',{yieldNow:null}));
+  await assert.rejects(decodeWorkerControl(bytes(frame),'LAUNCH_REGISTER',{yieldNow:()=>new Promise(resolve=>setTimeout(resolve,1100))}));
   await assert.rejects(decodeWorkerControl(bytes({...frame, version: 'supervisor-control/0.1.0-draft.1'}), 'LAUNCH_REGISTER'));
   await assert.rejects(decodeWorkerControl(bytes(frame), 'LAUNCH_CREATE'));
   await assert.rejects(decodeWorkerControl(bytes({...frame, payload: {...frame.payload, intent: {...intent(), device_ids: ['device.a']}}}), 'LAUNCH_REGISTER'));
