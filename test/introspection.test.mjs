@@ -13,7 +13,7 @@ async function response(data){
  return adapter.decodeResponse(Buffer.from(JSON.stringify(body)),adapter.prepareResponse(request,'200',headers));
 }
 test('product5人员核验必须携带近期认证原区间；过期区间不伪造当前管理资格',async()=>{
- assert.equal(selection.contract_id,'leafseamer.api.v1.product8');
+ assert.equal(selection.contract_id,'leafseamer.api.v1.product9');
  const value={active:true,snapshot,recent_authentication:recent};assert.deepEqual((await response(value)).value.data,value);
  for(const data of [{active:true,snapshot},{...value,recent_authentication:null},{...value,recent_authentication:{...recent,expires_at:undefined}},{...value,recent_authentication:{...recent,extend_ms:5000}}])await assert.rejects(response(data));
 });

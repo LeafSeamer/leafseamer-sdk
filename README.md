@@ -35,7 +35,7 @@ const result = await controller.call('discoverContracts');
 
 传输不自动重试、不跟随重定向，累计正文和整次请求均有预算。取消或超时发生在发送后时保留 `outcome_unknown`，不能据此重新提交动作。错误不暴露原始凭据或响应。浏览器 fetch 只能提供浏览器公开的头字段，不能证明拿到了原始重复头；服务端仍须在原始 HTTP 边界执行完整信封检查。现有字节校验的协作式预算也不等于硬内存隔离。
 
-当前包采用 `leafseamer.api.v1.product8`，完整承接 [sdk-inputs.json](sdk-inputs.json) 固定的201项旧操作，增加Controller当前会话注销、五项Seamer绑定批准、双方各两项事件时间原件读取及双方快照上下文查询，共213项；209项普通HTTP操作有类型入口，4个WS入口不经fetch发送。产品构建按 [sdk-contract.json](sdk-contract.json) 归并具名根、类型、静态校验器、完整SchemaRef／RegistryRef和新选择；详见 [产品契约](CONTRACT.md)。旧panel4字节与候选批准标志保持不变，不接受旧选择混投。完整主体视图、服务身份、配对、权限及其他DF01差集仍按首期范围实施；本开发选择不是最终发行接受集，声明操作不等于服务已经实现。
+当前包采用 `leafseamer.api.v1.product9`，完整承接 [sdk-inputs.json](sdk-inputs.json) 固定的201项旧操作，增加Controller当前会话注销、五项Seamer绑定批准、双方各两项事件时间原件读取及双方快照上下文查询，共213项；209项普通HTTP操作有类型入口，4个WS入口不经fetch发送。产品构建按 [sdk-contract.json](sdk-contract.json) 归并具名根、类型、静态校验器、完整SchemaRef／RegistryRef和新选择；详见 [产品契约](CONTRACT.md)。旧panel4字节与候选批准标志保持不变，不接受旧选择混投。完整主体视图、服务身份、配对、权限及其他DF01差集仍按首期范围实施；本开发选择不是最终发行接受集，声明操作不等于服务已经实现。
 
 事件时间入口为 `@leafseamer/sdk/event-time`。`validateEventTimeModel` 核验Origin、SourceBinding、SourceTimeEvidence及AgeEvidence的结构与本地关联，`digestEventTimeModel`使用固定JCS投影，`verifyEventOrigin`核对完整来源与时间原件并返回深冻结的`origin`和`source_time_evidence`副本。异步核验固定调用时输入，调用方应消费返回副本；摘要一致不授信任、发布或执行权限。实际引用解析、年龄包络计算、撤销、连续性及持久摄取仍由服务实现，不能从Schema通过或空时间引用推断事件新鲜。
 

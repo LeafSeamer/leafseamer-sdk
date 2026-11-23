@@ -25,7 +25,7 @@ async function decode(value){
  return adapter.decodeResponse(Buffer.from(JSON.stringify({view:'current',record:value})),adapter.prepareResponse(request,'200',[...headers,['content-type','application/json']]));
 }
 test('product4即时命令明确缺少参考时间，时间字段不得缺失或伪造格式',async()=>{
- assert.equal(selection.contract_id,'leafseamer.api.v1.product8');
+ assert.equal(selection.contract_id,'leafseamer.api.v1.product9');
  const value=record();assert.equal((await decode(value)).value.record.accepted_at,null);
  const {accepted_at,...missing}=value;await assert.rejects(decode(missing));
  await assert.rejects(decode({...value,accepted_at:'unavailable'}));

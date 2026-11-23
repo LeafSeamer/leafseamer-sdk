@@ -9,6 +9,7 @@ const sdkRoot=process.env.LEAFSEAMER_SDK_RUNTIME_UNDER_TEST??fileURLToPath(new U
 const load=name=>import(pathToFileURL(path.join(sdkRoot,name)));
 const {validateEventTimeModel:validate,digestEventTimeModel:digest,verifyEventOrigin}=await load('event-time.mjs');
 const {createHttpAdapter}=await load('http.mjs'),{contractSelection}=await load('index.mjs');
+const {createDecoder}=await load('runtime/panel-wire/decoder.mjs');
 const hash=v=>'sha256:'+crypto.createHash('sha256').update(canonicalize(v)).digest('hex'),zero='sha256:'+'0'.repeat(64);
 const ref={id:'proof',revision:'1',digest:zero},scope={authority_service_id:'controller',database_instance_id:'db'};
 const domain={...scope,provider_id:'provider',provider_boot_id:'boot',runtime_binding_ref:ref,clock_domain_id:'clock_'+'1'.repeat(64),descriptor_digest:zero,clock_generation:'1'};
@@ -19,6 +20,33 @@ const origin=()=>({source_key:structuredClone(key),binding_ref:structuredClone(b
 async function evidencePair(){const o=origin(),e={id:'source-time',revision:'1',digest:zero,source_key:o.source_key,binding_ref:o.binding_ref,event_id:o.event_id,source_sequence:o.source_sequence,
  payload_digest:hash(o.payload),capture_semantics:'event_occurrence',capture_evidence_ref:ref,capture_domain:structuredClone(domain),capture_start_tick_ns:'100',capture_end_tick_ns:'101',elapsed_profile_ref:ref,reference_context_ref:null,utc_interval:null};
  e.digest=await digest('SourceTimeEvidence',e);o.source_time_ref={kind:'source_time_evidence',scope,object_id:e.id,revision:e.revision,digest:e.digest};return {o,e};}
+test('内部来源帧传完整 Origin，公开通道维持原投影',async()=>{
+ const codec=createDecoder(contractSelection);
+ const envelope={format_version:'snapshot-projection/0.2.0-draft.1',type:'server.data',cursor:'1',previous_cursor:'0',delivery_mode:'reconcile',
+  binding:{subscription_id:'subscription',publisher_service_id:'controller',publisher_database_instance_id:'db',stream_id:'stream',stream_epoch:'epoch',scope_digest:'a'.repeat(64),authorization_revision:'1',connection_generation:'1'}};
+ for(const authority of ['controller','seamer']){
+  const internal=codec.websocket(authority,'internalOpenEvents','server'),external=codec.websocket(authority,'openEvents','server');
+  const decode=(value,root)=>codec.decode(Buffer.from(JSON.stringify(value)),root);
+  const projectedEntry={entry_kind:'source.event',payload:{source_key:key,event_id:'event',source_sequence:'1',trigger_id:'written',capability_version:'1.0.0',
+   occurred_at:null,observed_at:'2026-11-23T00:00:00.000Z',origin_digest:hash(origin()).slice(7),
+   age_evidence_ref:{...scope,entity_kind:'age',entity_id:'evidence',entity_epoch:'epoch',revision:'1',content_digest:'b'.repeat(64)},
+   payload:{schema_ref:{schema_id:'schema',definition:'value',schema_digest:'a'.repeat(64)},value:{value:7}}}};
+  const projected={...envelope,entry:projectedEntry,payload_digest:hash(projectedEntry).slice(7)};
+  assert.deepEqual((await decode(projected,external)).value.entry,projectedEntry);
+  await assert.rejects(decode(projected,internal));
+  for(const original of [origin(),(await evidencePair()).o]){
+   const entry={entry_kind:'source.event',payload:{origin:original,origin_digest:hash(original)}};
+   const frame={...envelope,entry,payload_digest:hash(entry).slice(7)};
+   assert.deepEqual((await decode(frame,internal)).value.entry,entry);
+   await assert.rejects(decode(frame,external));
+   const missing=structuredClone(frame);delete missing.entry.payload.origin.source_time_ref;
+   await assert.rejects(decode(missing,internal));
+   const injected=structuredClone(frame);injected.entry.payload.age_evidence_ref=ref;
+   await assert.rejects(decode(injected,internal));
+  }
+ }
+ assert.throws(()=>createDecoder({contract_id:'leafseamer.api.v1.product8',contract_digest:'sha256:7a58cc7162a8d2ea39eb92b29118aa5a718ec55668210f67e974614af3d4cffa'}));
+});
 function age(basis){return {id:'age',revision:'1',digest:zero,origin_ref:{source_key:key,event_id:'event'},origin_digest:hash(origin()),receiver_domain:structuredClone(domain),
  first_receive_tick_ns:'110',evaluated_tick_ns:'120',elapsed_profile_ref:ref,lower_age_ms:0,upper_age_ms:1,qualification_refs:[ref],reason_codes:[],basis,
  ...({trusted_utc:{source_time_ref:{kind:'source_time_evidence',scope,object_id:'source-time',revision:'1',digest:zero},source_reference_context_ref:ref,receiver_reference_context_ref:ref,first_receive_utc:{lower_ns:'200',upper_ns:'201'},initial_age_ns:{lower_ns:'0',upper_ns:'2'}},

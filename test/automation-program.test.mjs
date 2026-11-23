@@ -14,7 +14,7 @@ test('automation models retain selected product definitions and literal data',as
  const product=JSON.parse(await fs.readFile(new URL('../dist/contract/models.schema.json',import.meta.url))),schema=JSON.parse(await fs.readFile(new URL('../dist/automation-program/schema.json',import.meta.url)));
  const rewrite=v=>typeof v==='string'?v.replace('#/$defs/lifecycle__Program_','#/$defs/').replace('#/$defs/lifecycle__','#/$defs/Lifecycle'):Array.isArray(v)?v.map(rewrite):v&&typeof v==='object'?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,rewrite(x)])):v;
  for(const [name,definition]of Object.entries(schema.$defs))assert.deepEqual(definition,rewrite(product.$defs[name.startsWith('Lifecycle')?'lifecycle__'+name.slice(9):'lifecycle__Program_'+name]));
- assert.equal(contractSelection.contract_id,'leafseamer.api.v1.product8');
+ assert.equal(contractSelection.contract_id,'leafseamer.api.v1.product9');
  for(const name of ['LifecyclePublish','LifecyclePublishedVersion'])assert.ok(schema.$defs[name]);
  validateAutomationModel('LifecyclePublish',{context:{context_id:'context',idempotency_key:'publish'},expected_draft_revision:'1',expected_content_digest:'sha256:'+'a'.repeat(64),expected_selection_digest:'sha256:'+'b'.repeat(64)});
  validateAutomationModel('Value',{kind:'literal',value:{kind:'ref',binding_id:'data',nested:[null,-0,'中文']}});

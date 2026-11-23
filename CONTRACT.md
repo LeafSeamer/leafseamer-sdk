@@ -1,6 +1,8 @@
 # 产品开发契约
 
-当前选择为 `leafseamer.api.v1.product8`。它包含213项HTTP／WS操作声明：承接panel4的201项、Controller当前会话注销、五项Seamer绑定批准操作、双方各两项事件时间原件读取及双方快照上下文查询。四个WS入口使用专用升级通道，其余209项有普通HTTP类型入口。声明存在不表示产品已实现该操作；服务仅开放已有处理器，其它能力不得宣称可用。
+当前选择为 `leafseamer.api.v1.product9`。它包含213项HTTP／WS操作声明：承接panel4的201项、Controller当前会话注销、五项Seamer绑定批准操作、双方各两项事件时间原件读取及双方快照上下文查询。四个WS入口使用专用升级通道，其余209项有普通HTTP类型入口。声明存在不表示产品已实现该操作；服务仅开放已有处理器，其它能力不得宣称可用。
+
+product9 为配对服务的 /internal/events 采用独立的服务端帧模型。source.event 的 payload 包含完整 origin 与 origin_digest，摘要按完整 Origin 的 JCS 字节计算。首次接收时由 Seamer 核验原件并创建本地年龄证据。公开事件投影继续使用原有格式。双方通过精确选择协商 product9。
 
 product8新增内部只读 `POST /internal/subscriptions/{subscription_id}/snapshot-context`，请求绑定challenge、预期连接代际和原快照引用，响应给出固定Profile／Selector、owner、发布者启动标识与保守剩余租期。服务mTLS、当前配对、权限、owner、scope、运行域及释放前复核仍必需。租期沿原快照、授权、认证采集、运行与健康证明的最早截止，查询不延期；接收端扣除完整往返、两端量化和漂移误差，且不得超过原本地时钟样本期限。UTC展示值不证明租期，缺少合格单调域证据、切域或到期均停止应用。该查询不确认baseline、不产生采样或执行资格。product7精确选择不能混投，三方须同步采用product8；历史持久原件保持原样。
 
