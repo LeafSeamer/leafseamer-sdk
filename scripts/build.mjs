@@ -38,7 +38,7 @@ const artifactFiles=await buildArtifactImport();
 for (const [name, bytes] of artifactFiles) files.set(name, bytes);
 for (const [name, bytes] of await buildWorkerRuntime(JSON.parse(artifactFiles.get('artifact-import/schema.json')))) files.set(name, bytes);
 for (const [name, bytes] of await buildReleaseManifest()) files.set(name, bytes);
-for (const name of ['device-execution.mjs','device-module.mjs','device-module.d.mts','index.mjs', 'index.d.mts', 'fetch-transport.mjs', 'browser-session.mjs', 'control-request.mjs', 'draft-request.mjs', 'http.mjs', 'http.d.mts']) files.set(name, await fs.readFile(path.join(root, 'src', name)));
+for (const name of ['device-execution.mjs','device-module.mjs','device-module.d.mts','index.mjs', 'index.d.mts', 'fetch-transport.mjs', 'browser-session.mjs', 'control-request.mjs', 'draft-request.mjs', 'command-request.mjs', 'http.mjs', 'http.d.mts']) files.set(name, await fs.readFile(path.join(root, 'src', name)));
 const canonicalRoot=path.join(root,'node_modules/canonicalize');
 if(JSON.parse(await fs.readFile(path.join(canonicalRoot,'package.json'),'utf8')).version!=='5.1.0')throw new Error('canonicalize_version');
 files.set('vendor/canonicalize.mjs',await fs.readFile(path.join(canonicalRoot,'lib/canonicalize.js')));

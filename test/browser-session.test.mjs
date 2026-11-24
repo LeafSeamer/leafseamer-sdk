@@ -1,7 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createBrowserSessionClient, contractSelection as selection} from '../dist/index.mjs';
-import {prepareControlChange} from '../dist/index.mjs';
+import {prepareControlChange,prepareManualCommand} from '../dist/index.mjs';
+import {createHash} from 'node:crypto';
+import canonicalize from 'canonicalize';
 
 function response(csrf, digest = selection.contract_digest) {
   return new Response(JSON.stringify({request_id: 'request', service_id: 'service', service_boot_id: 'boot', protocol_version: selection.contract_id, selection,
@@ -59,6 +61,34 @@ test('命令与证据查询采用定向令牌，GET路径和固定修订参数�
     await assert.rejects(client.getCommand('command_a'),e=>e.code==='session_credentials_missing');
     assert.equal(seen.length,start+1);
   }
+});
+
+test('浏览器读取确认目录使用选定契约，手动命令查原身份覆盖逻辑场景引用',async()=>{
+  const scope={authority_service_id:'controller',database_instance_id:'database'},context={context_id:'context',context_epoch:'epoch',
+    service_id:'controller',audience:'controller',selection,operations:['submitCommand'],issuer_id:'issuer',issuer_epoch:'epoch',principal_id:'principal'};
+  const body={context_id:context.context_id,idempotency_key:'synthetic-obs-1',correlation_id:'correlation',device_id:'obs_1',
+    action_id:'obs.program_scene.set',capability_version:'1.0.0',parameters:{scene_ref:{collection_ref:'collection',collection_generation:'1',
+      catalog_revision:'1',binding_revision:'2',scene_id:'scene_1'}},expected_control:{epoch:'epoch',version:'1'},origin:'manual',
+    automation_binding:null,preconditions:[],required_completion:'effect_verified',dispatch:{mode:'immediate',max_queue_ms:5000},evidence_timeout_ms:1000};
+  const prepared=await prepareManualCommand({scope,context,body});
+  const {context_id,idempotency_key,correlation_id,...value}=prepared.body;
+  assert.deepEqual(prepared.identity.key,{target_scope:scope,operation_id:'createCommand',issuer_id:context.issuer_id,issuer_epoch:context.issuer_epoch,
+    principal_id:context.principal_id,request_epoch:context.context_epoch,idempotency_key});
+  assert.equal(prepared.identity.request_digest,'sha256:'+createHash('sha256').update(canonicalize(value)).digest('hex'));
+  await assert.rejects(prepareManualCommand({scope,context:{...context,audience:'other'},body}),/command_request_binding/);
+
+  const headers={'Content-Type':'application/json','X-LeafSeamer-Contract':selection.contract_id,'X-LeafSeamer-Contract-Digest':selection.contract_digest};
+  const seen=[],client=createBrowserSessionClient({baseUrl:'https://controller.invalid',fetchImpl:async(url,options)=>{
+    seen.push({url:String(url),options});
+    if(url.endsWith('/auth/sessions'))return response('A'.repeat(43));
+    if(url.endsWith('/auth/service-tokens'))return new Response(JSON.stringify({request_id:'request',service_id:'service',service_boot_id:'boot',protocol_version:selection.contract_id,selection,
+      data:{access_token:'synthetic-access-token',token_type:'Bearer',expires_in:60,audience:'controller'}}),{status:201,headers});
+    return new Response('',{status:503});
+  }});
+  await client.login({login:'operator',password:'synthetic-password-012345'});await client.issueToken({audience:'controller',requested_scopes:['device.read']});
+  await assert.rejects(client.getSceneCatalog('obs_1'));
+  assert.equal(seen.length,3);assert.equal(seen[2].url,'https://controller.invalid/api/v1/devices/obs_1/scene-catalog');
+  assert.equal(seen[2].options.method,'GET');assert.equal(seen[2].options.headers.get('authorization'),'Bearer synthetic-access-token');
 });
 
 test('控制写入及查原携带Origin和CSRF，操作读取仅GET，错误响应不重发',async()=>{

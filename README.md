@@ -127,6 +127,8 @@ product5的人员introspection响应必须携带同一会话修订的近期认�
 
 浏览器会话客户端提供 `getCapabilities(deviceId)`，承接既有GET能力契约、内存定向Bearer及严格响应校验。调用前须显式签发目标Controller的device.read令牌；不自动重试、刷新或把Schema内容当作设备写入／发布批准。
 
+在 product9 中，`getSceneCatalog(deviceId)` 通过现有读取接口获取场景目录。`prepareManualCommand({scope, context, body})` 校验手动命令正文和请求上下文，并生成 `lookupCommandAdmission` 所需的请求身份。调用者先保存查原身份，再显式调用 `submitCommand`。准备方法只在本地运行。
+
 草稿客户端新增 `publishDefinition(definitionId, body)`、`getPublishedArtifact(definitionId, version)`、`getCompiledProgram(definitionId, version)` 和 `getIndependenceProof(definitionId, proofId, revision)`。发布须先显式取得包含 publishDefinition 的 Seamer context；SDK 只从完整校验成功的该 context 响应采用独立 X-CSRF-Token，最多保留256项内存映射，仅向对应Seamer的对应context发送。重新签发、客户端清理或父会话刷新／清理会丢弃这些凭据；不转发Controller CSRF，不自动补context或重试发布。静态自动化模型出口新增 LifecyclePublish／LifecyclePublishedVersion，定义仍来自同一product5选择。完整权威发布来源和浏览器发布界面仍待集成验收。
 
 

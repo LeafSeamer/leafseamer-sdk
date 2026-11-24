@@ -5,3 +5,4 @@ export {createBrowserSessionClient, SessionClientError} from './browser-session.
 export {contractSelection} from './selection.mjs';
 export {prepareControlChange} from './control-request.mjs';
 export {prepareDraftChange} from './draft-request.mjs';
+export {prepareManualCommand} from './command-request.mjs';

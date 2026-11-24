@@ -63,6 +63,7 @@ export interface BrowserSessionClient {
   rejectCommandAdmission(body: Inputs['controller']['rejectCommandAdmission']['body']): Promise<Results['controller']['rejectCommandAdmission']>;
   listDevices(cursor?: string): Promise<Results['controller']['listDevices']>;
   getCapabilities(deviceId: string): Promise<Results['controller']['getCapabilities']>;
+  getSceneCatalog(deviceId: string): Promise<Results['controller']['getSceneCatalog']>;
   getControl(deviceId: string): Promise<Results['controller']['getControl']>;
   acquireControl(deviceId: string, body: Inputs['controller']['acquireControl']['body']): Promise<Results['controller']['acquireControl']>;
   releaseControl(deviceId: string, body: Inputs['controller']['releaseControl']['body']): Promise<Results['controller']['releaseControl']>;
@@ -89,3 +90,9 @@ export type ControlChangeInput = {[K in ControlChangeOperation]: {operation: K; 
   context: Extract<Results['controller']['createRequestContext'], {status: '201'}>['body']['data'];
   body: Inputs['controller'][K]['body']}}[ControlChangeOperation];
 export function prepareControlChange(input: ControlChangeInput): Promise<PreparedControlChange>;
+export type PreparedManualCommand = Readonly<{body: Inputs['controller']['submitCommand']['body']; identity: Inputs['controller']['lookupCommandAdmission']['body']}>;
+export function prepareManualCommand(input: {
+  scope: PreparedManualCommand['identity']['key']['target_scope'];
+  context: Extract<Results['controller']['createRequestContext'], {status: '201'}>['body']['data'];
+  body: PreparedManualCommand['body'];
+}): Promise<PreparedManualCommand>;

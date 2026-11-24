@@ -108,6 +108,7 @@ export function createBrowserSessionClient({baseUrl, timeoutMs, maxResponseBytes
     rejectCommandAdmission: body => execute('rejectCommandAdmission', {body}, 'bearer'),
     listDevices: cursor => execute('listDevices', cursor === undefined ? {} : {query: {cursor}}, 'bearer'),
     getCapabilities: deviceId => execute('getCapabilities', {path: {device_id: deviceId}}, 'bearer'),
+    getSceneCatalog: deviceId => execute('getSceneCatalog', {path: {device_id: deviceId}}, 'bearer'),
     getControl: deviceId => execute('getControl', {path: {device_id: deviceId}}, 'bearer'),
     acquireControl: (deviceId, body) => execute('acquireControl', {path: {device_id: deviceId}, body}, 'bearer'),
     releaseControl: (deviceId, body) => execute('releaseControl', {path: {device_id: deviceId}, body}, 'bearer'),
