@@ -73,11 +73,25 @@ export interface BrowserSessionClient {
   lookupControlRequest(body: Inputs['controller']['lookupControlRequest']['body']): Promise<Results['controller']['lookupControlRequest']>;
   getCommand(commandId: string): Promise<Results['controller']['getCommand']>;
   getCommandEvidence(commandId: string, query: Inputs['controller']['getCommandEvidence']['query']): Promise<Results['controller']['getCommandEvidence']>;
+  createSubscription(body: Inputs['controller']['createSubscription']['body']): Promise<Results['controller']['createSubscription']>;
+  getSubscription(subscriptionId: string): Promise<Results['controller']['getSubscription']>;
+  issueWsTicket(body: Omit<Inputs['controller']['issueWsTicket']['body'], 'origin' | 'selection'>): Promise<Results['controller']['issueWsTicket']>;
+  getSnapshot(subscriptionId: string, generation: string): Promise<Results['controller']['getSnapshot']>;
+  getSnapshotPage(subscriptionId: string, snapshotId: string, pageIndex: number, generation: string): Promise<Results['controller']['getSnapshotPage']>;
+  closeSubscription(subscriptionId: string, expectedRevision: string): Promise<Results['controller']['closeSubscription']>;
   /** 只清除内存凭据，不撤销服务端会话或删除HttpOnly Cookie。 */
   clearLocalState(): void;
 }
 /** 当前会话Cookie路径为/auth；baseUrl只接受同源HTTPS根入口。 */
 export function createBrowserSessionClient(options: Pick<FetchTransportOptions, 'baseUrl' | 'timeoutMs' | 'maxResponseBytes' | 'fetchImpl'>): BrowserSessionClient;
+import type {components as ControllerModels} from './runtime/panel-client/preview/controller.js';
+export type BrowserEventFrame = ControllerModels['schemas']['channel__ServerFrame'];
+export type BrowserEventInput = ControllerModels['schemas']['channel__ClientFrame'];
+export type SourceProjectionRecord = Extract<ControllerModels['schemas']['snapshot__Record'], {entity_kind: 'sources'}>;
+export const eventChannelProtocol: string;
+export function decodeBrowserEventFrame(text: string): Promise<BrowserEventFrame>;
+export function encodeBrowserEventFrame(frame: BrowserEventInput): Promise<string>;
+export function projectionContentDigest(value: object): Promise<{digest: string; bytes: number}>;
 export type ControlChangeOperation = 'acquireControl' | 'releaseControl';
 export type DraftChangeOperation = 'createDefinition' | 'updateDraft' | 'updateDefinitionMetadata' | 'publishDefinition' | 'createRun';
 export type PreparedDraftChange = {[K in DraftChangeOperation]: Readonly<{operation:K;definition_id:K extends 'createDefinition'?null:string;

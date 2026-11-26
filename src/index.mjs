@@ -2,6 +2,7 @@ export {createClient, ClientError} from './runtime/panel-client/client.mjs';
 export {WireError} from './runtime/panel-wire/decoder.mjs';
 export {createFetchTransport, TransportError} from './fetch-transport.mjs';
 export {createBrowserSessionClient, SessionClientError} from './browser-session.mjs';
+export {eventChannelProtocol, decodeBrowserEventFrame, encodeBrowserEventFrame, projectionContentDigest} from './browser-event-channel.mjs';
 export {contractSelection} from './selection.mjs';
 export {prepareControlChange} from './control-request.mjs';
 export {prepareDraftChange} from './draft-request.mjs';

@@ -6,6 +6,7 @@ export class SessionClientError extends Error {
   constructor(code) { super(code); this.name = 'SessionClientError'; this.code = code; }
 }
 const seamerWrites=new Set(['publishDefinition','approveDefinitionBindings','revokeBindingApproval','createRun']);
+const controllerCsrfWrites=new Set(['acquireControl','releaseControl','lookupControlRequest','createSubscription','closeSubscription','issueWsTicket']);
 const fail = code => { throw new SessionClientError(code); };
 function csrfValue(headers) {
   const values = headers.filter(([name]) => name.toLowerCase() === 'x-csrf-token').map(([, value]) => value);
@@ -45,7 +46,7 @@ export function createBrowserSessionClient({baseUrl, timeoutMs, maxResponseBytes
         const extra = mode === 'cookie' ? [['X-CSRF-Token', csrf]] : mode === 'bearer' ? [['Authorization', 'Bearer ' + accessToken],
           ...(directed || ['createRequestContext', 'submitCommand', 'lookupCommandAdmission', 'rejectCommandAdmission', 'acquireControl', 'releaseControl', 'lookupControlRequest'].includes(operation) ? [['Origin', origin]] : []),
           ...(publicationCsrf ? [['X-CSRF-Token', publicationCsrf]] : []),
-          ...(!directed && ['acquireControl', 'releaseControl', 'lookupControlRequest'].includes(operation) ? [['X-CSRF-Token', csrf]] : [])] : [];
+          ...(!directed && controllerCsrfWrites.has(operation) ? [['X-CSRF-Token', csrf]] : [])] : [];
         const response = await (directed ? remote.transport : transport)({...request, headers: [...request.headers, ...extra]});
         responseHeaders = response.headers.map(pair => [...pair]); return response;
       });
@@ -118,6 +119,15 @@ export function createBrowserSessionClient({baseUrl, timeoutMs, maxResponseBytes
     lookupControlRequest: body => execute('lookupControlRequest', {body}, 'bearer'),
     getCommand: commandId => execute('getCommand', {path: {command_id: commandId}}, 'bearer'),
     getCommandEvidence: (commandId, query) => execute('getCommandEvidence', {path: {command_id: commandId}, query}, 'bearer'),
+    createSubscription: body => execute('createSubscription', {headers:{origin},body}, 'bearer'),
+    getSubscription: subscription_id => execute('getSubscription', {headers:{origin},path:{subscription_id}}, 'bearer'),
+    issueWsTicket: body => execute('issueWsTicket', {headers:{origin},body:{...body,origin,selection:contractSelection}}, 'bearer'),
+    getSnapshot: (subscription_id,expected_connection_generation) => execute('getSnapshot',
+      {headers:{origin},path:{subscription_id},query:{expected_connection_generation}}, 'bearer'),
+    getSnapshotPage: (subscription_id,snapshot_id,page_index,expected_connection_generation) => execute('getSnapshotPage',
+      {headers:{origin},path:{subscription_id,snapshot_id,page_index},query:{expected_connection_generation}}, 'bearer'),
+    closeSubscription: (subscription_id,expected_revision) => execute('closeSubscription',
+      {headers:{origin},path:{subscription_id},query:{expected_revision}}, 'bearer'),
     clearLocalState,
   });
 }

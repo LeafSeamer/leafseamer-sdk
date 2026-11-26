@@ -135,3 +135,5 @@ product5的人员introspection响应必须携带同一会话修订的近期认�
 浏览器草稿客户端新增五项本地绑定批准方法，沿用定向内存令牌及完整选择校验。批准／撤销先显式创建包含对应操作的Seamer请求上下文，SDK使用该上下文响应的独立CSRF；没有自动重试。候选、批准与查原均不授予发布或运行资格，具体保证及摘要投影见CONTRACT.md。
 
 `decodeWorkerControl(bytes, type, {yieldNow})` 允许可信调用方显式指定解析分片的调度函数。默认仍让出事件循环；已绑定的本地监督通道可使用微任务调度，先完成完整回复校验再处理业务回调。调度函数不改变结构校验、方向、容量或原1秒解析预算，也不延长监督确认期限。
+
+浏览器会话客户端支持 Controller 人员订阅的创建、读取、快照分页、单次票据和关闭。写入使用当前同源会话的 CSRF 和定向令牌，票据请求由 SDK 填入本站点 Origin 与固定契约。WebSocket 调用者使用 `eventChannelProtocol`、`decodeBrowserEventFrame` 和 `encodeBrowserEventFrame` 对选定契约编码与校验；`projectionContentDigest` 返回规范 JSON 的 SHA-256 及 UTF-8 字节数。订阅与重连由调用者显式管理。
