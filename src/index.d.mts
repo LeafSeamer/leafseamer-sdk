@@ -33,6 +33,7 @@ export interface BrowserDraftClient {
   createRequestContext(body: {operations: string[]; ttl_ms: number; max_unique_requests: number}): Promise<Results['seamer']['createRequestContext']>;
   createDefinition(body: Inputs['seamer']['createDefinition']['body']): Promise<Results['seamer']['createDefinition']>;
   getDraft(definitionId: string): Promise<Results['seamer']['getDraft']>;
+  getRun(runId: string): Promise<Results['seamer']['getRun']>;
   updateDraft(definitionId: string, body: Inputs['seamer']['updateDraft']['body']): Promise<Results['seamer']['updateDraft']>;
   updateDefinitionMetadata(definitionId: string, body: Inputs['seamer']['updateDefinitionMetadata']['body']): Promise<Results['seamer']['updateDefinitionMetadata']>;
   lookupAutomationRequest(body: Inputs['seamer']['lookupAutomationRequest']['body']): Promise<Results['seamer']['lookupAutomationRequest']>;

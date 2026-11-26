@@ -82,6 +82,7 @@ export function createBrowserSessionClient({baseUrl, timeoutMs, maxResponseBytes
         createRequestContext: body => execute('createRequestContext', {body: {...body, audience, selection: contractSelection}}, 'bearer', remote),
         createDefinition: body => execute('createDefinition', {body}, 'bearer', remote),
         getDraft: definition_id => execute('getDraft', {path: {definition_id}}, 'bearer', remote),
+        getRun: run_id => execute('getRun', {path: {run_id}}, 'bearer', remote),
         updateDraft: (definition_id, body) => execute('updateDraft', {path: {definition_id}, body}, 'bearer', remote),
         updateDefinitionMetadata: (definition_id, body) => execute('updateDefinitionMetadata', {path: {definition_id}, body}, 'bearer', remote),
         lookupAutomationRequest: body => execute('lookupAutomationRequest', {body}, 'bearer', remote),

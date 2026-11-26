@@ -69,6 +69,21 @@ test('错audience和清理后的迟到签发不能建立草稿凭据，并发操
   await assert.rejects(remote.getDraft('definition'),{code:'session_credentials_missing'});assert.equal(g.calls.length,2);
 });
 
+test('运行读取使用 Seamer 的定向令牌，不携带 Cookie 或写入凭据',async()=>{
+ const f=fixture(),remote=f.client.createDraftClient({baseUrl:'https://seamer.invalid/services/seamer',audience:'seamer'});
+ await f.login();await remote.issueToken(['run.read']);
+ assert.equal((await remote.getRun('run-one')).status,'403');
+ const {url,options}=f.calls.at(-1);
+ assert.equal(url,'https://seamer.invalid/services/seamer/api/v1/runs/run-one');
+ assert.equal(options.method,'GET');
+ assert.equal(options.credentials,'omit');
+ assert.equal(options.headers.get('authorization'),'Bearer synthetic-token-seamer');
+ assert.equal(options.headers.get('x-csrf-token'),null);
+ assert.equal(options.headers.get('cookie'),null);
+ remote.clearLocalState();
+ await assert.rejects(remote.getRun('run-one'),{code:'session_credentials_missing'});
+});
+
 test('草稿目标拒绝明文、凭据URL及可变路径',()=>{
   const {client}=fixture();
   for(const baseUrl of ['http://127.0.0.1:8000','https://user:secret@seamer.invalid','https://seamer.invalid/?target=x','https://seamer.invalid/arbitrary'])assert.throws(()=>client.createDraftClient({baseUrl,audience:'seamer'}));
