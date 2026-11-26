@@ -7,7 +7,7 @@ const freeze=value=>{if(value&&typeof value==='object'){Object.values(value).for
 export async function prepareDraftChange(input){
  need(input&&Object.keys(input).sort().join(',')==='body,context,definition_id,operation,scope');
  const {operation,definition_id,scope,context,body}=structuredClone(input);
- need(['createDefinition','updateDraft','updateDefinitionMetadata','publishDefinition'].includes(operation)&&
+ need(['createDefinition','updateDraft','updateDefinitionMetadata','publishDefinition','createRun'].includes(operation)&&
   (operation==='createDefinition'?definition_id===null:typeof definition_id==='string'));
  need(scope&&Object.keys(scope).sort().join(',')==='authority_service_id,database_instance_id');
  need(context?.context_id===body?.context?.context_id&&context.service_id===scope.authority_service_id&&context.audience===scope.authority_service_id&&
@@ -17,7 +17,8 @@ export async function prepareDraftChange(input){
   ['Content-Type','application/json'],['X-LeafSeamer-Contract',contractSelection.contract_id],['X-LeafSeamer-Contract-Digest',contractSelection.contract_digest]]);
  const bytes=encoder.encode(JSON.stringify(body));need(bytes.length<=8388608);
  const request=(await adapter.decodeRequest(bytes,handle)).value;
- const semantic=Object.fromEntries(Object.entries(request).filter(([key])=>key!=='context'));
+ if(operation==='createRun')need(request.definition_id===definition_id);
+ const semantic=Object.fromEntries(Object.entries(request).filter(([key])=>key!=='context'&&!(operation==='createRun'&&key==='definition_id')));
  const digest=await crypto.subtle.digest('SHA-256',encoder.encode(canonicalize({version:'automation-lifecycle/0.1.0-draft.1',operation_id:operation,definition_id,request:semantic})));
  return freeze({operation,definition_id,body:request,lookup:{...request.context,operation_id:operation},
   request_digest:'sha256:'+Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('')});

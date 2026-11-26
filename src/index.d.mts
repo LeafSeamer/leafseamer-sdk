@@ -34,6 +34,7 @@ export interface BrowserDraftClient {
   createDefinition(body: Inputs['seamer']['createDefinition']['body']): Promise<Results['seamer']['createDefinition']>;
   getDraft(definitionId: string): Promise<Results['seamer']['getDraft']>;
   getRun(runId: string): Promise<Results['seamer']['getRun']>;
+  createRun(body: Inputs['seamer']['createRun']['body']): Promise<Results['seamer']['createRun']>;
   updateDraft(definitionId: string, body: Inputs['seamer']['updateDraft']['body']): Promise<Results['seamer']['updateDraft']>;
   updateDefinitionMetadata(definitionId: string, body: Inputs['seamer']['updateDefinitionMetadata']['body']): Promise<Results['seamer']['updateDefinitionMetadata']>;
   lookupAutomationRequest(body: Inputs['seamer']['lookupAutomationRequest']['body']): Promise<Results['seamer']['lookupAutomationRequest']>;
@@ -78,7 +79,7 @@ export interface BrowserSessionClient {
 /** 当前会话Cookie路径为/auth；baseUrl只接受同源HTTPS根入口。 */
 export function createBrowserSessionClient(options: Pick<FetchTransportOptions, 'baseUrl' | 'timeoutMs' | 'maxResponseBytes' | 'fetchImpl'>): BrowserSessionClient;
 export type ControlChangeOperation = 'acquireControl' | 'releaseControl';
-export type DraftChangeOperation = 'createDefinition' | 'updateDraft' | 'updateDefinitionMetadata' | 'publishDefinition';
+export type DraftChangeOperation = 'createDefinition' | 'updateDraft' | 'updateDefinitionMetadata' | 'publishDefinition' | 'createRun';
 export type PreparedDraftChange = {[K in DraftChangeOperation]: Readonly<{operation:K;definition_id:K extends 'createDefinition'?null:string;
   body:Inputs['seamer'][K]['body'];lookup:Inputs['seamer']['lookupAutomationRequest']['body'];request_digest:string}>}[DraftChangeOperation];
 export type DraftChangeInput = {[K in DraftChangeOperation]: {operation:K;definition_id:K extends 'createDefinition'?null:string;

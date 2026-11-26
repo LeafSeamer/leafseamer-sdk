@@ -5,7 +5,7 @@ import {contractSelection} from './selection.mjs';
 export class SessionClientError extends Error {
   constructor(code) { super(code); this.name = 'SessionClientError'; this.code = code; }
 }
-const seamerWrites=new Set(['publishDefinition','approveDefinitionBindings','revokeBindingApproval']);
+const seamerWrites=new Set(['publishDefinition','approveDefinitionBindings','revokeBindingApproval','createRun']);
 const fail = code => { throw new SessionClientError(code); };
 function csrfValue(headers) {
   const values = headers.filter(([name]) => name.toLowerCase() === 'x-csrf-token').map(([, value]) => value);
@@ -83,6 +83,7 @@ export function createBrowserSessionClient({baseUrl, timeoutMs, maxResponseBytes
         createDefinition: body => execute('createDefinition', {body}, 'bearer', remote),
         getDraft: definition_id => execute('getDraft', {path: {definition_id}}, 'bearer', remote),
         getRun: run_id => execute('getRun', {path: {run_id}}, 'bearer', remote),
+        createRun: body => execute('createRun', {body}, 'bearer', remote),
         updateDraft: (definition_id, body) => execute('updateDraft', {path: {definition_id}, body}, 'bearer', remote),
         updateDefinitionMetadata: (definition_id, body) => execute('updateDefinitionMetadata', {path: {definition_id}, body}, 'bearer', remote),
         lookupAutomationRequest: body => execute('lookupAutomationRequest', {body}, 'bearer', remote),

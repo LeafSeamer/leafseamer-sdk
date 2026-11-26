@@ -84,6 +84,28 @@ test('运行读取使用 Seamer 的定向令牌，不携带 Cookie 或写入凭�
  await assert.rejects(remote.getRun('run-one'),{code:'session_credentials_missing'});
 });
 
+test('创建运行的摘要只绑定定义、发布版本和制品，写入使用对应上下文的 CSRF',async()=>{
+ const f=fixture(),remote=f.client.createDraftClient({baseUrl:'https://seamer.invalid',audience:'seamer'});
+ const scope={authority_service_id:'seamer',database_instance_id:'database'};
+ await f.login();await remote.issueToken(['run.manage','request.create']);
+ const {body:{data:context}}=await remote.createRequestContext({operations:['createRun'],ttl_ms:30000,max_unique_requests:1});
+ const definition_id='definition',definition_version='3',expected_artifact_ref={kind:'artifact',scope,object_id:'artifact',revision:'1',digest:'sha256:'+'1'.repeat(64)};
+ const body={context:{context_id:context.context_id,idempotency_key:'one'},definition_id,definition_version,expected_artifact_ref};
+ const prepared=await prepareDraftChange({operation:'createRun',scope,definition_id,context,body});
+ assert.equal(prepared.request_digest,'sha256:'+createHash('sha256').update(canonicalize({version:'automation-lifecycle/0.1.0-draft.1',
+  operation_id:'createRun',definition_id,request:{definition_version,expected_artifact_ref}})).digest('hex'));
+ await assert.rejects(prepareDraftChange({operation:'createRun',scope,definition_id:'wrong',context,body}),{message:'draft_request_binding'});
+ const count=f.calls.length;
+ await assert.rejects(remote.createRun({...body,context:{...body.context,context_id:'other'}}),{code:'session_credentials_missing'});
+ assert.equal(f.calls.length,count);
+ assert.equal((await remote.createRun(prepared.body)).status,'403');
+ const {url,options}=f.calls.at(-1);
+ assert.equal(url,'https://seamer.invalid/api/v1/runs');
+ assert.equal(options.method,'POST');
+ assert.equal(options.headers.get('x-csrf-token'),'Q'.repeat(43));
+ assert.equal(options.credentials,'omit');
+});
+
 test('草稿目标拒绝明文、凭据URL及可变路径',()=>{
   const {client}=fixture();
   for(const baseUrl of ['http://127.0.0.1:8000','https://user:secret@seamer.invalid','https://seamer.invalid/?target=x','https://seamer.invalid/arbitrary'])assert.throws(()=>client.createDraftClient({baseUrl,audience:'seamer'}));
